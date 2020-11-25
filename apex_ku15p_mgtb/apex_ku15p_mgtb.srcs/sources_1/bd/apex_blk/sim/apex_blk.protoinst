@@ -879,7 +879,6 @@
 						"ACLK": { "actual": "axi_clk"},
 						"ARADDR": { "actual": "m_axi_araddr"},
 						"ARBURST": { "actual": "m_axi_arburst"},
-						"ARESETN": { "actual": "peripheral_aresetn"},
 						"ARID": { "actual": "m_axi_arid"},
 						"ARLEN": { "actual": "m_axi_arlen"},
 						"ARREADY": { "actual": "m_axi_arready"},

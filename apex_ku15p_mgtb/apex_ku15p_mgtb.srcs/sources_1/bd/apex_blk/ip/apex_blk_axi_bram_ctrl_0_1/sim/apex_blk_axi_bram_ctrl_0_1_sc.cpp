@@ -61,9 +61,9 @@ apex_blk_axi_bram_ctrl_0_1_sc::apex_blk_axi_bram_ctrl_0_1_sc(const sc_core::sc_m
 
   // initialize module
     xsc::common_cpp::properties model_param_props;
-    model_param_props.addLong("C_MEMORY_DEPTH", "2048");
-    model_param_props.addLong("C_BRAM_ADDR_WIDTH", "11");
-    model_param_props.addLong("C_S_AXI_ADDR_WIDTH", "13");
+    model_param_props.addLong("C_MEMORY_DEPTH", "16384");
+    model_param_props.addLong("C_BRAM_ADDR_WIDTH", "14");
+    model_param_props.addLong("C_S_AXI_ADDR_WIDTH", "16");
     model_param_props.addLong("C_S_AXI_DATA_WIDTH", "32");
     model_param_props.addLong("C_S_AXI_ID_WIDTH", "6");
     model_param_props.addLong("C_S_AXI_SUPPORTS_NARROW_BURST", "0");

@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Thu Nov  5 16:40:08 2020
+// Date        : Wed Nov 25 15:57:11 2020
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
-// Command     : write_verilog -force -mode funcsim -rename_top apex_blk_vio_0_0 -prefix
-//               apex_blk_vio_0_0_ apex_blk_vio_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /home/madorsky/github/apex_ku15p/apex_ku15p_mgtb/apex_ku15p_mgtb.srcs/sources_1/bd/apex_blk/ip/apex_blk_vio_0_0/apex_blk_vio_0_0_sim_netlist.v
 // Design      : apex_blk_vio_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,14 +17,17 @@
 module apex_blk_vio_0_0
    (clk,
     probe_out0,
-    probe_out1);
+    probe_out1,
+    probe_out2);
   input clk;
   output [3:0]probe_out0;
   output [0:0]probe_out1;
+  output [0:0]probe_out2;
 
   wire clk;
   wire [3:0]probe_out0;
   wire [0:0]probe_out1;
+  wire [0:0]probe_out2;
   wire [0:0]NLW_inst_probe_out10_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out100_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out101_UNCONNECTED;
@@ -135,7 +138,6 @@ module apex_blk_vio_0_0
   wire [0:0]NLW_inst_probe_out197_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out198_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out199_UNCONNECTED;
-  wire [0:0]NLW_inst_probe_out2_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out20_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out200_UNCONNECTED;
   wire [0:0]NLW_inst_probe_out201_UNCONNECTED;
@@ -299,7 +301,7 @@ module apex_blk_vio_0_0
   (* C_MINOR_VERSION = "1" *) 
   (* C_NEXT_SLAVE = "0" *) 
   (* C_NUM_PROBE_IN = "0" *) 
-  (* C_NUM_PROBE_OUT = "2" *) 
+  (* C_NUM_PROBE_OUT = "3" *) 
   (* C_PIPE_IFACE = "0" *) 
   (* C_PROBE_IN0_WIDTH = "1" *) 
   (* C_PROBE_IN100_WIDTH = "1" *) 
@@ -913,7 +915,7 @@ module apex_blk_vio_0_0
   (* C_PROBE_OUT28_WIDTH = "1" *) 
   (* C_PROBE_OUT29_INIT_VAL = "1'b0" *) 
   (* C_PROBE_OUT29_WIDTH = "1" *) 
-  (* C_PROBE_OUT2_INIT_VAL = "1'b0" *) 
+  (* C_PROBE_OUT2_INIT_VAL = "1'b1" *) 
   (* C_PROBE_OUT2_WIDTH = "1" *) 
   (* C_PROBE_OUT30_INIT_VAL = "1'b0" *) 
   (* C_PROBE_OUT30_WIDTH = "1" *) 
@@ -1590,11 +1592,11 @@ module apex_blk_vio_0_0
   (* LC_LOW_BIT_POS_PROBE_OUT99 = "16'b0000000001100110" *) 
   (* LC_PROBE_IN_WIDTH_STRING = "2048'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
   (* LC_PROBE_OUT_HIGH_BIT_POS_STRING = "4096'b0000000100000010000000010000000100000001000000000000000011111111000000001111111000000000111111010000000011111100000000001111101100000000111110100000000011111001000000001111100000000000111101110000000011110110000000001111010100000000111101000000000011110011000000001111001000000000111100010000000011110000000000001110111100000000111011100000000011101101000000001110110000000000111010110000000011101010000000001110100100000000111010000000000011100111000000001110011000000000111001010000000011100100000000001110001100000000111000100000000011100001000000001110000000000000110111110000000011011110000000001101110100000000110111000000000011011011000000001101101000000000110110010000000011011000000000001101011100000000110101100000000011010101000000001101010000000000110100110000000011010010000000001101000100000000110100000000000011001111000000001100111000000000110011010000000011001100000000001100101100000000110010100000000011001001000000001100100000000000110001110000000011000110000000001100010100000000110001000000000011000011000000001100001000000000110000010000000011000000000000001011111100000000101111100000000010111101000000001011110000000000101110110000000010111010000000001011100100000000101110000000000010110111000000001011011000000000101101010000000010110100000000001011001100000000101100100000000010110001000000001011000000000000101011110000000010101110000000001010110100000000101011000000000010101011000000001010101000000000101010010000000010101000000000001010011100000000101001100000000010100101000000001010010000000000101000110000000010100010000000001010000100000000101000000000000010011111000000001001111000000000100111010000000010011100000000001001101100000000100110100000000010011001000000001001100000000000100101110000000010010110000000001001010100000000100101000000000010010011000000001001001000000000100100010000000010010000000000001000111100000000100011100000000010001101000000001000110000000000100010110000000010001010000000001000100100000000100010000000000010000111000000001000011000000000100001010000000010000100000000001000001100000000100000100000000010000001000000001000000000000000011111110000000001111110000000000111110100000000011111000000000001111011000000000111101000000000011110010000000001111000000000000111011100000000011101100000000001110101000000000111010000000000011100110000000001110010000000000111000100000000011100000000000001101111000000000110111000000000011011010000000001101100000000000110101100000000011010100000000001101001000000000110100000000000011001110000000001100110000000000110010100000000011001000000000001100011000000000110001000000000011000010000000001100000000000000101111100000000010111100000000001011101000000000101110000000000010110110000000001011010000000000101100100000000010110000000000001010111000000000101011000000000010101010000000001010100000000000101001100000000010100100000000001010001000000000101000000000000010011110000000001001110000000000100110100000000010011000000000001001011000000000100101000000000010010010000000001001000000000000100011100000000010001100000000001000101000000000100010000000000010000110000000001000010000000000100000100000000010000000000000000111111000000000011111000000000001111010000000000111100000000000011101100000000001110100000000000111001000000000011100000000000001101110000000000110110000000000011010100000000001101000000000000110011000000000011001000000000001100010000000000110000000000000010111100000000001011100000000000101101000000000010110000000000001010110000000000101010000000000010100100000000001010000000000000100111000000000010011000000000001001010000000000100100000000000010001100000000001000100000000000100001000000000010000000000000000111110000000000011110000000000001110100000000000111000000000000011011000000000001101000000000000110010000000000011000000000000001011100000000000101100000000000010101000000000001010000000000000100110000000000010010000000000001000100000000000100000000000000001111000000000000111000000000000011010000000000001100000000000000101100000000000010100000000000001001000000000000100000000000000001110000000000000110000000000000010100000000000001000000000000000011" *) 
-  (* LC_PROBE_OUT_INIT_VAL_STRING = "259'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
+  (* LC_PROBE_OUT_INIT_VAL_STRING = "259'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000" *) 
   (* LC_PROBE_OUT_LOW_BIT_POS_STRING = "4096'b0000000100000010000000010000000100000001000000000000000011111111000000001111111000000000111111010000000011111100000000001111101100000000111110100000000011111001000000001111100000000000111101110000000011110110000000001111010100000000111101000000000011110011000000001111001000000000111100010000000011110000000000001110111100000000111011100000000011101101000000001110110000000000111010110000000011101010000000001110100100000000111010000000000011100111000000001110011000000000111001010000000011100100000000001110001100000000111000100000000011100001000000001110000000000000110111110000000011011110000000001101110100000000110111000000000011011011000000001101101000000000110110010000000011011000000000001101011100000000110101100000000011010101000000001101010000000000110100110000000011010010000000001101000100000000110100000000000011001111000000001100111000000000110011010000000011001100000000001100101100000000110010100000000011001001000000001100100000000000110001110000000011000110000000001100010100000000110001000000000011000011000000001100001000000000110000010000000011000000000000001011111100000000101111100000000010111101000000001011110000000000101110110000000010111010000000001011100100000000101110000000000010110111000000001011011000000000101101010000000010110100000000001011001100000000101100100000000010110001000000001011000000000000101011110000000010101110000000001010110100000000101011000000000010101011000000001010101000000000101010010000000010101000000000001010011100000000101001100000000010100101000000001010010000000000101000110000000010100010000000001010000100000000101000000000000010011111000000001001111000000000100111010000000010011100000000001001101100000000100110100000000010011001000000001001100000000000100101110000000010010110000000001001010100000000100101000000000010010011000000001001001000000000100100010000000010010000000000001000111100000000100011100000000010001101000000001000110000000000100010110000000010001010000000001000100100000000100010000000000010000111000000001000011000000000100001010000000010000100000000001000001100000000100000100000000010000001000000001000000000000000011111110000000001111110000000000111110100000000011111000000000001111011000000000111101000000000011110010000000001111000000000000111011100000000011101100000000001110101000000000111010000000000011100110000000001110010000000000111000100000000011100000000000001101111000000000110111000000000011011010000000001101100000000000110101100000000011010100000000001101001000000000110100000000000011001110000000001100110000000000110010100000000011001000000000001100011000000000110001000000000011000010000000001100000000000000101111100000000010111100000000001011101000000000101110000000000010110110000000001011010000000000101100100000000010110000000000001010111000000000101011000000000010101010000000001010100000000000101001100000000010100100000000001010001000000000101000000000000010011110000000001001110000000000100110100000000010011000000000001001011000000000100101000000000010010010000000001001000000000000100011100000000010001100000000001000101000000000100010000000000010000110000000001000010000000000100000100000000010000000000000000111111000000000011111000000000001111010000000000111100000000000011101100000000001110100000000000111001000000000011100000000000001101110000000000110110000000000011010100000000001101000000000000110011000000000011001000000000001100010000000000110000000000000010111100000000001011100000000000101101000000000010110000000000001010110000000000101010000000000010100100000000001010000000000000100111000000000010011000000000001001010000000000100100000000000010001100000000001000100000000000100001000000000010000000000000000111110000000000011110000000000001110100000000000111000000000000011011000000000001101000000000000110010000000000011000000000000001011100000000000101100000000000010101000000000001010000000000000100110000000000010010000000000001000100000000000100000000000000001111000000000000111000000000000011010000000000001100000000000000101100000000000010100000000000001001000000000000100000000000000001110000000000000110000000000000010100000000000001000000000000000000" *) 
   (* LC_PROBE_OUT_WIDTH_STRING = "2048'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011" *) 
   (* LC_TOTAL_PROBE_IN_WIDTH = "0" *) 
-  (* LC_TOTAL_PROBE_OUT_WIDTH = "5" *) 
+  (* LC_TOTAL_PROBE_OUT_WIDTH = "6" *) 
   (* syn_noprune = "1" *) 
   apex_blk_vio_0_0_vio_v3_0_19_vio inst
        (.clk(clk),
@@ -1966,7 +1968,7 @@ module apex_blk_vio_0_0
         .probe_out197(NLW_inst_probe_out197_UNCONNECTED[0]),
         .probe_out198(NLW_inst_probe_out198_UNCONNECTED[0]),
         .probe_out199(NLW_inst_probe_out199_UNCONNECTED[0]),
-        .probe_out2(NLW_inst_probe_out2_UNCONNECTED[0]),
+        .probe_out2(probe_out2),
         .probe_out20(NLW_inst_probe_out20_UNCONNECTED[0]),
         .probe_out200(NLW_inst_probe_out200_UNCONNECTED[0]),
         .probe_out201(NLW_inst_probe_out201_UNCONNECTED[0]),
@@ -2114,48 +2116,68 @@ module apex_blk_vio_0_0
         .sl_oport0(NLW_inst_sl_oport0_UNCONNECTED[16:0]));
 endmodule
 
+(* ORIG_REF_NAME = "vio_v3_0_19_decoder" *) 
 module apex_blk_vio_0_0_vio_v3_0_19_decoder
    (s_drdy_i,
     in0,
     SR,
-    \xsdb_addr_2_0_p1_reg[0]_0 ,
+    \xsdb_addr_2_0_p1_reg[1]_0 ,
+    \G_PROBE_OUT[0].wr_probe_out[0]_i_5 ,
+    \rd_en_reg[6]_0 ,
     s_do_i,
     s_rst_o,
     out,
     Q,
     s_daddr_o,
-    \wr_en_reg[2]_0 ,
     s_den_o,
     s_dwe_o,
-    \Bus_data_out_reg[3]_0 );
+    addr_count,
+    \Bus_data_out_reg[3]_0 ,
+    probe_width_int,
+    \wr_en_reg[2]_0 ,
+    \wr_en_reg[2]_1 ,
+    \wr_en_reg[2]_2 );
   output s_drdy_i;
   output in0;
   output [0:0]SR;
-  output [0:0]\xsdb_addr_2_0_p1_reg[0]_0 ;
+  output [1:0]\xsdb_addr_2_0_p1_reg[1]_0 ;
+  output \G_PROBE_OUT[0].wr_probe_out[0]_i_5 ;
+  output \rd_en_reg[6]_0 ;
   output [15:0]s_do_i;
   input s_rst_o;
   input out;
   input [15:0]Q;
   input [3:0]s_daddr_o;
-  input \wr_en_reg[2]_0 ;
   input s_den_o;
   input s_dwe_o;
+  input addr_count;
   input [3:0]\Bus_data_out_reg[3]_0 ;
+  input [0:0]probe_width_int;
+  input \wr_en_reg[2]_0 ;
+  input \wr_en_reg[2]_1 ;
+  input \wr_en_reg[2]_2 ;
 
   wire \Bus_data_out[0]_i_1_n_0 ;
   wire \Bus_data_out[1]_i_1_n_0 ;
   wire \Bus_data_out[2]_i_1_n_0 ;
+  wire \Bus_data_out[2]_i_2_n_0 ;
   wire \Bus_data_out[3]_i_1_n_0 ;
   wire [3:0]\Bus_data_out_reg[3]_0 ;
+  wire \G_PROBE_OUT[0].wr_probe_out[0]_i_5 ;
   wire [15:0]Q;
   wire [0:0]SR;
+  wire addr_count;
   wire [15:0]data_info_probe_in;
   wire in0;
-  wire int_cnt_rst;
+  wire internal_cnt_rst;
   wire out;
   wire [15:0]probe_out_modified;
+  wire [0:0]probe_width_int;
+  wire \rd_en[6]_i_1_n_0 ;
   wire rd_en_p1;
   wire rd_en_p2;
+  wire \rd_en_reg[6]_0 ;
+  wire rd_probe_out_width;
   wire [3:0]s_daddr_o;
   wire s_den_o;
   wire [15:0]s_do_i;
@@ -2166,9 +2188,11 @@ module apex_blk_vio_0_0_vio_v3_0_19_decoder
   wire \wr_en[2]_i_1_n_0 ;
   wire \wr_en[4]_i_1_n_0 ;
   wire \wr_en_reg[2]_0 ;
+  wire \wr_en_reg[2]_1 ;
+  wire \wr_en_reg[2]_2 ;
   wire wr_probe_out_modified;
-  wire [2:1]xsdb_addr_2_0_p1;
-  wire [0:0]\xsdb_addr_2_0_p1_reg[0]_0 ;
+  wire [2:2]xsdb_addr_2_0_p1;
+  wire [1:0]\xsdb_addr_2_0_p1_reg[1]_0 ;
   wire [2:0]xsdb_addr_2_0_p2;
   wire xsdb_addr_8_p1;
   wire xsdb_addr_8_p2;
@@ -2183,68 +2207,69 @@ module apex_blk_vio_0_0_vio_v3_0_19_decoder
         .I1(xsdb_addr_8_p2),
         .I2(data_info_probe_in[0]),
         .O(\Bus_data_out[0]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h55404440)) 
+  LUT6 #(
+    .INIT(64'h445550AA440050AA)) 
     \Bus_data_out[0]_i_2 
        (.I0(xsdb_addr_2_0_p2[0]),
-        .I1(xsdb_addr_2_0_p2[1]),
+        .I1(probe_width_int),
         .I2(in0),
-        .I3(xsdb_addr_2_0_p2[2]),
-        .I4(probe_out_modified[0]),
+        .I3(xsdb_addr_2_0_p2[1]),
+        .I4(xsdb_addr_2_0_p2[2]),
+        .I5(probe_out_modified[0]),
         .O(data_info_probe_in[0]));
   (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT4 #(
-    .INIT(16'h0008)) 
+    .INIT(16'h0400)) 
     \Bus_data_out[10]_i_1 
-       (.I0(probe_out_modified[10]),
+       (.I0(xsdb_addr_2_0_p2[0]),
         .I1(xsdb_addr_2_0_p2[2]),
-        .I2(xsdb_addr_2_0_p2[0]),
-        .I3(xsdb_addr_2_0_p2[1]),
+        .I2(xsdb_addr_2_0_p2[1]),
+        .I3(probe_out_modified[10]),
         .O(data_info_probe_in[10]));
   (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT4 #(
-    .INIT(16'h0008)) 
+    .INIT(16'h0400)) 
     \Bus_data_out[11]_i_1 
-       (.I0(probe_out_modified[11]),
+       (.I0(xsdb_addr_2_0_p2[0]),
         .I1(xsdb_addr_2_0_p2[2]),
-        .I2(xsdb_addr_2_0_p2[0]),
-        .I3(xsdb_addr_2_0_p2[1]),
+        .I2(xsdb_addr_2_0_p2[1]),
+        .I3(probe_out_modified[11]),
         .O(data_info_probe_in[11]));
   (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT4 #(
-    .INIT(16'h0008)) 
+    .INIT(16'h0400)) 
     \Bus_data_out[12]_i_1 
-       (.I0(probe_out_modified[12]),
+       (.I0(xsdb_addr_2_0_p2[0]),
         .I1(xsdb_addr_2_0_p2[2]),
-        .I2(xsdb_addr_2_0_p2[0]),
-        .I3(xsdb_addr_2_0_p2[1]),
+        .I2(xsdb_addr_2_0_p2[1]),
+        .I3(probe_out_modified[12]),
         .O(data_info_probe_in[12]));
   (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT4 #(
-    .INIT(16'h0008)) 
+    .INIT(16'h0400)) 
     \Bus_data_out[13]_i_1 
-       (.I0(probe_out_modified[13]),
+       (.I0(xsdb_addr_2_0_p2[0]),
         .I1(xsdb_addr_2_0_p2[2]),
-        .I2(xsdb_addr_2_0_p2[0]),
-        .I3(xsdb_addr_2_0_p2[1]),
+        .I2(xsdb_addr_2_0_p2[1]),
+        .I3(probe_out_modified[13]),
         .O(data_info_probe_in[13]));
   (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT4 #(
-    .INIT(16'h0008)) 
+    .INIT(16'h0400)) 
     \Bus_data_out[14]_i_1 
-       (.I0(probe_out_modified[14]),
+       (.I0(xsdb_addr_2_0_p2[0]),
         .I1(xsdb_addr_2_0_p2[2]),
-        .I2(xsdb_addr_2_0_p2[0]),
-        .I3(xsdb_addr_2_0_p2[1]),
+        .I2(xsdb_addr_2_0_p2[1]),
+        .I3(probe_out_modified[14]),
         .O(data_info_probe_in[14]));
   (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT4 #(
-    .INIT(16'h0008)) 
+    .INIT(16'h0400)) 
     \Bus_data_out[15]_i_1 
-       (.I0(probe_out_modified[15]),
+       (.I0(xsdb_addr_2_0_p2[0]),
         .I1(xsdb_addr_2_0_p2[2]),
-        .I2(xsdb_addr_2_0_p2[0]),
-        .I3(xsdb_addr_2_0_p2[1]),
+        .I2(xsdb_addr_2_0_p2[1]),
+        .I3(probe_out_modified[15]),
         .O(data_info_probe_in[15]));
   (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
@@ -2254,94 +2279,95 @@ module apex_blk_vio_0_0_vio_v3_0_19_decoder
         .I1(xsdb_addr_8_p2),
         .I2(data_info_probe_in[1]),
         .O(\Bus_data_out[1]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h55504A4A)) 
+  LUT6 #(
+    .INIT(64'h445550AA440050AA)) 
     \Bus_data_out[1]_i_2 
        (.I0(xsdb_addr_2_0_p2[0]),
-        .I1(probe_out_modified[1]),
-        .I2(xsdb_addr_2_0_p2[2]),
-        .I3(SR),
-        .I4(xsdb_addr_2_0_p2[1]),
+        .I1(probe_width_int),
+        .I2(SR),
+        .I3(xsdb_addr_2_0_p2[1]),
+        .I4(xsdb_addr_2_0_p2[2]),
+        .I5(probe_out_modified[1]),
         .O(data_info_probe_in[1]));
   LUT3 #(
     .INIT(8'hB8)) 
     \Bus_data_out[2]_i_1 
        (.I0(\Bus_data_out_reg[3]_0 [2]),
         .I1(xsdb_addr_8_p2),
-        .I2(data_info_probe_in[2]),
+        .I2(\Bus_data_out[2]_i_2_n_0 ),
         .O(\Bus_data_out[2]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h05400040)) 
+    .INIT(32'h00003808)) 
     \Bus_data_out[2]_i_2 
-       (.I0(xsdb_addr_2_0_p2[0]),
-        .I1(probe_out_modified[2]),
-        .I2(xsdb_addr_2_0_p2[2]),
-        .I3(xsdb_addr_2_0_p2[1]),
-        .I4(int_cnt_rst),
-        .O(data_info_probe_in[2]));
+       (.I0(probe_out_modified[2]),
+        .I1(xsdb_addr_2_0_p2[2]),
+        .I2(xsdb_addr_2_0_p2[1]),
+        .I3(internal_cnt_rst),
+        .I4(xsdb_addr_2_0_p2[0]),
+        .O(\Bus_data_out[2]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h888888888888B888)) 
+    .INIT(64'h88888B8888888888)) 
     \Bus_data_out[3]_i_1 
        (.I0(\Bus_data_out_reg[3]_0 [3]),
         .I1(xsdb_addr_8_p2),
-        .I2(probe_out_modified[3]),
+        .I2(xsdb_addr_2_0_p2[0]),
         .I3(xsdb_addr_2_0_p2[2]),
-        .I4(xsdb_addr_2_0_p2[0]),
-        .I5(xsdb_addr_2_0_p2[1]),
+        .I4(xsdb_addr_2_0_p2[1]),
+        .I5(probe_out_modified[3]),
         .O(\Bus_data_out[3]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
-    .INIT(16'h0008)) 
+    .INIT(16'h0400)) 
     \Bus_data_out[4]_i_1 
-       (.I0(probe_out_modified[4]),
+       (.I0(xsdb_addr_2_0_p2[0]),
         .I1(xsdb_addr_2_0_p2[2]),
-        .I2(xsdb_addr_2_0_p2[0]),
-        .I3(xsdb_addr_2_0_p2[1]),
+        .I2(xsdb_addr_2_0_p2[1]),
+        .I3(probe_out_modified[4]),
         .O(data_info_probe_in[4]));
   (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
-    .INIT(16'h0008)) 
+    .INIT(16'h0400)) 
     \Bus_data_out[5]_i_1 
-       (.I0(probe_out_modified[5]),
+       (.I0(xsdb_addr_2_0_p2[0]),
         .I1(xsdb_addr_2_0_p2[2]),
-        .I2(xsdb_addr_2_0_p2[0]),
-        .I3(xsdb_addr_2_0_p2[1]),
+        .I2(xsdb_addr_2_0_p2[1]),
+        .I3(probe_out_modified[5]),
         .O(data_info_probe_in[5]));
   (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
-    .INIT(16'h0008)) 
+    .INIT(16'h0400)) 
     \Bus_data_out[6]_i_1 
-       (.I0(probe_out_modified[6]),
+       (.I0(xsdb_addr_2_0_p2[0]),
         .I1(xsdb_addr_2_0_p2[2]),
-        .I2(xsdb_addr_2_0_p2[0]),
-        .I3(xsdb_addr_2_0_p2[1]),
+        .I2(xsdb_addr_2_0_p2[1]),
+        .I3(probe_out_modified[6]),
         .O(data_info_probe_in[6]));
   (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
-    .INIT(16'h0008)) 
+    .INIT(16'h0400)) 
     \Bus_data_out[7]_i_1 
-       (.I0(probe_out_modified[7]),
+       (.I0(xsdb_addr_2_0_p2[0]),
         .I1(xsdb_addr_2_0_p2[2]),
-        .I2(xsdb_addr_2_0_p2[0]),
-        .I3(xsdb_addr_2_0_p2[1]),
+        .I2(xsdb_addr_2_0_p2[1]),
+        .I3(probe_out_modified[7]),
         .O(data_info_probe_in[7]));
   (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
-    .INIT(16'h0008)) 
+    .INIT(16'h0400)) 
     \Bus_data_out[8]_i_1 
-       (.I0(probe_out_modified[8]),
+       (.I0(xsdb_addr_2_0_p2[0]),
         .I1(xsdb_addr_2_0_p2[2]),
-        .I2(xsdb_addr_2_0_p2[0]),
-        .I3(xsdb_addr_2_0_p2[1]),
+        .I2(xsdb_addr_2_0_p2[1]),
+        .I3(probe_out_modified[8]),
         .O(data_info_probe_in[8]));
   (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
-    .INIT(16'h0008)) 
+    .INIT(16'h0400)) 
     \Bus_data_out[9]_i_1 
-       (.I0(probe_out_modified[9]),
+       (.I0(xsdb_addr_2_0_p2[0]),
         .I1(xsdb_addr_2_0_p2[2]),
-        .I2(xsdb_addr_2_0_p2[0]),
-        .I3(xsdb_addr_2_0_p2[1]),
+        .I2(xsdb_addr_2_0_p2[1]),
+        .I3(probe_out_modified[9]),
         .O(data_info_probe_in[9]));
   FDRE \Bus_data_out_reg[0] 
        (.C(out),
@@ -2439,6 +2465,22 @@ module apex_blk_vio_0_0_vio_v3_0_19_decoder
         .D(data_info_probe_in[9]),
         .Q(s_do_i[9]),
         .R(xsdb_addr_8_p2));
+  LUT4 #(
+    .INIT(16'hBFFF)) 
+    \G_PROBE_OUT[0].wr_probe_out[0]_i_1 
+       (.I0(s_daddr_o[0]),
+        .I1(\wr_en_reg[2]_0 ),
+        .I2(\wr_en_reg[2]_1 ),
+        .I3(\wr_en_reg[2]_2 ),
+        .O(\G_PROBE_OUT[0].wr_probe_out[0]_i_5 ));
+  LUT4 #(
+    .INIT(16'h0006)) 
+    \addr_count[0]_i_1 
+       (.I0(rd_probe_out_width),
+        .I1(addr_count),
+        .I2(internal_cnt_rst),
+        .I3(s_rst_o),
+        .O(\rd_en_reg[6]_0 ));
   FDRE clear_int_reg
        (.C(out),
         .CE(wr_control_reg),
@@ -2455,7 +2497,7 @@ module apex_blk_vio_0_0_vio_v3_0_19_decoder
        (.C(out),
         .CE(wr_control_reg),
         .D(Q[2]),
-        .Q(int_cnt_rst),
+        .Q(internal_cnt_rst),
         .R(s_rst_o));
   FDRE \probe_out_modified_reg[0] 
        (.C(out),
@@ -2553,6 +2595,14 @@ module apex_blk_vio_0_0_vio_v3_0_19_decoder
         .D(Q[9]),
         .Q(probe_out_modified[9]),
         .R(SR));
+  LUT4 #(
+    .INIT(16'h0008)) 
+    \rd_en[6]_i_1 
+       (.I0(s_daddr_o[2]),
+        .I1(s_daddr_o[1]),
+        .I2(s_dwe_o),
+        .I3(s_daddr_o[3]),
+        .O(\rd_en[6]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h2)) 
@@ -2572,70 +2622,76 @@ module apex_blk_vio_0_0_vio_v3_0_19_decoder
         .D(rd_en_p1),
         .Q(rd_en_p2),
         .R(s_rst_o));
+  FDRE \rd_en_reg[6] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\rd_en[6]_i_1_n_0 ),
+        .Q(rd_probe_out_width),
+        .R(\G_PROBE_OUT[0].wr_probe_out[0]_i_5 ));
   (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
-    .INIT(16'h0004)) 
+    .INIT(16'h0400)) 
     \wr_en[2]_i_1 
-       (.I0(s_daddr_o[0]),
+       (.I0(s_daddr_o[3]),
         .I1(s_daddr_o[1]),
-        .I2(s_daddr_o[3]),
-        .I3(s_daddr_o[2]),
+        .I2(s_daddr_o[2]),
+        .I3(s_dwe_o),
         .O(\wr_en[2]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
-    .INIT(16'h0100)) 
+    .INIT(16'h0400)) 
     \wr_en[4]_i_1 
        (.I0(s_daddr_o[1]),
-        .I1(s_daddr_o[0]),
+        .I1(s_daddr_o[2]),
         .I2(s_daddr_o[3]),
-        .I3(s_daddr_o[2]),
+        .I3(s_dwe_o),
         .O(\wr_en[4]_i_1_n_0 ));
   FDRE \wr_en_reg[2] 
        (.C(out),
         .CE(1'b1),
         .D(\wr_en[2]_i_1_n_0 ),
         .Q(wr_control_reg),
-        .R(\wr_en_reg[2]_0 ));
+        .R(\G_PROBE_OUT[0].wr_probe_out[0]_i_5 ));
   FDRE \wr_en_reg[4] 
        (.C(out),
         .CE(1'b1),
         .D(\wr_en[4]_i_1_n_0 ),
         .Q(wr_probe_out_modified),
-        .R(\wr_en_reg[2]_0 ));
+        .R(\G_PROBE_OUT[0].wr_probe_out[0]_i_5 ));
   FDRE \xsdb_addr_2_0_p1_reg[0] 
        (.C(out),
         .CE(1'b1),
         .D(s_daddr_o[0]),
-        .Q(\xsdb_addr_2_0_p1_reg[0]_0 ),
+        .Q(\xsdb_addr_2_0_p1_reg[1]_0 [0]),
         .R(1'b0));
   FDRE \xsdb_addr_2_0_p1_reg[1] 
        (.C(out),
         .CE(1'b1),
         .D(s_daddr_o[1]),
-        .Q(xsdb_addr_2_0_p1[1]),
+        .Q(\xsdb_addr_2_0_p1_reg[1]_0 [1]),
         .R(1'b0));
   FDRE \xsdb_addr_2_0_p1_reg[2] 
        (.C(out),
         .CE(1'b1),
         .D(s_daddr_o[2]),
-        .Q(xsdb_addr_2_0_p1[2]),
+        .Q(xsdb_addr_2_0_p1),
         .R(1'b0));
   FDRE \xsdb_addr_2_0_p2_reg[0] 
        (.C(out),
         .CE(1'b1),
-        .D(\xsdb_addr_2_0_p1_reg[0]_0 ),
+        .D(\xsdb_addr_2_0_p1_reg[1]_0 [0]),
         .Q(xsdb_addr_2_0_p2[0]),
         .R(1'b0));
   FDRE \xsdb_addr_2_0_p2_reg[1] 
        (.C(out),
         .CE(1'b1),
-        .D(xsdb_addr_2_0_p1[1]),
+        .D(\xsdb_addr_2_0_p1_reg[1]_0 [1]),
         .Q(xsdb_addr_2_0_p2[1]),
         .R(1'b0));
   FDRE \xsdb_addr_2_0_p2_reg[2] 
        (.C(out),
         .CE(1'b1),
-        .D(xsdb_addr_2_0_p1[2]),
+        .D(xsdb_addr_2_0_p1),
         .Q(xsdb_addr_2_0_p2[2]),
         .R(1'b0));
   FDRE xsdb_addr_8_p1_reg
@@ -2666,61 +2722,76 @@ module apex_blk_vio_0_0_vio_v3_0_19_decoder
         .R(s_rst_o));
 endmodule
 
+(* ORIG_REF_NAME = "vio_v3_0_19_probe_out_all" *) 
 module apex_blk_vio_0_0_vio_v3_0_19_probe_out_all
    (probe_out0,
     probe_out1,
-    \G_PROBE_OUT[0].wr_probe_out[0]_i_5_0 ,
+    probe_out2,
+    \G_PROBE_OUT[0].wr_probe_out[0]_i_3_0 ,
+    \G_PROBE_OUT[0].wr_probe_out[0]_i_4_0 ,
+    s_den_o_INST_0,
     \Probe_out_reg_int_reg[3]_0 ,
     SR,
     in0,
     clk,
-    \Probe_out_reg_int_reg[1]_0 ,
+    \G_PROBE_OUT[2].wr_probe_out_reg[2]_0 ,
     out,
     s_daddr_o,
-    s_dwe_o,
     s_den_o,
-    Q);
+    s_dwe_o,
+    Q,
+    \Probe_out_reg_int_reg[0]_0 );
   output [3:0]probe_out0;
   output [0:0]probe_out1;
-  output \G_PROBE_OUT[0].wr_probe_out[0]_i_5_0 ;
+  output [0:0]probe_out2;
+  output \G_PROBE_OUT[0].wr_probe_out[0]_i_3_0 ;
+  output \G_PROBE_OUT[0].wr_probe_out[0]_i_4_0 ;
+  output s_den_o_INST_0;
   output [3:0]\Probe_out_reg_int_reg[3]_0 ;
   input [0:0]SR;
   input in0;
   input clk;
-  input [0:0]\Probe_out_reg_int_reg[1]_0 ;
+  input \G_PROBE_OUT[2].wr_probe_out_reg[2]_0 ;
   input out;
   input [16:0]s_daddr_o;
-  input s_dwe_o;
   input s_den_o;
+  input s_dwe_o;
   input [3:0]Q;
+  input [1:0]\Probe_out_reg_int_reg[0]_0 ;
 
   (* async_reg = "true" *) wire Committ_1;
   (* async_reg = "true" *) wire Committ_2;
-  wire \G_PROBE_OUT[0].PROBE_OUT0_INST_n_4 ;
-  wire \G_PROBE_OUT[0].PROBE_OUT0_INST_n_5 ;
-  wire \G_PROBE_OUT[0].PROBE_OUT0_INST_n_6 ;
   wire \G_PROBE_OUT[0].wr_probe_out[0]_i_2_n_0 ;
-  wire \G_PROBE_OUT[0].wr_probe_out[0]_i_3_n_0 ;
-  wire \G_PROBE_OUT[0].wr_probe_out[0]_i_4_n_0 ;
-  wire \G_PROBE_OUT[0].wr_probe_out[0]_i_5_0 ;
-  wire \G_PROBE_OUT[0].wr_probe_out[0]_i_5_n_0 ;
+  wire \G_PROBE_OUT[0].wr_probe_out[0]_i_3_0 ;
+  wire \G_PROBE_OUT[0].wr_probe_out[0]_i_4_0 ;
   wire \G_PROBE_OUT[0].wr_probe_out_reg ;
   wire \G_PROBE_OUT[1].PROBE_OUT0_INST_n_1 ;
   wire \G_PROBE_OUT[1].wr_probe_out[1]_i_1_n_0 ;
+  wire \G_PROBE_OUT[1].wr_probe_out[1]_i_2_n_0 ;
+  wire \G_PROBE_OUT[1].wr_probe_out[1]_i_3_n_0 ;
   wire \G_PROBE_OUT[1].wr_probe_out_reg ;
-  wire [0:0]\Probe_out_reg_int_reg[1]_0 ;
+  wire \G_PROBE_OUT[2].PROBE_OUT0_INST_n_1 ;
+  wire \G_PROBE_OUT[2].wr_probe_out[2]_i_1_n_0 ;
+  wire \G_PROBE_OUT[2].wr_probe_out_reg ;
+  wire \G_PROBE_OUT[2].wr_probe_out_reg[2]_0 ;
+  wire \Probe_out_reg_int[0]_i_1_n_0 ;
+  wire \Probe_out_reg_int[1]_i_1_n_0 ;
+  wire \Probe_out_reg_int[2]_i_1_n_0 ;
+  wire \Probe_out_reg_int[3]_i_1_n_0 ;
+  wire [1:0]\Probe_out_reg_int_reg[0]_0 ;
   wire [3:0]\Probe_out_reg_int_reg[3]_0 ;
   wire [3:0]Q;
   wire [0:0]SR;
   wire clk;
-  wire [0:0]data_int;
+  wire [3:0]data_int;
   wire in0;
   wire out;
   wire [3:0]probe_out0;
   wire [0:0]probe_out1;
-  wire probe_out_mem_n_0;
+  wire [0:0]probe_out2;
   wire [16:0]s_daddr_o;
   wire s_den_o;
+  wire s_den_o_INST_0;
   wire s_dwe_o;
 
   (* ASYNC_REG *) 
@@ -2740,65 +2811,55 @@ module apex_blk_vio_0_0_vio_v3_0_19_probe_out_all
         .Q(Committ_2),
         .R(1'b0));
   apex_blk_vio_0_0_vio_v3_0_19_probe_out_one \G_PROBE_OUT[0].PROBE_OUT0_INST 
-       (.D({\G_PROBE_OUT[0].PROBE_OUT0_INST_n_4 ,\G_PROBE_OUT[0].PROBE_OUT0_INST_n_5 ,\G_PROBE_OUT[0].PROBE_OUT0_INST_n_6 }),
-        .E(\G_PROBE_OUT[0].wr_probe_out_reg ),
+       (.E(\G_PROBE_OUT[0].wr_probe_out_reg ),
         .\Probe_out_reg[3]_0 (Committ_2),
-        .\Probe_out_reg_int_reg[1] (\Probe_out_reg_int_reg[1]_0 ),
         .Q(data_int),
         .SR(SR),
         .clk(clk),
         .\data_int_reg[3]_0 (Q),
         .out(out),
         .probe_out0(probe_out0));
-  LUT6 #(
-    .INIT(64'hF7FFFFFFFFFFFFFF)) 
-    \G_PROBE_OUT[0].wr_probe_out[0]_i_1 
-       (.I0(s_dwe_o),
-        .I1(s_den_o),
-        .I2(s_daddr_o[16]),
-        .I3(\G_PROBE_OUT[0].wr_probe_out[0]_i_3_n_0 ),
-        .I4(\G_PROBE_OUT[0].wr_probe_out[0]_i_4_n_0 ),
-        .I5(\G_PROBE_OUT[0].wr_probe_out[0]_i_5_n_0 ),
-        .O(\G_PROBE_OUT[0].wr_probe_out[0]_i_5_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT4 #(
-    .INIT(16'h0100)) 
+    .INIT(16'h0400)) 
     \G_PROBE_OUT[0].wr_probe_out[0]_i_2 
        (.I0(s_daddr_o[1]),
-        .I1(s_daddr_o[0]),
+        .I1(s_daddr_o[8]),
         .I2(s_daddr_o[2]),
-        .I3(s_daddr_o[8]),
+        .I3(s_dwe_o),
         .O(\G_PROBE_OUT[0].wr_probe_out[0]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'h0001)) 
     \G_PROBE_OUT[0].wr_probe_out[0]_i_3 
-       (.I0(s_daddr_o[15]),
-        .I1(s_daddr_o[14]),
-        .I2(s_daddr_o[13]),
-        .I3(s_daddr_o[12]),
-        .O(\G_PROBE_OUT[0].wr_probe_out[0]_i_3_n_0 ));
+       (.I0(s_daddr_o[9]),
+        .I1(s_daddr_o[7]),
+        .I2(s_daddr_o[6]),
+        .I3(s_daddr_o[5]),
+        .O(\G_PROBE_OUT[0].wr_probe_out[0]_i_3_0 ));
   LUT4 #(
     .INIT(16'h0001)) 
     \G_PROBE_OUT[0].wr_probe_out[0]_i_4 
-       (.I0(s_daddr_o[11]),
-        .I1(s_daddr_o[10]),
-        .I2(s_daddr_o[9]),
-        .I3(s_daddr_o[7]),
-        .O(\G_PROBE_OUT[0].wr_probe_out[0]_i_4_n_0 ));
-  LUT4 #(
-    .INIT(16'h0001)) 
+       (.I0(s_daddr_o[13]),
+        .I1(s_daddr_o[12]),
+        .I2(s_daddr_o[11]),
+        .I3(s_daddr_o[10]),
+        .O(\G_PROBE_OUT[0].wr_probe_out[0]_i_4_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000000010)) 
     \G_PROBE_OUT[0].wr_probe_out[0]_i_5 
-       (.I0(s_daddr_o[6]),
-        .I1(s_daddr_o[5]),
-        .I2(s_daddr_o[4]),
-        .I3(s_daddr_o[3]),
-        .O(\G_PROBE_OUT[0].wr_probe_out[0]_i_5_n_0 ));
+       (.I0(s_daddr_o[14]),
+        .I1(s_daddr_o[15]),
+        .I2(s_den_o),
+        .I3(s_daddr_o[16]),
+        .I4(s_daddr_o[4]),
+        .I5(s_daddr_o[3]),
+        .O(s_den_o_INST_0));
   FDRE \G_PROBE_OUT[0].wr_probe_out_reg[0] 
        (.C(out),
         .CE(1'b1),
         .D(\G_PROBE_OUT[0].wr_probe_out[0]_i_2_n_0 ),
         .Q(\G_PROBE_OUT[0].wr_probe_out_reg ),
-        .R(\G_PROBE_OUT[0].wr_probe_out[0]_i_5_0 ));
+        .R(\G_PROBE_OUT[2].wr_probe_out_reg[2]_0 ));
   apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized0 \G_PROBE_OUT[1].PROBE_OUT0_INST 
        (.\G_PROBE_OUT[1].wr_probe_out_reg (\G_PROBE_OUT[1].wr_probe_out_reg ),
         .Q(Q[0]),
@@ -2808,84 +2869,140 @@ module apex_blk_vio_0_0_vio_v3_0_19_probe_out_all
         .\data_int_reg[0]_1 (out),
         .out(Committ_2),
         .probe_out1(probe_out1));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT4 #(
-    .INIT(16'h0400)) 
+  LUT6 #(
+    .INIT(64'h8000000000000000)) 
     \G_PROBE_OUT[1].wr_probe_out[1]_i_1 
-       (.I0(s_daddr_o[1]),
-        .I1(s_daddr_o[0]),
-        .I2(s_daddr_o[2]),
-        .I3(s_daddr_o[8]),
+       (.I0(\G_PROBE_OUT[1].wr_probe_out[1]_i_2_n_0 ),
+        .I1(\G_PROBE_OUT[1].wr_probe_out[1]_i_3_n_0 ),
+        .I2(s_daddr_o[0]),
+        .I3(\G_PROBE_OUT[0].wr_probe_out[0]_i_3_0 ),
+        .I4(\G_PROBE_OUT[0].wr_probe_out[0]_i_4_0 ),
+        .I5(s_den_o_INST_0),
         .O(\G_PROBE_OUT[1].wr_probe_out[1]_i_1_n_0 ));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \G_PROBE_OUT[1].wr_probe_out[1]_i_2 
+       (.I0(s_dwe_o),
+        .I1(s_daddr_o[2]),
+        .O(\G_PROBE_OUT[1].wr_probe_out[1]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \G_PROBE_OUT[1].wr_probe_out[1]_i_3 
+       (.I0(s_daddr_o[8]),
+        .I1(s_daddr_o[1]),
+        .O(\G_PROBE_OUT[1].wr_probe_out[1]_i_3_n_0 ));
   FDRE \G_PROBE_OUT[1].wr_probe_out_reg[1] 
        (.C(out),
         .CE(1'b1),
         .D(\G_PROBE_OUT[1].wr_probe_out[1]_i_1_n_0 ),
         .Q(\G_PROBE_OUT[1].wr_probe_out_reg ),
-        .R(\G_PROBE_OUT[0].wr_probe_out[0]_i_5_0 ));
+        .R(1'b0));
+  apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized1 \G_PROBE_OUT[2].PROBE_OUT0_INST 
+       (.\G_PROBE_OUT[2].wr_probe_out_reg (\G_PROBE_OUT[2].wr_probe_out_reg ),
+        .Q(Q[0]),
+        .SR(SR),
+        .clk(clk),
+        .\data_int_reg[0]_0 (\G_PROBE_OUT[2].PROBE_OUT0_INST_n_1 ),
+        .\data_int_reg[0]_1 (out),
+        .out(Committ_2),
+        .probe_out2(probe_out2));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT4 #(
+    .INIT(16'h0800)) 
+    \G_PROBE_OUT[2].wr_probe_out[2]_i_1 
+       (.I0(s_daddr_o[8]),
+        .I1(s_daddr_o[1]),
+        .I2(s_daddr_o[2]),
+        .I3(s_dwe_o),
+        .O(\G_PROBE_OUT[2].wr_probe_out[2]_i_1_n_0 ));
+  FDRE \G_PROBE_OUT[2].wr_probe_out_reg[2] 
+       (.C(out),
+        .CE(1'b1),
+        .D(\G_PROBE_OUT[2].wr_probe_out[2]_i_1_n_0 ),
+        .Q(\G_PROBE_OUT[2].wr_probe_out_reg ),
+        .R(\G_PROBE_OUT[2].wr_probe_out_reg[2]_0 ));
+  LUT5 #(
+    .INIT(32'h0FAC00AC)) 
+    \Probe_out_reg_int[0]_i_1 
+       (.I0(\G_PROBE_OUT[2].PROBE_OUT0_INST_n_1 ),
+        .I1(data_int[0]),
+        .I2(\Probe_out_reg_int_reg[0]_0 [1]),
+        .I3(\Probe_out_reg_int_reg[0]_0 [0]),
+        .I4(\G_PROBE_OUT[1].PROBE_OUT0_INST_n_1 ),
+        .O(\Probe_out_reg_int[0]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'h02)) 
+    \Probe_out_reg_int[1]_i_1 
+       (.I0(data_int[1]),
+        .I1(\Probe_out_reg_int_reg[0]_0 [1]),
+        .I2(\Probe_out_reg_int_reg[0]_0 [0]),
+        .O(\Probe_out_reg_int[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT3 #(
+    .INIT(8'h02)) 
+    \Probe_out_reg_int[2]_i_1 
+       (.I0(data_int[2]),
+        .I1(\Probe_out_reg_int_reg[0]_0 [1]),
+        .I2(\Probe_out_reg_int_reg[0]_0 [0]),
+        .O(\Probe_out_reg_int[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT3 #(
+    .INIT(8'h02)) 
+    \Probe_out_reg_int[3]_i_1 
+       (.I0(data_int[3]),
+        .I1(\Probe_out_reg_int_reg[0]_0 [1]),
+        .I2(\Probe_out_reg_int_reg[0]_0 [0]),
+        .O(\Probe_out_reg_int[3]_i_1_n_0 ));
   FDRE \Probe_out_reg_int_reg[0] 
        (.C(out),
         .CE(1'b1),
-        .D(probe_out_mem_n_0),
+        .D(\Probe_out_reg_int[0]_i_1_n_0 ),
         .Q(\Probe_out_reg_int_reg[3]_0 [0]),
         .R(1'b0));
   FDRE \Probe_out_reg_int_reg[1] 
        (.C(out),
         .CE(1'b1),
-        .D(\G_PROBE_OUT[0].PROBE_OUT0_INST_n_6 ),
+        .D(\Probe_out_reg_int[1]_i_1_n_0 ),
         .Q(\Probe_out_reg_int_reg[3]_0 [1]),
         .R(1'b0));
   FDRE \Probe_out_reg_int_reg[2] 
        (.C(out),
         .CE(1'b1),
-        .D(\G_PROBE_OUT[0].PROBE_OUT0_INST_n_5 ),
+        .D(\Probe_out_reg_int[2]_i_1_n_0 ),
         .Q(\Probe_out_reg_int_reg[3]_0 [2]),
         .R(1'b0));
   FDRE \Probe_out_reg_int_reg[3] 
        (.C(out),
         .CE(1'b1),
-        .D(\G_PROBE_OUT[0].PROBE_OUT0_INST_n_4 ),
+        .D(\Probe_out_reg_int[3]_i_1_n_0 ),
         .Q(\Probe_out_reg_int_reg[3]_0 [3]),
         .R(1'b0));
-  LUT3 #(
-    .INIT(8'hAC)) 
-    probe_out_mem
-       (.I0(\G_PROBE_OUT[1].PROBE_OUT0_INST_n_1 ),
-        .I1(data_int),
-        .I2(\Probe_out_reg_int_reg[1]_0 ),
-        .O(probe_out_mem_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "vio_v3_0_19_probe_out_one" *) 
 module apex_blk_vio_0_0_vio_v3_0_19_probe_out_one
    (probe_out0,
-    D,
     Q,
     SR,
-    \Probe_out_reg_int_reg[1] ,
     E,
     \data_int_reg[3]_0 ,
     out,
     \Probe_out_reg[3]_0 ,
     clk);
   output [3:0]probe_out0;
-  output [2:0]D;
-  output [0:0]Q;
+  output [3:0]Q;
   input [0:0]SR;
-  input [0:0]\Probe_out_reg_int_reg[1] ;
   input [0:0]E;
   input [3:0]\data_int_reg[3]_0 ;
   input out;
   input [0:0]\Probe_out_reg[3]_0 ;
   input clk;
 
-  wire [2:0]D;
   wire [0:0]E;
   wire [0:0]\Probe_out_reg[3]_0 ;
-  wire [0:0]\Probe_out_reg_int_reg[1] ;
-  wire [0:0]Q;
+  wire [3:0]Q;
   (* DIRECT_RESET *) wire [0:0]SR;
   wire clk;
-  wire [3:1]data_int;
   wire [3:0]\data_int_reg[3]_0 ;
   wire out;
   (* DONT_TOUCH *) wire [3:0]probe_out0;
@@ -2895,7 +3012,7 @@ module apex_blk_vio_0_0_vio_v3_0_19_probe_out_one
   FDRE \Probe_out_reg[0] 
        (.C(clk),
         .CE(\Probe_out_reg[3]_0 ),
-        .D(Q),
+        .D(Q[0]),
         .Q(probe_out0[0]),
         .R(SR));
   (* DONT_TOUCH *) 
@@ -2903,7 +3020,7 @@ module apex_blk_vio_0_0_vio_v3_0_19_probe_out_one
   FDRE \Probe_out_reg[1] 
        (.C(clk),
         .CE(\Probe_out_reg[3]_0 ),
-        .D(data_int[1]),
+        .D(Q[1]),
         .Q(probe_out0[1]),
         .R(SR));
   (* DONT_TOUCH *) 
@@ -2911,7 +3028,7 @@ module apex_blk_vio_0_0_vio_v3_0_19_probe_out_one
   FDRE \Probe_out_reg[2] 
        (.C(clk),
         .CE(\Probe_out_reg[3]_0 ),
-        .D(data_int[2]),
+        .D(Q[2]),
         .Q(probe_out0[2]),
         .R(SR));
   (* DONT_TOUCH *) 
@@ -2919,52 +3036,32 @@ module apex_blk_vio_0_0_vio_v3_0_19_probe_out_one
   FDRE \Probe_out_reg[3] 
        (.C(clk),
         .CE(\Probe_out_reg[3]_0 ),
-        .D(data_int[3]),
+        .D(Q[3]),
         .Q(probe_out0[3]),
         .R(SR));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \Probe_out_reg_int[1]_i_1 
-       (.I0(data_int[1]),
-        .I1(\Probe_out_reg_int_reg[1] ),
-        .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \Probe_out_reg_int[2]_i_1 
-       (.I0(data_int[2]),
-        .I1(\Probe_out_reg_int_reg[1] ),
-        .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \Probe_out_reg_int[3]_i_1 
-       (.I0(data_int[3]),
-        .I1(\Probe_out_reg_int_reg[1] ),
-        .O(D[2]));
   FDRE \data_int_reg[0] 
        (.C(out),
         .CE(E),
         .D(\data_int_reg[3]_0 [0]),
-        .Q(Q),
+        .Q(Q[0]),
         .R(SR));
   FDRE \data_int_reg[1] 
        (.C(out),
         .CE(E),
         .D(\data_int_reg[3]_0 [1]),
-        .Q(data_int[1]),
+        .Q(Q[1]),
         .R(SR));
   FDRE \data_int_reg[2] 
        (.C(out),
         .CE(E),
         .D(\data_int_reg[3]_0 [2]),
-        .Q(data_int[2]),
+        .Q(Q[2]),
         .R(SR));
   FDRE \data_int_reg[3] 
        (.C(out),
         .CE(E),
         .D(\data_int_reg[3]_0 [3]),
-        .Q(data_int[3]),
+        .Q(Q[3]),
         .R(SR));
 endmodule
 
@@ -3020,13 +3117,101 @@ module apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized0
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "vio_v3_0_19_probe_out_one" *) 
+module apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized1
+   (probe_out2,
+    \data_int_reg[0]_0 ,
+    SR,
+    out,
+    clk,
+    \data_int_reg[0]_1 ,
+    Q,
+    \G_PROBE_OUT[2].wr_probe_out_reg );
+  output [0:0]probe_out2;
+  output \data_int_reg[0]_0 ;
+  input [0:0]SR;
+  input out;
+  input clk;
+  input \data_int_reg[0]_1 ;
+  input [0:0]Q;
+  input \G_PROBE_OUT[2].wr_probe_out_reg ;
+
+  wire \G_PROBE_OUT[2].wr_probe_out_reg ;
+  wire [0:0]Q;
+  (* DIRECT_RESET *) wire [0:0]SR;
+  wire clk;
+  wire \data_int[0]_i_1__0_n_0 ;
+  wire \data_int_reg[0]_0 ;
+  wire \data_int_reg[0]_1 ;
+  wire out;
+  (* DONT_TOUCH *) wire [0:0]probe_out2;
+
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDSE \Probe_out_reg[0] 
+       (.C(clk),
+        .CE(out),
+        .D(\data_int_reg[0]_0 ),
+        .Q(probe_out2),
+        .S(SR));
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \data_int[0]_i_1__0 
+       (.I0(Q),
+        .I1(\G_PROBE_OUT[2].wr_probe_out_reg ),
+        .I2(\data_int_reg[0]_0 ),
+        .O(\data_int[0]_i_1__0_n_0 ));
+  FDSE \data_int_reg[0] 
+       (.C(\data_int_reg[0]_1 ),
+        .CE(1'b1),
+        .D(\data_int[0]_i_1__0_n_0 ),
+        .Q(\data_int_reg[0]_0 ),
+        .S(SR));
+endmodule
+
+(* ORIG_REF_NAME = "vio_v3_0_19_probe_width" *) 
+module apex_blk_vio_0_0_vio_v3_0_19_probe_width
+   (addr_count,
+    probe_width_int,
+    \addr_count_reg[0]_0 ,
+    CLK);
+  output addr_count;
+  output [0:0]probe_width_int;
+  input \addr_count_reg[0]_0 ;
+  input CLK;
+
+  wire CLK;
+  wire addr_count;
+  wire \addr_count_reg[0]_0 ;
+  wire [0:0]probe_width_int;
+  wire \probe_width_int[1]_i_1_n_0 ;
+
+  FDRE \addr_count_reg[0] 
+       (.C(CLK),
+        .CE(1'b1),
+        .D(\addr_count_reg[0]_0 ),
+        .Q(addr_count),
+        .R(1'b0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \probe_width_int[1]_i_1 
+       (.I0(addr_count),
+        .O(\probe_width_int[1]_i_1_n_0 ));
+  FDRE \probe_width_int_reg[1] 
+       (.C(CLK),
+        .CE(1'b1),
+        .D(\probe_width_int[1]_i_1_n_0 ),
+        .Q(probe_width_int),
+        .R(1'b0));
+endmodule
+
 (* C_BUILD_REVISION = "0" *) (* C_BUS_ADDR_WIDTH = "17" *) (* C_BUS_DATA_WIDTH = "16" *) 
 (* C_CORE_INFO1 = "128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* C_CORE_INFO2 = "128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* C_CORE_MAJOR_VER = "2" *) 
 (* C_CORE_MINOR_ALPHA_VER = "97" *) (* C_CORE_MINOR_VER = "0" *) (* C_CORE_TYPE = "2" *) 
 (* C_CSE_DRV_VER = "1" *) (* C_EN_PROBE_IN_ACTIVITY = "0" *) (* C_EN_SYNCHRONIZATION = "1" *) 
 (* C_MAJOR_VERSION = "2013" *) (* C_MAX_NUM_PROBE = "256" *) (* C_MAX_WIDTH_PER_PROBE = "256" *) 
 (* C_MINOR_VERSION = "1" *) (* C_NEXT_SLAVE = "0" *) (* C_NUM_PROBE_IN = "0" *) 
-(* C_NUM_PROBE_OUT = "2" *) (* C_PIPE_IFACE = "0" *) (* C_PROBE_IN0_WIDTH = "1" *) 
+(* C_NUM_PROBE_OUT = "3" *) (* C_PIPE_IFACE = "0" *) (* C_PROBE_IN0_WIDTH = "1" *) 
 (* C_PROBE_IN100_WIDTH = "1" *) (* C_PROBE_IN101_WIDTH = "1" *) (* C_PROBE_IN102_WIDTH = "1" *) 
 (* C_PROBE_IN103_WIDTH = "1" *) (* C_PROBE_IN104_WIDTH = "1" *) (* C_PROBE_IN105_WIDTH = "1" *) 
 (* C_PROBE_IN106_WIDTH = "1" *) (* C_PROBE_IN107_WIDTH = "1" *) (* C_PROBE_IN108_WIDTH = "1" *) 
@@ -3230,7 +3415,7 @@ endmodule
 (* C_PROBE_OUT255_WIDTH = "1" *) (* C_PROBE_OUT25_INIT_VAL = "1'b0" *) (* C_PROBE_OUT25_WIDTH = "1" *) 
 (* C_PROBE_OUT26_INIT_VAL = "1'b0" *) (* C_PROBE_OUT26_WIDTH = "1" *) (* C_PROBE_OUT27_INIT_VAL = "1'b0" *) 
 (* C_PROBE_OUT27_WIDTH = "1" *) (* C_PROBE_OUT28_INIT_VAL = "1'b0" *) (* C_PROBE_OUT28_WIDTH = "1" *) 
-(* C_PROBE_OUT29_INIT_VAL = "1'b0" *) (* C_PROBE_OUT29_WIDTH = "1" *) (* C_PROBE_OUT2_INIT_VAL = "1'b0" *) 
+(* C_PROBE_OUT29_INIT_VAL = "1'b0" *) (* C_PROBE_OUT29_WIDTH = "1" *) (* C_PROBE_OUT2_INIT_VAL = "1'b1" *) 
 (* C_PROBE_OUT2_WIDTH = "1" *) (* C_PROBE_OUT30_INIT_VAL = "1'b0" *) (* C_PROBE_OUT30_WIDTH = "1" *) 
 (* C_PROBE_OUT31_INIT_VAL = "1'b0" *) (* C_PROBE_OUT31_WIDTH = "1" *) (* C_PROBE_OUT32_INIT_VAL = "1'b0" *) 
 (* C_PROBE_OUT32_WIDTH = "1" *) (* C_PROBE_OUT33_INIT_VAL = "1'b0" *) (* C_PROBE_OUT33_WIDTH = "1" *) 
@@ -3455,9 +3640,9 @@ endmodule
 (* LC_LOW_BIT_POS_PROBE_OUT91 = "16'b0000000001011110" *) (* LC_LOW_BIT_POS_PROBE_OUT92 = "16'b0000000001011111" *) (* LC_LOW_BIT_POS_PROBE_OUT93 = "16'b0000000001100000" *) 
 (* LC_LOW_BIT_POS_PROBE_OUT94 = "16'b0000000001100001" *) (* LC_LOW_BIT_POS_PROBE_OUT95 = "16'b0000000001100010" *) (* LC_LOW_BIT_POS_PROBE_OUT96 = "16'b0000000001100011" *) 
 (* LC_LOW_BIT_POS_PROBE_OUT97 = "16'b0000000001100100" *) (* LC_LOW_BIT_POS_PROBE_OUT98 = "16'b0000000001100101" *) (* LC_LOW_BIT_POS_PROBE_OUT99 = "16'b0000000001100110" *) 
-(* LC_PROBE_IN_WIDTH_STRING = "2048'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* LC_PROBE_OUT_HIGH_BIT_POS_STRING = "4096'b0000000100000010000000010000000100000001000000000000000011111111000000001111111000000000111111010000000011111100000000001111101100000000111110100000000011111001000000001111100000000000111101110000000011110110000000001111010100000000111101000000000011110011000000001111001000000000111100010000000011110000000000001110111100000000111011100000000011101101000000001110110000000000111010110000000011101010000000001110100100000000111010000000000011100111000000001110011000000000111001010000000011100100000000001110001100000000111000100000000011100001000000001110000000000000110111110000000011011110000000001101110100000000110111000000000011011011000000001101101000000000110110010000000011011000000000001101011100000000110101100000000011010101000000001101010000000000110100110000000011010010000000001101000100000000110100000000000011001111000000001100111000000000110011010000000011001100000000001100101100000000110010100000000011001001000000001100100000000000110001110000000011000110000000001100010100000000110001000000000011000011000000001100001000000000110000010000000011000000000000001011111100000000101111100000000010111101000000001011110000000000101110110000000010111010000000001011100100000000101110000000000010110111000000001011011000000000101101010000000010110100000000001011001100000000101100100000000010110001000000001011000000000000101011110000000010101110000000001010110100000000101011000000000010101011000000001010101000000000101010010000000010101000000000001010011100000000101001100000000010100101000000001010010000000000101000110000000010100010000000001010000100000000101000000000000010011111000000001001111000000000100111010000000010011100000000001001101100000000100110100000000010011001000000001001100000000000100101110000000010010110000000001001010100000000100101000000000010010011000000001001001000000000100100010000000010010000000000001000111100000000100011100000000010001101000000001000110000000000100010110000000010001010000000001000100100000000100010000000000010000111000000001000011000000000100001010000000010000100000000001000001100000000100000100000000010000001000000001000000000000000011111110000000001111110000000000111110100000000011111000000000001111011000000000111101000000000011110010000000001111000000000000111011100000000011101100000000001110101000000000111010000000000011100110000000001110010000000000111000100000000011100000000000001101111000000000110111000000000011011010000000001101100000000000110101100000000011010100000000001101001000000000110100000000000011001110000000001100110000000000110010100000000011001000000000001100011000000000110001000000000011000010000000001100000000000000101111100000000010111100000000001011101000000000101110000000000010110110000000001011010000000000101100100000000010110000000000001010111000000000101011000000000010101010000000001010100000000000101001100000000010100100000000001010001000000000101000000000000010011110000000001001110000000000100110100000000010011000000000001001011000000000100101000000000010010010000000001001000000000000100011100000000010001100000000001000101000000000100010000000000010000110000000001000010000000000100000100000000010000000000000000111111000000000011111000000000001111010000000000111100000000000011101100000000001110100000000000111001000000000011100000000000001101110000000000110110000000000011010100000000001101000000000000110011000000000011001000000000001100010000000000110000000000000010111100000000001011100000000000101101000000000010110000000000001010110000000000101010000000000010100100000000001010000000000000100111000000000010011000000000001001010000000000100100000000000010001100000000001000100000000000100001000000000010000000000000000111110000000000011110000000000001110100000000000111000000000000011011000000000001101000000000000110010000000000011000000000000001011100000000000101100000000000010101000000000001010000000000000100110000000000010010000000000001000100000000000100000000000000001111000000000000111000000000000011010000000000001100000000000000101100000000000010100000000000001001000000000000100000000000000001110000000000000110000000000000010100000000000001000000000000000011" *) (* LC_PROBE_OUT_INIT_VAL_STRING = "259'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
+(* LC_PROBE_IN_WIDTH_STRING = "2048'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* LC_PROBE_OUT_HIGH_BIT_POS_STRING = "4096'b0000000100000010000000010000000100000001000000000000000011111111000000001111111000000000111111010000000011111100000000001111101100000000111110100000000011111001000000001111100000000000111101110000000011110110000000001111010100000000111101000000000011110011000000001111001000000000111100010000000011110000000000001110111100000000111011100000000011101101000000001110110000000000111010110000000011101010000000001110100100000000111010000000000011100111000000001110011000000000111001010000000011100100000000001110001100000000111000100000000011100001000000001110000000000000110111110000000011011110000000001101110100000000110111000000000011011011000000001101101000000000110110010000000011011000000000001101011100000000110101100000000011010101000000001101010000000000110100110000000011010010000000001101000100000000110100000000000011001111000000001100111000000000110011010000000011001100000000001100101100000000110010100000000011001001000000001100100000000000110001110000000011000110000000001100010100000000110001000000000011000011000000001100001000000000110000010000000011000000000000001011111100000000101111100000000010111101000000001011110000000000101110110000000010111010000000001011100100000000101110000000000010110111000000001011011000000000101101010000000010110100000000001011001100000000101100100000000010110001000000001011000000000000101011110000000010101110000000001010110100000000101011000000000010101011000000001010101000000000101010010000000010101000000000001010011100000000101001100000000010100101000000001010010000000000101000110000000010100010000000001010000100000000101000000000000010011111000000001001111000000000100111010000000010011100000000001001101100000000100110100000000010011001000000001001100000000000100101110000000010010110000000001001010100000000100101000000000010010011000000001001001000000000100100010000000010010000000000001000111100000000100011100000000010001101000000001000110000000000100010110000000010001010000000001000100100000000100010000000000010000111000000001000011000000000100001010000000010000100000000001000001100000000100000100000000010000001000000001000000000000000011111110000000001111110000000000111110100000000011111000000000001111011000000000111101000000000011110010000000001111000000000000111011100000000011101100000000001110101000000000111010000000000011100110000000001110010000000000111000100000000011100000000000001101111000000000110111000000000011011010000000001101100000000000110101100000000011010100000000001101001000000000110100000000000011001110000000001100110000000000110010100000000011001000000000001100011000000000110001000000000011000010000000001100000000000000101111100000000010111100000000001011101000000000101110000000000010110110000000001011010000000000101100100000000010110000000000001010111000000000101011000000000010101010000000001010100000000000101001100000000010100100000000001010001000000000101000000000000010011110000000001001110000000000100110100000000010011000000000001001011000000000100101000000000010010010000000001001000000000000100011100000000010001100000000001000101000000000100010000000000010000110000000001000010000000000100000100000000010000000000000000111111000000000011111000000000001111010000000000111100000000000011101100000000001110100000000000111001000000000011100000000000001101110000000000110110000000000011010100000000001101000000000000110011000000000011001000000000001100010000000000110000000000000010111100000000001011100000000000101101000000000010110000000000001010110000000000101010000000000010100100000000001010000000000000100111000000000010011000000000001001010000000000100100000000000010001100000000001000100000000000100001000000000010000000000000000111110000000000011110000000000001110100000000000111000000000000011011000000000001101000000000000110010000000000011000000000000001011100000000000101100000000000010101000000000001010000000000000100110000000000010010000000000001000100000000000100000000000000001111000000000000111000000000000011010000000000001100000000000000101100000000000010100000000000001001000000000000100000000000000001110000000000000110000000000000010100000000000001000000000000000011" *) (* LC_PROBE_OUT_INIT_VAL_STRING = "259'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000" *) 
 (* LC_PROBE_OUT_LOW_BIT_POS_STRING = "4096'b0000000100000010000000010000000100000001000000000000000011111111000000001111111000000000111111010000000011111100000000001111101100000000111110100000000011111001000000001111100000000000111101110000000011110110000000001111010100000000111101000000000011110011000000001111001000000000111100010000000011110000000000001110111100000000111011100000000011101101000000001110110000000000111010110000000011101010000000001110100100000000111010000000000011100111000000001110011000000000111001010000000011100100000000001110001100000000111000100000000011100001000000001110000000000000110111110000000011011110000000001101110100000000110111000000000011011011000000001101101000000000110110010000000011011000000000001101011100000000110101100000000011010101000000001101010000000000110100110000000011010010000000001101000100000000110100000000000011001111000000001100111000000000110011010000000011001100000000001100101100000000110010100000000011001001000000001100100000000000110001110000000011000110000000001100010100000000110001000000000011000011000000001100001000000000110000010000000011000000000000001011111100000000101111100000000010111101000000001011110000000000101110110000000010111010000000001011100100000000101110000000000010110111000000001011011000000000101101010000000010110100000000001011001100000000101100100000000010110001000000001011000000000000101011110000000010101110000000001010110100000000101011000000000010101011000000001010101000000000101010010000000010101000000000001010011100000000101001100000000010100101000000001010010000000000101000110000000010100010000000001010000100000000101000000000000010011111000000001001111000000000100111010000000010011100000000001001101100000000100110100000000010011001000000001001100000000000100101110000000010010110000000001001010100000000100101000000000010010011000000001001001000000000100100010000000010010000000000001000111100000000100011100000000010001101000000001000110000000000100010110000000010001010000000001000100100000000100010000000000010000111000000001000011000000000100001010000000010000100000000001000001100000000100000100000000010000001000000001000000000000000011111110000000001111110000000000111110100000000011111000000000001111011000000000111101000000000011110010000000001111000000000000111011100000000011101100000000001110101000000000111010000000000011100110000000001110010000000000111000100000000011100000000000001101111000000000110111000000000011011010000000001101100000000000110101100000000011010100000000001101001000000000110100000000000011001110000000001100110000000000110010100000000011001000000000001100011000000000110001000000000011000010000000001100000000000000101111100000000010111100000000001011101000000000101110000000000010110110000000001011010000000000101100100000000010110000000000001010111000000000101011000000000010101010000000001010100000000000101001100000000010100100000000001010001000000000101000000000000010011110000000001001110000000000100110100000000010011000000000001001011000000000100101000000000010010010000000001001000000000000100011100000000010001100000000001000101000000000100010000000000010000110000000001000010000000000100000100000000010000000000000000111111000000000011111000000000001111010000000000111100000000000011101100000000001110100000000000111001000000000011100000000000001101110000000000110110000000000011010100000000001101000000000000110011000000000011001000000000001100010000000000110000000000000010111100000000001011100000000000101101000000000010110000000000001010110000000000101010000000000010100100000000001010000000000000100111000000000010011000000000001001010000000000100100000000000010001100000000001000100000000000100001000000000010000000000000000111110000000000011110000000000001110100000000000111000000000000011011000000000001101000000000000110010000000000011000000000000001011100000000000101100000000000010101000000000001010000000000000100110000000000010010000000000001000100000000000100000000000000001111000000000000111000000000000011010000000000001100000000000000101100000000000010100000000000001001000000000000100000000000000001110000000000000110000000000000010100000000000001000000000000000000" *) (* LC_PROBE_OUT_WIDTH_STRING = "2048'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011" *) (* LC_TOTAL_PROBE_IN_WIDTH = "0" *) 
-(* LC_TOTAL_PROBE_OUT_WIDTH = "5" *) (* dont_touch = "true" *) 
+(* LC_TOTAL_PROBE_OUT_WIDTH = "6" *) (* ORIG_REF_NAME = "vio_v3_0_19_vio" *) (* dont_touch = "true" *) 
 module apex_blk_vio_0_0_vio_v3_0_19_vio
    (clk,
     probe_in0,
@@ -4491,11 +4676,16 @@ module apex_blk_vio_0_0_vio_v3_0_19_vio
   output [0:0]probe_out255;
 
   wire \<const0> ;
-  wire PROBE_OUT_ALL_INST_n_5;
+  wire DECODER_INST_n_5;
+  wire DECODER_INST_n_6;
+  wire PROBE_OUT_ALL_INST_n_10;
+  wire PROBE_OUT_ALL_INST_n_11;
+  wire PROBE_OUT_ALL_INST_n_12;
   wire PROBE_OUT_ALL_INST_n_6;
   wire PROBE_OUT_ALL_INST_n_7;
   wire PROBE_OUT_ALL_INST_n_8;
   wire PROBE_OUT_ALL_INST_n_9;
+  wire addr_count;
   wire [16:0]bus_addr;
   (* DONT_TOUCH *) wire bus_clk;
   wire \bus_data_int_reg_n_0_[10] ;
@@ -4525,9 +4715,11 @@ module apex_blk_vio_0_0_vio_v3_0_19_vio
   wire p_2_in;
   wire [3:0]probe_out0;
   wire [0:0]probe_out1;
+  wire [0:0]probe_out2;
+  wire [1:1]probe_width_int;
   (* DONT_TOUCH *) wire [36:0]sl_iport0;
   (* DONT_TOUCH *) wire [16:0]sl_oport0;
-  wire [0:0]xsdb_addr_2_0_p1;
+  wire [1:0]xsdb_addr_2_0_p1;
 
   assign probe_out10[0] = \<const0> ;
   assign probe_out100[0] = \<const0> ;
@@ -4639,7 +4831,6 @@ module apex_blk_vio_0_0_vio_v3_0_19_vio
   assign probe_out197[0] = \<const0> ;
   assign probe_out198[0] = \<const0> ;
   assign probe_out199[0] = \<const0> ;
-  assign probe_out2[0] = \<const0> ;
   assign probe_out20[0] = \<const0> ;
   assign probe_out200[0] = \<const0> ;
   assign probe_out201[0] = \<const0> ;
@@ -4784,25 +4975,33 @@ module apex_blk_vio_0_0_vio_v3_0_19_vio
   assign probe_out98[0] = \<const0> ;
   assign probe_out99[0] = \<const0> ;
   apex_blk_vio_0_0_vio_v3_0_19_decoder DECODER_INST
-       (.\Bus_data_out_reg[3]_0 ({PROBE_OUT_ALL_INST_n_6,PROBE_OUT_ALL_INST_n_7,PROBE_OUT_ALL_INST_n_8,PROBE_OUT_ALL_INST_n_9}),
+       (.\Bus_data_out_reg[3]_0 ({PROBE_OUT_ALL_INST_n_9,PROBE_OUT_ALL_INST_n_10,PROBE_OUT_ALL_INST_n_11,PROBE_OUT_ALL_INST_n_12}),
+        .\G_PROBE_OUT[0].wr_probe_out[0]_i_5 (DECODER_INST_n_5),
         .Q({\bus_data_int_reg_n_0_[15] ,\bus_data_int_reg_n_0_[14] ,\bus_data_int_reg_n_0_[13] ,\bus_data_int_reg_n_0_[12] ,\bus_data_int_reg_n_0_[11] ,\bus_data_int_reg_n_0_[10] ,\bus_data_int_reg_n_0_[9] ,\bus_data_int_reg_n_0_[8] ,\bus_data_int_reg_n_0_[7] ,\bus_data_int_reg_n_0_[6] ,\bus_data_int_reg_n_0_[5] ,\bus_data_int_reg_n_0_[4] ,\bus_data_int_reg_n_0_[3] ,\bus_data_int_reg_n_0_[2] ,p_0_in,p_2_in}),
         .SR(clear),
+        .addr_count(addr_count),
         .in0(committ),
         .out(bus_clk),
+        .probe_width_int(probe_width_int),
+        .\rd_en_reg[6]_0 (DECODER_INST_n_6),
         .s_daddr_o({bus_addr[8],bus_addr[2:0]}),
         .s_den_o(bus_den),
         .s_do_i(bus_do),
         .s_drdy_i(bus_drdy),
         .s_dwe_o(bus_dwe),
         .s_rst_o(bus_rst),
-        .\wr_en_reg[2]_0 (PROBE_OUT_ALL_INST_n_5),
-        .\xsdb_addr_2_0_p1_reg[0]_0 (xsdb_addr_2_0_p1));
+        .\wr_en_reg[2]_0 (PROBE_OUT_ALL_INST_n_6),
+        .\wr_en_reg[2]_1 (PROBE_OUT_ALL_INST_n_7),
+        .\wr_en_reg[2]_2 (PROBE_OUT_ALL_INST_n_8),
+        .\xsdb_addr_2_0_p1_reg[1]_0 (xsdb_addr_2_0_p1));
   GND GND
        (.G(\<const0> ));
   apex_blk_vio_0_0_vio_v3_0_19_probe_out_all PROBE_OUT_ALL_INST
-       (.\G_PROBE_OUT[0].wr_probe_out[0]_i_5_0 (PROBE_OUT_ALL_INST_n_5),
-        .\Probe_out_reg_int_reg[1]_0 (xsdb_addr_2_0_p1),
-        .\Probe_out_reg_int_reg[3]_0 ({PROBE_OUT_ALL_INST_n_6,PROBE_OUT_ALL_INST_n_7,PROBE_OUT_ALL_INST_n_8,PROBE_OUT_ALL_INST_n_9}),
+       (.\G_PROBE_OUT[0].wr_probe_out[0]_i_3_0 (PROBE_OUT_ALL_INST_n_6),
+        .\G_PROBE_OUT[0].wr_probe_out[0]_i_4_0 (PROBE_OUT_ALL_INST_n_7),
+        .\G_PROBE_OUT[2].wr_probe_out_reg[2]_0 (DECODER_INST_n_5),
+        .\Probe_out_reg_int_reg[0]_0 (xsdb_addr_2_0_p1),
+        .\Probe_out_reg_int_reg[3]_0 ({PROBE_OUT_ALL_INST_n_9,PROBE_OUT_ALL_INST_n_10,PROBE_OUT_ALL_INST_n_11,PROBE_OUT_ALL_INST_n_12}),
         .Q({\bus_data_int_reg_n_0_[3] ,\bus_data_int_reg_n_0_[2] ,p_0_in,p_2_in}),
         .SR(clear),
         .clk(clk),
@@ -4810,9 +5009,16 @@ module apex_blk_vio_0_0_vio_v3_0_19_vio
         .out(bus_clk),
         .probe_out0(probe_out0),
         .probe_out1(probe_out1),
+        .probe_out2(probe_out2),
         .s_daddr_o(bus_addr),
         .s_den_o(bus_den),
+        .s_den_o_INST_0(PROBE_OUT_ALL_INST_n_8),
         .s_dwe_o(bus_dwe));
+  apex_blk_vio_0_0_vio_v3_0_19_probe_width PROBE_OUT_WIDTH_INST
+       (.CLK(bus_clk),
+        .addr_count(addr_count),
+        .\addr_count_reg[0]_0 (DECODER_INST_n_6),
+        .probe_width_int(probe_width_int));
   (* C_BUILD_REVISION = "0" *) 
   (* C_CORE_INFO1 = "128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
   (* C_CORE_INFO2 = "128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
@@ -4941,7 +5147,8 @@ endmodule
 (* C_CORE_MAJOR_VER = "2" *) (* C_CORE_MINOR_VER = "0" *) (* C_CORE_TYPE = "2" *) 
 (* C_CSE_DRV_VER = "1" *) (* C_MAJOR_VERSION = "2013" *) (* C_MINOR_VERSION = "1" *) 
 (* C_NEXT_SLAVE = "0" *) (* C_PIPE_IFACE = "0" *) (* C_USE_TEST_REG = "1" *) 
-(* C_XDEVICEFAMILY = "kintexuplus" *) (* C_XSDB_SLAVE_TYPE = "33" *) (* dont_touch = "true" *) 
+(* C_XDEVICEFAMILY = "kintexuplus" *) (* C_XSDB_SLAVE_TYPE = "33" *) (* ORIG_REF_NAME = "xsdbs_v1_0_2_xsdbs" *) 
+(* dont_touch = "true" *) 
 module apex_blk_vio_0_0_xsdbs_v1_0_2_xsdbs
    (s_rst_o,
     s_dclk_o,

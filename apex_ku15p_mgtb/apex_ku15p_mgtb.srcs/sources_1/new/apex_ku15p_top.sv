@@ -10,28 +10,13 @@ module apex_ku15p_top
 	input [5:0] refclk_p,
 	input [5:0] refclk_n
 
-//    input [12:0] drpaddr,
-//    input  drp_clk,
-//    input [31:0] drpdi,
-//    output [31:0] drpdo,
-//    input  drpen,
-//    output drprdy,
-//    input  drpwe,
-//    input  int_reg
-
 );
 
     wire        drp_clk;
 	drp #(.AW(13)) drp_gth_i (); // AW parameter must match AW_QUAD parameter in top serial module
 
     wire [3:0]drp_we;
-//    assign drp_gth_i.drpaddr = drpaddr;
-//    assign drp_gth_i.drpdi   = drpdi  ;
-//    assign drp_gth_i.drpen   = drpen  ;
-//    assign drp_gth_i.drpwe   = drpwe  ;
-    assign drp_gth_i.int_reg = 1'b1;
-//    assign drpdo   = drp_gth_i.drpdo  ;
-//    assign drprdy  = drp_gth_i.drprdy ;
+    assign drp_gth_i.int_reg = 1'b0;
 
     wire refclk5, refclk5_bufg;
     
