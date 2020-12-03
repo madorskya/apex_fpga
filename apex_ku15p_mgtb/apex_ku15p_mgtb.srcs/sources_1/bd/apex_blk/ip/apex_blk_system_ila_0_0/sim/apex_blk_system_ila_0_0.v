@@ -56,6 +56,18 @@
 module apex_blk_system_ila_0_0 (
   clk,
   probe0,
+  probe1,
+  probe2,
+  probe3,
+  probe4,
+  probe5,
+  probe6,
+  probe7,
+  probe8,
+  probe9,
+  probe10,
+  probe11,
+  probe12,
   SLOT_0_AXI_awid,
   SLOT_0_AXI_awaddr,
   SLOT_0_AXI_awlen,
@@ -147,32 +159,25 @@ module apex_blk_system_ila_0_0 (
   SLOT_2_AXI_rlast,
   SLOT_2_AXI_rvalid,
   SLOT_2_AXI_rready,
-  SLOT_3_AXI_awaddr,
-  SLOT_3_AXI_awprot,
-  SLOT_3_AXI_awvalid,
-  SLOT_3_AXI_awready,
-  SLOT_3_AXI_wdata,
-  SLOT_3_AXI_wstrb,
-  SLOT_3_AXI_wvalid,
-  SLOT_3_AXI_wready,
-  SLOT_3_AXI_bresp,
-  SLOT_3_AXI_bvalid,
-  SLOT_3_AXI_bready,
-  SLOT_3_AXI_araddr,
-  SLOT_3_AXI_arprot,
-  SLOT_3_AXI_arvalid,
-  SLOT_3_AXI_arready,
-  SLOT_3_AXI_rdata,
-  SLOT_3_AXI_rresp,
-  SLOT_3_AXI_rvalid,
-  SLOT_3_AXI_rready,
   resetn
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, ASSOCIATED_BUSIF SLOT_0_AXI:SLOT_1_AXI:SLOT_2_AXI:SLOT_3_AXI, ASSOCIATED_RESET resetn, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, ASSOCIATED_BUSIF SLOT_0_AXI:SLOT_1_AXI:SLOT_2_AXI, ASSOCIATED_RESET resetn, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.clk CLK" *)
 input wire clk;
 input wire [0 : 0] probe0;
+input wire [15 : 0] probe1;
+input wire [31 : 0] probe2;
+input wire [0 : 0] probe3;
+input wire [0 : 0] probe4;
+input wire [0 : 0] probe5;
+input wire [12 : 0] probe6;
+input wire [31 : 0] probe7;
+input wire [31 : 0] probe8;
+input wire [0 : 0] probe9;
+input wire [0 : 0] probe10;
+input wire [0 : 0] probe11;
+input wire [12 : 0] probe12;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWID" *)
 input wire [5 : 0] SLOT_0_AXI_awid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWADDR" *)
@@ -361,46 +366,6 @@ input wire SLOT_2_AXI_rvalid;
 ITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_2_AXI RREADY" *)
 input wire SLOT_2_AXI_rready;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI AWADDR" *)
-input wire [31 : 0] SLOT_3_AXI_awaddr;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI AWPROT" *)
-input wire [2 : 0] SLOT_3_AXI_awprot;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI AWVALID" *)
-input wire SLOT_3_AXI_awvalid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI AWREADY" *)
-input wire SLOT_3_AXI_awready;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI WDATA" *)
-input wire [31 : 0] SLOT_3_AXI_wdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI WSTRB" *)
-input wire [3 : 0] SLOT_3_AXI_wstrb;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI WVALID" *)
-input wire SLOT_3_AXI_wvalid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI WREADY" *)
-input wire SLOT_3_AXI_wready;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI BRESP" *)
-input wire [1 : 0] SLOT_3_AXI_bresp;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI BVALID" *)
-input wire SLOT_3_AXI_bvalid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI BREADY" *)
-input wire SLOT_3_AXI_bready;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI ARADDR" *)
-input wire [31 : 0] SLOT_3_AXI_araddr;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI ARPROT" *)
-input wire [2 : 0] SLOT_3_AXI_arprot;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI ARVALID" *)
-input wire SLOT_3_AXI_arvalid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI ARREADY" *)
-input wire SLOT_3_AXI_arready;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI RDATA" *)
-input wire [31 : 0] SLOT_3_AXI_rdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI RRESP" *)
-input wire [1 : 0] SLOT_3_AXI_rresp;
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI RVALID" *)
-input wire SLOT_3_AXI_rvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SLOT_3_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WR\
-ITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_3_AXI RREADY" *)
-input wire SLOT_3_AXI_rready;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.resetn RST" *)
 input wire resetn;
@@ -408,6 +373,18 @@ input wire resetn;
   bd_4ccc inst (
     .clk(clk),
     .probe0(probe0),
+    .probe1(probe1),
+    .probe2(probe2),
+    .probe3(probe3),
+    .probe4(probe4),
+    .probe5(probe5),
+    .probe6(probe6),
+    .probe7(probe7),
+    .probe8(probe8),
+    .probe9(probe9),
+    .probe10(probe10),
+    .probe11(probe11),
+    .probe12(probe12),
     .SLOT_0_AXI_awid(SLOT_0_AXI_awid),
     .SLOT_0_AXI_awaddr(SLOT_0_AXI_awaddr),
     .SLOT_0_AXI_awlen(SLOT_0_AXI_awlen),
@@ -499,25 +476,6 @@ input wire resetn;
     .SLOT_2_AXI_rlast(SLOT_2_AXI_rlast),
     .SLOT_2_AXI_rvalid(SLOT_2_AXI_rvalid),
     .SLOT_2_AXI_rready(SLOT_2_AXI_rready),
-    .SLOT_3_AXI_awaddr(SLOT_3_AXI_awaddr),
-    .SLOT_3_AXI_awprot(SLOT_3_AXI_awprot),
-    .SLOT_3_AXI_awvalid(SLOT_3_AXI_awvalid),
-    .SLOT_3_AXI_awready(SLOT_3_AXI_awready),
-    .SLOT_3_AXI_wdata(SLOT_3_AXI_wdata),
-    .SLOT_3_AXI_wstrb(SLOT_3_AXI_wstrb),
-    .SLOT_3_AXI_wvalid(SLOT_3_AXI_wvalid),
-    .SLOT_3_AXI_wready(SLOT_3_AXI_wready),
-    .SLOT_3_AXI_bresp(SLOT_3_AXI_bresp),
-    .SLOT_3_AXI_bvalid(SLOT_3_AXI_bvalid),
-    .SLOT_3_AXI_bready(SLOT_3_AXI_bready),
-    .SLOT_3_AXI_araddr(SLOT_3_AXI_araddr),
-    .SLOT_3_AXI_arprot(SLOT_3_AXI_arprot),
-    .SLOT_3_AXI_arvalid(SLOT_3_AXI_arvalid),
-    .SLOT_3_AXI_arready(SLOT_3_AXI_arready),
-    .SLOT_3_AXI_rdata(SLOT_3_AXI_rdata),
-    .SLOT_3_AXI_rresp(SLOT_3_AXI_rresp),
-    .SLOT_3_AXI_rvalid(SLOT_3_AXI_rvalid),
-    .SLOT_3_AXI_rready(SLOT_3_AXI_rready),
     .resetn(resetn)
   );
 endmodule

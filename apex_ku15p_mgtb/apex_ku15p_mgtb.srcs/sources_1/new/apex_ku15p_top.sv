@@ -28,13 +28,13 @@ module apex_ku15p_top
         .c2c_tx_txp      (c2c_tx_txp),
         .c2c_refclk      (refclk5),
         .c2c_refclk_bufg (refclk5_bufg),
-        .axi_clk         (drp_clk),
-        .drp_daddr       (drp_gth_i.drpaddr),
+        .drp_clk         (drp_clk),
+        .drp_addr        (drp_gth_i.drpaddr),
         .drp_di          (drp_gth_i.drpdi),
         .drp_do          (drp_gth_i.drpdo),
-        .drp_den         (drp_gth_i.drpen),
-        .drp_drdy        (drp_gth_i.drprdy),
-        .drp_dwe         (drp_gth_i.drpwe)
+        .drp_en          (drp_gth_i.drpen),
+        .drp_rdy         (drp_gth_i.drprdy),
+        .drp_we          (drp_gth_i.drpwe)
     );
     
 	mgt_gth_rx tcds_rx [0:0]();

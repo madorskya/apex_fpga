@@ -47,90 +47,51 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:ip:xlconcat:2.1
-// IP Revision: 3
+#include "apex_blk_auto_cc_0_sc.h"
 
-`timescale 1ns/1ps
+#include "axi_clock_converter.h"
 
-(* DowngradeIPIdentifiedWarnings = "yes" *)
-module bd_4ccc_slot_3_w_0 (
-  In0,
-  In1,
-  dout
-);
+#include <map>
+#include <string>
 
-input wire [0 : 0] In0;
-input wire [0 : 0] In1;
-output wire [1 : 0] dout;
+apex_blk_auto_cc_0_sc::apex_blk_auto_cc_0_sc(const sc_core::sc_module_name& nm) : sc_core::sc_module(nm), mp_impl(NULL)
+{
+  // configure connectivity manager
+  xsc::utils::xsc_sim_manager::addInstance("apex_blk_auto_cc_0", this);
 
-  xlconcat_v2_1_3_xlconcat #(
-    .IN0_WIDTH(1),
-    .IN1_WIDTH(1),
-    .IN2_WIDTH(1),
-    .IN3_WIDTH(1),
-    .IN4_WIDTH(1),
-    .IN5_WIDTH(1),
-    .IN6_WIDTH(1),
-    .IN7_WIDTH(1),
-    .IN8_WIDTH(1),
-    .IN9_WIDTH(1),
-    .IN10_WIDTH(1),
-    .IN11_WIDTH(1),
-    .IN12_WIDTH(1),
-    .IN13_WIDTH(1),
-    .IN14_WIDTH(1),
-    .IN15_WIDTH(1),
-    .IN16_WIDTH(1),
-    .IN17_WIDTH(1),
-    .IN18_WIDTH(1),
-    .IN19_WIDTH(1),
-    .IN20_WIDTH(1),
-    .IN21_WIDTH(1),
-    .IN22_WIDTH(1),
-    .IN23_WIDTH(1),
-    .IN24_WIDTH(1),
-    .IN25_WIDTH(1),
-    .IN26_WIDTH(1),
-    .IN27_WIDTH(1),
-    .IN28_WIDTH(1),
-    .IN29_WIDTH(1),
-    .IN30_WIDTH(1),
-    .IN31_WIDTH(1),
-    .dout_width(2),
-    .NUM_PORTS(2)
-  ) inst (
-    .In0(In0),
-    .In1(In1),
-    .In2(1'B0),
-    .In3(1'B0),
-    .In4(1'B0),
-    .In5(1'B0),
-    .In6(1'B0),
-    .In7(1'B0),
-    .In8(1'B0),
-    .In9(1'B0),
-    .In10(1'B0),
-    .In11(1'B0),
-    .In12(1'B0),
-    .In13(1'B0),
-    .In14(1'B0),
-    .In15(1'B0),
-    .In16(1'B0),
-    .In17(1'B0),
-    .In18(1'B0),
-    .In19(1'B0),
-    .In20(1'B0),
-    .In21(1'B0),
-    .In22(1'B0),
-    .In23(1'B0),
-    .In24(1'B0),
-    .In25(1'B0),
-    .In26(1'B0),
-    .In27(1'B0),
-    .In28(1'B0),
-    .In29(1'B0),
-    .In30(1'B0),
-    .In31(1'B0),
-    .dout(dout)
-  );
-endmodule
+  // initialize module
+    xsc::common_cpp::properties model_param_props;
+    model_param_props.addLong("C_AXI_ID_WIDTH", "6");
+    model_param_props.addLong("C_AXI_ADDR_WIDTH", "32");
+    model_param_props.addLong("C_AXI_DATA_WIDTH", "32");
+    model_param_props.addLong("C_S_AXI_ACLK_RATIO", "2");
+    model_param_props.addLong("C_M_AXI_ACLK_RATIO", "1");
+    model_param_props.addLong("C_AXI_IS_ACLK_ASYNC", "0");
+    model_param_props.addLong("C_AXI_PROTOCOL", "0");
+    model_param_props.addLong("C_AXI_SUPPORTS_USER_SIGNALS", "0");
+    model_param_props.addLong("C_AXI_AWUSER_WIDTH", "1");
+    model_param_props.addLong("C_AXI_ARUSER_WIDTH", "1");
+    model_param_props.addLong("C_AXI_WUSER_WIDTH", "1");
+    model_param_props.addLong("C_AXI_RUSER_WIDTH", "1");
+    model_param_props.addLong("C_AXI_BUSER_WIDTH", "1");
+    model_param_props.addLong("C_AXI_SUPPORTS_WRITE", "1");
+    model_param_props.addLong("C_AXI_SUPPORTS_READ", "1");
+    model_param_props.addLong("C_SYNCHRONIZER_STAGE", "3");
+    model_param_props.addString("C_FAMILY", "kintexuplus");
+
+  mp_impl = new axi_clock_converter("inst", model_param_props);
+
+  // initialize sockets
+  S_TARGET_rd_socket = mp_impl->S_TARGET_rd_socket;
+  S_TARGET_wr_socket = mp_impl->S_TARGET_wr_socket;
+  M_INITIATOR_rd_socket = mp_impl->M_INITIATOR_rd_socket;
+  M_INITIATOR_wr_socket = mp_impl->M_INITIATOR_wr_socket;
+}
+
+apex_blk_auto_cc_0_sc::~apex_blk_auto_cc_0_sc()
+{
+  xsc::utils::xsc_sim_manager::clean();
+
+  delete mp_impl;
+}
+

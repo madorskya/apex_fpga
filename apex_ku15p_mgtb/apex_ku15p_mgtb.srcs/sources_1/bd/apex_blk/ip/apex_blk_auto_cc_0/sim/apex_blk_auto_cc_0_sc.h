@@ -1,3 +1,6 @@
+#ifndef IP_APEX_BLK_AUTO_CC_0_SC_H_
+#define IP_APEX_BLK_AUTO_CC_0_SC_H_
+
 // (c) Copyright 1995-2020 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
@@ -47,90 +50,46 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:ip:xlconcat:2.1
-// IP Revision: 3
+#ifndef XTLM
+#include "xtlm.h"
+#endif
+#ifndef SYSTEMC_INCLUDED
+#include <systemc>
+#endif
 
-`timescale 1ns/1ps
+#if defined(_MSC_VER)
+#define DllExport __declspec(dllexport)
+#elif defined(__GNUC__)
+#define DllExport __attribute__ ((visibility("default")))
+#else
+#define DllExport
+#endif
 
-(* DowngradeIPIdentifiedWarnings = "yes" *)
-module bd_4ccc_slot_3_ar_0 (
-  In0,
-  In1,
-  dout
-);
+class axi_clock_converter;
 
-input wire [0 : 0] In0;
-input wire [0 : 0] In1;
-output wire [1 : 0] dout;
+class DllExport apex_blk_auto_cc_0_sc : public sc_core::sc_module
+{
+public:
 
-  xlconcat_v2_1_3_xlconcat #(
-    .IN0_WIDTH(1),
-    .IN1_WIDTH(1),
-    .IN2_WIDTH(1),
-    .IN3_WIDTH(1),
-    .IN4_WIDTH(1),
-    .IN5_WIDTH(1),
-    .IN6_WIDTH(1),
-    .IN7_WIDTH(1),
-    .IN8_WIDTH(1),
-    .IN9_WIDTH(1),
-    .IN10_WIDTH(1),
-    .IN11_WIDTH(1),
-    .IN12_WIDTH(1),
-    .IN13_WIDTH(1),
-    .IN14_WIDTH(1),
-    .IN15_WIDTH(1),
-    .IN16_WIDTH(1),
-    .IN17_WIDTH(1),
-    .IN18_WIDTH(1),
-    .IN19_WIDTH(1),
-    .IN20_WIDTH(1),
-    .IN21_WIDTH(1),
-    .IN22_WIDTH(1),
-    .IN23_WIDTH(1),
-    .IN24_WIDTH(1),
-    .IN25_WIDTH(1),
-    .IN26_WIDTH(1),
-    .IN27_WIDTH(1),
-    .IN28_WIDTH(1),
-    .IN29_WIDTH(1),
-    .IN30_WIDTH(1),
-    .IN31_WIDTH(1),
-    .dout_width(2),
-    .NUM_PORTS(2)
-  ) inst (
-    .In0(In0),
-    .In1(In1),
-    .In2(1'B0),
-    .In3(1'B0),
-    .In4(1'B0),
-    .In5(1'B0),
-    .In6(1'B0),
-    .In7(1'B0),
-    .In8(1'B0),
-    .In9(1'B0),
-    .In10(1'B0),
-    .In11(1'B0),
-    .In12(1'B0),
-    .In13(1'B0),
-    .In14(1'B0),
-    .In15(1'B0),
-    .In16(1'B0),
-    .In17(1'B0),
-    .In18(1'B0),
-    .In19(1'B0),
-    .In20(1'B0),
-    .In21(1'B0),
-    .In22(1'B0),
-    .In23(1'B0),
-    .In24(1'B0),
-    .In25(1'B0),
-    .In26(1'B0),
-    .In27(1'B0),
-    .In28(1'B0),
-    .In29(1'B0),
-    .In30(1'B0),
-    .In31(1'B0),
-    .dout(dout)
-  );
-endmodule
+  apex_blk_auto_cc_0_sc(const sc_core::sc_module_name& nm);
+  virtual ~apex_blk_auto_cc_0_sc();
+
+public: // module socket-to-socket TLM interface
+
+  xtlm::xtlm_aximm_target_socket* S_TARGET_rd_socket;
+  xtlm::xtlm_aximm_target_socket* S_TARGET_wr_socket;
+  xtlm::xtlm_aximm_initiator_socket* M_INITIATOR_rd_socket;
+  xtlm::xtlm_aximm_initiator_socket* M_INITIATOR_wr_socket;
+
+protected:
+
+  axi_clock_converter* mp_impl;
+
+private:
+
+  apex_blk_auto_cc_0_sc(const apex_blk_auto_cc_0_sc&);
+  const apex_blk_auto_cc_0_sc& operator=(const apex_blk_auto_cc_0_sc&);
+
+};
+
+#endif // IP_APEX_BLK_AUTO_CC_0_SC_H_
