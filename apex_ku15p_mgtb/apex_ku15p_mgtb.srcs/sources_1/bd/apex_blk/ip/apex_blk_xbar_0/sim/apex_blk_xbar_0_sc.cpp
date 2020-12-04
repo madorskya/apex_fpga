@@ -63,9 +63,9 @@ apex_blk_xbar_0_sc::apex_blk_xbar_0_sc(const sc_core::sc_module_name& nm) : sc_c
     xsc::common_cpp::properties model_param_props;
     model_param_props.addLong("C_NUM_SLAVE_SLOTS", "1");
     model_param_props.addLong("C_NUM_MASTER_SLOTS", "3");
-    model_param_props.addLong("C_AXI_ID_WIDTH", "6");
+    model_param_props.addLong("C_AXI_ID_WIDTH", "1");
     model_param_props.addLong("C_AXI_ADDR_WIDTH", "32");
-    model_param_props.addLong("C_AXI_DATA_WIDTH", "32");
+    model_param_props.addLong("C_AXI_DATA_WIDTH", "64");
     model_param_props.addLong("C_AXI_PROTOCOL", "0");
     model_param_props.addLong("C_NUM_ADDR_RANGES", "1");
     model_param_props.addLong("C_AXI_SUPPORTS_USER_SIGNALS", "0");
@@ -80,7 +80,7 @@ apex_blk_xbar_0_sc::apex_blk_xbar_0_sc(const sc_core::sc_module_name& nm) : sc_c
     model_param_props.addBitString("C_M_AXI_BASE_ADDR", "000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", 192);
     model_param_props.addBitString("C_M_AXI_ADDR_WIDTH", "000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000", 96);
     model_param_props.addBitString("C_S_AXI_BASE_ID", "00000000000000000000000000000000", 32);
-    model_param_props.addBitString("C_S_AXI_THREAD_ID_WIDTH", "00000000000000000000000000000110", 32);
+    model_param_props.addBitString("C_S_AXI_THREAD_ID_WIDTH", "00000000000000000000000000000000", 32);
     model_param_props.addBitString("C_M_AXI_WRITE_CONNECTIVITY", "000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001", 96);
     model_param_props.addBitString("C_M_AXI_READ_CONNECTIVITY", "000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001", 96);
     model_param_props.addBitString("C_S_AXI_SINGLE_THREAD", "00000000000000000000000000000000", 32);

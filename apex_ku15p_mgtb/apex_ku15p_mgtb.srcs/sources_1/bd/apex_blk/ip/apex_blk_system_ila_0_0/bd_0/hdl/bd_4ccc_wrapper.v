@@ -38,7 +38,6 @@ module bd_4ccc_wrapper
     SLOT_0_AXI_wvalid,
     SLOT_1_AXI_araddr,
     SLOT_1_AXI_arburst,
-    SLOT_1_AXI_arid,
     SLOT_1_AXI_arlen,
     SLOT_1_AXI_arprot,
     SLOT_1_AXI_arready,
@@ -46,18 +45,15 @@ module bd_4ccc_wrapper
     SLOT_1_AXI_arvalid,
     SLOT_1_AXI_awaddr,
     SLOT_1_AXI_awburst,
-    SLOT_1_AXI_awid,
     SLOT_1_AXI_awlen,
     SLOT_1_AXI_awprot,
     SLOT_1_AXI_awready,
     SLOT_1_AXI_awsize,
     SLOT_1_AXI_awvalid,
-    SLOT_1_AXI_bid,
     SLOT_1_AXI_bready,
     SLOT_1_AXI_bresp,
     SLOT_1_AXI_bvalid,
     SLOT_1_AXI_rdata,
-    SLOT_1_AXI_rid,
     SLOT_1_AXI_rlast,
     SLOT_1_AXI_rready,
     SLOT_1_AXI_rresp,
@@ -69,7 +65,6 @@ module bd_4ccc_wrapper
     SLOT_1_AXI_wvalid,
     SLOT_2_AXI_araddr,
     SLOT_2_AXI_arburst,
-    SLOT_2_AXI_arid,
     SLOT_2_AXI_arlen,
     SLOT_2_AXI_arprot,
     SLOT_2_AXI_arready,
@@ -77,18 +72,15 @@ module bd_4ccc_wrapper
     SLOT_2_AXI_arvalid,
     SLOT_2_AXI_awaddr,
     SLOT_2_AXI_awburst,
-    SLOT_2_AXI_awid,
     SLOT_2_AXI_awlen,
     SLOT_2_AXI_awprot,
     SLOT_2_AXI_awready,
     SLOT_2_AXI_awsize,
     SLOT_2_AXI_awvalid,
-    SLOT_2_AXI_bid,
     SLOT_2_AXI_bready,
     SLOT_2_AXI_bresp,
     SLOT_2_AXI_bvalid,
     SLOT_2_AXI_rdata,
-    SLOT_2_AXI_rid,
     SLOT_2_AXI_rlast,
     SLOT_2_AXI_rready,
     SLOT_2_AXI_rresp,
@@ -144,7 +136,6 @@ module bd_4ccc_wrapper
   input SLOT_0_AXI_wvalid;
   input [15:0]SLOT_1_AXI_araddr;
   input [1:0]SLOT_1_AXI_arburst;
-  input [5:0]SLOT_1_AXI_arid;
   input [7:0]SLOT_1_AXI_arlen;
   input [2:0]SLOT_1_AXI_arprot;
   input SLOT_1_AXI_arready;
@@ -152,18 +143,15 @@ module bd_4ccc_wrapper
   input SLOT_1_AXI_arvalid;
   input [15:0]SLOT_1_AXI_awaddr;
   input [1:0]SLOT_1_AXI_awburst;
-  input [5:0]SLOT_1_AXI_awid;
   input [7:0]SLOT_1_AXI_awlen;
   input [2:0]SLOT_1_AXI_awprot;
   input SLOT_1_AXI_awready;
   input [2:0]SLOT_1_AXI_awsize;
   input SLOT_1_AXI_awvalid;
-  input [5:0]SLOT_1_AXI_bid;
   input SLOT_1_AXI_bready;
   input [1:0]SLOT_1_AXI_bresp;
   input SLOT_1_AXI_bvalid;
   input [31:0]SLOT_1_AXI_rdata;
-  input [5:0]SLOT_1_AXI_rid;
   input SLOT_1_AXI_rlast;
   input SLOT_1_AXI_rready;
   input [1:0]SLOT_1_AXI_rresp;
@@ -175,7 +163,6 @@ module bd_4ccc_wrapper
   input SLOT_1_AXI_wvalid;
   input [15:0]SLOT_2_AXI_araddr;
   input [1:0]SLOT_2_AXI_arburst;
-  input [5:0]SLOT_2_AXI_arid;
   input [7:0]SLOT_2_AXI_arlen;
   input [2:0]SLOT_2_AXI_arprot;
   input SLOT_2_AXI_arready;
@@ -183,18 +170,15 @@ module bd_4ccc_wrapper
   input SLOT_2_AXI_arvalid;
   input [15:0]SLOT_2_AXI_awaddr;
   input [1:0]SLOT_2_AXI_awburst;
-  input [5:0]SLOT_2_AXI_awid;
   input [7:0]SLOT_2_AXI_awlen;
   input [2:0]SLOT_2_AXI_awprot;
   input SLOT_2_AXI_awready;
   input [2:0]SLOT_2_AXI_awsize;
   input SLOT_2_AXI_awvalid;
-  input [5:0]SLOT_2_AXI_bid;
   input SLOT_2_AXI_bready;
   input [1:0]SLOT_2_AXI_bresp;
   input SLOT_2_AXI_bvalid;
   input [31:0]SLOT_2_AXI_rdata;
-  input [5:0]SLOT_2_AXI_rid;
   input SLOT_2_AXI_rlast;
   input SLOT_2_AXI_rready;
   input [1:0]SLOT_2_AXI_rresp;
@@ -210,13 +194,13 @@ module bd_4ccc_wrapper
   input [0:0]probe10;
   input [0:0]probe11;
   input [12:0]probe12;
-  input [31:0]probe2;
+  input [63:0]probe2;
   input [0:0]probe3;
   input [0:0]probe4;
   input [0:0]probe5;
   input [12:0]probe6;
-  input [31:0]probe7;
-  input [31:0]probe8;
+  input [63:0]probe7;
+  input [63:0]probe8;
   input [0:0]probe9;
   input resetn;
 
@@ -251,7 +235,6 @@ module bd_4ccc_wrapper
   wire SLOT_0_AXI_wvalid;
   wire [15:0]SLOT_1_AXI_araddr;
   wire [1:0]SLOT_1_AXI_arburst;
-  wire [5:0]SLOT_1_AXI_arid;
   wire [7:0]SLOT_1_AXI_arlen;
   wire [2:0]SLOT_1_AXI_arprot;
   wire SLOT_1_AXI_arready;
@@ -259,18 +242,15 @@ module bd_4ccc_wrapper
   wire SLOT_1_AXI_arvalid;
   wire [15:0]SLOT_1_AXI_awaddr;
   wire [1:0]SLOT_1_AXI_awburst;
-  wire [5:0]SLOT_1_AXI_awid;
   wire [7:0]SLOT_1_AXI_awlen;
   wire [2:0]SLOT_1_AXI_awprot;
   wire SLOT_1_AXI_awready;
   wire [2:0]SLOT_1_AXI_awsize;
   wire SLOT_1_AXI_awvalid;
-  wire [5:0]SLOT_1_AXI_bid;
   wire SLOT_1_AXI_bready;
   wire [1:0]SLOT_1_AXI_bresp;
   wire SLOT_1_AXI_bvalid;
   wire [31:0]SLOT_1_AXI_rdata;
-  wire [5:0]SLOT_1_AXI_rid;
   wire SLOT_1_AXI_rlast;
   wire SLOT_1_AXI_rready;
   wire [1:0]SLOT_1_AXI_rresp;
@@ -282,7 +262,6 @@ module bd_4ccc_wrapper
   wire SLOT_1_AXI_wvalid;
   wire [15:0]SLOT_2_AXI_araddr;
   wire [1:0]SLOT_2_AXI_arburst;
-  wire [5:0]SLOT_2_AXI_arid;
   wire [7:0]SLOT_2_AXI_arlen;
   wire [2:0]SLOT_2_AXI_arprot;
   wire SLOT_2_AXI_arready;
@@ -290,18 +269,15 @@ module bd_4ccc_wrapper
   wire SLOT_2_AXI_arvalid;
   wire [15:0]SLOT_2_AXI_awaddr;
   wire [1:0]SLOT_2_AXI_awburst;
-  wire [5:0]SLOT_2_AXI_awid;
   wire [7:0]SLOT_2_AXI_awlen;
   wire [2:0]SLOT_2_AXI_awprot;
   wire SLOT_2_AXI_awready;
   wire [2:0]SLOT_2_AXI_awsize;
   wire SLOT_2_AXI_awvalid;
-  wire [5:0]SLOT_2_AXI_bid;
   wire SLOT_2_AXI_bready;
   wire [1:0]SLOT_2_AXI_bresp;
   wire SLOT_2_AXI_bvalid;
   wire [31:0]SLOT_2_AXI_rdata;
-  wire [5:0]SLOT_2_AXI_rid;
   wire SLOT_2_AXI_rlast;
   wire SLOT_2_AXI_rready;
   wire [1:0]SLOT_2_AXI_rresp;
@@ -317,13 +293,13 @@ module bd_4ccc_wrapper
   wire [0:0]probe10;
   wire [0:0]probe11;
   wire [12:0]probe12;
-  wire [31:0]probe2;
+  wire [63:0]probe2;
   wire [0:0]probe3;
   wire [0:0]probe4;
   wire [0:0]probe5;
   wire [12:0]probe6;
-  wire [31:0]probe7;
-  wire [31:0]probe8;
+  wire [63:0]probe7;
+  wire [63:0]probe8;
   wire [0:0]probe9;
   wire resetn;
 
@@ -359,7 +335,6 @@ module bd_4ccc_wrapper
         .SLOT_0_AXI_wvalid(SLOT_0_AXI_wvalid),
         .SLOT_1_AXI_araddr(SLOT_1_AXI_araddr),
         .SLOT_1_AXI_arburst(SLOT_1_AXI_arburst),
-        .SLOT_1_AXI_arid(SLOT_1_AXI_arid),
         .SLOT_1_AXI_arlen(SLOT_1_AXI_arlen),
         .SLOT_1_AXI_arprot(SLOT_1_AXI_arprot),
         .SLOT_1_AXI_arready(SLOT_1_AXI_arready),
@@ -367,18 +342,15 @@ module bd_4ccc_wrapper
         .SLOT_1_AXI_arvalid(SLOT_1_AXI_arvalid),
         .SLOT_1_AXI_awaddr(SLOT_1_AXI_awaddr),
         .SLOT_1_AXI_awburst(SLOT_1_AXI_awburst),
-        .SLOT_1_AXI_awid(SLOT_1_AXI_awid),
         .SLOT_1_AXI_awlen(SLOT_1_AXI_awlen),
         .SLOT_1_AXI_awprot(SLOT_1_AXI_awprot),
         .SLOT_1_AXI_awready(SLOT_1_AXI_awready),
         .SLOT_1_AXI_awsize(SLOT_1_AXI_awsize),
         .SLOT_1_AXI_awvalid(SLOT_1_AXI_awvalid),
-        .SLOT_1_AXI_bid(SLOT_1_AXI_bid),
         .SLOT_1_AXI_bready(SLOT_1_AXI_bready),
         .SLOT_1_AXI_bresp(SLOT_1_AXI_bresp),
         .SLOT_1_AXI_bvalid(SLOT_1_AXI_bvalid),
         .SLOT_1_AXI_rdata(SLOT_1_AXI_rdata),
-        .SLOT_1_AXI_rid(SLOT_1_AXI_rid),
         .SLOT_1_AXI_rlast(SLOT_1_AXI_rlast),
         .SLOT_1_AXI_rready(SLOT_1_AXI_rready),
         .SLOT_1_AXI_rresp(SLOT_1_AXI_rresp),
@@ -390,7 +362,6 @@ module bd_4ccc_wrapper
         .SLOT_1_AXI_wvalid(SLOT_1_AXI_wvalid),
         .SLOT_2_AXI_araddr(SLOT_2_AXI_araddr),
         .SLOT_2_AXI_arburst(SLOT_2_AXI_arburst),
-        .SLOT_2_AXI_arid(SLOT_2_AXI_arid),
         .SLOT_2_AXI_arlen(SLOT_2_AXI_arlen),
         .SLOT_2_AXI_arprot(SLOT_2_AXI_arprot),
         .SLOT_2_AXI_arready(SLOT_2_AXI_arready),
@@ -398,18 +369,15 @@ module bd_4ccc_wrapper
         .SLOT_2_AXI_arvalid(SLOT_2_AXI_arvalid),
         .SLOT_2_AXI_awaddr(SLOT_2_AXI_awaddr),
         .SLOT_2_AXI_awburst(SLOT_2_AXI_awburst),
-        .SLOT_2_AXI_awid(SLOT_2_AXI_awid),
         .SLOT_2_AXI_awlen(SLOT_2_AXI_awlen),
         .SLOT_2_AXI_awprot(SLOT_2_AXI_awprot),
         .SLOT_2_AXI_awready(SLOT_2_AXI_awready),
         .SLOT_2_AXI_awsize(SLOT_2_AXI_awsize),
         .SLOT_2_AXI_awvalid(SLOT_2_AXI_awvalid),
-        .SLOT_2_AXI_bid(SLOT_2_AXI_bid),
         .SLOT_2_AXI_bready(SLOT_2_AXI_bready),
         .SLOT_2_AXI_bresp(SLOT_2_AXI_bresp),
         .SLOT_2_AXI_bvalid(SLOT_2_AXI_bvalid),
         .SLOT_2_AXI_rdata(SLOT_2_AXI_rdata),
-        .SLOT_2_AXI_rid(SLOT_2_AXI_rid),
         .SLOT_2_AXI_rlast(SLOT_2_AXI_rlast),
         .SLOT_2_AXI_rready(SLOT_2_AXI_rready),
         .SLOT_2_AXI_rresp(SLOT_2_AXI_rresp),

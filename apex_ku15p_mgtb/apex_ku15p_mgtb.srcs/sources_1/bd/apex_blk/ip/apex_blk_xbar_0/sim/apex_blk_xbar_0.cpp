@@ -61,7 +61,7 @@
 
 
 #ifdef XILINX_SIMULATOR
-apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_xbar_0_sc(nm), aclk("aclk"), aresetn("aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awid("m_axi_awid"), m_axi_awaddr("m_axi_awaddr"), m_axi_awlen("m_axi_awlen"), m_axi_awsize("m_axi_awsize"), m_axi_awburst("m_axi_awburst"), m_axi_awlock("m_axi_awlock"), m_axi_awcache("m_axi_awcache"), m_axi_awprot("m_axi_awprot"), m_axi_awregion("m_axi_awregion"), m_axi_awqos("m_axi_awqos"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wlast("m_axi_wlast"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bid("m_axi_bid"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_arid("m_axi_arid"), m_axi_araddr("m_axi_araddr"), m_axi_arlen("m_axi_arlen"), m_axi_arsize("m_axi_arsize"), m_axi_arburst("m_axi_arburst"), m_axi_arlock("m_axi_arlock"), m_axi_arcache("m_axi_arcache"), m_axi_arprot("m_axi_arprot"), m_axi_arregion("m_axi_arregion"), m_axi_arqos("m_axi_arqos"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rid("m_axi_rid"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rlast("m_axi_rlast"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
+apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_xbar_0_sc(nm), aclk("aclk"), aresetn("aresetn"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awaddr("m_axi_awaddr"), m_axi_awlen("m_axi_awlen"), m_axi_awsize("m_axi_awsize"), m_axi_awburst("m_axi_awburst"), m_axi_awlock("m_axi_awlock"), m_axi_awcache("m_axi_awcache"), m_axi_awprot("m_axi_awprot"), m_axi_awregion("m_axi_awregion"), m_axi_awqos("m_axi_awqos"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wlast("m_axi_wlast"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_araddr("m_axi_araddr"), m_axi_arlen("m_axi_arlen"), m_axi_arsize("m_axi_arsize"), m_axi_arburst("m_axi_arburst"), m_axi_arlock("m_axi_arlock"), m_axi_arcache("m_axi_arcache"), m_axi_arprot("m_axi_arprot"), m_axi_arregion("m_axi_arregion"), m_axi_arqos("m_axi_arqos"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rlast("m_axi_rlast"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
 {
 
   // initialize pins
@@ -85,7 +85,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_s_axi_rvalid_converter = NULL;
   mp_s_axi_rready_converter = NULL;
   mp_M00_AXI_transactor = NULL;
-  mp_m_axi_awid_converter_0 = NULL;
   mp_m_axi_awaddr_converter_0 = NULL;
   mp_m_axi_awlen_converter_0 = NULL;
   mp_m_axi_awsize_converter_0 = NULL;
@@ -102,11 +101,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wlast_converter_0 = NULL;
   mp_m_axi_wvalid_converter_0 = NULL;
   mp_m_axi_wready_converter_0 = NULL;
-  mp_m_axi_bid_converter_0 = NULL;
   mp_m_axi_bresp_converter_0 = NULL;
   mp_m_axi_bvalid_converter_0 = NULL;
   mp_m_axi_bready_converter_0 = NULL;
-  mp_m_axi_arid_converter_0 = NULL;
   mp_m_axi_araddr_converter_0 = NULL;
   mp_m_axi_arlen_converter_0 = NULL;
   mp_m_axi_arsize_converter_0 = NULL;
@@ -118,14 +115,12 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arqos_converter_0 = NULL;
   mp_m_axi_arvalid_converter_0 = NULL;
   mp_m_axi_arready_converter_0 = NULL;
-  mp_m_axi_rid_converter_0 = NULL;
   mp_m_axi_rdata_converter_0 = NULL;
   mp_m_axi_rresp_converter_0 = NULL;
   mp_m_axi_rlast_converter_0 = NULL;
   mp_m_axi_rvalid_converter_0 = NULL;
   mp_m_axi_rready_converter_0 = NULL;
   mp_M01_AXI_transactor = NULL;
-  mp_m_axi_awid_converter_1 = NULL;
   mp_m_axi_awaddr_converter_1 = NULL;
   mp_m_axi_awlen_converter_1 = NULL;
   mp_m_axi_awsize_converter_1 = NULL;
@@ -142,11 +137,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wlast_converter_1 = NULL;
   mp_m_axi_wvalid_converter_1 = NULL;
   mp_m_axi_wready_converter_1 = NULL;
-  mp_m_axi_bid_converter_1 = NULL;
   mp_m_axi_bresp_converter_1 = NULL;
   mp_m_axi_bvalid_converter_1 = NULL;
   mp_m_axi_bready_converter_1 = NULL;
-  mp_m_axi_arid_converter_1 = NULL;
   mp_m_axi_araddr_converter_1 = NULL;
   mp_m_axi_arlen_converter_1 = NULL;
   mp_m_axi_arsize_converter_1 = NULL;
@@ -158,14 +151,12 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arqos_converter_1 = NULL;
   mp_m_axi_arvalid_converter_1 = NULL;
   mp_m_axi_arready_converter_1 = NULL;
-  mp_m_axi_rid_converter_1 = NULL;
   mp_m_axi_rdata_converter_1 = NULL;
   mp_m_axi_rresp_converter_1 = NULL;
   mp_m_axi_rlast_converter_1 = NULL;
   mp_m_axi_rvalid_converter_1 = NULL;
   mp_m_axi_rready_converter_1 = NULL;
   mp_M02_AXI_transactor = NULL;
-  mp_m_axi_awid_converter_2 = NULL;
   mp_m_axi_awaddr_converter_2 = NULL;
   mp_m_axi_awlen_converter_2 = NULL;
   mp_m_axi_awsize_converter_2 = NULL;
@@ -182,11 +173,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wlast_converter_2 = NULL;
   mp_m_axi_wvalid_converter_2 = NULL;
   mp_m_axi_wready_converter_2 = NULL;
-  mp_m_axi_bid_converter_2 = NULL;
   mp_m_axi_bresp_converter_2 = NULL;
   mp_m_axi_bvalid_converter_2 = NULL;
   mp_m_axi_bready_converter_2 = NULL;
-  mp_m_axi_arid_converter_2 = NULL;
   mp_m_axi_araddr_converter_2 = NULL;
   mp_m_axi_arlen_converter_2 = NULL;
   mp_m_axi_arsize_converter_2 = NULL;
@@ -198,7 +187,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arqos_converter_2 = NULL;
   mp_m_axi_arvalid_converter_2 = NULL;
   mp_m_axi_arready_converter_2 = NULL;
-  mp_m_axi_rid_converter_2 = NULL;
   mp_m_axi_rdata_converter_2 = NULL;
   mp_m_axi_rresp_converter_2 = NULL;
   mp_m_axi_rlast_converter_2 = NULL;
@@ -209,7 +197,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_araddr = NULL;
   mp_m_axi_concat_arburst = NULL;
   mp_m_axi_concat_arcache = NULL;
-  mp_m_axi_concat_arid = NULL;
   mp_m_axi_concat_arlen = NULL;
   mp_m_axi_concat_arlock = NULL;
   mp_m_axi_concat_arprot = NULL;
@@ -220,7 +207,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_awaddr = NULL;
   mp_m_axi_concat_awburst = NULL;
   mp_m_axi_concat_awcache = NULL;
-  mp_m_axi_concat_awid = NULL;
   mp_m_axi_concat_awlen = NULL;
   mp_m_axi_concat_awlock = NULL;
   mp_m_axi_concat_awprot = NULL;
@@ -236,19 +222,13 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_wvalid = NULL;
   mp_m_axi_split_arready = NULL;
   mp_m_axi_split_awready = NULL;
-  mp_m_axi_split_bid = NULL;
   mp_m_axi_split_bresp = NULL;
   mp_m_axi_split_bvalid = NULL;
   mp_m_axi_split_rdata = NULL;
-  mp_m_axi_split_rid = NULL;
   mp_m_axi_split_rlast = NULL;
   mp_m_axi_split_rresp = NULL;
   mp_m_axi_split_rvalid = NULL;
   mp_m_axi_split_wready = NULL;
-  mp_m_axi_concat_awid = new xsc::xsc_concatenator<18, 3>("m_axi_concat_awid");
-  mp_m_axi_concat_awid->in_port[0](m_axi_concat_awid_out_0);
-  mp_m_axi_concat_awid->out_port(m_axi_awid);
-    mp_m_axi_concat_awid->offset_port(0, 0);
   mp_m_axi_concat_awaddr = new xsc::xsc_concatenator<96, 3>("m_axi_concat_awaddr");
   mp_m_axi_concat_awaddr->in_port[0](m_axi_concat_awaddr_out_0);
   mp_m_axi_concat_awaddr->out_port(m_axi_awaddr);
@@ -293,11 +273,11 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_awready->in_port(m_axi_awready);
   mp_m_axi_split_awready->out_port[0](m_axi_split_awready_out_0);
     mp_m_axi_split_awready->add_mask(0,1,0);
-  mp_m_axi_concat_wdata = new xsc::xsc_concatenator<96, 3>("m_axi_concat_wdata");
+  mp_m_axi_concat_wdata = new xsc::xsc_concatenator<192, 3>("m_axi_concat_wdata");
   mp_m_axi_concat_wdata->in_port[0](m_axi_concat_wdata_out_0);
   mp_m_axi_concat_wdata->out_port(m_axi_wdata);
     mp_m_axi_concat_wdata->offset_port(0, 0);
-  mp_m_axi_concat_wstrb = new xsc::xsc_concatenator<12, 3>("m_axi_concat_wstrb");
+  mp_m_axi_concat_wstrb = new xsc::xsc_concatenator<24, 3>("m_axi_concat_wstrb");
   mp_m_axi_concat_wstrb->in_port[0](m_axi_concat_wstrb_out_0);
   mp_m_axi_concat_wstrb->out_port(m_axi_wstrb);
     mp_m_axi_concat_wstrb->offset_port(0, 0);
@@ -313,10 +293,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_wready->in_port(m_axi_wready);
   mp_m_axi_split_wready->out_port[0](m_axi_split_wready_out_0);
     mp_m_axi_split_wready->add_mask(0,1,0);
-  mp_m_axi_split_bid = new xsc::xsc_split<18, 3>("m_axi_split_bid");
-  mp_m_axi_split_bid->in_port(m_axi_bid);
-  mp_m_axi_split_bid->out_port[0](m_axi_split_bid_out_0);
-    mp_m_axi_split_bid->add_mask(0,6,0);
   mp_m_axi_split_bresp = new xsc::xsc_split<6, 3>("m_axi_split_bresp");
   mp_m_axi_split_bresp->in_port(m_axi_bresp);
   mp_m_axi_split_bresp->out_port[0](m_axi_split_bresp_out_0);
@@ -329,10 +305,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_bready->in_port[0](m_axi_concat_bready_out_0);
   mp_m_axi_concat_bready->out_port(m_axi_bready);
     mp_m_axi_concat_bready->offset_port(0, 0);
-  mp_m_axi_concat_arid = new xsc::xsc_concatenator<18, 3>("m_axi_concat_arid");
-  mp_m_axi_concat_arid->in_port[0](m_axi_concat_arid_out_0);
-  mp_m_axi_concat_arid->out_port(m_axi_arid);
-    mp_m_axi_concat_arid->offset_port(0, 0);
   mp_m_axi_concat_araddr = new xsc::xsc_concatenator<96, 3>("m_axi_concat_araddr");
   mp_m_axi_concat_araddr->in_port[0](m_axi_concat_araddr_out_0);
   mp_m_axi_concat_araddr->out_port(m_axi_araddr);
@@ -377,14 +349,10 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_arready->in_port(m_axi_arready);
   mp_m_axi_split_arready->out_port[0](m_axi_split_arready_out_0);
     mp_m_axi_split_arready->add_mask(0,1,0);
-  mp_m_axi_split_rid = new xsc::xsc_split<18, 3>("m_axi_split_rid");
-  mp_m_axi_split_rid->in_port(m_axi_rid);
-  mp_m_axi_split_rid->out_port[0](m_axi_split_rid_out_0);
-    mp_m_axi_split_rid->add_mask(0,6,0);
-  mp_m_axi_split_rdata = new xsc::xsc_split<96, 3>("m_axi_split_rdata");
+  mp_m_axi_split_rdata = new xsc::xsc_split<192, 3>("m_axi_split_rdata");
   mp_m_axi_split_rdata->in_port(m_axi_rdata);
   mp_m_axi_split_rdata->out_port[0](m_axi_split_rdata_out_0);
-    mp_m_axi_split_rdata->add_mask(0,32,0);
+    mp_m_axi_split_rdata->add_mask(0,64,0);
   mp_m_axi_split_rresp = new xsc::xsc_split<6, 3>("m_axi_split_rresp");
   mp_m_axi_split_rresp->in_port(m_axi_rresp);
   mp_m_axi_split_rresp->out_port[0](m_axi_split_rresp_out_0);
@@ -401,8 +369,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_rready->in_port[0](m_axi_concat_rready_out_0);
   mp_m_axi_concat_rready->out_port(m_axi_rready);
     mp_m_axi_concat_rready->offset_port(0, 0);
-  mp_m_axi_concat_awid->in_port[1](m_axi_concat_awid_out_1);
-  mp_m_axi_concat_awid->offset_port(1, 6);
   mp_m_axi_concat_awaddr->in_port[1](m_axi_concat_awaddr_out_1);
   mp_m_axi_concat_awaddr->offset_port(1, 32);
   mp_m_axi_concat_awlen->in_port[1](m_axi_concat_awlen_out_1);
@@ -427,9 +393,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_awready->out_port[1](m_axi_split_awready_out_1);
     mp_m_axi_split_awready->add_mask(1,2,1);
   mp_m_axi_concat_wdata->in_port[1](m_axi_concat_wdata_out_1);
-  mp_m_axi_concat_wdata->offset_port(1, 32);
+  mp_m_axi_concat_wdata->offset_port(1, 64);
   mp_m_axi_concat_wstrb->in_port[1](m_axi_concat_wstrb_out_1);
-  mp_m_axi_concat_wstrb->offset_port(1, 4);
+  mp_m_axi_concat_wstrb->offset_port(1, 8);
   mp_m_axi_concat_wlast->in_port[1](m_axi_concat_wlast_out_1);
   mp_m_axi_concat_wlast->offset_port(1, 1);
   mp_m_axi_concat_wvalid->in_port[1](m_axi_concat_wvalid_out_1);
@@ -438,9 +404,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_wready->out_port[1](m_axi_split_wready_out_1);
     mp_m_axi_split_wready->add_mask(1,2,1);
   
-  mp_m_axi_split_bid->out_port[1](m_axi_split_bid_out_1);
-    mp_m_axi_split_bid->add_mask(1,12,6);
-  
   mp_m_axi_split_bresp->out_port[1](m_axi_split_bresp_out_1);
     mp_m_axi_split_bresp->add_mask(1,4,2);
   
@@ -448,8 +411,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     mp_m_axi_split_bvalid->add_mask(1,2,1);
   mp_m_axi_concat_bready->in_port[1](m_axi_concat_bready_out_1);
   mp_m_axi_concat_bready->offset_port(1, 1);
-  mp_m_axi_concat_arid->in_port[1](m_axi_concat_arid_out_1);
-  mp_m_axi_concat_arid->offset_port(1, 6);
   mp_m_axi_concat_araddr->in_port[1](m_axi_concat_araddr_out_1);
   mp_m_axi_concat_araddr->offset_port(1, 32);
   mp_m_axi_concat_arlen->in_port[1](m_axi_concat_arlen_out_1);
@@ -474,11 +435,8 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_arready->out_port[1](m_axi_split_arready_out_1);
     mp_m_axi_split_arready->add_mask(1,2,1);
   
-  mp_m_axi_split_rid->out_port[1](m_axi_split_rid_out_1);
-    mp_m_axi_split_rid->add_mask(1,12,6);
-  
   mp_m_axi_split_rdata->out_port[1](m_axi_split_rdata_out_1);
-    mp_m_axi_split_rdata->add_mask(1,64,32);
+    mp_m_axi_split_rdata->add_mask(1,128,64);
   
   mp_m_axi_split_rresp->out_port[1](m_axi_split_rresp_out_1);
     mp_m_axi_split_rresp->add_mask(1,4,2);
@@ -490,8 +448,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     mp_m_axi_split_rvalid->add_mask(1,2,1);
   mp_m_axi_concat_rready->in_port[1](m_axi_concat_rready_out_1);
   mp_m_axi_concat_rready->offset_port(1, 1);
-  mp_m_axi_concat_awid->in_port[2](m_axi_concat_awid_out_2);
-  mp_m_axi_concat_awid->offset_port(2, 12);
   mp_m_axi_concat_awaddr->in_port[2](m_axi_concat_awaddr_out_2);
   mp_m_axi_concat_awaddr->offset_port(2, 64);
   mp_m_axi_concat_awlen->in_port[2](m_axi_concat_awlen_out_2);
@@ -516,9 +472,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_awready->out_port[2](m_axi_split_awready_out_2);
     mp_m_axi_split_awready->add_mask(2,3,2);
   mp_m_axi_concat_wdata->in_port[2](m_axi_concat_wdata_out_2);
-  mp_m_axi_concat_wdata->offset_port(2, 64);
+  mp_m_axi_concat_wdata->offset_port(2, 128);
   mp_m_axi_concat_wstrb->in_port[2](m_axi_concat_wstrb_out_2);
-  mp_m_axi_concat_wstrb->offset_port(2, 8);
+  mp_m_axi_concat_wstrb->offset_port(2, 16);
   mp_m_axi_concat_wlast->in_port[2](m_axi_concat_wlast_out_2);
   mp_m_axi_concat_wlast->offset_port(2, 2);
   mp_m_axi_concat_wvalid->in_port[2](m_axi_concat_wvalid_out_2);
@@ -527,9 +483,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_wready->out_port[2](m_axi_split_wready_out_2);
     mp_m_axi_split_wready->add_mask(2,3,2);
   
-  mp_m_axi_split_bid->out_port[2](m_axi_split_bid_out_2);
-    mp_m_axi_split_bid->add_mask(2,18,12);
-  
   mp_m_axi_split_bresp->out_port[2](m_axi_split_bresp_out_2);
     mp_m_axi_split_bresp->add_mask(2,6,4);
   
@@ -537,8 +490,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     mp_m_axi_split_bvalid->add_mask(2,3,2);
   mp_m_axi_concat_bready->in_port[2](m_axi_concat_bready_out_2);
   mp_m_axi_concat_bready->offset_port(2, 2);
-  mp_m_axi_concat_arid->in_port[2](m_axi_concat_arid_out_2);
-  mp_m_axi_concat_arid->offset_port(2, 12);
   mp_m_axi_concat_araddr->in_port[2](m_axi_concat_araddr_out_2);
   mp_m_axi_concat_araddr->offset_port(2, 64);
   mp_m_axi_concat_arlen->in_port[2](m_axi_concat_arlen_out_2);
@@ -563,11 +514,8 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_arready->out_port[2](m_axi_split_arready_out_2);
     mp_m_axi_split_arready->add_mask(2,3,2);
   
-  mp_m_axi_split_rid->out_port[2](m_axi_split_rid_out_2);
-    mp_m_axi_split_rid->add_mask(2,18,12);
-  
   mp_m_axi_split_rdata->out_port[2](m_axi_split_rdata_out_2);
-    mp_m_axi_split_rdata->add_mask(2,96,64);
+    mp_m_axi_split_rdata->add_mask(2,192,128);
   
   mp_m_axi_split_rresp->out_port[2](m_axi_split_rresp_out_2);
     mp_m_axi_split_rresp->add_mask(2,6,4);
@@ -594,9 +542,9 @@ void apex_blk_xbar_0::before_end_of_elaboration()
 
   // 'S00_AXI' transactor parameters
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
-    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    S00_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    S00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S00_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -627,11 +575,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     S00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,6,1,1,1,1,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
+    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,1,1,1,1,1,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
 
     // S00_AXI' transactor ports
 
-    mp_S00_AXI_transactor->AWID(s_axi_awid);
     mp_S00_AXI_transactor->AWADDR(s_axi_awaddr);
     mp_S00_AXI_transactor->AWLEN(s_axi_awlen);
     mp_S00_AXI_transactor->AWSIZE(s_axi_awsize);
@@ -665,7 +612,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_s_axi_wready_converter->scalar_in(m_s_axi_wready_converter_signal);
     mp_s_axi_wready_converter->vector_out(s_axi_wready);
     mp_S00_AXI_transactor->WREADY(m_s_axi_wready_converter_signal);
-    mp_S00_AXI_transactor->BID(s_axi_bid);
     mp_S00_AXI_transactor->BRESP(s_axi_bresp);
     mp_s_axi_bvalid_converter = new xsc::common::scalar2vectorN_converter<1>("s_axi_bvalid_converter");
     mp_s_axi_bvalid_converter->scalar_in(m_s_axi_bvalid_converter_signal);
@@ -675,7 +621,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_s_axi_bready_converter->vector_in(s_axi_bready);
     mp_s_axi_bready_converter->scalar_out(m_s_axi_bready_converter_signal);
     mp_S00_AXI_transactor->BREADY(m_s_axi_bready_converter_signal);
-    mp_S00_AXI_transactor->ARID(s_axi_arid);
     mp_S00_AXI_transactor->ARADDR(s_axi_araddr);
     mp_S00_AXI_transactor->ARLEN(s_axi_arlen);
     mp_S00_AXI_transactor->ARSIZE(s_axi_arsize);
@@ -695,7 +640,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_s_axi_arready_converter->scalar_in(m_s_axi_arready_converter_signal);
     mp_s_axi_arready_converter->vector_out(s_axi_arready);
     mp_S00_AXI_transactor->ARREADY(m_s_axi_arready_converter_signal);
-    mp_S00_AXI_transactor->RID(s_axi_rid);
     mp_S00_AXI_transactor->RDATA(s_axi_rdata);
     mp_S00_AXI_transactor->RRESP(s_axi_rresp);
     mp_s_axi_rlast_converter = new xsc::common::scalar2vectorN_converter<1>("s_axi_rlast_converter");
@@ -727,9 +671,9 @@ void apex_blk_xbar_0::before_end_of_elaboration()
 
   // 'M00_AXI' transactor parameters
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
-    M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    M00_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    M00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -748,7 +692,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M00_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
     M00_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
     M00_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
-    M00_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M00_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M00_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M00_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M00_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -760,14 +704,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M00_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,32,6,1,1,1,1,1>("M00_AXI_transactor", M00_AXI_transactor_param_props);
+    mp_M00_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M00_AXI_transactor", M00_AXI_transactor_param_props);
 
     // M00_AXI' transactor ports
 
-    mp_m_axi_awid_converter_0 = new xsc::common::vector2vector_converter<6,18>("m_axi_awid_converter_0");
-    mp_m_axi_awid_converter_0->vector_in(m_m_axi_awid_converter_0_signal);
-    mp_m_axi_awid_converter_0->vector_out(m_axi_concat_awid_out_0);
-    mp_M00_AXI_transactor->AWID(m_m_axi_awid_converter_0_signal);
     mp_m_axi_awaddr_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_0");
     mp_m_axi_awaddr_converter_0->vector_in(m_m_axi_awaddr_converter_0_signal);
     mp_m_axi_awaddr_converter_0->vector_out(m_axi_concat_awaddr_out_0);
@@ -812,11 +752,11 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_awready_converter_0->vector_in(m_axi_split_awready_out_0);
     mp_m_axi_awready_converter_0->scalar_out(m_m_axi_awready_converter_0_signal);
     mp_M00_AXI_transactor->AWREADY(m_m_axi_awready_converter_0_signal);
-    mp_m_axi_wdata_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_wdata_converter_0");
+    mp_m_axi_wdata_converter_0 = new xsc::common::vector2vector_converter<64,192>("m_axi_wdata_converter_0");
     mp_m_axi_wdata_converter_0->vector_in(m_m_axi_wdata_converter_0_signal);
     mp_m_axi_wdata_converter_0->vector_out(m_axi_concat_wdata_out_0);
     mp_M00_AXI_transactor->WDATA(m_m_axi_wdata_converter_0_signal);
-    mp_m_axi_wstrb_converter_0 = new xsc::common::vector2vector_converter<4,12>("m_axi_wstrb_converter_0");
+    mp_m_axi_wstrb_converter_0 = new xsc::common::vector2vector_converter<8,24>("m_axi_wstrb_converter_0");
     mp_m_axi_wstrb_converter_0->vector_in(m_m_axi_wstrb_converter_0_signal);
     mp_m_axi_wstrb_converter_0->vector_out(m_axi_concat_wstrb_out_0);
     mp_M00_AXI_transactor->WSTRB(m_m_axi_wstrb_converter_0_signal);
@@ -832,10 +772,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_wready_converter_0->vector_in(m_axi_split_wready_out_0);
     mp_m_axi_wready_converter_0->scalar_out(m_m_axi_wready_converter_0_signal);
     mp_M00_AXI_transactor->WREADY(m_m_axi_wready_converter_0_signal);
-    mp_m_axi_bid_converter_0 = new xsc::common::vector2vector_converter<18,6>("m_axi_bid_converter_0");
-    mp_m_axi_bid_converter_0->vector_in(m_axi_split_bid_out_0);
-    mp_m_axi_bid_converter_0->vector_out(m_m_axi_bid_converter_0_signal);
-    mp_M00_AXI_transactor->BID(m_m_axi_bid_converter_0_signal);
     mp_m_axi_bresp_converter_0 = new xsc::common::vector2vector_converter<6,2>("m_axi_bresp_converter_0");
     mp_m_axi_bresp_converter_0->vector_in(m_axi_split_bresp_out_0);
     mp_m_axi_bresp_converter_0->vector_out(m_m_axi_bresp_converter_0_signal);
@@ -848,10 +784,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_bready_converter_0->scalar_in(m_m_axi_bready_converter_0_signal);
     mp_m_axi_bready_converter_0->vector_out(m_axi_concat_bready_out_0);
     mp_M00_AXI_transactor->BREADY(m_m_axi_bready_converter_0_signal);
-    mp_m_axi_arid_converter_0 = new xsc::common::vector2vector_converter<6,18>("m_axi_arid_converter_0");
-    mp_m_axi_arid_converter_0->vector_in(m_m_axi_arid_converter_0_signal);
-    mp_m_axi_arid_converter_0->vector_out(m_axi_concat_arid_out_0);
-    mp_M00_AXI_transactor->ARID(m_m_axi_arid_converter_0_signal);
     mp_m_axi_araddr_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_araddr_converter_0");
     mp_m_axi_araddr_converter_0->vector_in(m_m_axi_araddr_converter_0_signal);
     mp_m_axi_araddr_converter_0->vector_out(m_axi_concat_araddr_out_0);
@@ -896,11 +828,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_arready_converter_0->vector_in(m_axi_split_arready_out_0);
     mp_m_axi_arready_converter_0->scalar_out(m_m_axi_arready_converter_0_signal);
     mp_M00_AXI_transactor->ARREADY(m_m_axi_arready_converter_0_signal);
-    mp_m_axi_rid_converter_0 = new xsc::common::vector2vector_converter<18,6>("m_axi_rid_converter_0");
-    mp_m_axi_rid_converter_0->vector_in(m_axi_split_rid_out_0);
-    mp_m_axi_rid_converter_0->vector_out(m_m_axi_rid_converter_0_signal);
-    mp_M00_AXI_transactor->RID(m_m_axi_rid_converter_0_signal);
-    mp_m_axi_rdata_converter_0 = new xsc::common::vector2vector_converter<96,32>("m_axi_rdata_converter_0");
+    mp_m_axi_rdata_converter_0 = new xsc::common::vector2vector_converter<192,64>("m_axi_rdata_converter_0");
     mp_m_axi_rdata_converter_0->vector_in(m_axi_split_rdata_out_0);
     mp_m_axi_rdata_converter_0->vector_out(m_m_axi_rdata_converter_0_signal);
     mp_M00_AXI_transactor->RDATA(m_m_axi_rdata_converter_0_signal);
@@ -937,9 +865,9 @@ void apex_blk_xbar_0::before_end_of_elaboration()
 
   // 'M01_AXI' transactor parameters
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
-    M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    M01_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    M01_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -958,7 +886,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M01_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
     M01_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
     M01_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
-    M01_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M01_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M01_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M01_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M01_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -970,14 +898,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M01_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M01_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M01_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,32,6,1,1,1,1,1>("M01_AXI_transactor", M01_AXI_transactor_param_props);
+    mp_M01_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M01_AXI_transactor", M01_AXI_transactor_param_props);
 
     // M01_AXI' transactor ports
 
-    mp_m_axi_awid_converter_1 = new xsc::common::vector2vector_converter<6,18>("m_axi_awid_converter_1");
-    mp_m_axi_awid_converter_1->vector_in(m_m_axi_awid_converter_1_signal);
-    mp_m_axi_awid_converter_1->vector_out(m_axi_concat_awid_out_1);
-    mp_M01_AXI_transactor->AWID(m_m_axi_awid_converter_1_signal);
     mp_m_axi_awaddr_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_1");
     mp_m_axi_awaddr_converter_1->vector_in(m_m_axi_awaddr_converter_1_signal);
     mp_m_axi_awaddr_converter_1->vector_out(m_axi_concat_awaddr_out_1);
@@ -1022,11 +946,11 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_awready_converter_1->vector_in(m_axi_split_awready_out_1);
     mp_m_axi_awready_converter_1->scalar_out(m_m_axi_awready_converter_1_signal);
     mp_M01_AXI_transactor->AWREADY(m_m_axi_awready_converter_1_signal);
-    mp_m_axi_wdata_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_wdata_converter_1");
+    mp_m_axi_wdata_converter_1 = new xsc::common::vector2vector_converter<64,192>("m_axi_wdata_converter_1");
     mp_m_axi_wdata_converter_1->vector_in(m_m_axi_wdata_converter_1_signal);
     mp_m_axi_wdata_converter_1->vector_out(m_axi_concat_wdata_out_1);
     mp_M01_AXI_transactor->WDATA(m_m_axi_wdata_converter_1_signal);
-    mp_m_axi_wstrb_converter_1 = new xsc::common::vector2vector_converter<4,12>("m_axi_wstrb_converter_1");
+    mp_m_axi_wstrb_converter_1 = new xsc::common::vector2vector_converter<8,24>("m_axi_wstrb_converter_1");
     mp_m_axi_wstrb_converter_1->vector_in(m_m_axi_wstrb_converter_1_signal);
     mp_m_axi_wstrb_converter_1->vector_out(m_axi_concat_wstrb_out_1);
     mp_M01_AXI_transactor->WSTRB(m_m_axi_wstrb_converter_1_signal);
@@ -1042,10 +966,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_wready_converter_1->vector_in(m_axi_split_wready_out_1);
     mp_m_axi_wready_converter_1->scalar_out(m_m_axi_wready_converter_1_signal);
     mp_M01_AXI_transactor->WREADY(m_m_axi_wready_converter_1_signal);
-    mp_m_axi_bid_converter_1 = new xsc::common::vector2vector_converter<18,6>("m_axi_bid_converter_1");
-    mp_m_axi_bid_converter_1->vector_in(m_axi_split_bid_out_1);
-    mp_m_axi_bid_converter_1->vector_out(m_m_axi_bid_converter_1_signal);
-    mp_M01_AXI_transactor->BID(m_m_axi_bid_converter_1_signal);
     mp_m_axi_bresp_converter_1 = new xsc::common::vector2vector_converter<6,2>("m_axi_bresp_converter_1");
     mp_m_axi_bresp_converter_1->vector_in(m_axi_split_bresp_out_1);
     mp_m_axi_bresp_converter_1->vector_out(m_m_axi_bresp_converter_1_signal);
@@ -1058,10 +978,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_bready_converter_1->scalar_in(m_m_axi_bready_converter_1_signal);
     mp_m_axi_bready_converter_1->vector_out(m_axi_concat_bready_out_1);
     mp_M01_AXI_transactor->BREADY(m_m_axi_bready_converter_1_signal);
-    mp_m_axi_arid_converter_1 = new xsc::common::vector2vector_converter<6,18>("m_axi_arid_converter_1");
-    mp_m_axi_arid_converter_1->vector_in(m_m_axi_arid_converter_1_signal);
-    mp_m_axi_arid_converter_1->vector_out(m_axi_concat_arid_out_1);
-    mp_M01_AXI_transactor->ARID(m_m_axi_arid_converter_1_signal);
     mp_m_axi_araddr_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_araddr_converter_1");
     mp_m_axi_araddr_converter_1->vector_in(m_m_axi_araddr_converter_1_signal);
     mp_m_axi_araddr_converter_1->vector_out(m_axi_concat_araddr_out_1);
@@ -1106,11 +1022,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_arready_converter_1->vector_in(m_axi_split_arready_out_1);
     mp_m_axi_arready_converter_1->scalar_out(m_m_axi_arready_converter_1_signal);
     mp_M01_AXI_transactor->ARREADY(m_m_axi_arready_converter_1_signal);
-    mp_m_axi_rid_converter_1 = new xsc::common::vector2vector_converter<18,6>("m_axi_rid_converter_1");
-    mp_m_axi_rid_converter_1->vector_in(m_axi_split_rid_out_1);
-    mp_m_axi_rid_converter_1->vector_out(m_m_axi_rid_converter_1_signal);
-    mp_M01_AXI_transactor->RID(m_m_axi_rid_converter_1_signal);
-    mp_m_axi_rdata_converter_1 = new xsc::common::vector2vector_converter<96,32>("m_axi_rdata_converter_1");
+    mp_m_axi_rdata_converter_1 = new xsc::common::vector2vector_converter<192,64>("m_axi_rdata_converter_1");
     mp_m_axi_rdata_converter_1->vector_in(m_axi_split_rdata_out_1);
     mp_m_axi_rdata_converter_1->vector_out(m_m_axi_rdata_converter_1_signal);
     mp_M01_AXI_transactor->RDATA(m_m_axi_rdata_converter_1_signal);
@@ -1147,9 +1059,9 @@ void apex_blk_xbar_0::before_end_of_elaboration()
 
   // 'M02_AXI' transactor parameters
     xsc::common_cpp::properties M02_AXI_transactor_param_props;
-    M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M02_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    M02_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    M02_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M02_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M02_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M02_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -1168,7 +1080,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M02_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
     M02_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
     M02_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
-    M02_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M02_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M02_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M02_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M02_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -1180,14 +1092,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M02_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M02_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M02_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,32,6,1,1,1,1,1>("M02_AXI_transactor", M02_AXI_transactor_param_props);
+    mp_M02_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M02_AXI_transactor", M02_AXI_transactor_param_props);
 
     // M02_AXI' transactor ports
 
-    mp_m_axi_awid_converter_2 = new xsc::common::vector2vector_converter<6,18>("m_axi_awid_converter_2");
-    mp_m_axi_awid_converter_2->vector_in(m_m_axi_awid_converter_2_signal);
-    mp_m_axi_awid_converter_2->vector_out(m_axi_concat_awid_out_2);
-    mp_M02_AXI_transactor->AWID(m_m_axi_awid_converter_2_signal);
     mp_m_axi_awaddr_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_2");
     mp_m_axi_awaddr_converter_2->vector_in(m_m_axi_awaddr_converter_2_signal);
     mp_m_axi_awaddr_converter_2->vector_out(m_axi_concat_awaddr_out_2);
@@ -1232,11 +1140,11 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_awready_converter_2->vector_in(m_axi_split_awready_out_2);
     mp_m_axi_awready_converter_2->scalar_out(m_m_axi_awready_converter_2_signal);
     mp_M02_AXI_transactor->AWREADY(m_m_axi_awready_converter_2_signal);
-    mp_m_axi_wdata_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_wdata_converter_2");
+    mp_m_axi_wdata_converter_2 = new xsc::common::vector2vector_converter<64,192>("m_axi_wdata_converter_2");
     mp_m_axi_wdata_converter_2->vector_in(m_m_axi_wdata_converter_2_signal);
     mp_m_axi_wdata_converter_2->vector_out(m_axi_concat_wdata_out_2);
     mp_M02_AXI_transactor->WDATA(m_m_axi_wdata_converter_2_signal);
-    mp_m_axi_wstrb_converter_2 = new xsc::common::vector2vector_converter<4,12>("m_axi_wstrb_converter_2");
+    mp_m_axi_wstrb_converter_2 = new xsc::common::vector2vector_converter<8,24>("m_axi_wstrb_converter_2");
     mp_m_axi_wstrb_converter_2->vector_in(m_m_axi_wstrb_converter_2_signal);
     mp_m_axi_wstrb_converter_2->vector_out(m_axi_concat_wstrb_out_2);
     mp_M02_AXI_transactor->WSTRB(m_m_axi_wstrb_converter_2_signal);
@@ -1252,10 +1160,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_wready_converter_2->vector_in(m_axi_split_wready_out_2);
     mp_m_axi_wready_converter_2->scalar_out(m_m_axi_wready_converter_2_signal);
     mp_M02_AXI_transactor->WREADY(m_m_axi_wready_converter_2_signal);
-    mp_m_axi_bid_converter_2 = new xsc::common::vector2vector_converter<18,6>("m_axi_bid_converter_2");
-    mp_m_axi_bid_converter_2->vector_in(m_axi_split_bid_out_2);
-    mp_m_axi_bid_converter_2->vector_out(m_m_axi_bid_converter_2_signal);
-    mp_M02_AXI_transactor->BID(m_m_axi_bid_converter_2_signal);
     mp_m_axi_bresp_converter_2 = new xsc::common::vector2vector_converter<6,2>("m_axi_bresp_converter_2");
     mp_m_axi_bresp_converter_2->vector_in(m_axi_split_bresp_out_2);
     mp_m_axi_bresp_converter_2->vector_out(m_m_axi_bresp_converter_2_signal);
@@ -1268,10 +1172,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_bready_converter_2->scalar_in(m_m_axi_bready_converter_2_signal);
     mp_m_axi_bready_converter_2->vector_out(m_axi_concat_bready_out_2);
     mp_M02_AXI_transactor->BREADY(m_m_axi_bready_converter_2_signal);
-    mp_m_axi_arid_converter_2 = new xsc::common::vector2vector_converter<6,18>("m_axi_arid_converter_2");
-    mp_m_axi_arid_converter_2->vector_in(m_m_axi_arid_converter_2_signal);
-    mp_m_axi_arid_converter_2->vector_out(m_axi_concat_arid_out_2);
-    mp_M02_AXI_transactor->ARID(m_m_axi_arid_converter_2_signal);
     mp_m_axi_araddr_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_araddr_converter_2");
     mp_m_axi_araddr_converter_2->vector_in(m_m_axi_araddr_converter_2_signal);
     mp_m_axi_araddr_converter_2->vector_out(m_axi_concat_araddr_out_2);
@@ -1316,11 +1216,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_arready_converter_2->vector_in(m_axi_split_arready_out_2);
     mp_m_axi_arready_converter_2->scalar_out(m_m_axi_arready_converter_2_signal);
     mp_M02_AXI_transactor->ARREADY(m_m_axi_arready_converter_2_signal);
-    mp_m_axi_rid_converter_2 = new xsc::common::vector2vector_converter<18,6>("m_axi_rid_converter_2");
-    mp_m_axi_rid_converter_2->vector_in(m_axi_split_rid_out_2);
-    mp_m_axi_rid_converter_2->vector_out(m_m_axi_rid_converter_2_signal);
-    mp_M02_AXI_transactor->RID(m_m_axi_rid_converter_2_signal);
-    mp_m_axi_rdata_converter_2 = new xsc::common::vector2vector_converter<96,32>("m_axi_rdata_converter_2");
+    mp_m_axi_rdata_converter_2 = new xsc::common::vector2vector_converter<192,64>("m_axi_rdata_converter_2");
     mp_m_axi_rdata_converter_2->vector_in(m_axi_split_rdata_out_2);
     mp_m_axi_rdata_converter_2->vector_out(m_m_axi_rdata_converter_2_signal);
     mp_M02_AXI_transactor->RDATA(m_m_axi_rdata_converter_2_signal);
@@ -1357,7 +1253,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
 
 
 #ifdef XM_SYSTEMC
-apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_xbar_0_sc(nm), aclk("aclk"), aresetn("aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awid("m_axi_awid"), m_axi_awaddr("m_axi_awaddr"), m_axi_awlen("m_axi_awlen"), m_axi_awsize("m_axi_awsize"), m_axi_awburst("m_axi_awburst"), m_axi_awlock("m_axi_awlock"), m_axi_awcache("m_axi_awcache"), m_axi_awprot("m_axi_awprot"), m_axi_awregion("m_axi_awregion"), m_axi_awqos("m_axi_awqos"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wlast("m_axi_wlast"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bid("m_axi_bid"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_arid("m_axi_arid"), m_axi_araddr("m_axi_araddr"), m_axi_arlen("m_axi_arlen"), m_axi_arsize("m_axi_arsize"), m_axi_arburst("m_axi_arburst"), m_axi_arlock("m_axi_arlock"), m_axi_arcache("m_axi_arcache"), m_axi_arprot("m_axi_arprot"), m_axi_arregion("m_axi_arregion"), m_axi_arqos("m_axi_arqos"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rid("m_axi_rid"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rlast("m_axi_rlast"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
+apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_xbar_0_sc(nm), aclk("aclk"), aresetn("aresetn"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awaddr("m_axi_awaddr"), m_axi_awlen("m_axi_awlen"), m_axi_awsize("m_axi_awsize"), m_axi_awburst("m_axi_awburst"), m_axi_awlock("m_axi_awlock"), m_axi_awcache("m_axi_awcache"), m_axi_awprot("m_axi_awprot"), m_axi_awregion("m_axi_awregion"), m_axi_awqos("m_axi_awqos"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wlast("m_axi_wlast"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_araddr("m_axi_araddr"), m_axi_arlen("m_axi_arlen"), m_axi_arsize("m_axi_arsize"), m_axi_arburst("m_axi_arburst"), m_axi_arlock("m_axi_arlock"), m_axi_arcache("m_axi_arcache"), m_axi_arprot("m_axi_arprot"), m_axi_arregion("m_axi_arregion"), m_axi_arqos("m_axi_arqos"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rlast("m_axi_rlast"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
 {
 
   // initialize pins
@@ -1381,7 +1277,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_s_axi_rvalid_converter = NULL;
   mp_s_axi_rready_converter = NULL;
   mp_M00_AXI_transactor = NULL;
-  mp_m_axi_awid_converter_0 = NULL;
   mp_m_axi_awaddr_converter_0 = NULL;
   mp_m_axi_awlen_converter_0 = NULL;
   mp_m_axi_awsize_converter_0 = NULL;
@@ -1398,11 +1293,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wlast_converter_0 = NULL;
   mp_m_axi_wvalid_converter_0 = NULL;
   mp_m_axi_wready_converter_0 = NULL;
-  mp_m_axi_bid_converter_0 = NULL;
   mp_m_axi_bresp_converter_0 = NULL;
   mp_m_axi_bvalid_converter_0 = NULL;
   mp_m_axi_bready_converter_0 = NULL;
-  mp_m_axi_arid_converter_0 = NULL;
   mp_m_axi_araddr_converter_0 = NULL;
   mp_m_axi_arlen_converter_0 = NULL;
   mp_m_axi_arsize_converter_0 = NULL;
@@ -1414,14 +1307,12 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arqos_converter_0 = NULL;
   mp_m_axi_arvalid_converter_0 = NULL;
   mp_m_axi_arready_converter_0 = NULL;
-  mp_m_axi_rid_converter_0 = NULL;
   mp_m_axi_rdata_converter_0 = NULL;
   mp_m_axi_rresp_converter_0 = NULL;
   mp_m_axi_rlast_converter_0 = NULL;
   mp_m_axi_rvalid_converter_0 = NULL;
   mp_m_axi_rready_converter_0 = NULL;
   mp_M01_AXI_transactor = NULL;
-  mp_m_axi_awid_converter_1 = NULL;
   mp_m_axi_awaddr_converter_1 = NULL;
   mp_m_axi_awlen_converter_1 = NULL;
   mp_m_axi_awsize_converter_1 = NULL;
@@ -1438,11 +1329,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wlast_converter_1 = NULL;
   mp_m_axi_wvalid_converter_1 = NULL;
   mp_m_axi_wready_converter_1 = NULL;
-  mp_m_axi_bid_converter_1 = NULL;
   mp_m_axi_bresp_converter_1 = NULL;
   mp_m_axi_bvalid_converter_1 = NULL;
   mp_m_axi_bready_converter_1 = NULL;
-  mp_m_axi_arid_converter_1 = NULL;
   mp_m_axi_araddr_converter_1 = NULL;
   mp_m_axi_arlen_converter_1 = NULL;
   mp_m_axi_arsize_converter_1 = NULL;
@@ -1454,14 +1343,12 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arqos_converter_1 = NULL;
   mp_m_axi_arvalid_converter_1 = NULL;
   mp_m_axi_arready_converter_1 = NULL;
-  mp_m_axi_rid_converter_1 = NULL;
   mp_m_axi_rdata_converter_1 = NULL;
   mp_m_axi_rresp_converter_1 = NULL;
   mp_m_axi_rlast_converter_1 = NULL;
   mp_m_axi_rvalid_converter_1 = NULL;
   mp_m_axi_rready_converter_1 = NULL;
   mp_M02_AXI_transactor = NULL;
-  mp_m_axi_awid_converter_2 = NULL;
   mp_m_axi_awaddr_converter_2 = NULL;
   mp_m_axi_awlen_converter_2 = NULL;
   mp_m_axi_awsize_converter_2 = NULL;
@@ -1478,11 +1365,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wlast_converter_2 = NULL;
   mp_m_axi_wvalid_converter_2 = NULL;
   mp_m_axi_wready_converter_2 = NULL;
-  mp_m_axi_bid_converter_2 = NULL;
   mp_m_axi_bresp_converter_2 = NULL;
   mp_m_axi_bvalid_converter_2 = NULL;
   mp_m_axi_bready_converter_2 = NULL;
-  mp_m_axi_arid_converter_2 = NULL;
   mp_m_axi_araddr_converter_2 = NULL;
   mp_m_axi_arlen_converter_2 = NULL;
   mp_m_axi_arsize_converter_2 = NULL;
@@ -1494,7 +1379,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arqos_converter_2 = NULL;
   mp_m_axi_arvalid_converter_2 = NULL;
   mp_m_axi_arready_converter_2 = NULL;
-  mp_m_axi_rid_converter_2 = NULL;
   mp_m_axi_rdata_converter_2 = NULL;
   mp_m_axi_rresp_converter_2 = NULL;
   mp_m_axi_rlast_converter_2 = NULL;
@@ -1505,7 +1389,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_araddr = NULL;
   mp_m_axi_concat_arburst = NULL;
   mp_m_axi_concat_arcache = NULL;
-  mp_m_axi_concat_arid = NULL;
   mp_m_axi_concat_arlen = NULL;
   mp_m_axi_concat_arlock = NULL;
   mp_m_axi_concat_arprot = NULL;
@@ -1516,7 +1399,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_awaddr = NULL;
   mp_m_axi_concat_awburst = NULL;
   mp_m_axi_concat_awcache = NULL;
-  mp_m_axi_concat_awid = NULL;
   mp_m_axi_concat_awlen = NULL;
   mp_m_axi_concat_awlock = NULL;
   mp_m_axi_concat_awprot = NULL;
@@ -1532,19 +1414,13 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_wvalid = NULL;
   mp_m_axi_split_arready = NULL;
   mp_m_axi_split_awready = NULL;
-  mp_m_axi_split_bid = NULL;
   mp_m_axi_split_bresp = NULL;
   mp_m_axi_split_bvalid = NULL;
   mp_m_axi_split_rdata = NULL;
-  mp_m_axi_split_rid = NULL;
   mp_m_axi_split_rlast = NULL;
   mp_m_axi_split_rresp = NULL;
   mp_m_axi_split_rvalid = NULL;
   mp_m_axi_split_wready = NULL;
-  mp_m_axi_concat_awid = new xsc::xsc_concatenator<18, 3>("m_axi_concat_awid");
-  mp_m_axi_concat_awid->in_port[0](m_axi_concat_awid_out_0);
-  mp_m_axi_concat_awid->out_port(m_axi_awid);
-    mp_m_axi_concat_awid->offset_port(0, 0);
   mp_m_axi_concat_awaddr = new xsc::xsc_concatenator<96, 3>("m_axi_concat_awaddr");
   mp_m_axi_concat_awaddr->in_port[0](m_axi_concat_awaddr_out_0);
   mp_m_axi_concat_awaddr->out_port(m_axi_awaddr);
@@ -1589,11 +1465,11 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_awready->in_port(m_axi_awready);
   mp_m_axi_split_awready->out_port[0](m_axi_split_awready_out_0);
     mp_m_axi_split_awready->add_mask(0,1,0);
-  mp_m_axi_concat_wdata = new xsc::xsc_concatenator<96, 3>("m_axi_concat_wdata");
+  mp_m_axi_concat_wdata = new xsc::xsc_concatenator<192, 3>("m_axi_concat_wdata");
   mp_m_axi_concat_wdata->in_port[0](m_axi_concat_wdata_out_0);
   mp_m_axi_concat_wdata->out_port(m_axi_wdata);
     mp_m_axi_concat_wdata->offset_port(0, 0);
-  mp_m_axi_concat_wstrb = new xsc::xsc_concatenator<12, 3>("m_axi_concat_wstrb");
+  mp_m_axi_concat_wstrb = new xsc::xsc_concatenator<24, 3>("m_axi_concat_wstrb");
   mp_m_axi_concat_wstrb->in_port[0](m_axi_concat_wstrb_out_0);
   mp_m_axi_concat_wstrb->out_port(m_axi_wstrb);
     mp_m_axi_concat_wstrb->offset_port(0, 0);
@@ -1609,10 +1485,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_wready->in_port(m_axi_wready);
   mp_m_axi_split_wready->out_port[0](m_axi_split_wready_out_0);
     mp_m_axi_split_wready->add_mask(0,1,0);
-  mp_m_axi_split_bid = new xsc::xsc_split<18, 3>("m_axi_split_bid");
-  mp_m_axi_split_bid->in_port(m_axi_bid);
-  mp_m_axi_split_bid->out_port[0](m_axi_split_bid_out_0);
-    mp_m_axi_split_bid->add_mask(0,6,0);
   mp_m_axi_split_bresp = new xsc::xsc_split<6, 3>("m_axi_split_bresp");
   mp_m_axi_split_bresp->in_port(m_axi_bresp);
   mp_m_axi_split_bresp->out_port[0](m_axi_split_bresp_out_0);
@@ -1625,10 +1497,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_bready->in_port[0](m_axi_concat_bready_out_0);
   mp_m_axi_concat_bready->out_port(m_axi_bready);
     mp_m_axi_concat_bready->offset_port(0, 0);
-  mp_m_axi_concat_arid = new xsc::xsc_concatenator<18, 3>("m_axi_concat_arid");
-  mp_m_axi_concat_arid->in_port[0](m_axi_concat_arid_out_0);
-  mp_m_axi_concat_arid->out_port(m_axi_arid);
-    mp_m_axi_concat_arid->offset_port(0, 0);
   mp_m_axi_concat_araddr = new xsc::xsc_concatenator<96, 3>("m_axi_concat_araddr");
   mp_m_axi_concat_araddr->in_port[0](m_axi_concat_araddr_out_0);
   mp_m_axi_concat_araddr->out_port(m_axi_araddr);
@@ -1673,14 +1541,10 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_arready->in_port(m_axi_arready);
   mp_m_axi_split_arready->out_port[0](m_axi_split_arready_out_0);
     mp_m_axi_split_arready->add_mask(0,1,0);
-  mp_m_axi_split_rid = new xsc::xsc_split<18, 3>("m_axi_split_rid");
-  mp_m_axi_split_rid->in_port(m_axi_rid);
-  mp_m_axi_split_rid->out_port[0](m_axi_split_rid_out_0);
-    mp_m_axi_split_rid->add_mask(0,6,0);
-  mp_m_axi_split_rdata = new xsc::xsc_split<96, 3>("m_axi_split_rdata");
+  mp_m_axi_split_rdata = new xsc::xsc_split<192, 3>("m_axi_split_rdata");
   mp_m_axi_split_rdata->in_port(m_axi_rdata);
   mp_m_axi_split_rdata->out_port[0](m_axi_split_rdata_out_0);
-    mp_m_axi_split_rdata->add_mask(0,32,0);
+    mp_m_axi_split_rdata->add_mask(0,64,0);
   mp_m_axi_split_rresp = new xsc::xsc_split<6, 3>("m_axi_split_rresp");
   mp_m_axi_split_rresp->in_port(m_axi_rresp);
   mp_m_axi_split_rresp->out_port[0](m_axi_split_rresp_out_0);
@@ -1697,8 +1561,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_rready->in_port[0](m_axi_concat_rready_out_0);
   mp_m_axi_concat_rready->out_port(m_axi_rready);
     mp_m_axi_concat_rready->offset_port(0, 0);
-  mp_m_axi_concat_awid->in_port[1](m_axi_concat_awid_out_1);
-  mp_m_axi_concat_awid->offset_port(1, 6);
   mp_m_axi_concat_awaddr->in_port[1](m_axi_concat_awaddr_out_1);
   mp_m_axi_concat_awaddr->offset_port(1, 32);
   mp_m_axi_concat_awlen->in_port[1](m_axi_concat_awlen_out_1);
@@ -1723,9 +1585,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_awready->out_port[1](m_axi_split_awready_out_1);
     mp_m_axi_split_awready->add_mask(1,2,1);
   mp_m_axi_concat_wdata->in_port[1](m_axi_concat_wdata_out_1);
-  mp_m_axi_concat_wdata->offset_port(1, 32);
+  mp_m_axi_concat_wdata->offset_port(1, 64);
   mp_m_axi_concat_wstrb->in_port[1](m_axi_concat_wstrb_out_1);
-  mp_m_axi_concat_wstrb->offset_port(1, 4);
+  mp_m_axi_concat_wstrb->offset_port(1, 8);
   mp_m_axi_concat_wlast->in_port[1](m_axi_concat_wlast_out_1);
   mp_m_axi_concat_wlast->offset_port(1, 1);
   mp_m_axi_concat_wvalid->in_port[1](m_axi_concat_wvalid_out_1);
@@ -1734,9 +1596,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_wready->out_port[1](m_axi_split_wready_out_1);
     mp_m_axi_split_wready->add_mask(1,2,1);
   
-  mp_m_axi_split_bid->out_port[1](m_axi_split_bid_out_1);
-    mp_m_axi_split_bid->add_mask(1,12,6);
-  
   mp_m_axi_split_bresp->out_port[1](m_axi_split_bresp_out_1);
     mp_m_axi_split_bresp->add_mask(1,4,2);
   
@@ -1744,8 +1603,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     mp_m_axi_split_bvalid->add_mask(1,2,1);
   mp_m_axi_concat_bready->in_port[1](m_axi_concat_bready_out_1);
   mp_m_axi_concat_bready->offset_port(1, 1);
-  mp_m_axi_concat_arid->in_port[1](m_axi_concat_arid_out_1);
-  mp_m_axi_concat_arid->offset_port(1, 6);
   mp_m_axi_concat_araddr->in_port[1](m_axi_concat_araddr_out_1);
   mp_m_axi_concat_araddr->offset_port(1, 32);
   mp_m_axi_concat_arlen->in_port[1](m_axi_concat_arlen_out_1);
@@ -1770,11 +1627,8 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_arready->out_port[1](m_axi_split_arready_out_1);
     mp_m_axi_split_arready->add_mask(1,2,1);
   
-  mp_m_axi_split_rid->out_port[1](m_axi_split_rid_out_1);
-    mp_m_axi_split_rid->add_mask(1,12,6);
-  
   mp_m_axi_split_rdata->out_port[1](m_axi_split_rdata_out_1);
-    mp_m_axi_split_rdata->add_mask(1,64,32);
+    mp_m_axi_split_rdata->add_mask(1,128,64);
   
   mp_m_axi_split_rresp->out_port[1](m_axi_split_rresp_out_1);
     mp_m_axi_split_rresp->add_mask(1,4,2);
@@ -1786,8 +1640,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     mp_m_axi_split_rvalid->add_mask(1,2,1);
   mp_m_axi_concat_rready->in_port[1](m_axi_concat_rready_out_1);
   mp_m_axi_concat_rready->offset_port(1, 1);
-  mp_m_axi_concat_awid->in_port[2](m_axi_concat_awid_out_2);
-  mp_m_axi_concat_awid->offset_port(2, 12);
   mp_m_axi_concat_awaddr->in_port[2](m_axi_concat_awaddr_out_2);
   mp_m_axi_concat_awaddr->offset_port(2, 64);
   mp_m_axi_concat_awlen->in_port[2](m_axi_concat_awlen_out_2);
@@ -1812,9 +1664,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_awready->out_port[2](m_axi_split_awready_out_2);
     mp_m_axi_split_awready->add_mask(2,3,2);
   mp_m_axi_concat_wdata->in_port[2](m_axi_concat_wdata_out_2);
-  mp_m_axi_concat_wdata->offset_port(2, 64);
+  mp_m_axi_concat_wdata->offset_port(2, 128);
   mp_m_axi_concat_wstrb->in_port[2](m_axi_concat_wstrb_out_2);
-  mp_m_axi_concat_wstrb->offset_port(2, 8);
+  mp_m_axi_concat_wstrb->offset_port(2, 16);
   mp_m_axi_concat_wlast->in_port[2](m_axi_concat_wlast_out_2);
   mp_m_axi_concat_wlast->offset_port(2, 2);
   mp_m_axi_concat_wvalid->in_port[2](m_axi_concat_wvalid_out_2);
@@ -1823,9 +1675,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_wready->out_port[2](m_axi_split_wready_out_2);
     mp_m_axi_split_wready->add_mask(2,3,2);
   
-  mp_m_axi_split_bid->out_port[2](m_axi_split_bid_out_2);
-    mp_m_axi_split_bid->add_mask(2,18,12);
-  
   mp_m_axi_split_bresp->out_port[2](m_axi_split_bresp_out_2);
     mp_m_axi_split_bresp->add_mask(2,6,4);
   
@@ -1833,8 +1682,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     mp_m_axi_split_bvalid->add_mask(2,3,2);
   mp_m_axi_concat_bready->in_port[2](m_axi_concat_bready_out_2);
   mp_m_axi_concat_bready->offset_port(2, 2);
-  mp_m_axi_concat_arid->in_port[2](m_axi_concat_arid_out_2);
-  mp_m_axi_concat_arid->offset_port(2, 12);
   mp_m_axi_concat_araddr->in_port[2](m_axi_concat_araddr_out_2);
   mp_m_axi_concat_araddr->offset_port(2, 64);
   mp_m_axi_concat_arlen->in_port[2](m_axi_concat_arlen_out_2);
@@ -1859,11 +1706,8 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_arready->out_port[2](m_axi_split_arready_out_2);
     mp_m_axi_split_arready->add_mask(2,3,2);
   
-  mp_m_axi_split_rid->out_port[2](m_axi_split_rid_out_2);
-    mp_m_axi_split_rid->add_mask(2,18,12);
-  
   mp_m_axi_split_rdata->out_port[2](m_axi_split_rdata_out_2);
-    mp_m_axi_split_rdata->add_mask(2,96,64);
+    mp_m_axi_split_rdata->add_mask(2,192,128);
   
   mp_m_axi_split_rresp->out_port[2](m_axi_split_rresp_out_2);
     mp_m_axi_split_rresp->add_mask(2,6,4);
@@ -1890,9 +1734,9 @@ void apex_blk_xbar_0::before_end_of_elaboration()
 
   // 'S00_AXI' transactor parameters
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
-    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    S00_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    S00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S00_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -1923,11 +1767,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     S00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,6,1,1,1,1,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
+    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,1,1,1,1,1,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
 
     // S00_AXI' transactor ports
 
-    mp_S00_AXI_transactor->AWID(s_axi_awid);
     mp_S00_AXI_transactor->AWADDR(s_axi_awaddr);
     mp_S00_AXI_transactor->AWLEN(s_axi_awlen);
     mp_S00_AXI_transactor->AWSIZE(s_axi_awsize);
@@ -1961,7 +1804,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_s_axi_wready_converter->scalar_in(m_s_axi_wready_converter_signal);
     mp_s_axi_wready_converter->vector_out(s_axi_wready);
     mp_S00_AXI_transactor->WREADY(m_s_axi_wready_converter_signal);
-    mp_S00_AXI_transactor->BID(s_axi_bid);
     mp_S00_AXI_transactor->BRESP(s_axi_bresp);
     mp_s_axi_bvalid_converter = new xsc::common::scalar2vectorN_converter<1>("s_axi_bvalid_converter");
     mp_s_axi_bvalid_converter->scalar_in(m_s_axi_bvalid_converter_signal);
@@ -1971,7 +1813,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_s_axi_bready_converter->vector_in(s_axi_bready);
     mp_s_axi_bready_converter->scalar_out(m_s_axi_bready_converter_signal);
     mp_S00_AXI_transactor->BREADY(m_s_axi_bready_converter_signal);
-    mp_S00_AXI_transactor->ARID(s_axi_arid);
     mp_S00_AXI_transactor->ARADDR(s_axi_araddr);
     mp_S00_AXI_transactor->ARLEN(s_axi_arlen);
     mp_S00_AXI_transactor->ARSIZE(s_axi_arsize);
@@ -1991,7 +1832,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_s_axi_arready_converter->scalar_in(m_s_axi_arready_converter_signal);
     mp_s_axi_arready_converter->vector_out(s_axi_arready);
     mp_S00_AXI_transactor->ARREADY(m_s_axi_arready_converter_signal);
-    mp_S00_AXI_transactor->RID(s_axi_rid);
     mp_S00_AXI_transactor->RDATA(s_axi_rdata);
     mp_S00_AXI_transactor->RRESP(s_axi_rresp);
     mp_s_axi_rlast_converter = new xsc::common::scalar2vectorN_converter<1>("s_axi_rlast_converter");
@@ -2023,9 +1863,9 @@ void apex_blk_xbar_0::before_end_of_elaboration()
 
   // 'M00_AXI' transactor parameters
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
-    M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    M00_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    M00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -2044,7 +1884,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M00_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
     M00_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
     M00_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
-    M00_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M00_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M00_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M00_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M00_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -2056,14 +1896,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M00_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,32,6,1,1,1,1,1>("M00_AXI_transactor", M00_AXI_transactor_param_props);
+    mp_M00_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M00_AXI_transactor", M00_AXI_transactor_param_props);
 
     // M00_AXI' transactor ports
 
-    mp_m_axi_awid_converter_0 = new xsc::common::vector2vector_converter<6,18>("m_axi_awid_converter_0");
-    mp_m_axi_awid_converter_0->vector_in(m_m_axi_awid_converter_0_signal);
-    mp_m_axi_awid_converter_0->vector_out(m_axi_concat_awid_out_0);
-    mp_M00_AXI_transactor->AWID(m_m_axi_awid_converter_0_signal);
     mp_m_axi_awaddr_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_0");
     mp_m_axi_awaddr_converter_0->vector_in(m_m_axi_awaddr_converter_0_signal);
     mp_m_axi_awaddr_converter_0->vector_out(m_axi_concat_awaddr_out_0);
@@ -2108,11 +1944,11 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_awready_converter_0->vector_in(m_axi_split_awready_out_0);
     mp_m_axi_awready_converter_0->scalar_out(m_m_axi_awready_converter_0_signal);
     mp_M00_AXI_transactor->AWREADY(m_m_axi_awready_converter_0_signal);
-    mp_m_axi_wdata_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_wdata_converter_0");
+    mp_m_axi_wdata_converter_0 = new xsc::common::vector2vector_converter<64,192>("m_axi_wdata_converter_0");
     mp_m_axi_wdata_converter_0->vector_in(m_m_axi_wdata_converter_0_signal);
     mp_m_axi_wdata_converter_0->vector_out(m_axi_concat_wdata_out_0);
     mp_M00_AXI_transactor->WDATA(m_m_axi_wdata_converter_0_signal);
-    mp_m_axi_wstrb_converter_0 = new xsc::common::vector2vector_converter<4,12>("m_axi_wstrb_converter_0");
+    mp_m_axi_wstrb_converter_0 = new xsc::common::vector2vector_converter<8,24>("m_axi_wstrb_converter_0");
     mp_m_axi_wstrb_converter_0->vector_in(m_m_axi_wstrb_converter_0_signal);
     mp_m_axi_wstrb_converter_0->vector_out(m_axi_concat_wstrb_out_0);
     mp_M00_AXI_transactor->WSTRB(m_m_axi_wstrb_converter_0_signal);
@@ -2128,10 +1964,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_wready_converter_0->vector_in(m_axi_split_wready_out_0);
     mp_m_axi_wready_converter_0->scalar_out(m_m_axi_wready_converter_0_signal);
     mp_M00_AXI_transactor->WREADY(m_m_axi_wready_converter_0_signal);
-    mp_m_axi_bid_converter_0 = new xsc::common::vector2vector_converter<18,6>("m_axi_bid_converter_0");
-    mp_m_axi_bid_converter_0->vector_in(m_axi_split_bid_out_0);
-    mp_m_axi_bid_converter_0->vector_out(m_m_axi_bid_converter_0_signal);
-    mp_M00_AXI_transactor->BID(m_m_axi_bid_converter_0_signal);
     mp_m_axi_bresp_converter_0 = new xsc::common::vector2vector_converter<6,2>("m_axi_bresp_converter_0");
     mp_m_axi_bresp_converter_0->vector_in(m_axi_split_bresp_out_0);
     mp_m_axi_bresp_converter_0->vector_out(m_m_axi_bresp_converter_0_signal);
@@ -2144,10 +1976,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_bready_converter_0->scalar_in(m_m_axi_bready_converter_0_signal);
     mp_m_axi_bready_converter_0->vector_out(m_axi_concat_bready_out_0);
     mp_M00_AXI_transactor->BREADY(m_m_axi_bready_converter_0_signal);
-    mp_m_axi_arid_converter_0 = new xsc::common::vector2vector_converter<6,18>("m_axi_arid_converter_0");
-    mp_m_axi_arid_converter_0->vector_in(m_m_axi_arid_converter_0_signal);
-    mp_m_axi_arid_converter_0->vector_out(m_axi_concat_arid_out_0);
-    mp_M00_AXI_transactor->ARID(m_m_axi_arid_converter_0_signal);
     mp_m_axi_araddr_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_araddr_converter_0");
     mp_m_axi_araddr_converter_0->vector_in(m_m_axi_araddr_converter_0_signal);
     mp_m_axi_araddr_converter_0->vector_out(m_axi_concat_araddr_out_0);
@@ -2192,11 +2020,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_arready_converter_0->vector_in(m_axi_split_arready_out_0);
     mp_m_axi_arready_converter_0->scalar_out(m_m_axi_arready_converter_0_signal);
     mp_M00_AXI_transactor->ARREADY(m_m_axi_arready_converter_0_signal);
-    mp_m_axi_rid_converter_0 = new xsc::common::vector2vector_converter<18,6>("m_axi_rid_converter_0");
-    mp_m_axi_rid_converter_0->vector_in(m_axi_split_rid_out_0);
-    mp_m_axi_rid_converter_0->vector_out(m_m_axi_rid_converter_0_signal);
-    mp_M00_AXI_transactor->RID(m_m_axi_rid_converter_0_signal);
-    mp_m_axi_rdata_converter_0 = new xsc::common::vector2vector_converter<96,32>("m_axi_rdata_converter_0");
+    mp_m_axi_rdata_converter_0 = new xsc::common::vector2vector_converter<192,64>("m_axi_rdata_converter_0");
     mp_m_axi_rdata_converter_0->vector_in(m_axi_split_rdata_out_0);
     mp_m_axi_rdata_converter_0->vector_out(m_m_axi_rdata_converter_0_signal);
     mp_M00_AXI_transactor->RDATA(m_m_axi_rdata_converter_0_signal);
@@ -2233,9 +2057,9 @@ void apex_blk_xbar_0::before_end_of_elaboration()
 
   // 'M01_AXI' transactor parameters
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
-    M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    M01_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    M01_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -2254,7 +2078,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M01_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
     M01_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
     M01_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
-    M01_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M01_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M01_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M01_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M01_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -2266,14 +2090,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M01_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M01_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M01_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,32,6,1,1,1,1,1>("M01_AXI_transactor", M01_AXI_transactor_param_props);
+    mp_M01_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M01_AXI_transactor", M01_AXI_transactor_param_props);
 
     // M01_AXI' transactor ports
 
-    mp_m_axi_awid_converter_1 = new xsc::common::vector2vector_converter<6,18>("m_axi_awid_converter_1");
-    mp_m_axi_awid_converter_1->vector_in(m_m_axi_awid_converter_1_signal);
-    mp_m_axi_awid_converter_1->vector_out(m_axi_concat_awid_out_1);
-    mp_M01_AXI_transactor->AWID(m_m_axi_awid_converter_1_signal);
     mp_m_axi_awaddr_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_1");
     mp_m_axi_awaddr_converter_1->vector_in(m_m_axi_awaddr_converter_1_signal);
     mp_m_axi_awaddr_converter_1->vector_out(m_axi_concat_awaddr_out_1);
@@ -2318,11 +2138,11 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_awready_converter_1->vector_in(m_axi_split_awready_out_1);
     mp_m_axi_awready_converter_1->scalar_out(m_m_axi_awready_converter_1_signal);
     mp_M01_AXI_transactor->AWREADY(m_m_axi_awready_converter_1_signal);
-    mp_m_axi_wdata_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_wdata_converter_1");
+    mp_m_axi_wdata_converter_1 = new xsc::common::vector2vector_converter<64,192>("m_axi_wdata_converter_1");
     mp_m_axi_wdata_converter_1->vector_in(m_m_axi_wdata_converter_1_signal);
     mp_m_axi_wdata_converter_1->vector_out(m_axi_concat_wdata_out_1);
     mp_M01_AXI_transactor->WDATA(m_m_axi_wdata_converter_1_signal);
-    mp_m_axi_wstrb_converter_1 = new xsc::common::vector2vector_converter<4,12>("m_axi_wstrb_converter_1");
+    mp_m_axi_wstrb_converter_1 = new xsc::common::vector2vector_converter<8,24>("m_axi_wstrb_converter_1");
     mp_m_axi_wstrb_converter_1->vector_in(m_m_axi_wstrb_converter_1_signal);
     mp_m_axi_wstrb_converter_1->vector_out(m_axi_concat_wstrb_out_1);
     mp_M01_AXI_transactor->WSTRB(m_m_axi_wstrb_converter_1_signal);
@@ -2338,10 +2158,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_wready_converter_1->vector_in(m_axi_split_wready_out_1);
     mp_m_axi_wready_converter_1->scalar_out(m_m_axi_wready_converter_1_signal);
     mp_M01_AXI_transactor->WREADY(m_m_axi_wready_converter_1_signal);
-    mp_m_axi_bid_converter_1 = new xsc::common::vector2vector_converter<18,6>("m_axi_bid_converter_1");
-    mp_m_axi_bid_converter_1->vector_in(m_axi_split_bid_out_1);
-    mp_m_axi_bid_converter_1->vector_out(m_m_axi_bid_converter_1_signal);
-    mp_M01_AXI_transactor->BID(m_m_axi_bid_converter_1_signal);
     mp_m_axi_bresp_converter_1 = new xsc::common::vector2vector_converter<6,2>("m_axi_bresp_converter_1");
     mp_m_axi_bresp_converter_1->vector_in(m_axi_split_bresp_out_1);
     mp_m_axi_bresp_converter_1->vector_out(m_m_axi_bresp_converter_1_signal);
@@ -2354,10 +2170,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_bready_converter_1->scalar_in(m_m_axi_bready_converter_1_signal);
     mp_m_axi_bready_converter_1->vector_out(m_axi_concat_bready_out_1);
     mp_M01_AXI_transactor->BREADY(m_m_axi_bready_converter_1_signal);
-    mp_m_axi_arid_converter_1 = new xsc::common::vector2vector_converter<6,18>("m_axi_arid_converter_1");
-    mp_m_axi_arid_converter_1->vector_in(m_m_axi_arid_converter_1_signal);
-    mp_m_axi_arid_converter_1->vector_out(m_axi_concat_arid_out_1);
-    mp_M01_AXI_transactor->ARID(m_m_axi_arid_converter_1_signal);
     mp_m_axi_araddr_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_araddr_converter_1");
     mp_m_axi_araddr_converter_1->vector_in(m_m_axi_araddr_converter_1_signal);
     mp_m_axi_araddr_converter_1->vector_out(m_axi_concat_araddr_out_1);
@@ -2402,11 +2214,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_arready_converter_1->vector_in(m_axi_split_arready_out_1);
     mp_m_axi_arready_converter_1->scalar_out(m_m_axi_arready_converter_1_signal);
     mp_M01_AXI_transactor->ARREADY(m_m_axi_arready_converter_1_signal);
-    mp_m_axi_rid_converter_1 = new xsc::common::vector2vector_converter<18,6>("m_axi_rid_converter_1");
-    mp_m_axi_rid_converter_1->vector_in(m_axi_split_rid_out_1);
-    mp_m_axi_rid_converter_1->vector_out(m_m_axi_rid_converter_1_signal);
-    mp_M01_AXI_transactor->RID(m_m_axi_rid_converter_1_signal);
-    mp_m_axi_rdata_converter_1 = new xsc::common::vector2vector_converter<96,32>("m_axi_rdata_converter_1");
+    mp_m_axi_rdata_converter_1 = new xsc::common::vector2vector_converter<192,64>("m_axi_rdata_converter_1");
     mp_m_axi_rdata_converter_1->vector_in(m_axi_split_rdata_out_1);
     mp_m_axi_rdata_converter_1->vector_out(m_m_axi_rdata_converter_1_signal);
     mp_M01_AXI_transactor->RDATA(m_m_axi_rdata_converter_1_signal);
@@ -2443,9 +2251,9 @@ void apex_blk_xbar_0::before_end_of_elaboration()
 
   // 'M02_AXI' transactor parameters
     xsc::common_cpp::properties M02_AXI_transactor_param_props;
-    M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M02_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    M02_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    M02_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M02_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M02_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M02_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -2464,7 +2272,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M02_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
     M02_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
     M02_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
-    M02_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M02_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M02_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M02_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M02_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -2476,14 +2284,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M02_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M02_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M02_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,32,6,1,1,1,1,1>("M02_AXI_transactor", M02_AXI_transactor_param_props);
+    mp_M02_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M02_AXI_transactor", M02_AXI_transactor_param_props);
 
     // M02_AXI' transactor ports
 
-    mp_m_axi_awid_converter_2 = new xsc::common::vector2vector_converter<6,18>("m_axi_awid_converter_2");
-    mp_m_axi_awid_converter_2->vector_in(m_m_axi_awid_converter_2_signal);
-    mp_m_axi_awid_converter_2->vector_out(m_axi_concat_awid_out_2);
-    mp_M02_AXI_transactor->AWID(m_m_axi_awid_converter_2_signal);
     mp_m_axi_awaddr_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_2");
     mp_m_axi_awaddr_converter_2->vector_in(m_m_axi_awaddr_converter_2_signal);
     mp_m_axi_awaddr_converter_2->vector_out(m_axi_concat_awaddr_out_2);
@@ -2528,11 +2332,11 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_awready_converter_2->vector_in(m_axi_split_awready_out_2);
     mp_m_axi_awready_converter_2->scalar_out(m_m_axi_awready_converter_2_signal);
     mp_M02_AXI_transactor->AWREADY(m_m_axi_awready_converter_2_signal);
-    mp_m_axi_wdata_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_wdata_converter_2");
+    mp_m_axi_wdata_converter_2 = new xsc::common::vector2vector_converter<64,192>("m_axi_wdata_converter_2");
     mp_m_axi_wdata_converter_2->vector_in(m_m_axi_wdata_converter_2_signal);
     mp_m_axi_wdata_converter_2->vector_out(m_axi_concat_wdata_out_2);
     mp_M02_AXI_transactor->WDATA(m_m_axi_wdata_converter_2_signal);
-    mp_m_axi_wstrb_converter_2 = new xsc::common::vector2vector_converter<4,12>("m_axi_wstrb_converter_2");
+    mp_m_axi_wstrb_converter_2 = new xsc::common::vector2vector_converter<8,24>("m_axi_wstrb_converter_2");
     mp_m_axi_wstrb_converter_2->vector_in(m_m_axi_wstrb_converter_2_signal);
     mp_m_axi_wstrb_converter_2->vector_out(m_axi_concat_wstrb_out_2);
     mp_M02_AXI_transactor->WSTRB(m_m_axi_wstrb_converter_2_signal);
@@ -2548,10 +2352,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_wready_converter_2->vector_in(m_axi_split_wready_out_2);
     mp_m_axi_wready_converter_2->scalar_out(m_m_axi_wready_converter_2_signal);
     mp_M02_AXI_transactor->WREADY(m_m_axi_wready_converter_2_signal);
-    mp_m_axi_bid_converter_2 = new xsc::common::vector2vector_converter<18,6>("m_axi_bid_converter_2");
-    mp_m_axi_bid_converter_2->vector_in(m_axi_split_bid_out_2);
-    mp_m_axi_bid_converter_2->vector_out(m_m_axi_bid_converter_2_signal);
-    mp_M02_AXI_transactor->BID(m_m_axi_bid_converter_2_signal);
     mp_m_axi_bresp_converter_2 = new xsc::common::vector2vector_converter<6,2>("m_axi_bresp_converter_2");
     mp_m_axi_bresp_converter_2->vector_in(m_axi_split_bresp_out_2);
     mp_m_axi_bresp_converter_2->vector_out(m_m_axi_bresp_converter_2_signal);
@@ -2564,10 +2364,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_bready_converter_2->scalar_in(m_m_axi_bready_converter_2_signal);
     mp_m_axi_bready_converter_2->vector_out(m_axi_concat_bready_out_2);
     mp_M02_AXI_transactor->BREADY(m_m_axi_bready_converter_2_signal);
-    mp_m_axi_arid_converter_2 = new xsc::common::vector2vector_converter<6,18>("m_axi_arid_converter_2");
-    mp_m_axi_arid_converter_2->vector_in(m_m_axi_arid_converter_2_signal);
-    mp_m_axi_arid_converter_2->vector_out(m_axi_concat_arid_out_2);
-    mp_M02_AXI_transactor->ARID(m_m_axi_arid_converter_2_signal);
     mp_m_axi_araddr_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_araddr_converter_2");
     mp_m_axi_araddr_converter_2->vector_in(m_m_axi_araddr_converter_2_signal);
     mp_m_axi_araddr_converter_2->vector_out(m_axi_concat_araddr_out_2);
@@ -2612,11 +2408,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_arready_converter_2->vector_in(m_axi_split_arready_out_2);
     mp_m_axi_arready_converter_2->scalar_out(m_m_axi_arready_converter_2_signal);
     mp_M02_AXI_transactor->ARREADY(m_m_axi_arready_converter_2_signal);
-    mp_m_axi_rid_converter_2 = new xsc::common::vector2vector_converter<18,6>("m_axi_rid_converter_2");
-    mp_m_axi_rid_converter_2->vector_in(m_axi_split_rid_out_2);
-    mp_m_axi_rid_converter_2->vector_out(m_m_axi_rid_converter_2_signal);
-    mp_M02_AXI_transactor->RID(m_m_axi_rid_converter_2_signal);
-    mp_m_axi_rdata_converter_2 = new xsc::common::vector2vector_converter<96,32>("m_axi_rdata_converter_2");
+    mp_m_axi_rdata_converter_2 = new xsc::common::vector2vector_converter<192,64>("m_axi_rdata_converter_2");
     mp_m_axi_rdata_converter_2->vector_in(m_axi_split_rdata_out_2);
     mp_m_axi_rdata_converter_2->vector_out(m_m_axi_rdata_converter_2_signal);
     mp_M02_AXI_transactor->RDATA(m_m_axi_rdata_converter_2_signal);
@@ -2653,7 +2445,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
 
 
 #ifdef RIVIERA
-apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_xbar_0_sc(nm), aclk("aclk"), aresetn("aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awid("m_axi_awid"), m_axi_awaddr("m_axi_awaddr"), m_axi_awlen("m_axi_awlen"), m_axi_awsize("m_axi_awsize"), m_axi_awburst("m_axi_awburst"), m_axi_awlock("m_axi_awlock"), m_axi_awcache("m_axi_awcache"), m_axi_awprot("m_axi_awprot"), m_axi_awregion("m_axi_awregion"), m_axi_awqos("m_axi_awqos"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wlast("m_axi_wlast"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bid("m_axi_bid"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_arid("m_axi_arid"), m_axi_araddr("m_axi_araddr"), m_axi_arlen("m_axi_arlen"), m_axi_arsize("m_axi_arsize"), m_axi_arburst("m_axi_arburst"), m_axi_arlock("m_axi_arlock"), m_axi_arcache("m_axi_arcache"), m_axi_arprot("m_axi_arprot"), m_axi_arregion("m_axi_arregion"), m_axi_arqos("m_axi_arqos"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rid("m_axi_rid"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rlast("m_axi_rlast"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
+apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_xbar_0_sc(nm), aclk("aclk"), aresetn("aresetn"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awaddr("m_axi_awaddr"), m_axi_awlen("m_axi_awlen"), m_axi_awsize("m_axi_awsize"), m_axi_awburst("m_axi_awburst"), m_axi_awlock("m_axi_awlock"), m_axi_awcache("m_axi_awcache"), m_axi_awprot("m_axi_awprot"), m_axi_awregion("m_axi_awregion"), m_axi_awqos("m_axi_awqos"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wlast("m_axi_wlast"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_araddr("m_axi_araddr"), m_axi_arlen("m_axi_arlen"), m_axi_arsize("m_axi_arsize"), m_axi_arburst("m_axi_arburst"), m_axi_arlock("m_axi_arlock"), m_axi_arcache("m_axi_arcache"), m_axi_arprot("m_axi_arprot"), m_axi_arregion("m_axi_arregion"), m_axi_arqos("m_axi_arqos"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rlast("m_axi_rlast"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
 {
 
   // initialize pins
@@ -2677,7 +2469,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_s_axi_rvalid_converter = NULL;
   mp_s_axi_rready_converter = NULL;
   mp_M00_AXI_transactor = NULL;
-  mp_m_axi_awid_converter_0 = NULL;
   mp_m_axi_awaddr_converter_0 = NULL;
   mp_m_axi_awlen_converter_0 = NULL;
   mp_m_axi_awsize_converter_0 = NULL;
@@ -2694,11 +2485,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wlast_converter_0 = NULL;
   mp_m_axi_wvalid_converter_0 = NULL;
   mp_m_axi_wready_converter_0 = NULL;
-  mp_m_axi_bid_converter_0 = NULL;
   mp_m_axi_bresp_converter_0 = NULL;
   mp_m_axi_bvalid_converter_0 = NULL;
   mp_m_axi_bready_converter_0 = NULL;
-  mp_m_axi_arid_converter_0 = NULL;
   mp_m_axi_araddr_converter_0 = NULL;
   mp_m_axi_arlen_converter_0 = NULL;
   mp_m_axi_arsize_converter_0 = NULL;
@@ -2710,14 +2499,12 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arqos_converter_0 = NULL;
   mp_m_axi_arvalid_converter_0 = NULL;
   mp_m_axi_arready_converter_0 = NULL;
-  mp_m_axi_rid_converter_0 = NULL;
   mp_m_axi_rdata_converter_0 = NULL;
   mp_m_axi_rresp_converter_0 = NULL;
   mp_m_axi_rlast_converter_0 = NULL;
   mp_m_axi_rvalid_converter_0 = NULL;
   mp_m_axi_rready_converter_0 = NULL;
   mp_M01_AXI_transactor = NULL;
-  mp_m_axi_awid_converter_1 = NULL;
   mp_m_axi_awaddr_converter_1 = NULL;
   mp_m_axi_awlen_converter_1 = NULL;
   mp_m_axi_awsize_converter_1 = NULL;
@@ -2734,11 +2521,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wlast_converter_1 = NULL;
   mp_m_axi_wvalid_converter_1 = NULL;
   mp_m_axi_wready_converter_1 = NULL;
-  mp_m_axi_bid_converter_1 = NULL;
   mp_m_axi_bresp_converter_1 = NULL;
   mp_m_axi_bvalid_converter_1 = NULL;
   mp_m_axi_bready_converter_1 = NULL;
-  mp_m_axi_arid_converter_1 = NULL;
   mp_m_axi_araddr_converter_1 = NULL;
   mp_m_axi_arlen_converter_1 = NULL;
   mp_m_axi_arsize_converter_1 = NULL;
@@ -2750,14 +2535,12 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arqos_converter_1 = NULL;
   mp_m_axi_arvalid_converter_1 = NULL;
   mp_m_axi_arready_converter_1 = NULL;
-  mp_m_axi_rid_converter_1 = NULL;
   mp_m_axi_rdata_converter_1 = NULL;
   mp_m_axi_rresp_converter_1 = NULL;
   mp_m_axi_rlast_converter_1 = NULL;
   mp_m_axi_rvalid_converter_1 = NULL;
   mp_m_axi_rready_converter_1 = NULL;
   mp_M02_AXI_transactor = NULL;
-  mp_m_axi_awid_converter_2 = NULL;
   mp_m_axi_awaddr_converter_2 = NULL;
   mp_m_axi_awlen_converter_2 = NULL;
   mp_m_axi_awsize_converter_2 = NULL;
@@ -2774,11 +2557,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wlast_converter_2 = NULL;
   mp_m_axi_wvalid_converter_2 = NULL;
   mp_m_axi_wready_converter_2 = NULL;
-  mp_m_axi_bid_converter_2 = NULL;
   mp_m_axi_bresp_converter_2 = NULL;
   mp_m_axi_bvalid_converter_2 = NULL;
   mp_m_axi_bready_converter_2 = NULL;
-  mp_m_axi_arid_converter_2 = NULL;
   mp_m_axi_araddr_converter_2 = NULL;
   mp_m_axi_arlen_converter_2 = NULL;
   mp_m_axi_arsize_converter_2 = NULL;
@@ -2790,7 +2571,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arqos_converter_2 = NULL;
   mp_m_axi_arvalid_converter_2 = NULL;
   mp_m_axi_arready_converter_2 = NULL;
-  mp_m_axi_rid_converter_2 = NULL;
   mp_m_axi_rdata_converter_2 = NULL;
   mp_m_axi_rresp_converter_2 = NULL;
   mp_m_axi_rlast_converter_2 = NULL;
@@ -2801,7 +2581,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_araddr = NULL;
   mp_m_axi_concat_arburst = NULL;
   mp_m_axi_concat_arcache = NULL;
-  mp_m_axi_concat_arid = NULL;
   mp_m_axi_concat_arlen = NULL;
   mp_m_axi_concat_arlock = NULL;
   mp_m_axi_concat_arprot = NULL;
@@ -2812,7 +2591,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_awaddr = NULL;
   mp_m_axi_concat_awburst = NULL;
   mp_m_axi_concat_awcache = NULL;
-  mp_m_axi_concat_awid = NULL;
   mp_m_axi_concat_awlen = NULL;
   mp_m_axi_concat_awlock = NULL;
   mp_m_axi_concat_awprot = NULL;
@@ -2828,19 +2606,13 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_wvalid = NULL;
   mp_m_axi_split_arready = NULL;
   mp_m_axi_split_awready = NULL;
-  mp_m_axi_split_bid = NULL;
   mp_m_axi_split_bresp = NULL;
   mp_m_axi_split_bvalid = NULL;
   mp_m_axi_split_rdata = NULL;
-  mp_m_axi_split_rid = NULL;
   mp_m_axi_split_rlast = NULL;
   mp_m_axi_split_rresp = NULL;
   mp_m_axi_split_rvalid = NULL;
   mp_m_axi_split_wready = NULL;
-  mp_m_axi_concat_awid = new xsc::xsc_concatenator<18, 3>("m_axi_concat_awid");
-  mp_m_axi_concat_awid->in_port[0](m_axi_concat_awid_out_0);
-  mp_m_axi_concat_awid->out_port(m_axi_awid);
-    mp_m_axi_concat_awid->offset_port(0, 0);
   mp_m_axi_concat_awaddr = new xsc::xsc_concatenator<96, 3>("m_axi_concat_awaddr");
   mp_m_axi_concat_awaddr->in_port[0](m_axi_concat_awaddr_out_0);
   mp_m_axi_concat_awaddr->out_port(m_axi_awaddr);
@@ -2885,11 +2657,11 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_awready->in_port(m_axi_awready);
   mp_m_axi_split_awready->out_port[0](m_axi_split_awready_out_0);
     mp_m_axi_split_awready->add_mask(0,1,0);
-  mp_m_axi_concat_wdata = new xsc::xsc_concatenator<96, 3>("m_axi_concat_wdata");
+  mp_m_axi_concat_wdata = new xsc::xsc_concatenator<192, 3>("m_axi_concat_wdata");
   mp_m_axi_concat_wdata->in_port[0](m_axi_concat_wdata_out_0);
   mp_m_axi_concat_wdata->out_port(m_axi_wdata);
     mp_m_axi_concat_wdata->offset_port(0, 0);
-  mp_m_axi_concat_wstrb = new xsc::xsc_concatenator<12, 3>("m_axi_concat_wstrb");
+  mp_m_axi_concat_wstrb = new xsc::xsc_concatenator<24, 3>("m_axi_concat_wstrb");
   mp_m_axi_concat_wstrb->in_port[0](m_axi_concat_wstrb_out_0);
   mp_m_axi_concat_wstrb->out_port(m_axi_wstrb);
     mp_m_axi_concat_wstrb->offset_port(0, 0);
@@ -2905,10 +2677,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_wready->in_port(m_axi_wready);
   mp_m_axi_split_wready->out_port[0](m_axi_split_wready_out_0);
     mp_m_axi_split_wready->add_mask(0,1,0);
-  mp_m_axi_split_bid = new xsc::xsc_split<18, 3>("m_axi_split_bid");
-  mp_m_axi_split_bid->in_port(m_axi_bid);
-  mp_m_axi_split_bid->out_port[0](m_axi_split_bid_out_0);
-    mp_m_axi_split_bid->add_mask(0,6,0);
   mp_m_axi_split_bresp = new xsc::xsc_split<6, 3>("m_axi_split_bresp");
   mp_m_axi_split_bresp->in_port(m_axi_bresp);
   mp_m_axi_split_bresp->out_port[0](m_axi_split_bresp_out_0);
@@ -2921,10 +2689,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_bready->in_port[0](m_axi_concat_bready_out_0);
   mp_m_axi_concat_bready->out_port(m_axi_bready);
     mp_m_axi_concat_bready->offset_port(0, 0);
-  mp_m_axi_concat_arid = new xsc::xsc_concatenator<18, 3>("m_axi_concat_arid");
-  mp_m_axi_concat_arid->in_port[0](m_axi_concat_arid_out_0);
-  mp_m_axi_concat_arid->out_port(m_axi_arid);
-    mp_m_axi_concat_arid->offset_port(0, 0);
   mp_m_axi_concat_araddr = new xsc::xsc_concatenator<96, 3>("m_axi_concat_araddr");
   mp_m_axi_concat_araddr->in_port[0](m_axi_concat_araddr_out_0);
   mp_m_axi_concat_araddr->out_port(m_axi_araddr);
@@ -2969,14 +2733,10 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_arready->in_port(m_axi_arready);
   mp_m_axi_split_arready->out_port[0](m_axi_split_arready_out_0);
     mp_m_axi_split_arready->add_mask(0,1,0);
-  mp_m_axi_split_rid = new xsc::xsc_split<18, 3>("m_axi_split_rid");
-  mp_m_axi_split_rid->in_port(m_axi_rid);
-  mp_m_axi_split_rid->out_port[0](m_axi_split_rid_out_0);
-    mp_m_axi_split_rid->add_mask(0,6,0);
-  mp_m_axi_split_rdata = new xsc::xsc_split<96, 3>("m_axi_split_rdata");
+  mp_m_axi_split_rdata = new xsc::xsc_split<192, 3>("m_axi_split_rdata");
   mp_m_axi_split_rdata->in_port(m_axi_rdata);
   mp_m_axi_split_rdata->out_port[0](m_axi_split_rdata_out_0);
-    mp_m_axi_split_rdata->add_mask(0,32,0);
+    mp_m_axi_split_rdata->add_mask(0,64,0);
   mp_m_axi_split_rresp = new xsc::xsc_split<6, 3>("m_axi_split_rresp");
   mp_m_axi_split_rresp->in_port(m_axi_rresp);
   mp_m_axi_split_rresp->out_port[0](m_axi_split_rresp_out_0);
@@ -2993,8 +2753,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_rready->in_port[0](m_axi_concat_rready_out_0);
   mp_m_axi_concat_rready->out_port(m_axi_rready);
     mp_m_axi_concat_rready->offset_port(0, 0);
-  mp_m_axi_concat_awid->in_port[1](m_axi_concat_awid_out_1);
-  mp_m_axi_concat_awid->offset_port(1, 6);
   mp_m_axi_concat_awaddr->in_port[1](m_axi_concat_awaddr_out_1);
   mp_m_axi_concat_awaddr->offset_port(1, 32);
   mp_m_axi_concat_awlen->in_port[1](m_axi_concat_awlen_out_1);
@@ -3019,9 +2777,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_awready->out_port[1](m_axi_split_awready_out_1);
     mp_m_axi_split_awready->add_mask(1,2,1);
   mp_m_axi_concat_wdata->in_port[1](m_axi_concat_wdata_out_1);
-  mp_m_axi_concat_wdata->offset_port(1, 32);
+  mp_m_axi_concat_wdata->offset_port(1, 64);
   mp_m_axi_concat_wstrb->in_port[1](m_axi_concat_wstrb_out_1);
-  mp_m_axi_concat_wstrb->offset_port(1, 4);
+  mp_m_axi_concat_wstrb->offset_port(1, 8);
   mp_m_axi_concat_wlast->in_port[1](m_axi_concat_wlast_out_1);
   mp_m_axi_concat_wlast->offset_port(1, 1);
   mp_m_axi_concat_wvalid->in_port[1](m_axi_concat_wvalid_out_1);
@@ -3030,9 +2788,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_wready->out_port[1](m_axi_split_wready_out_1);
     mp_m_axi_split_wready->add_mask(1,2,1);
   
-  mp_m_axi_split_bid->out_port[1](m_axi_split_bid_out_1);
-    mp_m_axi_split_bid->add_mask(1,12,6);
-  
   mp_m_axi_split_bresp->out_port[1](m_axi_split_bresp_out_1);
     mp_m_axi_split_bresp->add_mask(1,4,2);
   
@@ -3040,8 +2795,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     mp_m_axi_split_bvalid->add_mask(1,2,1);
   mp_m_axi_concat_bready->in_port[1](m_axi_concat_bready_out_1);
   mp_m_axi_concat_bready->offset_port(1, 1);
-  mp_m_axi_concat_arid->in_port[1](m_axi_concat_arid_out_1);
-  mp_m_axi_concat_arid->offset_port(1, 6);
   mp_m_axi_concat_araddr->in_port[1](m_axi_concat_araddr_out_1);
   mp_m_axi_concat_araddr->offset_port(1, 32);
   mp_m_axi_concat_arlen->in_port[1](m_axi_concat_arlen_out_1);
@@ -3066,11 +2819,8 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_arready->out_port[1](m_axi_split_arready_out_1);
     mp_m_axi_split_arready->add_mask(1,2,1);
   
-  mp_m_axi_split_rid->out_port[1](m_axi_split_rid_out_1);
-    mp_m_axi_split_rid->add_mask(1,12,6);
-  
   mp_m_axi_split_rdata->out_port[1](m_axi_split_rdata_out_1);
-    mp_m_axi_split_rdata->add_mask(1,64,32);
+    mp_m_axi_split_rdata->add_mask(1,128,64);
   
   mp_m_axi_split_rresp->out_port[1](m_axi_split_rresp_out_1);
     mp_m_axi_split_rresp->add_mask(1,4,2);
@@ -3082,8 +2832,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     mp_m_axi_split_rvalid->add_mask(1,2,1);
   mp_m_axi_concat_rready->in_port[1](m_axi_concat_rready_out_1);
   mp_m_axi_concat_rready->offset_port(1, 1);
-  mp_m_axi_concat_awid->in_port[2](m_axi_concat_awid_out_2);
-  mp_m_axi_concat_awid->offset_port(2, 12);
   mp_m_axi_concat_awaddr->in_port[2](m_axi_concat_awaddr_out_2);
   mp_m_axi_concat_awaddr->offset_port(2, 64);
   mp_m_axi_concat_awlen->in_port[2](m_axi_concat_awlen_out_2);
@@ -3108,9 +2856,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_awready->out_port[2](m_axi_split_awready_out_2);
     mp_m_axi_split_awready->add_mask(2,3,2);
   mp_m_axi_concat_wdata->in_port[2](m_axi_concat_wdata_out_2);
-  mp_m_axi_concat_wdata->offset_port(2, 64);
+  mp_m_axi_concat_wdata->offset_port(2, 128);
   mp_m_axi_concat_wstrb->in_port[2](m_axi_concat_wstrb_out_2);
-  mp_m_axi_concat_wstrb->offset_port(2, 8);
+  mp_m_axi_concat_wstrb->offset_port(2, 16);
   mp_m_axi_concat_wlast->in_port[2](m_axi_concat_wlast_out_2);
   mp_m_axi_concat_wlast->offset_port(2, 2);
   mp_m_axi_concat_wvalid->in_port[2](m_axi_concat_wvalid_out_2);
@@ -3119,9 +2867,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_wready->out_port[2](m_axi_split_wready_out_2);
     mp_m_axi_split_wready->add_mask(2,3,2);
   
-  mp_m_axi_split_bid->out_port[2](m_axi_split_bid_out_2);
-    mp_m_axi_split_bid->add_mask(2,18,12);
-  
   mp_m_axi_split_bresp->out_port[2](m_axi_split_bresp_out_2);
     mp_m_axi_split_bresp->add_mask(2,6,4);
   
@@ -3129,8 +2874,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     mp_m_axi_split_bvalid->add_mask(2,3,2);
   mp_m_axi_concat_bready->in_port[2](m_axi_concat_bready_out_2);
   mp_m_axi_concat_bready->offset_port(2, 2);
-  mp_m_axi_concat_arid->in_port[2](m_axi_concat_arid_out_2);
-  mp_m_axi_concat_arid->offset_port(2, 12);
   mp_m_axi_concat_araddr->in_port[2](m_axi_concat_araddr_out_2);
   mp_m_axi_concat_araddr->offset_port(2, 64);
   mp_m_axi_concat_arlen->in_port[2](m_axi_concat_arlen_out_2);
@@ -3155,11 +2898,8 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_split_arready->out_port[2](m_axi_split_arready_out_2);
     mp_m_axi_split_arready->add_mask(2,3,2);
   
-  mp_m_axi_split_rid->out_port[2](m_axi_split_rid_out_2);
-    mp_m_axi_split_rid->add_mask(2,18,12);
-  
   mp_m_axi_split_rdata->out_port[2](m_axi_split_rdata_out_2);
-    mp_m_axi_split_rdata->add_mask(2,96,64);
+    mp_m_axi_split_rdata->add_mask(2,192,128);
   
   mp_m_axi_split_rresp->out_port[2](m_axi_split_rresp_out_2);
     mp_m_axi_split_rresp->add_mask(2,6,4);
@@ -3186,9 +2926,9 @@ void apex_blk_xbar_0::before_end_of_elaboration()
 
   // 'S00_AXI' transactor parameters
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
-    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    S00_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    S00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S00_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -3219,11 +2959,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     S00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,6,1,1,1,1,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
+    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,1,1,1,1,1,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
 
     // S00_AXI' transactor ports
 
-    mp_S00_AXI_transactor->AWID(s_axi_awid);
     mp_S00_AXI_transactor->AWADDR(s_axi_awaddr);
     mp_S00_AXI_transactor->AWLEN(s_axi_awlen);
     mp_S00_AXI_transactor->AWSIZE(s_axi_awsize);
@@ -3257,7 +2996,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_s_axi_wready_converter->scalar_in(m_s_axi_wready_converter_signal);
     mp_s_axi_wready_converter->vector_out(s_axi_wready);
     mp_S00_AXI_transactor->WREADY(m_s_axi_wready_converter_signal);
-    mp_S00_AXI_transactor->BID(s_axi_bid);
     mp_S00_AXI_transactor->BRESP(s_axi_bresp);
     mp_s_axi_bvalid_converter = new xsc::common::scalar2vectorN_converter<1>("s_axi_bvalid_converter");
     mp_s_axi_bvalid_converter->scalar_in(m_s_axi_bvalid_converter_signal);
@@ -3267,7 +3005,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_s_axi_bready_converter->vector_in(s_axi_bready);
     mp_s_axi_bready_converter->scalar_out(m_s_axi_bready_converter_signal);
     mp_S00_AXI_transactor->BREADY(m_s_axi_bready_converter_signal);
-    mp_S00_AXI_transactor->ARID(s_axi_arid);
     mp_S00_AXI_transactor->ARADDR(s_axi_araddr);
     mp_S00_AXI_transactor->ARLEN(s_axi_arlen);
     mp_S00_AXI_transactor->ARSIZE(s_axi_arsize);
@@ -3287,7 +3024,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_s_axi_arready_converter->scalar_in(m_s_axi_arready_converter_signal);
     mp_s_axi_arready_converter->vector_out(s_axi_arready);
     mp_S00_AXI_transactor->ARREADY(m_s_axi_arready_converter_signal);
-    mp_S00_AXI_transactor->RID(s_axi_rid);
     mp_S00_AXI_transactor->RDATA(s_axi_rdata);
     mp_S00_AXI_transactor->RRESP(s_axi_rresp);
     mp_s_axi_rlast_converter = new xsc::common::scalar2vectorN_converter<1>("s_axi_rlast_converter");
@@ -3319,9 +3055,9 @@ void apex_blk_xbar_0::before_end_of_elaboration()
 
   // 'M00_AXI' transactor parameters
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
-    M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    M00_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    M00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -3340,7 +3076,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M00_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
     M00_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
     M00_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
-    M00_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M00_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M00_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M00_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M00_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -3352,14 +3088,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M00_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,32,6,1,1,1,1,1>("M00_AXI_transactor", M00_AXI_transactor_param_props);
+    mp_M00_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M00_AXI_transactor", M00_AXI_transactor_param_props);
 
     // M00_AXI' transactor ports
 
-    mp_m_axi_awid_converter_0 = new xsc::common::vector2vector_converter<6,18>("m_axi_awid_converter_0");
-    mp_m_axi_awid_converter_0->vector_in(m_m_axi_awid_converter_0_signal);
-    mp_m_axi_awid_converter_0->vector_out(m_axi_concat_awid_out_0);
-    mp_M00_AXI_transactor->AWID(m_m_axi_awid_converter_0_signal);
     mp_m_axi_awaddr_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_0");
     mp_m_axi_awaddr_converter_0->vector_in(m_m_axi_awaddr_converter_0_signal);
     mp_m_axi_awaddr_converter_0->vector_out(m_axi_concat_awaddr_out_0);
@@ -3404,11 +3136,11 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_awready_converter_0->vector_in(m_axi_split_awready_out_0);
     mp_m_axi_awready_converter_0->scalar_out(m_m_axi_awready_converter_0_signal);
     mp_M00_AXI_transactor->AWREADY(m_m_axi_awready_converter_0_signal);
-    mp_m_axi_wdata_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_wdata_converter_0");
+    mp_m_axi_wdata_converter_0 = new xsc::common::vector2vector_converter<64,192>("m_axi_wdata_converter_0");
     mp_m_axi_wdata_converter_0->vector_in(m_m_axi_wdata_converter_0_signal);
     mp_m_axi_wdata_converter_0->vector_out(m_axi_concat_wdata_out_0);
     mp_M00_AXI_transactor->WDATA(m_m_axi_wdata_converter_0_signal);
-    mp_m_axi_wstrb_converter_0 = new xsc::common::vector2vector_converter<4,12>("m_axi_wstrb_converter_0");
+    mp_m_axi_wstrb_converter_0 = new xsc::common::vector2vector_converter<8,24>("m_axi_wstrb_converter_0");
     mp_m_axi_wstrb_converter_0->vector_in(m_m_axi_wstrb_converter_0_signal);
     mp_m_axi_wstrb_converter_0->vector_out(m_axi_concat_wstrb_out_0);
     mp_M00_AXI_transactor->WSTRB(m_m_axi_wstrb_converter_0_signal);
@@ -3424,10 +3156,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_wready_converter_0->vector_in(m_axi_split_wready_out_0);
     mp_m_axi_wready_converter_0->scalar_out(m_m_axi_wready_converter_0_signal);
     mp_M00_AXI_transactor->WREADY(m_m_axi_wready_converter_0_signal);
-    mp_m_axi_bid_converter_0 = new xsc::common::vector2vector_converter<18,6>("m_axi_bid_converter_0");
-    mp_m_axi_bid_converter_0->vector_in(m_axi_split_bid_out_0);
-    mp_m_axi_bid_converter_0->vector_out(m_m_axi_bid_converter_0_signal);
-    mp_M00_AXI_transactor->BID(m_m_axi_bid_converter_0_signal);
     mp_m_axi_bresp_converter_0 = new xsc::common::vector2vector_converter<6,2>("m_axi_bresp_converter_0");
     mp_m_axi_bresp_converter_0->vector_in(m_axi_split_bresp_out_0);
     mp_m_axi_bresp_converter_0->vector_out(m_m_axi_bresp_converter_0_signal);
@@ -3440,10 +3168,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_bready_converter_0->scalar_in(m_m_axi_bready_converter_0_signal);
     mp_m_axi_bready_converter_0->vector_out(m_axi_concat_bready_out_0);
     mp_M00_AXI_transactor->BREADY(m_m_axi_bready_converter_0_signal);
-    mp_m_axi_arid_converter_0 = new xsc::common::vector2vector_converter<6,18>("m_axi_arid_converter_0");
-    mp_m_axi_arid_converter_0->vector_in(m_m_axi_arid_converter_0_signal);
-    mp_m_axi_arid_converter_0->vector_out(m_axi_concat_arid_out_0);
-    mp_M00_AXI_transactor->ARID(m_m_axi_arid_converter_0_signal);
     mp_m_axi_araddr_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_araddr_converter_0");
     mp_m_axi_araddr_converter_0->vector_in(m_m_axi_araddr_converter_0_signal);
     mp_m_axi_araddr_converter_0->vector_out(m_axi_concat_araddr_out_0);
@@ -3488,11 +3212,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_arready_converter_0->vector_in(m_axi_split_arready_out_0);
     mp_m_axi_arready_converter_0->scalar_out(m_m_axi_arready_converter_0_signal);
     mp_M00_AXI_transactor->ARREADY(m_m_axi_arready_converter_0_signal);
-    mp_m_axi_rid_converter_0 = new xsc::common::vector2vector_converter<18,6>("m_axi_rid_converter_0");
-    mp_m_axi_rid_converter_0->vector_in(m_axi_split_rid_out_0);
-    mp_m_axi_rid_converter_0->vector_out(m_m_axi_rid_converter_0_signal);
-    mp_M00_AXI_transactor->RID(m_m_axi_rid_converter_0_signal);
-    mp_m_axi_rdata_converter_0 = new xsc::common::vector2vector_converter<96,32>("m_axi_rdata_converter_0");
+    mp_m_axi_rdata_converter_0 = new xsc::common::vector2vector_converter<192,64>("m_axi_rdata_converter_0");
     mp_m_axi_rdata_converter_0->vector_in(m_axi_split_rdata_out_0);
     mp_m_axi_rdata_converter_0->vector_out(m_m_axi_rdata_converter_0_signal);
     mp_M00_AXI_transactor->RDATA(m_m_axi_rdata_converter_0_signal);
@@ -3529,9 +3249,9 @@ void apex_blk_xbar_0::before_end_of_elaboration()
 
   // 'M01_AXI' transactor parameters
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
-    M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    M01_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    M01_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -3550,7 +3270,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M01_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
     M01_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
     M01_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
-    M01_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M01_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M01_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M01_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M01_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -3562,14 +3282,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M01_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M01_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M01_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,32,6,1,1,1,1,1>("M01_AXI_transactor", M01_AXI_transactor_param_props);
+    mp_M01_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M01_AXI_transactor", M01_AXI_transactor_param_props);
 
     // M01_AXI' transactor ports
 
-    mp_m_axi_awid_converter_1 = new xsc::common::vector2vector_converter<6,18>("m_axi_awid_converter_1");
-    mp_m_axi_awid_converter_1->vector_in(m_m_axi_awid_converter_1_signal);
-    mp_m_axi_awid_converter_1->vector_out(m_axi_concat_awid_out_1);
-    mp_M01_AXI_transactor->AWID(m_m_axi_awid_converter_1_signal);
     mp_m_axi_awaddr_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_1");
     mp_m_axi_awaddr_converter_1->vector_in(m_m_axi_awaddr_converter_1_signal);
     mp_m_axi_awaddr_converter_1->vector_out(m_axi_concat_awaddr_out_1);
@@ -3614,11 +3330,11 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_awready_converter_1->vector_in(m_axi_split_awready_out_1);
     mp_m_axi_awready_converter_1->scalar_out(m_m_axi_awready_converter_1_signal);
     mp_M01_AXI_transactor->AWREADY(m_m_axi_awready_converter_1_signal);
-    mp_m_axi_wdata_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_wdata_converter_1");
+    mp_m_axi_wdata_converter_1 = new xsc::common::vector2vector_converter<64,192>("m_axi_wdata_converter_1");
     mp_m_axi_wdata_converter_1->vector_in(m_m_axi_wdata_converter_1_signal);
     mp_m_axi_wdata_converter_1->vector_out(m_axi_concat_wdata_out_1);
     mp_M01_AXI_transactor->WDATA(m_m_axi_wdata_converter_1_signal);
-    mp_m_axi_wstrb_converter_1 = new xsc::common::vector2vector_converter<4,12>("m_axi_wstrb_converter_1");
+    mp_m_axi_wstrb_converter_1 = new xsc::common::vector2vector_converter<8,24>("m_axi_wstrb_converter_1");
     mp_m_axi_wstrb_converter_1->vector_in(m_m_axi_wstrb_converter_1_signal);
     mp_m_axi_wstrb_converter_1->vector_out(m_axi_concat_wstrb_out_1);
     mp_M01_AXI_transactor->WSTRB(m_m_axi_wstrb_converter_1_signal);
@@ -3634,10 +3350,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_wready_converter_1->vector_in(m_axi_split_wready_out_1);
     mp_m_axi_wready_converter_1->scalar_out(m_m_axi_wready_converter_1_signal);
     mp_M01_AXI_transactor->WREADY(m_m_axi_wready_converter_1_signal);
-    mp_m_axi_bid_converter_1 = new xsc::common::vector2vector_converter<18,6>("m_axi_bid_converter_1");
-    mp_m_axi_bid_converter_1->vector_in(m_axi_split_bid_out_1);
-    mp_m_axi_bid_converter_1->vector_out(m_m_axi_bid_converter_1_signal);
-    mp_M01_AXI_transactor->BID(m_m_axi_bid_converter_1_signal);
     mp_m_axi_bresp_converter_1 = new xsc::common::vector2vector_converter<6,2>("m_axi_bresp_converter_1");
     mp_m_axi_bresp_converter_1->vector_in(m_axi_split_bresp_out_1);
     mp_m_axi_bresp_converter_1->vector_out(m_m_axi_bresp_converter_1_signal);
@@ -3650,10 +3362,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_bready_converter_1->scalar_in(m_m_axi_bready_converter_1_signal);
     mp_m_axi_bready_converter_1->vector_out(m_axi_concat_bready_out_1);
     mp_M01_AXI_transactor->BREADY(m_m_axi_bready_converter_1_signal);
-    mp_m_axi_arid_converter_1 = new xsc::common::vector2vector_converter<6,18>("m_axi_arid_converter_1");
-    mp_m_axi_arid_converter_1->vector_in(m_m_axi_arid_converter_1_signal);
-    mp_m_axi_arid_converter_1->vector_out(m_axi_concat_arid_out_1);
-    mp_M01_AXI_transactor->ARID(m_m_axi_arid_converter_1_signal);
     mp_m_axi_araddr_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_araddr_converter_1");
     mp_m_axi_araddr_converter_1->vector_in(m_m_axi_araddr_converter_1_signal);
     mp_m_axi_araddr_converter_1->vector_out(m_axi_concat_araddr_out_1);
@@ -3698,11 +3406,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_arready_converter_1->vector_in(m_axi_split_arready_out_1);
     mp_m_axi_arready_converter_1->scalar_out(m_m_axi_arready_converter_1_signal);
     mp_M01_AXI_transactor->ARREADY(m_m_axi_arready_converter_1_signal);
-    mp_m_axi_rid_converter_1 = new xsc::common::vector2vector_converter<18,6>("m_axi_rid_converter_1");
-    mp_m_axi_rid_converter_1->vector_in(m_axi_split_rid_out_1);
-    mp_m_axi_rid_converter_1->vector_out(m_m_axi_rid_converter_1_signal);
-    mp_M01_AXI_transactor->RID(m_m_axi_rid_converter_1_signal);
-    mp_m_axi_rdata_converter_1 = new xsc::common::vector2vector_converter<96,32>("m_axi_rdata_converter_1");
+    mp_m_axi_rdata_converter_1 = new xsc::common::vector2vector_converter<192,64>("m_axi_rdata_converter_1");
     mp_m_axi_rdata_converter_1->vector_in(m_axi_split_rdata_out_1);
     mp_m_axi_rdata_converter_1->vector_out(m_m_axi_rdata_converter_1_signal);
     mp_M01_AXI_transactor->RDATA(m_m_axi_rdata_converter_1_signal);
@@ -3739,9 +3443,9 @@ void apex_blk_xbar_0::before_end_of_elaboration()
 
   // 'M02_AXI' transactor parameters
     xsc::common_cpp::properties M02_AXI_transactor_param_props;
-    M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M02_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    M02_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    M02_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M02_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M02_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M02_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -3760,7 +3464,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M02_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
     M02_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
     M02_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
-    M02_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M02_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M02_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M02_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M02_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -3772,14 +3476,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M02_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M02_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M02_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,32,6,1,1,1,1,1>("M02_AXI_transactor", M02_AXI_transactor_param_props);
+    mp_M02_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M02_AXI_transactor", M02_AXI_transactor_param_props);
 
     // M02_AXI' transactor ports
 
-    mp_m_axi_awid_converter_2 = new xsc::common::vector2vector_converter<6,18>("m_axi_awid_converter_2");
-    mp_m_axi_awid_converter_2->vector_in(m_m_axi_awid_converter_2_signal);
-    mp_m_axi_awid_converter_2->vector_out(m_axi_concat_awid_out_2);
-    mp_M02_AXI_transactor->AWID(m_m_axi_awid_converter_2_signal);
     mp_m_axi_awaddr_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_2");
     mp_m_axi_awaddr_converter_2->vector_in(m_m_axi_awaddr_converter_2_signal);
     mp_m_axi_awaddr_converter_2->vector_out(m_axi_concat_awaddr_out_2);
@@ -3824,11 +3524,11 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_awready_converter_2->vector_in(m_axi_split_awready_out_2);
     mp_m_axi_awready_converter_2->scalar_out(m_m_axi_awready_converter_2_signal);
     mp_M02_AXI_transactor->AWREADY(m_m_axi_awready_converter_2_signal);
-    mp_m_axi_wdata_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_wdata_converter_2");
+    mp_m_axi_wdata_converter_2 = new xsc::common::vector2vector_converter<64,192>("m_axi_wdata_converter_2");
     mp_m_axi_wdata_converter_2->vector_in(m_m_axi_wdata_converter_2_signal);
     mp_m_axi_wdata_converter_2->vector_out(m_axi_concat_wdata_out_2);
     mp_M02_AXI_transactor->WDATA(m_m_axi_wdata_converter_2_signal);
-    mp_m_axi_wstrb_converter_2 = new xsc::common::vector2vector_converter<4,12>("m_axi_wstrb_converter_2");
+    mp_m_axi_wstrb_converter_2 = new xsc::common::vector2vector_converter<8,24>("m_axi_wstrb_converter_2");
     mp_m_axi_wstrb_converter_2->vector_in(m_m_axi_wstrb_converter_2_signal);
     mp_m_axi_wstrb_converter_2->vector_out(m_axi_concat_wstrb_out_2);
     mp_M02_AXI_transactor->WSTRB(m_m_axi_wstrb_converter_2_signal);
@@ -3844,10 +3544,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_wready_converter_2->vector_in(m_axi_split_wready_out_2);
     mp_m_axi_wready_converter_2->scalar_out(m_m_axi_wready_converter_2_signal);
     mp_M02_AXI_transactor->WREADY(m_m_axi_wready_converter_2_signal);
-    mp_m_axi_bid_converter_2 = new xsc::common::vector2vector_converter<18,6>("m_axi_bid_converter_2");
-    mp_m_axi_bid_converter_2->vector_in(m_axi_split_bid_out_2);
-    mp_m_axi_bid_converter_2->vector_out(m_m_axi_bid_converter_2_signal);
-    mp_M02_AXI_transactor->BID(m_m_axi_bid_converter_2_signal);
     mp_m_axi_bresp_converter_2 = new xsc::common::vector2vector_converter<6,2>("m_axi_bresp_converter_2");
     mp_m_axi_bresp_converter_2->vector_in(m_axi_split_bresp_out_2);
     mp_m_axi_bresp_converter_2->vector_out(m_m_axi_bresp_converter_2_signal);
@@ -3860,10 +3556,6 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_bready_converter_2->scalar_in(m_m_axi_bready_converter_2_signal);
     mp_m_axi_bready_converter_2->vector_out(m_axi_concat_bready_out_2);
     mp_M02_AXI_transactor->BREADY(m_m_axi_bready_converter_2_signal);
-    mp_m_axi_arid_converter_2 = new xsc::common::vector2vector_converter<6,18>("m_axi_arid_converter_2");
-    mp_m_axi_arid_converter_2->vector_in(m_m_axi_arid_converter_2_signal);
-    mp_m_axi_arid_converter_2->vector_out(m_axi_concat_arid_out_2);
-    mp_M02_AXI_transactor->ARID(m_m_axi_arid_converter_2_signal);
     mp_m_axi_araddr_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_araddr_converter_2");
     mp_m_axi_araddr_converter_2->vector_in(m_m_axi_araddr_converter_2_signal);
     mp_m_axi_araddr_converter_2->vector_out(m_axi_concat_araddr_out_2);
@@ -3908,11 +3600,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     mp_m_axi_arready_converter_2->vector_in(m_axi_split_arready_out_2);
     mp_m_axi_arready_converter_2->scalar_out(m_m_axi_arready_converter_2_signal);
     mp_M02_AXI_transactor->ARREADY(m_m_axi_arready_converter_2_signal);
-    mp_m_axi_rid_converter_2 = new xsc::common::vector2vector_converter<18,6>("m_axi_rid_converter_2");
-    mp_m_axi_rid_converter_2->vector_in(m_axi_split_rid_out_2);
-    mp_m_axi_rid_converter_2->vector_out(m_m_axi_rid_converter_2_signal);
-    mp_M02_AXI_transactor->RID(m_m_axi_rid_converter_2_signal);
-    mp_m_axi_rdata_converter_2 = new xsc::common::vector2vector_converter<96,32>("m_axi_rdata_converter_2");
+    mp_m_axi_rdata_converter_2 = new xsc::common::vector2vector_converter<192,64>("m_axi_rdata_converter_2");
     mp_m_axi_rdata_converter_2->vector_in(m_axi_split_rdata_out_2);
     mp_m_axi_rdata_converter_2->vector_out(m_m_axi_rdata_converter_2_signal);
     mp_M02_AXI_transactor->RDATA(m_m_axi_rdata_converter_2_signal);
@@ -3949,7 +3637,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
 
 
 #ifdef VCSSYSTEMC
-apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_xbar_0_sc(nm),  aclk("aclk"), aresetn("aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awid("m_axi_awid"), m_axi_awaddr("m_axi_awaddr"), m_axi_awlen("m_axi_awlen"), m_axi_awsize("m_axi_awsize"), m_axi_awburst("m_axi_awburst"), m_axi_awlock("m_axi_awlock"), m_axi_awcache("m_axi_awcache"), m_axi_awprot("m_axi_awprot"), m_axi_awregion("m_axi_awregion"), m_axi_awqos("m_axi_awqos"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wlast("m_axi_wlast"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bid("m_axi_bid"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_arid("m_axi_arid"), m_axi_araddr("m_axi_araddr"), m_axi_arlen("m_axi_arlen"), m_axi_arsize("m_axi_arsize"), m_axi_arburst("m_axi_arburst"), m_axi_arlock("m_axi_arlock"), m_axi_arcache("m_axi_arcache"), m_axi_arprot("m_axi_arprot"), m_axi_arregion("m_axi_arregion"), m_axi_arqos("m_axi_arqos"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rid("m_axi_rid"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rlast("m_axi_rlast"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
+apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_xbar_0_sc(nm),  aclk("aclk"), aresetn("aresetn"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awaddr("m_axi_awaddr"), m_axi_awlen("m_axi_awlen"), m_axi_awsize("m_axi_awsize"), m_axi_awburst("m_axi_awburst"), m_axi_awlock("m_axi_awlock"), m_axi_awcache("m_axi_awcache"), m_axi_awprot("m_axi_awprot"), m_axi_awregion("m_axi_awregion"), m_axi_awqos("m_axi_awqos"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wlast("m_axi_wlast"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_araddr("m_axi_araddr"), m_axi_arlen("m_axi_arlen"), m_axi_arsize("m_axi_arsize"), m_axi_arburst("m_axi_arburst"), m_axi_arlock("m_axi_arlock"), m_axi_arcache("m_axi_arcache"), m_axi_arprot("m_axi_arprot"), m_axi_arregion("m_axi_arregion"), m_axi_arqos("m_axi_arqos"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rlast("m_axi_rlast"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
 {
   // initialize pins
   mp_impl->aclk(aclk);
@@ -3972,7 +3660,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_s_axi_rvalid_converter = NULL;
   mp_s_axi_rready_converter = NULL;
   mp_M00_AXI_transactor = NULL;
-  mp_m_axi_awid_converter_0 = NULL;
   mp_m_axi_awaddr_converter_0 = NULL;
   mp_m_axi_awlen_converter_0 = NULL;
   mp_m_axi_awsize_converter_0 = NULL;
@@ -3989,11 +3676,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wlast_converter_0 = NULL;
   mp_m_axi_wvalid_converter_0 = NULL;
   mp_m_axi_wready_converter_0 = NULL;
-  mp_m_axi_bid_converter_0 = NULL;
   mp_m_axi_bresp_converter_0 = NULL;
   mp_m_axi_bvalid_converter_0 = NULL;
   mp_m_axi_bready_converter_0 = NULL;
-  mp_m_axi_arid_converter_0 = NULL;
   mp_m_axi_araddr_converter_0 = NULL;
   mp_m_axi_arlen_converter_0 = NULL;
   mp_m_axi_arsize_converter_0 = NULL;
@@ -4005,14 +3690,12 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arqos_converter_0 = NULL;
   mp_m_axi_arvalid_converter_0 = NULL;
   mp_m_axi_arready_converter_0 = NULL;
-  mp_m_axi_rid_converter_0 = NULL;
   mp_m_axi_rdata_converter_0 = NULL;
   mp_m_axi_rresp_converter_0 = NULL;
   mp_m_axi_rlast_converter_0 = NULL;
   mp_m_axi_rvalid_converter_0 = NULL;
   mp_m_axi_rready_converter_0 = NULL;
   mp_M01_AXI_transactor = NULL;
-  mp_m_axi_awid_converter_1 = NULL;
   mp_m_axi_awaddr_converter_1 = NULL;
   mp_m_axi_awlen_converter_1 = NULL;
   mp_m_axi_awsize_converter_1 = NULL;
@@ -4029,11 +3712,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wlast_converter_1 = NULL;
   mp_m_axi_wvalid_converter_1 = NULL;
   mp_m_axi_wready_converter_1 = NULL;
-  mp_m_axi_bid_converter_1 = NULL;
   mp_m_axi_bresp_converter_1 = NULL;
   mp_m_axi_bvalid_converter_1 = NULL;
   mp_m_axi_bready_converter_1 = NULL;
-  mp_m_axi_arid_converter_1 = NULL;
   mp_m_axi_araddr_converter_1 = NULL;
   mp_m_axi_arlen_converter_1 = NULL;
   mp_m_axi_arsize_converter_1 = NULL;
@@ -4045,14 +3726,12 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arqos_converter_1 = NULL;
   mp_m_axi_arvalid_converter_1 = NULL;
   mp_m_axi_arready_converter_1 = NULL;
-  mp_m_axi_rid_converter_1 = NULL;
   mp_m_axi_rdata_converter_1 = NULL;
   mp_m_axi_rresp_converter_1 = NULL;
   mp_m_axi_rlast_converter_1 = NULL;
   mp_m_axi_rvalid_converter_1 = NULL;
   mp_m_axi_rready_converter_1 = NULL;
   mp_M02_AXI_transactor = NULL;
-  mp_m_axi_awid_converter_2 = NULL;
   mp_m_axi_awaddr_converter_2 = NULL;
   mp_m_axi_awlen_converter_2 = NULL;
   mp_m_axi_awsize_converter_2 = NULL;
@@ -4069,11 +3748,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wlast_converter_2 = NULL;
   mp_m_axi_wvalid_converter_2 = NULL;
   mp_m_axi_wready_converter_2 = NULL;
-  mp_m_axi_bid_converter_2 = NULL;
   mp_m_axi_bresp_converter_2 = NULL;
   mp_m_axi_bvalid_converter_2 = NULL;
   mp_m_axi_bready_converter_2 = NULL;
-  mp_m_axi_arid_converter_2 = NULL;
   mp_m_axi_araddr_converter_2 = NULL;
   mp_m_axi_arlen_converter_2 = NULL;
   mp_m_axi_arsize_converter_2 = NULL;
@@ -4085,7 +3762,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arqos_converter_2 = NULL;
   mp_m_axi_arvalid_converter_2 = NULL;
   mp_m_axi_arready_converter_2 = NULL;
-  mp_m_axi_rid_converter_2 = NULL;
   mp_m_axi_rdata_converter_2 = NULL;
   mp_m_axi_rresp_converter_2 = NULL;
   mp_m_axi_rlast_converter_2 = NULL;
@@ -4096,7 +3772,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_araddr = NULL;
   mp_m_axi_concat_arburst = NULL;
   mp_m_axi_concat_arcache = NULL;
-  mp_m_axi_concat_arid = NULL;
   mp_m_axi_concat_arlen = NULL;
   mp_m_axi_concat_arlock = NULL;
   mp_m_axi_concat_arprot = NULL;
@@ -4107,7 +3782,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_awaddr = NULL;
   mp_m_axi_concat_awburst = NULL;
   mp_m_axi_concat_awcache = NULL;
-  mp_m_axi_concat_awid = NULL;
   mp_m_axi_concat_awlen = NULL;
   mp_m_axi_concat_awlock = NULL;
   mp_m_axi_concat_awprot = NULL;
@@ -4123,11 +3797,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_wvalid = NULL;
   mp_m_axi_split_arready = NULL;
   mp_m_axi_split_awready = NULL;
-  mp_m_axi_split_bid = NULL;
   mp_m_axi_split_bresp = NULL;
   mp_m_axi_split_bvalid = NULL;
   mp_m_axi_split_rdata = NULL;
-  mp_m_axi_split_rid = NULL;
   mp_m_axi_split_rlast = NULL;
   mp_m_axi_split_rresp = NULL;
   mp_m_axi_split_rvalid = NULL;
@@ -4136,9 +3808,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
 
   // configure S00_AXI_transactor
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
-    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    S00_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    S00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S00_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -4169,8 +3841,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     S00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,6,1,1,1,1,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
-  mp_S00_AXI_transactor->AWID(s_axi_awid);
+    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,1,1,1,1,1,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
   mp_S00_AXI_transactor->AWADDR(s_axi_awaddr);
   mp_S00_AXI_transactor->AWLEN(s_axi_awlen);
   mp_S00_AXI_transactor->AWSIZE(s_axi_awsize);
@@ -4204,7 +3875,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_s_axi_wready_converter->scalar_in(m_s_axi_wready_converter_signal);
   mp_s_axi_wready_converter->vector_out(s_axi_wready);
   mp_S00_AXI_transactor->WREADY(m_s_axi_wready_converter_signal);
-  mp_S00_AXI_transactor->BID(s_axi_bid);
   mp_S00_AXI_transactor->BRESP(s_axi_bresp);
   mp_s_axi_bvalid_converter = new xsc::common::scalar2vectorN_converter<1>("s_axi_bvalid_converter");
   mp_s_axi_bvalid_converter->scalar_in(m_s_axi_bvalid_converter_signal);
@@ -4214,7 +3884,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_s_axi_bready_converter->vector_in(s_axi_bready);
   mp_s_axi_bready_converter->scalar_out(m_s_axi_bready_converter_signal);
   mp_S00_AXI_transactor->BREADY(m_s_axi_bready_converter_signal);
-  mp_S00_AXI_transactor->ARID(s_axi_arid);
   mp_S00_AXI_transactor->ARADDR(s_axi_araddr);
   mp_S00_AXI_transactor->ARLEN(s_axi_arlen);
   mp_S00_AXI_transactor->ARSIZE(s_axi_arsize);
@@ -4234,7 +3903,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_s_axi_arready_converter->scalar_in(m_s_axi_arready_converter_signal);
   mp_s_axi_arready_converter->vector_out(s_axi_arready);
   mp_S00_AXI_transactor->ARREADY(m_s_axi_arready_converter_signal);
-  mp_S00_AXI_transactor->RID(s_axi_rid);
   mp_S00_AXI_transactor->RDATA(s_axi_rdata);
   mp_S00_AXI_transactor->RRESP(s_axi_rresp);
   mp_s_axi_rlast_converter = new xsc::common::scalar2vectorN_converter<1>("s_axi_rlast_converter");
@@ -4254,9 +3922,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
 
   // configure M00_AXI_transactor
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
-    M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    M00_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    M00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -4275,7 +3943,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M00_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
     M00_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
     M00_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
-    M00_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M00_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M00_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M00_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M00_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -4287,15 +3955,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M00_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,32,6,1,1,1,1,1>("M00_AXI_transactor", M00_AXI_transactor_param_props);
-  mp_m_axi_awid_converter_0 = new xsc::common::vector2vector_converter<6,18>("m_axi_awid_converter_0");
-  mp_m_axi_concat_awid = new xsc::xsc_concatenator<18, 3>("m_axi_concat_awid");
-  mp_m_axi_concat_awid->in_port[0](m_axi_concat_awid_out_0);
-  mp_m_axi_concat_awid->out_port(m_axi_awid);
-    mp_m_axi_concat_awid->offset_port(0, 0);
-  mp_m_axi_awid_converter_0->vector_in(m_m_axi_awid_converter_0_signal);
-  mp_m_axi_awid_converter_0->vector_out(m_axi_concat_awid_out_0);
-  mp_M00_AXI_transactor->AWID(m_m_axi_awid_converter_0_signal);
+    mp_M00_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M00_AXI_transactor", M00_AXI_transactor_param_props);
   mp_m_axi_awaddr_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_0");
   mp_m_axi_concat_awaddr = new xsc::xsc_concatenator<96, 3>("m_axi_concat_awaddr");
   mp_m_axi_concat_awaddr->in_port[0](m_axi_concat_awaddr_out_0);
@@ -4384,16 +4044,16 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_awready_converter_0->vector_in(m_axi_split_awready_out_0);
   mp_m_axi_awready_converter_0->scalar_out(m_m_axi_awready_converter_0_signal);
   mp_M00_AXI_transactor->AWREADY(m_m_axi_awready_converter_0_signal);
-  mp_m_axi_wdata_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_wdata_converter_0");
-  mp_m_axi_concat_wdata = new xsc::xsc_concatenator<96, 3>("m_axi_concat_wdata");
+  mp_m_axi_wdata_converter_0 = new xsc::common::vector2vector_converter<64,192>("m_axi_wdata_converter_0");
+  mp_m_axi_concat_wdata = new xsc::xsc_concatenator<192, 3>("m_axi_concat_wdata");
   mp_m_axi_concat_wdata->in_port[0](m_axi_concat_wdata_out_0);
   mp_m_axi_concat_wdata->out_port(m_axi_wdata);
     mp_m_axi_concat_wdata->offset_port(0, 0);
   mp_m_axi_wdata_converter_0->vector_in(m_m_axi_wdata_converter_0_signal);
   mp_m_axi_wdata_converter_0->vector_out(m_axi_concat_wdata_out_0);
   mp_M00_AXI_transactor->WDATA(m_m_axi_wdata_converter_0_signal);
-  mp_m_axi_wstrb_converter_0 = new xsc::common::vector2vector_converter<4,12>("m_axi_wstrb_converter_0");
-  mp_m_axi_concat_wstrb = new xsc::xsc_concatenator<12, 3>("m_axi_concat_wstrb");
+  mp_m_axi_wstrb_converter_0 = new xsc::common::vector2vector_converter<8,24>("m_axi_wstrb_converter_0");
+  mp_m_axi_concat_wstrb = new xsc::xsc_concatenator<24, 3>("m_axi_concat_wstrb");
   mp_m_axi_concat_wstrb->in_port[0](m_axi_concat_wstrb_out_0);
   mp_m_axi_concat_wstrb->out_port(m_axi_wstrb);
     mp_m_axi_concat_wstrb->offset_port(0, 0);
@@ -4424,14 +4084,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wready_converter_0->vector_in(m_axi_split_wready_out_0);
   mp_m_axi_wready_converter_0->scalar_out(m_m_axi_wready_converter_0_signal);
   mp_M00_AXI_transactor->WREADY(m_m_axi_wready_converter_0_signal);
-  mp_m_axi_bid_converter_0 = new xsc::common::vector2vector_converter<18,6>("m_axi_bid_converter_0");
-  mp_m_axi_split_bid = new xsc::xsc_split<18, 3>("m_axi_split_bid");
-  mp_m_axi_split_bid->in_port(m_axi_bid);
-  mp_m_axi_split_bid->out_port[0](m_axi_split_bid_out_0);
-    mp_m_axi_split_bid->add_mask(0,6,0);
-  mp_m_axi_bid_converter_0->vector_in(m_axi_split_bid_out_0);
-  mp_m_axi_bid_converter_0->vector_out(m_m_axi_bid_converter_0_signal);
-  mp_M00_AXI_transactor->BID(m_m_axi_bid_converter_0_signal);
   mp_m_axi_bresp_converter_0 = new xsc::common::vector2vector_converter<6,2>("m_axi_bresp_converter_0");
   mp_m_axi_split_bresp = new xsc::xsc_split<6, 3>("m_axi_split_bresp");
   mp_m_axi_split_bresp->in_port(m_axi_bresp);
@@ -4456,14 +4108,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_bready_converter_0->scalar_in(m_m_axi_bready_converter_0_signal);
   mp_m_axi_bready_converter_0->vector_out(m_axi_concat_bready_out_0);
   mp_M00_AXI_transactor->BREADY(m_m_axi_bready_converter_0_signal);
-  mp_m_axi_arid_converter_0 = new xsc::common::vector2vector_converter<6,18>("m_axi_arid_converter_0");
-  mp_m_axi_concat_arid = new xsc::xsc_concatenator<18, 3>("m_axi_concat_arid");
-  mp_m_axi_concat_arid->in_port[0](m_axi_concat_arid_out_0);
-  mp_m_axi_concat_arid->out_port(m_axi_arid);
-    mp_m_axi_concat_arid->offset_port(0, 0);
-  mp_m_axi_arid_converter_0->vector_in(m_m_axi_arid_converter_0_signal);
-  mp_m_axi_arid_converter_0->vector_out(m_axi_concat_arid_out_0);
-  mp_M00_AXI_transactor->ARID(m_m_axi_arid_converter_0_signal);
   mp_m_axi_araddr_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_araddr_converter_0");
   mp_m_axi_concat_araddr = new xsc::xsc_concatenator<96, 3>("m_axi_concat_araddr");
   mp_m_axi_concat_araddr->in_port[0](m_axi_concat_araddr_out_0);
@@ -4552,19 +4196,11 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arready_converter_0->vector_in(m_axi_split_arready_out_0);
   mp_m_axi_arready_converter_0->scalar_out(m_m_axi_arready_converter_0_signal);
   mp_M00_AXI_transactor->ARREADY(m_m_axi_arready_converter_0_signal);
-  mp_m_axi_rid_converter_0 = new xsc::common::vector2vector_converter<18,6>("m_axi_rid_converter_0");
-  mp_m_axi_split_rid = new xsc::xsc_split<18, 3>("m_axi_split_rid");
-  mp_m_axi_split_rid->in_port(m_axi_rid);
-  mp_m_axi_split_rid->out_port[0](m_axi_split_rid_out_0);
-    mp_m_axi_split_rid->add_mask(0,6,0);
-  mp_m_axi_rid_converter_0->vector_in(m_axi_split_rid_out_0);
-  mp_m_axi_rid_converter_0->vector_out(m_m_axi_rid_converter_0_signal);
-  mp_M00_AXI_transactor->RID(m_m_axi_rid_converter_0_signal);
-  mp_m_axi_rdata_converter_0 = new xsc::common::vector2vector_converter<96,32>("m_axi_rdata_converter_0");
-  mp_m_axi_split_rdata = new xsc::xsc_split<96, 3>("m_axi_split_rdata");
+  mp_m_axi_rdata_converter_0 = new xsc::common::vector2vector_converter<192,64>("m_axi_rdata_converter_0");
+  mp_m_axi_split_rdata = new xsc::xsc_split<192, 3>("m_axi_split_rdata");
   mp_m_axi_split_rdata->in_port(m_axi_rdata);
   mp_m_axi_split_rdata->out_port[0](m_axi_split_rdata_out_0);
-    mp_m_axi_split_rdata->add_mask(0,32,0);
+    mp_m_axi_split_rdata->add_mask(0,64,0);
   mp_m_axi_rdata_converter_0->vector_in(m_axi_split_rdata_out_0);
   mp_m_axi_rdata_converter_0->vector_out(m_m_axi_rdata_converter_0_signal);
   mp_M00_AXI_transactor->RDATA(m_m_axi_rdata_converter_0_signal);
@@ -4605,9 +4241,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
 
   // configure M01_AXI_transactor
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
-    M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    M01_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    M01_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -4626,7 +4262,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M01_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
     M01_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
     M01_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
-    M01_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M01_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M01_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M01_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M01_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -4638,13 +4274,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M01_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M01_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M01_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,32,6,1,1,1,1,1>("M01_AXI_transactor", M01_AXI_transactor_param_props);
-  mp_m_axi_awid_converter_1 = new xsc::common::vector2vector_converter<6,18>("m_axi_awid_converter_1");
-  mp_m_axi_concat_awid->in_port[1](m_axi_concat_awid_out_1);
-  mp_m_axi_concat_awid->offset_port(1, 6);
-  mp_m_axi_awid_converter_1->vector_in(m_m_axi_awid_converter_1_signal);
-  mp_m_axi_awid_converter_1->vector_out(m_axi_concat_awid_out_1);
-  mp_M01_AXI_transactor->AWID(m_m_axi_awid_converter_1_signal);
+    mp_M01_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M01_AXI_transactor", M01_AXI_transactor_param_props);
   mp_m_axi_awaddr_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_1");
   mp_m_axi_concat_awaddr->in_port[1](m_axi_concat_awaddr_out_1);
   mp_m_axi_concat_awaddr->offset_port(1, 32);
@@ -4712,15 +4342,15 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_awready_converter_1->vector_in(m_axi_split_awready_out_1);
   mp_m_axi_awready_converter_1->scalar_out(m_m_axi_awready_converter_1_signal);
   mp_M01_AXI_transactor->AWREADY(m_m_axi_awready_converter_1_signal);
-  mp_m_axi_wdata_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_wdata_converter_1");
+  mp_m_axi_wdata_converter_1 = new xsc::common::vector2vector_converter<64,192>("m_axi_wdata_converter_1");
   mp_m_axi_concat_wdata->in_port[1](m_axi_concat_wdata_out_1);
-  mp_m_axi_concat_wdata->offset_port(1, 32);
+  mp_m_axi_concat_wdata->offset_port(1, 64);
   mp_m_axi_wdata_converter_1->vector_in(m_m_axi_wdata_converter_1_signal);
   mp_m_axi_wdata_converter_1->vector_out(m_axi_concat_wdata_out_1);
   mp_M01_AXI_transactor->WDATA(m_m_axi_wdata_converter_1_signal);
-  mp_m_axi_wstrb_converter_1 = new xsc::common::vector2vector_converter<4,12>("m_axi_wstrb_converter_1");
+  mp_m_axi_wstrb_converter_1 = new xsc::common::vector2vector_converter<8,24>("m_axi_wstrb_converter_1");
   mp_m_axi_concat_wstrb->in_port[1](m_axi_concat_wstrb_out_1);
-  mp_m_axi_concat_wstrb->offset_port(1, 4);
+  mp_m_axi_concat_wstrb->offset_port(1, 8);
   mp_m_axi_wstrb_converter_1->vector_in(m_m_axi_wstrb_converter_1_signal);
   mp_m_axi_wstrb_converter_1->vector_out(m_axi_concat_wstrb_out_1);
   mp_M01_AXI_transactor->WSTRB(m_m_axi_wstrb_converter_1_signal);
@@ -4743,13 +4373,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wready_converter_1->vector_in(m_axi_split_wready_out_1);
   mp_m_axi_wready_converter_1->scalar_out(m_m_axi_wready_converter_1_signal);
   mp_M01_AXI_transactor->WREADY(m_m_axi_wready_converter_1_signal);
-  mp_m_axi_bid_converter_1 = new xsc::common::vector2vector_converter<18,6>("m_axi_bid_converter_1");
-  
-  mp_m_axi_split_bid->out_port[1](m_axi_split_bid_out_1);
-    mp_m_axi_split_bid->add_mask(1,12,6);
-  mp_m_axi_bid_converter_1->vector_in(m_axi_split_bid_out_1);
-  mp_m_axi_bid_converter_1->vector_out(m_m_axi_bid_converter_1_signal);
-  mp_M01_AXI_transactor->BID(m_m_axi_bid_converter_1_signal);
   mp_m_axi_bresp_converter_1 = new xsc::common::vector2vector_converter<6,2>("m_axi_bresp_converter_1");
   
   mp_m_axi_split_bresp->out_port[1](m_axi_split_bresp_out_1);
@@ -4770,12 +4393,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_bready_converter_1->scalar_in(m_m_axi_bready_converter_1_signal);
   mp_m_axi_bready_converter_1->vector_out(m_axi_concat_bready_out_1);
   mp_M01_AXI_transactor->BREADY(m_m_axi_bready_converter_1_signal);
-  mp_m_axi_arid_converter_1 = new xsc::common::vector2vector_converter<6,18>("m_axi_arid_converter_1");
-  mp_m_axi_concat_arid->in_port[1](m_axi_concat_arid_out_1);
-  mp_m_axi_concat_arid->offset_port(1, 6);
-  mp_m_axi_arid_converter_1->vector_in(m_m_axi_arid_converter_1_signal);
-  mp_m_axi_arid_converter_1->vector_out(m_axi_concat_arid_out_1);
-  mp_M01_AXI_transactor->ARID(m_m_axi_arid_converter_1_signal);
   mp_m_axi_araddr_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_araddr_converter_1");
   mp_m_axi_concat_araddr->in_port[1](m_axi_concat_araddr_out_1);
   mp_m_axi_concat_araddr->offset_port(1, 32);
@@ -4843,17 +4460,10 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arready_converter_1->vector_in(m_axi_split_arready_out_1);
   mp_m_axi_arready_converter_1->scalar_out(m_m_axi_arready_converter_1_signal);
   mp_M01_AXI_transactor->ARREADY(m_m_axi_arready_converter_1_signal);
-  mp_m_axi_rid_converter_1 = new xsc::common::vector2vector_converter<18,6>("m_axi_rid_converter_1");
-  
-  mp_m_axi_split_rid->out_port[1](m_axi_split_rid_out_1);
-    mp_m_axi_split_rid->add_mask(1,12,6);
-  mp_m_axi_rid_converter_1->vector_in(m_axi_split_rid_out_1);
-  mp_m_axi_rid_converter_1->vector_out(m_m_axi_rid_converter_1_signal);
-  mp_M01_AXI_transactor->RID(m_m_axi_rid_converter_1_signal);
-  mp_m_axi_rdata_converter_1 = new xsc::common::vector2vector_converter<96,32>("m_axi_rdata_converter_1");
+  mp_m_axi_rdata_converter_1 = new xsc::common::vector2vector_converter<192,64>("m_axi_rdata_converter_1");
   
   mp_m_axi_split_rdata->out_port[1](m_axi_split_rdata_out_1);
-    mp_m_axi_split_rdata->add_mask(1,64,32);
+    mp_m_axi_split_rdata->add_mask(1,128,64);
   mp_m_axi_rdata_converter_1->vector_in(m_axi_split_rdata_out_1);
   mp_m_axi_rdata_converter_1->vector_out(m_m_axi_rdata_converter_1_signal);
   mp_M01_AXI_transactor->RDATA(m_m_axi_rdata_converter_1_signal);
@@ -4889,9 +4499,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
 
   // configure M02_AXI_transactor
     xsc::common_cpp::properties M02_AXI_transactor_param_props;
-    M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M02_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    M02_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    M02_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M02_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M02_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M02_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -4910,7 +4520,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M02_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
     M02_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
     M02_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
-    M02_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M02_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M02_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M02_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M02_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -4922,13 +4532,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M02_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M02_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M02_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,32,6,1,1,1,1,1>("M02_AXI_transactor", M02_AXI_transactor_param_props);
-  mp_m_axi_awid_converter_2 = new xsc::common::vector2vector_converter<6,18>("m_axi_awid_converter_2");
-  mp_m_axi_concat_awid->in_port[2](m_axi_concat_awid_out_2);
-  mp_m_axi_concat_awid->offset_port(2, 12);
-  mp_m_axi_awid_converter_2->vector_in(m_m_axi_awid_converter_2_signal);
-  mp_m_axi_awid_converter_2->vector_out(m_axi_concat_awid_out_2);
-  mp_M02_AXI_transactor->AWID(m_m_axi_awid_converter_2_signal);
+    mp_M02_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M02_AXI_transactor", M02_AXI_transactor_param_props);
   mp_m_axi_awaddr_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_2");
   mp_m_axi_concat_awaddr->in_port[2](m_axi_concat_awaddr_out_2);
   mp_m_axi_concat_awaddr->offset_port(2, 64);
@@ -4996,15 +4600,15 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_awready_converter_2->vector_in(m_axi_split_awready_out_2);
   mp_m_axi_awready_converter_2->scalar_out(m_m_axi_awready_converter_2_signal);
   mp_M02_AXI_transactor->AWREADY(m_m_axi_awready_converter_2_signal);
-  mp_m_axi_wdata_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_wdata_converter_2");
+  mp_m_axi_wdata_converter_2 = new xsc::common::vector2vector_converter<64,192>("m_axi_wdata_converter_2");
   mp_m_axi_concat_wdata->in_port[2](m_axi_concat_wdata_out_2);
-  mp_m_axi_concat_wdata->offset_port(2, 64);
+  mp_m_axi_concat_wdata->offset_port(2, 128);
   mp_m_axi_wdata_converter_2->vector_in(m_m_axi_wdata_converter_2_signal);
   mp_m_axi_wdata_converter_2->vector_out(m_axi_concat_wdata_out_2);
   mp_M02_AXI_transactor->WDATA(m_m_axi_wdata_converter_2_signal);
-  mp_m_axi_wstrb_converter_2 = new xsc::common::vector2vector_converter<4,12>("m_axi_wstrb_converter_2");
+  mp_m_axi_wstrb_converter_2 = new xsc::common::vector2vector_converter<8,24>("m_axi_wstrb_converter_2");
   mp_m_axi_concat_wstrb->in_port[2](m_axi_concat_wstrb_out_2);
-  mp_m_axi_concat_wstrb->offset_port(2, 8);
+  mp_m_axi_concat_wstrb->offset_port(2, 16);
   mp_m_axi_wstrb_converter_2->vector_in(m_m_axi_wstrb_converter_2_signal);
   mp_m_axi_wstrb_converter_2->vector_out(m_axi_concat_wstrb_out_2);
   mp_M02_AXI_transactor->WSTRB(m_m_axi_wstrb_converter_2_signal);
@@ -5027,13 +4631,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wready_converter_2->vector_in(m_axi_split_wready_out_2);
   mp_m_axi_wready_converter_2->scalar_out(m_m_axi_wready_converter_2_signal);
   mp_M02_AXI_transactor->WREADY(m_m_axi_wready_converter_2_signal);
-  mp_m_axi_bid_converter_2 = new xsc::common::vector2vector_converter<18,6>("m_axi_bid_converter_2");
-  
-  mp_m_axi_split_bid->out_port[2](m_axi_split_bid_out_2);
-    mp_m_axi_split_bid->add_mask(2,18,12);
-  mp_m_axi_bid_converter_2->vector_in(m_axi_split_bid_out_2);
-  mp_m_axi_bid_converter_2->vector_out(m_m_axi_bid_converter_2_signal);
-  mp_M02_AXI_transactor->BID(m_m_axi_bid_converter_2_signal);
   mp_m_axi_bresp_converter_2 = new xsc::common::vector2vector_converter<6,2>("m_axi_bresp_converter_2");
   
   mp_m_axi_split_bresp->out_port[2](m_axi_split_bresp_out_2);
@@ -5054,12 +4651,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_bready_converter_2->scalar_in(m_m_axi_bready_converter_2_signal);
   mp_m_axi_bready_converter_2->vector_out(m_axi_concat_bready_out_2);
   mp_M02_AXI_transactor->BREADY(m_m_axi_bready_converter_2_signal);
-  mp_m_axi_arid_converter_2 = new xsc::common::vector2vector_converter<6,18>("m_axi_arid_converter_2");
-  mp_m_axi_concat_arid->in_port[2](m_axi_concat_arid_out_2);
-  mp_m_axi_concat_arid->offset_port(2, 12);
-  mp_m_axi_arid_converter_2->vector_in(m_m_axi_arid_converter_2_signal);
-  mp_m_axi_arid_converter_2->vector_out(m_axi_concat_arid_out_2);
-  mp_M02_AXI_transactor->ARID(m_m_axi_arid_converter_2_signal);
   mp_m_axi_araddr_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_araddr_converter_2");
   mp_m_axi_concat_araddr->in_port[2](m_axi_concat_araddr_out_2);
   mp_m_axi_concat_araddr->offset_port(2, 64);
@@ -5127,17 +4718,10 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arready_converter_2->vector_in(m_axi_split_arready_out_2);
   mp_m_axi_arready_converter_2->scalar_out(m_m_axi_arready_converter_2_signal);
   mp_M02_AXI_transactor->ARREADY(m_m_axi_arready_converter_2_signal);
-  mp_m_axi_rid_converter_2 = new xsc::common::vector2vector_converter<18,6>("m_axi_rid_converter_2");
-  
-  mp_m_axi_split_rid->out_port[2](m_axi_split_rid_out_2);
-    mp_m_axi_split_rid->add_mask(2,18,12);
-  mp_m_axi_rid_converter_2->vector_in(m_axi_split_rid_out_2);
-  mp_m_axi_rid_converter_2->vector_out(m_m_axi_rid_converter_2_signal);
-  mp_M02_AXI_transactor->RID(m_m_axi_rid_converter_2_signal);
-  mp_m_axi_rdata_converter_2 = new xsc::common::vector2vector_converter<96,32>("m_axi_rdata_converter_2");
+  mp_m_axi_rdata_converter_2 = new xsc::common::vector2vector_converter<192,64>("m_axi_rdata_converter_2");
   
   mp_m_axi_split_rdata->out_port[2](m_axi_split_rdata_out_2);
-    mp_m_axi_split_rdata->add_mask(2,96,64);
+    mp_m_axi_split_rdata->add_mask(2,192,128);
   mp_m_axi_rdata_converter_2->vector_in(m_axi_split_rdata_out_2);
   mp_m_axi_rdata_converter_2->vector_out(m_m_axi_rdata_converter_2_signal);
   mp_M02_AXI_transactor->RDATA(m_m_axi_rdata_converter_2_signal);
@@ -5254,7 +4838,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
 
 
 #ifdef MTI_SYSTEMC
-apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_xbar_0_sc(nm),  aclk("aclk"), aresetn("aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awid("m_axi_awid"), m_axi_awaddr("m_axi_awaddr"), m_axi_awlen("m_axi_awlen"), m_axi_awsize("m_axi_awsize"), m_axi_awburst("m_axi_awburst"), m_axi_awlock("m_axi_awlock"), m_axi_awcache("m_axi_awcache"), m_axi_awprot("m_axi_awprot"), m_axi_awregion("m_axi_awregion"), m_axi_awqos("m_axi_awqos"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wlast("m_axi_wlast"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bid("m_axi_bid"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_arid("m_axi_arid"), m_axi_araddr("m_axi_araddr"), m_axi_arlen("m_axi_arlen"), m_axi_arsize("m_axi_arsize"), m_axi_arburst("m_axi_arburst"), m_axi_arlock("m_axi_arlock"), m_axi_arcache("m_axi_arcache"), m_axi_arprot("m_axi_arprot"), m_axi_arregion("m_axi_arregion"), m_axi_arqos("m_axi_arqos"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rid("m_axi_rid"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rlast("m_axi_rlast"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
+apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_xbar_0_sc(nm),  aclk("aclk"), aresetn("aresetn"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awaddr("m_axi_awaddr"), m_axi_awlen("m_axi_awlen"), m_axi_awsize("m_axi_awsize"), m_axi_awburst("m_axi_awburst"), m_axi_awlock("m_axi_awlock"), m_axi_awcache("m_axi_awcache"), m_axi_awprot("m_axi_awprot"), m_axi_awregion("m_axi_awregion"), m_axi_awqos("m_axi_awqos"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wlast("m_axi_wlast"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_araddr("m_axi_araddr"), m_axi_arlen("m_axi_arlen"), m_axi_arsize("m_axi_arsize"), m_axi_arburst("m_axi_arburst"), m_axi_arlock("m_axi_arlock"), m_axi_arcache("m_axi_arcache"), m_axi_arprot("m_axi_arprot"), m_axi_arregion("m_axi_arregion"), m_axi_arqos("m_axi_arqos"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rlast("m_axi_rlast"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
 {
   // initialize pins
   mp_impl->aclk(aclk);
@@ -5277,7 +4861,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_s_axi_rvalid_converter = NULL;
   mp_s_axi_rready_converter = NULL;
   mp_M00_AXI_transactor = NULL;
-  mp_m_axi_awid_converter_0 = NULL;
   mp_m_axi_awaddr_converter_0 = NULL;
   mp_m_axi_awlen_converter_0 = NULL;
   mp_m_axi_awsize_converter_0 = NULL;
@@ -5294,11 +4877,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wlast_converter_0 = NULL;
   mp_m_axi_wvalid_converter_0 = NULL;
   mp_m_axi_wready_converter_0 = NULL;
-  mp_m_axi_bid_converter_0 = NULL;
   mp_m_axi_bresp_converter_0 = NULL;
   mp_m_axi_bvalid_converter_0 = NULL;
   mp_m_axi_bready_converter_0 = NULL;
-  mp_m_axi_arid_converter_0 = NULL;
   mp_m_axi_araddr_converter_0 = NULL;
   mp_m_axi_arlen_converter_0 = NULL;
   mp_m_axi_arsize_converter_0 = NULL;
@@ -5310,14 +4891,12 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arqos_converter_0 = NULL;
   mp_m_axi_arvalid_converter_0 = NULL;
   mp_m_axi_arready_converter_0 = NULL;
-  mp_m_axi_rid_converter_0 = NULL;
   mp_m_axi_rdata_converter_0 = NULL;
   mp_m_axi_rresp_converter_0 = NULL;
   mp_m_axi_rlast_converter_0 = NULL;
   mp_m_axi_rvalid_converter_0 = NULL;
   mp_m_axi_rready_converter_0 = NULL;
   mp_M01_AXI_transactor = NULL;
-  mp_m_axi_awid_converter_1 = NULL;
   mp_m_axi_awaddr_converter_1 = NULL;
   mp_m_axi_awlen_converter_1 = NULL;
   mp_m_axi_awsize_converter_1 = NULL;
@@ -5334,11 +4913,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wlast_converter_1 = NULL;
   mp_m_axi_wvalid_converter_1 = NULL;
   mp_m_axi_wready_converter_1 = NULL;
-  mp_m_axi_bid_converter_1 = NULL;
   mp_m_axi_bresp_converter_1 = NULL;
   mp_m_axi_bvalid_converter_1 = NULL;
   mp_m_axi_bready_converter_1 = NULL;
-  mp_m_axi_arid_converter_1 = NULL;
   mp_m_axi_araddr_converter_1 = NULL;
   mp_m_axi_arlen_converter_1 = NULL;
   mp_m_axi_arsize_converter_1 = NULL;
@@ -5350,14 +4927,12 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arqos_converter_1 = NULL;
   mp_m_axi_arvalid_converter_1 = NULL;
   mp_m_axi_arready_converter_1 = NULL;
-  mp_m_axi_rid_converter_1 = NULL;
   mp_m_axi_rdata_converter_1 = NULL;
   mp_m_axi_rresp_converter_1 = NULL;
   mp_m_axi_rlast_converter_1 = NULL;
   mp_m_axi_rvalid_converter_1 = NULL;
   mp_m_axi_rready_converter_1 = NULL;
   mp_M02_AXI_transactor = NULL;
-  mp_m_axi_awid_converter_2 = NULL;
   mp_m_axi_awaddr_converter_2 = NULL;
   mp_m_axi_awlen_converter_2 = NULL;
   mp_m_axi_awsize_converter_2 = NULL;
@@ -5374,11 +4949,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wlast_converter_2 = NULL;
   mp_m_axi_wvalid_converter_2 = NULL;
   mp_m_axi_wready_converter_2 = NULL;
-  mp_m_axi_bid_converter_2 = NULL;
   mp_m_axi_bresp_converter_2 = NULL;
   mp_m_axi_bvalid_converter_2 = NULL;
   mp_m_axi_bready_converter_2 = NULL;
-  mp_m_axi_arid_converter_2 = NULL;
   mp_m_axi_araddr_converter_2 = NULL;
   mp_m_axi_arlen_converter_2 = NULL;
   mp_m_axi_arsize_converter_2 = NULL;
@@ -5390,7 +4963,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arqos_converter_2 = NULL;
   mp_m_axi_arvalid_converter_2 = NULL;
   mp_m_axi_arready_converter_2 = NULL;
-  mp_m_axi_rid_converter_2 = NULL;
   mp_m_axi_rdata_converter_2 = NULL;
   mp_m_axi_rresp_converter_2 = NULL;
   mp_m_axi_rlast_converter_2 = NULL;
@@ -5401,7 +4973,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_araddr = NULL;
   mp_m_axi_concat_arburst = NULL;
   mp_m_axi_concat_arcache = NULL;
-  mp_m_axi_concat_arid = NULL;
   mp_m_axi_concat_arlen = NULL;
   mp_m_axi_concat_arlock = NULL;
   mp_m_axi_concat_arprot = NULL;
@@ -5412,7 +4983,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_awaddr = NULL;
   mp_m_axi_concat_awburst = NULL;
   mp_m_axi_concat_awcache = NULL;
-  mp_m_axi_concat_awid = NULL;
   mp_m_axi_concat_awlen = NULL;
   mp_m_axi_concat_awlock = NULL;
   mp_m_axi_concat_awprot = NULL;
@@ -5428,11 +4998,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_concat_wvalid = NULL;
   mp_m_axi_split_arready = NULL;
   mp_m_axi_split_awready = NULL;
-  mp_m_axi_split_bid = NULL;
   mp_m_axi_split_bresp = NULL;
   mp_m_axi_split_bvalid = NULL;
   mp_m_axi_split_rdata = NULL;
-  mp_m_axi_split_rid = NULL;
   mp_m_axi_split_rlast = NULL;
   mp_m_axi_split_rresp = NULL;
   mp_m_axi_split_rvalid = NULL;
@@ -5441,9 +5009,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
 
   // configure S00_AXI_transactor
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
-    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    S00_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    S00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S00_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -5474,8 +5042,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     S00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,6,1,1,1,1,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
-  mp_S00_AXI_transactor->AWID(s_axi_awid);
+    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,1,1,1,1,1,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
   mp_S00_AXI_transactor->AWADDR(s_axi_awaddr);
   mp_S00_AXI_transactor->AWLEN(s_axi_awlen);
   mp_S00_AXI_transactor->AWSIZE(s_axi_awsize);
@@ -5509,7 +5076,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_s_axi_wready_converter->scalar_in(m_s_axi_wready_converter_signal);
   mp_s_axi_wready_converter->vector_out(s_axi_wready);
   mp_S00_AXI_transactor->WREADY(m_s_axi_wready_converter_signal);
-  mp_S00_AXI_transactor->BID(s_axi_bid);
   mp_S00_AXI_transactor->BRESP(s_axi_bresp);
   mp_s_axi_bvalid_converter = new xsc::common::scalar2vectorN_converter<1>("s_axi_bvalid_converter");
   mp_s_axi_bvalid_converter->scalar_in(m_s_axi_bvalid_converter_signal);
@@ -5519,7 +5085,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_s_axi_bready_converter->vector_in(s_axi_bready);
   mp_s_axi_bready_converter->scalar_out(m_s_axi_bready_converter_signal);
   mp_S00_AXI_transactor->BREADY(m_s_axi_bready_converter_signal);
-  mp_S00_AXI_transactor->ARID(s_axi_arid);
   mp_S00_AXI_transactor->ARADDR(s_axi_araddr);
   mp_S00_AXI_transactor->ARLEN(s_axi_arlen);
   mp_S00_AXI_transactor->ARSIZE(s_axi_arsize);
@@ -5539,7 +5104,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_s_axi_arready_converter->scalar_in(m_s_axi_arready_converter_signal);
   mp_s_axi_arready_converter->vector_out(s_axi_arready);
   mp_S00_AXI_transactor->ARREADY(m_s_axi_arready_converter_signal);
-  mp_S00_AXI_transactor->RID(s_axi_rid);
   mp_S00_AXI_transactor->RDATA(s_axi_rdata);
   mp_S00_AXI_transactor->RRESP(s_axi_rresp);
   mp_s_axi_rlast_converter = new xsc::common::scalar2vectorN_converter<1>("s_axi_rlast_converter");
@@ -5559,9 +5123,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
 
   // configure M00_AXI_transactor
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
-    M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    M00_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    M00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -5580,7 +5144,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M00_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
     M00_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
     M00_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
-    M00_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M00_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M00_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M00_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M00_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -5592,15 +5156,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M00_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,32,6,1,1,1,1,1>("M00_AXI_transactor", M00_AXI_transactor_param_props);
-  mp_m_axi_awid_converter_0 = new xsc::common::vector2vector_converter<6,18>("m_axi_awid_converter_0");
-  mp_m_axi_concat_awid = new xsc::xsc_concatenator<18, 3>("m_axi_concat_awid");
-  mp_m_axi_concat_awid->in_port[0](m_axi_concat_awid_out_0);
-  mp_m_axi_concat_awid->out_port(m_axi_awid);
-    mp_m_axi_concat_awid->offset_port(0, 0);
-  mp_m_axi_awid_converter_0->vector_in(m_m_axi_awid_converter_0_signal);
-  mp_m_axi_awid_converter_0->vector_out(m_axi_concat_awid_out_0);
-  mp_M00_AXI_transactor->AWID(m_m_axi_awid_converter_0_signal);
+    mp_M00_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M00_AXI_transactor", M00_AXI_transactor_param_props);
   mp_m_axi_awaddr_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_0");
   mp_m_axi_concat_awaddr = new xsc::xsc_concatenator<96, 3>("m_axi_concat_awaddr");
   mp_m_axi_concat_awaddr->in_port[0](m_axi_concat_awaddr_out_0);
@@ -5689,16 +5245,16 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_awready_converter_0->vector_in(m_axi_split_awready_out_0);
   mp_m_axi_awready_converter_0->scalar_out(m_m_axi_awready_converter_0_signal);
   mp_M00_AXI_transactor->AWREADY(m_m_axi_awready_converter_0_signal);
-  mp_m_axi_wdata_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_wdata_converter_0");
-  mp_m_axi_concat_wdata = new xsc::xsc_concatenator<96, 3>("m_axi_concat_wdata");
+  mp_m_axi_wdata_converter_0 = new xsc::common::vector2vector_converter<64,192>("m_axi_wdata_converter_0");
+  mp_m_axi_concat_wdata = new xsc::xsc_concatenator<192, 3>("m_axi_concat_wdata");
   mp_m_axi_concat_wdata->in_port[0](m_axi_concat_wdata_out_0);
   mp_m_axi_concat_wdata->out_port(m_axi_wdata);
     mp_m_axi_concat_wdata->offset_port(0, 0);
   mp_m_axi_wdata_converter_0->vector_in(m_m_axi_wdata_converter_0_signal);
   mp_m_axi_wdata_converter_0->vector_out(m_axi_concat_wdata_out_0);
   mp_M00_AXI_transactor->WDATA(m_m_axi_wdata_converter_0_signal);
-  mp_m_axi_wstrb_converter_0 = new xsc::common::vector2vector_converter<4,12>("m_axi_wstrb_converter_0");
-  mp_m_axi_concat_wstrb = new xsc::xsc_concatenator<12, 3>("m_axi_concat_wstrb");
+  mp_m_axi_wstrb_converter_0 = new xsc::common::vector2vector_converter<8,24>("m_axi_wstrb_converter_0");
+  mp_m_axi_concat_wstrb = new xsc::xsc_concatenator<24, 3>("m_axi_concat_wstrb");
   mp_m_axi_concat_wstrb->in_port[0](m_axi_concat_wstrb_out_0);
   mp_m_axi_concat_wstrb->out_port(m_axi_wstrb);
     mp_m_axi_concat_wstrb->offset_port(0, 0);
@@ -5729,14 +5285,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wready_converter_0->vector_in(m_axi_split_wready_out_0);
   mp_m_axi_wready_converter_0->scalar_out(m_m_axi_wready_converter_0_signal);
   mp_M00_AXI_transactor->WREADY(m_m_axi_wready_converter_0_signal);
-  mp_m_axi_bid_converter_0 = new xsc::common::vector2vector_converter<18,6>("m_axi_bid_converter_0");
-  mp_m_axi_split_bid = new xsc::xsc_split<18, 3>("m_axi_split_bid");
-  mp_m_axi_split_bid->in_port(m_axi_bid);
-  mp_m_axi_split_bid->out_port[0](m_axi_split_bid_out_0);
-    mp_m_axi_split_bid->add_mask(0,6,0);
-  mp_m_axi_bid_converter_0->vector_in(m_axi_split_bid_out_0);
-  mp_m_axi_bid_converter_0->vector_out(m_m_axi_bid_converter_0_signal);
-  mp_M00_AXI_transactor->BID(m_m_axi_bid_converter_0_signal);
   mp_m_axi_bresp_converter_0 = new xsc::common::vector2vector_converter<6,2>("m_axi_bresp_converter_0");
   mp_m_axi_split_bresp = new xsc::xsc_split<6, 3>("m_axi_split_bresp");
   mp_m_axi_split_bresp->in_port(m_axi_bresp);
@@ -5761,14 +5309,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_bready_converter_0->scalar_in(m_m_axi_bready_converter_0_signal);
   mp_m_axi_bready_converter_0->vector_out(m_axi_concat_bready_out_0);
   mp_M00_AXI_transactor->BREADY(m_m_axi_bready_converter_0_signal);
-  mp_m_axi_arid_converter_0 = new xsc::common::vector2vector_converter<6,18>("m_axi_arid_converter_0");
-  mp_m_axi_concat_arid = new xsc::xsc_concatenator<18, 3>("m_axi_concat_arid");
-  mp_m_axi_concat_arid->in_port[0](m_axi_concat_arid_out_0);
-  mp_m_axi_concat_arid->out_port(m_axi_arid);
-    mp_m_axi_concat_arid->offset_port(0, 0);
-  mp_m_axi_arid_converter_0->vector_in(m_m_axi_arid_converter_0_signal);
-  mp_m_axi_arid_converter_0->vector_out(m_axi_concat_arid_out_0);
-  mp_M00_AXI_transactor->ARID(m_m_axi_arid_converter_0_signal);
   mp_m_axi_araddr_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_araddr_converter_0");
   mp_m_axi_concat_araddr = new xsc::xsc_concatenator<96, 3>("m_axi_concat_araddr");
   mp_m_axi_concat_araddr->in_port[0](m_axi_concat_araddr_out_0);
@@ -5857,19 +5397,11 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arready_converter_0->vector_in(m_axi_split_arready_out_0);
   mp_m_axi_arready_converter_0->scalar_out(m_m_axi_arready_converter_0_signal);
   mp_M00_AXI_transactor->ARREADY(m_m_axi_arready_converter_0_signal);
-  mp_m_axi_rid_converter_0 = new xsc::common::vector2vector_converter<18,6>("m_axi_rid_converter_0");
-  mp_m_axi_split_rid = new xsc::xsc_split<18, 3>("m_axi_split_rid");
-  mp_m_axi_split_rid->in_port(m_axi_rid);
-  mp_m_axi_split_rid->out_port[0](m_axi_split_rid_out_0);
-    mp_m_axi_split_rid->add_mask(0,6,0);
-  mp_m_axi_rid_converter_0->vector_in(m_axi_split_rid_out_0);
-  mp_m_axi_rid_converter_0->vector_out(m_m_axi_rid_converter_0_signal);
-  mp_M00_AXI_transactor->RID(m_m_axi_rid_converter_0_signal);
-  mp_m_axi_rdata_converter_0 = new xsc::common::vector2vector_converter<96,32>("m_axi_rdata_converter_0");
-  mp_m_axi_split_rdata = new xsc::xsc_split<96, 3>("m_axi_split_rdata");
+  mp_m_axi_rdata_converter_0 = new xsc::common::vector2vector_converter<192,64>("m_axi_rdata_converter_0");
+  mp_m_axi_split_rdata = new xsc::xsc_split<192, 3>("m_axi_split_rdata");
   mp_m_axi_split_rdata->in_port(m_axi_rdata);
   mp_m_axi_split_rdata->out_port[0](m_axi_split_rdata_out_0);
-    mp_m_axi_split_rdata->add_mask(0,32,0);
+    mp_m_axi_split_rdata->add_mask(0,64,0);
   mp_m_axi_rdata_converter_0->vector_in(m_axi_split_rdata_out_0);
   mp_m_axi_rdata_converter_0->vector_out(m_m_axi_rdata_converter_0_signal);
   mp_M00_AXI_transactor->RDATA(m_m_axi_rdata_converter_0_signal);
@@ -5910,9 +5442,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
 
   // configure M01_AXI_transactor
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
-    M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    M01_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    M01_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -5931,7 +5463,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M01_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
     M01_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
     M01_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
-    M01_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M01_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M01_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M01_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M01_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -5943,13 +5475,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M01_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M01_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M01_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,32,6,1,1,1,1,1>("M01_AXI_transactor", M01_AXI_transactor_param_props);
-  mp_m_axi_awid_converter_1 = new xsc::common::vector2vector_converter<6,18>("m_axi_awid_converter_1");
-  mp_m_axi_concat_awid->in_port[1](m_axi_concat_awid_out_1);
-  mp_m_axi_concat_awid->offset_port(1, 6);
-  mp_m_axi_awid_converter_1->vector_in(m_m_axi_awid_converter_1_signal);
-  mp_m_axi_awid_converter_1->vector_out(m_axi_concat_awid_out_1);
-  mp_M01_AXI_transactor->AWID(m_m_axi_awid_converter_1_signal);
+    mp_M01_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M01_AXI_transactor", M01_AXI_transactor_param_props);
   mp_m_axi_awaddr_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_1");
   mp_m_axi_concat_awaddr->in_port[1](m_axi_concat_awaddr_out_1);
   mp_m_axi_concat_awaddr->offset_port(1, 32);
@@ -6017,15 +5543,15 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_awready_converter_1->vector_in(m_axi_split_awready_out_1);
   mp_m_axi_awready_converter_1->scalar_out(m_m_axi_awready_converter_1_signal);
   mp_M01_AXI_transactor->AWREADY(m_m_axi_awready_converter_1_signal);
-  mp_m_axi_wdata_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_wdata_converter_1");
+  mp_m_axi_wdata_converter_1 = new xsc::common::vector2vector_converter<64,192>("m_axi_wdata_converter_1");
   mp_m_axi_concat_wdata->in_port[1](m_axi_concat_wdata_out_1);
-  mp_m_axi_concat_wdata->offset_port(1, 32);
+  mp_m_axi_concat_wdata->offset_port(1, 64);
   mp_m_axi_wdata_converter_1->vector_in(m_m_axi_wdata_converter_1_signal);
   mp_m_axi_wdata_converter_1->vector_out(m_axi_concat_wdata_out_1);
   mp_M01_AXI_transactor->WDATA(m_m_axi_wdata_converter_1_signal);
-  mp_m_axi_wstrb_converter_1 = new xsc::common::vector2vector_converter<4,12>("m_axi_wstrb_converter_1");
+  mp_m_axi_wstrb_converter_1 = new xsc::common::vector2vector_converter<8,24>("m_axi_wstrb_converter_1");
   mp_m_axi_concat_wstrb->in_port[1](m_axi_concat_wstrb_out_1);
-  mp_m_axi_concat_wstrb->offset_port(1, 4);
+  mp_m_axi_concat_wstrb->offset_port(1, 8);
   mp_m_axi_wstrb_converter_1->vector_in(m_m_axi_wstrb_converter_1_signal);
   mp_m_axi_wstrb_converter_1->vector_out(m_axi_concat_wstrb_out_1);
   mp_M01_AXI_transactor->WSTRB(m_m_axi_wstrb_converter_1_signal);
@@ -6048,13 +5574,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wready_converter_1->vector_in(m_axi_split_wready_out_1);
   mp_m_axi_wready_converter_1->scalar_out(m_m_axi_wready_converter_1_signal);
   mp_M01_AXI_transactor->WREADY(m_m_axi_wready_converter_1_signal);
-  mp_m_axi_bid_converter_1 = new xsc::common::vector2vector_converter<18,6>("m_axi_bid_converter_1");
-  
-  mp_m_axi_split_bid->out_port[1](m_axi_split_bid_out_1);
-    mp_m_axi_split_bid->add_mask(1,12,6);
-  mp_m_axi_bid_converter_1->vector_in(m_axi_split_bid_out_1);
-  mp_m_axi_bid_converter_1->vector_out(m_m_axi_bid_converter_1_signal);
-  mp_M01_AXI_transactor->BID(m_m_axi_bid_converter_1_signal);
   mp_m_axi_bresp_converter_1 = new xsc::common::vector2vector_converter<6,2>("m_axi_bresp_converter_1");
   
   mp_m_axi_split_bresp->out_port[1](m_axi_split_bresp_out_1);
@@ -6075,12 +5594,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_bready_converter_1->scalar_in(m_m_axi_bready_converter_1_signal);
   mp_m_axi_bready_converter_1->vector_out(m_axi_concat_bready_out_1);
   mp_M01_AXI_transactor->BREADY(m_m_axi_bready_converter_1_signal);
-  mp_m_axi_arid_converter_1 = new xsc::common::vector2vector_converter<6,18>("m_axi_arid_converter_1");
-  mp_m_axi_concat_arid->in_port[1](m_axi_concat_arid_out_1);
-  mp_m_axi_concat_arid->offset_port(1, 6);
-  mp_m_axi_arid_converter_1->vector_in(m_m_axi_arid_converter_1_signal);
-  mp_m_axi_arid_converter_1->vector_out(m_axi_concat_arid_out_1);
-  mp_M01_AXI_transactor->ARID(m_m_axi_arid_converter_1_signal);
   mp_m_axi_araddr_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_araddr_converter_1");
   mp_m_axi_concat_araddr->in_port[1](m_axi_concat_araddr_out_1);
   mp_m_axi_concat_araddr->offset_port(1, 32);
@@ -6148,17 +5661,10 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arready_converter_1->vector_in(m_axi_split_arready_out_1);
   mp_m_axi_arready_converter_1->scalar_out(m_m_axi_arready_converter_1_signal);
   mp_M01_AXI_transactor->ARREADY(m_m_axi_arready_converter_1_signal);
-  mp_m_axi_rid_converter_1 = new xsc::common::vector2vector_converter<18,6>("m_axi_rid_converter_1");
-  
-  mp_m_axi_split_rid->out_port[1](m_axi_split_rid_out_1);
-    mp_m_axi_split_rid->add_mask(1,12,6);
-  mp_m_axi_rid_converter_1->vector_in(m_axi_split_rid_out_1);
-  mp_m_axi_rid_converter_1->vector_out(m_m_axi_rid_converter_1_signal);
-  mp_M01_AXI_transactor->RID(m_m_axi_rid_converter_1_signal);
-  mp_m_axi_rdata_converter_1 = new xsc::common::vector2vector_converter<96,32>("m_axi_rdata_converter_1");
+  mp_m_axi_rdata_converter_1 = new xsc::common::vector2vector_converter<192,64>("m_axi_rdata_converter_1");
   
   mp_m_axi_split_rdata->out_port[1](m_axi_split_rdata_out_1);
-    mp_m_axi_split_rdata->add_mask(1,64,32);
+    mp_m_axi_split_rdata->add_mask(1,128,64);
   mp_m_axi_rdata_converter_1->vector_in(m_axi_split_rdata_out_1);
   mp_m_axi_rdata_converter_1->vector_out(m_m_axi_rdata_converter_1_signal);
   mp_M01_AXI_transactor->RDATA(m_m_axi_rdata_converter_1_signal);
@@ -6194,9 +5700,9 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
 
   // configure M02_AXI_transactor
     xsc::common_cpp::properties M02_AXI_transactor_param_props;
-    M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
+    M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M02_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    M02_AXI_transactor_param_props.addLong("ID_WIDTH", "6");
+    M02_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M02_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M02_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M02_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -6215,7 +5721,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M02_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
     M02_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
     M02_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
-    M02_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M02_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M02_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M02_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M02_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
@@ -6227,13 +5733,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M02_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M02_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M02_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,32,6,1,1,1,1,1>("M02_AXI_transactor", M02_AXI_transactor_param_props);
-  mp_m_axi_awid_converter_2 = new xsc::common::vector2vector_converter<6,18>("m_axi_awid_converter_2");
-  mp_m_axi_concat_awid->in_port[2](m_axi_concat_awid_out_2);
-  mp_m_axi_concat_awid->offset_port(2, 12);
-  mp_m_axi_awid_converter_2->vector_in(m_m_axi_awid_converter_2_signal);
-  mp_m_axi_awid_converter_2->vector_out(m_axi_concat_awid_out_2);
-  mp_M02_AXI_transactor->AWID(m_m_axi_awid_converter_2_signal);
+    mp_M02_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M02_AXI_transactor", M02_AXI_transactor_param_props);
   mp_m_axi_awaddr_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_2");
   mp_m_axi_concat_awaddr->in_port[2](m_axi_concat_awaddr_out_2);
   mp_m_axi_concat_awaddr->offset_port(2, 64);
@@ -6301,15 +5801,15 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_awready_converter_2->vector_in(m_axi_split_awready_out_2);
   mp_m_axi_awready_converter_2->scalar_out(m_m_axi_awready_converter_2_signal);
   mp_M02_AXI_transactor->AWREADY(m_m_axi_awready_converter_2_signal);
-  mp_m_axi_wdata_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_wdata_converter_2");
+  mp_m_axi_wdata_converter_2 = new xsc::common::vector2vector_converter<64,192>("m_axi_wdata_converter_2");
   mp_m_axi_concat_wdata->in_port[2](m_axi_concat_wdata_out_2);
-  mp_m_axi_concat_wdata->offset_port(2, 64);
+  mp_m_axi_concat_wdata->offset_port(2, 128);
   mp_m_axi_wdata_converter_2->vector_in(m_m_axi_wdata_converter_2_signal);
   mp_m_axi_wdata_converter_2->vector_out(m_axi_concat_wdata_out_2);
   mp_M02_AXI_transactor->WDATA(m_m_axi_wdata_converter_2_signal);
-  mp_m_axi_wstrb_converter_2 = new xsc::common::vector2vector_converter<4,12>("m_axi_wstrb_converter_2");
+  mp_m_axi_wstrb_converter_2 = new xsc::common::vector2vector_converter<8,24>("m_axi_wstrb_converter_2");
   mp_m_axi_concat_wstrb->in_port[2](m_axi_concat_wstrb_out_2);
-  mp_m_axi_concat_wstrb->offset_port(2, 8);
+  mp_m_axi_concat_wstrb->offset_port(2, 16);
   mp_m_axi_wstrb_converter_2->vector_in(m_m_axi_wstrb_converter_2_signal);
   mp_m_axi_wstrb_converter_2->vector_out(m_axi_concat_wstrb_out_2);
   mp_M02_AXI_transactor->WSTRB(m_m_axi_wstrb_converter_2_signal);
@@ -6332,13 +5832,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_wready_converter_2->vector_in(m_axi_split_wready_out_2);
   mp_m_axi_wready_converter_2->scalar_out(m_m_axi_wready_converter_2_signal);
   mp_M02_AXI_transactor->WREADY(m_m_axi_wready_converter_2_signal);
-  mp_m_axi_bid_converter_2 = new xsc::common::vector2vector_converter<18,6>("m_axi_bid_converter_2");
-  
-  mp_m_axi_split_bid->out_port[2](m_axi_split_bid_out_2);
-    mp_m_axi_split_bid->add_mask(2,18,12);
-  mp_m_axi_bid_converter_2->vector_in(m_axi_split_bid_out_2);
-  mp_m_axi_bid_converter_2->vector_out(m_m_axi_bid_converter_2_signal);
-  mp_M02_AXI_transactor->BID(m_m_axi_bid_converter_2_signal);
   mp_m_axi_bresp_converter_2 = new xsc::common::vector2vector_converter<6,2>("m_axi_bresp_converter_2");
   
   mp_m_axi_split_bresp->out_port[2](m_axi_split_bresp_out_2);
@@ -6359,12 +5852,6 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_bready_converter_2->scalar_in(m_m_axi_bready_converter_2_signal);
   mp_m_axi_bready_converter_2->vector_out(m_axi_concat_bready_out_2);
   mp_M02_AXI_transactor->BREADY(m_m_axi_bready_converter_2_signal);
-  mp_m_axi_arid_converter_2 = new xsc::common::vector2vector_converter<6,18>("m_axi_arid_converter_2");
-  mp_m_axi_concat_arid->in_port[2](m_axi_concat_arid_out_2);
-  mp_m_axi_concat_arid->offset_port(2, 12);
-  mp_m_axi_arid_converter_2->vector_in(m_m_axi_arid_converter_2_signal);
-  mp_m_axi_arid_converter_2->vector_out(m_axi_concat_arid_out_2);
-  mp_M02_AXI_transactor->ARID(m_m_axi_arid_converter_2_signal);
   mp_m_axi_araddr_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_araddr_converter_2");
   mp_m_axi_concat_araddr->in_port[2](m_axi_concat_araddr_out_2);
   mp_m_axi_concat_araddr->offset_port(2, 64);
@@ -6432,17 +5919,10 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   mp_m_axi_arready_converter_2->vector_in(m_axi_split_arready_out_2);
   mp_m_axi_arready_converter_2->scalar_out(m_m_axi_arready_converter_2_signal);
   mp_M02_AXI_transactor->ARREADY(m_m_axi_arready_converter_2_signal);
-  mp_m_axi_rid_converter_2 = new xsc::common::vector2vector_converter<18,6>("m_axi_rid_converter_2");
-  
-  mp_m_axi_split_rid->out_port[2](m_axi_split_rid_out_2);
-    mp_m_axi_split_rid->add_mask(2,18,12);
-  mp_m_axi_rid_converter_2->vector_in(m_axi_split_rid_out_2);
-  mp_m_axi_rid_converter_2->vector_out(m_m_axi_rid_converter_2_signal);
-  mp_M02_AXI_transactor->RID(m_m_axi_rid_converter_2_signal);
-  mp_m_axi_rdata_converter_2 = new xsc::common::vector2vector_converter<96,32>("m_axi_rdata_converter_2");
+  mp_m_axi_rdata_converter_2 = new xsc::common::vector2vector_converter<192,64>("m_axi_rdata_converter_2");
   
   mp_m_axi_split_rdata->out_port[2](m_axi_split_rdata_out_2);
-    mp_m_axi_split_rdata->add_mask(2,96,64);
+    mp_m_axi_split_rdata->add_mask(2,192,128);
   mp_m_axi_rdata_converter_2->vector_in(m_axi_split_rdata_out_2);
   mp_m_axi_rdata_converter_2->vector_out(m_m_axi_rdata_converter_2_signal);
   mp_M02_AXI_transactor->RDATA(m_m_axi_rdata_converter_2_signal);
@@ -6577,7 +6057,6 @@ apex_blk_xbar_0::~apex_blk_xbar_0()
   delete mp_s_axi_rready_converter;
 
   delete mp_M00_AXI_transactor;
-  delete mp_m_axi_awid_converter_0;
   delete mp_m_axi_awaddr_converter_0;
   delete mp_m_axi_awlen_converter_0;
   delete mp_m_axi_awsize_converter_0;
@@ -6594,11 +6073,9 @@ apex_blk_xbar_0::~apex_blk_xbar_0()
   delete mp_m_axi_wlast_converter_0;
   delete mp_m_axi_wvalid_converter_0;
   delete mp_m_axi_wready_converter_0;
-  delete mp_m_axi_bid_converter_0;
   delete mp_m_axi_bresp_converter_0;
   delete mp_m_axi_bvalid_converter_0;
   delete mp_m_axi_bready_converter_0;
-  delete mp_m_axi_arid_converter_0;
   delete mp_m_axi_araddr_converter_0;
   delete mp_m_axi_arlen_converter_0;
   delete mp_m_axi_arsize_converter_0;
@@ -6610,7 +6087,6 @@ apex_blk_xbar_0::~apex_blk_xbar_0()
   delete mp_m_axi_arqos_converter_0;
   delete mp_m_axi_arvalid_converter_0;
   delete mp_m_axi_arready_converter_0;
-  delete mp_m_axi_rid_converter_0;
   delete mp_m_axi_rdata_converter_0;
   delete mp_m_axi_rresp_converter_0;
   delete mp_m_axi_rlast_converter_0;
@@ -6618,7 +6094,6 @@ apex_blk_xbar_0::~apex_blk_xbar_0()
   delete mp_m_axi_rready_converter_0;
 
   delete mp_M01_AXI_transactor;
-  delete mp_m_axi_awid_converter_1;
   delete mp_m_axi_awaddr_converter_1;
   delete mp_m_axi_awlen_converter_1;
   delete mp_m_axi_awsize_converter_1;
@@ -6635,11 +6110,9 @@ apex_blk_xbar_0::~apex_blk_xbar_0()
   delete mp_m_axi_wlast_converter_1;
   delete mp_m_axi_wvalid_converter_1;
   delete mp_m_axi_wready_converter_1;
-  delete mp_m_axi_bid_converter_1;
   delete mp_m_axi_bresp_converter_1;
   delete mp_m_axi_bvalid_converter_1;
   delete mp_m_axi_bready_converter_1;
-  delete mp_m_axi_arid_converter_1;
   delete mp_m_axi_araddr_converter_1;
   delete mp_m_axi_arlen_converter_1;
   delete mp_m_axi_arsize_converter_1;
@@ -6651,7 +6124,6 @@ apex_blk_xbar_0::~apex_blk_xbar_0()
   delete mp_m_axi_arqos_converter_1;
   delete mp_m_axi_arvalid_converter_1;
   delete mp_m_axi_arready_converter_1;
-  delete mp_m_axi_rid_converter_1;
   delete mp_m_axi_rdata_converter_1;
   delete mp_m_axi_rresp_converter_1;
   delete mp_m_axi_rlast_converter_1;
@@ -6659,7 +6131,6 @@ apex_blk_xbar_0::~apex_blk_xbar_0()
   delete mp_m_axi_rready_converter_1;
 
   delete mp_M02_AXI_transactor;
-  delete mp_m_axi_awid_converter_2;
   delete mp_m_axi_awaddr_converter_2;
   delete mp_m_axi_awlen_converter_2;
   delete mp_m_axi_awsize_converter_2;
@@ -6676,11 +6147,9 @@ apex_blk_xbar_0::~apex_blk_xbar_0()
   delete mp_m_axi_wlast_converter_2;
   delete mp_m_axi_wvalid_converter_2;
   delete mp_m_axi_wready_converter_2;
-  delete mp_m_axi_bid_converter_2;
   delete mp_m_axi_bresp_converter_2;
   delete mp_m_axi_bvalid_converter_2;
   delete mp_m_axi_bready_converter_2;
-  delete mp_m_axi_arid_converter_2;
   delete mp_m_axi_araddr_converter_2;
   delete mp_m_axi_arlen_converter_2;
   delete mp_m_axi_arsize_converter_2;
@@ -6692,7 +6161,6 @@ apex_blk_xbar_0::~apex_blk_xbar_0()
   delete mp_m_axi_arqos_converter_2;
   delete mp_m_axi_arvalid_converter_2;
   delete mp_m_axi_arready_converter_2;
-  delete mp_m_axi_rid_converter_2;
   delete mp_m_axi_rdata_converter_2;
   delete mp_m_axi_rresp_converter_2;
   delete mp_m_axi_rlast_converter_2;
@@ -6702,7 +6170,6 @@ apex_blk_xbar_0::~apex_blk_xbar_0()
   delete mp_m_axi_concat_araddr;
   delete mp_m_axi_concat_arburst;
   delete mp_m_axi_concat_arcache;
-  delete mp_m_axi_concat_arid;
   delete mp_m_axi_concat_arlen;
   delete mp_m_axi_concat_arlock;
   delete mp_m_axi_concat_arprot;
@@ -6713,7 +6180,6 @@ apex_blk_xbar_0::~apex_blk_xbar_0()
   delete mp_m_axi_concat_awaddr;
   delete mp_m_axi_concat_awburst;
   delete mp_m_axi_concat_awcache;
-  delete mp_m_axi_concat_awid;
   delete mp_m_axi_concat_awlen;
   delete mp_m_axi_concat_awlock;
   delete mp_m_axi_concat_awprot;
@@ -6729,11 +6195,9 @@ apex_blk_xbar_0::~apex_blk_xbar_0()
   delete mp_m_axi_concat_wvalid;
   delete mp_m_axi_split_arready;
   delete mp_m_axi_split_awready;
-  delete mp_m_axi_split_bid;
   delete mp_m_axi_split_bresp;
   delete mp_m_axi_split_bvalid;
   delete mp_m_axi_split_rdata;
-  delete mp_m_axi_split_rid;
   delete mp_m_axi_split_rlast;
   delete mp_m_axi_split_rresp;
   delete mp_m_axi_split_rvalid;
@@ -6750,6 +6214,6 @@ XMSC_MODULE_EXPORT(apex_blk_xbar_0);
 
 #ifdef RIVIERA
 SC_MODULE_EXPORT(apex_blk_xbar_0);
-SC_REGISTER_BV(96);
+SC_REGISTER_BV(192);
 #endif
 
