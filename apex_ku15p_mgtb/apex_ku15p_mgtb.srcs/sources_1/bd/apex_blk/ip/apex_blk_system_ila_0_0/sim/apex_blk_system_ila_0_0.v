@@ -68,6 +68,7 @@ module apex_blk_system_ila_0_0 (
   probe10,
   probe11,
   probe12,
+  probe13,
   SLOT_0_AXI_awid,
   SLOT_0_AXI_awaddr,
   SLOT_0_AXI_awlen,
@@ -170,6 +171,7 @@ input wire [0 : 0] probe9;
 input wire [0 : 0] probe10;
 input wire [0 : 0] probe11;
 input wire [12 : 0] probe12;
+input wire [0 : 0] probe13;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWID" *)
 input wire [5 : 0] SLOT_0_AXI_awid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWADDR" *)
@@ -361,6 +363,7 @@ input wire resetn;
     .probe10(probe10),
     .probe11(probe11),
     .probe12(probe12),
+    .probe13(probe13),
     .SLOT_0_AXI_awid(SLOT_0_AXI_awid),
     .SLOT_0_AXI_awaddr(SLOT_0_AXI_awaddr),
     .SLOT_0_AXI_awlen(SLOT_0_AXI_awlen),

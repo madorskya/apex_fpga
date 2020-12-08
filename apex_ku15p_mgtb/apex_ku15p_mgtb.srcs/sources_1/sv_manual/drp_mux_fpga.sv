@@ -59,7 +59,6 @@ module drp_mux_fpga #
    localparam quad_port_addr0 = {{(AW_QUAD-2){1'b1}}, 2'b11};
    
 	integer di;
-//	always @(posedge drpclk_fpga)
 	always @(posedge drp_clk)
 	begin
 		drprdy_fpga = 1'b0;

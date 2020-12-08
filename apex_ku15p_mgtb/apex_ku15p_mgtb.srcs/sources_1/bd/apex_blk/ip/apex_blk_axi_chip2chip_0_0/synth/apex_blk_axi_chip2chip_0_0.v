@@ -52,10 +52,11 @@
 
 (* X_CORE_INFO = "axi_chip2chip_v5_0_8,Vivado 2020.1" *)
 (* CHECK_LICENSE_TYPE = "apex_blk_axi_chip2chip_0_0,axi_chip2chip_v5_0_8,{}" *)
-(* CORE_GENERATION_INFO = "apex_blk_axi_chip2chip_0_0,axi_chip2chip_v5_0_8,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_chip2chip,x_ipVersion=5.0,x_ipCoreRevision=8,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=kintexuplus,C_INSTANCE=axi_c2c,C_SIMULATION=0,C_MASTER_FPGA=0,C_AXI_BUS_TYPE=0,C_EN_AXI_LINK_HNDLR=0,C_COMMON_CLK=0,C_INTERFACE_TYPE=3,C_INTERFACE_MODE=1,C_NUM_OF_IO=20,C_SELECTIO_PHY_CLK=100,C_INCLUDE_AXILITE=0,C_AXI_DATA_WIDTH=32,C_AXI_ID_WIDTH=6,C_AXI_WUSER_WIDTH=1,C_DISABLE\
+(* CORE_GENERATION_INFO = "apex_blk_axi_chip2chip_0_0,axi_chip2chip_v5_0_8,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_chip2chip,x_ipVersion=5.0,x_ipCoreRevision=8,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=kintexuplus,C_INSTANCE=axi_c2c,C_SIMULATION=0,C_MASTER_FPGA=0,C_AXI_BUS_TYPE=0,C_EN_AXI_LINK_HNDLR=1,C_COMMON_CLK=0,C_INTERFACE_TYPE=3,C_INTERFACE_MODE=1,C_NUM_OF_IO=20,C_SELECTIO_PHY_CLK=100,C_INCLUDE_AXILITE=0,C_AXI_DATA_WIDTH=32,C_AXI_ID_WIDTH=6,C_AXI_WUSER_WIDTH=1,C_DISABLE\
 _DESKEW=0,C_DISABLE_CLK_SHIFT=0,C_USE_DIFF_CLK=0,C_USE_DIFF_IO=0,C_AURORA_WIDTH=32,C_ECC_ENABLE=0,C_AXI_STB_WIDTH=4,C_AXI_ADDR_WIDTH=32,C_AXI_LEN_WIDTH=8,C_AXI_SIZE_WIDTH=3,C_AXI_BRST_WIDTH=2,C_AXI_RESP_WIDTH=2,C_INTERRUPT_WIDTH=4,C_EN_LEGACY_MODE=0,C_AXI_LITE_ADDR_WIDTH=32,C_AXI_LITE_PROT_WIDTH=2,C_AXI_LITE_DATA_WIDTH=32,C_AXI_LITE_STB_WIDTH=4,C_AXI_LITE_RESP_WIDTH=2}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module apex_blk_axi_chip2chip_0_0 (
+  axi_c2c_lnk_hndlr_in_progress,
   m_aclk,
   m_aresetn,
   m_axi_awid,
@@ -107,6 +108,7 @@ module apex_blk_axi_chip2chip_0_0 (
   axi_c2c_multi_bit_error_out
 );
 
+output wire axi_c2c_lnk_hndlr_in_progress;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_aclk, ASSOCIATED_BUSIF m_axi, ASSOCIATED_RESET m_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 m_aclk CLK" *)
 input wire m_aclk;
@@ -217,7 +219,7 @@ output wire axi_c2c_multi_bit_error_out;
     .C_SIMULATION(0),
     .C_MASTER_FPGA(0),
     .C_AXI_BUS_TYPE(0),
-    .C_EN_AXI_LINK_HNDLR(0),
+    .C_EN_AXI_LINK_HNDLR(1),
     .C_COMMON_CLK(0),
     .C_INTERFACE_TYPE(3),
     .C_INTERFACE_MODE(1),
@@ -279,7 +281,7 @@ output wire axi_c2c_multi_bit_error_out;
     .s_axi_rlast(),
     .s_axi_rvalid(),
     .s_axi_rready(1'B0),
-    .axi_c2c_lnk_hndlr_in_progress(),
+    .axi_c2c_lnk_hndlr_in_progress(axi_c2c_lnk_hndlr_in_progress),
     .axi_c2c_m2s_intr_in(4'B0),
     .axi_c2c_s2m_intr_out(),
     .m_aclk(m_aclk),

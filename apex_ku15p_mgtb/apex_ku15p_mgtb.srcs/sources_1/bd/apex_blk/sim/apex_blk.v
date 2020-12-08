@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Thu Dec  3 22:12:22 2020
+//Date        : Mon Dec  7 21:56:04 2020
 //Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 //Command     : generate_target apex_blk.bd
 //Design      : apex_blk
@@ -100,6 +100,7 @@ module apex_blk
   wire axi_chip2chip_0_aurora8_user_clk_out;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire axi_chip2chip_0_aurora_pma_init_out;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire axi_chip2chip_0_aurora_reset_pb;
+  wire axi_chip2chip_0_axi_c2c_lnk_hndlr_in_progress;
   (* CONN_BUS_INFO = "axi_interconnect_0_M00_AXI xilinx.com:interface:aximm:1.0 AXI4 ARADDR" *) (* DONT_TOUCH *) wire [15:0]axi_interconnect_0_M00_AXI_ARADDR;
   (* CONN_BUS_INFO = "axi_interconnect_0_M00_AXI xilinx.com:interface:aximm:1.0 AXI4 ARBURST" *) (* DONT_TOUCH *) wire [1:0]axi_interconnect_0_M00_AXI_ARBURST;
   wire [3:0]axi_interconnect_0_M00_AXI_ARCACHE;
@@ -338,6 +339,7 @@ module apex_blk
         .axi_c2c_aurora_tx_tvalid(axi_chip2chip_0_AXIS_TX_TVALID),
         .axi_c2c_config_error_out(axi_c2c_config_error_out),
         .axi_c2c_link_status_out(axi_c2c_link_status_out),
+        .axi_c2c_lnk_hndlr_in_progress(axi_chip2chip_0_axi_c2c_lnk_hndlr_in_progress),
         .axi_c2c_multi_bit_error_out(axi_c2c_multi_bit_error_out),
         .axi_c2c_phy_clk(axi_chip2chip_0_aurora8_user_clk_out),
         .axi_c2c_s2m_intr_in({1'b0,1'b0,1'b0,1'b0}),
@@ -683,6 +685,7 @@ module apex_blk
         .probe10(drp_bridge_0_drp0_we),
         .probe11(drp_rdy_1),
         .probe12(drp_bridge_0_drp0_addr),
+        .probe13(axi_chip2chip_0_axi_c2c_lnk_hndlr_in_progress),
         .probe2(drp_bridge_0_drp1_di),
         .probe3(drp_bridge_0_drp1_en),
         .probe4(drp_bridge_0_drp1_we),

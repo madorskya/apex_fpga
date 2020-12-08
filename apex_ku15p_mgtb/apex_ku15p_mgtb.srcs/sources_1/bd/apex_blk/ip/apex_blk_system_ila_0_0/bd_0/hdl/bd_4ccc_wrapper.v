@@ -96,6 +96,7 @@ module bd_4ccc_wrapper
     probe10,
     probe11,
     probe12,
+    probe13,
     probe2,
     probe3,
     probe4,
@@ -194,6 +195,7 @@ module bd_4ccc_wrapper
   input [0:0]probe10;
   input [0:0]probe11;
   input [12:0]probe12;
+  input [0:0]probe13;
   input [63:0]probe2;
   input [0:0]probe3;
   input [0:0]probe4;
@@ -293,6 +295,7 @@ module bd_4ccc_wrapper
   wire [0:0]probe10;
   wire [0:0]probe11;
   wire [12:0]probe12;
+  wire [0:0]probe13;
   wire [63:0]probe2;
   wire [0:0]probe3;
   wire [0:0]probe4;
@@ -393,6 +396,7 @@ module bd_4ccc_wrapper
         .probe10(probe10),
         .probe11(probe11),
         .probe12(probe12),
+        .probe13(probe13),
         .probe2(probe2),
         .probe3(probe3),
         .probe4(probe4),

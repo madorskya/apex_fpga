@@ -432,6 +432,7 @@ localparam dly = 1;
 localparam extra_addr_bits         = clogb2(DRP_COUNT);
 localparam dpr_select_width        = (extra_addr_bits == 0 ) ? 1 : extra_addr_bits;
 localparam extra_addr_bits_plusone = clogb2(DRP_COUNT+1);
+localparam LAB = (clogb2(S_AXI_DATA_WIDTH)-3); // low address bits to ignore
 reg read_pending;
 
 reg [dpr_select_width-1:0] drp_select;
@@ -655,11 +656,11 @@ end
 always @ (posedge AXI_aclk )
 begin
   if (S_AXI_awready && S_AXI_awvalid) begin  
-    drp_addr                  <= #(dly) S_AXI_awaddr[DRP_ADDR_WIDTH+1:2];
-    drp_select                <= #(dly) S_AXI_awaddr[DRP_ADDR_WIDTH+2+extra_addr_bits:DRP_ADDR_WIDTH+2];
+    drp_addr                  <= #(dly) S_AXI_awaddr[DRP_ADDR_WIDTH+LAB-1 : LAB];
+    drp_select                <= #(dly) S_AXI_awaddr[DRP_ADDR_WIDTH+LAB+extra_addr_bits:DRP_ADDR_WIDTH+LAB];
   end else if ( S_AXI_arvalid) begin 
-    drp_addr                  <= #(dly) S_AXI_araddr[DRP_ADDR_WIDTH+1:2]; 
-    drp_select                <= #(dly) S_AXI_araddr[DRP_ADDR_WIDTH+2+extra_addr_bits:DRP_ADDR_WIDTH+2];
+    drp_addr                  <= #(dly) S_AXI_araddr[DRP_ADDR_WIDTH+LAB-1 : LAB]; 
+    drp_select                <= #(dly) S_AXI_araddr[DRP_ADDR_WIDTH+LAB+extra_addr_bits:DRP_ADDR_WIDTH+LAB];
   end 
 end
 
@@ -673,8 +674,8 @@ assign drp_read_done  = S_AXI_rready && S_AXI_rvalid && (state_wr == drp_read_wa
 
 
 if (DRP_COUNT > 1 && (extra_addr_bits_plusone == extra_addr_bits)) begin: find_bad_addr
-   assign bad_wr_addr = (S_AXI_awvalid & (S_AXI_awaddr[DRP_ADDR_WIDTH+2+extra_addr_bits-1:DRP_ADDR_WIDTH+2] >= DRP_COUNT));
-   assign bad_rd_addr = (S_AXI_arvalid & (S_AXI_araddr[DRP_ADDR_WIDTH+2+extra_addr_bits-1:DRP_ADDR_WIDTH+2] >= DRP_COUNT));
+   assign bad_wr_addr = (S_AXI_awvalid & (S_AXI_awaddr[DRP_ADDR_WIDTH+LAB+extra_addr_bits-1:DRP_ADDR_WIDTH+LAB] >= DRP_COUNT));
+   assign bad_rd_addr = (S_AXI_arvalid & (S_AXI_araddr[DRP_ADDR_WIDTH+LAB+extra_addr_bits-1:DRP_ADDR_WIDTH+LAB] >= DRP_COUNT));
 end else begin: dont_find_bad_addr
    assign bad_wr_addr = 0;
    assign bad_rd_addr = 0;

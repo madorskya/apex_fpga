@@ -54,6 +54,7 @@
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module apex_blk_axi_chip2chip_0_0 (
+  axi_c2c_lnk_hndlr_in_progress,
   m_aclk,
   m_aresetn,
   m_axi_awid,
@@ -105,6 +106,7 @@ module apex_blk_axi_chip2chip_0_0 (
   axi_c2c_multi_bit_error_out
 );
 
+output wire axi_c2c_lnk_hndlr_in_progress;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_aclk, ASSOCIATED_BUSIF m_axi, ASSOCIATED_RESET m_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 m_aclk CLK" *)
 input wire m_aclk;
@@ -215,7 +217,7 @@ output wire axi_c2c_multi_bit_error_out;
     .C_SIMULATION(0),
     .C_MASTER_FPGA(0),
     .C_AXI_BUS_TYPE(0),
-    .C_EN_AXI_LINK_HNDLR(0),
+    .C_EN_AXI_LINK_HNDLR(1),
     .C_COMMON_CLK(0),
     .C_INTERFACE_TYPE(3),
     .C_INTERFACE_MODE(1),
@@ -277,7 +279,7 @@ output wire axi_c2c_multi_bit_error_out;
     .s_axi_rlast(),
     .s_axi_rvalid(),
     .s_axi_rready(1'B0),
-    .axi_c2c_lnk_hndlr_in_progress(),
+    .axi_c2c_lnk_hndlr_in_progress(axi_c2c_lnk_hndlr_in_progress),
     .axi_c2c_m2s_intr_in(4'B0),
     .axi_c2c_s2m_intr_out(),
     .m_aclk(m_aclk),

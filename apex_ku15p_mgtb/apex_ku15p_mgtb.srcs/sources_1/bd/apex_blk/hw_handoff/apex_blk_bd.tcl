@@ -209,6 +209,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.C_AURORA_WIDTH {1} \
    CONFIG.C_ECC_ENABLE {false} \
+   CONFIG.C_EN_AXI_LINK_HNDLR {true} \
    CONFIG.C_INTERFACE_MODE {1} \
    CONFIG.C_INTERFACE_TYPE {3} \
    CONFIG.C_MASTER_FPGA {0} \
@@ -276,10 +277,10 @@ proc create_root_design { parentCell } {
   # Create instance: system_ila_0, and set properties
   set system_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0 ]
   set_property -dict [ list \
-   CONFIG.C_BRAM_CNT {21} \
+   CONFIG.C_BRAM_CNT {14.5} \
    CONFIG.C_MON_TYPE {MIX} \
    CONFIG.C_NUM_MONITOR_SLOTS {3} \
-   CONFIG.C_NUM_OF_PROBES {13} \
+   CONFIG.C_NUM_OF_PROBES {14} \
  ] $system_ila_0
 
   # Create instance: util_ds_buf_1, and set properties
@@ -361,6 +362,7 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_chip2chip_0_aurora_pma_init_out]
   connect_bd_net -net axi_chip2chip_0_aurora_reset_pb [get_bd_pins axi_chip2chip_0/aurora_reset_pb] [get_bd_pins axi_chip2chip_0_aurora8/reset]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_chip2chip_0_aurora_reset_pb]
+  connect_bd_net -net axi_chip2chip_0_axi_c2c_lnk_hndlr_in_progress [get_bd_pins axi_chip2chip_0/axi_c2c_lnk_hndlr_in_progress] [get_bd_pins system_ila_0/probe13]
   connect_bd_net -net c2c_dout [get_bd_pins axi_chip2chip_0_aurora8/gt_txpolarity] [get_bd_pins xlconstant_2/dout]
   connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_bram_ctrl_1/s_axi_aclk] [get_bd_pins axi_chip2chip_0/m_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins system_ila_0/clk] [get_bd_pins vio_0/clk]
   connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz/locked] [get_bd_pins rst_clk_wiz_100M/dcm_locked]
@@ -400,9 +402,9 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   connect_bd_net -net xlconstant_4_dout [get_bd_pins util_ds_buf_1/BUFG_GT_DIV] [get_bd_pins xlconstant_4/dout]
 
   # Create address segments
-  assign_bd_address -offset 0x00000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_chip2chip_0/MAXI] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
-  assign_bd_address -offset 0x02000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_chip2chip_0/MAXI] [get_bd_addr_segs axi_bram_ctrl_1/S_AXI/Mem0] -force
-  assign_bd_address -offset 0x04000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_chip2chip_0/MAXI] [get_bd_addr_segs drp_bridge_tux_0/S_AXI/reg0] -force
+  assign_bd_address -offset 0x50000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_chip2chip_0/MAXI] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
+  assign_bd_address -offset 0x52000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_chip2chip_0/MAXI] [get_bd_addr_segs axi_bram_ctrl_1/S_AXI/Mem0] -force
+  assign_bd_address -offset 0x54000000 -range 0x00020000 -target_address_space [get_bd_addr_spaces axi_chip2chip_0/MAXI] [get_bd_addr_segs drp_bridge_tux_0/S_AXI/reg0] -force
 
 
   # Restore current instance

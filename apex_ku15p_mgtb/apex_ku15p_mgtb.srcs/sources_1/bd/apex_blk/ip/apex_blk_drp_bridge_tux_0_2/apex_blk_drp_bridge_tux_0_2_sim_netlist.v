@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Thu Dec  3 22:17:33 2020
+// Date        : Fri Dec  4 14:22:02 2020
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 // Command     : write_verilog -force -mode funcsim
 //               /home/madorsky/github/apex_ku15p/apex_ku15p_mgtb/apex_ku15p_mgtb.srcs/sources_1/bd/apex_blk/ip/apex_blk_drp_bridge_tux_0_2/apex_blk_drp_bridge_tux_0_2_sim_netlist.v
@@ -123,10 +123,10 @@ module apex_blk_drp_bridge_tux_0_2
        (.AXI_aclk(AXI_aclk),
         .AXI_aresetn(AXI_aresetn),
         .Q({drp1_en,drp0_en}),
-        .S_AXI_araddr(S_AXI_araddr[15:2]),
+        .S_AXI_araddr(S_AXI_araddr[16:3]),
         .S_AXI_arready(S_AXI_arready),
         .S_AXI_arvalid(S_AXI_arvalid),
-        .S_AXI_awaddr(S_AXI_awaddr[15:2]),
+        .S_AXI_awaddr(S_AXI_awaddr[16:3]),
         .S_AXI_awready(S_AXI_awready),
         .S_AXI_awvalid(S_AXI_awvalid),
         .S_AXI_bready(S_AXI_bready),
