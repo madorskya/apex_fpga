@@ -94,18 +94,12 @@ module bd_4ccc
     clk,
     probe0,
     probe1,
-    probe10,
-    probe11,
-    probe12,
-    probe13,
     probe2,
     probe3,
     probe4,
     probe5,
     probe6,
     probe7,
-    probe8,
-    probe9,
     resetn);
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SLOT_0_AXI, ADDR_WIDTH 32, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, DATA_WIDTH 32, FREQ_HZ 100000000, HAS_BRESP 1, HAS_BURST 1, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 0, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 6, INSERT_VIP 0, MAX_BURST_LENGTH 256, NUM_READ_OUTSTANDING 16, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 16, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) input [31:0]SLOT_0_AXI_araddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARBURST" *) input [1:0]SLOT_0_AXI_arburst;
@@ -192,19 +186,13 @@ module bd_4ccc
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_2_AXI WVALID" *) input SLOT_2_AXI_wvalid;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF SLOT_0_AXI:SLOT_1_AXI:SLOT_2_AXI, ASSOCIATED_RESET resetn, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk;
   input [0:0]probe0;
-  input [15:0]probe1;
-  input [0:0]probe10;
-  input [0:0]probe11;
-  input [12:0]probe12;
-  input [0:0]probe13;
+  input [63:0]probe1;
   input [63:0]probe2;
   input [0:0]probe3;
   input [0:0]probe4;
   input [0:0]probe5;
   input [12:0]probe6;
-  input [63:0]probe7;
-  input [63:0]probe8;
-  input [0:0]probe9;
+  input [0:0]probe7;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input resetn;
 
   wire [15:0]Conn1_ARADDR;
@@ -402,19 +390,13 @@ module bd_4ccc
   wire [3:0]net_slot_2_axi_wstrb;
   wire net_slot_2_axi_wvalid;
   wire [0:0]probe0_1;
-  wire [0:0]probe10_1;
-  wire [0:0]probe11_1;
-  wire [12:0]probe12_1;
-  wire [0:0]probe13_1;
-  wire [15:0]probe1_1;
+  wire [63:0]probe1_1;
   wire [63:0]probe2_1;
   wire [0:0]probe3_1;
   wire [0:0]probe4_1;
   wire [0:0]probe5_1;
   wire [12:0]probe6_1;
-  wire [63:0]probe7_1;
-  wire [63:0]probe8_1;
-  wire [0:0]probe9_1;
+  wire [0:0]probe7_1;
   wire resetn_1;
 
   assign Conn1_ARADDR = SLOT_1_AXI_araddr[15:0];
@@ -502,19 +484,13 @@ module bd_4ccc
   assign Conn_WVALID = SLOT_0_AXI_wvalid;
   assign clk_1 = clk;
   assign probe0_1 = probe0[0];
-  assign probe10_1 = probe10[0];
-  assign probe11_1 = probe11[0];
-  assign probe12_1 = probe12[12:0];
-  assign probe13_1 = probe13[0];
-  assign probe1_1 = probe1[15:0];
+  assign probe1_1 = probe1[63:0];
   assign probe2_1 = probe2[63:0];
   assign probe3_1 = probe3[0];
   assign probe4_1 = probe4[0];
   assign probe5_1 = probe5[0];
   assign probe6_1 = probe6[12:0];
-  assign probe7_1 = probe7[63:0];
-  assign probe8_1 = probe8[63:0];
-  assign probe9_1 = probe9[0];
+  assign probe7_1 = probe7[0];
   assign resetn_1 = resetn;
   bd_4ccc_g_inst_0 g_inst
        (.aclk(clk_1),
@@ -701,92 +677,86 @@ module bd_4ccc
        (.clk(clk_1),
         .probe0(probe0_1),
         .probe1(probe1_1),
-        .probe10(probe10_1),
-        .probe11(probe11_1),
-        .probe12(probe12_1),
-        .probe13(probe13_1),
-        .probe14(net_slot_0_axi_ar_cnt),
-        .probe15(net_slot_0_axi_araddr),
-        .probe16(net_slot_0_axi_arburst),
-        .probe17(net_slot_0_axi_arid),
-        .probe18(net_slot_0_axi_arlen),
-        .probe19(net_slot_0_axi_arsize),
+        .probe10(net_slot_0_axi_arburst),
+        .probe11(net_slot_0_axi_arid),
+        .probe12(net_slot_0_axi_arlen),
+        .probe13(net_slot_0_axi_arsize),
+        .probe14(net_slot_0_axi_aw_cnt),
+        .probe15(net_slot_0_axi_awaddr),
+        .probe16(net_slot_0_axi_awburst),
+        .probe17(net_slot_0_axi_awid),
+        .probe18(net_slot_0_axi_awlen),
+        .probe19(net_slot_0_axi_awsize),
         .probe2(probe2_1),
-        .probe20(net_slot_0_axi_aw_cnt),
-        .probe21(net_slot_0_axi_awaddr),
-        .probe22(net_slot_0_axi_awburst),
-        .probe23(net_slot_0_axi_awid),
-        .probe24(net_slot_0_axi_awlen),
-        .probe25(net_slot_0_axi_awsize),
-        .probe26(net_slot_0_axi_b_cnt),
-        .probe27(net_slot_0_axi_bid),
-        .probe28(net_slot_0_axi_bresp),
-        .probe29(net_slot_0_axi_r_cnt),
+        .probe20(net_slot_0_axi_b_cnt),
+        .probe21(net_slot_0_axi_bid),
+        .probe22(net_slot_0_axi_bresp),
+        .probe23(net_slot_0_axi_r_cnt),
+        .probe24(net_slot_0_axi_rdata),
+        .probe25(net_slot_0_axi_rid),
+        .probe26(net_slot_0_axi_rresp),
+        .probe27(net_slot_0_axi_wdata),
+        .probe28(net_slot_0_axi_wstrb),
+        .probe29(net_slot_0_axi_aw_ctrl),
         .probe3(probe3_1),
-        .probe30(net_slot_0_axi_rdata),
-        .probe31(net_slot_0_axi_rid),
-        .probe32(net_slot_0_axi_rresp),
-        .probe33(net_slot_0_axi_wdata),
-        .probe34(net_slot_0_axi_wstrb),
-        .probe35(net_slot_0_axi_aw_ctrl),
-        .probe36(net_slot_0_axi_w_ctrl),
-        .probe37(net_slot_0_axi_b_ctrl),
-        .probe38(net_slot_0_axi_ar_ctrl),
-        .probe39(net_slot_0_axi_r_ctrl),
+        .probe30(net_slot_0_axi_w_ctrl),
+        .probe31(net_slot_0_axi_b_ctrl),
+        .probe32(net_slot_0_axi_ar_ctrl),
+        .probe33(net_slot_0_axi_r_ctrl),
+        .probe34(net_slot_1_axi_ar_cnt),
+        .probe35(net_slot_1_axi_araddr),
+        .probe36(net_slot_1_axi_arburst),
+        .probe37(net_slot_1_axi_arlen),
+        .probe38(net_slot_1_axi_arprot),
+        .probe39(net_slot_1_axi_arsize),
         .probe4(probe4_1),
-        .probe40(net_slot_1_axi_ar_cnt),
-        .probe41(net_slot_1_axi_araddr),
-        .probe42(net_slot_1_axi_arburst),
-        .probe43(net_slot_1_axi_arlen),
-        .probe44(net_slot_1_axi_arprot),
-        .probe45(net_slot_1_axi_arsize),
-        .probe46(net_slot_1_axi_aw_cnt),
-        .probe47(net_slot_1_axi_awaddr),
-        .probe48(net_slot_1_axi_awburst),
-        .probe49(net_slot_1_axi_awlen),
+        .probe40(net_slot_1_axi_aw_cnt),
+        .probe41(net_slot_1_axi_awaddr),
+        .probe42(net_slot_1_axi_awburst),
+        .probe43(net_slot_1_axi_awlen),
+        .probe44(net_slot_1_axi_awprot),
+        .probe45(net_slot_1_axi_awsize),
+        .probe46(net_slot_1_axi_b_cnt),
+        .probe47(net_slot_1_axi_bresp),
+        .probe48(net_slot_1_axi_r_cnt),
+        .probe49(net_slot_1_axi_rdata),
         .probe5(probe5_1),
-        .probe50(net_slot_1_axi_awprot),
-        .probe51(net_slot_1_axi_awsize),
-        .probe52(net_slot_1_axi_b_cnt),
-        .probe53(net_slot_1_axi_bresp),
-        .probe54(net_slot_1_axi_r_cnt),
-        .probe55(net_slot_1_axi_rdata),
-        .probe56(net_slot_1_axi_rresp),
-        .probe57(net_slot_1_axi_wdata),
-        .probe58(net_slot_1_axi_wstrb),
-        .probe59(net_slot_1_axi_aw_ctrl),
+        .probe50(net_slot_1_axi_rresp),
+        .probe51(net_slot_1_axi_wdata),
+        .probe52(net_slot_1_axi_wstrb),
+        .probe53(net_slot_1_axi_aw_ctrl),
+        .probe54(net_slot_1_axi_w_ctrl),
+        .probe55(net_slot_1_axi_b_ctrl),
+        .probe56(net_slot_1_axi_ar_ctrl),
+        .probe57(net_slot_1_axi_r_ctrl),
+        .probe58(net_slot_2_axi_ar_cnt),
+        .probe59(net_slot_2_axi_araddr),
         .probe6(probe6_1),
-        .probe60(net_slot_1_axi_w_ctrl),
-        .probe61(net_slot_1_axi_b_ctrl),
-        .probe62(net_slot_1_axi_ar_ctrl),
-        .probe63(net_slot_1_axi_r_ctrl),
-        .probe64(net_slot_2_axi_ar_cnt),
-        .probe65(net_slot_2_axi_araddr),
-        .probe66(net_slot_2_axi_arburst),
-        .probe67(net_slot_2_axi_arlen),
-        .probe68(net_slot_2_axi_arprot),
-        .probe69(net_slot_2_axi_arsize),
+        .probe60(net_slot_2_axi_arburst),
+        .probe61(net_slot_2_axi_arlen),
+        .probe62(net_slot_2_axi_arprot),
+        .probe63(net_slot_2_axi_arsize),
+        .probe64(net_slot_2_axi_aw_cnt),
+        .probe65(net_slot_2_axi_awaddr),
+        .probe66(net_slot_2_axi_awburst),
+        .probe67(net_slot_2_axi_awlen),
+        .probe68(net_slot_2_axi_awprot),
+        .probe69(net_slot_2_axi_awsize),
         .probe7(probe7_1),
-        .probe70(net_slot_2_axi_aw_cnt),
-        .probe71(net_slot_2_axi_awaddr),
-        .probe72(net_slot_2_axi_awburst),
-        .probe73(net_slot_2_axi_awlen),
-        .probe74(net_slot_2_axi_awprot),
-        .probe75(net_slot_2_axi_awsize),
-        .probe76(net_slot_2_axi_b_cnt),
-        .probe77(net_slot_2_axi_bresp),
-        .probe78(net_slot_2_axi_r_cnt),
-        .probe79(net_slot_2_axi_rdata),
-        .probe8(probe8_1),
-        .probe80(net_slot_2_axi_rresp),
-        .probe81(net_slot_2_axi_wdata),
-        .probe82(net_slot_2_axi_wstrb),
-        .probe83(net_slot_2_axi_aw_ctrl),
-        .probe84(net_slot_2_axi_w_ctrl),
-        .probe85(net_slot_2_axi_b_ctrl),
-        .probe86(net_slot_2_axi_ar_ctrl),
-        .probe87(net_slot_2_axi_r_ctrl),
-        .probe9(probe9_1));
+        .probe70(net_slot_2_axi_b_cnt),
+        .probe71(net_slot_2_axi_bresp),
+        .probe72(net_slot_2_axi_r_cnt),
+        .probe73(net_slot_2_axi_rdata),
+        .probe74(net_slot_2_axi_rresp),
+        .probe75(net_slot_2_axi_wdata),
+        .probe76(net_slot_2_axi_wstrb),
+        .probe77(net_slot_2_axi_aw_ctrl),
+        .probe78(net_slot_2_axi_w_ctrl),
+        .probe79(net_slot_2_axi_b_ctrl),
+        .probe8(net_slot_0_axi_ar_cnt),
+        .probe80(net_slot_2_axi_ar_ctrl),
+        .probe81(net_slot_2_axi_r_ctrl),
+        .probe9(net_slot_0_axi_araddr));
   bd_4ccc_slot_0_ar_0 slot_0_ar
        (.In0(net_slot_0_axi_arvalid),
         .In1(net_slot_0_axi_arready),

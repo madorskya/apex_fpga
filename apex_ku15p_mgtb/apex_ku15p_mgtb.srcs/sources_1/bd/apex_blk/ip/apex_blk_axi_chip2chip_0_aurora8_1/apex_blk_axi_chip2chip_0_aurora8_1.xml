@@ -2622,7 +2622,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.GT0_DRP" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;virtexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;zynquplus&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexuplus&quot;))  and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DRP_IF&apos;))=true) and (spirit:decode(id(&apos;MODELPARAM_VALUE.c_gtwiz_out&apos;))=false)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.GT0_DRP" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;virtexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;zynquplus&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexuplus&quot;))  and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DRP_IF&apos;))=true) and (spirit:decode(id(&apos;MODELPARAM_VALUE.c_gtwiz_out&apos;))=false)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -11747,11 +11747,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Nov 08 21:34:13 UTC 2020</spirit:value>
+            <spirit:value>Tue Nov 24 17:47:10 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:06c51708</spirit:value>
+            <spirit:value>9:ea3630e7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -11766,11 +11766,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Nov 24 03:15:33 UTC 2020</spirit:value>
+            <spirit:value>Sat Dec 12 15:03:12 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:16cdb52a</spirit:value>
+            <spirit:value>9:0caa0347</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -11781,7 +11781,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:16cdb52a</spirit:value>
+            <spirit:value>9:0caa0347</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -11797,11 +11797,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Nov 24 03:15:34 UTC 2020</spirit:value>
+            <spirit:value>Sat Dec 12 15:03:13 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:16cdb52a</spirit:value>
+            <spirit:value>9:0caa0347</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -11816,11 +11816,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Nov 24 03:15:33 UTC 2020</spirit:value>
+            <spirit:value>Sat Dec 12 15:03:12 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:432ac26b</spirit:value>
+            <spirit:value>9:1c3ace88</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -11836,11 +11836,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Nov 24 03:15:34 UTC 2020</spirit:value>
+            <spirit:value>Sat Dec 12 15:03:13 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:432ac26b</spirit:value>
+            <spirit:value>9:1c3ace88</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -11854,11 +11854,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Nov 24 03:20:33 UTC 2020</spirit:value>
+            <spirit:value>Sat Dec 12 15:08:50 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:16cdb52a</spirit:value>
+            <spirit:value>9:0caa0347</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -13003,7 +13003,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gt0_drpaddr" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;virtexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;zynquplus&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexuplus&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DRP_IF&apos;))=true) and (spirit:decode(id(&apos;MODELPARAM_VALUE.c_gtwiz_out&apos;))=false)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gt0_drpaddr" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;virtexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;zynquplus&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexuplus&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DRP_IF&apos;))=true) and (spirit:decode(id(&apos;MODELPARAM_VALUE.c_gtwiz_out&apos;))=false)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -13026,7 +13026,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gt0_drpen" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;virtexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;zynquplus&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexuplus&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DRP_IF&apos;))=true) and (spirit:decode(id(&apos;MODELPARAM_VALUE.c_gtwiz_out&apos;))=false)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gt0_drpen" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;virtexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;zynquplus&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexuplus&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DRP_IF&apos;))=true) and (spirit:decode(id(&apos;MODELPARAM_VALUE.c_gtwiz_out&apos;))=false)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -13053,7 +13053,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gt0_drpdi" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;virtexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;zynquplus&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexuplus&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DRP_IF&apos;))=true) and (spirit:decode(id(&apos;MODELPARAM_VALUE.c_gtwiz_out&apos;))=false)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gt0_drpdi" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;virtexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;zynquplus&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexuplus&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DRP_IF&apos;))=true) and (spirit:decode(id(&apos;MODELPARAM_VALUE.c_gtwiz_out&apos;))=false)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -13073,7 +13073,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gt0_drprdy" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;virtexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;zynquplus&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexuplus&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DRP_IF&apos;))=true) and (spirit:decode(id(&apos;MODELPARAM_VALUE.c_gtwiz_out&apos;))=false)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gt0_drprdy" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;virtexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;zynquplus&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexuplus&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DRP_IF&apos;))=true) and (spirit:decode(id(&apos;MODELPARAM_VALUE.c_gtwiz_out&apos;))=false)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -13097,7 +13097,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gt0_drpdo" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;virtexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;zynquplus&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexuplus&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DRP_IF&apos;))=true) and (spirit:decode(id(&apos;MODELPARAM_VALUE.c_gtwiz_out&apos;))=false)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gt0_drpdo" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;virtexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;zynquplus&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexuplus&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DRP_IF&apos;))=true) and (spirit:decode(id(&apos;MODELPARAM_VALUE.c_gtwiz_out&apos;))=false)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -13120,7 +13120,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gt0_drpwe" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;virtexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;zynquplus&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexuplus&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DRP_IF&apos;))=true) and (spirit:decode(id(&apos;MODELPARAM_VALUE.c_gtwiz_out&apos;))=false)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gt0_drpwe" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;virtexu&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;zynquplus&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FAMILY&apos;))=&quot;kintexuplus&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DRP_IF&apos;))=true) and (spirit:decode(id(&apos;MODELPARAM_VALUE.c_gtwiz_out&apos;))=false)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -39620,7 +39620,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="boolean">
         <spirit:name>c_drp_if</spirit:name>
-        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_drp_if">true</spirit:value>
+        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_drp_if">false</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="boolean">
         <spirit:name>transceivercontrol</spirit:name>
@@ -41290,7 +41290,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_DRP_IF</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C_DRP_IF" spirit:order="68">true</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C_DRP_IF" spirit:order="68">false</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -41360,7 +41360,7 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.DRPCLK.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REFCLK1.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REFCLK1.ASSOCIATED_RESET" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REFCLK1.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REFCLK1.CLK_DOMAIN" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REFCLK1.FREQ_HZ" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REFCLK1.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REFCLK1.PHASE" xilinx:valuePermission="bd"/>

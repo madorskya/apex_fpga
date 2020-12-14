@@ -93,18 +93,12 @@ module bd_4ccc_wrapper
     clk,
     probe0,
     probe1,
-    probe10,
-    probe11,
-    probe12,
-    probe13,
     probe2,
     probe3,
     probe4,
     probe5,
     probe6,
     probe7,
-    probe8,
-    probe9,
     resetn);
   input [31:0]SLOT_0_AXI_araddr;
   input [1:0]SLOT_0_AXI_arburst;
@@ -191,19 +185,13 @@ module bd_4ccc_wrapper
   input SLOT_2_AXI_wvalid;
   input clk;
   input [0:0]probe0;
-  input [15:0]probe1;
-  input [0:0]probe10;
-  input [0:0]probe11;
-  input [12:0]probe12;
-  input [0:0]probe13;
+  input [63:0]probe1;
   input [63:0]probe2;
   input [0:0]probe3;
   input [0:0]probe4;
   input [0:0]probe5;
   input [12:0]probe6;
-  input [63:0]probe7;
-  input [63:0]probe8;
-  input [0:0]probe9;
+  input [0:0]probe7;
   input resetn;
 
   wire [31:0]SLOT_0_AXI_araddr;
@@ -291,19 +279,13 @@ module bd_4ccc_wrapper
   wire SLOT_2_AXI_wvalid;
   wire clk;
   wire [0:0]probe0;
-  wire [15:0]probe1;
-  wire [0:0]probe10;
-  wire [0:0]probe11;
-  wire [12:0]probe12;
-  wire [0:0]probe13;
+  wire [63:0]probe1;
   wire [63:0]probe2;
   wire [0:0]probe3;
   wire [0:0]probe4;
   wire [0:0]probe5;
   wire [12:0]probe6;
-  wire [63:0]probe7;
-  wire [63:0]probe8;
-  wire [0:0]probe9;
+  wire [0:0]probe7;
   wire resetn;
 
   bd_4ccc bd_4ccc_i
@@ -393,17 +375,11 @@ module bd_4ccc_wrapper
         .clk(clk),
         .probe0(probe0),
         .probe1(probe1),
-        .probe10(probe10),
-        .probe11(probe11),
-        .probe12(probe12),
-        .probe13(probe13),
         .probe2(probe2),
         .probe3(probe3),
         .probe4(probe4),
         .probe5(probe5),
         .probe6(probe6),
         .probe7(probe7),
-        .probe8(probe8),
-        .probe9(probe9),
         .resetn(resetn));
 endmodule

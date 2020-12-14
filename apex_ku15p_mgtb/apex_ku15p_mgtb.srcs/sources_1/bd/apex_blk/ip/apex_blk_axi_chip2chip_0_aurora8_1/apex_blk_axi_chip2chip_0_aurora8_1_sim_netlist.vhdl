@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Mon Nov 23 22:20:32 2020
+-- Date        : Sat Dec 12 10:08:49 2020
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 -- Command     : write_vhdl -force -mode funcsim
---               /mnt/slc6_disk/madorsky/projects/vivado/apex/ku15p/apex_ku15p_mgtb/apex_ku15p_mgtb.srcs/sources_1/bd/apex_blk/ip/apex_blk_axi_chip2chip_0_aurora8_1/apex_blk_axi_chip2chip_0_aurora8_1_sim_netlist.vhdl
+--               /home/madorsky/github/apex_ku15p/apex_ku15p_mgtb/apex_ku15p_mgtb.srcs/sources_1/bd/apex_blk/ip/apex_blk_axi_chip2chip_0_aurora8_1/apex_blk_axi_chip2chip_0_aurora8_1_sim_netlist.vhdl
 -- Design      : apex_blk_axi_chip2chip_0_aurora8_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12481,7 +12481,7 @@ entity apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gte4_drp_ar
     \drp_state_reg[2]_0\ : out STD_LOGIC;
     \drp_state_reg[0]_0\ : out STD_LOGIC;
     \drp_state_reg[4]_0\ : out STD_LOGIC;
-    \gt0_drpaddr[6]\ : out STD_LOGIC;
+    \addr_i[1]_i_3_0\ : out STD_LOGIC;
     \DO_USR_O_reg[47]_0\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
     cal_on_tx_drdy : out STD_LOGIC;
     drprdy_out : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -13452,7 +13452,7 @@ DWE_O_reg: unisim.vcomponents.FDRE
       I3 => drpaddr_in(0),
       I4 => drpaddr_in(6),
       I5 => drpaddr_in(5),
-      O => \gt0_drpaddr[6]\
+      O => \addr_i[1]_i_3_0\
     );
 \addr_i_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -24619,19 +24619,19 @@ entity apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_
     \drp_state_reg[6]_0\ : out STD_LOGIC_VECTOR ( 4 downto 0 );
     \cpll_cal_state_reg[10]_0\ : out STD_LOGIC;
     \cpll_cal_state_reg[22]_0\ : out STD_LOGIC;
-    \gt0_drpaddr[0]\ : out STD_LOGIC;
-    \gt0_drpaddr[5]\ : out STD_LOGIC;
-    \gt0_drpaddr[5]_0\ : out STD_LOGIC;
-    \gt0_drpaddr[5]_1\ : out STD_LOGIC;
-    \gt0_drpaddr[5]_2\ : out STD_LOGIC;
-    \gt0_drpaddr[1]\ : out STD_LOGIC;
-    \gt0_drpaddr[1]_0\ : out STD_LOGIC;
+    \cpll_cal_state_reg[0]_0\ : out STD_LOGIC;
+    \cpll_cal_state_reg[0]_1\ : out STD_LOGIC;
+    \cpll_cal_state_reg[0]_2\ : out STD_LOGIC;
+    \cpll_cal_state_reg[0]_3\ : out STD_LOGIC;
+    \cpll_cal_state_reg[0]_4\ : out STD_LOGIC;
+    \cpll_cal_state_reg[0]_5\ : out STD_LOGIC;
+    \cpll_cal_state_reg[0]_6\ : out STD_LOGIC;
     rst_in0 : out STD_LOGIC;
     \repeat_ctr_reg[3]_0\ : out STD_LOGIC;
     \cpll_cal_state2_inferred__0/i__carry__0_0\ : out STD_LOGIC;
     \cpll_cal_state_reg[5]_0\ : out STD_LOGIC;
     \cpll_cal_state_reg[14]_0\ : out STD_LOGIC;
-    \gt0_drpaddr[2]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    i_in_out_reg_1 : out STD_LOGIC_VECTOR ( 0 to 0 );
     \non_pcie_txoutclksel.GTHE4_TXOUTCLKSEL_OUT_reg[2]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
     \daddr_reg[7]_0\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
     \di_reg[15]_0\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -24732,6 +24732,7 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale
   signal \cpll_cal_state2_inferred__0/i__carry_n_6\ : STD_LOGIC;
   signal \cpll_cal_state2_inferred__0/i__carry_n_7\ : STD_LOGIC;
   signal cpll_cal_state7_out : STD_LOGIC_VECTOR ( 31 downto 1 );
+  signal \^cpll_cal_state_reg[0]_0\ : STD_LOGIC;
   signal \^cpll_cal_state_reg[10]_0\ : STD_LOGIC;
   signal \^cpll_cal_state_reg[22]_0\ : STD_LOGIC;
   signal \cpll_cal_state_reg_n_0_[12]\ : STD_LOGIC;
@@ -24799,7 +24800,6 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale
   signal \^drp_state_reg[6]_0\ : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal \drp_state_reg_n_0_[0]\ : STD_LOGIC;
   signal \drp_state_reg_n_0_[3]\ : STD_LOGIC;
-  signal \^gt0_drpaddr[0]\ : STD_LOGIC;
   signal \^mask_user_in_reg_0\ : STD_LOGIC;
   signal p_0_in0_in : STD_LOGIC;
   signal p_0_in3_in : STD_LOGIC;
@@ -25066,12 +25066,12 @@ begin
   Q(11 downto 0) <= \^q\(11 downto 0);
   USER_CPLLLOCK_OUT_reg_0 <= \^user_cplllock_out_reg_0\;
   \cal_fail_store__0\ <= \^cal_fail_store__0\;
+  \cpll_cal_state_reg[0]_0\ <= \^cpll_cal_state_reg[0]_0\;
   \cpll_cal_state_reg[10]_0\ <= \^cpll_cal_state_reg[10]_0\;
   \cpll_cal_state_reg[22]_0\ <= \^cpll_cal_state_reg[22]_0\;
   cpllpd_int_reg_0 <= \^cpllpd_int_reg_0\;
   cpllreset_int_reg_0 <= \^cpllreset_int_reg_0\;
   \drp_state_reg[6]_0\(4 downto 0) <= \^drp_state_reg[6]_0\(4 downto 0);
-  \gt0_drpaddr[0]\ <= \^gt0_drpaddr[0]\;
   mask_user_in_reg_0 <= \^mask_user_in_reg_0\;
   rd_reg_0 <= \^rd_reg_0\;
   status_store_reg_0 <= \^status_store_reg_0\;
@@ -25160,13 +25160,13 @@ U_TXOUTCLK_FREQ_COUNTER: entity work.apex_blk_axi_chip2chip_0_aurora8_1_gtwizard
       INIT => X"FFFFFFFF40010000"
     )
         port map (
-      I0 => \^gt0_drpaddr[0]\,
+      I0 => \^cpll_cal_state_reg[0]_0\,
       I1 => drpaddr_in(5),
       I2 => drpaddr_in(1),
       I3 => drpaddr_in(4),
       I4 => \addr_i_reg[6]\,
       I5 => drpaddr_in(0),
-      O => \gt0_drpaddr[5]_1\
+      O => \cpll_cal_state_reg[0]_3\
     );
 \addr_i[1]_i_2\: unisim.vcomponents.LUT4
     generic map(
@@ -25177,7 +25177,7 @@ U_TXOUTCLK_FREQ_COUNTER: entity work.apex_blk_axi_chip2chip_0_aurora8_1_gtwizard
       I1 => \^q\(0),
       I2 => \^q\(11),
       I3 => drpwe_in(0),
-      O => \^gt0_drpaddr[0]\
+      O => \^cpll_cal_state_reg[0]_0\
     );
 \addr_i[2]_i_2\: unisim.vcomponents.LUT2
     generic map(
@@ -25186,7 +25186,7 @@ U_TXOUTCLK_FREQ_COUNTER: entity work.apex_blk_axi_chip2chip_0_aurora8_1_gtwizard
         port map (
       I0 => drpaddr_in(2),
       I1 => \addr_i[2]_i_3_n_0\,
-      O => \gt0_drpaddr[2]\(0)
+      O => i_in_out_reg_1(0)
     );
 \addr_i[2]_i_3\: unisim.vcomponents.LUT6
     generic map(
@@ -25197,7 +25197,7 @@ U_TXOUTCLK_FREQ_COUNTER: entity work.apex_blk_axi_chip2chip_0_aurora8_1_gtwizard
       I1 => drpaddr_in(4),
       I2 => drpaddr_in(1),
       I3 => drpaddr_in(5),
-      I4 => \^gt0_drpaddr[0]\,
+      I4 => \^cpll_cal_state_reg[0]_0\,
       I5 => drprst_in_sync,
       O => \addr_i[2]_i_3_n_0\
     );
@@ -25210,34 +25210,34 @@ U_TXOUTCLK_FREQ_COUNTER: entity work.apex_blk_axi_chip2chip_0_aurora8_1_gtwizard
       I1 => drpaddr_in(1),
       I2 => drpaddr_in(5),
       I3 => drpaddr_in(4),
-      I4 => \^gt0_drpaddr[0]\,
+      I4 => \^cpll_cal_state_reg[0]_0\,
       I5 => drpaddr_in(3),
-      O => \gt0_drpaddr[1]_0\
+      O => \cpll_cal_state_reg[0]_6\
     );
 \addr_i[5]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"CCCDCCCC"
     )
         port map (
-      I0 => \^gt0_drpaddr[0]\,
+      I0 => \^cpll_cal_state_reg[0]_0\,
       I1 => drpaddr_in(5),
       I2 => drpaddr_in(1),
       I3 => drpaddr_in(4),
       I4 => \addr_i_reg[6]\,
-      O => \gt0_drpaddr[5]_0\
+      O => \cpll_cal_state_reg[0]_2\
     );
 \addr_i[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFF40010000"
     )
         port map (
-      I0 => \^gt0_drpaddr[0]\,
+      I0 => \^cpll_cal_state_reg[0]_0\,
       I1 => drpaddr_in(5),
       I2 => drpaddr_in(1),
       I3 => drpaddr_in(4),
       I4 => \addr_i_reg[6]\,
       I5 => drpaddr_in(6),
-      O => \gt0_drpaddr[5]\
+      O => \cpll_cal_state_reg[0]_1\
     );
 \addr_i[7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -25248,9 +25248,9 @@ U_TXOUTCLK_FREQ_COUNTER: entity work.apex_blk_axi_chip2chip_0_aurora8_1_gtwizard
       I1 => drpaddr_in(1),
       I2 => drpaddr_in(5),
       I3 => drpaddr_in(4),
-      I4 => \^gt0_drpaddr[0]\,
+      I4 => \^cpll_cal_state_reg[0]_0\,
       I5 => drpaddr_in(7),
-      O => \gt0_drpaddr[1]\
+      O => \cpll_cal_state_reg[0]_5\
     );
 bit_synchronizer_cplllock_inst: entity work.apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_bit_synchronizer_25
      port map (
@@ -26216,13 +26216,13 @@ cpllreset_int_reg: unisim.vcomponents.FDRE
       INIT => X"FFFFFFFF40010000"
     )
         port map (
-      I0 => \^gt0_drpaddr[0]\,
+      I0 => \^cpll_cal_state_reg[0]_0\,
       I1 => drpaddr_in(5),
       I2 => drpaddr_in(1),
       I3 => drpaddr_in(4),
       I4 => \addr_i_reg[6]\,
       I5 => drpdi_in(0),
-      O => \gt0_drpaddr[5]_2\
+      O => \cpll_cal_state_reg[0]_4\
     );
 den_reg: unisim.vcomponents.FDCE
     generic map(
@@ -28711,6 +28711,7 @@ gtwizard_ultrascale_v1_7_8_gte4_drp_arb_i: entity work.apex_blk_axi_chip2chip_0_
       GTHE4_CHANNEL_DRPEN_OUT => GTHE4_CHANNEL_DRPEN_OUT,
       GTHE4_CHANNEL_DRPWE_OUT => GTHE4_CHANNEL_DRPWE_OUT,
       Q(1 downto 0) => \drp_state_reg[6]_0\(1 downto 0),
+      \addr_i[1]_i_3_0\ => gtwizard_ultrascale_v1_7_8_gte4_drp_arb_i_n_9,
       \addr_i_reg[0]_0\ => gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_40,
       \addr_i_reg[27]_0\ => \^cal_on_tx_drpen_out\,
       \addr_i_reg[27]_1\(6 downto 0) => cal_on_tx_drpaddr_out(7 downto 1),
@@ -28738,8 +28739,7 @@ gtwizard_ultrascale_v1_7_8_gte4_drp_arb_i: entity work.apex_blk_axi_chip2chip_0_
       drprdy_out(0) => drprdy_out(0),
       drprst_in_sync => drprst_in_sync,
       drpwe_in(0) => drpwe_in(0),
-      \gen_gtwizard_gthe4.drprdy_int\ => \gen_gtwizard_gthe4.drprdy_int\,
-      \gt0_drpaddr[6]\ => gtwizard_ultrascale_v1_7_8_gte4_drp_arb_i_n_9
+      \gen_gtwizard_gthe4.drprdy_int\ => \gen_gtwizard_gthe4.drprdy_int\
     );
 gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i: entity work.apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx
      port map (
@@ -28758,6 +28758,13 @@ gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i: entity work.apex_blk_axi_chip2ch
       cal_on_tx_drpen_out => \^cal_on_tx_drpen_out\,
       cal_on_tx_drpwe_out => \^cal_on_tx_drpwe_out\,
       \cpll_cal_state2_inferred__0/i__carry__0_0\ => \cpll_cal_state2_inferred__0/i__carry__0\,
+      \cpll_cal_state_reg[0]_0\ => gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_37,
+      \cpll_cal_state_reg[0]_1\ => gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_38,
+      \cpll_cal_state_reg[0]_2\ => gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_39,
+      \cpll_cal_state_reg[0]_3\ => gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_40,
+      \cpll_cal_state_reg[0]_4\ => gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_41,
+      \cpll_cal_state_reg[0]_5\ => gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_42,
+      \cpll_cal_state_reg[0]_6\ => gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_43,
       \cpll_cal_state_reg[10]_0\ => \cpll_cal_state_reg[10]\,
       \cpll_cal_state_reg[14]_0\ => \cpll_cal_state_reg[14]\,
       \cpll_cal_state_reg[22]_0\ => p_2_in4_in,
@@ -28775,17 +28782,10 @@ gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i: entity work.apex_blk_axi_chip2ch
       drpwe_in(0) => drpwe_in(0),
       dwe_reg_0 => dwe_reg,
       freq_counter_rst_reg_0 => freq_counter_rst_reg_0,
-      \gt0_drpaddr[0]\ => gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_37,
-      \gt0_drpaddr[1]\ => gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_42,
-      \gt0_drpaddr[1]_0\ => gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_43,
-      \gt0_drpaddr[2]\(0) => p_1_in(2),
-      \gt0_drpaddr[5]\ => gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_38,
-      \gt0_drpaddr[5]_0\ => gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_39,
-      \gt0_drpaddr[5]_1\ => gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_40,
-      \gt0_drpaddr[5]_2\ => gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_41,
       gtwiz_userclk_tx_reset_in(0) => gtwiz_userclk_tx_reset_in(0),
       i_in_out_reg => gthe4_txprgdivresetdone_sync,
       i_in_out_reg_0 => i_in_out_reg,
+      i_in_out_reg_1(0) => p_1_in(2),
       in0 => in0,
       lopt => lopt,
       lopt_1 => lopt_1,
@@ -33406,12 +33406,6 @@ entity apex_blk_axi_chip2chip_0_aurora8_1 is
     tx_resetdone_out : out STD_LOGIC;
     rx_resetdone_out : out STD_LOGIC;
     link_reset_out : out STD_LOGIC;
-    gt0_drpaddr : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    gt0_drpdi : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    gt0_drpdo : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    gt0_drpen : in STD_LOGIC;
-    gt0_drprdy : out STD_LOGIC;
-    gt0_drpwe : in STD_LOGIC;
     gt_cplllock : out STD_LOGIC_VECTOR ( 0 to 0 );
     gt_pcsrsvdin : in STD_LOGIC_VECTOR ( 15 downto 0 );
     gt_rxdfelpmreset : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -33454,16 +33448,18 @@ entity apex_blk_axi_chip2chip_0_aurora8_1 is
 end apex_blk_axi_chip2chip_0_aurora8_1;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_aurora8_1 is
+  signal NLW_inst_gt0_drprdy_UNCONNECTED : STD_LOGIC;
+  signal NLW_inst_gt0_drpdo_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
 begin
 inst: entity work.apex_blk_axi_chip2chip_0_aurora8_1_apex_blk_axi_chip2chip_0_aurora8_1_support
      port map (
       channel_up => channel_up,
-      gt0_drpaddr(9 downto 0) => gt0_drpaddr(9 downto 0),
-      gt0_drpdi(15 downto 0) => gt0_drpdi(15 downto 0),
-      gt0_drpdo(15 downto 0) => gt0_drpdo(15 downto 0),
-      gt0_drpen => gt0_drpen,
-      gt0_drprdy => gt0_drprdy,
-      gt0_drpwe => gt0_drpwe,
+      gt0_drpaddr(9 downto 0) => B"0000000000",
+      gt0_drpdi(15 downto 0) => B"0000000000000000",
+      gt0_drpdo(15 downto 0) => NLW_inst_gt0_drpdo_UNCONNECTED(15 downto 0),
+      gt0_drpen => '0',
+      gt0_drprdy => NLW_inst_gt0_drprdy_UNCONNECTED,
+      gt0_drpwe => '0',
       gt_cplllock(0) => gt_cplllock(0),
       gt_dmonitorout(15 downto 0) => gt_dmonitorout(15 downto 0),
       gt_eyescandataerror(0) => gt_eyescandataerror(0),

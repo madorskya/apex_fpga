@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Sun Nov  8 16:39:12 2020
+// Date        : Sun Nov  8 16:39:11 2020
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
-// Command     : write_verilog -force -mode funcsim
-//               /mnt/slc6_disk/madorsky/projects/vivado/apex/ku15p/apex_ku15p_mgtb/apex_ku15p_mgtb.srcs/sources_1/bd/apex_blk/ip/apex_blk_clk_wiz_0/apex_blk_clk_wiz_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top apex_blk_clk_wiz_0 -prefix
+//               apex_blk_clk_wiz_0_ apex_blk_clk_wiz_0_sim_netlist.v
 // Design      : apex_blk_clk_wiz_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -39,7 +39,6 @@ module apex_blk_clk_wiz_0
         .reset(reset));
 endmodule
 
-(* ORIG_REF_NAME = "apex_blk_clk_wiz_0_clk_wiz" *) 
 module apex_blk_clk_wiz_0_apex_blk_clk_wiz_0_clk_wiz
    (clk_out1,
     clk_out2,

@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Mon Nov 23 22:20:32 2020
+// Date        : Sat Dec 12 10:08:49 2020
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 // Command     : write_verilog -force -mode funcsim
-//               /mnt/slc6_disk/madorsky/projects/vivado/apex/ku15p/apex_ku15p_mgtb/apex_ku15p_mgtb.srcs/sources_1/bd/apex_blk/ip/apex_blk_axi_chip2chip_0_aurora8_1/apex_blk_axi_chip2chip_0_aurora8_1_sim_netlist.v
+//               /home/madorsky/github/apex_ku15p/apex_ku15p_mgtb/apex_ku15p_mgtb.srcs/sources_1/bd/apex_blk/ip/apex_blk_axi_chip2chip_0_aurora8_1/apex_blk_axi_chip2chip_0_aurora8_1_sim_netlist.v
 // Design      : apex_blk_axi_chip2chip_0_aurora8_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -41,12 +41,6 @@ module apex_blk_axi_chip2chip_0_aurora8_1
     tx_resetdone_out,
     rx_resetdone_out,
     link_reset_out,
-    gt0_drpaddr,
-    gt0_drpdi,
-    gt0_drpdo,
-    gt0_drpen,
-    gt0_drprdy,
-    gt0_drpwe,
     gt_cplllock,
     gt_pcsrsvdin,
     gt_rxdfelpmreset,
@@ -110,12 +104,6 @@ module apex_blk_axi_chip2chip_0_aurora8_1
   output tx_resetdone_out;
   output rx_resetdone_out;
   output link_reset_out;
-  input [9:0]gt0_drpaddr;
-  input [15:0]gt0_drpdi;
-  output [15:0]gt0_drpdo;
-  input gt0_drpen;
-  output gt0_drprdy;
-  input gt0_drpwe;
   output [0:0]gt_cplllock;
   input [15:0]gt_pcsrsvdin;
   input [0:0]gt_rxdfelpmreset;
@@ -154,12 +142,6 @@ module apex_blk_axi_chip2chip_0_aurora8_1
   output pll_not_locked_out;
 
   wire channel_up;
-  wire [9:0]gt0_drpaddr;
-  wire [15:0]gt0_drpdi;
-  wire [15:0]gt0_drpdo;
-  wire gt0_drpen;
-  wire gt0_drprdy;
-  wire gt0_drpwe;
   wire [0:0]gt_cplllock;
   wire [15:0]gt_dmonitorout;
   wire [0:0]gt_eyescandataerror;
@@ -222,15 +204,17 @@ module apex_blk_axi_chip2chip_0_aurora8_1
   wire txn;
   wire txp;
   wire user_clk_out;
+  wire NLW_inst_gt0_drprdy_UNCONNECTED;
+  wire [15:0]NLW_inst_gt0_drpdo_UNCONNECTED;
 
   apex_blk_axi_chip2chip_0_aurora8_1_apex_blk_axi_chip2chip_0_aurora8_1_support inst
        (.channel_up(channel_up),
-        .gt0_drpaddr(gt0_drpaddr),
-        .gt0_drpdi(gt0_drpdi),
-        .gt0_drpdo(gt0_drpdo),
-        .gt0_drpen(gt0_drpen),
-        .gt0_drprdy(gt0_drprdy),
-        .gt0_drpwe(gt0_drpwe),
+        .gt0_drpaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .gt0_drpdi({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .gt0_drpdo(NLW_inst_gt0_drpdo_UNCONNECTED[15:0]),
+        .gt0_drpen(1'b0),
+        .gt0_drprdy(NLW_inst_gt0_drprdy_UNCONNECTED),
+        .gt0_drpwe(1'b0),
         .gt_cplllock(gt_cplllock),
         .gt_dmonitorout(gt_dmonitorout),
         .gt_eyescandataerror(gt_eyescandataerror),
@@ -18344,7 +18328,7 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gte4_drp_ar
     \drp_state_reg[2]_0 ,
     \drp_state_reg[0]_0 ,
     \drp_state_reg[4]_0 ,
-    \gt0_drpaddr[6] ,
+    \addr_i[1]_i_3_0 ,
     \DO_USR_O_reg[47]_0 ,
     cal_on_tx_drdy,
     drprdy_out,
@@ -18380,7 +18364,7 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gte4_drp_ar
   output \drp_state_reg[2]_0 ;
   output \drp_state_reg[0]_0 ;
   output \drp_state_reg[4]_0 ;
-  output \gt0_drpaddr[6] ;
+  output \addr_i[1]_i_3_0 ;
   output [31:0]\DO_USR_O_reg[47]_0 ;
   output cal_on_tx_drdy;
   output [0:0]drprdy_out;
@@ -18429,6 +18413,7 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gte4_drp_ar
   wire GTHE4_CHANNEL_DRPWE_OUT;
   wire [1:0]Q;
   wire [27:0]addr_i;
+  wire \addr_i[1]_i_3_0 ;
   wire \addr_i_reg[0]_0 ;
   wire \addr_i_reg[27]_0 ;
   wire [6:0]\addr_i_reg[27]_1 ;
@@ -18508,7 +18493,6 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gte4_drp_ar
   wire \en[0]_i_2_n_0 ;
   wire \en[2]_i_2_n_0 ;
   wire \gen_gtwizard_gthe4.drprdy_int ;
-  wire \gt0_drpaddr[6] ;
   wire \idx[0]__0_i_2_n_0 ;
   wire \idx_reg[0]__0_n_0 ;
   wire \idx_reg[1]__0_n_0 ;
@@ -19130,7 +19114,7 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gte4_drp_ar
         .I3(drpaddr_in[0]),
         .I4(drpaddr_in[6]),
         .I5(drpaddr_in[5]),
-        .O(\gt0_drpaddr[6] ));
+        .O(\addr_i[1]_i_3_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \addr_i_reg[0] 
@@ -22840,6 +22824,7 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_
         .GTHE4_CHANNEL_DRPEN_OUT(GTHE4_CHANNEL_DRPEN_OUT),
         .GTHE4_CHANNEL_DRPWE_OUT(GTHE4_CHANNEL_DRPWE_OUT),
         .Q(\drp_state_reg[6]_0 ),
+        .\addr_i[1]_i_3_0 (gtwizard_ultrascale_v1_7_8_gte4_drp_arb_i_n_9),
         .\addr_i_reg[0]_0 (gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_40),
         .\addr_i_reg[27]_0 (cal_on_tx_drpen_out),
         .\addr_i_reg[27]_1 (cal_on_tx_drpaddr_out),
@@ -22866,8 +22851,7 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_
         .drprdy_out(drprdy_out),
         .drprst_in_sync(drprst_in_sync),
         .drpwe_in(drpwe_in),
-        .\gen_gtwizard_gthe4.drprdy_int (\gen_gtwizard_gthe4.drprdy_int ),
-        .\gt0_drpaddr[6] (gtwizard_ultrascale_v1_7_8_gte4_drp_arb_i_n_9));
+        .\gen_gtwizard_gthe4.drprdy_int (\gen_gtwizard_gthe4.drprdy_int ));
   apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i
        (.AR(freq_counter_rst_reg),
         .AS(cal_on_tx_reset_in_sync),
@@ -22884,6 +22868,13 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_
         .cal_on_tx_drpen_out(cal_on_tx_drpen_out),
         .cal_on_tx_drpwe_out(cal_on_tx_drpwe_out),
         .\cpll_cal_state2_inferred__0/i__carry__0_0 (\cpll_cal_state2_inferred__0/i__carry__0 ),
+        .\cpll_cal_state_reg[0]_0 (gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_37),
+        .\cpll_cal_state_reg[0]_1 (gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_38),
+        .\cpll_cal_state_reg[0]_2 (gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_39),
+        .\cpll_cal_state_reg[0]_3 (gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_40),
+        .\cpll_cal_state_reg[0]_4 (gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_41),
+        .\cpll_cal_state_reg[0]_5 (gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_42),
+        .\cpll_cal_state_reg[0]_6 (gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_43),
         .\cpll_cal_state_reg[10]_0 (\cpll_cal_state_reg[10] ),
         .\cpll_cal_state_reg[14]_0 (\cpll_cal_state_reg[14] ),
         .\cpll_cal_state_reg[22]_0 (p_2_in4_in),
@@ -22901,17 +22892,10 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_
         .drpwe_in(drpwe_in),
         .dwe_reg_0(dwe_reg),
         .freq_counter_rst_reg_0(freq_counter_rst_reg_0),
-        .\gt0_drpaddr[0] (gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_37),
-        .\gt0_drpaddr[1] (gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_42),
-        .\gt0_drpaddr[1]_0 (gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_43),
-        .\gt0_drpaddr[2] (p_1_in[2]),
-        .\gt0_drpaddr[5] (gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_38),
-        .\gt0_drpaddr[5]_0 (gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_39),
-        .\gt0_drpaddr[5]_1 (gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_40),
-        .\gt0_drpaddr[5]_2 (gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_i_n_41),
         .gtwiz_userclk_tx_reset_in(gtwiz_userclk_tx_reset_in),
         .i_in_out_reg(gthe4_txprgdivresetdone_sync),
         .i_in_out_reg_0(i_in_out_reg),
+        .i_in_out_reg_1(p_1_in[2]),
         .in0(in0),
         .lopt(lopt),
         .lopt_1(lopt_1),
@@ -24214,19 +24198,19 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_
     \drp_state_reg[6]_0 ,
     \cpll_cal_state_reg[10]_0 ,
     \cpll_cal_state_reg[22]_0 ,
-    \gt0_drpaddr[0] ,
-    \gt0_drpaddr[5] ,
-    \gt0_drpaddr[5]_0 ,
-    \gt0_drpaddr[5]_1 ,
-    \gt0_drpaddr[5]_2 ,
-    \gt0_drpaddr[1] ,
-    \gt0_drpaddr[1]_0 ,
+    \cpll_cal_state_reg[0]_0 ,
+    \cpll_cal_state_reg[0]_1 ,
+    \cpll_cal_state_reg[0]_2 ,
+    \cpll_cal_state_reg[0]_3 ,
+    \cpll_cal_state_reg[0]_4 ,
+    \cpll_cal_state_reg[0]_5 ,
+    \cpll_cal_state_reg[0]_6 ,
     rst_in0,
     \repeat_ctr_reg[3]_0 ,
     \cpll_cal_state2_inferred__0/i__carry__0_0 ,
     \cpll_cal_state_reg[5]_0 ,
     \cpll_cal_state_reg[14]_0 ,
-    \gt0_drpaddr[2] ,
+    i_in_out_reg_1,
     \non_pcie_txoutclksel.GTHE4_TXOUTCLKSEL_OUT_reg[2]_0 ,
     \daddr_reg[7]_0 ,
     \di_reg[15]_0 ,
@@ -24279,19 +24263,19 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_
   output [4:0]\drp_state_reg[6]_0 ;
   output \cpll_cal_state_reg[10]_0 ;
   output \cpll_cal_state_reg[22]_0 ;
-  output \gt0_drpaddr[0] ;
-  output \gt0_drpaddr[5] ;
-  output \gt0_drpaddr[5]_0 ;
-  output \gt0_drpaddr[5]_1 ;
-  output \gt0_drpaddr[5]_2 ;
-  output \gt0_drpaddr[1] ;
-  output \gt0_drpaddr[1]_0 ;
+  output \cpll_cal_state_reg[0]_0 ;
+  output \cpll_cal_state_reg[0]_1 ;
+  output \cpll_cal_state_reg[0]_2 ;
+  output \cpll_cal_state_reg[0]_3 ;
+  output \cpll_cal_state_reg[0]_4 ;
+  output \cpll_cal_state_reg[0]_5 ;
+  output \cpll_cal_state_reg[0]_6 ;
   output rst_in0;
   output \repeat_ctr_reg[3]_0 ;
   output \cpll_cal_state2_inferred__0/i__carry__0_0 ;
   output \cpll_cal_state_reg[5]_0 ;
   output \cpll_cal_state_reg[14]_0 ;
-  output [0:0]\gt0_drpaddr[2] ;
+  output [0:0]i_in_out_reg_1;
   output [2:0]\non_pcie_txoutclksel.GTHE4_TXOUTCLKSEL_OUT_reg[2]_0 ;
   output [6:0]\daddr_reg[7]_0 ;
   output [15:0]\di_reg[15]_0 ;
@@ -24398,6 +24382,13 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_
   wire \cpll_cal_state2_inferred__0/i__carry_n_6 ;
   wire \cpll_cal_state2_inferred__0/i__carry_n_7 ;
   wire [31:1]cpll_cal_state7_out;
+  wire \cpll_cal_state_reg[0]_0 ;
+  wire \cpll_cal_state_reg[0]_1 ;
+  wire \cpll_cal_state_reg[0]_2 ;
+  wire \cpll_cal_state_reg[0]_3 ;
+  wire \cpll_cal_state_reg[0]_4 ;
+  wire \cpll_cal_state_reg[0]_5 ;
+  wire \cpll_cal_state_reg[0]_6 ;
   wire \cpll_cal_state_reg[10]_0 ;
   wire \cpll_cal_state_reg[14]_0 ;
   wire \cpll_cal_state_reg[22]_0 ;
@@ -24477,17 +24468,10 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_
   wire [0:0]drpwe_in;
   wire dwe_reg_0;
   wire freq_counter_rst_reg_0;
-  wire \gt0_drpaddr[0] ;
-  wire \gt0_drpaddr[1] ;
-  wire \gt0_drpaddr[1]_0 ;
-  wire [0:0]\gt0_drpaddr[2] ;
-  wire \gt0_drpaddr[5] ;
-  wire \gt0_drpaddr[5]_0 ;
-  wire \gt0_drpaddr[5]_1 ;
-  wire \gt0_drpaddr[5]_2 ;
   wire [0:0]gtwiz_userclk_tx_reset_in;
   wire i_in_out_reg;
   wire i_in_out_reg_0;
+  wire [0:0]i_in_out_reg_1;
   wire in0;
   wire lopt;
   wire lopt_1;
@@ -24752,13 +24736,13 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_
   LUT6 #(
     .INIT(64'hFFFFFFFF40010000)) 
     \addr_i[0]_i_1 
-       (.I0(\gt0_drpaddr[0] ),
+       (.I0(\cpll_cal_state_reg[0]_0 ),
         .I1(drpaddr_in[5]),
         .I2(drpaddr_in[1]),
         .I3(drpaddr_in[4]),
         .I4(\addr_i_reg[6] ),
         .I5(drpaddr_in[0]),
-        .O(\gt0_drpaddr[5]_1 ));
+        .O(\cpll_cal_state_reg[0]_3 ));
   LUT4 #(
     .INIT(16'hFEFF)) 
     \addr_i[1]_i_2 
@@ -24766,13 +24750,13 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_
         .I1(Q[0]),
         .I2(Q[11]),
         .I3(drpwe_in),
-        .O(\gt0_drpaddr[0] ));
+        .O(\cpll_cal_state_reg[0]_0 ));
   LUT2 #(
     .INIT(4'h2)) 
     \addr_i[2]_i_2 
        (.I0(drpaddr_in[2]),
         .I1(\addr_i[2]_i_3_n_0 ),
-        .O(\gt0_drpaddr[2] ));
+        .O(i_in_out_reg_1));
   LUT6 #(
     .INIT(64'hFFFFFFFF00008002)) 
     \addr_i[2]_i_3 
@@ -24780,7 +24764,7 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_
         .I1(drpaddr_in[4]),
         .I2(drpaddr_in[1]),
         .I3(drpaddr_in[5]),
-        .I4(\gt0_drpaddr[0] ),
+        .I4(\cpll_cal_state_reg[0]_0 ),
         .I5(drprst_in_sync),
         .O(\addr_i[2]_i_3_n_0 ));
   LUT6 #(
@@ -24790,28 +24774,28 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_
         .I1(drpaddr_in[1]),
         .I2(drpaddr_in[5]),
         .I3(drpaddr_in[4]),
-        .I4(\gt0_drpaddr[0] ),
+        .I4(\cpll_cal_state_reg[0]_0 ),
         .I5(drpaddr_in[3]),
-        .O(\gt0_drpaddr[1]_0 ));
+        .O(\cpll_cal_state_reg[0]_6 ));
   LUT5 #(
     .INIT(32'hCCCDCCCC)) 
     \addr_i[5]_i_1 
-       (.I0(\gt0_drpaddr[0] ),
+       (.I0(\cpll_cal_state_reg[0]_0 ),
         .I1(drpaddr_in[5]),
         .I2(drpaddr_in[1]),
         .I3(drpaddr_in[4]),
         .I4(\addr_i_reg[6] ),
-        .O(\gt0_drpaddr[5]_0 ));
+        .O(\cpll_cal_state_reg[0]_2 ));
   LUT6 #(
     .INIT(64'hFFFFFFFF40010000)) 
     \addr_i[6]_i_1 
-       (.I0(\gt0_drpaddr[0] ),
+       (.I0(\cpll_cal_state_reg[0]_0 ),
         .I1(drpaddr_in[5]),
         .I2(drpaddr_in[1]),
         .I3(drpaddr_in[4]),
         .I4(\addr_i_reg[6] ),
         .I5(drpaddr_in[6]),
-        .O(\gt0_drpaddr[5] ));
+        .O(\cpll_cal_state_reg[0]_1 ));
   LUT6 #(
     .INIT(64'hFFFFFFFF00000002)) 
     \addr_i[7]_i_1 
@@ -24819,9 +24803,9 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_
         .I1(drpaddr_in[1]),
         .I2(drpaddr_in[5]),
         .I3(drpaddr_in[4]),
-        .I4(\gt0_drpaddr[0] ),
+        .I4(\cpll_cal_state_reg[0]_0 ),
         .I5(drpaddr_in[7]),
-        .O(\gt0_drpaddr[1] ));
+        .O(\cpll_cal_state_reg[0]_5 ));
   apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_bit_synchronizer_25 bit_synchronizer_cplllock_inst
        (.AS(AS),
         .GTHE4_CPLLLOCK_IN(GTHE4_CPLLLOCK_IN),
@@ -25512,13 +25496,13 @@ module apex_blk_axi_chip2chip_0_aurora8_1_gtwizard_ultrascale_v1_7_8_gthe4_cpll_
   LUT6 #(
     .INIT(64'hFFFFFFFF40010000)) 
     \data_i[15]_i_1 
-       (.I0(\gt0_drpaddr[0] ),
+       (.I0(\cpll_cal_state_reg[0]_0 ),
         .I1(drpaddr_in[5]),
         .I2(drpaddr_in[1]),
         .I3(drpaddr_in[4]),
         .I4(\addr_i_reg[6] ),
         .I5(drpdi_in),
-        .O(\gt0_drpaddr[5]_2 ));
+        .O(\cpll_cal_state_reg[0]_4 ));
   FDCE #(
     .INIT(1'b0)) 
     den_reg

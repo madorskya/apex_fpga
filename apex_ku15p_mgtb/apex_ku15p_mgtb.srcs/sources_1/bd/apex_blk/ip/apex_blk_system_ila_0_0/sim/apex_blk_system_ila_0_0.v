@@ -63,12 +63,6 @@ module apex_blk_system_ila_0_0 (
   probe5,
   probe6,
   probe7,
-  probe8,
-  probe9,
-  probe10,
-  probe11,
-  probe12,
-  probe13,
   SLOT_0_AXI_awid,
   SLOT_0_AXI_awaddr,
   SLOT_0_AXI_awlen,
@@ -159,19 +153,13 @@ module apex_blk_system_ila_0_0 (
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.clk CLK" *)
 input wire clk;
 input wire [0 : 0] probe0;
-input wire [15 : 0] probe1;
+input wire [63 : 0] probe1;
 input wire [63 : 0] probe2;
 input wire [0 : 0] probe3;
 input wire [0 : 0] probe4;
 input wire [0 : 0] probe5;
 input wire [12 : 0] probe6;
-input wire [63 : 0] probe7;
-input wire [63 : 0] probe8;
-input wire [0 : 0] probe9;
-input wire [0 : 0] probe10;
-input wire [0 : 0] probe11;
-input wire [12 : 0] probe12;
-input wire [0 : 0] probe13;
+input wire [0 : 0] probe7;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWID" *)
 input wire [5 : 0] SLOT_0_AXI_awid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWADDR" *)
@@ -358,12 +346,6 @@ input wire resetn;
     .probe5(probe5),
     .probe6(probe6),
     .probe7(probe7),
-    .probe8(probe8),
-    .probe9(probe9),
-    .probe10(probe10),
-    .probe11(probe11),
-    .probe12(probe12),
-    .probe13(probe13),
     .SLOT_0_AXI_awid(SLOT_0_AXI_awid),
     .SLOT_0_AXI_awaddr(SLOT_0_AXI_awaddr),
     .SLOT_0_AXI_awlen(SLOT_0_AXI_awlen),

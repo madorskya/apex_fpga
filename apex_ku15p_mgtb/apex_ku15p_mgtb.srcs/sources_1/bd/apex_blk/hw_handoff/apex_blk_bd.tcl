@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# drp_bridge_tux
+# drp_bridge_tux, ff_util
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -181,6 +181,7 @@ proc create_root_design { parentCell } {
   # Create instance: axi_bram_ctrl_0, and set properties
   set axi_bram_ctrl_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0 ]
   set_property -dict [ list \
+   CONFIG.READ_LATENCY {20} \
    CONFIG.SINGLE_PORT_BRAM {1} \
  ] $axi_bram_ctrl_0
 
@@ -201,6 +202,7 @@ proc create_root_design { parentCell } {
   # Create instance: axi_bram_ctrl_1, and set properties
   set axi_bram_ctrl_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_1 ]
   set_property -dict [ list \
+   CONFIG.READ_LATENCY {100} \
    CONFIG.SINGLE_PORT_BRAM {1} \
  ] $axi_bram_ctrl_1
 
@@ -221,7 +223,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.CHANNEL_ENABLE {X0Y12} \
    CONFIG.C_AURORA_LANES {1} \
-   CONFIG.C_DRP_IF {true} \
+   CONFIG.C_DRP_IF {false} \
    CONFIG.C_LANE_WIDTH {4} \
    CONFIG.C_LINE_RATE {3.75} \
    CONFIG.C_REFCLK_FREQUENCY {250} \
@@ -271,6 +273,17 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: ff_util_0, and set properties
+  set block_name ff_util
+  set block_cell_name ff_util_0
+  if { [catch {set ff_util_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $ff_util_0 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: rst_clk_wiz_100M, and set properties
   set rst_clk_wiz_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_clk_wiz_100M ]
 
@@ -278,9 +291,10 @@ proc create_root_design { parentCell } {
   set system_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0 ]
   set_property -dict [ list \
    CONFIG.C_BRAM_CNT {14.5} \
+   CONFIG.C_INPUT_PIPE_STAGES {6} \
    CONFIG.C_MON_TYPE {MIX} \
    CONFIG.C_NUM_MONITOR_SLOTS {3} \
-   CONFIG.C_NUM_OF_PROBES {14} \
+   CONFIG.C_NUM_OF_PROBES {8} \
  ] $system_ila_0
 
   # Create instance: util_ds_buf_1, and set properties
@@ -298,6 +312,13 @@ proc create_root_design { parentCell } {
    CONFIG.C_PROBE_OUT0_WIDTH {4} \
    CONFIG.C_PROBE_OUT2_INIT_VAL {0x1} \
  ] $vio_0
+
+  # Create instance: xlconstant_0, and set properties
+  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {31} \
+   CONFIG.CONST_WIDTH {5} \
+ ] $xlconstant_0
 
   # Create instance: xlconstant_1, and set properties
   set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
@@ -351,31 +372,25 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_c2c_link_status_out]
   connect_bd_net -net axi_c2c_multi_bit_error_out [get_bd_pins axi_chip2chip_0/axi_c2c_multi_bit_error_out]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_c2c_multi_bit_error_out]
-  connect_bd_net -net axi_chip2chip_0_aurora8_channel_up [get_bd_pins axi_chip2chip_0/axi_c2c_aurora_channel_up] [get_bd_pins axi_chip2chip_0_aurora8/channel_up]
-  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_chip2chip_0_aurora8_channel_up]
-  connect_bd_net -net axi_chip2chip_0_aurora8_gt0_drpdo [get_bd_pins axi_chip2chip_0_aurora8/gt0_drpdo] [get_bd_pins drp_bridge_tux_0/drp1_do] [get_bd_pins system_ila_0/probe1]
-  connect_bd_net -net axi_chip2chip_0_aurora8_gt0_drprdy [get_bd_pins axi_chip2chip_0_aurora8/gt0_drprdy] [get_bd_pins drp_bridge_tux_0/drp1_rdy] [get_bd_pins system_ila_0/probe5]
+  connect_bd_net -net axi_chip2chip_0_aurora8_channel_up [get_bd_pins axi_chip2chip_0_aurora8/channel_up] [get_bd_pins ff_util_0/d]
   connect_bd_net -net axi_chip2chip_0_aurora8_pll_not_locked_out [get_bd_pins axi_chip2chip_0/aurora_mmcm_not_locked] [get_bd_pins axi_chip2chip_0_aurora8/pll_not_locked_out]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_chip2chip_0_aurora8_pll_not_locked_out]
-  connect_bd_net -net axi_chip2chip_0_aurora8_user_clk_out [get_bd_pins axi_chip2chip_0/axi_c2c_phy_clk] [get_bd_pins axi_chip2chip_0_aurora8/user_clk_out]
+  connect_bd_net -net axi_chip2chip_0_aurora8_user_clk_out [get_bd_pins axi_chip2chip_0/axi_c2c_phy_clk] [get_bd_pins axi_chip2chip_0_aurora8/user_clk_out] [get_bd_pins ff_util_0/c]
   connect_bd_net -net axi_chip2chip_0_aurora_pma_init_out [get_bd_pins axi_chip2chip_0/aurora_pma_init_out] [get_bd_pins axi_chip2chip_0_aurora8/gt_reset]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_chip2chip_0_aurora_pma_init_out]
   connect_bd_net -net axi_chip2chip_0_aurora_reset_pb [get_bd_pins axi_chip2chip_0/aurora_reset_pb] [get_bd_pins axi_chip2chip_0_aurora8/reset]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_chip2chip_0_aurora_reset_pb]
-  connect_bd_net -net axi_chip2chip_0_axi_c2c_lnk_hndlr_in_progress [get_bd_pins axi_chip2chip_0/axi_c2c_lnk_hndlr_in_progress] [get_bd_pins system_ila_0/probe13]
+  connect_bd_net -net axi_chip2chip_0_axi_c2c_lnk_hndlr_in_progress [get_bd_pins axi_chip2chip_0/axi_c2c_lnk_hndlr_in_progress] [get_bd_pins system_ila_0/probe7]
   connect_bd_net -net c2c_dout [get_bd_pins axi_chip2chip_0_aurora8/gt_txpolarity] [get_bd_pins xlconstant_2/dout]
   connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_bram_ctrl_1/s_axi_aclk] [get_bd_pins axi_chip2chip_0/m_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins system_ila_0/clk] [get_bd_pins vio_0/clk]
   connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz/locked] [get_bd_pins rst_clk_wiz_100M/dcm_locked]
-  connect_bd_net -net drp_bridge_0_drp0_addr [get_bd_ports drp_addr] [get_bd_pins drp_bridge_tux_0/drp0_addr] [get_bd_pins system_ila_0/probe12]
-  connect_bd_net -net drp_bridge_0_drp0_di [get_bd_ports drp_di] [get_bd_pins drp_bridge_tux_0/drp0_di] [get_bd_pins system_ila_0/probe8]
-  connect_bd_net -net drp_bridge_0_drp0_en [get_bd_ports drp_en] [get_bd_pins drp_bridge_tux_0/drp0_en] [get_bd_pins system_ila_0/probe9]
-  connect_bd_net -net drp_bridge_0_drp0_we [get_bd_ports drp_we] [get_bd_pins drp_bridge_tux_0/drp0_we] [get_bd_pins system_ila_0/probe10]
-  connect_bd_net -net drp_bridge_0_drp1_addr [get_bd_pins axi_chip2chip_0_aurora8/gt0_drpaddr] [get_bd_pins drp_bridge_tux_0/drp1_addr] [get_bd_pins system_ila_0/probe6]
-  connect_bd_net -net drp_bridge_0_drp1_di [get_bd_pins axi_chip2chip_0_aurora8/gt0_drpdi] [get_bd_pins drp_bridge_tux_0/drp1_di] [get_bd_pins system_ila_0/probe2]
-  connect_bd_net -net drp_bridge_0_drp1_en [get_bd_pins axi_chip2chip_0_aurora8/gt0_drpen] [get_bd_pins drp_bridge_tux_0/drp1_en] [get_bd_pins system_ila_0/probe3]
-  connect_bd_net -net drp_bridge_0_drp1_we [get_bd_pins axi_chip2chip_0_aurora8/gt0_drpwe] [get_bd_pins drp_bridge_tux_0/drp1_we] [get_bd_pins system_ila_0/probe4]
-  connect_bd_net -net drp_do_1 [get_bd_ports drp_do] [get_bd_pins drp_bridge_tux_0/drp0_do] [get_bd_pins system_ila_0/probe7]
-  connect_bd_net -net drp_rdy_1 [get_bd_ports drp_rdy] [get_bd_pins drp_bridge_tux_0/drp0_rdy] [get_bd_pins system_ila_0/probe11]
+  connect_bd_net -net drp_bridge_0_drp0_addr [get_bd_ports drp_addr] [get_bd_pins drp_bridge_tux_0/drp0_addr] [get_bd_pins system_ila_0/probe6]
+  connect_bd_net -net drp_bridge_0_drp0_di [get_bd_ports drp_di] [get_bd_pins drp_bridge_tux_0/drp0_di] [get_bd_pins system_ila_0/probe2]
+  connect_bd_net -net drp_bridge_0_drp0_en [get_bd_ports drp_en] [get_bd_pins drp_bridge_tux_0/drp0_en] [get_bd_pins system_ila_0/probe3]
+  connect_bd_net -net drp_bridge_0_drp0_we [get_bd_ports drp_we] [get_bd_pins drp_bridge_tux_0/drp0_we] [get_bd_pins system_ila_0/probe4]
+  connect_bd_net -net drp_do_1 [get_bd_ports drp_do] [get_bd_pins drp_bridge_tux_0/drp0_do] [get_bd_pins system_ila_0/probe1]
+  connect_bd_net -net drp_rdy_1 [get_bd_ports drp_rdy] [get_bd_pins drp_bridge_tux_0/drp0_rdy] [get_bd_pins system_ila_0/probe5]
+  connect_bd_net -net ff_util_0_q [get_bd_pins axi_chip2chip_0/axi_c2c_aurora_channel_up] [get_bd_pins ff_util_0/q]
   connect_bd_net -net gt_cplllock [get_bd_pins axi_chip2chip_0_aurora8/gt_cplllock]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets gt_cplllock]
   connect_bd_net -net gt_powergood [get_bd_pins axi_chip2chip_0_aurora8/gt_powergood]
@@ -383,10 +398,24 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   connect_bd_net -net gt_refclk1_0_1 [get_bd_ports c2c_refclk] [get_bd_pins axi_chip2chip_0_aurora8/gt_refclk1]
   connect_bd_net -net gt_reset_out [get_bd_pins axi_chip2chip_0_aurora8/gt_reset_out]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets gt_reset_out]
+  connect_bd_net -net gt_rxbufstatus [get_bd_pins axi_chip2chip_0_aurora8/gt_rxbufstatus]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets gt_rxbufstatus]
   connect_bd_net -net gt_rxcommadet [get_bd_pins axi_chip2chip_0_aurora8/gt_rxcommadet]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets gt_rxcommadet]
+  connect_bd_net -net gt_rxdisperr [get_bd_pins axi_chip2chip_0_aurora8/gt_rxdisperr]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets gt_rxdisperr]
+  connect_bd_net -net gt_rxnotintable [get_bd_pins axi_chip2chip_0_aurora8/gt_rxnotintable]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets gt_rxnotintable]
+  connect_bd_net -net gt_rxpmaresetdone [get_bd_pins axi_chip2chip_0_aurora8/gt_rxpmaresetdone]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets gt_rxpmaresetdone]
   connect_bd_net -net gt_rxprbserr [get_bd_pins axi_chip2chip_0_aurora8/gt_rxprbserr]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets gt_rxprbserr]
+  connect_bd_net -net gt_rxresetdone [get_bd_pins axi_chip2chip_0_aurora8/gt_rxresetdone]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets gt_rxresetdone]
+  connect_bd_net -net gt_txbufstatus [get_bd_pins axi_chip2chip_0_aurora8/gt_txbufstatus]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets gt_txbufstatus]
+  connect_bd_net -net gt_txresetdone [get_bd_pins axi_chip2chip_0_aurora8/gt_txresetdone]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets gt_txresetdone]
   connect_bd_net -net link_reset_out [get_bd_pins axi_chip2chip_0_aurora8/link_reset_out]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets link_reset_out]
   connect_bd_net -net rst_clk_wiz_100M_peripheral_aresetn [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axi_bram_ctrl_1/s_axi_aresetn] [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins axi_interconnect_0/M02_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins drp_bridge_tux_0/AXI_aresetn] [get_bd_pins rst_clk_wiz_100M/peripheral_aresetn] [get_bd_pins system_ila_0/probe0] [get_bd_pins system_ila_0/resetn]
@@ -396,15 +425,16 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   connect_bd_net -net vio_0_probe_out1 [get_bd_pins axi_chip2chip_0/aurora_pma_init_in] [get_bd_pins vio_0/probe_out1]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets vio_0_probe_out1]
   connect_bd_net -net vio_0_probe_out2 [get_bd_pins axi_chip2chip_0/m_aresetn] [get_bd_pins vio_0/probe_out2]
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins axi_chip2chip_0_aurora8/gt_rxlpmen] [get_bd_pins axi_chip2chip_0_aurora8/gt_txdiffctrl] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins clk_wiz/reset] [get_bd_pins rst_clk_wiz_100M/mb_debug_sys_rst] [get_bd_pins xlconstant_1/dout]
   connect_bd_net -net xlconstant_2_dout [get_bd_pins util_ds_buf_1/BUFG_GT_CE] [get_bd_pins xlconstant_5/dout]
   connect_bd_net -net xlconstant_3_dout [get_bd_pins util_ds_buf_1/BUFG_GT_CEMASK] [get_bd_pins util_ds_buf_1/BUFG_GT_CLR] [get_bd_pins util_ds_buf_1/BUFG_GT_CLRMASK] [get_bd_pins xlconstant_3/dout]
   connect_bd_net -net xlconstant_4_dout [get_bd_pins util_ds_buf_1/BUFG_GT_DIV] [get_bd_pins xlconstant_4/dout]
 
   # Create address segments
-  assign_bd_address -offset 0x50000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_chip2chip_0/MAXI] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
-  assign_bd_address -offset 0x52000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_chip2chip_0/MAXI] [get_bd_addr_segs axi_bram_ctrl_1/S_AXI/Mem0] -force
-  assign_bd_address -offset 0x54000000 -range 0x00020000 -target_address_space [get_bd_addr_spaces axi_chip2chip_0/MAXI] [get_bd_addr_segs drp_bridge_tux_0/S_AXI/reg0] -force
+  assign_bd_address -offset 0x00000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_chip2chip_0/MAXI] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] -force
+  assign_bd_address -offset 0x02000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_chip2chip_0/MAXI] [get_bd_addr_segs axi_bram_ctrl_1/S_AXI/Mem0] -force
+  assign_bd_address -offset 0x04000000 -range 0x00020000 -target_address_space [get_bd_addr_spaces axi_chip2chip_0/MAXI] [get_bd_addr_segs drp_bridge_tux_0/S_AXI/reg0] -force
 
 
   # Restore current instance

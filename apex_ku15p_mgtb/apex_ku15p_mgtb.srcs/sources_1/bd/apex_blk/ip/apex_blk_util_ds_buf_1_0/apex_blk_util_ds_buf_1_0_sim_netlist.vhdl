@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Thu Nov  5 16:39:51 2020
+-- Date        : Thu Nov  5 16:39:49 2020
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
--- Command     : write_vhdl -force -mode funcsim
---               /mnt/slc6_disk/madorsky/projects/vivado/apex/ku15p/apex_ku15p_mgtb/apex_ku15p_mgtb.srcs/sources_1/bd/apex_blk/ip/apex_blk_util_ds_buf_1_0/apex_blk_util_ds_buf_1_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top apex_blk_util_ds_buf_1_0 -prefix
+--               apex_blk_util_ds_buf_1_0_ apex_blk_util_ds_buf_1_0_sim_netlist.vhdl
 -- Design      : apex_blk_util_ds_buf_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -119,8 +119,6 @@ entity apex_blk_util_ds_buf_1_0_util_ds_buf is
   attribute C_SIM_DEVICE of apex_blk_util_ds_buf_1_0_util_ds_buf : entity is "VERSAL_AI_CORE_ES1";
   attribute C_SIZE : integer;
   attribute C_SIZE of apex_blk_util_ds_buf_1_0_util_ds_buf : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_util_ds_buf_1_0_util_ds_buf : entity is "util_ds_buf";
 end apex_blk_util_ds_buf_1_0_util_ds_buf;
 
 architecture STRUCTURE of apex_blk_util_ds_buf_1_0_util_ds_buf is

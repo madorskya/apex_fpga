@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Thu Nov  5 16:39:50 2020
+// Date        : Thu Nov  5 16:39:49 2020
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
-// Command     : write_verilog -force -mode funcsim
-//               /mnt/slc6_disk/madorsky/projects/vivado/apex/ku15p/apex_ku15p_mgtb/apex_ku15p_mgtb.srcs/sources_1/bd/apex_blk/ip/apex_blk_util_ds_buf_1_0/apex_blk_util_ds_buf_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top apex_blk_util_ds_buf_1_0 -prefix
+//               apex_blk_util_ds_buf_1_0_ apex_blk_util_ds_buf_1_0_sim_netlist.v
 // Design      : apex_blk_util_ds_buf_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -184,7 +184,7 @@ endmodule
 
 (* C_BUFGCE_DIV = "1" *) (* C_BUFG_GT_SYNC = "0" *) (* C_BUF_TYPE = "BUFG_GT" *) 
 (* C_OBUFDS_GTE5_ADV = "2'b00" *) (* C_REFCLK_ICNTL_TX = "5'b00000" *) (* C_SIM_DEVICE = "VERSAL_AI_CORE_ES1" *) 
-(* C_SIZE = "1" *) (* ORIG_REF_NAME = "util_ds_buf" *) 
+(* C_SIZE = "1" *) 
 module apex_blk_util_ds_buf_1_0_util_ds_buf
    (IBUF_DS_P,
     IBUF_DS_N,

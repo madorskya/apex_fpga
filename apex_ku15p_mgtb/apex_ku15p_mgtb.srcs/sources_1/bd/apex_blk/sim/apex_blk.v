@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Mon Dec  7 21:56:04 2020
+//Date        : Mon Dec 14 12:22:31 2020
 //Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 //Command     : generate_target apex_blk.bd
 //Design      : apex_blk
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "apex_blk,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=apex_blk,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=28,numReposBlks=23,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_axi_chip2chip_cnt=3,da_bram_cntlr_cnt=2,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "apex_blk.hwdef" *) 
+(* CORE_GENERATION_INFO = "apex_blk,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=apex_blk,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=30,numReposBlks=25,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_axi_chip2chip_cnt=3,da_bram_cntlr_cnt=2,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "apex_blk.hwdef" *) 
 module apex_blk
    (c2c_refclk,
     c2c_refclk_bufg,
@@ -93,9 +93,7 @@ module apex_blk
   wire [0:0]axi_chip2chip_0_aurora8_GT_SERIAL_TX_TXP;
   wire [0:31]axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA;
   wire axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TVALID;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire axi_chip2chip_0_aurora8_channel_up;
-  wire [15:0]axi_chip2chip_0_aurora8_gt0_drpdo;
-  wire axi_chip2chip_0_aurora8_gt0_drprdy;
+  wire axi_chip2chip_0_aurora8_channel_up;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire axi_chip2chip_0_aurora8_pll_not_locked_out;
   wire axi_chip2chip_0_aurora8_user_clk_out;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire axi_chip2chip_0_aurora_pma_init_out;
@@ -191,24 +189,29 @@ module apex_blk
   wire [63:0]drp_bridge_0_drp0_di;
   wire drp_bridge_0_drp0_en;
   wire drp_bridge_0_drp0_we;
-  wire [12:0]drp_bridge_0_drp1_addr;
-  wire [63:0]drp_bridge_0_drp1_di;
-  wire drp_bridge_0_drp1_en;
-  wire drp_bridge_0_drp1_we;
   wire [63:0]drp_do_1;
   wire drp_rdy_1;
+  wire ff_util_0_q;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]gt_cplllock;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]gt_powergood;
   wire gt_refclk1_0_1;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire gt_reset_out;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [2:0]gt_rxbufstatus;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]gt_rxcommadet;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [3:0]gt_rxdisperr;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [3:0]gt_rxnotintable;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]gt_rxpmaresetdone;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]gt_rxprbserr;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]gt_rxresetdone;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [1:0]gt_txbufstatus;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]gt_txresetdone;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire link_reset_out;
   wire [0:0]rst_clk_wiz_100M_peripheral_aresetn;
   wire [0:0]util_ds_buf_1_BUFG_GT_O;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [3:0]vio_0_probe_out0;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [0:0]vio_0_probe_out1;
   wire [0:0]vio_0_probe_out2;
+  wire [4:0]xlconstant_0_dout;
   wire [0:0]xlconstant_1_dout;
   wire [0:0]xlconstant_2_dout;
   wire [0:0]xlconstant_3_dout;
@@ -331,7 +334,7 @@ module apex_blk
         .aurora_pma_init_in(vio_0_probe_out1),
         .aurora_pma_init_out(axi_chip2chip_0_aurora_pma_init_out),
         .aurora_reset_pb(axi_chip2chip_0_aurora_reset_pb),
-        .axi_c2c_aurora_channel_up(axi_chip2chip_0_aurora8_channel_up),
+        .axi_c2c_aurora_channel_up(ff_util_0_q),
         .axi_c2c_aurora_rx_tdata({axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[0],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[1],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[2],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[3],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[4],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[5],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[6],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[7],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[8],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[9],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[10],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[11],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[12],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[13],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[14],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[15],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[16],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[17],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[18],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[19],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[20],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[21],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[22],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[23],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[24],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[25],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[26],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[27],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[28],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[29],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[30],axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA[31]}),
         .axi_c2c_aurora_rx_tvalid(axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TVALID),
         .axi_c2c_aurora_tx_tdata(axi_chip2chip_0_AXIS_TX_TDATA),
@@ -376,12 +379,6 @@ module apex_blk
         .m_axi_wvalid(S00_AXI_1_WVALID));
   apex_blk_axi_chip2chip_0_aurora8_1 axi_chip2chip_0_aurora8
        (.channel_up(axi_chip2chip_0_aurora8_channel_up),
-        .gt0_drpaddr(drp_bridge_0_drp1_addr[9:0]),
-        .gt0_drpdi(drp_bridge_0_drp1_di[15:0]),
-        .gt0_drpdo(axi_chip2chip_0_aurora8_gt0_drpdo),
-        .gt0_drpen(drp_bridge_0_drp1_en),
-        .gt0_drprdy(axi_chip2chip_0_aurora8_gt0_drprdy),
-        .gt0_drpwe(drp_bridge_0_drp1_we),
         .gt_cplllock(gt_cplllock),
         .gt_eyescanreset(1'b0),
         .gt_eyescantrigger(1'b0),
@@ -391,18 +388,24 @@ module apex_blk
         .gt_reset(axi_chip2chip_0_aurora_pma_init_out),
         .gt_reset_out(gt_reset_out),
         .gt_rxbufreset(1'b0),
+        .gt_rxbufstatus(gt_rxbufstatus),
         .gt_rxcdrhold(1'b0),
         .gt_rxcdrovrden(1'b0),
         .gt_rxcommadet(gt_rxcommadet),
         .gt_rxdfelpmreset(1'b0),
-        .gt_rxlpmen(1'b0),
+        .gt_rxdisperr(gt_rxdisperr),
+        .gt_rxlpmen(xlconstant_0_dout[0]),
+        .gt_rxnotintable(gt_rxnotintable),
         .gt_rxpcsreset(1'b0),
         .gt_rxpmareset(1'b0),
+        .gt_rxpmaresetdone(gt_rxpmaresetdone),
         .gt_rxprbscntreset(1'b0),
         .gt_rxprbserr(gt_rxprbserr),
         .gt_rxprbssel(vio_0_probe_out0),
         .gt_rxrate({1'b0,1'b0,1'b0}),
-        .gt_txdiffctrl({1'b0,1'b1,1'b0,1'b0,1'b0}),
+        .gt_rxresetdone(gt_rxresetdone),
+        .gt_txbufstatus(gt_txbufstatus),
+        .gt_txdiffctrl(xlconstant_0_dout),
         .gt_txinhibit(1'b0),
         .gt_txpcsreset(1'b0),
         .gt_txpmareset(1'b0),
@@ -411,6 +414,7 @@ module apex_blk
         .gt_txprbsforceerr(1'b0),
         .gt_txprbssel(vio_0_probe_out0),
         .gt_txprecursor({1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .gt_txresetdone(gt_txresetdone),
         .init_clk_in(Net_1),
         .link_reset_out(link_reset_out),
         .loopback({1'b0,1'b0,1'b0}),
@@ -582,12 +586,12 @@ module apex_blk
         .drp0_en(drp_bridge_0_drp0_en),
         .drp0_rdy(drp_rdy_1),
         .drp0_we(drp_bridge_0_drp0_we),
-        .drp1_addr(drp_bridge_0_drp1_addr),
-        .drp1_di(drp_bridge_0_drp1_di),
-        .drp1_do({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_chip2chip_0_aurora8_gt0_drpdo}),
-        .drp1_en(drp_bridge_0_drp1_en),
-        .drp1_rdy(axi_chip2chip_0_aurora8_gt0_drprdy),
-        .drp1_we(drp_bridge_0_drp1_we));
+        .drp1_do({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .drp1_rdy(1'b0));
+  apex_blk_ff_util_0_0 ff_util_0
+       (.c(axi_chip2chip_0_aurora8_user_clk_out),
+        .d(axi_chip2chip_0_aurora8_channel_up),
+        .q(ff_util_0_q));
   apex_blk_rst_clk_wiz_100M_0 rst_clk_wiz_100M
        (.aux_reset_in(axi_c2c_link_status_out),
         .dcm_locked(clk_wiz_locked),
@@ -681,19 +685,13 @@ module apex_blk
         .SLOT_2_AXI_wvalid(axi_interconnect_0_M02_AXI_WVALID),
         .clk(clk_wiz_clk_out1),
         .probe0(rst_clk_wiz_100M_peripheral_aresetn),
-        .probe1(axi_chip2chip_0_aurora8_gt0_drpdo),
-        .probe10(drp_bridge_0_drp0_we),
-        .probe11(drp_rdy_1),
-        .probe12(drp_bridge_0_drp0_addr),
-        .probe13(axi_chip2chip_0_axi_c2c_lnk_hndlr_in_progress),
-        .probe2(drp_bridge_0_drp1_di),
-        .probe3(drp_bridge_0_drp1_en),
-        .probe4(drp_bridge_0_drp1_we),
-        .probe5(axi_chip2chip_0_aurora8_gt0_drprdy),
-        .probe6(drp_bridge_0_drp1_addr),
-        .probe7(drp_do_1),
-        .probe8(drp_bridge_0_drp0_di),
-        .probe9(drp_bridge_0_drp0_en),
+        .probe1(drp_do_1),
+        .probe2(drp_bridge_0_drp0_di),
+        .probe3(drp_bridge_0_drp0_en),
+        .probe4(drp_bridge_0_drp0_we),
+        .probe5(drp_rdy_1),
+        .probe6(drp_bridge_0_drp0_addr),
+        .probe7(axi_chip2chip_0_axi_c2c_lnk_hndlr_in_progress),
         .resetn(rst_clk_wiz_100M_peripheral_aresetn));
   apex_blk_util_ds_buf_1_0 util_ds_buf_1
        (.BUFG_GT_CE(xlconstant_2_dout),
@@ -708,6 +706,8 @@ module apex_blk
         .probe_out0(vio_0_probe_out0),
         .probe_out1(vio_0_probe_out1),
         .probe_out2(vio_0_probe_out2));
+  apex_blk_xlconstant_0_3 xlconstant_0
+       (.dout(xlconstant_0_dout));
   apex_blk_xlconstant_1_0 xlconstant_1
        (.dout(xlconstant_1_dout));
   apex_blk_xlconstant_0_2 xlconstant_2

@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Wed Nov 25 11:02:13 2020
+// Date        : Wed Nov 25 11:02:12 2020
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
-// Command     : write_verilog -force -mode funcsim
-//               /home/madorsky/github/apex_ku15p/apex_ku15p_mgtb/apex_ku15p_mgtb.srcs/sources_1/bd/apex_blk/ip/apex_blk_axi_bram_ctrl_0_bram_0/apex_blk_axi_bram_ctrl_0_bram_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top apex_blk_axi_bram_ctrl_0_bram_0 -prefix
+//               apex_blk_axi_bram_ctrl_0_bram_0_ apex_blk_axi_bram_ctrl_0_bram_0_sim_netlist.v
 // Design      : apex_blk_axi_bram_ctrl_0_bram_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -203,7 +203,6 @@ module apex_blk_axi_bram_ctrl_0_bram_0
         .web({1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_generic_cstr
    (douta,
     rsta_busy,
@@ -385,7 +384,6 @@ module apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_generic_cstr
         .wea(wea[2]));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_prim_width
    (douta,
     clka,
@@ -1103,7 +1101,6 @@ module apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_prim_width__parameterized9
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_prim_wrapper
    (douta,
     clka,
@@ -5639,7 +5636,6 @@ module apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_prim_wrapper__parameterized9
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_top
    (douta,
     rsta_busy,
@@ -5707,7 +5703,7 @@ endmodule
 (* C_WEA_WIDTH = "4" *) (* C_WEB_WIDTH = "4" *) (* C_WRITE_DEPTH_A = "16384" *) 
 (* C_WRITE_DEPTH_B = "16384" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) (* C_WRITE_MODE_B = "WRITE_FIRST" *) 
 (* C_WRITE_WIDTH_A = "32" *) (* C_WRITE_WIDTH_B = "32" *) (* C_XDEVICEFAMILY = "kintexuplus" *) 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_4" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* downgradeipidentifiedwarnings = "yes" *) 
 module apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_v8_4_4
    (clka,
     rsta,
@@ -6012,7 +6008,6 @@ module apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_v8_4_4
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_4_synth" *) 
 module apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_v8_4_4_synth
    (douta,
     rsta_busy,

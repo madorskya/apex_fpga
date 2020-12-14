@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Mon Dec  7 22:01:20 2020
+-- Date        : Mon Dec  7 22:01:18 2020
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
--- Command     : write_vhdl -force -mode funcsim
---               /home/madorsky/github/apex_ku15p/apex_ku15p_mgtb/apex_ku15p_mgtb.srcs/sources_1/bd/apex_blk/ip/apex_blk_axi_chip2chip_0_0/apex_blk_axi_chip2chip_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top apex_blk_axi_chip2chip_0_0 -prefix
+--               apex_blk_axi_chip2chip_0_0_ apex_blk_axi_chip2chip_0_0_sim_netlist.vhdl
 -- Design      : apex_blk_axi_chip2chip_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity apex_blk_axi_chip2chip_0_0_xpm_cdc_gray is
   attribute DEST_SYNC_FF of apex_blk_axi_chip2chip_0_0_xpm_cdc_gray : entity is 3;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of apex_blk_axi_chip2chip_0_0_xpm_cdc_gray : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_xpm_cdc_gray : entity is "xpm_cdc_gray";
   attribute REG_OUTPUT : integer;
   attribute REG_OUTPUT of apex_blk_axi_chip2chip_0_0_xpm_cdc_gray : entity is 0;
   attribute SIM_ASSERT_CHK : integer;
@@ -12844,8 +12842,6 @@ entity apex_blk_axi_chip2chip_0_0_xpm_cdc_sync_rst is
   attribute INIT of apex_blk_axi_chip2chip_0_0_xpm_cdc_sync_rst : entity is "0";
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of apex_blk_axi_chip2chip_0_0_xpm_cdc_sync_rst : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_xpm_cdc_sync_rst : entity is "xpm_cdc_sync_rst";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of apex_blk_axi_chip2chip_0_0_xpm_cdc_sync_rst : entity is 0;
   attribute VERSION : integer;
@@ -13702,8 +13698,6 @@ entity apex_blk_axi_chip2chip_0_0_xpm_counter_updn is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     rd_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_xpm_counter_updn : entity is "xpm_counter_updn";
 end apex_blk_axi_chip2chip_0_0_xpm_counter_updn;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_xpm_counter_updn is
@@ -26203,8 +26197,6 @@ entity apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit is
     wr_en : in STD_LOGIC;
     rst : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit : entity is "xpm_fifo_reg_bit";
 end apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit is
@@ -26682,8 +26674,6 @@ entity apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_vec is
     \reg_out_i_reg[7]_1\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     wr_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_vec : entity is "xpm_fifo_reg_vec";
 end apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_vec;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_vec is
@@ -30603,8 +30593,6 @@ entity apex_blk_axi_chip2chip_0_0_xpm_fifo_rst is
     \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.diff_pntr_pe_reg[7]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     wr_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_xpm_fifo_rst : entity is "xpm_fifo_rst";
 end apex_blk_axi_chip2chip_0_0_xpm_fifo_rst;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_xpm_fifo_rst is
@@ -30828,8 +30816,6 @@ entity apex_blk_axi_chip2chip_0_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of apex_blk_axi_chip2chip_0_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of apex_blk_axi_chip2chip_0_0_xpm_memory_base : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of apex_blk_axi_chip2chip_0_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -34954,8 +34940,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
     axi_c2c_phy_clk : in STD_LOGIC;
     \storage_data2_reg[27]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_slice : entity is "axi_chip2chip_v5_0_8_asitv10_axisc_register_slice";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_slice;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_slice is
@@ -35994,8 +35978,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_aurora_standard_cc_module
     axi_c2c_aurora_channel_up : in STD_LOGIC;
     aurora_pma_init_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_aurora_standard_cc_module : entity is "axi_chip2chip_v5_0_8_aurora_standard_cc_module";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_aurora_standard_cc_module;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_aurora_standard_cc_module is
@@ -37765,8 +37747,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_decoder is
     rx_phy_ready : in STD_LOGIC;
     rx_user_data_valid_flop : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_decoder : entity is "axi_chip2chip_v5_0_8_decoder";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_decoder;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_decoder is
@@ -38156,8 +38136,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_packer is
     axi_c2c_phy_clk : in STD_LOGIC;
     rx_user_reset : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_packer : entity is "axi_chip2chip_v5_0_8_packer";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_packer;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_packer is
@@ -38831,8 +38809,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_reset_sync is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     \auto_neg_intr_gen.tx_ch0_data_reg[3]\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_reset_sync : entity is "axi_chip2chip_v5_0_8_reset_sync";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_reset_sync;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_reset_sync is
@@ -39050,8 +39026,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr is
     \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep\ : in STD_LOGIC;
     srd_lnk_hndlr_in_progress_r_reg_1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr : entity is "axi_chip2chip_v5_0_8_srd_lnk_hndlr";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr is
@@ -40451,8 +40425,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_sync_cell is
     in0 : in STD_LOGIC_VECTOR ( 0 to 0 );
     axi_c2c_phy_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_sync_cell : entity is "axi_chip2chip_v5_0_8_sync_cell";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_sync_cell;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_sync_cell is
@@ -41513,8 +41485,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_tdm is
     \tdm_data_out_reg[5]_1\ : in STD_LOGIC;
     \tdm_data_out_reg[26]_0\ : in STD_LOGIC_VECTOR ( 17 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_tdm : entity is "axi_chip2chip_v5_0_8_tdm";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_tdm;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_tdm is
@@ -42416,8 +42386,6 @@ entity apex_blk_axi_chip2chip_0_0_xpm_fifo_base is
   attribute FULL_RESET_VALUE of apex_blk_axi_chip2chip_0_0_xpm_fifo_base : entity is 0;
   attribute FULL_RST_VAL : string;
   attribute FULL_RST_VAL of apex_blk_axi_chip2chip_0_0_xpm_fifo_base : entity is "1'b0";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_xpm_fifo_base : entity is "xpm_fifo_base";
   attribute PE_THRESH_ADJ : integer;
   attribute PE_THRESH_ADJ of apex_blk_axi_chip2chip_0_0_xpm_fifo_base : entity is 8;
   attribute PE_THRESH_MAX : integer;
@@ -46161,8 +46129,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl is
     \intr_data_reg[3]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \intr_data_reg[3]_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl : entity is "axi_chip2chip_v5_0_8_ch0_ctrl";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl is
@@ -46542,8 +46508,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_init is
     axi_c2c_aurora_rx_tdata : in STD_LOGIC_VECTOR ( 29 downto 0 );
     axi_c2c_aurora_rx_tvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_init : entity is "axi_chip2chip_v5_0_8_phy_init";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_init;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_init is
@@ -53625,8 +53589,6 @@ entity apex_blk_axi_chip2chip_0_0_xpm_fifo_sync is
   attribute FIFO_WRITE_DEPTH of apex_blk_axi_chip2chip_0_0_xpm_fifo_sync : entity is 256;
   attribute FULL_RESET_VALUE : integer;
   attribute FULL_RESET_VALUE of apex_blk_axi_chip2chip_0_0_xpm_fifo_sync : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_xpm_fifo_sync : entity is "xpm_fifo_sync";
   attribute PROG_EMPTY_THRESH : integer;
   attribute PROG_EMPTY_THRESH of apex_blk_axi_chip2chip_0_0_xpm_fifo_sync : entity is 10;
   attribute PROG_FULL_THRESH : integer;
@@ -53858,8 +53820,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_if is
     axi_c2c_aurora_rx_tdata : in STD_LOGIC_VECTOR ( 29 downto 0 );
     axi_c2c_aurora_rx_tvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_if : entity is "axi_chip2chip_v5_0_8_phy_if";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_if;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_if is
@@ -53975,8 +53935,6 @@ entity apex_blk_axi_chip2chip_0_0_xpm_fifo_async is
   attribute FIFO_WRITE_DEPTH of apex_blk_axi_chip2chip_0_0_xpm_fifo_async : entity is 256;
   attribute FULL_RESET_VALUE : integer;
   attribute FULL_RESET_VALUE of apex_blk_axi_chip2chip_0_0_xpm_fifo_async : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_xpm_fifo_async : entity is "xpm_fifo_async";
   attribute PROG_EMPTY_THRESH : integer;
   attribute PROG_EMPTY_THRESH of apex_blk_axi_chip2chip_0_0_xpm_fifo_async : entity is 10;
   attribute PROG_FULL_THRESH : integer;
@@ -55208,8 +55166,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr is
     m_axi_wready : in STD_LOGIC;
     m_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr : entity is "axi_chip2chip_v5_0_8_swr_lnk_hndlr";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr is
@@ -59731,8 +59687,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo is
     ar_ch_data_valid : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo : entity is "axi_chip2chip_v5_0_8_async_fifo";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo is
@@ -60688,8 +60642,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top is
     m_axi_rvalid : in STD_LOGIC;
     m_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top : entity is "axi_chip2chip_v5_0_8_slv_lnk_hndlr_top";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top is
@@ -60781,8 +60733,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_awr_fifo is
     ar_ch_data_valid : in STD_LOGIC;
     rx_user_reset : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_awr_fifo : entity is "axi_chip2chip_v5_0_8_awr_fifo";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_awr_fifo;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_awr_fifo is
@@ -61040,8 +60990,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_b_fifo is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_bvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_b_fifo : entity is "axi_chip2chip_v5_0_8_b_fifo";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_b_fifo;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_b_fifo is
@@ -61121,8 +61069,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave is
     D : in STD_LOGIC_VECTOR ( 6 downto 0 );
     axi_c2c_aurora_rx_tdata : in STD_LOGIC_VECTOR ( 30 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave : entity is "axi_chip2chip_v5_0_8_slave";
 end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave is
@@ -62047,8 +61993,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8 is
   attribute DowngradeIPIdentifiedWarnings of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8 : entity is "yes";
   attribute EN_ECC : integer;
   attribute EN_ECC of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8 : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8 : entity is "axi_chip2chip_v5_0_8";
   attribute PHY_CTRL_WIDTH : integer;
   attribute PHY_CTRL_WIDTH of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8 : entity is 3;
   attribute PHY_DATA_WIDTH : integer;

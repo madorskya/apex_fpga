@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Mon Dec  7 22:01:20 2020
+// Date        : Mon Dec  7 22:01:17 2020
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
-// Command     : write_verilog -force -mode funcsim
-//               /home/madorsky/github/apex_ku15p/apex_ku15p_mgtb/apex_ku15p_mgtb.srcs/sources_1/bd/apex_blk/ip/apex_blk_axi_chip2chip_0_0/apex_blk_axi_chip2chip_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top apex_blk_axi_chip2chip_0_0 -prefix
+//               apex_blk_axi_chip2chip_0_0_ apex_blk_axi_chip2chip_0_0_sim_netlist.v
 // Design      : apex_blk_axi_chip2chip_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -436,10 +436,10 @@ module apex_blk_axi_chip2chip_0_0
         .s_axi_wvalid(1'b0));
 endmodule
 
-(* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "1" *) (* ORIG_REF_NAME = "xpm_cdc_gray" *) 
-(* REG_OUTPUT = "0" *) (* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
-(* VERSION = "0" *) (* WIDTH = "8" *) (* XPM_MODULE = "TRUE" *) 
-(* keep_hierarchy = "true" *) (* xpm_cdc = "GRAY" *) 
+(* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "1" *) (* REG_OUTPUT = "0" *) 
+(* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) (* VERSION = "0" *) 
+(* WIDTH = "8" *) (* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "true" *) 
+(* xpm_cdc = "GRAY" *) 
 module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray
    (src_clk,
     src_in_bin,
@@ -10023,9 +10023,8 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterized3__2
 endmodule
 
 (* DEF_VAL = "1'b0" *) (* DEST_SYNC_FF = "3" *) (* INIT = "0" *) 
-(* INIT_SYNC_FF = "1" *) (* ORIG_REF_NAME = "xpm_cdc_sync_rst" *) (* SIM_ASSERT_CHK = "0" *) 
-(* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "true" *) 
-(* xpm_cdc = "SYNC_RST" *) 
+(* INIT_SYNC_FF = "1" *) (* SIM_ASSERT_CHK = "0" *) (* VERSION = "0" *) 
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "true" *) (* xpm_cdc = "SYNC_RST" *) 
 module apex_blk_axi_chip2chip_0_0_xpm_cdc_sync_rst
    (src_rst,
     dest_clk,
@@ -10542,7 +10541,6 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_sync_rst__18
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_counter_updn" *) 
 module apex_blk_axi_chip2chip_0_0_xpm_counter_updn
    (Q,
     src_in_bin,
@@ -20398,13 +20396,12 @@ endmodule
 (* CASCADE_HEIGHT = "0" *) (* CDC_SYNC_STAGES = "3" *) (* DOUT_RESET_VALUE = "0" *) 
 (* ECC_MODE = "no_ecc" *) (* EN_ADV_FEATURE_ASYNC = "16'b0000011100000111" *) (* FIFO_MEMORY_TYPE = "block" *) 
 (* FIFO_READ_LATENCY = "0" *) (* FIFO_WRITE_DEPTH = "256" *) (* FULL_RESET_VALUE = "1" *) 
-(* ORIG_REF_NAME = "xpm_fifo_async" *) (* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "128" *) 
-(* P_COMMON_CLOCK = "0" *) (* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "2" *) 
-(* P_READ_MODE = "1" *) (* P_WAKEUP_TIME = "2" *) (* RD_DATA_COUNT_WIDTH = "8" *) 
-(* READ_DATA_WIDTH = "50" *) (* READ_MODE = "fwft" *) (* RELATED_CLOCKS = "0" *) 
-(* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "0707" *) (* WAKEUP_TIME = "0" *) 
-(* WRITE_DATA_WIDTH = "50" *) (* WR_DATA_COUNT_WIDTH = "8" *) (* XPM_MODULE = "TRUE" *) 
-(* dont_touch = "true" *) 
+(* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "128" *) (* P_COMMON_CLOCK = "0" *) 
+(* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "2" *) (* P_READ_MODE = "1" *) 
+(* P_WAKEUP_TIME = "2" *) (* RD_DATA_COUNT_WIDTH = "8" *) (* READ_DATA_WIDTH = "50" *) 
+(* READ_MODE = "fwft" *) (* RELATED_CLOCKS = "0" *) (* SIM_ASSERT_CHK = "0" *) 
+(* USE_ADV_FEATURES = "0707" *) (* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH = "50" *) 
+(* WR_DATA_COUNT_WIDTH = "8" *) (* XPM_MODULE = "TRUE" *) (* dont_touch = "true" *) 
 module apex_blk_axi_chip2chip_0_0_xpm_fifo_async
    (sleep,
     rst,
@@ -21356,19 +21353,19 @@ endmodule
 (* EN_WACK = "1'b0" *) (* EN_WDC = "1'b1" *) (* FG_EQ_ASYM_DOUT = "1'b0" *) 
 (* FIFO_MEMORY_TYPE = "0" *) (* FIFO_MEM_TYPE = "0" *) (* FIFO_READ_DEPTH = "256" *) 
 (* FIFO_READ_LATENCY = "1" *) (* FIFO_SIZE = "2048" *) (* FIFO_WRITE_DEPTH = "256" *) 
-(* FULL_RESET_VALUE = "0" *) (* FULL_RST_VAL = "1'b0" *) (* ORIG_REF_NAME = "xpm_fifo_base" *) 
-(* PE_THRESH_ADJ = "8" *) (* PE_THRESH_MAX = "251" *) (* PE_THRESH_MIN = "5" *) 
-(* PF_THRESH_ADJ = "8" *) (* PF_THRESH_MAX = "251" *) (* PF_THRESH_MIN = "5" *) 
-(* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "10" *) (* RD_DATA_COUNT_WIDTH = "8" *) 
-(* RD_DC_WIDTH_EXT = "9" *) (* RD_LATENCY = "2" *) (* RD_MODE = "1" *) 
-(* RD_PNTR_WIDTH = "8" *) (* READ_DATA_WIDTH = "8" *) (* READ_MODE = "1" *) 
-(* RELATED_CLOCKS = "0" *) (* REMOVE_WR_RD_PROT_LOGIC = "0" *) (* SIM_ASSERT_CHK = "0" *) 
-(* USE_ADV_FEATURES = "0707" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
-(* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "8" *) (* WR_DATA_COUNT_WIDTH = "8" *) 
-(* WR_DC_WIDTH_EXT = "9" *) (* WR_DEPTH_LOG = "8" *) (* WR_PNTR_WIDTH = "8" *) 
-(* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "3" *) (* XPM_MODULE = "TRUE" *) 
-(* both_stages_valid = "3" *) (* invalid = "0" *) (* keep_hierarchy = "soft" *) 
-(* stage1_valid = "2" *) (* stage2_valid = "1" *) 
+(* FULL_RESET_VALUE = "0" *) (* FULL_RST_VAL = "1'b0" *) (* PE_THRESH_ADJ = "8" *) 
+(* PE_THRESH_MAX = "251" *) (* PE_THRESH_MIN = "5" *) (* PF_THRESH_ADJ = "8" *) 
+(* PF_THRESH_MAX = "251" *) (* PF_THRESH_MIN = "5" *) (* PROG_EMPTY_THRESH = "10" *) 
+(* PROG_FULL_THRESH = "10" *) (* RD_DATA_COUNT_WIDTH = "8" *) (* RD_DC_WIDTH_EXT = "9" *) 
+(* RD_LATENCY = "2" *) (* RD_MODE = "1" *) (* RD_PNTR_WIDTH = "8" *) 
+(* READ_DATA_WIDTH = "8" *) (* READ_MODE = "1" *) (* RELATED_CLOCKS = "0" *) 
+(* REMOVE_WR_RD_PROT_LOGIC = "0" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "0707" *) 
+(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) 
+(* WRITE_DATA_WIDTH = "8" *) (* WR_DATA_COUNT_WIDTH = "8" *) (* WR_DC_WIDTH_EXT = "9" *) 
+(* WR_DEPTH_LOG = "8" *) (* WR_PNTR_WIDTH = "8" *) (* WR_RD_RATIO = "0" *) 
+(* WR_WIDTH_LOG = "3" *) (* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) 
+(* invalid = "0" *) (* keep_hierarchy = "soft" *) (* stage1_valid = "2" *) 
+(* stage2_valid = "1" *) 
 module apex_blk_axi_chip2chip_0_0_xpm_fifo_base
    (sleep,
     rst,
@@ -26550,7 +26547,6 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized3
         .wrst_busy(wrst_busy));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_fifo_reg_bit" *) 
 module apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit
    (rst_d1,
     \gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[8] ,
@@ -27028,7 +27024,6 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_50
         .O(overflow_i0));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_fifo_reg_vec" *) 
 module apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_vec
    (D,
     \reg_out_i_reg[7]_0 ,
@@ -29994,7 +29989,6 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_vec__parameterized1_8
         .R(\reg_out_i_reg[9]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_fifo_rst" *) 
 module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst
    (ram_wr_en_pf,
     Q,
@@ -32274,13 +32268,13 @@ endmodule
 
 (* CASCADE_HEIGHT = "0" *) (* DOUT_RESET_VALUE = "0" *) (* ECC_MODE = "no_ecc" *) 
 (* EN_ADV_FEATURE_SYNC = "16'b0000011100000111" *) (* FIFO_MEMORY_TYPE = "auto" *) (* FIFO_READ_LATENCY = "1" *) 
-(* FIFO_WRITE_DEPTH = "256" *) (* FULL_RESET_VALUE = "0" *) (* ORIG_REF_NAME = "xpm_fifo_sync" *) 
-(* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "10" *) (* P_COMMON_CLOCK = "1" *) 
-(* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) (* P_READ_MODE = "1" *) 
-(* P_WAKEUP_TIME = "2" *) (* RD_DATA_COUNT_WIDTH = "8" *) (* READ_DATA_WIDTH = "8" *) 
-(* READ_MODE = "fwft" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "0707" *) 
-(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH = "8" *) (* WR_DATA_COUNT_WIDTH = "8" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) 
+(* FIFO_WRITE_DEPTH = "256" *) (* FULL_RESET_VALUE = "0" *) (* PROG_EMPTY_THRESH = "10" *) 
+(* PROG_FULL_THRESH = "10" *) (* P_COMMON_CLOCK = "1" *) (* P_ECC_MODE = "0" *) 
+(* P_FIFO_MEMORY_TYPE = "0" *) (* P_READ_MODE = "1" *) (* P_WAKEUP_TIME = "2" *) 
+(* RD_DATA_COUNT_WIDTH = "8" *) (* READ_DATA_WIDTH = "8" *) (* READ_MODE = "fwft" *) 
+(* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "0707" *) (* WAKEUP_TIME = "0" *) 
+(* WRITE_DATA_WIDTH = "8" *) (* WR_DATA_COUNT_WIDTH = "8" *) (* XPM_MODULE = "TRUE" *) 
+(* keep_hierarchy = "soft" *) 
 module apex_blk_axi_chip2chip_0_0_xpm_fifo_sync
    (sleep,
     rst,
@@ -32464,25 +32458,24 @@ endmodule
 (* CLOCKING_MODE = "0" *) (* ECC_MODE = "0" *) (* MAX_NUM_CHAR = "0" *) 
 (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
 (* MEMORY_PRIMITIVE = "0" *) (* MEMORY_SIZE = "2048" *) (* MEMORY_TYPE = "1" *) 
-(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* ORIG_REF_NAME = "xpm_memory_base" *) 
-(* P_ECC_MODE = "no_ecc" *) (* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) 
-(* P_MAX_DEPTH_DATA = "256" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) 
-(* P_MIN_WIDTH_DATA = "8" *) (* P_MIN_WIDTH_DATA_A = "8" *) (* P_MIN_WIDTH_DATA_B = "8" *) 
-(* P_MIN_WIDTH_DATA_ECC = "8" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "8" *) 
-(* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
-(* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
-(* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
-(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "8" *) 
-(* P_WIDTH_ADDR_READ_B = "8" *) (* P_WIDTH_ADDR_WRITE_A = "8" *) (* P_WIDTH_ADDR_WRITE_B = "8" *) 
-(* P_WIDTH_COL_WRITE_A = "8" *) (* P_WIDTH_COL_WRITE_B = "8" *) (* READ_DATA_WIDTH_A = "8" *) 
-(* READ_DATA_WIDTH_B = "8" *) (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) 
-(* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) 
-(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
-(* USE_MEM_INIT = "0" *) (* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) 
-(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "8" *) (* WRITE_DATA_WIDTH_B = "8" *) 
-(* WRITE_MODE_A = "2" *) (* WRITE_MODE_B = "2" *) (* WRITE_PROTECT = "1" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* rsta_loop_iter = "8" *) 
-(* rstb_loop_iter = "8" *) 
+(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* P_ECC_MODE = "no_ecc" *) 
+(* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) (* P_MAX_DEPTH_DATA = "256" *) 
+(* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) (* P_MIN_WIDTH_DATA = "8" *) 
+(* P_MIN_WIDTH_DATA_A = "8" *) (* P_MIN_WIDTH_DATA_B = "8" *) (* P_MIN_WIDTH_DATA_ECC = "8" *) 
+(* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "8" *) (* P_NUM_COLS_WRITE_A = "1" *) 
+(* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) 
+(* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) 
+(* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "8" *) (* P_WIDTH_ADDR_READ_B = "8" *) 
+(* P_WIDTH_ADDR_WRITE_A = "8" *) (* P_WIDTH_ADDR_WRITE_B = "8" *) (* P_WIDTH_COL_WRITE_A = "8" *) 
+(* P_WIDTH_COL_WRITE_B = "8" *) (* READ_DATA_WIDTH_A = "8" *) (* READ_DATA_WIDTH_B = "8" *) 
+(* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) (* READ_RESET_VALUE_A = "0" *) 
+(* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) 
+(* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) (* USE_MEM_INIT = "0" *) 
+(* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
+(* WRITE_DATA_WIDTH_A = "8" *) (* WRITE_DATA_WIDTH_B = "8" *) (* WRITE_MODE_A = "2" *) 
+(* WRITE_MODE_B = "2" *) (* WRITE_PROTECT = "1" *) (* XPM_MODULE = "TRUE" *) 
+(* keep_hierarchy = "soft" *) (* rsta_loop_iter = "8" *) (* rstb_loop_iter = "8" *) 
 module apex_blk_axi_chip2chip_0_0_xpm_memory_base
    (sleep,
     clka,
@@ -35676,13 +35669,13 @@ endmodule
 (* C_SELECTIO_WIDTH = "9" *) (* C_SIMULATION = "0" *) (* C_SYNC_STAGE = "3" *) 
 (* C_USE_DIFF_CLK = "0" *) (* C_USE_DIFF_IO = "0" *) (* C_WIDTH_CONVERSION = "2" *) 
 (* C_WR_CNTR_WIDTH = "8" *) (* DATA_MUX_RATIO = "2" *) (* DATA_MUX_RATIO_ID_WID_0_TO_12 = "2" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* EN_ECC = "0" *) (* ORIG_REF_NAME = "axi_chip2chip_v5_0_8" *) 
-(* PHY_CTRL_WIDTH = "3" *) (* PHY_DATA_WIDTH = "32" *) (* RB_FC_WIDTH = "3" *) 
-(* RFIFO_DATA_SIZE = "41" *) (* RFIFO_DATA_SIZE_M2 = "1" *) (* RFIFO_DATA_SIZE_M3 = "2" *) 
-(* RFIFO_DATA_SIZE_M4 = "1" *) (* RFIFO_TIE_WIDTH = "2" *) (* RFIFO_WIDTH = "42" *) 
-(* TDM_ID_WIDTH = "2" *) (* TDM_VAL_BITS = "1" *) (* WFIFO_DATA_SIZE = "38" *) 
-(* WFIFO_DATA_SIZE_M2 = "0" *) (* WFIFO_DATA_SIZE_M3 = "2" *) (* WFIFO_DATA_SIZE_M4 = "2" *) 
-(* WFIFO_TIE_WIDTH = "1" *) (* WFIFO_WIDTH = "38" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* EN_ECC = "0" *) (* PHY_CTRL_WIDTH = "3" *) 
+(* PHY_DATA_WIDTH = "32" *) (* RB_FC_WIDTH = "3" *) (* RFIFO_DATA_SIZE = "41" *) 
+(* RFIFO_DATA_SIZE_M2 = "1" *) (* RFIFO_DATA_SIZE_M3 = "2" *) (* RFIFO_DATA_SIZE_M4 = "1" *) 
+(* RFIFO_TIE_WIDTH = "2" *) (* RFIFO_WIDTH = "42" *) (* TDM_ID_WIDTH = "2" *) 
+(* TDM_VAL_BITS = "1" *) (* WFIFO_DATA_SIZE = "38" *) (* WFIFO_DATA_SIZE_M2 = "0" *) 
+(* WFIFO_DATA_SIZE_M3 = "2" *) (* WFIFO_DATA_SIZE_M4 = "2" *) (* WFIFO_TIE_WIDTH = "1" *) 
+(* WFIFO_WIDTH = "38" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8
    (s_aclk,
     s_aresetn,
@@ -36487,7 +36480,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8
         .tx_phy_ready_reg(\slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_16 ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_asitv10_axisc_register_slice" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_slice
    (Q,
     E,
@@ -37308,7 +37300,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .O(rd_en));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_async_fifo" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo
    (\gen_wr_a.gen_word_narrow.mem_reg ,
     \gen_fwft.empty_fwft_i_reg ,
@@ -38097,7 +38088,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo__xdcDup__1
         .O(unpack_data_re));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_aurora_standard_cc_module" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_aurora_standard_cc_module
    (aurora_rst_out_pma,
     aurora_do_cc,
@@ -39425,7 +39415,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_aurora_standard_cc_module
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_awr_fifo" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_awr_fifo
    (\gen_wr_a.gen_word_narrow.mem_reg ,
     \gen_fwft.empty_fwft_i_reg ,
@@ -39740,7 +39729,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_awr_fifo__xdcDup__1
         .rx_user_reset(rx_user_reset));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_b_fifo" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_b_fifo
    (\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ,
     \gen_rst_ic.wr_rst_busy_ic_reg ,
@@ -39815,7 +39803,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_b_fifo
         .tx_phy_ready_reg(tx_phy_ready_reg));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_ch0_ctrl" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl
    (send_ch0,
     \auto_neg_intr_gen.tx_ch0_valid_reg_0 ,
@@ -40130,7 +40117,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_decoder" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_decoder
    (aw_ch_data_valid,
     ar_ch_data_valid,
@@ -40449,7 +40435,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_decoder
         .O(\intr_data[3]_i_4_n_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_packer" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_packer
    (Q,
     \mux_by_2.data_count_reg[1]_0 ,
@@ -40974,7 +40959,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_packer__parameterized0
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_phy_if" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_if
    (D,
     rx_user_reset,
@@ -41106,7 +41090,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_if
         .tx_phy_ready_reg_0(tx_phy_ready_reg));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_phy_init" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_init
    (D,
     rx_phy_ready,
@@ -41580,7 +41563,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_init
         .Q(tx_phy_ready));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_reset_sync" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_reset_sync
    (AS,
     sync_reset_out_reg_0,
@@ -41753,7 +41735,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_reset_sync
         .Q(AS));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_slave" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
    (dout,
     empty,
@@ -42368,7 +42349,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
         .R(rx_user_reset));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_slv_lnk_hndlr_top" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top
    (m_aresetn_0,
     chnl_up_r,
@@ -42583,7 +42563,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_srd_lnk_hndlr" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr
    (s_lnk_hndlr_rready,
     srd_lnk_hndlr_in_progress_r_reg_0,
@@ -43666,7 +43645,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_swr_lnk_hndlr" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
    (SR,
     chnl_up_r_reg_0,
@@ -47062,7 +47040,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .O(fifo_rd_en_s));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_sync_cell" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_sync_cell
    (out,
     in0,
@@ -47862,7 +47839,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_sync_cell__parameterized1
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_chip2chip_v5_0_8_tdm" *) 
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_tdm
    (int_ch1_ready,
     int_ch2_ready,
