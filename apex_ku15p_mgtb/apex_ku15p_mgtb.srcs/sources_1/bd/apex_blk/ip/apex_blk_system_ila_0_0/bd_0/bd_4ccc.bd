@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE0503A31EF5C1F62",
+      "boundary_crc": "0x83CC585DBE83F9EB",
       "design_src": "SBD",
       "device": "xcku15p-ffva1760-2-e",
       "name": "bd_4ccc",
@@ -477,7 +477,7 @@
       },
       "probe4": {
         "direction": "I",
-        "left": "0",
+        "left": "7",
         "right": "0"
       },
       "probe5": {
@@ -487,7 +487,7 @@
       },
       "probe6": {
         "direction": "I",
-        "left": "12",
+        "left": "13",
         "right": "0"
       },
       "probe7": {
@@ -828,7 +828,7 @@
             "value": "0"
           },
           "C_PROBE4_WIDTH": {
-            "value": "1"
+            "value": "8"
           },
           "C_PROBE50_TYPE": {
             "value": "0"
@@ -966,7 +966,7 @@
             "value": "0"
           },
           "C_PROBE6_WIDTH": {
-            "value": "13"
+            "value": "14"
           },
           "C_PROBE70_TYPE": {
             "value": "0"
@@ -1443,10 +1443,10 @@
       }
     },
     "interface_nets": {
-      "Conn2": {
+      "Conn1": {
         "interface_ports": [
-          "SLOT_2_AXI",
-          "g_inst/slot_2_axi"
+          "SLOT_1_AXI",
+          "g_inst/slot_1_axi"
         ]
       },
       "Conn": {
@@ -1455,10 +1455,10 @@
           "g_inst/slot_0_axi"
         ]
       },
-      "Conn1": {
+      "Conn2": {
         "interface_ports": [
-          "SLOT_1_AXI",
-          "g_inst/slot_1_axi"
+          "SLOT_2_AXI",
+          "g_inst/slot_2_axi"
         ]
       }
     },

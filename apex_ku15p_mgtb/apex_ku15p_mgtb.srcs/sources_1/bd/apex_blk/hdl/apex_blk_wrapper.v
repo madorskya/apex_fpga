@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Mon Dec 14 12:22:32 2020
+//Date        : Mon Dec 14 16:08:08 2020
 //Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 //Command     : generate_target apex_blk_wrapper.bd
 //Design      : apex_blk_wrapper
@@ -29,13 +29,13 @@ module apex_blk_wrapper
   input [0:0]c2c_rx_rxp;
   output [0:0]c2c_tx_txn;
   output [0:0]c2c_tx_txp;
-  output [12:0]drp_addr;
+  output [13:0]drp_addr;
   output drp_clk;
   output [63:0]drp_di;
   input [63:0]drp_do;
   output drp_en;
   input drp_rdy;
-  output drp_we;
+  output [7:0]drp_we;
 
   wire c2c_refclk;
   wire [0:0]c2c_refclk_bufg;
@@ -43,13 +43,13 @@ module apex_blk_wrapper
   wire [0:0]c2c_rx_rxp;
   wire [0:0]c2c_tx_txn;
   wire [0:0]c2c_tx_txp;
-  wire [12:0]drp_addr;
+  wire [13:0]drp_addr;
   wire drp_clk;
   wire [63:0]drp_di;
   wire [63:0]drp_do;
   wire drp_en;
   wire drp_rdy;
-  wire drp_we;
+  wire [7:0]drp_we;
 
   apex_blk apex_blk_i
        (.c2c_refclk(c2c_refclk),

@@ -95,7 +95,7 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
-    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "17");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
@@ -111,8 +111,8 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -125,7 +125,7 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,1,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
+    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,17,1,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
 
     // S_AXI' transactor ports
 
@@ -191,7 +191,7 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M_AXI_transactor_param_props.addLong("FREQ_HZ", "50000000");
     M_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
-    M_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    M_AXI_transactor_param_props.addLong("ADDR_WIDTH", "17");
     M_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
     M_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
@@ -207,8 +207,8 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
+    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -221,7 +221,7 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
+    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,17,1,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
 
     // M_AXI' transactor ports
 
@@ -318,7 +318,7 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
-    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "17");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
@@ -334,8 +334,8 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -348,7 +348,7 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,1,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
+    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,17,1,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
 
     // S_AXI' transactor ports
 
@@ -414,7 +414,7 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M_AXI_transactor_param_props.addLong("FREQ_HZ", "50000000");
     M_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
-    M_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    M_AXI_transactor_param_props.addLong("ADDR_WIDTH", "17");
     M_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
     M_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
@@ -430,8 +430,8 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
+    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -444,7 +444,7 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
+    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,17,1,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
 
     // M_AXI' transactor ports
 
@@ -541,7 +541,7 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
-    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "17");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
@@ -557,8 +557,8 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -571,7 +571,7 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,1,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
+    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,17,1,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
 
     // S_AXI' transactor ports
 
@@ -637,7 +637,7 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M_AXI_transactor_param_props.addLong("FREQ_HZ", "50000000");
     M_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
-    M_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    M_AXI_transactor_param_props.addLong("ADDR_WIDTH", "17");
     M_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
     M_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
@@ -653,8 +653,8 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
+    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -667,7 +667,7 @@ void apex_blk_auto_cc_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
+    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,17,1,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
 
     // M_AXI' transactor ports
 
@@ -752,7 +752,7 @@ apex_blk_auto_cc_0::apex_blk_auto_cc_0(const sc_core::sc_module_name& nm) : apex
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
-    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "17");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
@@ -768,8 +768,8 @@ apex_blk_auto_cc_0::apex_blk_auto_cc_0(const sc_core::sc_module_name& nm) : apex
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -782,7 +782,7 @@ apex_blk_auto_cc_0::apex_blk_auto_cc_0(const sc_core::sc_module_name& nm) : apex
     S_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,1,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
+    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,17,1,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
   mp_S_AXI_transactor->AWADDR(s_axi_awaddr);
   mp_S_AXI_transactor->AWLEN(s_axi_awlen);
   mp_S_AXI_transactor->AWSIZE(s_axi_awsize);
@@ -833,7 +833,7 @@ apex_blk_auto_cc_0::apex_blk_auto_cc_0(const sc_core::sc_module_name& nm) : apex
     M_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M_AXI_transactor_param_props.addLong("FREQ_HZ", "50000000");
     M_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
-    M_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    M_AXI_transactor_param_props.addLong("ADDR_WIDTH", "17");
     M_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
     M_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
@@ -849,8 +849,8 @@ apex_blk_auto_cc_0::apex_blk_auto_cc_0(const sc_core::sc_module_name& nm) : apex
     M_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
+    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -863,7 +863,7 @@ apex_blk_auto_cc_0::apex_blk_auto_cc_0(const sc_core::sc_module_name& nm) : apex
     M_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
+    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,17,1,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
   mp_M_AXI_transactor->AWADDR(m_axi_awaddr);
   mp_M_AXI_transactor->AWLEN(m_axi_awlen);
   mp_M_AXI_transactor->AWSIZE(m_axi_awsize);
@@ -980,7 +980,7 @@ apex_blk_auto_cc_0::apex_blk_auto_cc_0(const sc_core::sc_module_name& nm) : apex
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
-    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "17");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
@@ -996,8 +996,8 @@ apex_blk_auto_cc_0::apex_blk_auto_cc_0(const sc_core::sc_module_name& nm) : apex
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -1010,7 +1010,7 @@ apex_blk_auto_cc_0::apex_blk_auto_cc_0(const sc_core::sc_module_name& nm) : apex
     S_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,1,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
+    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,17,1,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
   mp_S_AXI_transactor->AWADDR(s_axi_awaddr);
   mp_S_AXI_transactor->AWLEN(s_axi_awlen);
   mp_S_AXI_transactor->AWSIZE(s_axi_awsize);
@@ -1061,7 +1061,7 @@ apex_blk_auto_cc_0::apex_blk_auto_cc_0(const sc_core::sc_module_name& nm) : apex
     M_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     M_AXI_transactor_param_props.addLong("FREQ_HZ", "50000000");
     M_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
-    M_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
+    M_AXI_transactor_param_props.addLong("ADDR_WIDTH", "17");
     M_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     M_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
     M_AXI_transactor_param_props.addLong("WUSER_WIDTH", "0");
@@ -1077,8 +1077,8 @@ apex_blk_auto_cc_0::apex_blk_auto_cc_0(const sc_core::sc_module_name& nm) : apex
     M_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
+    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "128");
     M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -1091,7 +1091,7 @@ apex_blk_auto_cc_0::apex_blk_auto_cc_0(const sc_core::sc_module_name& nm) : apex
     M_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
 
-    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
+    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,17,1,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
   mp_M_AXI_transactor->AWADDR(m_axi_awaddr);
   mp_M_AXI_transactor->AWLEN(m_axi_awlen);
   mp_M_AXI_transactor->AWSIZE(m_axi_awsize);

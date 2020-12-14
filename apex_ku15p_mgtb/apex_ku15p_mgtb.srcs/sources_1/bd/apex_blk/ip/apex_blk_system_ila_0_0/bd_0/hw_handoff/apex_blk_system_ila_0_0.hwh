@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec 14 12:22:38 2020" VIVADOVERSION="2020.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec 14 16:08:16 2020" VIVADOVERSION="2020.1">
 
   <SYSTEMINFO ARCH="kintexuplus" DEVICE="xcku15p" NAME="bd_4ccc" PACKAGE="ffva1760" SPEEDGRADE="-2"/>
 
@@ -30,7 +30,7 @@
         <CONNECTION INSTANCE="ila_lib" PORT="probe3"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="0" NAME="probe4" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_probe4">
+    <PORT DIR="I" LEFT="7" NAME="probe4" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_probe4">
       <CONNECTIONS>
         <CONNECTION INSTANCE="ila_lib" PORT="probe4"/>
       </CONNECTIONS>
@@ -40,7 +40,7 @@
         <CONNECTION INSTANCE="ila_lib" PORT="probe5"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="12" NAME="probe6" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_probe6">
+    <PORT DIR="I" LEFT="13" NAME="probe6" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_probe6">
       <CONNECTIONS>
         <CONNECTION INSTANCE="ila_lib" PORT="probe6"/>
       </CONNECTIONS>
@@ -3342,9 +3342,9 @@
         <PARAMETER NAME="C_PROBE1_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_PROBE2_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_PROBE3_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE4_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE4_WIDTH" VALUE="8"/>
         <PARAMETER NAME="C_PROBE5_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE6_WIDTH" VALUE="13"/>
+        <PARAMETER NAME="C_PROBE6_WIDTH" VALUE="14"/>
         <PARAMETER NAME="C_PROBE7_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE8_WIDTH" VALUE="2"/>
         <PARAMETER NAME="C_PROBE9_WIDTH" VALUE="32"/>
@@ -6459,7 +6459,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="probe3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe4" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_probe4">
+        <PORT DIR="I" LEFT="7" NAME="probe4" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_probe4">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="probe4"/>
           </CONNECTIONS>
@@ -6469,7 +6469,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="probe5"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="12" NAME="probe6" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_probe6">
+        <PORT DIR="I" LEFT="13" NAME="probe6" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_probe6">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="probe6"/>
           </CONNECTIONS>

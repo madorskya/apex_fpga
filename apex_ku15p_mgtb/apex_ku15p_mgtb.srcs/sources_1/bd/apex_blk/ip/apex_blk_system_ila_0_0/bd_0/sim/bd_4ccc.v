@@ -189,9 +189,9 @@ module bd_4ccc
   input [63:0]probe1;
   input [63:0]probe2;
   input [0:0]probe3;
-  input [0:0]probe4;
+  input [7:0]probe4;
   input [0:0]probe5;
-  input [12:0]probe6;
+  input [13:0]probe6;
   input [0:0]probe7;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input resetn;
 
@@ -393,9 +393,9 @@ module bd_4ccc
   wire [63:0]probe1_1;
   wire [63:0]probe2_1;
   wire [0:0]probe3_1;
-  wire [0:0]probe4_1;
+  wire [7:0]probe4_1;
   wire [0:0]probe5_1;
-  wire [12:0]probe6_1;
+  wire [13:0]probe6_1;
   wire [0:0]probe7_1;
   wire resetn_1;
 
@@ -487,9 +487,9 @@ module bd_4ccc
   assign probe1_1 = probe1[63:0];
   assign probe2_1 = probe2[63:0];
   assign probe3_1 = probe3[0];
-  assign probe4_1 = probe4[0];
+  assign probe4_1 = probe4[7:0];
   assign probe5_1 = probe5[0];
-  assign probe6_1 = probe6[12:0];
+  assign probe6_1 = probe6[13:0];
   assign probe7_1 = probe7[0];
   assign resetn_1 = resetn;
   bd_4ccc_g_inst_0 g_inst

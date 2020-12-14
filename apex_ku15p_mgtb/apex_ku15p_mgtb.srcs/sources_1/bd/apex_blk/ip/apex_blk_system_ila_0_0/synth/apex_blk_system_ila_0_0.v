@@ -316,9 +316,9 @@ input wire [0 : 0] probe0;
 input wire [63 : 0] probe1;
 input wire [63 : 0] probe2;
 input wire [0 : 0] probe3;
-input wire [0 : 0] probe4;
+input wire [7 : 0] probe4;
 input wire [0 : 0] probe5;
-input wire [12 : 0] probe6;
+input wire [13 : 0] probe6;
 input wire [0 : 0] probe7;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWID" *)
 input wire [5 : 0] SLOT_0_AXI_awid;

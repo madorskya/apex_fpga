@@ -1513,7 +1513,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_PROBE49_WIDTH">32</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_PROBE4_MU_CNT">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_PROBE4_TYPE">0</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_PROBE4_WIDTH">1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_PROBE4_WIDTH">8</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_PROBE500_MU_CNT">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_PROBE500_TYPE">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_PROBE500_WIDTH">1</spirit:configurableElementValue>
@@ -2179,7 +2179,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_PROBE69_WIDTH">3</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_PROBE6_MU_CNT">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_PROBE6_TYPE">0</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_PROBE6_WIDTH">13</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_PROBE6_WIDTH">14</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_PROBE700_MU_CNT">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_PROBE700_TYPE">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_PROBE700_WIDTH">1</spirit:configurableElementValue>
