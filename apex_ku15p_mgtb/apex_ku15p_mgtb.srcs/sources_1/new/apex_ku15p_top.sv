@@ -37,8 +37,8 @@ module apex_ku15p_top
         .drp_we          (drp_gth_i.drpwe)
     );
     
-	mgt_gth_rx tcds_rx [3:0]();
-	mgt_gth_tx tcds_tx [3:0]();
+	mgt_gth_rx tcds_rx [7:0]();
+	mgt_gth_tx tcds_tx [7:0]();
     
     
     apex_ku15p_gth_serial_io gth_io
@@ -49,7 +49,7 @@ module apex_ku15p_top
         .refclk_n        (refclk_n),
         .tcds_rx         (tcds_rx),
         .tcds_tx         (tcds_tx),
-        .TCDS_2_mmcm_clk (),
+        .TCDS_0_mmcm_clk (),
         .refclk5         (refclk5),
         .refclk5_bufg    (refclk5_bufg)
     );    
