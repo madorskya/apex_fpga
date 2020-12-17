@@ -99,10 +99,14 @@ module GTHE4_QUAD
 	assign mgt_dmonitorclk = drpclk;
 	assign mgt_cplllockdetclk = drpclk;
 	assign mgt_rxsyncallin = mgt_rxphaligndone;
-	bufg_gt_tux (.O(mgt_rxusrclk[0]), .I(mgt_gth_rx_if[0].rxoutclk));
-	bufg_gt_tux (.O(mgt_rxusrclk[1]), .I(mgt_gth_rx_if[1].rxoutclk));
-	bufg_gt_tux (.O(mgt_rxusrclk[2]), .I(mgt_gth_rx_if[2].rxoutclk));
-	bufg_gt_tux (.O(mgt_rxusrclk[3]), .I(mgt_gth_rx_if[3].rxoutclk));
+//	bufg_gt_tux (.O(mgt_rxusrclk[0]), .I(mgt_gth_rx_if[0].rxoutclk));
+//	bufg_gt_tux (.O(mgt_rxusrclk[1]), .I(mgt_gth_rx_if[1].rxoutclk));
+//	bufg_gt_tux (.O(mgt_rxusrclk[2]), .I(mgt_gth_rx_if[2].rxoutclk));
+//	bufg_gt_tux (.O(mgt_rxusrclk[3]), .I(mgt_gth_rx_if[3].rxoutclk));
+	assign mgt_rxusrclk[0] = mgt_gth_rx_if[0].rxoutclk;
+	assign mgt_rxusrclk[1] = mgt_gth_rx_if[1].rxoutclk;
+	assign mgt_rxusrclk[2] = mgt_gth_rx_if[2].rxoutclk;
+	assign mgt_rxusrclk[3] = mgt_gth_rx_if[3].rxoutclk;
 	assign mgt_txusrclk2 = mgt_txusrclk;
 	assign mgt_rxusrclk2 = mgt_rxusrclk;
 	assign com_qpll0lockdetclk = drpclk;

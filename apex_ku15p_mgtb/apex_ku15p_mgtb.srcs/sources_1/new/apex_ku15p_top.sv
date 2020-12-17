@@ -20,6 +20,47 @@ module apex_ku15p_top
 
     wire refclk5, refclk5_bufg;
     
+    (* mark_debug *) wire [7:0] lb_gbt_tx_ready            ;
+    (* mark_debug *) wire [7:0] lb_gbt_tx_had_not_ready    ;
+    (* mark_debug *) wire [7:0] lb_gbt_rx_ready            ;
+    (* mark_debug *) wire [7:0] lb_gbt_rx_had_not_ready    ;
+    (* mark_debug *) wire [7:0] lb_gbt_rx_header_locked    ;
+    (* mark_debug *) wire [7:0] lb_gbt_rx_header_had_unlock;
+                     wire [7:0] lb_gbt_rx_gearbox_ready    ;
+    (* mark_debug *) wire [7:0] lb_gbt_correction_flag     ;
+    (* mark_debug *) wire [15:0] lb_gbt_correction_cnt [7:0]      ;
+
+
+    (* mark_debug *) wire [233:0] lb_gbt_rx_frame [7:0] ;
+    (* mark_debug *) wire [233:0] lb_gbt_tx_frame [7:0] ;
+
+    
+    // vio
+    wire logic_reset;
+    wire tx_ready, rx_ready;
+    
+    wire clk40; // from mmcm
+    wire clk_tx; // should be 320 M
+
+    vio_0 tcds_vio 
+    (
+        .clk        (clk_tx),                // input wire clk
+        .probe_out0 (logic_reset),  // output wire [0 : 0] probe_out0
+        .probe_out1 (tx_ready),  // output wire [0 : 0] probe_out1
+        .probe_out2 (rx_ready)   // output wire [0 : 0] probe_out2
+    );
+
+    tcds_mmcm tcds_mmcm_i
+    (
+        .clk_out1 (clk40),
+        .reset    (1'b0),
+        .locked   (),
+        .clk_in1  (clk_tx)
+    );     
+    
+    reg [8:0] cnt;
+    always @(posedge clk40) cnt++;
+
     apex_blk_wrapper apex_blk_w
     (
         .c2c_rx_rxn      (c2c_rx_rxn),
@@ -39,6 +80,9 @@ module apex_ku15p_top
     
 	mgt_gth_rx tcds_rx [7:0]();
 	mgt_gth_tx tcds_tx [7:0]();
+	
+	(* mark_debug *) wire [31:0] tx_data [7:0];
+	(* mark_debug *) wire [31:0] rx_data [7:0];
     
     
     apex_ku15p_gth_serial_io gth_io
@@ -49,9 +93,50 @@ module apex_ku15p_top
         .refclk_n        (refclk_n),
         .tcds_rx         (tcds_rx),
         .tcds_tx         (tcds_tx),
-        .TCDS_0_mmcm_clk (),
+        .TCDS_0_mmcm_clk (clk_tx),
         .refclk5         (refclk5),
         .refclk5_bufg    (refclk5_bufg)
     );    
+
+    genvar gi;
+    generate
+        for (gi = 0; gi < 8; gi++)
+        begin: gem_lnk_loop
+
+            lpgbt_loopback_test i_lbgbt_test_core
+            (
+                .reset_i                (logic_reset),
+
+                .clk40_i                (clk40), // 40 M sync clock
+                .mgt_tx_usrclk_i        (clk_tx), 
+                .mgt_rx_usrclk_i        (tcds_rx[gi].rxoutclk),
+
+                .mgt_tx_ready_i         (tx_ready),
+                .mgt_rx_ready_i         (rx_ready),
+                .mgt_rx_slide_o         (tcds_rx[gi].rxslide),
+                .mgt_tx_data_o          (tcds_tx[gi].txdata [31:0]),
+                .mgt_rx_data_i          (tcds_rx[gi].rxdata [31:0]),
+
+                .tx_data_i              (lb_gbt_tx_frame [gi]),
+                .rx_data_o              (lb_gbt_rx_frame [gi]),
+                .tx_ready_o             (lb_gbt_tx_ready [gi]),
+                .tx_had_not_ready_o     (lb_gbt_tx_had_not_ready [gi]),
+                .rx_ready_o             (lb_gbt_rx_ready [gi]),
+                .rx_had_not_ready_o     (lb_gbt_rx_had_not_ready [gi]),
+                .rx_header_locked_o     (lb_gbt_rx_header_locked [gi]),
+                .rx_header_had_unlock_o (lb_gbt_rx_header_had_unlock [gi]),
+                .rx_gearbox_ready_o     (lb_gbt_rx_gearbox_ready [gi]),
+                .rx_correction_cnt_o    (lb_gbt_correction_cnt [gi]),
+                .rx_correction_flag_o   (lb_gbt_correction_flag [gi])
+            );
+
+            assign lb_gbt_tx_frame [gi] = {gi[8:0], {25{cnt}}}; // test pattern
+            
+            assign rx_data[gi] = tcds_rx[gi].rxdata[31:0];
+            assign tx_data[gi] = tcds_tx[gi].txdata[31:0];
+
+        end
+    endgenerate;
+
 
 endmodule

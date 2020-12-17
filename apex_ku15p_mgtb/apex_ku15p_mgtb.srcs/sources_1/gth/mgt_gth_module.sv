@@ -88,6 +88,10 @@ module GTHE4_CHANNEL_tux
         end
     end
 
+
+	wire rxoutclk_loc;
+	bufg_gt_tux bgt (.O(mgt_gth_rx_if.rxoutclk), .I(rxoutclk_loc));
+
 	GTHE4_CHANNEL GTHE4_CHANNEL_inst
 	(
 		.CDRSTEPDIR                 (1'b0),
@@ -256,9 +260,10 @@ module GTHE4_CHANNEL_tux
 		.RXOSINTDONE                (),
 		.RXOSINTSTARTED             (),
 		.RXOSINTSTROBEDONE          (),
-		.RXOSINTSTROBESTARTED       (1'b0),
+		.RXOSINTSTROBESTARTED       (),
 		.RXOSOVRDEN                 (1'b0),
-		.RXOUTCLK                   (mgt_gth_rx_if.rxoutclk    ),
+		.RXOUTCLK                   (rxoutclk_loc    ),
+//		.RXOUTCLK                   (mgt_gth_rx_if.rxoutclk    ),
 		.RXOUTCLKFABRIC             (),
 		.RXOUTCLKPCS                (),
 		.RXOUTCLKSEL                ( reg_[0][29:27]),
