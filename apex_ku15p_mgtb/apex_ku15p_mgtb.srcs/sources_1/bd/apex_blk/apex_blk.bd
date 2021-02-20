@@ -29,7 +29,6 @@
       "axi_chip2chip_0_aurora8": "",
       "vio_0": "",
       "rst_clk_wiz_100M": "",
-      "xlconstant_2": "",
       "ff_util_0": "",
       "xlconstant_0": "",
       "bram0": {
@@ -54,7 +53,9 @@
         "xlconstant_5": ""
       },
       "clk_wiz": "",
-      "system_ila_0": ""
+      "system_ila_0": "",
+      "xlconstant_1": "",
+      "ila_0": ""
     },
     "interface_ports": {
       "c2c_tx": {
@@ -704,10 +705,10 @@
           }
         },
         "interface_nets": {
-          "xbar_to_m01_couplers": {
+          "m00_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
+              "M00_AXI",
+              "m00_couplers/M_AXI"
             ]
           },
           "m02_couplers_to_axi_interconnect_0": {
@@ -722,16 +723,10 @@
               "xbar/S00_AXI"
             ]
           },
-          "xbar_to_m02_couplers": {
+          "m01_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "xbar/M02_AXI",
-              "m02_couplers/S_AXI"
-            ]
-          },
-          "m00_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
+              "M01_AXI",
+              "m01_couplers/M_AXI"
             ]
           },
           "xbar_to_m00_couplers": {
@@ -740,16 +735,22 @@
               "m00_couplers/S_AXI"
             ]
           },
-          "m01_couplers_to_axi_interconnect_0": {
+          "xbar_to_m01_couplers": {
             "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
             ]
           },
           "axi_interconnect_0_to_s00_couplers": {
             "interface_ports": [
               "S00_AXI",
               "s00_couplers/S_AXI"
+            ]
+          },
+          "xbar_to_m02_couplers": {
+            "interface_ports": [
+              "xbar/M02_AXI",
+              "m02_couplers/S_AXI"
             ]
           }
         },
@@ -871,13 +872,13 @@
         "xci_name": "apex_blk_axi_chip2chip_0_aurora8_1",
         "parameters": {
           "CHANNEL_ENABLE": {
-            "value": "X0Y12"
+            "value": "X0Y25"
           },
           "C_AURORA_LANES": {
             "value": "1"
           },
           "C_DRP_IF": {
-            "value": "false"
+            "value": "true"
           },
           "C_LANE_WIDTH": {
             "value": "4"
@@ -889,13 +890,13 @@
             "value": "250"
           },
           "C_REFCLK_SOURCE": {
-            "value": "MGTREFCLK0 of Quad X0Y3"
+            "value": "MGTREFCLK0 of Quad X0Y6"
           },
           "C_START_LANE": {
-            "value": "X0Y12"
+            "value": "X0Y25"
           },
           "C_START_QUAD": {
-            "value": "Quad_X0Y3"
+            "value": "Quad_X0Y6"
           },
           "Interface_Mode": {
             "value": "Streaming"
@@ -922,7 +923,7 @@
             "value": "0"
           },
           "C_NUM_PROBE_OUT": {
-            "value": "5"
+            "value": "6"
           },
           "C_PROBE_OUT0_WIDTH": {
             "value": "4"
@@ -947,15 +948,6 @@
       "rst_clk_wiz_100M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "apex_blk_rst_clk_wiz_100M_0"
-      },
-      "xlconstant_2": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "apex_blk_xlconstant_0_2",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "0"
-          }
-        }
       },
       "ff_util_0": {
         "vlnv": "xilinx.com:module_ref:ff_util:1.0",
@@ -1619,7 +1611,7 @@
             "value": "3"
           },
           "C_NUM_OF_PROBES": {
-            "value": "8"
+            "value": "10"
           }
         },
         "interface_ports": {
@@ -1636,25 +1628,44 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
           }
         }
+      },
+      "xlconstant_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "apex_blk_xlconstant_0_4",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "apex_blk_ila_0_0",
+        "parameters": {
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_INPUT_PIPE_STAGES": {
+            "value": "6"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "1"
+          }
+        }
       }
     },
     "interface_nets": {
-      "axi_chip2chip_0_aurora8_GT_SERIAL_TX": {
+      "axi_interconnect_0_M00_AXI": {
         "interface_ports": [
-          "c2c_tx",
-          "axi_chip2chip_0_aurora8/GT_SERIAL_TX"
-        ]
-      },
-      "axi_chip2chip_0_AXIS_TX": {
-        "interface_ports": [
-          "axi_chip2chip_0_aurora8/USER_DATA_S_AXI_TX",
-          "axi_chip2chip_0/AXIS_TX"
-        ]
-      },
-      "axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX": {
-        "interface_ports": [
-          "axi_chip2chip_0_aurora8/USER_DATA_M_AXI_RX",
-          "axi_chip2chip_0/AXIS_RX"
+          "axi_interconnect_0/M00_AXI",
+          "bram0/S_AXI",
+          "system_ila_0/SLOT_1_AXI"
         ]
       },
       "axi_interconnect_0_M02_AXI": {
@@ -1664,10 +1675,10 @@
           "system_ila_0/SLOT_2_AXI"
         ]
       },
-      "c2c_rx_1": {
+      "axi_chip2chip_0_aurora8_GT_SERIAL_TX": {
         "interface_ports": [
-          "c2c_rx",
-          "axi_chip2chip_0_aurora8/GT_SERIAL_RX"
+          "c2c_tx",
+          "axi_chip2chip_0_aurora8/GT_SERIAL_TX"
         ]
       },
       "S00_AXI_1": {
@@ -1677,17 +1688,28 @@
           "system_ila_0/SLOT_0_AXI"
         ]
       },
-      "axi_interconnect_0_M00_AXI": {
+      "axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX": {
         "interface_ports": [
-          "axi_interconnect_0/M00_AXI",
-          "bram0/S_AXI",
-          "system_ila_0/SLOT_1_AXI"
+          "axi_chip2chip_0_aurora8/USER_DATA_M_AXI_RX",
+          "axi_chip2chip_0/AXIS_RX"
         ]
       },
       "axi_interconnect_0_M01_AXI": {
         "interface_ports": [
           "axi_interconnect_0/M01_AXI",
           "drp1/S_AXI"
+        ]
+      },
+      "c2c_rx_1": {
+        "interface_ports": [
+          "c2c_rx",
+          "axi_chip2chip_0_aurora8/GT_SERIAL_RX"
+        ]
+      },
+      "axi_chip2chip_0_AXIS_TX": {
+        "interface_ports": [
+          "axi_chip2chip_0_aurora8/USER_DATA_S_AXI_TX",
+          "axi_chip2chip_0/AXIS_TX"
         ]
       }
     },
@@ -1723,7 +1745,8 @@
       },
       "gt_rxprbserr": {
         "ports": [
-          "axi_chip2chip_0_aurora8/gt_rxprbserr"
+          "axi_chip2chip_0_aurora8/gt_rxprbserr",
+          "ila_0/probe0"
         ],
         "hdl_attributes": {
           "DEBUG": {
@@ -1897,7 +1920,8 @@
         "ports": [
           "axi_chip2chip_0_aurora8/user_clk_out",
           "axi_chip2chip_0/axi_c2c_phy_clk",
-          "ff_util_0/c"
+          "ff_util_0/c",
+          "ila_0/clk"
         ]
       },
       "vio_0_probe_out1": {
@@ -1981,12 +2005,6 @@
             "value": "true"
           }
         }
-      },
-      "c2c_dout": {
-        "ports": [
-          "xlconstant_2/dout",
-          "axi_chip2chip_0_aurora8/gt_txpolarity"
-        ]
       },
       "drp_do_1": {
         "ports": [
@@ -2089,7 +2107,8 @@
       "axi_chip2chip_0_aurora8_channel_up": {
         "ports": [
           "axi_chip2chip_0_aurora8/channel_up",
-          "ff_util_0/d"
+          "ff_util_0/d",
+          "system_ila_0/probe9"
         ]
       },
       "ff_util_0_q": {
@@ -2139,6 +2158,27 @@
         "ports": [
           "axi_chip2chip_0/axi_c2c_lnk_hndlr_in_progress",
           "system_ila_0/probe7"
+        ]
+      },
+      "xlconstant_1_dout1": {
+        "ports": [
+          "xlconstant_1/dout",
+          "axi_chip2chip_0_aurora8/gt0_drpaddr",
+          "axi_chip2chip_0_aurora8/gt0_drpen",
+          "axi_chip2chip_0_aurora8/gt0_drpdi",
+          "axi_chip2chip_0_aurora8/gt0_drpwe"
+        ]
+      },
+      "axi_chip2chip_0_aurora8_lane_up": {
+        "ports": [
+          "axi_chip2chip_0_aurora8/lane_up",
+          "system_ila_0/probe8"
+        ]
+      },
+      "vio_0_probe_out5": {
+        "ports": [
+          "vio_0/probe_out5",
+          "axi_chip2chip_0_aurora8/gt_txpolarity"
         ]
       }
     },

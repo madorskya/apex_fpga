@@ -14,7 +14,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bda04ae4</spirit:value>
+            <spirit:value>9:c1eda33c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -30,11 +30,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 12 15:03:19 UTC 2020</spirit:value>
+            <spirit:value>Sun Feb 14 01:58:12 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5c59badf</spirit:value>
+            <spirit:value>9:7ab3027f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -45,7 +45,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5c59badf</spirit:value>
+            <spirit:value>9:7ab3027f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -61,11 +61,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 12 15:03:19 UTC 2020</spirit:value>
+            <spirit:value>Sun Feb 14 01:58:12 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5c59badf</spirit:value>
+            <spirit:value>9:7ab3027f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -81,11 +81,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 12 15:03:23 UTC 2020</spirit:value>
+            <spirit:value>Sun Feb 14 01:58:16 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e911aa86</spirit:value>
+            <spirit:value>9:31437f35</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -101,11 +101,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 12 15:03:23 UTC 2020</spirit:value>
+            <spirit:value>Sun Feb 14 01:58:17 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e911aa86</spirit:value>
+            <spirit:value>9:31437f35</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -14766,7 +14766,7 @@
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="std_logic_vector">
         <spirit:name>C_CHANNEL_ENABLE</spirit:name>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CHANNEL_ENABLE" spirit:bitStringLength="192">&quot;000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000&quot;</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CHANNEL_ENABLE" spirit:bitStringLength="192">&quot;000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000&quot;</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_PCIE_ENABLE</spirit:name>
@@ -14954,7 +14954,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_MASTER_CHANNEL_IDX</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_MASTER_CHANNEL_IDX">12</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_MASTER_CHANNEL_IDX">25</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_OUTCLK_BUFG_GT_DIV</spirit:name>
@@ -15078,7 +15078,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_TX_MASTER_CHANNEL_IDX</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_MASTER_CHANNEL_IDX">12</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_MASTER_CHANNEL_IDX">25</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_TX_OUTCLK_BUFG_GT_DIV</spirit:name>
@@ -15279,10 +15279,6 @@
       <spirit:enumeration>10000</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_592d046d</spirit:name>
-      <spirit:enumeration>X0Y12</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_6b979ebc</spirit:name>
       <spirit:enumeration>250</spirit:enumeration>
     </spirit:choice>
@@ -15304,6 +15300,10 @@
       <spirit:enumeration>250</spirit:enumeration>
       <spirit:enumeration>125</spirit:enumeration>
       <spirit:enumeration>62.5</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_a74cfb60</spirit:name>
+      <spirit:enumeration>X0Y25</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_be18be20</spirit:name>
@@ -15958,13 +15958,13 @@
       <spirit:name>CHANNEL_ENABLE</spirit:name>
       <spirit:displayName>Enable channel</spirit:displayName>
       <spirit:description>Indicate whether this transceiver channel is instantiated and enabled for use</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CHANNEL_ENABLE" spirit:order="8">X0Y12</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CHANNEL_ENABLE" spirit:order="8">X0Y25</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>TX_MASTER_CHANNEL</spirit:name>
       <spirit:displayName>Master TX channel</spirit:displayName>
       <spirit:description>Designate an enabled transceiver as the master TX channel for various purposes such as user clock generation and buffer bypass (if selected)</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TX_MASTER_CHANNEL" spirit:choiceRef="choice_list_592d046d" spirit:order="9">X0Y12</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TX_MASTER_CHANNEL" spirit:choiceRef="choice_list_a74cfb60" spirit:order="9">X0Y25</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -15977,7 +15977,7 @@
       <spirit:name>RX_MASTER_CHANNEL</spirit:name>
       <spirit:displayName>Master RX channel</spirit:displayName>
       <spirit:description>Designate an enabled transceiver as the master RX channel for various purposes such as user clock generation and buffer bypass (if selected)</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_MASTER_CHANNEL" spirit:choiceRef="choice_list_592d046d" spirit:order="10">X0Y12</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_MASTER_CHANNEL" spirit:choiceRef="choice_list_a74cfb60" spirit:order="10">X0Y25</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -17290,13 +17290,13 @@ rsor_in txprbsforceerr_in txprbssel_in txprecursor_in txresetdone_out</spirit:va
       <spirit:name>RX_REFCLK_SOURCE</spirit:name>
       <spirit:displayName>Receiver reference clock source</spirit:displayName>
       <spirit:description>Select a reference clock input to drive the PLL chosen for receiver operation</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_REFCLK_SOURCE" spirit:order="151">X0Y12 clk0 </spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_REFCLK_SOURCE" spirit:order="151">X0Y25 clk0 </spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>TX_REFCLK_SOURCE</spirit:name>
       <spirit:displayName>Transmitter reference clock source</spirit:displayName>
       <spirit:description>Select a reference clock input to drive the PLL chosen for transmitter operation</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TX_REFCLK_SOURCE" spirit:order="152">X0Y12 clk0 </spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TX_REFCLK_SOURCE" spirit:order="152">X0Y25 clk0 </spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_RECCLK_OUTPUT</spirit:name>

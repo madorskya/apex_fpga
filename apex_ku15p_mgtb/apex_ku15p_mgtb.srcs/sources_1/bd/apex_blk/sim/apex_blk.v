@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Mon Dec 14 16:08:08 2020
+//Date        : Sun Feb 14 18:41:02 2021
 //Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 //Command     : generate_target apex_blk.bd
 //Design      : apex_blk
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "apex_blk,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=apex_blk,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=36,numReposBlks=27,numNonXlnxBlks=0,numHierBlks=9,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_axi_chip2chip_cnt=3,da_bram_cntlr_cnt=2,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "apex_blk.hwdef" *) 
+(* CORE_GENERATION_INFO = "apex_blk,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=apex_blk,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=37,numReposBlks=28,numNonXlnxBlks=0,numHierBlks=9,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_axi_chip2chip_cnt=3,da_bram_cntlr_cnt=2,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "apex_blk.hwdef" *) 
 module apex_blk
    (c2c_refclk,
     c2c_refclk_bufg,
@@ -80,6 +80,7 @@ module apex_blk
   wire [0:31]axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA;
   wire axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TVALID;
   wire axi_chip2chip_0_aurora8_channel_up;
+  wire [0:0]axi_chip2chip_0_aurora8_lane_up;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire axi_chip2chip_0_aurora8_pll_not_locked_out;
   wire axi_chip2chip_0_aurora8_user_clk_out;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire axi_chip2chip_0_aurora_pma_init_out;
@@ -178,7 +179,6 @@ module apex_blk
   (* CONN_BUS_INFO = "axi_interconnect_0_M02_AXI xilinx.com:interface:aximm:1.0 AXI4 WREADY" *) (* DONT_TOUCH *) wire axi_interconnect_0_M02_AXI_WREADY;
   (* CONN_BUS_INFO = "axi_interconnect_0_M02_AXI xilinx.com:interface:aximm:1.0 AXI4 WSTRB" *) (* DONT_TOUCH *) wire [3:0]axi_interconnect_0_M02_AXI_WSTRB;
   (* CONN_BUS_INFO = "axi_interconnect_0_M02_AXI xilinx.com:interface:aximm:1.0 AXI4 WVALID" *) (* DONT_TOUCH *) wire axi_interconnect_0_M02_AXI_WVALID;
-  wire [0:0]c2c_dout;
   wire [0:0]c2c_rx_1_RXN;
   wire [0:0]c2c_rx_1_RXP;
   wire clk_wiz_clk_out1;
@@ -211,8 +211,10 @@ module apex_blk
   wire [0:0]vio_0_probe_out2;
   wire [6:0]vio_0_probe_out3;
   wire [6:0]vio_0_probe_out4;
+  wire [0:0]vio_0_probe_out5;
   wire [4:0]xlconstant_0_dout;
   wire [0:0]xlconstant_1_dout;
+  wire [15:0]xlconstant_1_dout1;
 
   assign BUFG_GT_I_0_1 = c2c_refclk_bufg[0];
   assign c2c_rx_1_RXN = c2c_rx_rxn[0];
@@ -278,6 +280,10 @@ module apex_blk
         .m_axi_wvalid(S00_AXI_1_WVALID));
   apex_blk_axi_chip2chip_0_aurora8_1 axi_chip2chip_0_aurora8
        (.channel_up(axi_chip2chip_0_aurora8_channel_up),
+        .gt0_drpaddr(xlconstant_1_dout1[9:0]),
+        .gt0_drpdi(xlconstant_1_dout1),
+        .gt0_drpen(xlconstant_1_dout1[0]),
+        .gt0_drpwe(xlconstant_1_dout1[0]),
         .gt_cplllock(gt_cplllock),
         .gt_eyescanreset(1'b0),
         .gt_eyescantrigger(1'b0),
@@ -308,13 +314,14 @@ module apex_blk
         .gt_txinhibit(1'b0),
         .gt_txpcsreset(1'b0),
         .gt_txpmareset(1'b0),
-        .gt_txpolarity(c2c_dout),
+        .gt_txpolarity(vio_0_probe_out5),
         .gt_txpostcursor({1'b0,1'b0,1'b0,1'b0,1'b0}),
         .gt_txprbsforceerr(1'b0),
         .gt_txprbssel(vio_0_probe_out0),
         .gt_txprecursor({1'b0,1'b0,1'b0,1'b0,1'b0}),
         .gt_txresetdone(gt_txresetdone),
         .init_clk_in(Net_1),
+        .lane_up(axi_chip2chip_0_aurora8_lane_up),
         .link_reset_out(link_reset_out),
         .loopback({1'b0,1'b0,1'b0}),
         .m_axi_rx_tdata(axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX_TDATA),
@@ -586,6 +593,9 @@ module apex_blk
        (.c(axi_chip2chip_0_aurora8_user_clk_out),
         .d(axi_chip2chip_0_aurora8_channel_up),
         .q(ff_util_0_q));
+  apex_blk_ila_0_0 ila_0
+       (.clk(axi_chip2chip_0_aurora8_user_clk_out),
+        .probe0(gt_rxprbserr));
   apex_blk_rst_clk_wiz_100M_0 rst_clk_wiz_100M
        (.aux_reset_in(axi_c2c_link_status_out),
         .dcm_locked(clk_wiz_locked),
@@ -686,6 +696,8 @@ module apex_blk
         .probe5(drp_rdy_1),
         .probe6(drp_bridge_0_drp0_addr),
         .probe7(axi_chip2chip_0_axi_c2c_lnk_hndlr_in_progress),
+        .probe8(axi_chip2chip_0_aurora8_lane_up),
+        .probe9(axi_chip2chip_0_aurora8_channel_up),
         .resetn(rst_clk_wiz_100M_peripheral_aresetn));
   apex_blk_vio_0_0 vio_0
        (.clk(clk_wiz_clk_out1),
@@ -693,11 +705,12 @@ module apex_blk
         .probe_out1(vio_0_probe_out1),
         .probe_out2(vio_0_probe_out2),
         .probe_out3(vio_0_probe_out3),
-        .probe_out4(vio_0_probe_out4));
+        .probe_out4(vio_0_probe_out4),
+        .probe_out5(vio_0_probe_out5));
   apex_blk_xlconstant_0_3 xlconstant_0
        (.dout(xlconstant_0_dout));
-  apex_blk_xlconstant_0_2 xlconstant_2
-       (.dout(c2c_dout));
+  apex_blk_xlconstant_0_4 xlconstant_1
+       (.dout(xlconstant_1_dout1));
 endmodule
 
 module apex_blk_axi_interconnect_0_0

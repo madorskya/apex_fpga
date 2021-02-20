@@ -532,15 +532,15 @@ proc create_root_design { parentCell } {
   # Create instance: axi_chip2chip_0_aurora8, and set properties
   set axi_chip2chip_0_aurora8 [ create_bd_cell -type ip -vlnv xilinx.com:ip:aurora_8b10b:11.1 axi_chip2chip_0_aurora8 ]
   set_property -dict [ list \
-   CONFIG.CHANNEL_ENABLE {X0Y12} \
+   CONFIG.CHANNEL_ENABLE {X0Y25} \
    CONFIG.C_AURORA_LANES {1} \
-   CONFIG.C_DRP_IF {false} \
+   CONFIG.C_DRP_IF {true} \
    CONFIG.C_LANE_WIDTH {4} \
    CONFIG.C_LINE_RATE {3.75} \
    CONFIG.C_REFCLK_FREQUENCY {250} \
-   CONFIG.C_REFCLK_SOURCE {MGTREFCLK0 of Quad X0Y3} \
-   CONFIG.C_START_LANE {X0Y12} \
-   CONFIG.C_START_QUAD {Quad_X0Y3} \
+   CONFIG.C_REFCLK_SOURCE {MGTREFCLK0 of Quad X0Y6} \
+   CONFIG.C_START_LANE {X0Y25} \
+   CONFIG.C_START_QUAD {Quad_X0Y6} \
    CONFIG.Interface_Mode {Streaming} \
    CONFIG.RX_EQ_MODE {LPM} \
    CONFIG.SINGLEEND_GTREFCLK {true} \
@@ -596,6 +596,15 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: ila_0, and set properties
+  set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
+  set_property -dict [ list \
+   CONFIG.C_ENABLE_ILA_AXI_MON {false} \
+   CONFIG.C_INPUT_PIPE_STAGES {6} \
+   CONFIG.C_MONITOR_TYPE {Native} \
+   CONFIG.C_NUM_OF_PROBES {1} \
+ ] $ila_0
+
   # Create instance: rst_clk_wiz_100M, and set properties
   set rst_clk_wiz_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_clk_wiz_100M ]
 
@@ -606,7 +615,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_INPUT_PIPE_STAGES {6} \
    CONFIG.C_MON_TYPE {MIX} \
    CONFIG.C_NUM_MONITOR_SLOTS {3} \
-   CONFIG.C_NUM_OF_PROBES {8} \
+   CONFIG.C_NUM_OF_PROBES {10} \
  ] $system_ila_0
 
   # Create instance: vio_0, and set properties
@@ -614,7 +623,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.C_EN_PROBE_IN_ACTIVITY {0} \
    CONFIG.C_NUM_PROBE_IN {0} \
-   CONFIG.C_NUM_PROBE_OUT {5} \
+   CONFIG.C_NUM_PROBE_OUT {6} \
    CONFIG.C_PROBE_OUT0_WIDTH {4} \
    CONFIG.C_PROBE_OUT2_INIT_VAL {0x1} \
    CONFIG.C_PROBE_OUT3_INIT_VAL {0x11} \
@@ -630,11 +639,12 @@ proc create_root_design { parentCell } {
    CONFIG.CONST_WIDTH {5} \
  ] $xlconstant_0
 
-  # Create instance: xlconstant_2, and set properties
-  set xlconstant_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_2 ]
+  # Create instance: xlconstant_1, and set properties
+  set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
   set_property -dict [ list \
    CONFIG.CONST_VAL {0} \
- ] $xlconstant_2
+   CONFIG.CONST_WIDTH {16} \
+ ] $xlconstant_1
 
   # Create interface connections
   connect_bd_intf_net -intf_net S00_AXI_1 [get_bd_intf_pins axi_chip2chip_0/m_axi] [get_bd_intf_pins axi_interconnect_0/S00_AXI]
@@ -658,16 +668,16 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_c2c_link_status_out]
   connect_bd_net -net axi_c2c_multi_bit_error_out [get_bd_pins axi_chip2chip_0/axi_c2c_multi_bit_error_out]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_c2c_multi_bit_error_out]
-  connect_bd_net -net axi_chip2chip_0_aurora8_channel_up [get_bd_pins axi_chip2chip_0_aurora8/channel_up] [get_bd_pins ff_util_0/d]
+  connect_bd_net -net axi_chip2chip_0_aurora8_channel_up [get_bd_pins axi_chip2chip_0_aurora8/channel_up] [get_bd_pins ff_util_0/d] [get_bd_pins system_ila_0/probe9]
+  connect_bd_net -net axi_chip2chip_0_aurora8_lane_up [get_bd_pins axi_chip2chip_0_aurora8/lane_up] [get_bd_pins system_ila_0/probe8]
   connect_bd_net -net axi_chip2chip_0_aurora8_pll_not_locked_out [get_bd_pins axi_chip2chip_0/aurora_mmcm_not_locked] [get_bd_pins axi_chip2chip_0_aurora8/pll_not_locked_out]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_chip2chip_0_aurora8_pll_not_locked_out]
-  connect_bd_net -net axi_chip2chip_0_aurora8_user_clk_out [get_bd_pins axi_chip2chip_0/axi_c2c_phy_clk] [get_bd_pins axi_chip2chip_0_aurora8/user_clk_out] [get_bd_pins ff_util_0/c]
+  connect_bd_net -net axi_chip2chip_0_aurora8_user_clk_out [get_bd_pins axi_chip2chip_0/axi_c2c_phy_clk] [get_bd_pins axi_chip2chip_0_aurora8/user_clk_out] [get_bd_pins ff_util_0/c] [get_bd_pins ila_0/clk]
   connect_bd_net -net axi_chip2chip_0_aurora_pma_init_out [get_bd_pins axi_chip2chip_0/aurora_pma_init_out] [get_bd_pins axi_chip2chip_0_aurora8/gt_reset]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_chip2chip_0_aurora_pma_init_out]
   connect_bd_net -net axi_chip2chip_0_aurora_reset_pb [get_bd_pins axi_chip2chip_0/aurora_reset_pb] [get_bd_pins axi_chip2chip_0_aurora8/reset]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_chip2chip_0_aurora_reset_pb]
   connect_bd_net -net axi_chip2chip_0_axi_c2c_lnk_hndlr_in_progress [get_bd_pins axi_chip2chip_0/axi_c2c_lnk_hndlr_in_progress] [get_bd_pins system_ila_0/probe7]
-  connect_bd_net -net c2c_dout [get_bd_pins axi_chip2chip_0_aurora8/gt_txpolarity] [get_bd_pins xlconstant_2/dout]
   connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_chip2chip_0/m_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins bram0/s_axi_aclk] [get_bd_pins bram2/s_axi_aclk] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins system_ila_0/clk] [get_bd_pins vio_0/clk]
   connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz/locked] [get_bd_pins rst_clk_wiz_100M/dcm_locked]
   connect_bd_net -net clock_BUFG_GT_O [get_bd_pins clk_wiz/clk_in1] [get_bd_pins clock/BUFG_GT_O]
@@ -695,7 +705,7 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets gt_rxnotintable]
   connect_bd_net -net gt_rxpmaresetdone [get_bd_pins axi_chip2chip_0_aurora8/gt_rxpmaresetdone]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets gt_rxpmaresetdone]
-  connect_bd_net -net gt_rxprbserr [get_bd_pins axi_chip2chip_0_aurora8/gt_rxprbserr]
+  connect_bd_net -net gt_rxprbserr [get_bd_pins axi_chip2chip_0_aurora8/gt_rxprbserr] [get_bd_pins ila_0/probe0]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets gt_rxprbserr]
   connect_bd_net -net gt_rxresetdone [get_bd_pins axi_chip2chip_0_aurora8/gt_rxresetdone]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets gt_rxresetdone]
@@ -713,8 +723,10 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   connect_bd_net -net vio_0_probe_out2 [get_bd_pins axi_chip2chip_0/m_aresetn] [get_bd_pins vio_0/probe_out2]
   connect_bd_net -net vio_0_probe_out3 [get_bd_pins bram0/delay] [get_bd_pins vio_0/probe_out3]
   connect_bd_net -net vio_0_probe_out4 [get_bd_pins bram2/delay] [get_bd_pins vio_0/probe_out4]
+  connect_bd_net -net vio_0_probe_out5 [get_bd_pins axi_chip2chip_0_aurora8/gt_txpolarity] [get_bd_pins vio_0/probe_out5]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins axi_chip2chip_0_aurora8/gt_rxlpmen] [get_bd_pins axi_chip2chip_0_aurora8/gt_txdiffctrl] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins clk_wiz/reset] [get_bd_pins clock/reset] [get_bd_pins rst_clk_wiz_100M/mb_debug_sys_rst]
+  connect_bd_net -net xlconstant_1_dout1 [get_bd_pins axi_chip2chip_0_aurora8/gt0_drpaddr] [get_bd_pins axi_chip2chip_0_aurora8/gt0_drpdi] [get_bd_pins axi_chip2chip_0_aurora8/gt0_drpen] [get_bd_pins axi_chip2chip_0_aurora8/gt0_drpwe] [get_bd_pins xlconstant_1/dout]
 
   # Create address segments
   assign_bd_address -offset 0x00000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_chip2chip_0/MAXI] [get_bd_addr_segs bram0/axi_bram_ctrl_0/S_AXI/Mem0] -force

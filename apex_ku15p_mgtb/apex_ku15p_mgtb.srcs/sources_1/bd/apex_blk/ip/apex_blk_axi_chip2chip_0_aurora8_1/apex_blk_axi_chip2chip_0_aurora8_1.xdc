@@ -52,8 +52,8 @@
 ## apex_blk_axi_chip2chip_0_aurora8_1.xdc generated for xcku15p-ffva1760-2 device
 
    # Reference clock location
-   # set_property LOC AE12 [get_ports GT_REFCLK_P]
-   # set_property LOC AE11 [get_ports GT_REFCLK_N]
+   # set_property LOC W12 [get_ports GT_REFCLK_P]
+   # set_property LOC W11 [get_ports GT_REFCLK_N]
 #### CDC Path #####
 set_false_path -to [get_pins -filter {REF_PIN_NAME=~*D} -of_objects [get_cells -hierarchical -filter {NAME =~ *apex_blk_axi_chip2chip_0_aurora8_1_cdc_to*}]]
 

@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="apex_blk" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1607980097"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1607980097"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1607980097"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1607980097"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1613346071"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1613346071"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1613346071"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1613346071"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/apex_blk_axi_chip2chip_0_0/apex_blk_axi_chip2chip_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_chip2chip_0"/>
@@ -97,14 +97,6 @@
       </File>
       <File Name="ip/apex_blk_xlconstant_0_1/apex_blk_xlconstant_0_1.xci" Type="IP">
         <Instance HierarchyPath="clock/xlconstant_5"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/apex_blk_xlconstant_0_2/apex_blk_xlconstant_0_2.xci" Type="IP">
-        <Instance HierarchyPath="xlconstant_2"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -204,6 +196,22 @@
       </File>
       <File Name="ip/apex_blk_xlslice_0_0/apex_blk_xlslice_0_0.xci" Type="IP">
         <Instance HierarchyPath="drp1/xlslice_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/apex_blk_xlconstant_0_4/apex_blk_xlconstant_0_4.xci" Type="IP">
+        <Instance HierarchyPath="xlconstant_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/apex_blk_ila_0_0/apex_blk_ila_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ila_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

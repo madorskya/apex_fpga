@@ -1,0 +1,127 @@
+{
+   "ActiveEmotionalView":"Color Coded",
+   "Addressing View_Layers":"/rst_clk_wiz_100M_peripheral_reset:false|/axi_chip2chip_0_aurora_reset_pb:false|/axi_chip2chip_0_aurora_pma_init_out:false|/Net:false|/util_ds_buf_0_IBUF_OUT1:false|/axi_chip2chip_0_aurora8_user_clk_out:false|/clk_wiz_clk_out1:false|/rst_clk_wiz_100M_peripheral_aresetn:false|/util_ds_buf_0_IBUF_OUT:false|",
+   "Addressing View_ScaleFactor":"1.0",
+   "Addressing View_TopLeft":"-476,-411",
+   "Color Coded_ExpandedHierarchyInLayout":"",
+   "Color Coded_Layers":"/rst_clk_wiz_100M_peripheral_reset:true|/axi_chip2chip_0_aurora_reset_pb:true|/axi_chip2chip_0_aurora_pma_init_out:true|/Net:true|/util_ds_buf_0_IBUF_OUT1:true|/axi_chip2chip_0_aurora8_user_clk_out:true|/clk_wiz_clk_out1:true|/rst_clk_wiz_100M_peripheral_aresetn:true|/util_ds_buf_0_IBUF_OUT:true|",
+   "Color Coded_Layout":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port drp_clk -pg 1 -lvl 6 -x 2530 -y 1080 -defaultsOSRD
+preplace port drp_en -pg 1 -lvl 6 -x 2530 -y 1200 -defaultsOSRD
+preplace port drp_rdy -pg 1 -lvl 0 -x -230 -y 1430 -defaultsOSRD
+preplace port c2c_rx_valid -pg 1 -lvl 0 -x -230 -y 990 -defaultsOSRD
+preplace port c2c_tx_ready -pg 1 -lvl 0 -x -230 -y 1010 -defaultsOSRD
+preplace port c2c_tx_tvalid -pg 1 -lvl 6 -x 2530 -y 1030 -defaultsOSRD
+preplace port c2c_mmcm_unlocked -pg 1 -lvl 0 -x -230 -y 1240 -defaultsOSRD
+preplace port c2c_channel_up -pg 1 -lvl 0 -x -230 -y 1110 -defaultsOSRD
+preplace port c2c_phy_clk -pg 1 -lvl 0 -x -230 -y 1090 -defaultsOSRD
+preplace port c2c_init_clk -pg 1 -lvl 0 -x -230 -y 1170 -defaultsOSRD
+preplace port c2c_pma_init -pg 1 -lvl 6 -x 2530 -y 390 -defaultsOSRD
+preplace portBus drp_do -pg 1 -lvl 0 -x -230 -y 1410 -defaultsOSRD
+preplace portBus drp_di -pg 1 -lvl 6 -x 2530 -y 1260 -defaultsOSRD
+preplace portBus drp_we -pg 1 -lvl 6 -x 2530 -y 1220 -defaultsOSRD
+preplace portBus drp_addr -pg 1 -lvl 6 -x 2530 -y 1240 -defaultsOSRD
+preplace portBus c2c_rx_data -pg 1 -lvl 0 -x -230 -y 970 -defaultsOSRD
+preplace portBus c2c_tx_tdata -pg 1 -lvl 6 -x 2530 -y 990 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 4 -x 1930 -y 1180 -defaultsOSRD
+preplace inst axi_chip2chip_0 -pg 1 -lvl 3 -x 1420 -y 1070 -defaultsOSRD
+preplace inst vio_0 -pg 1 -lvl 2 -x 470 -y 1970 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 3 -x 1420 -y 1380 -defaultsOSRD
+preplace inst bram0 -pg 1 -lvl 5 -x 2350 -y 640 -defaultsOSRD
+preplace inst bram2 -pg 1 -lvl 5 -x 2350 -y 1170 -defaultsOSRD
+preplace inst drp1 -pg 1 -lvl 5 -x 2350 -y 1320 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -x -10 -y 1160 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 5 -x 2350 -y 900 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 3 -x 1420 -y 490 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x -10 -y 1310 -defaultsOSRD
+preplace netloc clk_wiz_clk_out1 1 1 4 100 1030 660 890 1770 890 2140
+preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 3 2 1780 1370 2130
+preplace netloc axi_c2c_config_error_out 1 2 2 700 710 1690
+preplace netloc axi_c2c_link_status_out 1 2 2 670 1250 1670
+preplace netloc axi_c2c_multi_bit_error_out 1 2 2 710 720 1680
+preplace netloc drp_bridge_0_drp0_di 1 4 2 2170 1430 2510J
+preplace netloc drp_bridge_0_drp0_en 1 4 2 2180 1410 2480J
+preplace netloc drp_bridge_0_drp0_we 1 4 2 2190 1420 2500J
+preplace netloc drp_bridge_0_drp0_addr 1 4 2 2200 1400 2490J
+preplace netloc vio_0_probe_out2 1 2 1 620 1050n
+preplace netloc vio_0_probe_out1 1 2 1 590 430n
+preplace netloc Net_1 1 1 5 N 1160 660 1260 1720 1340 2090 550 2480J
+preplace netloc drp_do_1 1 0 5 NJ 1410 110J 1390 630J 1270 1760J 1350 2150J
+preplace netloc vio_0_probe_out3 1 2 3 610 730 1740J 670 NJ
+preplace netloc vio_0_probe_out4 1 2 3 650 1280 1700J 1360 2160J
+preplace netloc clk_wiz_locked 1 1 2 110 1380 600J
+preplace netloc drp_rdy_1 1 0 5 -200J 880 NJ 880 NJ 880 NJ 880 2120J
+preplace netloc axi_chip2chip_0_axi_c2c_lnk_hndlr_in_progress 1 3 2 1760J 1020 2120
+preplace netloc axi_c2c_aurora_rx_tvalid_0_1 1 0 3 NJ 990 NJ 990 640J
+preplace netloc axi_c2c_aurora_rx_tdata_0_1 1 0 3 NJ 970 NJ 970 650J
+preplace netloc axi_c2c_aurora_tx_tready_0_1 1 0 4 -210J 870 NJ 870 620J 870 1670
+preplace netloc axi_chip2chip_0_axi_c2c_aurora_tx_tvalid 1 2 4 710 290 1720J 540 NJ 540 2490J
+preplace netloc axi_chip2chip_0_axi_c2c_aurora_tx_tdata 1 2 4 700 280 1730J 530 NJ 530 2510J
+preplace netloc aurora_mmcm_not_locked_0_1 1 0 3 NJ 1240 NJ 1240 580J
+preplace netloc axi_c2c_aurora_channel_up_0_1 1 0 3 -190J 1070 NJ 1070 630J
+preplace netloc axi_c2c_phy_clk_0_1 1 0 3 -180J 1080 NJ 1080 600J
+preplace netloc clk_in1_0_1 1 0 1 N 1170
+preplace netloc axi_chip2chip_0_aurora_do_cc 1 2 2 690 270 1710
+preplace netloc axi_chip2chip_0_aurora_pma_init_out 1 2 4 680 690 1750 390 N 390 N
+preplace netloc axi_chip2chip_0_aurora_reset_pb 1 2 2 690 700 1700
+preplace netloc xlconstant_0_dout 1 0 3 -180 1370 90 1400 N
+preplace netloc axi_interconnect_0_M02_AXI 1 4 1 2110 800n
+preplace netloc S00_AXI_1 1 3 2 1780 760 N
+preplace netloc axi_interconnect_0_M00_AXI 1 4 1 2080 610n
+preplace netloc axi_interconnect_0_M01_AXI 1 4 1 2100 1180n
+levelinfo -pg 1 -230 -10 470 1420 1930 2350 2530
+pagesize -pg 1 -db -bbox -sgen -440 -20 2720 2260
+",
+   "Color Coded_ScaleFactor":"0.826565",
+   "Color Coded_TopLeft":"-156,171",
+   "Default View_ScaleFactor":"0.877395",
+   "Default View_TopLeft":"-103,-213",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port c2c_tx -pg 1 -lvl 6 -x 1560 -y 60 -defaultsOSRD
+preplace port c2c_rx -pg 1 -lvl 0 -x -670 -y 60 -defaultsOSRD
+preplace port clk_250 -pg 1 -lvl 0 -x -670 -y 350 -defaultsOSRD
+preplace inst axi_chip2chip_0 -pg 1 -lvl 2 -x 300 -y -310 -defaultsOSRD
+preplace inst axi_chip2chip_0_aurora8 -pg 1 -lvl 2 -x 300 -y 130 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 3 -x 790 -y -310 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 4 -x 1130 -y -310 -defaultsOSRD
+preplace inst axi_bram_ctrl_0_bram -pg 1 -lvl 5 -x 1410 -y -310 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -x -210 -y -90 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 1 -x -210 -y -320 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 1 -x -210 -y 120 -defaultsOSRD
+preplace inst util_ds_buf_0 -pg 1 -lvl 1 -x -210 -y 350 -defaultsOSRD
+preplace netloc Net 1 1 1 -10 -250n
+preplace netloc axi_chip2chip_0_aurora8_user_clk_out 1 1 2 40 -530 580J
+preplace netloc axi_chip2chip_0_aurora_reset_pb 1 1 2 30 -500 540
+preplace netloc axi_chip2chip_0_aurora8_channel_up 1 1 2 50 -490 560J
+preplace netloc axi_chip2chip_0_aurora8_pll_not_locked_out 1 1 2 20 -520 570J
+preplace netloc axi_chip2chip_0_aurora_pma_init_out 1 1 2 10 -510 550
+preplace netloc clk_wiz_clk_out1 1 0 4 -640 -420 -20 -480 610 -430 950
+preplace netloc clk_wiz_locked 1 0 2 -640 -160 -30
+preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 1 3 -10 -470 590 -440 960
+preplace netloc util_ds_buf_0_IBUF_OUT 1 0 2 -640 190 -30
+preplace netloc util_ds_buf_0_IBUF_OUT1 1 1 1 20 190n
+preplace netloc rst_clk_wiz_100M_peripheral_reset 1 1 1 0 -320n
+preplace netloc axi_chip2chip_0_aurora8_USER_DATA_M_AXI_RX 1 1 2 70 -460 530J
+preplace netloc axi_chip2chip_0_AXIS_TX 1 1 2 60 -450 520
+preplace netloc axi_chip2chip_0_aurora8_GT_SERIAL_TX 1 2 4 610 60 N 60 N 60 N
+preplace netloc GT_SERIAL_RX_1 1 0 2 -650J 50 0
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 4 1 NJ -310
+preplace netloc axi_chip2chip_0_m_axi 1 2 1 600 -390n
+preplace netloc axi_interconnect_0_M00_AXI 1 3 1 940 -330n
+preplace netloc CLK_IN_D_0_1 1 0 1 N 350
+levelinfo -pg 1 -670 -210 300 790 1130 1410 1560
+pagesize -pg 1 -db -bbox -sgen -780 -830 1660 440
+"
+}
+{
+   "da_axi4_cnt":"3",
+   "da_axi_chip2chip_cnt":"3",
+   "da_bram_cntlr_cnt":"2",
+   "da_clkrst_cnt":"2"
+}

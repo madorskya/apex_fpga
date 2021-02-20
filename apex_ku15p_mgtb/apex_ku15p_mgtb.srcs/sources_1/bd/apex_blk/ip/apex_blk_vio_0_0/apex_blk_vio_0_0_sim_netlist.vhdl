@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Mon Dec 14 14:39:36 2020
+-- Date        : Sun Feb 14 18:46:22 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/madorsky/github/apex_ku15p/apex_ku15p_mgtb/apex_ku15p_mgtb.srcs/sources_1/bd/apex_blk/ip/apex_blk_vio_0_0/apex_blk_vio_0_0_sim_netlist.vhdl
@@ -20,18 +20,17 @@ entity apex_blk_vio_0_0_vio_v3_0_19_decoder is
     in0 : out STD_LOGIC;
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \G_PROBE_OUT[0].wr_probe_out[0]_i_3_0\ : out STD_LOGIC;
+    \G_PROBE_OUT[0].wr_probe_out[0]_i_4_0\ : out STD_LOGIC;
+    s_den_o_INST_0 : out STD_LOGIC;
     int_cnt_rst_reg_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_do_i : out STD_LOGIC_VECTOR ( 15 downto 0 );
     s_rst_o : in STD_LOGIC;
     \out\ : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    s_daddr_o : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \wr_en_reg[2]_0\ : in STD_LOGIC;
+    s_daddr_o : in STD_LOGIC_VECTOR ( 16 downto 0 );
     s_den_o : in STD_LOGIC;
     s_dwe_o : in STD_LOGIC;
-    \rd_en_reg[6]_0\ : in STD_LOGIC;
-    \rd_en_reg[6]_1\ : in STD_LOGIC;
-    \rd_en_reg[6]_2\ : in STD_LOGIC;
     \addr_count_reg[1]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \Bus_data_out_reg[6]_0\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
     \Bus_data_out_reg[9]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -43,16 +42,18 @@ end apex_blk_vio_0_0_vio_v3_0_19_decoder;
 
 architecture STRUCTURE of apex_blk_vio_0_0_vio_v3_0_19_decoder is
   signal \Bus_data_out[0]_i_1_n_0\ : STD_LOGIC;
+  signal \Bus_data_out[0]_i_2_n_0\ : STD_LOGIC;
   signal \Bus_data_out[1]_i_1_n_0\ : STD_LOGIC;
-  signal \Bus_data_out[1]_i_2_n_0\ : STD_LOGIC;
   signal \Bus_data_out[2]_i_1_n_0\ : STD_LOGIC;
   signal \Bus_data_out[3]_i_1_n_0\ : STD_LOGIC;
   signal \Bus_data_out[4]_i_1_n_0\ : STD_LOGIC;
   signal \Bus_data_out[5]_i_1_n_0\ : STD_LOGIC;
   signal \Bus_data_out[6]_i_1_n_0\ : STD_LOGIC;
   signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^g_probe_out[0].wr_probe_out[0]_i_3_0\ : STD_LOGIC;
+  signal \^g_probe_out[0].wr_probe_out[0]_i_4_0\ : STD_LOGIC;
   signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal data_info_probe_in : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal data_info_probe_in : STD_LOGIC_VECTOR ( 15 downto 1 );
   signal \^in0\ : STD_LOGIC;
   signal internal_cnt_rst : STD_LOGIC;
   signal probe_out_modified : STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -60,9 +61,12 @@ architecture STRUCTURE of apex_blk_vio_0_0_vio_v3_0_19_decoder is
   signal \rd_en[6]_i_2_n_0\ : STD_LOGIC;
   signal rd_en_p1 : STD_LOGIC;
   signal rd_en_p2 : STD_LOGIC;
+  signal \^s_den_o_inst_0\ : STD_LOGIC;
   signal wr_control_reg : STD_LOGIC;
   signal \wr_en[2]_i_1_n_0\ : STD_LOGIC;
+  signal \wr_en[2]_i_2_n_0\ : STD_LOGIC;
   signal \wr_en[4]_i_1_n_0\ : STD_LOGIC;
+  signal \wr_en[4]_i_2_n_0\ : STD_LOGIC;
   signal wr_probe_out_modified : STD_LOGIC;
   signal xsdb_addr_2_0_p2 : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal xsdb_addr_8_p1 : STD_LOGIC;
@@ -80,12 +84,15 @@ architecture STRUCTURE of apex_blk_vio_0_0_vio_v3_0_19_decoder is
   attribute SOFT_HLUTNM of \Bus_data_out[8]_i_1\ : label is "soft_lutpair11";
   attribute SOFT_HLUTNM of \rd_en[6]_i_2\ : label is "soft_lutpair10";
   attribute SOFT_HLUTNM of rd_en_p1_i_1 : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \wr_en[4]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \wr_en[4]_i_2\ : label is "soft_lutpair10";
   attribute SOFT_HLUTNM of xsdb_drdy_i_1 : label is "soft_lutpair14";
 begin
   E(0) <= \^e\(0);
+  \G_PROBE_OUT[0].wr_probe_out[0]_i_3_0\ <= \^g_probe_out[0].wr_probe_out[0]_i_3_0\;
+  \G_PROBE_OUT[0].wr_probe_out[0]_i_4_0\ <= \^g_probe_out[0].wr_probe_out[0]_i_4_0\;
   SR(0) <= \^sr\(0);
   in0 <= \^in0\;
+  s_den_o_INST_0 <= \^s_den_o_inst_0\;
 \Bus_data_out[0]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
@@ -93,21 +100,21 @@ begin
         port map (
       I0 => \Bus_data_out_reg[6]_0\(0),
       I1 => xsdb_addr_8_p2,
-      I2 => data_info_probe_in(0),
+      I2 => \Bus_data_out[0]_i_2_n_0\,
       O => \Bus_data_out[0]_i_1_n_0\
     );
 \Bus_data_out[0]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"445550AA440050AA"
+      INIT => X"00000000F8C83808"
     )
         port map (
-      I0 => xsdb_addr_2_0_p2(0),
-      I1 => \Bus_data_out_reg[9]_0\(0),
-      I2 => \^in0\,
-      I3 => xsdb_addr_2_0_p2(1),
-      I4 => xsdb_addr_2_0_p2(2),
-      I5 => probe_out_modified(0),
-      O => data_info_probe_in(0)
+      I0 => probe_out_modified(0),
+      I1 => xsdb_addr_2_0_p2(2),
+      I2 => xsdb_addr_2_0_p2(1),
+      I3 => \^in0\,
+      I4 => \Bus_data_out_reg[9]_0\(0),
+      I5 => xsdb_addr_2_0_p2(0),
+      O => \Bus_data_out[0]_i_2_n_0\
     );
 \Bus_data_out[10]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -183,21 +190,21 @@ begin
         port map (
       I0 => \Bus_data_out_reg[6]_0\(1),
       I1 => xsdb_addr_8_p2,
-      I2 => \Bus_data_out[1]_i_2_n_0\,
+      I2 => data_info_probe_in(1),
       O => \Bus_data_out[1]_i_1_n_0\
     );
 \Bus_data_out[1]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000000F8C83808"
+      INIT => X"445550AA440050AA"
     )
         port map (
-      I0 => probe_out_modified(1),
-      I1 => xsdb_addr_2_0_p2(2),
-      I2 => xsdb_addr_2_0_p2(1),
-      I3 => \^sr\(0),
-      I4 => \Bus_data_out_reg[9]_0\(1),
-      I5 => xsdb_addr_2_0_p2(0),
-      O => \Bus_data_out[1]_i_2_n_0\
+      I0 => xsdb_addr_2_0_p2(0),
+      I1 => \Bus_data_out_reg[9]_0\(1),
+      I2 => \^sr\(0),
+      I3 => xsdb_addr_2_0_p2(1),
+      I4 => xsdb_addr_2_0_p2(2),
+      I5 => probe_out_modified(1),
+      O => data_info_probe_in(1)
     );
 \Bus_data_out[2]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -436,6 +443,41 @@ begin
       Q => s_do_i(9),
       R => xsdb_addr_8_p2
     );
+\G_PROBE_OUT[0].wr_probe_out[0]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0001"
+    )
+        port map (
+      I0 => s_daddr_o(9),
+      I1 => s_daddr_o(7),
+      I2 => s_daddr_o(6),
+      I3 => s_daddr_o(5),
+      O => \^g_probe_out[0].wr_probe_out[0]_i_3_0\
+    );
+\G_PROBE_OUT[0].wr_probe_out[0]_i_4\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0001"
+    )
+        port map (
+      I0 => s_daddr_o(13),
+      I1 => s_daddr_o(12),
+      I2 => s_daddr_o(11),
+      I3 => s_daddr_o(10),
+      O => \^g_probe_out[0].wr_probe_out[0]_i_4_0\
+    );
+\G_PROBE_OUT[0].wr_probe_out[0]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000010"
+    )
+        port map (
+      I0 => s_daddr_o(14),
+      I1 => s_daddr_o(15),
+      I2 => s_den_o,
+      I3 => s_daddr_o(16),
+      I4 => s_daddr_o(4),
+      I5 => s_daddr_o(3),
+      O => \^s_den_o_inst_0\
+    );
 \addr_count[1]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"EFEEEEEE"
@@ -606,9 +648,9 @@ int_cnt_rst_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \rd_en[6]_i_2_n_0\,
-      I1 => \rd_en_reg[6]_0\,
-      I2 => \rd_en_reg[6]_1\,
-      I3 => \rd_en_reg[6]_2\,
+      I1 => \^g_probe_out[0].wr_probe_out[0]_i_3_0\,
+      I2 => \^g_probe_out[0].wr_probe_out[0]_i_4_0\,
+      I3 => \^s_den_o_inst_0\,
       O => \rd_en[6]_i_1_n_0\
     );
 \rd_en[6]_i_2\: unisim.vcomponents.LUT5
@@ -620,7 +662,7 @@ int_cnt_rst_reg: unisim.vcomponents.FDRE
       I1 => s_daddr_o(1),
       I2 => s_daddr_o(2),
       I3 => s_dwe_o,
-      I4 => s_daddr_o(3),
+      I4 => s_daddr_o(8),
       O => \rd_en[6]_i_2_n_0\
     );
 rd_en_p1_i_1: unisim.vcomponents.LUT2
@@ -656,25 +698,51 @@ rd_en_p2_reg: unisim.vcomponents.FDRE
       Q => \^e\(0),
       R => '0'
     );
-\wr_en[2]_i_1\: unisim.vcomponents.LUT3
+\wr_en[2]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"10"
+      INIT => X"80000000"
     )
         port map (
-      I0 => s_daddr_o(3),
-      I1 => s_daddr_o(2),
-      I2 => s_daddr_o(1),
+      I0 => \wr_en[2]_i_2_n_0\,
+      I1 => s_dwe_o,
+      I2 => \^s_den_o_inst_0\,
+      I3 => \^g_probe_out[0].wr_probe_out[0]_i_4_0\,
+      I4 => \^g_probe_out[0].wr_probe_out[0]_i_3_0\,
       O => \wr_en[2]_i_1_n_0\
     );
-\wr_en[4]_i_1\: unisim.vcomponents.LUT3
+\wr_en[2]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"04"
+      INIT => X"0004"
     )
         port map (
-      I0 => s_daddr_o(3),
-      I1 => s_daddr_o(2),
-      I2 => s_daddr_o(1),
+      I0 => s_daddr_o(0),
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(8),
+      I3 => s_daddr_o(2),
+      O => \wr_en[2]_i_2_n_0\
+    );
+\wr_en[4]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"80000000"
+    )
+        port map (
+      I0 => \wr_en[4]_i_2_n_0\,
+      I1 => s_dwe_o,
+      I2 => \^s_den_o_inst_0\,
+      I3 => \^g_probe_out[0].wr_probe_out[0]_i_4_0\,
+      I4 => \^g_probe_out[0].wr_probe_out[0]_i_3_0\,
       O => \wr_en[4]_i_1_n_0\
+    );
+\wr_en[4]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0100"
+    )
+        port map (
+      I0 => s_daddr_o(1),
+      I1 => s_daddr_o(0),
+      I2 => s_daddr_o(8),
+      I3 => s_daddr_o(2),
+      O => \wr_en[4]_i_2_n_0\
     );
 \wr_en_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -682,7 +750,7 @@ rd_en_p2_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \wr_en[2]_i_1_n_0\,
       Q => wr_control_reg,
-      R => \wr_en_reg[2]_0\
+      R => '0'
     );
 \wr_en_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -690,7 +758,7 @@ rd_en_p2_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \wr_en[4]_i_1_n_0\,
       Q => wr_probe_out_modified,
-      R => \wr_en_reg[2]_0\
+      R => '0'
     );
 \xsdb_addr_2_0_p2_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -720,7 +788,7 @@ xsdb_addr_8_p1_reg: unisim.vcomponents.FDRE
      port map (
       C => \out\,
       CE => '1',
-      D => s_daddr_o(3),
+      D => s_daddr_o(8),
       Q => xsdb_addr_8_p1,
       R => '0'
     );
@@ -862,7 +930,7 @@ entity \apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized0\ is
     clk : in STD_LOGIC;
     \out\ : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    wr_probe_out : in STD_LOGIC_VECTOR ( 0 to 0 )
+    \G_PROBE_OUT[1].wr_probe_out_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized0\ : entity is "vio_v3_0_19_probe_out_one";
@@ -891,7 +959,7 @@ begin
     )
         port map (
       I0 => Q(0),
-      I1 => wr_probe_out(0),
+      I1 => \G_PROBE_OUT[1].wr_probe_out_reg\,
       I2 => \^data_int_reg[0]_0\,
       O => \data_int[0]_i_1_n_0\
     );
@@ -908,16 +976,71 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
+entity \apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized0_0\ is
+  port (
+    probe_out5 : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \data_int_reg[0]_0\ : out STD_LOGIC;
+    SR : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \out\ : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    \data_int_reg[0]_1\ : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \G_PROBE_OUT[5].wr_probe_out_reg\ : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized0_0\ : entity is "vio_v3_0_19_probe_out_one";
+end \apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized0_0\;
+
+architecture STRUCTURE of \apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized0_0\ is
+  signal \data_int[0]_i_1__1_n_0\ : STD_LOGIC;
+  signal \^data_int_reg[0]_0\ : STD_LOGIC;
+  attribute DONT_TOUCH : boolean;
+  attribute DONT_TOUCH of \Probe_out_reg[0]\ : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of \Probe_out_reg[0]\ : label is "yes";
+begin
+  \data_int_reg[0]_0\ <= \^data_int_reg[0]_0\;
+\Probe_out_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \out\,
+      D => \^data_int_reg[0]_0\,
+      Q => probe_out5(0),
+      R => SR(0)
+    );
+\data_int[0]_i_1__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => Q(0),
+      I1 => \G_PROBE_OUT[5].wr_probe_out_reg\,
+      I2 => \^data_int_reg[0]_0\,
+      O => \data_int[0]_i_1__1_n_0\
+    );
+\data_int_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => \data_int_reg[0]_1\,
+      CE => '1',
+      D => \data_int[0]_i_1__1_n_0\,
+      Q => \^data_int_reg[0]_0\,
+      R => SR(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
 entity \apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized1\ is
   port (
     probe_out2 : out STD_LOGIC_VECTOR ( 0 to 0 );
     \data_int_reg[0]_0\ : out STD_LOGIC;
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
-    E : in STD_LOGIC_VECTOR ( 0 to 0 );
-    clk : in STD_LOGIC;
     \out\ : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    \data_int_reg[0]_1\ : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    wr_probe_out : in STD_LOGIC_VECTOR ( 0 to 0 )
+    \G_PROBE_OUT[2].wr_probe_out_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized1\ : entity is "vio_v3_0_19_probe_out_one";
@@ -935,7 +1058,7 @@ begin
 \Probe_out_reg[0]\: unisim.vcomponents.FDSE
      port map (
       C => clk,
-      CE => E(0),
+      CE => \out\,
       D => \^data_int_reg[0]_0\,
       Q => probe_out2(0),
       S => SR(0)
@@ -946,13 +1069,13 @@ begin
     )
         port map (
       I0 => Q(0),
-      I1 => wr_probe_out(0),
+      I1 => \G_PROBE_OUT[2].wr_probe_out_reg\,
       I2 => \^data_int_reg[0]_0\,
       O => \data_int[0]_i_1__0_n_0\
     );
 \data_int_reg[0]\: unisim.vcomponents.FDSE
      port map (
-      C => \out\,
+      C => \data_int_reg[0]_1\,
       CE => '1',
       D => \data_int[0]_i_1__0_n_0\,
       Q => \^data_int_reg[0]_0\,
@@ -1284,10 +1407,10 @@ architecture STRUCTURE of apex_blk_vio_0_0_vio_v3_0_19_probe_width is
   signal p_1_in : STD_LOGIC_VECTOR ( 1 to 1 );
   signal probe_width_mem : STD_LOGIC_VECTOR ( 10 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \addr_count[0]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \addr_count[1]_i_2\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \probe_width_int[0]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \probe_width_int[2]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \addr_count[0]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \addr_count[1]_i_2\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \probe_width_int[0]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \probe_width_int[2]_i_1\ : label is "soft_lutpair20";
 begin
   Q(1 downto 0) <= \^q\(1 downto 0);
 \addr_count[0]_i_1\: unisim.vcomponents.LUT1
@@ -4386,19 +4509,18 @@ entity apex_blk_vio_0_0_vio_v3_0_19_probe_out_all is
     probe_out2 : out STD_LOGIC_VECTOR ( 0 to 0 );
     probe_out3 : out STD_LOGIC_VECTOR ( 6 downto 0 );
     probe_out4 : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    \G_PROBE_OUT[0].wr_probe_out[0]_i_5_0\ : out STD_LOGIC;
-    s_den_o_INST_0 : out STD_LOGIC;
-    \G_PROBE_OUT[0].wr_probe_out[0]_i_4_0\ : out STD_LOGIC;
-    \G_PROBE_OUT[0].wr_probe_out[0]_i_5_1\ : out STD_LOGIC;
+    probe_out5 : out STD_LOGIC_VECTOR ( 0 to 0 );
     \addr_p1_reg[2]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
     \Probe_out_reg_int_reg[6]_0\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     in0 : in STD_LOGIC;
     clk : in STD_LOGIC;
     \out\ : in STD_LOGIC;
+    s_daddr_o : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \G_PROBE_OUT[0].wr_probe_out_reg[0]_0\ : in STD_LOGIC;
+    \G_PROBE_OUT[0].wr_probe_out_reg[0]_1\ : in STD_LOGIC;
+    \G_PROBE_OUT[0].wr_probe_out_reg[0]_2\ : in STD_LOGIC;
     s_dwe_o : in STD_LOGIC;
-    s_daddr_o : in STD_LOGIC_VECTOR ( 16 downto 0 );
-    s_den_o : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -4415,15 +4537,16 @@ architecture STRUCTURE of apex_blk_vio_0_0_vio_v3_0_19_probe_out_all is
   signal \G_PROBE_OUT[0].PROBE_OUT0_INST_n_5\ : STD_LOGIC;
   signal \G_PROBE_OUT[0].PROBE_OUT0_INST_n_6\ : STD_LOGIC;
   signal \G_PROBE_OUT[0].PROBE_OUT0_INST_n_7\ : STD_LOGIC;
+  signal \G_PROBE_OUT[0].wr_probe_out[0]_i_1_n_0\ : STD_LOGIC;
   signal \G_PROBE_OUT[0].wr_probe_out[0]_i_2_n_0\ : STD_LOGIC;
-  signal \^g_probe_out[0].wr_probe_out[0]_i_4_0\ : STD_LOGIC;
-  signal \^g_probe_out[0].wr_probe_out[0]_i_5_0\ : STD_LOGIC;
-  signal \^g_probe_out[0].wr_probe_out[0]_i_5_1\ : STD_LOGIC;
+  signal \G_PROBE_OUT[0].wr_probe_out_reg\ : STD_LOGIC;
   signal \G_PROBE_OUT[1].PROBE_OUT0_INST_n_1\ : STD_LOGIC;
   signal \G_PROBE_OUT[1].wr_probe_out[1]_i_1_n_0\ : STD_LOGIC;
-  signal \G_PROBE_OUT[1].wr_probe_out[1]_i_2_n_0\ : STD_LOGIC;
+  signal \G_PROBE_OUT[1].wr_probe_out_reg\ : STD_LOGIC;
   signal \G_PROBE_OUT[2].PROBE_OUT0_INST_n_1\ : STD_LOGIC;
   signal \G_PROBE_OUT[2].wr_probe_out[2]_i_1_n_0\ : STD_LOGIC;
+  signal \G_PROBE_OUT[2].wr_probe_out[2]_i_2_n_0\ : STD_LOGIC;
+  signal \G_PROBE_OUT[2].wr_probe_out_reg\ : STD_LOGIC;
   signal \G_PROBE_OUT[3].PROBE_OUT0_INST_n_10\ : STD_LOGIC;
   signal \G_PROBE_OUT[3].PROBE_OUT0_INST_n_11\ : STD_LOGIC;
   signal \G_PROBE_OUT[3].PROBE_OUT0_INST_n_12\ : STD_LOGIC;
@@ -4433,6 +4556,7 @@ architecture STRUCTURE of apex_blk_vio_0_0_vio_v3_0_19_probe_out_all is
   signal \G_PROBE_OUT[3].PROBE_OUT0_INST_n_9\ : STD_LOGIC;
   signal \G_PROBE_OUT[3].wr_probe_out[3]_i_1_n_0\ : STD_LOGIC;
   signal \G_PROBE_OUT[3].wr_probe_out[3]_i_2_n_0\ : STD_LOGIC;
+  signal \G_PROBE_OUT[3].wr_probe_out_reg\ : STD_LOGIC;
   signal \G_PROBE_OUT[4].PROBE_OUT0_INST_n_10\ : STD_LOGIC;
   signal \G_PROBE_OUT[4].PROBE_OUT0_INST_n_11\ : STD_LOGIC;
   signal \G_PROBE_OUT[4].PROBE_OUT0_INST_n_12\ : STD_LOGIC;
@@ -4441,11 +4565,13 @@ architecture STRUCTURE of apex_blk_vio_0_0_vio_v3_0_19_probe_out_all is
   signal \G_PROBE_OUT[4].PROBE_OUT0_INST_n_8\ : STD_LOGIC;
   signal \G_PROBE_OUT[4].PROBE_OUT0_INST_n_9\ : STD_LOGIC;
   signal \G_PROBE_OUT[4].wr_probe_out[4]_i_1_n_0\ : STD_LOGIC;
+  signal \G_PROBE_OUT[4].wr_probe_out_reg\ : STD_LOGIC;
+  signal \G_PROBE_OUT[5].PROBE_OUT0_INST_n_1\ : STD_LOGIC;
+  signal \G_PROBE_OUT[5].wr_probe_out[5]_i_1_n_0\ : STD_LOGIC;
+  signal \G_PROBE_OUT[5].wr_probe_out_reg\ : STD_LOGIC;
   signal \Probe_out_reg_int[0]_i_2_n_0\ : STD_LOGIC;
   signal \^addr_p1_reg[2]_0\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal probe_out_mem : STD_LOGIC_VECTOR ( 6 downto 0 );
-  signal \^s_den_o_inst_0\ : STD_LOGIC;
-  signal wr_probe_out : STD_LOGIC_VECTOR ( 4 downto 0 );
   attribute ASYNC_REG_boolean : boolean;
   attribute ASYNC_REG_boolean of Committ_1_reg : label is std.standard.true;
   attribute KEEP : string;
@@ -4454,15 +4580,13 @@ architecture STRUCTURE of apex_blk_vio_0_0_vio_v3_0_19_probe_out_all is
   attribute KEEP of Committ_2_reg : label is "yes";
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \G_PROBE_OUT[0].wr_probe_out[0]_i_2\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \G_PROBE_OUT[1].wr_probe_out[1]_i_2\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \G_PROBE_OUT[2].wr_probe_out[2]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \G_PROBE_OUT[1].wr_probe_out[1]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \G_PROBE_OUT[2].wr_probe_out[2]_i_2\ : label is "soft_lutpair16";
   attribute SOFT_HLUTNM of \G_PROBE_OUT[3].wr_probe_out[3]_i_2\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \G_PROBE_OUT[4].wr_probe_out[4]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \G_PROBE_OUT[5].wr_probe_out[5]_i_1\ : label is "soft_lutpair18";
 begin
-  \G_PROBE_OUT[0].wr_probe_out[0]_i_4_0\ <= \^g_probe_out[0].wr_probe_out[0]_i_4_0\;
-  \G_PROBE_OUT[0].wr_probe_out[0]_i_5_0\ <= \^g_probe_out[0].wr_probe_out[0]_i_5_0\;
-  \G_PROBE_OUT[0].wr_probe_out[0]_i_5_1\ <= \^g_probe_out[0].wr_probe_out[0]_i_5_1\;
   \addr_p1_reg[2]_0\(2 downto 0) <= \^addr_p1_reg[2]_0\(2 downto 0);
-  s_den_o_INST_0 <= \^s_den_o_inst_0\;
 Committ_1_reg: unisim.vcomponents.FDRE
      port map (
       C => clk,
@@ -4481,7 +4605,7 @@ Committ_2_reg: unisim.vcomponents.FDRE
     );
 \G_PROBE_OUT[0].PROBE_OUT0_INST\: entity work.apex_blk_vio_0_0_vio_v3_0_19_probe_out_one
      port map (
-      E(0) => wr_probe_out(0),
+      E(0) => \G_PROBE_OUT[0].wr_probe_out_reg\,
       \Probe_out_reg[3]_0\(0) => Committ_2,
       Q(3) => \G_PROBE_OUT[0].PROBE_OUT0_INST_n_4\,
       Q(2) => \G_PROBE_OUT[0].PROBE_OUT0_INST_n_5\,
@@ -4493,145 +4617,109 @@ Committ_2_reg: unisim.vcomponents.FDRE
       \out\ => \out\,
       probe_out0(3 downto 0) => probe_out0(3 downto 0)
     );
-\G_PROBE_OUT[0].wr_probe_out[0]_i_1\: unisim.vcomponents.LUT5
+\G_PROBE_OUT[0].wr_probe_out[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BFFFFFFF"
+      INIT => X"BFFFFFFFFFFFFFFF"
+    )
+        port map (
+      I0 => s_daddr_o(1),
+      I1 => s_daddr_o(3),
+      I2 => \G_PROBE_OUT[0].wr_probe_out_reg[0]_0\,
+      I3 => \G_PROBE_OUT[0].wr_probe_out_reg[0]_1\,
+      I4 => \G_PROBE_OUT[0].wr_probe_out_reg[0]_2\,
+      I5 => s_dwe_o,
+      O => \G_PROBE_OUT[0].wr_probe_out[0]_i_1_n_0\
+    );
+\G_PROBE_OUT[0].wr_probe_out[0]_i_2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
     )
         port map (
       I0 => s_daddr_o(0),
-      I1 => s_dwe_o,
-      I2 => \^s_den_o_inst_0\,
-      I3 => \^g_probe_out[0].wr_probe_out[0]_i_4_0\,
-      I4 => \^g_probe_out[0].wr_probe_out[0]_i_5_1\,
-      O => \^g_probe_out[0].wr_probe_out[0]_i_5_0\
-    );
-\G_PROBE_OUT[0].wr_probe_out[0]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"04"
-    )
-        port map (
-      I0 => s_daddr_o(2),
-      I1 => s_daddr_o(8),
-      I2 => s_daddr_o(1),
+      I1 => s_daddr_o(2),
       O => \G_PROBE_OUT[0].wr_probe_out[0]_i_2_n_0\
-    );
-\G_PROBE_OUT[0].wr_probe_out[0]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000000010"
-    )
-        port map (
-      I0 => s_daddr_o(14),
-      I1 => s_daddr_o(15),
-      I2 => s_den_o,
-      I3 => s_daddr_o(16),
-      I4 => s_daddr_o(4),
-      I5 => s_daddr_o(3),
-      O => \^s_den_o_inst_0\
-    );
-\G_PROBE_OUT[0].wr_probe_out[0]_i_4\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0001"
-    )
-        port map (
-      I0 => s_daddr_o(13),
-      I1 => s_daddr_o(12),
-      I2 => s_daddr_o(11),
-      I3 => s_daddr_o(10),
-      O => \^g_probe_out[0].wr_probe_out[0]_i_4_0\
-    );
-\G_PROBE_OUT[0].wr_probe_out[0]_i_5\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0001"
-    )
-        port map (
-      I0 => s_daddr_o(9),
-      I1 => s_daddr_o(7),
-      I2 => s_daddr_o(6),
-      I3 => s_daddr_o(5),
-      O => \^g_probe_out[0].wr_probe_out[0]_i_5_1\
     );
 \G_PROBE_OUT[0].wr_probe_out_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
       CE => '1',
       D => \G_PROBE_OUT[0].wr_probe_out[0]_i_2_n_0\,
-      Q => wr_probe_out(0),
-      R => \^g_probe_out[0].wr_probe_out[0]_i_5_0\
+      Q => \G_PROBE_OUT[0].wr_probe_out_reg\,
+      R => \G_PROBE_OUT[0].wr_probe_out[0]_i_1_n_0\
     );
 \G_PROBE_OUT[1].PROBE_OUT0_INST\: entity work.\apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized0\
      port map (
       E(0) => Committ_2,
+      \G_PROBE_OUT[1].wr_probe_out_reg\ => \G_PROBE_OUT[1].wr_probe_out_reg\,
       Q(0) => Q(0),
       SR(0) => SR(0),
       clk => clk,
       \data_int_reg[0]_0\ => \G_PROBE_OUT[1].PROBE_OUT0_INST_n_1\,
       \out\ => \out\,
-      probe_out1(0) => probe_out1(0),
-      wr_probe_out(0) => wr_probe_out(1)
+      probe_out1(0) => probe_out1(0)
     );
-\G_PROBE_OUT[1].wr_probe_out[1]_i_1\: unisim.vcomponents.LUT5
+\G_PROBE_OUT[1].wr_probe_out[1]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"80000000"
+      INIT => X"2"
     )
         port map (
-      I0 => \G_PROBE_OUT[1].wr_probe_out[1]_i_2_n_0\,
-      I1 => s_dwe_o,
-      I2 => \^s_den_o_inst_0\,
-      I3 => \^g_probe_out[0].wr_probe_out[0]_i_4_0\,
-      I4 => \^g_probe_out[0].wr_probe_out[0]_i_5_1\,
+      I0 => s_daddr_o(0),
+      I1 => s_daddr_o(2),
       O => \G_PROBE_OUT[1].wr_probe_out[1]_i_1_n_0\
-    );
-\G_PROBE_OUT[1].wr_probe_out[1]_i_2\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0400"
-    )
-        port map (
-      I0 => s_daddr_o(1),
-      I1 => s_daddr_o(0),
-      I2 => s_daddr_o(2),
-      I3 => s_daddr_o(8),
-      O => \G_PROBE_OUT[1].wr_probe_out[1]_i_2_n_0\
     );
 \G_PROBE_OUT[1].wr_probe_out_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
       CE => '1',
       D => \G_PROBE_OUT[1].wr_probe_out[1]_i_1_n_0\,
-      Q => wr_probe_out(1),
-      R => '0'
+      Q => \G_PROBE_OUT[1].wr_probe_out_reg\,
+      R => \G_PROBE_OUT[0].wr_probe_out[0]_i_1_n_0\
     );
 \G_PROBE_OUT[2].PROBE_OUT0_INST\: entity work.\apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized1\
      port map (
-      E(0) => Committ_2,
+      \G_PROBE_OUT[2].wr_probe_out_reg\ => \G_PROBE_OUT[2].wr_probe_out_reg\,
       Q(0) => Q(0),
       SR(0) => SR(0),
       clk => clk,
       \data_int_reg[0]_0\ => \G_PROBE_OUT[2].PROBE_OUT0_INST_n_1\,
-      \out\ => \out\,
-      probe_out2(0) => probe_out2(0),
-      wr_probe_out(0) => wr_probe_out(2)
+      \data_int_reg[0]_1\ => \out\,
+      \out\ => Committ_2,
+      probe_out2(0) => probe_out2(0)
     );
-\G_PROBE_OUT[2].wr_probe_out[2]_i_1\: unisim.vcomponents.LUT3
+\G_PROBE_OUT[2].wr_probe_out[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"40"
+      INIT => X"8000000000000000"
+    )
+        port map (
+      I0 => \G_PROBE_OUT[2].wr_probe_out[2]_i_2_n_0\,
+      I1 => s_daddr_o(3),
+      I2 => \G_PROBE_OUT[0].wr_probe_out_reg[0]_0\,
+      I3 => \G_PROBE_OUT[0].wr_probe_out_reg[0]_1\,
+      I4 => \G_PROBE_OUT[0].wr_probe_out_reg[0]_2\,
+      I5 => s_dwe_o,
+      O => \G_PROBE_OUT[2].wr_probe_out[2]_i_1_n_0\
+    );
+\G_PROBE_OUT[2].wr_probe_out[2]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"04"
     )
         port map (
       I0 => s_daddr_o(2),
-      I1 => s_daddr_o(8),
-      I2 => s_daddr_o(1),
-      O => \G_PROBE_OUT[2].wr_probe_out[2]_i_1_n_0\
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
+      O => \G_PROBE_OUT[2].wr_probe_out[2]_i_2_n_0\
     );
 \G_PROBE_OUT[2].wr_probe_out_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
       CE => '1',
       D => \G_PROBE_OUT[2].wr_probe_out[2]_i_1_n_0\,
-      Q => wr_probe_out(2),
-      R => \^g_probe_out[0].wr_probe_out[0]_i_5_0\
+      Q => \G_PROBE_OUT[2].wr_probe_out_reg\,
+      R => '0'
     );
 \G_PROBE_OUT[3].PROBE_OUT0_INST\: entity work.\apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized2\
      port map (
-      E(0) => wr_probe_out(3),
+      E(0) => \G_PROBE_OUT[3].wr_probe_out_reg\,
       \Probe_out_reg[6]_0\ => Committ_2,
       Q(6) => \G_PROBE_OUT[3].PROBE_OUT0_INST_n_7\,
       Q(5) => \G_PROBE_OUT[3].PROBE_OUT0_INST_n_8\,
@@ -4646,27 +4734,27 @@ Committ_2_reg: unisim.vcomponents.FDRE
       \out\ => \out\,
       probe_out3(6 downto 0) => probe_out3(6 downto 0)
     );
-\G_PROBE_OUT[3].wr_probe_out[3]_i_1\: unisim.vcomponents.LUT5
+\G_PROBE_OUT[3].wr_probe_out[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"80000000"
+      INIT => X"8000000000000000"
     )
         port map (
       I0 => \G_PROBE_OUT[3].wr_probe_out[3]_i_2_n_0\,
-      I1 => s_dwe_o,
-      I2 => \^s_den_o_inst_0\,
-      I3 => \^g_probe_out[0].wr_probe_out[0]_i_4_0\,
-      I4 => \^g_probe_out[0].wr_probe_out[0]_i_5_1\,
+      I1 => s_daddr_o(3),
+      I2 => \G_PROBE_OUT[0].wr_probe_out_reg[0]_0\,
+      I3 => \G_PROBE_OUT[0].wr_probe_out_reg[0]_1\,
+      I4 => \G_PROBE_OUT[0].wr_probe_out_reg[0]_2\,
+      I5 => s_dwe_o,
       O => \G_PROBE_OUT[3].wr_probe_out[3]_i_1_n_0\
     );
-\G_PROBE_OUT[3].wr_probe_out[3]_i_2\: unisim.vcomponents.LUT4
+\G_PROBE_OUT[3].wr_probe_out[3]_i_2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"0800"
+      INIT => X"40"
     )
         port map (
-      I0 => s_daddr_o(1),
-      I1 => s_daddr_o(0),
-      I2 => s_daddr_o(2),
-      I3 => s_daddr_o(8),
+      I0 => s_daddr_o(2),
+      I1 => s_daddr_o(1),
+      I2 => s_daddr_o(0),
       O => \G_PROBE_OUT[3].wr_probe_out[3]_i_2_n_0\
     );
 \G_PROBE_OUT[3].wr_probe_out_reg[3]\: unisim.vcomponents.FDRE
@@ -4674,12 +4762,12 @@ Committ_2_reg: unisim.vcomponents.FDRE
       C => \out\,
       CE => '1',
       D => \G_PROBE_OUT[3].wr_probe_out[3]_i_1_n_0\,
-      Q => wr_probe_out(3),
+      Q => \G_PROBE_OUT[3].wr_probe_out_reg\,
       R => '0'
     );
 \G_PROBE_OUT[4].PROBE_OUT0_INST\: entity work.\apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized3\
      port map (
-      E(0) => wr_probe_out(4),
+      E(0) => \G_PROBE_OUT[4].wr_probe_out_reg\,
       \Probe_out_reg[6]_0\ => Committ_2,
       Q(6) => \G_PROBE_OUT[4].PROBE_OUT0_INST_n_7\,
       Q(5) => \G_PROBE_OUT[4].PROBE_OUT0_INST_n_8\,
@@ -4694,14 +4782,13 @@ Committ_2_reg: unisim.vcomponents.FDRE
       \out\ => \out\,
       probe_out4(6 downto 0) => probe_out4(6 downto 0)
     );
-\G_PROBE_OUT[4].wr_probe_out[4]_i_1\: unisim.vcomponents.LUT3
+\G_PROBE_OUT[4].wr_probe_out[4]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"08"
+      INIT => X"2"
     )
         port map (
-      I0 => s_daddr_o(8),
-      I1 => s_daddr_o(2),
-      I2 => s_daddr_o(1),
+      I0 => s_daddr_o(2),
+      I1 => s_daddr_o(0),
       O => \G_PROBE_OUT[4].wr_probe_out[4]_i_1_n_0\
     );
 \G_PROBE_OUT[4].wr_probe_out_reg[4]\: unisim.vcomponents.FDRE
@@ -4709,17 +4796,47 @@ Committ_2_reg: unisim.vcomponents.FDRE
       C => \out\,
       CE => '1',
       D => \G_PROBE_OUT[4].wr_probe_out[4]_i_1_n_0\,
-      Q => wr_probe_out(4),
-      R => \^g_probe_out[0].wr_probe_out[0]_i_5_0\
+      Q => \G_PROBE_OUT[4].wr_probe_out_reg\,
+      R => \G_PROBE_OUT[0].wr_probe_out[0]_i_1_n_0\
     );
-\Probe_out_reg_int[0]_i_1\: unisim.vcomponents.LUT3
+\G_PROBE_OUT[5].PROBE_OUT0_INST\: entity work.\apex_blk_vio_0_0_vio_v3_0_19_probe_out_one__parameterized0_0\
+     port map (
+      \G_PROBE_OUT[5].wr_probe_out_reg\ => \G_PROBE_OUT[5].wr_probe_out_reg\,
+      Q(0) => Q(0),
+      SR(0) => SR(0),
+      clk => clk,
+      \data_int_reg[0]_0\ => \G_PROBE_OUT[5].PROBE_OUT0_INST_n_1\,
+      \data_int_reg[0]_1\ => \out\,
+      \out\ => Committ_2,
+      probe_out5(0) => probe_out5(0)
+    );
+\G_PROBE_OUT[5].wr_probe_out[5]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"B8"
+      INIT => X"8"
     )
         port map (
-      I0 => \G_PROBE_OUT[4].PROBE_OUT0_INST_n_13\,
-      I1 => \^addr_p1_reg[2]_0\(2),
-      I2 => \Probe_out_reg_int[0]_i_2_n_0\,
+      I0 => s_daddr_o(0),
+      I1 => s_daddr_o(2),
+      O => \G_PROBE_OUT[5].wr_probe_out[5]_i_1_n_0\
+    );
+\G_PROBE_OUT[5].wr_probe_out_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => '1',
+      D => \G_PROBE_OUT[5].wr_probe_out[5]_i_1_n_0\,
+      Q => \G_PROBE_OUT[5].wr_probe_out_reg\,
+      R => \G_PROBE_OUT[0].wr_probe_out[0]_i_1_n_0\
+    );
+\Probe_out_reg_int[0]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"B8FFB800"
+    )
+        port map (
+      I0 => \G_PROBE_OUT[5].PROBE_OUT0_INST_n_1\,
+      I1 => \^addr_p1_reg[2]_0\(0),
+      I2 => \G_PROBE_OUT[4].PROBE_OUT0_INST_n_13\,
+      I3 => \^addr_p1_reg[2]_0\(2),
+      I4 => \Probe_out_reg_int[0]_i_2_n_0\,
       O => probe_out_mem(0)
     );
 \Probe_out_reg_int[0]_i_2\: unisim.vcomponents.LUT6
@@ -4737,7 +4854,7 @@ Committ_2_reg: unisim.vcomponents.FDRE
     );
 \Probe_out_reg_int[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B888B88888BB8888"
+      INIT => X"3000300088BB8888"
     )
         port map (
       I0 => \G_PROBE_OUT[4].PROBE_OUT0_INST_n_12\,
@@ -4750,7 +4867,7 @@ Committ_2_reg: unisim.vcomponents.FDRE
     );
 \Probe_out_reg_int[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B888B88888BB8888"
+      INIT => X"3000300088BB8888"
     )
         port map (
       I0 => \G_PROBE_OUT[4].PROBE_OUT0_INST_n_11\,
@@ -4763,7 +4880,7 @@ Committ_2_reg: unisim.vcomponents.FDRE
     );
 \Probe_out_reg_int[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B888B88888BB8888"
+      INIT => X"3000300088BB8888"
     )
         port map (
       I0 => \G_PROBE_OUT[4].PROBE_OUT0_INST_n_10\,
@@ -4776,7 +4893,7 @@ Committ_2_reg: unisim.vcomponents.FDRE
     );
 \Probe_out_reg_int[4]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"B8888888"
+      INIT => X"30008888"
     )
         port map (
       I0 => \G_PROBE_OUT[4].PROBE_OUT0_INST_n_9\,
@@ -4788,7 +4905,7 @@ Committ_2_reg: unisim.vcomponents.FDRE
     );
 \Probe_out_reg_int[5]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"B8888888"
+      INIT => X"30008888"
     )
         port map (
       I0 => \G_PROBE_OUT[4].PROBE_OUT0_INST_n_8\,
@@ -4800,7 +4917,7 @@ Committ_2_reg: unisim.vcomponents.FDRE
     );
 \Probe_out_reg_int[6]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"B8888888"
+      INIT => X"30008888"
     )
         port map (
       I0 => \G_PROBE_OUT[4].PROBE_OUT0_INST_n_7\,
@@ -5450,7 +5567,7 @@ entity apex_blk_vio_0_0_vio_v3_0_19_vio is
   attribute C_NUM_PROBE_IN : integer;
   attribute C_NUM_PROBE_IN of apex_blk_vio_0_0_vio_v3_0_19_vio : entity is 0;
   attribute C_NUM_PROBE_OUT : integer;
-  attribute C_NUM_PROBE_OUT of apex_blk_vio_0_0_vio_v3_0_19_vio : entity is 5;
+  attribute C_NUM_PROBE_OUT of apex_blk_vio_0_0_vio_v3_0_19_vio : entity is 6;
   attribute C_PIPE_IFACE : integer;
   attribute C_PIPE_IFACE of apex_blk_vio_0_0_vio_v3_0_19_vio : entity is 0;
   attribute C_PROBE_IN0_WIDTH : integer;
@@ -8036,7 +8153,7 @@ entity apex_blk_vio_0_0_vio_v3_0_19_vio is
   attribute LC_TOTAL_PROBE_IN_WIDTH : integer;
   attribute LC_TOTAL_PROBE_IN_WIDTH of apex_blk_vio_0_0_vio_v3_0_19_vio : entity is 0;
   attribute LC_TOTAL_PROBE_OUT_WIDTH : integer;
-  attribute LC_TOTAL_PROBE_OUT_WIDTH of apex_blk_vio_0_0_vio_v3_0_19_vio : entity is 20;
+  attribute LC_TOTAL_PROBE_OUT_WIDTH of apex_blk_vio_0_0_vio_v3_0_19_vio : entity is 21;
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of apex_blk_vio_0_0_vio_v3_0_19_vio : entity is "vio_v3_0_19_vio";
   attribute dont_touch : string;
@@ -8046,17 +8163,16 @@ end apex_blk_vio_0_0_vio_v3_0_19_vio;
 architecture STRUCTURE of apex_blk_vio_0_0_vio_v3_0_19_vio is
   signal \<const0>\ : STD_LOGIC;
   signal DECODER_INST_n_4 : STD_LOGIC;
-  signal PROBE_OUT_ALL_INST_n_20 : STD_LOGIC;
-  signal PROBE_OUT_ALL_INST_n_21 : STD_LOGIC;
-  signal PROBE_OUT_ALL_INST_n_22 : STD_LOGIC;
-  signal PROBE_OUT_ALL_INST_n_23 : STD_LOGIC;
+  signal DECODER_INST_n_5 : STD_LOGIC;
+  signal DECODER_INST_n_6 : STD_LOGIC;
+  signal DECODER_INST_n_7 : STD_LOGIC;
+  signal PROBE_OUT_ALL_INST_n_24 : STD_LOGIC;
+  signal PROBE_OUT_ALL_INST_n_25 : STD_LOGIC;
+  signal PROBE_OUT_ALL_INST_n_26 : STD_LOGIC;
   signal PROBE_OUT_ALL_INST_n_27 : STD_LOGIC;
   signal PROBE_OUT_ALL_INST_n_28 : STD_LOGIC;
   signal PROBE_OUT_ALL_INST_n_29 : STD_LOGIC;
   signal PROBE_OUT_ALL_INST_n_30 : STD_LOGIC;
-  signal PROBE_OUT_ALL_INST_n_31 : STD_LOGIC;
-  signal PROBE_OUT_ALL_INST_n_32 : STD_LOGIC;
-  signal PROBE_OUT_ALL_INST_n_33 : STD_LOGIC;
   signal addr_count : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal bus_addr : STD_LOGIC_VECTOR ( 16 downto 0 );
   signal bus_clk : STD_LOGIC;
@@ -8303,7 +8419,6 @@ begin
   probe_out47(0) <= \<const0>\;
   probe_out48(0) <= \<const0>\;
   probe_out49(0) <= \<const0>\;
-  probe_out5(0) <= \<const0>\;
   probe_out50(0) <= \<const0>\;
   probe_out51(0) <= \<const0>\;
   probe_out52(0) <= \<const0>\;
@@ -8360,16 +8475,18 @@ begin
   probe_out99(0) <= \<const0>\;
 DECODER_INST: entity work.apex_blk_vio_0_0_vio_v3_0_19_decoder
      port map (
-      \Bus_data_out_reg[6]_0\(6) => PROBE_OUT_ALL_INST_n_27,
-      \Bus_data_out_reg[6]_0\(5) => PROBE_OUT_ALL_INST_n_28,
-      \Bus_data_out_reg[6]_0\(4) => PROBE_OUT_ALL_INST_n_29,
-      \Bus_data_out_reg[6]_0\(3) => PROBE_OUT_ALL_INST_n_30,
-      \Bus_data_out_reg[6]_0\(2) => PROBE_OUT_ALL_INST_n_31,
-      \Bus_data_out_reg[6]_0\(1) => PROBE_OUT_ALL_INST_n_32,
-      \Bus_data_out_reg[6]_0\(0) => PROBE_OUT_ALL_INST_n_33,
+      \Bus_data_out_reg[6]_0\(6) => PROBE_OUT_ALL_INST_n_24,
+      \Bus_data_out_reg[6]_0\(5) => PROBE_OUT_ALL_INST_n_25,
+      \Bus_data_out_reg[6]_0\(4) => PROBE_OUT_ALL_INST_n_26,
+      \Bus_data_out_reg[6]_0\(3) => PROBE_OUT_ALL_INST_n_27,
+      \Bus_data_out_reg[6]_0\(2) => PROBE_OUT_ALL_INST_n_28,
+      \Bus_data_out_reg[6]_0\(1) => PROBE_OUT_ALL_INST_n_29,
+      \Bus_data_out_reg[6]_0\(0) => PROBE_OUT_ALL_INST_n_30,
       \Bus_data_out_reg[9]_0\(3) => probe_width_int(10),
       \Bus_data_out_reg[9]_0\(2 downto 0) => probe_width_int(2 downto 0),
       E(0) => rd_probe_out_width,
+      \G_PROBE_OUT[0].wr_probe_out[0]_i_3_0\ => DECODER_INST_n_4,
+      \G_PROBE_OUT[0].wr_probe_out[0]_i_4_0\ => DECODER_INST_n_5,
       Q(15) => \bus_data_int_reg_n_0_[15]\,
       Q(14) => \bus_data_int_reg_n_0_[14]\,
       Q(13) => \bus_data_int_reg_n_0_[13]\,
@@ -8389,19 +8506,15 @@ DECODER_INST: entity work.apex_blk_vio_0_0_vio_v3_0_19_decoder
       SR(0) => clear,
       \addr_count_reg[1]\(1 downto 0) => addr_count(1 downto 0),
       in0 => committ,
-      int_cnt_rst_reg_0(0) => DECODER_INST_n_4,
+      int_cnt_rst_reg_0(0) => DECODER_INST_n_7,
       \out\ => bus_clk,
-      \rd_en_reg[6]_0\ => PROBE_OUT_ALL_INST_n_23,
-      \rd_en_reg[6]_1\ => PROBE_OUT_ALL_INST_n_22,
-      \rd_en_reg[6]_2\ => PROBE_OUT_ALL_INST_n_21,
-      s_daddr_o(3) => bus_addr(8),
-      s_daddr_o(2 downto 0) => bus_addr(2 downto 0),
+      s_daddr_o(16 downto 0) => bus_addr(16 downto 0),
       s_den_o => bus_den,
+      s_den_o_INST_0 => DECODER_INST_n_6,
       s_do_i(15 downto 0) => bus_do(15 downto 0),
       s_drdy_i => bus_drdy,
       s_dwe_o => bus_dwe,
       s_rst_o => bus_rst,
-      \wr_en_reg[2]_0\ => PROBE_OUT_ALL_INST_n_20,
       \xsdb_addr_2_0_p2_reg[2]_0\(2 downto 0) => xsdb_addr_2_0_p1(2 downto 0)
     );
 GND: unisim.vcomponents.GND
@@ -8410,16 +8523,16 @@ GND: unisim.vcomponents.GND
     );
 PROBE_OUT_ALL_INST: entity work.apex_blk_vio_0_0_vio_v3_0_19_probe_out_all
      port map (
-      \G_PROBE_OUT[0].wr_probe_out[0]_i_4_0\ => PROBE_OUT_ALL_INST_n_22,
-      \G_PROBE_OUT[0].wr_probe_out[0]_i_5_0\ => PROBE_OUT_ALL_INST_n_20,
-      \G_PROBE_OUT[0].wr_probe_out[0]_i_5_1\ => PROBE_OUT_ALL_INST_n_23,
-      \Probe_out_reg_int_reg[6]_0\(6) => PROBE_OUT_ALL_INST_n_27,
-      \Probe_out_reg_int_reg[6]_0\(5) => PROBE_OUT_ALL_INST_n_28,
-      \Probe_out_reg_int_reg[6]_0\(4) => PROBE_OUT_ALL_INST_n_29,
-      \Probe_out_reg_int_reg[6]_0\(3) => PROBE_OUT_ALL_INST_n_30,
-      \Probe_out_reg_int_reg[6]_0\(2) => PROBE_OUT_ALL_INST_n_31,
-      \Probe_out_reg_int_reg[6]_0\(1) => PROBE_OUT_ALL_INST_n_32,
-      \Probe_out_reg_int_reg[6]_0\(0) => PROBE_OUT_ALL_INST_n_33,
+      \G_PROBE_OUT[0].wr_probe_out_reg[0]_0\ => DECODER_INST_n_4,
+      \G_PROBE_OUT[0].wr_probe_out_reg[0]_1\ => DECODER_INST_n_5,
+      \G_PROBE_OUT[0].wr_probe_out_reg[0]_2\ => DECODER_INST_n_6,
+      \Probe_out_reg_int_reg[6]_0\(6) => PROBE_OUT_ALL_INST_n_24,
+      \Probe_out_reg_int_reg[6]_0\(5) => PROBE_OUT_ALL_INST_n_25,
+      \Probe_out_reg_int_reg[6]_0\(4) => PROBE_OUT_ALL_INST_n_26,
+      \Probe_out_reg_int_reg[6]_0\(3) => PROBE_OUT_ALL_INST_n_27,
+      \Probe_out_reg_int_reg[6]_0\(2) => PROBE_OUT_ALL_INST_n_28,
+      \Probe_out_reg_int_reg[6]_0\(1) => PROBE_OUT_ALL_INST_n_29,
+      \Probe_out_reg_int_reg[6]_0\(0) => PROBE_OUT_ALL_INST_n_30,
       Q(6) => \bus_data_int_reg_n_0_[6]\,
       Q(5) => \bus_data_int_reg_n_0_[5]\,
       Q(4) => \bus_data_int_reg_n_0_[4]\,
@@ -8437,9 +8550,9 @@ PROBE_OUT_ALL_INST: entity work.apex_blk_vio_0_0_vio_v3_0_19_probe_out_all
       probe_out2(0) => probe_out2(0),
       probe_out3(6 downto 0) => probe_out3(6 downto 0),
       probe_out4(6 downto 0) => probe_out4(6 downto 0),
-      s_daddr_o(16 downto 0) => bus_addr(16 downto 0),
-      s_den_o => bus_den,
-      s_den_o_INST_0 => PROBE_OUT_ALL_INST_n_21,
+      probe_out5(0) => probe_out5(0),
+      s_daddr_o(3) => bus_addr(8),
+      s_daddr_o(2 downto 0) => bus_addr(2 downto 0),
       s_dwe_o => bus_dwe
     );
 PROBE_OUT_WIDTH_INST: entity work.apex_blk_vio_0_0_vio_v3_0_19_probe_width
@@ -8447,7 +8560,7 @@ PROBE_OUT_WIDTH_INST: entity work.apex_blk_vio_0_0_vio_v3_0_19_probe_width
       CLK => bus_clk,
       E(0) => rd_probe_out_width,
       Q(1 downto 0) => addr_count(1 downto 0),
-      SR(0) => DECODER_INST_n_4,
+      SR(0) => DECODER_INST_n_7,
       \probe_width_int_reg[10]_0\(3) => probe_width_int(10),
       \probe_width_int_reg[10]_0\(2 downto 0) => probe_width_int(2 downto 0)
     );
@@ -8604,7 +8717,8 @@ entity apex_blk_vio_0_0 is
     probe_out1 : out STD_LOGIC_VECTOR ( 0 to 0 );
     probe_out2 : out STD_LOGIC_VECTOR ( 0 to 0 );
     probe_out3 : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    probe_out4 : out STD_LOGIC_VECTOR ( 6 downto 0 )
+    probe_out4 : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    probe_out5 : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of apex_blk_vio_0_0 : entity is true;
@@ -8811,7 +8925,6 @@ architecture STRUCTURE of apex_blk_vio_0_0 is
   signal NLW_inst_probe_out47_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_inst_probe_out48_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_inst_probe_out49_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_inst_probe_out5_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_inst_probe_out50_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_inst_probe_out51_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_inst_probe_out52_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -8904,7 +9017,7 @@ architecture STRUCTURE of apex_blk_vio_0_0 is
   attribute C_NUM_PROBE_IN : integer;
   attribute C_NUM_PROBE_IN of inst : label is 0;
   attribute C_NUM_PROBE_OUT : integer;
-  attribute C_NUM_PROBE_OUT of inst : label is 5;
+  attribute C_NUM_PROBE_OUT of inst : label is 6;
   attribute C_PIPE_IFACE : integer;
   attribute C_PIPE_IFACE of inst : label is 0;
   attribute C_PROBE_IN0_WIDTH : integer;
@@ -11494,7 +11607,7 @@ architecture STRUCTURE of apex_blk_vio_0_0 is
   attribute LC_TOTAL_PROBE_IN_WIDTH : integer;
   attribute LC_TOTAL_PROBE_IN_WIDTH of inst : label is 0;
   attribute LC_TOTAL_PROBE_OUT_WIDTH : integer;
-  attribute LC_TOTAL_PROBE_OUT_WIDTH of inst : label is 20;
+  attribute LC_TOTAL_PROBE_OUT_WIDTH of inst : label is 21;
   attribute syn_noprune : string;
   attribute syn_noprune of inst : label is "1";
 begin
@@ -11958,7 +12071,7 @@ inst: entity work.apex_blk_vio_0_0_vio_v3_0_19_vio
       probe_out47(0) => NLW_inst_probe_out47_UNCONNECTED(0),
       probe_out48(0) => NLW_inst_probe_out48_UNCONNECTED(0),
       probe_out49(0) => NLW_inst_probe_out49_UNCONNECTED(0),
-      probe_out5(0) => NLW_inst_probe_out5_UNCONNECTED(0),
+      probe_out5(0) => probe_out5(0),
       probe_out50(0) => NLW_inst_probe_out50_UNCONNECTED(0),
       probe_out51(0) => NLW_inst_probe_out51_UNCONNECTED(0),
       probe_out52(0) => NLW_inst_probe_out52_UNCONNECTED(0),
