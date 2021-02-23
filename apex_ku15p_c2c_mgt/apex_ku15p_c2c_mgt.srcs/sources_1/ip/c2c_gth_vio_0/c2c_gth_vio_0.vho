@@ -65,6 +65,7 @@ COMPONENT c2c_gth_vio_0
     probe_in7 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_in8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_in9 : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    probe_in10 : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     probe_out0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_out1 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_out2 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
@@ -94,6 +95,7 @@ your_instance_name : c2c_gth_vio_0
     probe_in7 => probe_in7,
     probe_in8 => probe_in8,
     probe_in9 => probe_in9,
+    probe_in10 => probe_in10,
     probe_out0 => probe_out0,
     probe_out1 => probe_out1,
     probe_out2 => probe_out2,

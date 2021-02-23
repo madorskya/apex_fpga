@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Fri Feb 19 17:26:22 2021
+// Date        : Fri Feb 19 17:26:20 2021
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
-// Command     : write_verilog -force -mode funcsim
-//               /home/madorsky/github/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/sources_1/bd/apex_blk/ip/apex_blk_auto_us_0/apex_blk_auto_us_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top apex_blk_auto_us_0 -prefix
+//               apex_blk_auto_us_0_ apex_blk_auto_us_0_sim_netlist.v
 // Design      : apex_blk_auto_us_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -352,7 +352,6 @@ module apex_blk_auto_us_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_a_upsizer" *) 
 module apex_blk_auto_us_0_axi_dwidth_converter_v2_1_21_a_upsizer
    (\USE_WRITE.wr_cmd_valid ,
     \USE_FF_OUT.USE_RTL_OUTPUT_PIPELINE.M_MESG_Q_reg[28] ,
@@ -780,7 +779,6 @@ module apex_blk_auto_us_0_axi_dwidth_converter_v2_1_21_a_upsizer__parameterized0
         .valid_Write(valid_Write));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_axi_upsizer" *) 
 module apex_blk_auto_us_0_axi_dwidth_converter_v2_1_21_axi_upsizer
    (m_axi_awvalid,
     wrap_buffer_available_reg,
@@ -1321,7 +1319,6 @@ module apex_blk_auto_us_0_axi_dwidth_converter_v2_1_21_axi_upsizer
         .s_axi_awvalid(s_axi_awvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_r_upsizer" *) 
 module apex_blk_auto_us_0_axi_dwidth_converter_v2_1_21_r_upsizer
    (\USE_RTL_LENGTH.first_mi_word_q ,
     first_word,
@@ -2489,8 +2486,8 @@ endmodule
 (* C_RATIO = "0" *) (* C_RATIO_LOG = "0" *) (* C_SUPPORTS_ID = "1" *) 
 (* C_SYNCHRONIZER_STAGE = "3" *) (* C_S_AXI_ACLK_RATIO = "1" *) (* C_S_AXI_BYTES_LOG = "2" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_S_AXI_ID_WIDTH = "6" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_top" *) (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) 
-(* P_AXILITE = "2" *) (* P_CONVERSION = "2" *) (* P_MAX_SPLIT_BEATS = "16" *) 
+(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
+(* P_CONVERSION = "2" *) (* P_MAX_SPLIT_BEATS = "16" *) 
 module apex_blk_auto_us_0_axi_dwidth_converter_v2_1_21_top
    (s_axi_aclk,
     s_axi_aresetn,
@@ -2777,7 +2774,6 @@ module apex_blk_auto_us_0_axi_dwidth_converter_v2_1_21_top
         .wrap_buffer_available_reg(s_axi_rlast));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_w_upsizer" *) 
 module apex_blk_auto_us_0_axi_dwidth_converter_v2_1_21_w_upsizer
    (\USE_REGISTER.M_AXI_WVALID_q_reg_0 ,
     s_axi_aresetn,
@@ -5057,7 +5053,6 @@ module apex_blk_auto_us_0_axi_dwidth_converter_v2_1_21_w_upsizer
         .R(s_axi_aresetn));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_21_axi_register_slice" *) 
 module apex_blk_auto_us_0_axi_register_slice_v2_1_21_axi_register_slice
    (m_axi_rready,
     mr_rvalid,
@@ -9544,7 +9539,6 @@ module apex_blk_auto_us_0_axi_register_slice_v2_1_21_axic_register_slice__parame
         .R(\aresetn_d_reg[0]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "generic_baseblocks_v2_1_0_command_fifo" *) 
 module apex_blk_auto_us_0_generic_baseblocks_v2_1_0_command_fifo
    (\USE_RTL_VALID_WRITE.buffer_Full_q ,
     valid_Write,

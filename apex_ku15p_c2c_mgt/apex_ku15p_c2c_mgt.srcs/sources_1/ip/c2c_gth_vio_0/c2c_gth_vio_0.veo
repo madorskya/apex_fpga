@@ -66,6 +66,7 @@ c2c_gth_vio_0 your_instance_name (
   .probe_in7(probe_in7),    // input wire [0 : 0] probe_in7
   .probe_in8(probe_in8),    // input wire [0 : 0] probe_in8
   .probe_in9(probe_in9),    // input wire [1 : 0] probe_in9
+  .probe_in10(probe_in10),  // input wire [1 : 0] probe_in10
   .probe_out0(probe_out0),  // output wire [0 : 0] probe_out0
   .probe_out1(probe_out1),  // output wire [0 : 0] probe_out1
   .probe_out2(probe_out2),  // output wire [0 : 0] probe_out2

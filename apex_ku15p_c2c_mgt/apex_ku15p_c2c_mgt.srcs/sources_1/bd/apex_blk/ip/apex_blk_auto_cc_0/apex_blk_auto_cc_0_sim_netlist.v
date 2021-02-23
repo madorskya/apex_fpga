@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Fri Feb 19 17:26:06 2021
+// Date        : Fri Feb 19 17:26:04 2021
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
-// Command     : write_verilog -force -mode funcsim
-//               /home/madorsky/github/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/sources_1/bd/apex_blk/ip/apex_blk_auto_cc_0/apex_blk_auto_cc_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top apex_blk_auto_cc_0 -prefix
+//               apex_blk_auto_cc_0_ apex_blk_auto_cc_0_sim_netlist.v
 // Design      : apex_blk_auto_cc_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -485,10 +485,10 @@ endmodule
 (* C_WDATA_WIDTH = "64" *) (* C_WID_RIGHT = "73" *) (* C_WID_WIDTH = "0" *) 
 (* C_WLAST_RIGHT = "0" *) (* C_WLAST_WIDTH = "1" *) (* C_WSTRB_RIGHT = "1" *) 
 (* C_WSTRB_WIDTH = "8" *) (* C_WUSER_RIGHT = "0" *) (* C_WUSER_WIDTH = "0" *) 
-(* C_W_WIDTH = "73" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_clock_converter_v2_1_20_axi_clock_converter" *) 
-(* P_ACLK_RATIO = "2" *) (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) 
-(* P_AXILITE = "2" *) (* P_FULLY_REG = "1" *) (* P_LIGHT_WT = "0" *) 
-(* P_LUTRAM_ASYNC = "12" *) (* P_ROUNDING_OFFSET = "0" *) (* P_SI_LT_MI = "1'b0" *) 
+(* C_W_WIDTH = "73" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* P_ACLK_RATIO = "2" *) 
+(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
+(* P_FULLY_REG = "1" *) (* P_LIGHT_WT = "0" *) (* P_LUTRAM_ASYNC = "12" *) 
+(* P_ROUNDING_OFFSET = "0" *) (* P_SI_LT_MI = "1'b0" *) 
 module apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axi_clock_converter
    (s_axi_aclk,
     s_axi_aresetn,
@@ -877,7 +877,6 @@ module apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axi_clock_converter
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_clock_converter_v2_1_20_axic_sample_cycle_ratio" *) 
 module apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axic_sample_cycle_ratio
    (slow_aclk_div2,
     posedge_finder_second,
@@ -988,7 +987,6 @@ module apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axic_sample_cycle_ratio
         .O(\FSM_sequential_gen_sync_clock_converter.state_reg[1] ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_clock_converter_v2_1_20_axic_sync_clock_converter" *) 
 module apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axic_sync_clock_converter
    (m_axi_arvalid,
     s_axi_arready,

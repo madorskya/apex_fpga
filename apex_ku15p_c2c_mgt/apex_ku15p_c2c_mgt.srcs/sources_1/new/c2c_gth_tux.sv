@@ -479,6 +479,7 @@ module c2c_gth_tux
     .o_out  (link_down_latched_reset_sync)
   );
 
+    wire sm_link = 1'b1; // just to make example logic happy
   // Reset the latched link down indicator when the synchronized latched link down reset signal is high. Otherwise, set
   // the latched link down indicator upon losing link. This indicator is available for user reference.
   always @(posedge hb_gtwiz_reset_clk_freerun_buf_int) begin
@@ -748,6 +749,8 @@ module c2c_gth_tux
     ,.probe_in7 (gtwiz_reset_tx_done_vio_sync)
     ,.probe_in8 (gtwiz_reset_rx_done_vio_sync)
     ,.probe_in9 (rxprbserr_vio_sync)
+    ,.probe_in10 (rxbyteisaligned_int)
+    
     ,.probe_out0 (hb_gtwiz_reset_all_vio_int)
     ,.probe_out1 (hb0_gtwiz_reset_tx_pll_and_datapath_int)
     ,.probe_out2 (hb0_gtwiz_reset_tx_datapath_int)
@@ -872,12 +875,12 @@ module c2c_gth_tux
 // using channel 1 
 
 assign c2c_channel_up    = ch1_rxbyteisaligned_int;
-assign c2c_mmcm_unlocked = ~ch1_rxbyteisaligned_int;
+assign c2c_mmcm_unlocked = 1'b0;
 assign c2c_init_clk      = mgtrefclk_odiv2; // 250M clock directly from refclk buffer
 assign c2c_phy_clk       = gtwiz_userclk_tx_usrclk2_int;
   
 assign c2c_rx_data  = hb1_gtwiz_userdata_rx_int; 
-assign c2c_rx_valid = ch1_rxctrl2_int[3:0] == 4'b0;
+assign c2c_rx_valid = (ch1_rxctrl2_int[3:0] == 4'b0) && (ch1_rxbyteisaligned_int == 1'b1);
   
 assign c2c_tx_ready = 1'b1; // always ready
 assign hb1_gtwiz_userdata_tx_int = c2c_tx_tvalid == 1'b1 ? c2c_tx_tdata : 32'h000050bc; // send IDLE when invalid

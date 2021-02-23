@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Fri Feb 19 17:26:14 2021
+// Date        : Fri Feb 19 17:26:12 2021
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
-// Command     : write_verilog -force -mode funcsim
-//               /home/madorsky/github/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/sources_1/bd/apex_blk/ip/apex_blk_auto_ds_1/apex_blk_auto_ds_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top apex_blk_auto_ds_1 -prefix
+//               apex_blk_auto_ds_1_ apex_blk_auto_ds_1_sim_netlist.v
 // Design      : apex_blk_auto_ds_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -342,7 +342,6 @@ module apex_blk_auto_ds_1
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_data_fifo_v2_1_20_axic_fifo" *) 
 module apex_blk_auto_ds_1_axi_data_fifo_v2_1_20_axic_fifo
    (dout,
     full,
@@ -990,7 +989,6 @@ module apex_blk_auto_ds_1_axi_data_fifo_v2_1_20_axic_fifo__parameterized0__xdcDu
         .wrap_need_to_split_q(wrap_need_to_split_q));
 endmodule
 
-(* ORIG_REF_NAME = "axi_data_fifo_v2_1_20_fifo_gen" *) 
 module apex_blk_auto_ds_1_axi_data_fifo_v2_1_20_fifo_gen
    (dout,
     full,
@@ -5732,7 +5730,6 @@ module apex_blk_auto_ds_1_axi_data_fifo_v2_1_20_fifo_gen__parameterized0__xdcDup
         .O(s_axi_wready_INST_0_i_1_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_a_downsizer" *) 
 module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_a_downsizer
    (dout,
     empty,
@@ -10784,7 +10781,6 @@ module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_a_downsizer__parameterize
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_axi_downsizer" *) 
 module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_axi_downsizer
    (s_axi_rvalid,
     E,
@@ -11178,7 +11174,6 @@ module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_axi_downsizer
         .\goreg_dm.dout_i_reg[9] (\goreg_dm.dout_i_reg[9] ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_b_downsizer" *) 
 module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_b_downsizer
    (rd_en,
     s_axi_bvalid,
@@ -11483,7 +11478,6 @@ module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_b_downsizer
         .O(s_axi_bvalid_INST_0_i_2_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_r_downsizer" *) 
 module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_r_downsizer
    (first_mi_word,
     rd_en,
@@ -12197,8 +12191,8 @@ endmodule
 (* C_RATIO = "2" *) (* C_RATIO_LOG = "1" *) (* C_SUPPORTS_ID = "0" *) 
 (* C_SYNCHRONIZER_STAGE = "3" *) (* C_S_AXI_ACLK_RATIO = "1" *) (* C_S_AXI_BYTES_LOG = "3" *) 
 (* C_S_AXI_DATA_WIDTH = "64" *) (* C_S_AXI_ID_WIDTH = "1" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_top" *) (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) 
-(* P_AXILITE = "2" *) (* P_CONVERSION = "2" *) (* P_MAX_SPLIT_BEATS = "256" *) 
+(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
+(* P_CONVERSION = "2" *) (* P_MAX_SPLIT_BEATS = "256" *) 
 module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_top
    (s_axi_aclk,
     s_axi_aresetn,
@@ -12511,7 +12505,6 @@ module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_top
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_w_downsizer" *) 
 module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_w_downsizer
    (first_mi_word,
     \goreg_dm.dout_i_reg[9] ,
@@ -12769,9 +12762,8 @@ module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_w_downsizer
 endmodule
 
 (* DEF_VAL = "1'b0" *) (* DEST_SYNC_FF = "2" *) (* INIT_SYNC_FF = "0" *) 
-(* INV_DEF_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_cdc_async_rst" *) (* RST_ACTIVE_HIGH = "1" *) 
-(* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "true" *) 
-(* xpm_cdc = "ASYNC_RST" *) 
+(* INV_DEF_VAL = "1'b1" *) (* RST_ACTIVE_HIGH = "1" *) (* VERSION = "0" *) 
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "true" *) (* xpm_cdc = "ASYNC_RST" *) 
 module apex_blk_auto_ds_1_xpm_cdc_async_rst
    (src_arst,
     dest_clk,
@@ -12891,7 +12883,6 @@ module apex_blk_auto_ds_1_xpm_cdc_async_rst__4
         .Q(arststages_ff[1]));
 endmodule
 
-(* ORIG_REF_NAME = "dmem" *) 
 module apex_blk_auto_ds_1_dmem
    (dout_i,
     clk,
@@ -13616,7 +13607,6 @@ module apex_blk_auto_ds_1_dmem__parameterized0_10
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
 module apex_blk_auto_ds_1_fifo_generator_ramfifo
    (empty,
     full,
@@ -13862,7 +13852,6 @@ module apex_blk_auto_ds_1_fifo_generator_ramfifo__parameterized0__xdcDup__1
         .rst(rst));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_top" *) 
 module apex_blk_auto_ds_1_fifo_generator_top
    (empty,
     full,
@@ -14046,7 +14035,7 @@ endmodule
 (* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "1" *) (* C_WR_PNTR_WIDTH = "5" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "10" *) (* C_WR_PNTR_WIDTH_RACH = "4" *) (* C_WR_PNTR_WIDTH_RDCH = "10" *) 
 (* C_WR_PNTR_WIDTH_WACH = "4" *) (* C_WR_PNTR_WIDTH_WDCH = "10" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_2_5" *) 
+(* C_WR_RESPONSE_LATENCY = "1" *) 
 module apex_blk_auto_ds_1_fifo_generator_v13_2_5
    (backup,
     backup_marker,
@@ -17459,7 +17448,6 @@ module apex_blk_auto_ds_1_fifo_generator_v13_2_5__parameterized0__xdcDup__1
         .wr_en(wr_en));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_v13_2_5_synth" *) 
 module apex_blk_auto_ds_1_fifo_generator_v13_2_5_synth
    (empty,
     full,
@@ -17576,7 +17564,6 @@ module apex_blk_auto_ds_1_fifo_generator_v13_2_5_synth__parameterized0__xdcDup__
         .wr_en(wr_en));
 endmodule
 
-(* ORIG_REF_NAME = "memory" *) 
 module apex_blk_auto_ds_1_memory
    (dout,
     E,
@@ -18141,7 +18128,6 @@ module apex_blk_auto_ds_1_memory__parameterized0_9
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "rd_bin_cntr" *) 
 module apex_blk_auto_ds_1_rd_bin_cntr
    (Q,
     \gc0.count_d1_reg[4]_0 ,
@@ -18564,7 +18550,6 @@ module apex_blk_auto_ds_1_rd_bin_cntr_6
         .Q(Q[4]));
 endmodule
 
-(* ORIG_REF_NAME = "rd_fwft" *) 
 module apex_blk_auto_ds_1_rd_fwft
    (out,
     empty,
@@ -19119,7 +19104,6 @@ module apex_blk_auto_ds_1_rd_fwft_4
         .Q(user_valid));
 endmodule
 
-(* ORIG_REF_NAME = "rd_logic" *) 
 module apex_blk_auto_ds_1_rd_logic
    (out,
     \gpregsm1.curr_fwft_state_reg[1] ,
@@ -19296,7 +19280,6 @@ module apex_blk_auto_ds_1_rd_logic_7
         .\gc0.count_d1_reg[4]_0 (\gc0.count_d1_reg[4] ));
 endmodule
 
-(* ORIG_REF_NAME = "rd_status_flags_ss" *) 
 module apex_blk_auto_ds_1_rd_status_flags_ss
    (out,
     ram_empty_i_reg_0,
@@ -19422,7 +19405,6 @@ module apex_blk_auto_ds_1_rd_status_flags_ss_5
         .Q(ram_empty_i));
 endmodule
 
-(* ORIG_REF_NAME = "reset_blk_ramfifo" *) 
 module apex_blk_auto_ds_1_reset_blk_ramfifo
    (E,
     AR,
@@ -19788,7 +19770,6 @@ module apex_blk_auto_ds_1_reset_blk_ramfifo__xdcDup__2
         .src_arst(rst));
 endmodule
 
-(* ORIG_REF_NAME = "wr_bin_cntr" *) 
 module apex_blk_auto_ds_1_wr_bin_cntr
    (ram_full_comb,
     ram_full_fb_i_reg,
@@ -20523,7 +20504,6 @@ module apex_blk_auto_ds_1_wr_bin_cntr_3
         .O(ram_full_fb_i_i_3_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "wr_logic" *) 
 module apex_blk_auto_ds_1_wr_logic
    (full,
     ram_full_fb_i_reg,
@@ -20709,7 +20689,6 @@ module apex_blk_auto_ds_1_wr_logic_8
         .wr_en(wr_en));
 endmodule
 
-(* ORIG_REF_NAME = "wr_status_flags_ss" *) 
 module apex_blk_auto_ds_1_wr_status_flags_ss
    (out,
     full,

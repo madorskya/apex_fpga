@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Fri Feb 19 17:26:06 2021
+-- Date        : Fri Feb 19 17:26:05 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
--- Command     : write_vhdl -force -mode funcsim
---               /home/madorsky/github/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/sources_1/bd/apex_blk/ip/apex_blk_auto_cc_0/apex_blk_auto_cc_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top apex_blk_auto_cc_0 -prefix
+--               apex_blk_auto_cc_0_ apex_blk_auto_cc_0_sim_netlist.vhdl
 -- Design      : apex_blk_auto_cc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -29,8 +29,6 @@ entity apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axic_sample_cycle_ratio is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_sync_clock_converter.state\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axic_sample_cycle_ratio : entity is "axi_clock_converter_v2_1_20_axic_sample_cycle_ratio";
 end apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axic_sample_cycle_ratio;
 
 architecture STRUCTURE of apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axic_sample_cycle_ratio is
@@ -157,8 +155,6 @@ entity apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axic_sync_clock_converter 
     \gen_sync_clock_converter.m_aresetn_r\ : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 46 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axic_sync_clock_converter : entity is "axi_clock_converter_v2_1_20_axic_sync_clock_converter";
 end apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axic_sync_clock_converter;
 
 architecture STRUCTURE of apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axic_sync_clock_converter is
@@ -6241,8 +6237,6 @@ entity apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axi_clock_converter is
   attribute C_W_WIDTH of apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axi_clock_converter : entity is 73;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axi_clock_converter : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axi_clock_converter : entity is "axi_clock_converter_v2_1_20_axi_clock_converter";
   attribute P_ACLK_RATIO : integer;
   attribute P_ACLK_RATIO of apex_blk_auto_cc_0_axi_clock_converter_v2_1_20_axi_clock_converter : entity is 2;
   attribute P_AXI3 : integer;
