@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Tue Feb 23 11:45:48 2021
+//Date        : Tue Feb 23 15:27:43 2021
 //Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 //Command     : generate_target apex_blk.bd
 //Design      : apex_blk
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "apex_blk,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=apex_blk,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=30,numReposBlks=22,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_axi_chip2chip_cnt=3,da_bram_cntlr_cnt=2,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "apex_blk.hwdef" *) 
+(* CORE_GENERATION_INFO = "apex_blk,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=apex_blk,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=29,numReposBlks=21,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_axi_chip2chip_cnt=3,da_bram_cntlr_cnt=2,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "apex_blk.hwdef" *) 
 module apex_blk
    (c2c_channel_up,
     c2c_init_clk,
@@ -185,9 +185,9 @@ module apex_blk
   (* CONN_BUS_INFO = "axi_interconnect_0_M02_AXI xilinx.com:interface:aximm:1.0 AXI4 WREADY" *) (* DONT_TOUCH *) wire axi_interconnect_0_M02_AXI_WREADY;
   (* CONN_BUS_INFO = "axi_interconnect_0_M02_AXI xilinx.com:interface:aximm:1.0 AXI4 WSTRB" *) (* DONT_TOUCH *) wire [3:0]axi_interconnect_0_M02_AXI_WSTRB;
   (* CONN_BUS_INFO = "axi_interconnect_0_M02_AXI xilinx.com:interface:aximm:1.0 AXI4 WVALID" *) (* DONT_TOUCH *) wire axi_interconnect_0_M02_AXI_WVALID;
-  wire [0:0]axi_resetn;
   wire [6:0]bram1_delay;
   wire [6:0]bram2_delay;
+  wire c2c_gth_example_bit_0_o_out;
   wire [0:0]channel_up;
   wire clk_in1_0_1;
   wire clk_wiz_clk_out1;
@@ -198,9 +198,6 @@ module apex_blk
   wire [7:0]drp_bridge_0_drp0_we;
   wire [63:0]drp_do_1;
   wire drp_rdy_1;
-  wire [31:0]freq_meter_0_final0;
-  wire [31:0]freq_meter_0_final1;
-  wire [31:0]freq_meter_0_final2;
   wire [0:0]rst_clk_wiz_100M_peripheral_aresetn;
   wire [0:0]xlconstant_0_dout;
 
@@ -241,7 +238,7 @@ module apex_blk
         .axi_c2c_phy_clk(axi_c2c_phy_clk_0_1),
         .axi_c2c_s2m_intr_in({1'b0,1'b0,1'b0,1'b0}),
         .m_aclk(clk_wiz_clk_out1),
-        .m_aresetn(axi_resetn),
+        .m_aresetn(c2c_gth_example_bit_0_o_out),
         .m_axi_araddr(S00_AXI_1_ARADDR),
         .m_axi_arburst(S00_AXI_1_ARBURST),
         .m_axi_arid(S00_AXI_1_ARID),
@@ -474,6 +471,10 @@ module apex_blk
         .delay(bram2_delay),
         .s_axi_aclk(clk_wiz_clk_out1),
         .s_axi_aresetn(rst_clk_wiz_100M_peripheral_aresetn));
+  apex_blk_c2c_gth_example_bit_0_0 c2c_gth_example_bit_0
+       (.clk_in(clk_wiz_clk_out1),
+        .i_in(channel_up),
+        .o_out(c2c_gth_example_bit_0_o_out));
   apex_blk_clk_wiz_0 clk_wiz
        (.clk_in1(clk_in1_0_1),
         .clk_out1(clk_wiz_clk_out1),
@@ -519,14 +520,6 @@ module apex_blk
         .drp_en(drp_bridge_0_drp0_en),
         .drp_we(drp_bridge_0_drp0_we),
         .probe0(rst_clk_wiz_100M_peripheral_aresetn));
-  apex_blk_freq_meter_0_0 freq_meter_0
-       (.f1(clk_wiz_clk_out1),
-        .f2(Net_1),
-        .f3(axi_c2c_phy_clk_0_1),
-        .final1(freq_meter_0_final1),
-        .final2(freq_meter_0_final2),
-        .final3(freq_meter_0_final0),
-        .ref_clk(clk_in1_0_1));
   apex_blk_ila_0_0 ila_0
        (.clk(axi_c2c_phy_clk_0_1),
         .probe0(axi_c2c_aurora_rx_tdata_0_1),
@@ -651,14 +644,8 @@ module apex_blk
        (.clk(axi_c2c_phy_clk_0_1),
         .probe_out0(channel_up),
         .probe_out1(aurora_pma_init),
-        .probe_out2(axi_resetn),
         .probe_out3(bram1_delay),
         .probe_out4(bram2_delay));
-  apex_blk_vio_1_0 vio_1
-       (.clk(clk_in1_0_1),
-        .probe_in0(freq_meter_0_final0),
-        .probe_in1(freq_meter_0_final1),
-        .probe_in2(freq_meter_0_final2));
   apex_blk_xlconstant_0_5 xlconstant_0
        (.dout(xlconstant_0_dout));
 endmodule

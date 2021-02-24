@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="apex_blk" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1614098757"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1614098757"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1614098757"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1614098757"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1614112072"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1614112072"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1614112072"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1614112072"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/apex_blk_axi_chip2chip_0_0/apex_blk_axi_chip2chip_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_chip2chip_0"/>
@@ -143,16 +143,19 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/apex_blk_freq_meter_0_0/apex_blk_freq_meter_0_0.xci" Type="IP">
-        <Instance HierarchyPath="freq_meter_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+      <File Name="synth/apex_blk.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
+      </File>
+      <File Name="sim/apex_blk.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/apex_blk_vio_1_0/apex_blk_vio_1_0.xci" Type="IP">
-        <Instance HierarchyPath="vio_1"/>
+      <File Name="ip/apex_blk_c2c_gth_example_bit_0_0/apex_blk_c2c_gth_example_bit_0_0.xci" Type="IP">
+        <Instance HierarchyPath="c2c_gth_example_bit_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -189,17 +192,6 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="synth/apex_blk.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="sim/apex_blk.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="apex_blk_ooc.xdc" Type="XDC">

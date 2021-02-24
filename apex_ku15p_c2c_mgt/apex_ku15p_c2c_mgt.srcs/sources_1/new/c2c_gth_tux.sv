@@ -878,6 +878,7 @@ assign c2c_channel_up    = ch1_rxbyteisaligned_int;
 assign c2c_mmcm_unlocked = 1'b0;
 assign c2c_init_clk      = mgtrefclk_odiv2; // 250M clock directly from refclk buffer
 assign c2c_phy_clk       = gtwiz_userclk_tx_usrclk2_int;
+
   
 assign c2c_rx_data  = hb1_gtwiz_userdata_rx_int; 
 assign c2c_rx_valid = (ch1_rxctrl2_int[3:0] == 4'b0) && (ch1_rxbyteisaligned_int == 1'b1);
