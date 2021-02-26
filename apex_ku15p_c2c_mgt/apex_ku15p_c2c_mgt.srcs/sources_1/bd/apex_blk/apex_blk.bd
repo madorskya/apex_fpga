@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xDEEF5FE78B58183E",
+      "boundary_crc": "0x222E76B9F1F13600",
       "device": "xcku15p-ffva1760-2-e",
       "name": "apex_blk",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -198,6 +198,19 @@
             "value_src": "const_prop"
           }
         }
+      },
+      "c2c_do_cc": {
+        "direction": "O"
+      },
+      "c2c_rxbufstatus": {
+        "direction": "I",
+        "left": "2",
+        "right": "0"
+      },
+      "c2c_rxclkcorcnt": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
       }
     },
     "components": {
@@ -502,16 +515,16 @@
               }
             },
             "interface_nets": {
-              "auto_ds_to_m00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_ds/M_AXI"
-                ]
-              },
               "m00_couplers_to_auto_ds": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_ds/S_AXI"
+                ]
+              },
+              "auto_ds_to_m00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_ds/M_AXI"
                 ]
               }
             },
@@ -592,16 +605,16 @@
               }
             },
             "interface_nets": {
-              "auto_cc_to_m01_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_cc/M_AXI"
-                ]
-              },
               "m01_couplers_to_auto_cc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_cc/S_AXI"
+                ]
+              },
+              "auto_cc_to_m01_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_cc/M_AXI"
                 ]
               }
             },
@@ -732,10 +745,10 @@
           }
         },
         "interface_nets": {
-          "m00_couplers_to_axi_interconnect_0": {
+          "xbar_to_m02_couplers": {
             "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
+              "xbar/M02_AXI",
+              "m02_couplers/S_AXI"
             ]
           },
           "m01_couplers_to_axi_interconnect_0": {
@@ -750,10 +763,10 @@
               "m00_couplers/S_AXI"
             ]
           },
-          "s00_couplers_to_xbar": {
+          "axi_interconnect_0_to_s00_couplers": {
             "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           },
           "xbar_to_m01_couplers": {
@@ -762,22 +775,22 @@
               "m01_couplers/S_AXI"
             ]
           },
-          "axi_interconnect_0_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
-          "xbar_to_m02_couplers": {
-            "interface_ports": [
-              "xbar/M02_AXI",
-              "m02_couplers/S_AXI"
-            ]
-          },
           "m02_couplers_to_axi_interconnect_0": {
             "interface_ports": [
               "M02_AXI",
               "m02_couplers/M_AXI"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
+            ]
+          },
+          "m00_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
             ]
           }
         },
@@ -1469,7 +1482,13 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "15"
+            "value": "17"
+          },
+          "C_PROBE15_WIDTH": {
+            "value": "3"
+          },
+          "C_PROBE16_WIDTH": {
+            "value": "2"
           }
         }
       },
@@ -1780,7 +1799,8 @@
       "axi_chip2chip_0_aurora_do_cc": {
         "ports": [
           "axi_chip2chip_0/aurora_do_cc",
-          "ila_0/probe8"
+          "ila_0/probe8",
+          "c2c_do_cc"
         ]
       },
       "axi_chip2chip_0_aurora_pma_init_out": {
@@ -1816,6 +1836,18 @@
         "ports": [
           "c2c_gth_example_bit_0/o_out",
           "axi_chip2chip_0/m_aresetn"
+        ]
+      },
+      "c2c_rxbufstatus": {
+        "ports": [
+          "c2c_rxbufstatus",
+          "ila_0/probe15"
+        ]
+      },
+      "c2c_rxclkcorcnt": {
+        "ports": [
+          "c2c_rxclkcorcnt",
+          "ila_0/probe16"
         ]
       }
     },

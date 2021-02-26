@@ -74,6 +74,7 @@ COMPONENT c2c_gth
     gtrxreset_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     gttxreset_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     rx8b10ben_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxbufreset_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     rxcommadeten_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     rxlpmen_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     rxmcommaalignen_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -103,9 +104,11 @@ COMPONENT c2c_gth
     gthtxn_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     gthtxp_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     gtpowergood_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxbufstatus_out : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
     rxbyteisaligned_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     rxbyterealign_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     rxcdrlock_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxclkcorcnt_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     rxcommadet_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     rxctrl0_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     rxctrl1_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -149,6 +152,7 @@ your_instance_name : c2c_gth
     gtrxreset_in => gtrxreset_in,
     gttxreset_in => gttxreset_in,
     rx8b10ben_in => rx8b10ben_in,
+    rxbufreset_in => rxbufreset_in,
     rxcommadeten_in => rxcommadeten_in,
     rxlpmen_in => rxlpmen_in,
     rxmcommaalignen_in => rxmcommaalignen_in,
@@ -178,9 +182,11 @@ your_instance_name : c2c_gth
     gthtxn_out => gthtxn_out,
     gthtxp_out => gthtxp_out,
     gtpowergood_out => gtpowergood_out,
+    rxbufstatus_out => rxbufstatus_out,
     rxbyteisaligned_out => rxbyteisaligned_out,
     rxbyterealign_out => rxbyterealign_out,
     rxcdrlock_out => rxcdrlock_out,
+    rxclkcorcnt_out => rxclkcorcnt_out,
     rxcommadet_out => rxcommadet_out,
     rxctrl0_out => rxctrl0_out,
     rxctrl1_out => rxctrl1_out,

@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Fri Feb 19 16:11:40 2021
+-- Date        : Wed Feb 24 11:11:55 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/madorsky/github/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/sources_1/ip/c2c_gth/c2c_gth_sim_netlist.vhdl
@@ -8257,24 +8257,24 @@ BUFG_GT_SYNC_1: unisim.vcomponents.BUFG_GT_SYNC
       CKCAL2_CFG_4 => B"0000000000000000",
       CKCAL_RSVD0 => X"0080",
       CKCAL_RSVD1 => X"0400",
-      CLK_CORRECT_USE => "FALSE",
+      CLK_CORRECT_USE => "TRUE",
       CLK_COR_KEEP_IDLE => "FALSE",
-      CLK_COR_MAX_LAT => 12,
-      CLK_COR_MIN_LAT => 8,
+      CLK_COR_MAX_LAT => 31,
+      CLK_COR_MIN_LAT => 24,
       CLK_COR_PRECEDENCE => "TRUE",
       CLK_COR_REPEAT_WAIT => 0,
-      CLK_COR_SEQ_1_1 => B"0100000000",
-      CLK_COR_SEQ_1_2 => B"0100000000",
-      CLK_COR_SEQ_1_3 => B"0100000000",
-      CLK_COR_SEQ_1_4 => B"0100000000",
+      CLK_COR_SEQ_1_1 => B"0100011100",
+      CLK_COR_SEQ_1_2 => B"0000000010",
+      CLK_COR_SEQ_1_3 => B"0000000011",
+      CLK_COR_SEQ_1_4 => B"0000000100",
       CLK_COR_SEQ_1_ENABLE => B"1111",
-      CLK_COR_SEQ_2_1 => B"0100000000",
-      CLK_COR_SEQ_2_2 => B"0100000000",
-      CLK_COR_SEQ_2_3 => B"0100000000",
-      CLK_COR_SEQ_2_4 => B"0100000000",
+      CLK_COR_SEQ_2_1 => B"0000000000",
+      CLK_COR_SEQ_2_2 => B"0000000000",
+      CLK_COR_SEQ_2_3 => B"0000000000",
+      CLK_COR_SEQ_2_4 => B"0000000000",
       CLK_COR_SEQ_2_ENABLE => B"1111",
       CLK_COR_SEQ_2_USE => "FALSE",
-      CLK_COR_SEQ_LEN => 1,
+      CLK_COR_SEQ_LEN => 4,
       CPLL_CFG0 => X"0FFA",
       CPLL_CFG1 => X"0021",
       CPLL_CFG2 => X"0202",
@@ -8382,7 +8382,7 @@ BUFG_GT_SYNC_1: unisim.vcomponents.BUFG_GT_SYNC
       RTX_BUF_CML_CTRL => B"010",
       RTX_BUF_TERM_CTRL => B"00",
       RXBUFRESET_TIME => B"00011",
-      RXBUF_ADDR_MODE => "FAST",
+      RXBUF_ADDR_MODE => "FULL",
       RXBUF_EIDLE_HI_CNT => B"1000",
       RXBUF_EIDLE_LO_CNT => B"0000",
       RXBUF_EN => "TRUE",
@@ -8390,9 +8390,9 @@ BUFG_GT_SYNC_1: unisim.vcomponents.BUFG_GT_SYNC
       RXBUF_RESET_ON_COMMAALIGN => "FALSE",
       RXBUF_RESET_ON_EIDLE => "FALSE",
       RXBUF_RESET_ON_RATE_CHANGE => "TRUE",
-      RXBUF_THRESH_OVFLW => 57,
-      RXBUF_THRESH_OVRD => "TRUE",
-      RXBUF_THRESH_UNDFLW => 3,
+      RXBUF_THRESH_OVFLW => 0,
+      RXBUF_THRESH_OVRD => "FALSE",
+      RXBUF_THRESH_UNDFLW => 4,
       RXCDRFREQRESET_TIME => B"00001",
       RXCDRPHRESET_TIME => B"00001",
       RXCDR_CFG0 => X"0003",
@@ -9108,24 +9108,24 @@ BUFG_GT_SYNC_1: unisim.vcomponents.BUFG_GT_SYNC
       CKCAL2_CFG_4 => B"0000000000000000",
       CKCAL_RSVD0 => X"0080",
       CKCAL_RSVD1 => X"0400",
-      CLK_CORRECT_USE => "FALSE",
+      CLK_CORRECT_USE => "TRUE",
       CLK_COR_KEEP_IDLE => "FALSE",
-      CLK_COR_MAX_LAT => 12,
-      CLK_COR_MIN_LAT => 8,
+      CLK_COR_MAX_LAT => 31,
+      CLK_COR_MIN_LAT => 24,
       CLK_COR_PRECEDENCE => "TRUE",
       CLK_COR_REPEAT_WAIT => 0,
-      CLK_COR_SEQ_1_1 => B"0100000000",
-      CLK_COR_SEQ_1_2 => B"0100000000",
-      CLK_COR_SEQ_1_3 => B"0100000000",
-      CLK_COR_SEQ_1_4 => B"0100000000",
+      CLK_COR_SEQ_1_1 => B"0100011100",
+      CLK_COR_SEQ_1_2 => B"0000000010",
+      CLK_COR_SEQ_1_3 => B"0000000011",
+      CLK_COR_SEQ_1_4 => B"0000000100",
       CLK_COR_SEQ_1_ENABLE => B"1111",
-      CLK_COR_SEQ_2_1 => B"0100000000",
-      CLK_COR_SEQ_2_2 => B"0100000000",
-      CLK_COR_SEQ_2_3 => B"0100000000",
-      CLK_COR_SEQ_2_4 => B"0100000000",
+      CLK_COR_SEQ_2_1 => B"0000000000",
+      CLK_COR_SEQ_2_2 => B"0000000000",
+      CLK_COR_SEQ_2_3 => B"0000000000",
+      CLK_COR_SEQ_2_4 => B"0000000000",
       CLK_COR_SEQ_2_ENABLE => B"1111",
       CLK_COR_SEQ_2_USE => "FALSE",
-      CLK_COR_SEQ_LEN => 1,
+      CLK_COR_SEQ_LEN => 4,
       CPLL_CFG0 => X"0FFA",
       CPLL_CFG1 => X"0021",
       CPLL_CFG2 => X"0202",
@@ -9233,7 +9233,7 @@ BUFG_GT_SYNC_1: unisim.vcomponents.BUFG_GT_SYNC
       RTX_BUF_CML_CTRL => B"010",
       RTX_BUF_TERM_CTRL => B"00",
       RXBUFRESET_TIME => B"00011",
-      RXBUF_ADDR_MODE => "FAST",
+      RXBUF_ADDR_MODE => "FULL",
       RXBUF_EIDLE_HI_CNT => B"1000",
       RXBUF_EIDLE_LO_CNT => B"0000",
       RXBUF_EN => "TRUE",
@@ -9241,9 +9241,9 @@ BUFG_GT_SYNC_1: unisim.vcomponents.BUFG_GT_SYNC
       RXBUF_RESET_ON_COMMAALIGN => "FALSE",
       RXBUF_RESET_ON_EIDLE => "FALSE",
       RXBUF_RESET_ON_RATE_CHANGE => "TRUE",
-      RXBUF_THRESH_OVFLW => 57,
-      RXBUF_THRESH_OVRD => "TRUE",
-      RXBUF_THRESH_UNDFLW => 3,
+      RXBUF_THRESH_OVFLW => 0,
+      RXBUF_THRESH_OVRD => "FALSE",
+      RXBUF_THRESH_UNDFLW => 4,
       RXCDRFREQRESET_TIME => B"00001",
       RXCDRPHRESET_TIME => B"00001",
       RXCDR_CFG0 => X"0003",
@@ -25856,17 +25856,17 @@ entity c2c_gth_c2c_gth_gtwizard_top is
   attribute C_RX_CC_DISP : string;
   attribute C_RX_CC_DISP of c2c_gth_c2c_gth_gtwizard_top : entity is "8'b00000000";
   attribute C_RX_CC_ENABLE : integer;
-  attribute C_RX_CC_ENABLE of c2c_gth_c2c_gth_gtwizard_top : entity is 0;
+  attribute C_RX_CC_ENABLE of c2c_gth_c2c_gth_gtwizard_top : entity is 1;
   attribute C_RX_CC_K : string;
-  attribute C_RX_CC_K of c2c_gth_c2c_gth_gtwizard_top : entity is "8'b00000000";
+  attribute C_RX_CC_K of c2c_gth_c2c_gth_gtwizard_top : entity is "8'b00000001";
   attribute C_RX_CC_LEN_SEQ : integer;
-  attribute C_RX_CC_LEN_SEQ of c2c_gth_c2c_gth_gtwizard_top : entity is 1;
+  attribute C_RX_CC_LEN_SEQ of c2c_gth_c2c_gth_gtwizard_top : entity is 4;
   attribute C_RX_CC_NUM_SEQ : integer;
-  attribute C_RX_CC_NUM_SEQ of c2c_gth_c2c_gth_gtwizard_top : entity is 0;
+  attribute C_RX_CC_NUM_SEQ of c2c_gth_c2c_gth_gtwizard_top : entity is 1;
   attribute C_RX_CC_PERIODICITY : integer;
   attribute C_RX_CC_PERIODICITY of c2c_gth_c2c_gth_gtwizard_top : entity is 5000;
   attribute C_RX_CC_VAL : string;
-  attribute C_RX_CC_VAL of c2c_gth_c2c_gth_gtwizard_top : entity is "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_RX_CC_VAL of c2c_gth_c2c_gth_gtwizard_top : entity is "80'b00000000000000000000000000000000000000000000000100000000001100000000100000011100";
   attribute C_RX_COMMA_M_ENABLE : integer;
   attribute C_RX_COMMA_M_ENABLE of c2c_gth_c2c_gth_gtwizard_top : entity is 0;
   attribute C_RX_COMMA_M_VAL : string;
@@ -26522,6 +26522,7 @@ entity c2c_gth is
     gtrxreset_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
     gttxreset_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
     rx8b10ben_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    rxbufreset_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
     rxcommadeten_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
     rxlpmen_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
     rxmcommaalignen_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -26551,9 +26552,11 @@ entity c2c_gth is
     gthtxn_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
     gthtxp_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
     gtpowergood_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    rxbufstatus_out : out STD_LOGIC_VECTOR ( 5 downto 0 );
     rxbyteisaligned_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
     rxbyterealign_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
     rxcdrlock_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    rxclkcorcnt_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
     rxcommadet_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
     rxctrl0_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
     rxctrl1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -26640,14 +26643,12 @@ architecture STRUCTURE of c2c_gth is
   signal NLW_inst_refclkoutmonitor0_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_inst_refclkoutmonitor1_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_inst_resetexception_out_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal NLW_inst_rxbufstatus_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_inst_rxcdrphdone_out_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_inst_rxchanbondseq_out_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_inst_rxchanisaligned_out_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_inst_rxchanrealign_out_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_inst_rxchbondo_out_UNCONNECTED : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal NLW_inst_rxckcaldone_out_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal NLW_inst_rxclkcorcnt_out_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_inst_rxcominitdet_out_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_inst_rxcomsasdet_out_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_inst_rxcomwakedet_out_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -26778,17 +26779,17 @@ architecture STRUCTURE of c2c_gth is
   attribute C_RX_CC_DISP : string;
   attribute C_RX_CC_DISP of inst : label is "8'b00000000";
   attribute C_RX_CC_ENABLE : integer;
-  attribute C_RX_CC_ENABLE of inst : label is 0;
+  attribute C_RX_CC_ENABLE of inst : label is 1;
   attribute C_RX_CC_K : string;
-  attribute C_RX_CC_K of inst : label is "8'b00000000";
+  attribute C_RX_CC_K of inst : label is "8'b00000001";
   attribute C_RX_CC_LEN_SEQ : integer;
-  attribute C_RX_CC_LEN_SEQ of inst : label is 1;
+  attribute C_RX_CC_LEN_SEQ of inst : label is 4;
   attribute C_RX_CC_NUM_SEQ : integer;
-  attribute C_RX_CC_NUM_SEQ of inst : label is 0;
+  attribute C_RX_CC_NUM_SEQ of inst : label is 1;
   attribute C_RX_CC_PERIODICITY : integer;
   attribute C_RX_CC_PERIODICITY of inst : label is 5000;
   attribute C_RX_CC_VAL : string;
-  attribute C_RX_CC_VAL of inst : label is "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_RX_CC_VAL of inst : label is "80'b00000000000000000000000000000000000000000000000100000000001100000000100000011100";
   attribute C_RX_COMMA_M_ENABLE : integer;
   attribute C_RX_COMMA_M_ENABLE of inst : label is 0;
   attribute C_RX_COMMA_M_VAL : string;
@@ -27118,8 +27119,8 @@ inst: entity work.c2c_gth_c2c_gth_gtwizard_top
       rstclkentx_in(0) => '0',
       rx8b10ben_in(1 downto 0) => rx8b10ben_in(1 downto 0),
       rxafecfoken_in(1 downto 0) => B"11",
-      rxbufreset_in(1 downto 0) => B"00",
-      rxbufstatus_out(5 downto 0) => NLW_inst_rxbufstatus_out_UNCONNECTED(5 downto 0),
+      rxbufreset_in(1 downto 0) => rxbufreset_in(1 downto 0),
+      rxbufstatus_out(5 downto 0) => rxbufstatus_out(5 downto 0),
       rxbyteisaligned_out(1 downto 0) => rxbyteisaligned_out(1 downto 0),
       rxbyterealign_out(1 downto 0) => rxbyterealign_out(1 downto 0),
       rxcdrfreqreset_in(1 downto 0) => B"00",
@@ -27141,7 +27142,7 @@ inst: entity work.c2c_gth_c2c_gth_gtwizard_top
       rxckcaldone_out(1 downto 0) => NLW_inst_rxckcaldone_out_UNCONNECTED(1 downto 0),
       rxckcalreset_in(1 downto 0) => B"00",
       rxckcalstart_in(13 downto 0) => B"00000000000000",
-      rxclkcorcnt_out(3 downto 0) => NLW_inst_rxclkcorcnt_out_UNCONNECTED(3 downto 0),
+      rxclkcorcnt_out(3 downto 0) => rxclkcorcnt_out(3 downto 0),
       rxcominitdet_out(1 downto 0) => NLW_inst_rxcominitdet_out_UNCONNECTED(1 downto 0),
       rxcommadet_out(1 downto 0) => rxcommadet_out(1 downto 0),
       rxcommadeten_in(1 downto 0) => rxcommadeten_in(1 downto 0),

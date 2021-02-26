@@ -27,7 +27,10 @@ module c2c_gth_tux
   
   output       c2c_tx_ready,
   input [31:0] c2c_tx_tdata,
-  input        c2c_tx_tvalid
+  input        c2c_tx_tvalid,
+  input        c2c_do_cc,
+  output [2:0] c2c_rxbufstatus,
+  output [1:0] c2c_rxclkcorcnt
 );
 
   wire link_down_latched_reset_in = 1'b0; // unused
@@ -154,7 +157,7 @@ module c2c_gth_tux
   //--------------------------------------------------------------------------------------------------------------------
   wire [63:0] gtwiz_userdata_rx_int;
   wire [31:0] hb0_gtwiz_userdata_rx_int;
-  wire [31:0] hb1_gtwiz_userdata_rx_int;
+  (* mark_debug *) wire [31:0] hb1_gtwiz_userdata_rx_int;
   assign hb0_gtwiz_userdata_rx_int = gtwiz_userdata_rx_int[31:0];
   assign hb1_gtwiz_userdata_rx_int = gtwiz_userdata_rx_int[63:32];
 
@@ -339,7 +342,7 @@ module c2c_gth_tux
   //--------------------------------------------------------------------------------------------------------------------
   wire [15:0] rxctrl2_int;
   wire [7:0] ch0_rxctrl2_int;
-  wire [7:0] ch1_rxctrl2_int;
+  (* mark_debug *) wire [7:0] ch1_rxctrl2_int;
   assign ch0_rxctrl2_int = rxctrl2_int[7:0];
   assign ch1_rxctrl2_int = rxctrl2_int[15:8];
 
@@ -801,6 +804,8 @@ module c2c_gth_tux
   );
 
 
+   wire [5 : 0] rxbufstatus_out;
+   wire [3 : 0] rxclkcorcnt_out;
   // ===================================================================================================================
   // EXAMPLE WRAPPER INSTANCE
   // ===================================================================================================================
@@ -870,21 +875,51 @@ module c2c_gth_tux
    ,.rxpmaresetdone_out                      (rxpmaresetdone_int)
    ,.rxprbserr_out                           (rxprbserr_int)
    ,.txpmaresetdone_out                      (txpmaresetdone_int)
+
+   ,.rxbufstatus_out(rxbufstatus_out)                        // output wire [5 : 0] rxbufstatus_out
+   ,.rxclkcorcnt_out(rxclkcorcnt_out)                        // output wire [3 : 0] rxclkcorcnt_out
 );
+
+
+reg [11:0] cc_cnt; // clock correction counter
+always @(posedge gtwiz_userclk_tx_usrclk2_int)
+begin
+    cc_cnt++;
+end
+wire local_do_cc = (cc_cnt == 12'h0);
 
 // using channel 1 
 
-assign c2c_channel_up    = ch1_rxbyteisaligned_int;
+//    assign hb1_gtwiz_userdata_tx_int = (local_do_cc == 1'b1) ? 32'h0403021c : (c2c_tx_tvalid == 1'b1) ? c2c_tx_tdata : 32'h000050bc; // send IDLE when invalid 
+//    assign ch1_txctrl2_int           = (local_do_cc == 1'b1) ? 8'b00000001  : (c2c_tx_tvalid == 1'b1) ? 8'b00000000  : 8'b00000001; // send IDLE when invalid 
+//    assign c2c_rx_data  = hb1_gtwiz_userdata_rx_int; 
+//    assign c2c_rx_valid = (ch1_rxctrl2_int[3:0] == 4'b0) && (ch1_rxbyteisaligned_int == 1'b1);
+    c2c_adapter c2c_adapter_i
+    (
+        .c2c_phy_clk  (gtwiz_userclk_tx_usrclk2_int),
+        
+        .c2c_rx_data  (c2c_rx_data),
+        .c2c_rx_valid (c2c_rx_valid),
+        
+        .c2c_tx_tdata  (c2c_tx_tdata),
+        .c2c_tx_tvalid (c2c_tx_tvalid),
+        .do_cc         (local_do_cc),
+        
+        .mgt_rx_data  (hb1_gtwiz_userdata_rx_int),
+        .mgt_rx_k     (ch1_rxctrl2_int[3:0]),
+        .rx_aligned   (ch1_rxbyteisaligned_int),
+        
+        .mgt_tx_data  (hb1_gtwiz_userdata_tx_int),
+        .mgt_tx_k     (ch1_txctrl2_int)
+    );
+
+assign c2c_tx_ready      = 1'b1; // always ready
 assign c2c_mmcm_unlocked = 1'b0;
+assign c2c_channel_up    = ch1_rxbyteisaligned_int;
 assign c2c_init_clk      = mgtrefclk_odiv2; // 250M clock directly from refclk buffer
 assign c2c_phy_clk       = gtwiz_userclk_tx_usrclk2_int;
 
-  
-assign c2c_rx_data  = hb1_gtwiz_userdata_rx_int; 
-assign c2c_rx_valid = (ch1_rxctrl2_int[3:0] == 4'b0) && (ch1_rxbyteisaligned_int == 1'b1);
-  
-assign c2c_tx_ready = 1'b1; // always ready
-assign hb1_gtwiz_userdata_tx_int = c2c_tx_tvalid == 1'b1 ? c2c_tx_tdata : 32'h000050bc; // send IDLE when invalid
-assign ch1_txctrl2_int           = c2c_tx_tvalid == 1'b1 ? 8'b00000000  : 8'b00000001; // send IDLE when invalid
+assign c2c_rxbufstatus = rxbufstatus_out [5:3];
+assign c2c_rxclkcorcnt = rxclkcorcnt_out [3:2];
 
 endmodule

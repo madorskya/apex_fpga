@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Fri Feb 19 16:11:40 2021
+-- Date        : Wed Feb 24 11:11:54 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/madorsky/github/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/sources_1/ip/c2c_gth/c2c_gth_stub.vhdl
@@ -34,6 +34,7 @@ entity c2c_gth is
     gtrxreset_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
     gttxreset_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
     rx8b10ben_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    rxbufreset_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
     rxcommadeten_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
     rxlpmen_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
     rxmcommaalignen_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -63,9 +64,11 @@ entity c2c_gth is
     gthtxn_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
     gthtxp_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
     gtpowergood_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    rxbufstatus_out : out STD_LOGIC_VECTOR ( 5 downto 0 );
     rxbyteisaligned_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
     rxbyterealign_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
     rxcdrlock_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    rxclkcorcnt_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
     rxcommadet_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
     rxctrl0_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
     rxctrl1_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -87,7 +90,7 @@ architecture stub of c2c_gth is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "gtwiz_userclk_tx_reset_in[0:0],gtwiz_userclk_tx_active_in[0:0],gtwiz_userclk_rx_active_in[0:0],gtwiz_reset_tx_done_in[0:0],gtwiz_reset_rx_done_in[0:0],gtwiz_userdata_tx_in[63:0],gtwiz_userdata_rx_out[63:0],cpllpd_in[1:0],drpaddr_in[19:0],drpclk_in[1:0],drpdi_in[31:0],drpen_in[1:0],drpwe_in[1:0],eyescanreset_in[1:0],gthrxn_in[1:0],gthrxp_in[1:0],gtrefclk0_in[1:0],gtrxreset_in[1:0],gttxreset_in[1:0],rx8b10ben_in[1:0],rxcommadeten_in[1:0],rxlpmen_in[1:0],rxmcommaalignen_in[1:0],rxpcommaalignen_in[1:0],rxprbssel_in[7:0],rxprogdivreset_in[1:0],rxrate_in[5:0],rxuserrdy_in[1:0],rxusrclk_in[1:0],rxusrclk2_in[1:0],tx8b10ben_in[1:0],txctrl0_in[31:0],txctrl1_in[31:0],txctrl2_in[15:0],txdiffctrl_in[9:0],txpolarity_in[1:0],txpostcursor_in[9:0],txprbssel_in[7:0],txprecursor_in[9:0],txprogdivreset_in[1:0],txuserrdy_in[1:0],txusrclk_in[1:0],txusrclk2_in[1:0],cplllock_out[1:0],drpdo_out[31:0],drprdy_out[1:0],gthtxn_out[1:0],gthtxp_out[1:0],gtpowergood_out[1:0],rxbyteisaligned_out[1:0],rxbyterealign_out[1:0],rxcdrlock_out[1:0],rxcommadet_out[1:0],rxctrl0_out[31:0],rxctrl1_out[31:0],rxctrl2_out[15:0],rxctrl3_out[15:0],rxdata_out[255:0],rxoutclk_out[1:0],rxpmaresetdone_out[1:0],rxprbserr_out[1:0],rxresetdone_out[1:0],txoutclk_out[1:0],txpmaresetdone_out[1:0],txresetdone_out[1:0]";
+attribute black_box_pad_pin of stub : architecture is "gtwiz_userclk_tx_reset_in[0:0],gtwiz_userclk_tx_active_in[0:0],gtwiz_userclk_rx_active_in[0:0],gtwiz_reset_tx_done_in[0:0],gtwiz_reset_rx_done_in[0:0],gtwiz_userdata_tx_in[63:0],gtwiz_userdata_rx_out[63:0],cpllpd_in[1:0],drpaddr_in[19:0],drpclk_in[1:0],drpdi_in[31:0],drpen_in[1:0],drpwe_in[1:0],eyescanreset_in[1:0],gthrxn_in[1:0],gthrxp_in[1:0],gtrefclk0_in[1:0],gtrxreset_in[1:0],gttxreset_in[1:0],rx8b10ben_in[1:0],rxbufreset_in[1:0],rxcommadeten_in[1:0],rxlpmen_in[1:0],rxmcommaalignen_in[1:0],rxpcommaalignen_in[1:0],rxprbssel_in[7:0],rxprogdivreset_in[1:0],rxrate_in[5:0],rxuserrdy_in[1:0],rxusrclk_in[1:0],rxusrclk2_in[1:0],tx8b10ben_in[1:0],txctrl0_in[31:0],txctrl1_in[31:0],txctrl2_in[15:0],txdiffctrl_in[9:0],txpolarity_in[1:0],txpostcursor_in[9:0],txprbssel_in[7:0],txprecursor_in[9:0],txprogdivreset_in[1:0],txuserrdy_in[1:0],txusrclk_in[1:0],txusrclk2_in[1:0],cplllock_out[1:0],drpdo_out[31:0],drprdy_out[1:0],gthtxn_out[1:0],gthtxp_out[1:0],gtpowergood_out[1:0],rxbufstatus_out[5:0],rxbyteisaligned_out[1:0],rxbyterealign_out[1:0],rxcdrlock_out[1:0],rxclkcorcnt_out[3:0],rxcommadet_out[1:0],rxctrl0_out[31:0],rxctrl1_out[31:0],rxctrl2_out[15:0],rxctrl3_out[15:0],rxdata_out[255:0],rxoutclk_out[1:0],rxpmaresetdone_out[1:0],rxprbserr_out[1:0],rxresetdone_out[1:0],txoutclk_out[1:0],txpmaresetdone_out[1:0],txresetdone_out[1:0]";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "c2c_gth_gtwizard_top,Vivado 2020.1";
 begin

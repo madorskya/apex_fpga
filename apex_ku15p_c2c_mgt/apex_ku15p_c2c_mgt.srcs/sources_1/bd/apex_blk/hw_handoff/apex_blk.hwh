@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 23 15:27:51 2021" VIVADOVERSION="2020.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Feb 24 18:03:24 2021" VIVADOVERSION="2020.1">
 
   <SYSTEMINFO ARCH="kintexuplus" DEVICE="xcku15p" NAME="apex_blk" PACKAGE="ffva1760" SPEEDGRADE="-2"/>
 
@@ -93,6 +93,21 @@
     <PORT DIR="O" NAME="c2c_pma_init" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="axi_chip2chip_0_aurora_pma_init_out">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axi_chip2chip_0" PORT="aurora_pma_init_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="c2c_do_cc" SIGIS="undef" SIGNAME="axi_chip2chip_0_aurora_do_cc">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_chip2chip_0" PORT="aurora_do_cc"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="2" NAME="c2c_rxbufstatus" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_c2c_rxbufstatus">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ila_0" PORT="probe15"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="1" NAME="c2c_rxclkcorcnt" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_c2c_rxclkcorcnt">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ila_0" PORT="probe16"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -350,6 +365,7 @@
         <PORT DIR="O" NAME="aurora_do_cc" SIGIS="undef" SIGNAME="axi_chip2chip_0_aurora_do_cc">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe8"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="c2c_do_cc"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="aurora_pma_init_in" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="vio_0_probe_out1">
@@ -3842,7 +3858,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="15"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="17"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="1024"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2020"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="1"/>
@@ -3881,8 +3897,8 @@
         <PARAMETER NAME="C_PROBE12_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE13_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE14_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE15_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE16_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE15_WIDTH" VALUE="3"/>
+        <PARAMETER NAME="C_PROBE16_WIDTH" VALUE="2"/>
         <PARAMETER NAME="C_PROBE17_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE18_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE19_WIDTH" VALUE="1"/>
@@ -7040,6 +7056,16 @@
         <PORT DIR="I" LEFT="0" NAME="probe14" RIGHT="0" SIGIS="undef" SIGNAME="vio_0_probe_out0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="vio_0" PORT="probe_out0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="probe15" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_c2c_rxbufstatus">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c2c_rxbufstatus"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="probe16" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_c2c_rxclkcorcnt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c2c_rxclkcorcnt"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

@@ -74,6 +74,7 @@ module c2c_gth (
   gtrxreset_in,
   gttxreset_in,
   rx8b10ben_in,
+  rxbufreset_in,
   rxcommadeten_in,
   rxlpmen_in,
   rxmcommaalignen_in,
@@ -103,9 +104,11 @@ module c2c_gth (
   gthtxn_out,
   gthtxp_out,
   gtpowergood_out,
+  rxbufstatus_out,
   rxbyteisaligned_out,
   rxbyterealign_out,
   rxcdrlock_out,
+  rxclkcorcnt_out,
   rxcommadet_out,
   rxctrl0_out,
   rxctrl1_out,
@@ -141,6 +144,7 @@ input wire [1 : 0] gtrefclk0_in;
 input wire [1 : 0] gtrxreset_in;
 input wire [1 : 0] gttxreset_in;
 input wire [1 : 0] rx8b10ben_in;
+input wire [1 : 0] rxbufreset_in;
 input wire [1 : 0] rxcommadeten_in;
 input wire [1 : 0] rxlpmen_in;
 input wire [1 : 0] rxmcommaalignen_in;
@@ -170,9 +174,11 @@ output wire [1 : 0] drprdy_out;
 output wire [1 : 0] gthtxn_out;
 output wire [1 : 0] gthtxp_out;
 output wire [1 : 0] gtpowergood_out;
+output wire [5 : 0] rxbufstatus_out;
 output wire [1 : 0] rxbyteisaligned_out;
 output wire [1 : 0] rxbyterealign_out;
 output wire [1 : 0] rxcdrlock_out;
+output wire [3 : 0] rxclkcorcnt_out;
 output wire [1 : 0] rxcommadet_out;
 output wire [31 : 0] rxctrl0_out;
 output wire [31 : 0] rxctrl1_out;
@@ -220,13 +226,13 @@ output wire [1 : 0] txresetdone_out;
     .C_RX_CB_NUM_SEQ(0),
     .C_RX_CB_VAL(80'B00000000000000000000000000000000000000000000000000000000000000000000000000000000),
     .C_RX_CC_DISP(8'B00000000),
-    .C_RX_CC_ENABLE(0),
+    .C_RX_CC_ENABLE(1),
     .C_RESET_SEQUENCE_INTERVAL(0),
-    .C_RX_CC_K(8'B00000000),
-    .C_RX_CC_LEN_SEQ(1),
-    .C_RX_CC_NUM_SEQ(0),
+    .C_RX_CC_K(8'B00000001),
+    .C_RX_CC_LEN_SEQ(4),
+    .C_RX_CC_NUM_SEQ(1),
     .C_RX_CC_PERIODICITY(5000),
-    .C_RX_CC_VAL(80'B00000000000000000000000000000000000000000000000000000000000000000000000000000000),
+    .C_RX_CC_VAL(80'B00000000000000000000000000000000000000000000000100000000001100000000100000011100),
     .C_RX_COMMA_M_ENABLE(0),
     .C_RX_COMMA_M_VAL(10'B1010000011),
     .C_RX_COMMA_P_ENABLE(1),
@@ -510,7 +516,7 @@ output wire [1 : 0] txresetdone_out;
     .rstclkentx_in(1'B0),
     .rx8b10ben_in(rx8b10ben_in),
     .rxafecfoken_in(2'H3),
-    .rxbufreset_in(2'H0),
+    .rxbufreset_in(rxbufreset_in),
     .rxcdrfreqreset_in(2'H0),
     .rxcdrhold_in(2'H0),
     .rxcdrovrden_in(2'H0),
@@ -741,7 +747,7 @@ output wire [1 : 0] txresetdone_out;
     .pinrsrvdas_out(),
     .powerpresent_out(),
     .resetexception_out(),
-    .rxbufstatus_out(),
+    .rxbufstatus_out(rxbufstatus_out),
     .rxbyteisaligned_out(rxbyteisaligned_out),
     .rxbyterealign_out(rxbyterealign_out),
     .rxcdrlock_out(rxcdrlock_out),
@@ -751,7 +757,7 @@ output wire [1 : 0] txresetdone_out;
     .rxchanrealign_out(),
     .rxchbondo_out(),
     .rxckcaldone_out(),
-    .rxclkcorcnt_out(),
+    .rxclkcorcnt_out(rxclkcorcnt_out),
     .rxcominitdet_out(),
     .rxcommadet_out(rxcommadet_out),
     .rxcomsasdet_out(),

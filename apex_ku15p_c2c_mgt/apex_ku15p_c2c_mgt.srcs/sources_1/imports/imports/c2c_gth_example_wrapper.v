@@ -69,6 +69,9 @@ module c2c_gth_example_wrapper (
  ,output wire [1:0] rxpmaresetdone_out
  ,output wire [1:0] rxprbserr_out
  ,output wire [1:0] txpmaresetdone_out
+
+ ,output wire [5 : 0] rxbufstatus_out
+ ,output wire [3 : 0] rxclkcorcnt_out
 );
 
 
@@ -371,6 +374,9 @@ module c2c_gth_example_wrapper (
    ,.txoutclk_out                            (txoutclk_int)
    ,.txpmaresetdone_out                      (txpmaresetdone_out)
    ,.txresetdone_out                         (txresetdone_int)
+
+   ,.rxbufstatus_out(rxbufstatus_out)                        // output wire [5 : 0] rxbufstatus_out
+   ,.rxclkcorcnt_out(rxclkcorcnt_out)                        // output wire [3 : 0] rxclkcorcnt_out
 );
 
 endmodule

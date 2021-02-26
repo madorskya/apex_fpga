@@ -75,6 +75,7 @@ c2c_gth your_instance_name (
   .gtrxreset_in(gtrxreset_in),                              // input wire [1 : 0] gtrxreset_in
   .gttxreset_in(gttxreset_in),                              // input wire [1 : 0] gttxreset_in
   .rx8b10ben_in(rx8b10ben_in),                              // input wire [1 : 0] rx8b10ben_in
+  .rxbufreset_in(rxbufreset_in),                            // input wire [1 : 0] rxbufreset_in
   .rxcommadeten_in(rxcommadeten_in),                        // input wire [1 : 0] rxcommadeten_in
   .rxlpmen_in(rxlpmen_in),                                  // input wire [1 : 0] rxlpmen_in
   .rxmcommaalignen_in(rxmcommaalignen_in),                  // input wire [1 : 0] rxmcommaalignen_in
@@ -104,9 +105,11 @@ c2c_gth your_instance_name (
   .gthtxn_out(gthtxn_out),                                  // output wire [1 : 0] gthtxn_out
   .gthtxp_out(gthtxp_out),                                  // output wire [1 : 0] gthtxp_out
   .gtpowergood_out(gtpowergood_out),                        // output wire [1 : 0] gtpowergood_out
+  .rxbufstatus_out(rxbufstatus_out),                        // output wire [5 : 0] rxbufstatus_out
   .rxbyteisaligned_out(rxbyteisaligned_out),                // output wire [1 : 0] rxbyteisaligned_out
   .rxbyterealign_out(rxbyterealign_out),                    // output wire [1 : 0] rxbyterealign_out
   .rxcdrlock_out(rxcdrlock_out),                            // output wire [1 : 0] rxcdrlock_out
+  .rxclkcorcnt_out(rxclkcorcnt_out),                        // output wire [3 : 0] rxclkcorcnt_out
   .rxcommadet_out(rxcommadet_out),                          // output wire [1 : 0] rxcommadet_out
   .rxctrl0_out(rxctrl0_out),                                // output wire [31 : 0] rxctrl0_out
   .rxctrl1_out(rxctrl1_out),                                // output wire [31 : 0] rxctrl1_out

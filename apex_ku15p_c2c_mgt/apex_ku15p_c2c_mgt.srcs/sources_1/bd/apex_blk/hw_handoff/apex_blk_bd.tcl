@@ -423,6 +423,7 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set c2c_channel_up [ create_bd_port -dir I c2c_channel_up ]
+  set c2c_do_cc [ create_bd_port -dir O c2c_do_cc ]
   set c2c_init_clk [ create_bd_port -dir I -type clk -freq_hz 250000000 c2c_init_clk ]
   set c2c_mmcm_unlocked [ create_bd_port -dir I -type rst c2c_mmcm_unlocked ]
   set_property -dict [ list \
@@ -435,6 +436,8 @@ proc create_root_design { parentCell } {
   set c2c_pma_init [ create_bd_port -dir O -type rst c2c_pma_init ]
   set c2c_rx_data [ create_bd_port -dir I -from 31 -to 0 c2c_rx_data ]
   set c2c_rx_valid [ create_bd_port -dir I c2c_rx_valid ]
+  set c2c_rxbufstatus [ create_bd_port -dir I -from 2 -to 0 c2c_rxbufstatus ]
+  set c2c_rxclkcorcnt [ create_bd_port -dir I -from 1 -to 0 c2c_rxclkcorcnt ]
   set c2c_tx_ready [ create_bd_port -dir I c2c_tx_ready ]
   set c2c_tx_tdata [ create_bd_port -dir O -from 31 -to 0 c2c_tx_tdata ]
   set c2c_tx_tvalid [ create_bd_port -dir O c2c_tx_tvalid ]
@@ -509,7 +512,9 @@ proc create_root_design { parentCell } {
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_INPUT_PIPE_STAGES {6} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {15} \
+   CONFIG.C_NUM_OF_PROBES {17} \
+   CONFIG.C_PROBE15_WIDTH {3} \
+   CONFIG.C_PROBE16_WIDTH {2} \
  ] $ila_0
 
   # Create instance: rst_clk_wiz_100M, and set properties
@@ -570,7 +575,7 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   connect_bd_net -net axi_c2c_multi_bit_error_out [get_bd_pins axi_chip2chip_0/axi_c2c_multi_bit_error_out] [get_bd_pins ila_0/probe13]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_c2c_multi_bit_error_out]
   connect_bd_net -net axi_c2c_phy_clk_0_1 [get_bd_ports c2c_phy_clk] [get_bd_pins axi_chip2chip_0/axi_c2c_phy_clk] [get_bd_pins ila_0/clk] [get_bd_pins vio_0/clk]
-  connect_bd_net -net axi_chip2chip_0_aurora_do_cc [get_bd_pins axi_chip2chip_0/aurora_do_cc] [get_bd_pins ila_0/probe8]
+  connect_bd_net -net axi_chip2chip_0_aurora_do_cc [get_bd_ports c2c_do_cc] [get_bd_pins axi_chip2chip_0/aurora_do_cc] [get_bd_pins ila_0/probe8]
   connect_bd_net -net axi_chip2chip_0_aurora_pma_init_out [get_bd_ports c2c_pma_init] [get_bd_pins axi_chip2chip_0/aurora_pma_init_out] [get_bd_pins ila_0/probe9]
   connect_bd_net -net axi_chip2chip_0_aurora_reset_pb [get_bd_pins axi_chip2chip_0/aurora_reset_pb] [get_bd_pins ila_0/probe10]
   connect_bd_net -net axi_chip2chip_0_axi_c2c_aurora_tx_tdata [get_bd_ports c2c_tx_tdata] [get_bd_pins axi_chip2chip_0/axi_c2c_aurora_tx_tdata] [get_bd_pins ila_0/probe5]
@@ -579,6 +584,8 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   connect_bd_net -net bram1_delay [get_bd_pins bram0/delay] [get_bd_pins vio_0/probe_out3]
   connect_bd_net -net bram2_delay [get_bd_pins bram2/delay] [get_bd_pins vio_0/probe_out4]
   connect_bd_net -net c2c_gth_example_bit_0_o_out [get_bd_pins axi_chip2chip_0/m_aresetn] [get_bd_pins c2c_gth_example_bit_0/o_out]
+  connect_bd_net -net c2c_rxbufstatus [get_bd_ports c2c_rxbufstatus] [get_bd_pins ila_0/probe15]
+  connect_bd_net -net c2c_rxclkcorcnt [get_bd_ports c2c_rxclkcorcnt] [get_bd_pins ila_0/probe16]
   connect_bd_net -net channel_up [get_bd_pins axi_chip2chip_0/axi_c2c_aurora_channel_up] [get_bd_pins axi_chip2chip_0/axi_c2c_aurora_tx_tready] [get_bd_pins c2c_gth_example_bit_0/i_in] [get_bd_pins ila_0/probe14] [get_bd_pins vio_0/probe_out0]
   connect_bd_net -net clk_in1_0_1 [get_bd_ports c2c_init_clk] [get_bd_pins clk_wiz/clk_in1]
   connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_chip2chip_0/m_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins bram0/s_axi_aclk] [get_bd_pins bram2/s_axi_aclk] [get_bd_pins c2c_gth_example_bit_0/clk_in] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins system_ila_0/clk]

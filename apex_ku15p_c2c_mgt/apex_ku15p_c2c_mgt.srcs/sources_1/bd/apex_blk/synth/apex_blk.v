@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Tue Feb 23 15:27:42 2021
+//Date        : Wed Feb 24 18:03:14 2021
 //Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 //Command     : generate_target apex_blk.bd
 //Design      : apex_blk
@@ -12,12 +12,15 @@
 (* CORE_GENERATION_INFO = "apex_blk,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=apex_blk,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=29,numReposBlks=21,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_axi_chip2chip_cnt=3,da_bram_cntlr_cnt=2,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "apex_blk.hwdef" *) 
 module apex_blk
    (c2c_channel_up,
+    c2c_do_cc,
     c2c_init_clk,
     c2c_mmcm_unlocked,
     c2c_phy_clk,
     c2c_pma_init,
     c2c_rx_data,
     c2c_rx_valid,
+    c2c_rxbufstatus,
+    c2c_rxclkcorcnt,
     c2c_tx_ready,
     c2c_tx_tdata,
     c2c_tx_tvalid,
@@ -29,12 +32,15 @@ module apex_blk
     drp_rdy,
     drp_we);
   input c2c_channel_up;
+  output c2c_do_cc;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.C2C_INIT_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.C2C_INIT_CLK, CLK_DOMAIN apex_blk_clk_in1_0, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) input c2c_init_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.C2C_MMCM_UNLOCKED RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.C2C_MMCM_UNLOCKED, INSERT_VIP 0, POLARITY ACTIVE_HIGH" *) input c2c_mmcm_unlocked;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.C2C_PHY_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.C2C_PHY_CLK, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0" *) input c2c_phy_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.C2C_PMA_INIT RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.C2C_PMA_INIT, INSERT_VIP 0, POLARITY ACTIVE_HIGH" *) output c2c_pma_init;
   input [31:0]c2c_rx_data;
   input c2c_rx_valid;
+  input [2:0]c2c_rxbufstatus;
+  input [1:0]c2c_rxclkcorcnt;
   input c2c_tx_ready;
   output [31:0]c2c_tx_tdata;
   output c2c_tx_tvalid;
@@ -188,6 +194,8 @@ module apex_blk
   wire [6:0]bram1_delay;
   wire [6:0]bram2_delay;
   wire c2c_gth_example_bit_0_o_out;
+  wire [2:0]c2c_rxbufstatus;
+  wire [1:0]c2c_rxclkcorcnt;
   wire [0:0]channel_up;
   wire clk_in1_0_1;
   wire clk_wiz_clk_out1;
@@ -207,6 +215,7 @@ module apex_blk
   assign axi_c2c_aurora_rx_tvalid_0_1 = c2c_rx_valid;
   assign axi_c2c_aurora_tx_tready_0_1 = c2c_tx_ready;
   assign axi_c2c_phy_clk_0_1 = c2c_phy_clk;
+  assign c2c_do_cc = axi_chip2chip_0_aurora_do_cc;
   assign c2c_pma_init = axi_chip2chip_0_aurora_pma_init_out;
   assign c2c_tx_tdata[31:0] = axi_chip2chip_0_axi_c2c_aurora_tx_tdata;
   assign c2c_tx_tvalid = axi_chip2chip_0_axi_c2c_aurora_tx_tvalid;
@@ -529,6 +538,8 @@ module apex_blk
         .probe12(axi_c2c_link_status_out),
         .probe13(axi_c2c_multi_bit_error_out),
         .probe14(channel_up),
+        .probe15(c2c_rxbufstatus),
+        .probe16(c2c_rxclkcorcnt),
         .probe2(axi_c2c_aurora_channel_up_0_1),
         .probe3(aurora_pma_init),
         .probe4(aurora_mmcm_not_locked_0_1),

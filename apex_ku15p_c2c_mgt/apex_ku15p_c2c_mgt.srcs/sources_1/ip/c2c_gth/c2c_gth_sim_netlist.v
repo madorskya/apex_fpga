@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Fri Feb 19 16:11:40 2021
+// Date        : Wed Feb 24 11:11:55 2021
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 // Command     : write_verilog -force -mode funcsim
 //               /home/madorsky/github/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/sources_1/ip/c2c_gth/c2c_gth_sim_netlist.v
@@ -35,6 +35,7 @@ module c2c_gth
     gtrxreset_in,
     gttxreset_in,
     rx8b10ben_in,
+    rxbufreset_in,
     rxcommadeten_in,
     rxlpmen_in,
     rxmcommaalignen_in,
@@ -64,9 +65,11 @@ module c2c_gth
     gthtxn_out,
     gthtxp_out,
     gtpowergood_out,
+    rxbufstatus_out,
     rxbyteisaligned_out,
     rxbyterealign_out,
     rxcdrlock_out,
+    rxclkcorcnt_out,
     rxcommadet_out,
     rxctrl0_out,
     rxctrl1_out,
@@ -100,6 +103,7 @@ module c2c_gth
   input [1:0]gtrxreset_in;
   input [1:0]gttxreset_in;
   input [1:0]rx8b10ben_in;
+  input [1:0]rxbufreset_in;
   input [1:0]rxcommadeten_in;
   input [1:0]rxlpmen_in;
   input [1:0]rxmcommaalignen_in;
@@ -129,9 +133,11 @@ module c2c_gth
   output [1:0]gthtxn_out;
   output [1:0]gthtxp_out;
   output [1:0]gtpowergood_out;
+  output [5:0]rxbufstatus_out;
   output [1:0]rxbyteisaligned_out;
   output [1:0]rxbyterealign_out;
   output [1:0]rxcdrlock_out;
+  output [3:0]rxclkcorcnt_out;
   output [1:0]rxcommadet_out;
   output [31:0]rxctrl0_out;
   output [31:0]rxctrl1_out;
@@ -172,9 +178,12 @@ module c2c_gth
   wire [63:0]gtwiz_userdata_rx_out;
   wire [63:0]gtwiz_userdata_tx_in;
   wire [1:0]rx8b10ben_in;
+  wire [1:0]rxbufreset_in;
+  wire [5:0]rxbufstatus_out;
   wire [1:0]rxbyteisaligned_out;
   wire [1:0]rxbyterealign_out;
   wire [1:0]rxcdrlock_out;
+  wire [3:0]rxclkcorcnt_out;
   wire [1:0]rxcommadet_out;
   wire [1:0]rxcommadeten_in;
   wire [31:0]rxctrl0_out;
@@ -272,14 +281,12 @@ module c2c_gth
   wire [0:0]NLW_inst_refclkoutmonitor0_out_UNCONNECTED;
   wire [0:0]NLW_inst_refclkoutmonitor1_out_UNCONNECTED;
   wire [1:0]NLW_inst_resetexception_out_UNCONNECTED;
-  wire [5:0]NLW_inst_rxbufstatus_out_UNCONNECTED;
   wire [1:0]NLW_inst_rxcdrphdone_out_UNCONNECTED;
   wire [1:0]NLW_inst_rxchanbondseq_out_UNCONNECTED;
   wire [1:0]NLW_inst_rxchanisaligned_out_UNCONNECTED;
   wire [1:0]NLW_inst_rxchanrealign_out_UNCONNECTED;
   wire [9:0]NLW_inst_rxchbondo_out_UNCONNECTED;
   wire [1:0]NLW_inst_rxckcaldone_out_UNCONNECTED;
-  wire [3:0]NLW_inst_rxclkcorcnt_out_UNCONNECTED;
   wire [1:0]NLW_inst_rxcominitdet_out_UNCONNECTED;
   wire [1:0]NLW_inst_rxcomsasdet_out_UNCONNECTED;
   wire [1:0]NLW_inst_rxcomwakedet_out_UNCONNECTED;
@@ -379,12 +386,12 @@ module c2c_gth
   (* C_RX_CB_NUM_SEQ = "0" *) 
   (* C_RX_CB_VAL = "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
   (* C_RX_CC_DISP = "8'b00000000" *) 
-  (* C_RX_CC_ENABLE = "0" *) 
-  (* C_RX_CC_K = "8'b00000000" *) 
-  (* C_RX_CC_LEN_SEQ = "1" *) 
-  (* C_RX_CC_NUM_SEQ = "0" *) 
+  (* C_RX_CC_ENABLE = "1" *) 
+  (* C_RX_CC_K = "8'b00000001" *) 
+  (* C_RX_CC_LEN_SEQ = "4" *) 
+  (* C_RX_CC_NUM_SEQ = "1" *) 
   (* C_RX_CC_PERIODICITY = "5000" *) 
-  (* C_RX_CC_VAL = "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
+  (* C_RX_CC_VAL = "80'b00000000000000000000000000000000000000000000000100000000001100000000100000011100" *) 
   (* C_RX_COMMA_M_ENABLE = "0" *) 
   (* C_RX_COMMA_M_VAL = "10'b1010000011" *) 
   (* C_RX_COMMA_P_ENABLE = "1" *) 
@@ -657,8 +664,8 @@ module c2c_gth
         .rstclkentx_in(1'b0),
         .rx8b10ben_in(rx8b10ben_in),
         .rxafecfoken_in({1'b1,1'b1}),
-        .rxbufreset_in({1'b0,1'b0}),
-        .rxbufstatus_out(NLW_inst_rxbufstatus_out_UNCONNECTED[5:0]),
+        .rxbufreset_in(rxbufreset_in),
+        .rxbufstatus_out(rxbufstatus_out),
         .rxbyteisaligned_out(rxbyteisaligned_out),
         .rxbyterealign_out(rxbyterealign_out),
         .rxcdrfreqreset_in({1'b0,1'b0}),
@@ -680,7 +687,7 @@ module c2c_gth
         .rxckcaldone_out(NLW_inst_rxckcaldone_out_UNCONNECTED[1:0]),
         .rxckcalreset_in({1'b0,1'b0}),
         .rxckcalstart_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .rxclkcorcnt_out(NLW_inst_rxclkcorcnt_out_UNCONNECTED[3:0]),
+        .rxclkcorcnt_out(rxclkcorcnt_out),
         .rxcominitdet_out(NLW_inst_rxcominitdet_out_UNCONNECTED[1:0]),
         .rxcommadet_out(rxcommadet_out),
         .rxcommadeten_in(rxcommadeten_in),
@@ -4378,9 +4385,9 @@ endmodule
 (* C_RX_BUFFBYPASS_MODE = "0" *) (* C_RX_BUFFER_BYPASS_INSTANCE_CTRL = "0" *) (* C_RX_BUFFER_MODE = "1" *) 
 (* C_RX_CB_DISP = "8'b00000000" *) (* C_RX_CB_K = "8'b00000000" *) (* C_RX_CB_LEN_SEQ = "1" *) 
 (* C_RX_CB_MAX_LEVEL = "1" *) (* C_RX_CB_NUM_SEQ = "0" *) (* C_RX_CB_VAL = "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
-(* C_RX_CC_DISP = "8'b00000000" *) (* C_RX_CC_ENABLE = "0" *) (* C_RX_CC_K = "8'b00000000" *) 
-(* C_RX_CC_LEN_SEQ = "1" *) (* C_RX_CC_NUM_SEQ = "0" *) (* C_RX_CC_PERIODICITY = "5000" *) 
-(* C_RX_CC_VAL = "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* C_RX_COMMA_M_ENABLE = "0" *) (* C_RX_COMMA_M_VAL = "10'b1010000011" *) 
+(* C_RX_CC_DISP = "8'b00000000" *) (* C_RX_CC_ENABLE = "1" *) (* C_RX_CC_K = "8'b00000001" *) 
+(* C_RX_CC_LEN_SEQ = "4" *) (* C_RX_CC_NUM_SEQ = "1" *) (* C_RX_CC_PERIODICITY = "5000" *) 
+(* C_RX_CC_VAL = "80'b00000000000000000000000000000000000000000000000100000000001100000000100000011100" *) (* C_RX_COMMA_M_ENABLE = "0" *) (* C_RX_COMMA_M_VAL = "10'b1010000011" *) 
 (* C_RX_COMMA_P_ENABLE = "1" *) (* C_RX_COMMA_P_VAL = "10'b0101111100" *) (* C_RX_DATA_DECODING = "1" *) 
 (* C_RX_ENABLE = "1" *) (* C_RX_INT_DATA_WIDTH = "40" *) (* C_RX_LINE_RATE = "3.750000" *) 
 (* C_RX_MASTER_CHANNEL_IDX = "25" *) (* C_RX_OUTCLK_BUFG_GT_DIV = "1" *) (* C_RX_OUTCLK_FREQUENCY = "93.750000" *) 
@@ -13434,24 +13441,24 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_channel
     .CKCAL2_CFG_4(16'b0000000000000000),
     .CKCAL_RSVD0(16'h0080),
     .CKCAL_RSVD1(16'h0400),
-    .CLK_CORRECT_USE("FALSE"),
+    .CLK_CORRECT_USE("TRUE"),
     .CLK_COR_KEEP_IDLE("FALSE"),
-    .CLK_COR_MAX_LAT(12),
-    .CLK_COR_MIN_LAT(8),
+    .CLK_COR_MAX_LAT(31),
+    .CLK_COR_MIN_LAT(24),
     .CLK_COR_PRECEDENCE("TRUE"),
     .CLK_COR_REPEAT_WAIT(0),
-    .CLK_COR_SEQ_1_1(10'b0100000000),
-    .CLK_COR_SEQ_1_2(10'b0100000000),
-    .CLK_COR_SEQ_1_3(10'b0100000000),
-    .CLK_COR_SEQ_1_4(10'b0100000000),
+    .CLK_COR_SEQ_1_1(10'b0100011100),
+    .CLK_COR_SEQ_1_2(10'b0000000010),
+    .CLK_COR_SEQ_1_3(10'b0000000011),
+    .CLK_COR_SEQ_1_4(10'b0000000100),
     .CLK_COR_SEQ_1_ENABLE(4'b1111),
-    .CLK_COR_SEQ_2_1(10'b0100000000),
-    .CLK_COR_SEQ_2_2(10'b0100000000),
-    .CLK_COR_SEQ_2_3(10'b0100000000),
-    .CLK_COR_SEQ_2_4(10'b0100000000),
+    .CLK_COR_SEQ_2_1(10'b0000000000),
+    .CLK_COR_SEQ_2_2(10'b0000000000),
+    .CLK_COR_SEQ_2_3(10'b0000000000),
+    .CLK_COR_SEQ_2_4(10'b0000000000),
     .CLK_COR_SEQ_2_ENABLE(4'b1111),
     .CLK_COR_SEQ_2_USE("FALSE"),
-    .CLK_COR_SEQ_LEN(1),
+    .CLK_COR_SEQ_LEN(4),
     .CPLL_CFG0(16'h0FFA),
     .CPLL_CFG1(16'h0021),
     .CPLL_CFG2(16'h0202),
@@ -13559,7 +13566,7 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_channel
     .RTX_BUF_CML_CTRL(3'b010),
     .RTX_BUF_TERM_CTRL(2'b00),
     .RXBUFRESET_TIME(5'b00011),
-    .RXBUF_ADDR_MODE("FAST"),
+    .RXBUF_ADDR_MODE("FULL"),
     .RXBUF_EIDLE_HI_CNT(4'b1000),
     .RXBUF_EIDLE_LO_CNT(4'b0000),
     .RXBUF_EN("TRUE"),
@@ -13567,9 +13574,9 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_channel
     .RXBUF_RESET_ON_COMMAALIGN("FALSE"),
     .RXBUF_RESET_ON_EIDLE("FALSE"),
     .RXBUF_RESET_ON_RATE_CHANGE("TRUE"),
-    .RXBUF_THRESH_OVFLW(57),
-    .RXBUF_THRESH_OVRD("TRUE"),
-    .RXBUF_THRESH_UNDFLW(3),
+    .RXBUF_THRESH_OVFLW(0),
+    .RXBUF_THRESH_OVRD("FALSE"),
+    .RXBUF_THRESH_UNDFLW(4),
     .RXCDRFREQRESET_TIME(5'b00001),
     .RXCDRPHRESET_TIME(5'b00001),
     .RXCDR_CFG0(16'h0003),
@@ -14282,24 +14289,24 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_channel
     .CKCAL2_CFG_4(16'b0000000000000000),
     .CKCAL_RSVD0(16'h0080),
     .CKCAL_RSVD1(16'h0400),
-    .CLK_CORRECT_USE("FALSE"),
+    .CLK_CORRECT_USE("TRUE"),
     .CLK_COR_KEEP_IDLE("FALSE"),
-    .CLK_COR_MAX_LAT(12),
-    .CLK_COR_MIN_LAT(8),
+    .CLK_COR_MAX_LAT(31),
+    .CLK_COR_MIN_LAT(24),
     .CLK_COR_PRECEDENCE("TRUE"),
     .CLK_COR_REPEAT_WAIT(0),
-    .CLK_COR_SEQ_1_1(10'b0100000000),
-    .CLK_COR_SEQ_1_2(10'b0100000000),
-    .CLK_COR_SEQ_1_3(10'b0100000000),
-    .CLK_COR_SEQ_1_4(10'b0100000000),
+    .CLK_COR_SEQ_1_1(10'b0100011100),
+    .CLK_COR_SEQ_1_2(10'b0000000010),
+    .CLK_COR_SEQ_1_3(10'b0000000011),
+    .CLK_COR_SEQ_1_4(10'b0000000100),
     .CLK_COR_SEQ_1_ENABLE(4'b1111),
-    .CLK_COR_SEQ_2_1(10'b0100000000),
-    .CLK_COR_SEQ_2_2(10'b0100000000),
-    .CLK_COR_SEQ_2_3(10'b0100000000),
-    .CLK_COR_SEQ_2_4(10'b0100000000),
+    .CLK_COR_SEQ_2_1(10'b0000000000),
+    .CLK_COR_SEQ_2_2(10'b0000000000),
+    .CLK_COR_SEQ_2_3(10'b0000000000),
+    .CLK_COR_SEQ_2_4(10'b0000000000),
     .CLK_COR_SEQ_2_ENABLE(4'b1111),
     .CLK_COR_SEQ_2_USE("FALSE"),
-    .CLK_COR_SEQ_LEN(1),
+    .CLK_COR_SEQ_LEN(4),
     .CPLL_CFG0(16'h0FFA),
     .CPLL_CFG1(16'h0021),
     .CPLL_CFG2(16'h0202),
@@ -14407,7 +14414,7 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_channel
     .RTX_BUF_CML_CTRL(3'b010),
     .RTX_BUF_TERM_CTRL(2'b00),
     .RXBUFRESET_TIME(5'b00011),
-    .RXBUF_ADDR_MODE("FAST"),
+    .RXBUF_ADDR_MODE("FULL"),
     .RXBUF_EIDLE_HI_CNT(4'b1000),
     .RXBUF_EIDLE_LO_CNT(4'b0000),
     .RXBUF_EN("TRUE"),
@@ -14415,9 +14422,9 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_channel
     .RXBUF_RESET_ON_COMMAALIGN("FALSE"),
     .RXBUF_RESET_ON_EIDLE("FALSE"),
     .RXBUF_RESET_ON_RATE_CHANGE("TRUE"),
-    .RXBUF_THRESH_OVFLW(57),
-    .RXBUF_THRESH_OVRD("TRUE"),
-    .RXBUF_THRESH_UNDFLW(3),
+    .RXBUF_THRESH_OVFLW(0),
+    .RXBUF_THRESH_OVRD("FALSE"),
+    .RXBUF_THRESH_UNDFLW(4),
     .RXCDRFREQRESET_TIME(5'b00001),
     .RXCDRPHRESET_TIME(5'b00001),
     .RXCDR_CFG0(16'h0003),
