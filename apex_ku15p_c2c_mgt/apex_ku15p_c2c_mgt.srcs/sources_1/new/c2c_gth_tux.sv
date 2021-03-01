@@ -882,19 +882,15 @@ module c2c_gth_tux
 );
 
 
-reg [11:0] cc_cnt; // clock correction counter
+reg [7:0] cc_cnt; // clock correction counter
 always @(posedge gtwiz_userclk_tx_usrclk2_int)
 begin
     cc_cnt++;
 end
-wire local_do_cc = (cc_cnt == 12'h0);
+wire local_do_cc = (cc_cnt == 8'h0);
 
 // using channel 1 
 
-//    assign hb1_gtwiz_userdata_tx_int = (local_do_cc == 1'b1) ? 32'h0403021c : (c2c_tx_tvalid == 1'b1) ? c2c_tx_tdata : 32'h000050bc; // send IDLE when invalid 
-//    assign ch1_txctrl2_int           = (local_do_cc == 1'b1) ? 8'b00000001  : (c2c_tx_tvalid == 1'b1) ? 8'b00000000  : 8'b00000001; // send IDLE when invalid 
-//    assign c2c_rx_data  = hb1_gtwiz_userdata_rx_int; 
-//    assign c2c_rx_valid = (ch1_rxctrl2_int[3:0] == 4'b0) && (ch1_rxbyteisaligned_int == 1'b1);
     c2c_adapter c2c_adapter_i
     (
         .c2c_phy_clk  (gtwiz_userclk_tx_usrclk2_int),
@@ -905,6 +901,7 @@ wire local_do_cc = (cc_cnt == 12'h0);
         .c2c_tx_tdata  (c2c_tx_tdata),
         .c2c_tx_tvalid (c2c_tx_tvalid),
         .link_up       (link_up),
+        .do_cc         (local_do_cc),
         
         .mgt_rx_data  (hb1_gtwiz_userdata_rx_int),
         .mgt_rx_k     (ch1_rxctrl2_int[3:0]),

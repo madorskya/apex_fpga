@@ -10,6 +10,7 @@ module c2c_adapter
     input [31:0] c2c_tx_tdata,
     input        c2c_tx_tvalid,
     input        link_up,
+    input        do_cc,
     
     input [31:0] mgt_rx_data,
     input [ 3:0] mgt_rx_k,
@@ -26,32 +27,65 @@ module c2c_adapter
     wire [31:0] zero_d = 32'h0;
     wire [ 3:0] zero_k = 4'b0;
     
+    // sync patterns used by c2c slave
+    wire [31:0] spatd0 = 32'h001011bc;
+    wire [31:0] spatd1 = 32'h001011fc;
+    wire [31:0] spatd2 = 32'h001011dc;
+    
+    wire tx_can_cc = (c2c_tx_tdata == spatd0) || (c2c_tx_tdata == spatd1) || (c2c_tx_tdata == zero_d);
+    
+    reg [31:0] c2c_rx_data_r;
+    reg [3:0] c2c_rx_valid_r;
     
     always @(posedge c2c_phy_clk)
     begin
         // rx logic
-        if (mgt_rx_data == clkc_d && mgt_rx_k == clkc_k)
+
+        c2c_rx_data_r  = c2c_rx_data ;
+        c2c_rx_valid_r = c2c_rx_valid;
+
+        if (mgt_rx_data == clkc_d && mgt_rx_k == clkc_k) // CC symbol
         begin
-            c2c_rx_data = zero_d;
-            c2c_rx_valid = rx_aligned;
+            // replace with invalid data
+            c2c_rx_data  = zero_d;
+            c2c_rx_valid = 1'b0;
         end
         else
         begin
             c2c_rx_data = mgt_rx_data;
             c2c_rx_valid = rx_aligned;
         end
+
+
         
         // tx logic
-        if (c2c_tx_tvalid == 1'b0 || c2c_tx_tdata == zero_d)
-        begin // for any invalid data, send CC
-            mgt_tx_data = clkc_d; 
-            mgt_tx_k = clkc_k;
+        if (c2c_tx_tvalid == 1'b0)
+        begin 
+            if (do_cc) // CC needed
+            begin
+                mgt_tx_data = clkc_d; 
+                mgt_tx_k = clkc_k;
+            end
+            else
+            begin
+                // send invalid pattern
+                mgt_tx_data = zero_d; 
+                mgt_tx_k = zero_k;
+            end
         end
         else
-        begin // valid data
-            mgt_tx_data = c2c_tx_tdata; 
-            // if link is not up, this is sync pattern, add K so RX takes it as clk correction
-            mgt_tx_k = (link_up == 1'b1) ? 4'b0 : clkc_k;
+        begin 
+            if (do_cc && tx_can_cc) // CC needed and pattern can be interrupted
+            begin
+                mgt_tx_data = clkc_d; 
+                mgt_tx_k = clkc_k;
+            end
+            else
+            begin
+                // valid data that cannot be interrupted
+                mgt_tx_data = c2c_tx_tdata; 
+                mgt_tx_k = zero_k;
+            end
         end
     end
 

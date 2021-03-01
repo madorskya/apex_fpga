@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Sun Feb 28 21:44:12 2021
+-- Date        : Mon Mar  1 10:42:25 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/madorsky/github/apex_ku15p_revert/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/sources_1/ip/c2c_gth/c2c_gth_sim_netlist.vhdl
@@ -8258,7 +8258,7 @@ BUFG_GT_SYNC_1: unisim.vcomponents.BUFG_GT_SYNC
       CKCAL_RSVD0 => X"0080",
       CKCAL_RSVD1 => X"0400",
       CLK_CORRECT_USE => "TRUE",
-      CLK_COR_KEEP_IDLE => "TRUE",
+      CLK_COR_KEEP_IDLE => "FALSE",
       CLK_COR_MAX_LAT => 31,
       CLK_COR_MIN_LAT => 24,
       CLK_COR_PRECEDENCE => "TRUE",
@@ -8268,12 +8268,12 @@ BUFG_GT_SYNC_1: unisim.vcomponents.BUFG_GT_SYNC
       CLK_COR_SEQ_1_3 => B"0000000000",
       CLK_COR_SEQ_1_4 => B"0000000000",
       CLK_COR_SEQ_1_ENABLE => B"1111",
-      CLK_COR_SEQ_2_1 => B"0111011100",
-      CLK_COR_SEQ_2_2 => B"0000001000",
-      CLK_COR_SEQ_2_3 => B"0000001000",
+      CLK_COR_SEQ_2_1 => B"0000000000",
+      CLK_COR_SEQ_2_2 => B"0000000000",
+      CLK_COR_SEQ_2_3 => B"0000000000",
       CLK_COR_SEQ_2_4 => B"0000000000",
       CLK_COR_SEQ_2_ENABLE => B"1111",
-      CLK_COR_SEQ_2_USE => "TRUE",
+      CLK_COR_SEQ_2_USE => "FALSE",
       CLK_COR_SEQ_LEN => 4,
       CPLL_CFG0 => X"0FFA",
       CPLL_CFG1 => X"0021",
@@ -9109,7 +9109,7 @@ BUFG_GT_SYNC_1: unisim.vcomponents.BUFG_GT_SYNC
       CKCAL_RSVD0 => X"0080",
       CKCAL_RSVD1 => X"0400",
       CLK_CORRECT_USE => "TRUE",
-      CLK_COR_KEEP_IDLE => "TRUE",
+      CLK_COR_KEEP_IDLE => "FALSE",
       CLK_COR_MAX_LAT => 31,
       CLK_COR_MIN_LAT => 24,
       CLK_COR_PRECEDENCE => "TRUE",
@@ -9119,12 +9119,12 @@ BUFG_GT_SYNC_1: unisim.vcomponents.BUFG_GT_SYNC
       CLK_COR_SEQ_1_3 => B"0000000000",
       CLK_COR_SEQ_1_4 => B"0000000000",
       CLK_COR_SEQ_1_ENABLE => B"1111",
-      CLK_COR_SEQ_2_1 => B"0111011100",
-      CLK_COR_SEQ_2_2 => B"0000001000",
-      CLK_COR_SEQ_2_3 => B"0000001000",
+      CLK_COR_SEQ_2_1 => B"0000000000",
+      CLK_COR_SEQ_2_2 => B"0000000000",
+      CLK_COR_SEQ_2_3 => B"0000000000",
       CLK_COR_SEQ_2_4 => B"0000000000",
       CLK_COR_SEQ_2_ENABLE => B"1111",
-      CLK_COR_SEQ_2_USE => "TRUE",
+      CLK_COR_SEQ_2_USE => "FALSE",
       CLK_COR_SEQ_LEN => 4,
       CPLL_CFG0 => X"0FFA",
       CPLL_CFG1 => X"0021",
@@ -25858,15 +25858,15 @@ entity c2c_gth_c2c_gth_gtwizard_top is
   attribute C_RX_CC_ENABLE : integer;
   attribute C_RX_CC_ENABLE of c2c_gth_c2c_gth_gtwizard_top : entity is 1;
   attribute C_RX_CC_K : string;
-  attribute C_RX_CC_K of c2c_gth_c2c_gth_gtwizard_top : entity is "8'b00010001";
+  attribute C_RX_CC_K of c2c_gth_c2c_gth_gtwizard_top : entity is "8'b00000001";
   attribute C_RX_CC_LEN_SEQ : integer;
   attribute C_RX_CC_LEN_SEQ of c2c_gth_c2c_gth_gtwizard_top : entity is 4;
   attribute C_RX_CC_NUM_SEQ : integer;
-  attribute C_RX_CC_NUM_SEQ of c2c_gth_c2c_gth_gtwizard_top : entity is 2;
+  attribute C_RX_CC_NUM_SEQ of c2c_gth_c2c_gth_gtwizard_top : entity is 1;
   attribute C_RX_CC_PERIODICITY : integer;
   attribute C_RX_CC_PERIODICITY of c2c_gth_c2c_gth_gtwizard_top : entity is 5000;
   attribute C_RX_CC_VAL : string;
-  attribute C_RX_CC_VAL of c2c_gth_c2c_gth_gtwizard_top : entity is "80'b00000000000000001000000000100000110111000000000000000000000000010100000010111100";
+  attribute C_RX_CC_VAL of c2c_gth_c2c_gth_gtwizard_top : entity is "80'b00000000000000000000000000000000000000000000000000000000000000010100000010111100";
   attribute C_RX_COMMA_M_ENABLE : integer;
   attribute C_RX_COMMA_M_ENABLE of c2c_gth_c2c_gth_gtwizard_top : entity is 0;
   attribute C_RX_COMMA_M_VAL : string;
@@ -26781,15 +26781,15 @@ architecture STRUCTURE of c2c_gth is
   attribute C_RX_CC_ENABLE : integer;
   attribute C_RX_CC_ENABLE of inst : label is 1;
   attribute C_RX_CC_K : string;
-  attribute C_RX_CC_K of inst : label is "8'b00010001";
+  attribute C_RX_CC_K of inst : label is "8'b00000001";
   attribute C_RX_CC_LEN_SEQ : integer;
   attribute C_RX_CC_LEN_SEQ of inst : label is 4;
   attribute C_RX_CC_NUM_SEQ : integer;
-  attribute C_RX_CC_NUM_SEQ of inst : label is 2;
+  attribute C_RX_CC_NUM_SEQ of inst : label is 1;
   attribute C_RX_CC_PERIODICITY : integer;
   attribute C_RX_CC_PERIODICITY of inst : label is 5000;
   attribute C_RX_CC_VAL : string;
-  attribute C_RX_CC_VAL of inst : label is "80'b00000000000000001000000000100000110111000000000000000000000000010100000010111100";
+  attribute C_RX_CC_VAL of inst : label is "80'b00000000000000000000000000000000000000000000000000000000000000010100000010111100";
   attribute C_RX_COMMA_M_ENABLE : integer;
   attribute C_RX_COMMA_M_ENABLE of inst : label is 0;
   attribute C_RX_COMMA_M_VAL : string;

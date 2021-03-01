@@ -14,7 +14,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c8953757</spirit:value>
+            <spirit:value>9:beda4c95</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -29,11 +29,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 01 02:39:07 UTC 2021</spirit:value>
+            <spirit:value>Mon Mar 01 15:37:31 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:da118b10</spirit:value>
+            <spirit:value>9:6f115e78</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -49,11 +49,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 01 02:39:13 UTC 2021</spirit:value>
+            <spirit:value>Mon Mar 01 15:37:37 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:da118b10</spirit:value>
+            <spirit:value>9:6f115e78</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -64,7 +64,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:da118b10</spirit:value>
+            <spirit:value>9:6f115e78</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -80,11 +80,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 01 02:39:13 UTC 2021</spirit:value>
+            <spirit:value>Mon Mar 01 15:37:37 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:da118b10</spirit:value>
+            <spirit:value>9:6f115e78</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -100,11 +100,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 01 02:39:18 UTC 2021</spirit:value>
+            <spirit:value>Mon Mar 01 15:37:41 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:96f3b06f</spirit:value>
+            <spirit:value>9:61d09ecf</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -120,11 +120,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 01 02:39:18 UTC 2021</spirit:value>
+            <spirit:value>Mon Mar 01 15:37:41 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:96f3b06f</spirit:value>
+            <spirit:value>9:61d09ecf</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -139,11 +139,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 01 02:39:18 UTC 2021</spirit:value>
+            <spirit:value>Mon Mar 01 15:37:41 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:da118b10</spirit:value>
+            <spirit:value>9:6f115e78</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -157,11 +157,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 01 02:44:13 UTC 2021</spirit:value>
+            <spirit:value>Mon Mar 01 15:42:26 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:da118b10</spirit:value>
+            <spirit:value>9:6f115e78</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -14974,7 +14974,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_CC_K</spirit:name>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_CC_K" spirit:bitStringLength="8">&quot;00010001&quot;</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_CC_K" spirit:bitStringLength="8">&quot;00000001&quot;</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_CC_LEN_SEQ</spirit:name>
@@ -14982,7 +14982,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_CC_NUM_SEQ</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_CC_NUM_SEQ">2</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_CC_NUM_SEQ">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_CC_PERIODICITY</spirit:name>
@@ -14990,7 +14990,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>C_RX_CC_VAL</spirit:name>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_CC_VAL" spirit:bitStringLength="80">&quot;00000000000000001000000000100000110111000000000000000000000000010100000010111100&quot;</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_CC_VAL" spirit:bitStringLength="80">&quot;00000000000000000000000000000000000000000000000000000000000000010100000010111100&quot;</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_COMMA_M_ENABLE</spirit:name>
@@ -17018,7 +17018,7 @@
       <spirit:name>RX_CC_NUM_SEQ</spirit:name>
       <spirit:displayName>Enable and select number of sequences to use</spirit:displayName>
       <spirit:description>Select whether to enable clock correction, and how many sequences to use if enabled</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_NUM_SEQ" spirit:choiceRef="choice_pairs_b0974ef0" spirit:order="108">2</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_NUM_SEQ" spirit:choiceRef="choice_pairs_b0974ef0" spirit:order="108">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_LEN_SEQ</spirit:name>
@@ -17036,7 +17036,7 @@
       <spirit:name>RX_CC_KEEP_IDLE</spirit:name>
       <spirit:displayName>Keep idle</spirit:displayName>
       <spirit:description>Control whether at least one clock correction sequence is kept in the data stream for every continuous stream of clock correction sequences received</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_KEEP_IDLE" spirit:choiceRef="choice_pairs_d4feb97d" spirit:order="111">ENABLE</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_KEEP_IDLE" spirit:choiceRef="choice_pairs_d4feb97d" spirit:order="111">DISABLE</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_PRECEDENCE</spirit:name>
@@ -17072,11 +17072,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_VAL</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_VAL" spirit:order="115">00000000000000001000000000100000110111000000000000000000000000010100000010111100</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_VAL" spirit:order="115">00000000000000000000000000000000000000000000000000000000000000010100000010111100</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_K</spirit:name>
-      <spirit:value spirit:resolve="generated" spirit:id="PARAM_VALUE.RX_CC_K" spirit:order="116">00010001</spirit:value>
+      <spirit:value spirit:resolve="generated" spirit:id="PARAM_VALUE.RX_CC_K" spirit:order="116">00000001</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -17197,96 +17197,208 @@
       <spirit:displayName>Don&apos;t care</spirit:displayName>
       <spirit:description>Mark this pattern &quot;don&apos;t care&quot; to always consider it as a match within a clock correction sequence</spirit:description>
       <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_MASK_1_0" spirit:order="134">false</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.RX_CC_MASK_1_0">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_VAL_1_0</spirit:name>
       <spirit:displayName>Value</spirit:displayName>
       <spirit:description>Specify the value for this clock correction sequence and pattern</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_VAL_1_0" spirit:order="135">11011100</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_VAL_1_0" spirit:order="135">00000000</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.RX_CC_VAL_1_0">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_K_1_0</spirit:name>
       <spirit:displayName>K character</spirit:displayName>
       <spirit:description>Indicate whether or not the corresponding clock correction value is a K character</spirit:description>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_K_1_0" spirit:order="136">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_K_1_0" spirit:order="136">false</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.RX_CC_K_1_0">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_DISP_1_0</spirit:name>
       <spirit:displayName>Inverted disparity</spirit:displayName>
       <spirit:description>Indicate whether or not the corresponding clock correction value uses inverted disparity to signify control a character via deliberate error</spirit:description>
       <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_DISP_1_0" spirit:order="137">false</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.RX_CC_DISP_1_0">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_MASK_1_1</spirit:name>
       <spirit:displayName>Don&apos;t care</spirit:displayName>
       <spirit:description>Mark this pattern &quot;don&apos;t care&quot; to always consider it as a match within a clock correction sequence</spirit:description>
       <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_MASK_1_1" spirit:order="138">false</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.RX_CC_MASK_1_1">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_VAL_1_1</spirit:name>
       <spirit:displayName>Value</spirit:displayName>
       <spirit:description>Specify the value for this clock correction sequence and pattern</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_VAL_1_1" spirit:order="139">00001000</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_VAL_1_1" spirit:order="139">00000000</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.RX_CC_VAL_1_1">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_K_1_1</spirit:name>
       <spirit:displayName>K character</spirit:displayName>
       <spirit:description>Indicate whether or not the corresponding clock correction value is a K character</spirit:description>
       <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_K_1_1" spirit:order="140">false</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.RX_CC_K_1_1">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_DISP_1_1</spirit:name>
       <spirit:displayName>Inverted disparity</spirit:displayName>
       <spirit:description>Indicate whether or not the corresponding clock correction value uses inverted disparity to signify control a character via deliberate error</spirit:description>
       <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_DISP_1_1" spirit:order="141">false</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.RX_CC_DISP_1_1">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_MASK_1_2</spirit:name>
       <spirit:displayName>Don&apos;t care</spirit:displayName>
       <spirit:description>Mark this pattern &quot;don&apos;t care&quot; to always consider it as a match within a clock correction sequence</spirit:description>
       <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_MASK_1_2" spirit:order="142">false</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.RX_CC_MASK_1_2">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_VAL_1_2</spirit:name>
       <spirit:displayName>Value</spirit:displayName>
       <spirit:description>Specify the value for this clock correction sequence and pattern</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_VAL_1_2" spirit:order="143">00001000</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_VAL_1_2" spirit:order="143">00000000</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.RX_CC_VAL_1_2">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_K_1_2</spirit:name>
       <spirit:displayName>K character</spirit:displayName>
       <spirit:description>Indicate whether or not the corresponding clock correction value is a K character</spirit:description>
       <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_K_1_2" spirit:order="144">false</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.RX_CC_K_1_2">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_DISP_1_2</spirit:name>
       <spirit:displayName>Inverted disparity</spirit:displayName>
       <spirit:description>Indicate whether or not the corresponding clock correction value uses inverted disparity to signify control a character via deliberate error</spirit:description>
       <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_DISP_1_2" spirit:order="145">false</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.RX_CC_DISP_1_2">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_MASK_1_3</spirit:name>
       <spirit:displayName>Don&apos;t care</spirit:displayName>
       <spirit:description>Mark this pattern &quot;don&apos;t care&quot; to always consider it as a match within a clock correction sequence</spirit:description>
       <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_MASK_1_3" spirit:order="146">false</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.RX_CC_MASK_1_3">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_VAL_1_3</spirit:name>
       <spirit:displayName>Value</spirit:displayName>
       <spirit:description>Specify the value for this clock correction sequence and pattern</spirit:description>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_VAL_1_3" spirit:order="147">00000000</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.RX_CC_VAL_1_3">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_K_1_3</spirit:name>
       <spirit:displayName>K character</spirit:displayName>
       <spirit:description>Indicate whether or not the corresponding clock correction value is a K character</spirit:description>
       <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_K_1_3" spirit:order="148">false</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.RX_CC_K_1_3">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_CC_DISP_1_3</spirit:name>
       <spirit:displayName>Inverted disparity</spirit:displayName>
       <spirit:description>Indicate whether or not the corresponding clock correction value uses inverted disparity to signify control a character via deliberate error</spirit:description>
       <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_CC_DISP_1_3" spirit:order="149">false</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.RX_CC_DISP_1_3">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ENABLE_OPTIONAL_PORTS</spirit:name>
@@ -17398,7 +17510,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>INTERNAL_PORT_ENABLEMENT_UPDATED</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLEMENT_UPDATED" spirit:order="165">25</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLEMENT_UPDATED" spirit:order="165">26</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
