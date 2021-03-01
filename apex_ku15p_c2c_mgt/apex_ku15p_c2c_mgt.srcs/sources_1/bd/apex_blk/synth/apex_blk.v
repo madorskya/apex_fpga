@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Sun Feb 28 21:50:06 2021
+//Date        : Mon Mar  1 17:04:15 2021
 //Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 //Command     : generate_target apex_blk.bd
 //Design      : apex_blk
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "apex_blk,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=apex_blk,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=29,numReposBlks=21,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_axi_chip2chip_cnt=3,da_bram_cntlr_cnt=2,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "apex_blk.hwdef" *) 
+(* CORE_GENERATION_INFO = "apex_blk,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=apex_blk,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=28,numReposBlks=20,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_axi_chip2chip_cnt=3,da_bram_cntlr_cnt=2,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "apex_blk.hwdef" *) 
 module apex_blk
    (c2c_channel_up,
     c2c_do_cc,
@@ -195,7 +195,9 @@ module apex_blk
   (* CONN_BUS_INFO = "axi_interconnect_0_M02_AXI xilinx.com:interface:aximm:1.0 AXI4 WVALID" *) (* DONT_TOUCH *) wire axi_interconnect_0_M02_AXI_WVALID;
   wire [6:0]bram1_delay;
   wire [6:0]bram2_delay;
-  wire c2c_gth_example_bit_0_o_out;
+  wire c2c_reset_fsm_0_c2c_channel_up;
+  wire c2c_reset_fsm_0_m_aresetn;
+  wire [1:0]c2c_reset_fsm_0_state;
   wire [2:0]c2c_rxbufstatus;
   wire [1:0]c2c_rxclkcorcnt;
   wire [0:0]channel_up;
@@ -237,11 +239,11 @@ module apex_blk
         .aurora_pma_init_in(aurora_pma_init),
         .aurora_pma_init_out(axi_chip2chip_0_aurora_pma_init_out),
         .aurora_reset_pb(axi_chip2chip_0_aurora_reset_pb),
-        .axi_c2c_aurora_channel_up(channel_up),
+        .axi_c2c_aurora_channel_up(c2c_reset_fsm_0_c2c_channel_up),
         .axi_c2c_aurora_rx_tdata(axi_c2c_aurora_rx_tdata_0_1),
         .axi_c2c_aurora_rx_tvalid(axi_c2c_aurora_rx_tvalid_0_1),
         .axi_c2c_aurora_tx_tdata(axi_chip2chip_0_axi_c2c_aurora_tx_tdata),
-        .axi_c2c_aurora_tx_tready(channel_up),
+        .axi_c2c_aurora_tx_tready(axi_c2c_aurora_channel_up_0_1),
         .axi_c2c_aurora_tx_tvalid(axi_chip2chip_0_axi_c2c_aurora_tx_tvalid),
         .axi_c2c_config_error_out(axi_c2c_config_error_out),
         .axi_c2c_link_status_out(axi_c2c_link_status_out),
@@ -250,7 +252,7 @@ module apex_blk
         .axi_c2c_phy_clk(axi_c2c_phy_clk_0_1),
         .axi_c2c_s2m_intr_in({1'b0,1'b0,1'b0,1'b0}),
         .m_aclk(clk_wiz_clk_out1),
-        .m_aresetn(c2c_gth_example_bit_0_o_out),
+        .m_aresetn(c2c_reset_fsm_0_m_aresetn),
         .m_axi_araddr(S00_AXI_1_ARADDR),
         .m_axi_arburst(S00_AXI_1_ARBURST),
         .m_axi_arid(S00_AXI_1_ARID),
@@ -485,8 +487,15 @@ module apex_blk
         .s_axi_aresetn(rst_clk_wiz_100M_peripheral_aresetn));
   apex_blk_c2c_gth_example_bit_0_0 c2c_gth_example_bit_0
        (.clk_in(clk_wiz_clk_out1),
-        .i_in(channel_up),
-        .o_out(c2c_gth_example_bit_0_o_out));
+        .i_in(channel_up));
+  apex_blk_c2c_reset_fsm_0_0 c2c_reset_fsm_0
+       (.c2c_channel_up(c2c_reset_fsm_0_c2c_channel_up),
+        .c2c_link_up(axi_c2c_link_status_out),
+        .m_aresetn(c2c_reset_fsm_0_m_aresetn),
+        .manual_reset(channel_up),
+        .mgt_channel_up(axi_c2c_aurora_channel_up_0_1),
+        .phy_clk(axi_c2c_phy_clk_0_1),
+        .state(c2c_reset_fsm_0_state));
   apex_blk_clk_wiz_0 clk_wiz
        (.clk_in1(clk_in1_0_1),
         .clk_out1(clk_wiz_clk_out1),
@@ -543,6 +552,9 @@ module apex_blk
         .probe14(channel_up),
         .probe15(c2c_rxbufstatus),
         .probe16(c2c_rxclkcorcnt),
+        .probe17(c2c_reset_fsm_0_c2c_channel_up),
+        .probe18(c2c_reset_fsm_0_m_aresetn),
+        .probe19(c2c_reset_fsm_0_state),
         .probe2(axi_c2c_aurora_channel_up_0_1),
         .probe3(aurora_pma_init),
         .probe4(aurora_mmcm_not_locked_0_1),
@@ -1756,13 +1768,13 @@ module bram0_imp_1PE0B4L
   input s_axi_aclk;
   input s_axi_aresetn;
 
-  wire [15:0]axi_bram_ctrl_0_bram_addr_a;
-  wire axi_bram_ctrl_0_bram_clk_a;
-  wire [31:0]axi_bram_ctrl_0_bram_douta;
-  wire axi_bram_ctrl_0_bram_en_a;
-  wire axi_bram_ctrl_0_bram_rst_a;
-  wire [3:0]axi_bram_ctrl_0_bram_we_a;
-  wire [31:0]axi_bram_ctrl_0_bram_wrdata_a;
+  wire [15:0]axi_bram_ctrl_0_BRAM_PORTA_ADDR;
+  wire axi_bram_ctrl_0_BRAM_PORTA_CLK;
+  wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DIN;
+  wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DOUT;
+  wire axi_bram_ctrl_0_BRAM_PORTA_EN;
+  wire axi_bram_ctrl_0_BRAM_PORTA_RST;
+  wire [3:0]axi_bram_ctrl_0_BRAM_PORTA_WE;
   wire [15:0]axi_interconnect_0_M00_AXI_ARADDR;
   wire [1:0]axi_interconnect_0_M00_AXI_ARBURST;
   wire [3:0]axi_interconnect_0_M00_AXI_ARCACHE;
@@ -1794,10 +1806,8 @@ module bram0_imp_1PE0B4L
   wire axi_interconnect_0_M00_AXI_WREADY;
   wire [3:0]axi_interconnect_0_M00_AXI_WSTRB;
   wire axi_interconnect_0_M00_AXI_WVALID;
-  wire [31:0]bram_delay_0_dout;
   wire clk_wiz_clk_out1;
   wire rst_clk_wiz_100M_peripheral_aresetn;
-  wire [6:0]vio_0_probe_out3;
 
   assign S_AXI_arready = axi_interconnect_0_M00_AXI_ARREADY;
   assign S_AXI_awready = axi_interconnect_0_M00_AXI_AWREADY;
@@ -1832,15 +1842,14 @@ module bram0_imp_1PE0B4L
   assign axi_interconnect_0_M00_AXI_WVALID = S_AXI_wvalid;
   assign clk_wiz_clk_out1 = s_axi_aclk;
   assign rst_clk_wiz_100M_peripheral_aresetn = s_axi_aresetn;
-  assign vio_0_probe_out3 = delay[6:0];
   apex_blk_axi_bram_ctrl_0_0 axi_bram_ctrl_0
-       (.bram_addr_a(axi_bram_ctrl_0_bram_addr_a),
-        .bram_clk_a(axi_bram_ctrl_0_bram_clk_a),
-        .bram_en_a(axi_bram_ctrl_0_bram_en_a),
-        .bram_rddata_a(bram_delay_0_dout),
-        .bram_rst_a(axi_bram_ctrl_0_bram_rst_a),
-        .bram_we_a(axi_bram_ctrl_0_bram_we_a),
-        .bram_wrdata_a(axi_bram_ctrl_0_bram_wrdata_a),
+       (.bram_addr_a(axi_bram_ctrl_0_BRAM_PORTA_ADDR),
+        .bram_clk_a(axi_bram_ctrl_0_BRAM_PORTA_CLK),
+        .bram_en_a(axi_bram_ctrl_0_BRAM_PORTA_EN),
+        .bram_rddata_a(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
+        .bram_rst_a(axi_bram_ctrl_0_BRAM_PORTA_RST),
+        .bram_we_a(axi_bram_ctrl_0_BRAM_PORTA_WE),
+        .bram_wrdata_a(axi_bram_ctrl_0_BRAM_PORTA_DIN),
         .s_axi_aclk(clk_wiz_clk_out1),
         .s_axi_araddr(axi_interconnect_0_M00_AXI_ARADDR),
         .s_axi_arburst(axi_interconnect_0_M00_AXI_ARBURST),
@@ -1875,18 +1884,13 @@ module bram0_imp_1PE0B4L
         .s_axi_wstrb(axi_interconnect_0_M00_AXI_WSTRB),
         .s_axi_wvalid(axi_interconnect_0_M00_AXI_WVALID));
   apex_blk_axi_bram_ctrl_0_bram_0 axi_bram_ctrl_0_bram
-       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_bram_addr_a}),
-        .clka(axi_bram_ctrl_0_bram_clk_a),
-        .dina(axi_bram_ctrl_0_bram_wrdata_a),
-        .douta(axi_bram_ctrl_0_bram_douta),
-        .ena(axi_bram_ctrl_0_bram_en_a),
-        .rsta(axi_bram_ctrl_0_bram_rst_a),
-        .wea(axi_bram_ctrl_0_bram_we_a));
-  apex_blk_bram_delay_0_0 bram_delay_0
-       (.clk(axi_bram_ctrl_0_bram_clk_a),
-        .delay(vio_0_probe_out3),
-        .di(axi_bram_ctrl_0_bram_douta),
-        .dout(bram_delay_0_dout));
+       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTA_ADDR}),
+        .clka(axi_bram_ctrl_0_BRAM_PORTA_CLK),
+        .dina(axi_bram_ctrl_0_BRAM_PORTA_DIN),
+        .douta(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
+        .ena(axi_bram_ctrl_0_BRAM_PORTA_EN),
+        .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST),
+        .wea(axi_bram_ctrl_0_BRAM_PORTA_WE));
 endmodule
 
 module bram2_imp_1VMD9EB
@@ -1959,13 +1963,13 @@ module bram2_imp_1VMD9EB
   input s_axi_aclk;
   input s_axi_aresetn;
 
-  wire [31:0]axi_bram_ctrl_0_bram1_douta;
-  wire [15:0]axi_bram_ctrl_1_bram_addr_a;
-  wire axi_bram_ctrl_1_bram_clk_a;
-  wire axi_bram_ctrl_1_bram_en_a;
-  wire axi_bram_ctrl_1_bram_rst_a;
-  wire [3:0]axi_bram_ctrl_1_bram_we_a;
-  wire [31:0]axi_bram_ctrl_1_bram_wrdata_a;
+  wire [15:0]axi_bram_ctrl_1_BRAM_PORTA_ADDR;
+  wire axi_bram_ctrl_1_BRAM_PORTA_CLK;
+  wire [31:0]axi_bram_ctrl_1_BRAM_PORTA_DIN;
+  wire [31:0]axi_bram_ctrl_1_BRAM_PORTA_DOUT;
+  wire axi_bram_ctrl_1_BRAM_PORTA_EN;
+  wire axi_bram_ctrl_1_BRAM_PORTA_RST;
+  wire [3:0]axi_bram_ctrl_1_BRAM_PORTA_WE;
   wire [15:0]axi_interconnect_0_M02_AXI_ARADDR;
   wire [1:0]axi_interconnect_0_M02_AXI_ARBURST;
   wire [3:0]axi_interconnect_0_M02_AXI_ARCACHE;
@@ -1997,10 +2001,8 @@ module bram2_imp_1VMD9EB
   wire axi_interconnect_0_M02_AXI_WREADY;
   wire [3:0]axi_interconnect_0_M02_AXI_WSTRB;
   wire axi_interconnect_0_M02_AXI_WVALID;
-  wire [31:0]bram_delay_1_dout;
   wire clk_wiz_clk_out1;
   wire rst_clk_wiz_100M_peripheral_aresetn;
-  wire [6:0]vio_0_probe_out4;
 
   assign S_AXI_arready = axi_interconnect_0_M02_AXI_ARREADY;
   assign S_AXI_awready = axi_interconnect_0_M02_AXI_AWREADY;
@@ -2035,23 +2037,22 @@ module bram2_imp_1VMD9EB
   assign axi_interconnect_0_M02_AXI_WVALID = S_AXI_wvalid;
   assign clk_wiz_clk_out1 = s_axi_aclk;
   assign rst_clk_wiz_100M_peripheral_aresetn = s_axi_aresetn;
-  assign vio_0_probe_out4 = delay[6:0];
   apex_blk_axi_bram_ctrl_0_bram_1 axi_bram_ctrl_0_bram1
-       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_1_bram_addr_a}),
-        .clka(axi_bram_ctrl_1_bram_clk_a),
-        .dina(axi_bram_ctrl_1_bram_wrdata_a),
-        .douta(axi_bram_ctrl_0_bram1_douta),
-        .ena(axi_bram_ctrl_1_bram_en_a),
-        .rsta(axi_bram_ctrl_1_bram_rst_a),
-        .wea(axi_bram_ctrl_1_bram_we_a));
+       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_1_BRAM_PORTA_ADDR}),
+        .clka(axi_bram_ctrl_1_BRAM_PORTA_CLK),
+        .dina(axi_bram_ctrl_1_BRAM_PORTA_DIN),
+        .douta(axi_bram_ctrl_1_BRAM_PORTA_DOUT),
+        .ena(axi_bram_ctrl_1_BRAM_PORTA_EN),
+        .rsta(axi_bram_ctrl_1_BRAM_PORTA_RST),
+        .wea(axi_bram_ctrl_1_BRAM_PORTA_WE));
   apex_blk_axi_bram_ctrl_0_1 axi_bram_ctrl_1
-       (.bram_addr_a(axi_bram_ctrl_1_bram_addr_a),
-        .bram_clk_a(axi_bram_ctrl_1_bram_clk_a),
-        .bram_en_a(axi_bram_ctrl_1_bram_en_a),
-        .bram_rddata_a(bram_delay_1_dout),
-        .bram_rst_a(axi_bram_ctrl_1_bram_rst_a),
-        .bram_we_a(axi_bram_ctrl_1_bram_we_a),
-        .bram_wrdata_a(axi_bram_ctrl_1_bram_wrdata_a),
+       (.bram_addr_a(axi_bram_ctrl_1_BRAM_PORTA_ADDR),
+        .bram_clk_a(axi_bram_ctrl_1_BRAM_PORTA_CLK),
+        .bram_en_a(axi_bram_ctrl_1_BRAM_PORTA_EN),
+        .bram_rddata_a(axi_bram_ctrl_1_BRAM_PORTA_DOUT),
+        .bram_rst_a(axi_bram_ctrl_1_BRAM_PORTA_RST),
+        .bram_we_a(axi_bram_ctrl_1_BRAM_PORTA_WE),
+        .bram_wrdata_a(axi_bram_ctrl_1_BRAM_PORTA_DIN),
         .s_axi_aclk(clk_wiz_clk_out1),
         .s_axi_araddr(axi_interconnect_0_M02_AXI_ARADDR),
         .s_axi_arburst(axi_interconnect_0_M02_AXI_ARBURST),
@@ -2085,11 +2086,6 @@ module bram2_imp_1VMD9EB
         .s_axi_wready(axi_interconnect_0_M02_AXI_WREADY),
         .s_axi_wstrb(axi_interconnect_0_M02_AXI_WSTRB),
         .s_axi_wvalid(axi_interconnect_0_M02_AXI_WVALID));
-  apex_blk_bram_delay_0_1 bram_delay_1
-       (.clk(axi_bram_ctrl_1_bram_clk_a),
-        .delay(vio_0_probe_out4),
-        .di(axi_bram_ctrl_0_bram1_douta),
-        .dout(bram_delay_1_dout));
 endmodule
 
 module drp1_imp_W4DWYU

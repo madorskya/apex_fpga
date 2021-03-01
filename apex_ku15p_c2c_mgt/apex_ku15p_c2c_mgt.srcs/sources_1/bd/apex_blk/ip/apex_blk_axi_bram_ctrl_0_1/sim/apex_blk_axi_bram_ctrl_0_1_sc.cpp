@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2020 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2021 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -68,7 +68,7 @@ apex_blk_axi_bram_ctrl_0_1_sc::apex_blk_axi_bram_ctrl_0_1_sc(const sc_core::sc_m
     model_param_props.addLong("C_S_AXI_ID_WIDTH", "1");
     model_param_props.addLong("C_S_AXI_SUPPORTS_NARROW_BURST", "0");
     model_param_props.addLong("C_SINGLE_PORT_BRAM", "1");
-    model_param_props.addLong("C_READ_LATENCY", "100");
+    model_param_props.addLong("C_READ_LATENCY", "1");
     model_param_props.addLong("C_RD_CMD_OPTIMIZATION", "0");
     model_param_props.addLong("C_S_AXI_CTRL_ADDR_WIDTH", "32");
     model_param_props.addLong("C_S_AXI_CTRL_DATA_WIDTH", "32");

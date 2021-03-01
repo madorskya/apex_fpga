@@ -30,12 +30,10 @@
       "rst_clk_wiz_100M": "",
       "bram0": {
         "axi_bram_ctrl_0": "",
-        "axi_bram_ctrl_0_bram": "",
-        "bram_delay_0": ""
+        "axi_bram_ctrl_0_bram": ""
       },
       "bram2": {
         "axi_bram_ctrl_1": "",
-        "bram_delay_1": "",
         "axi_bram_ctrl_0_bram1": ""
       },
       "drp1": {
@@ -46,7 +44,8 @@
       "system_ila_0": "",
       "ila_0": "",
       "xlconstant_0": "",
-      "c2c_gth_example_bit_0": ""
+      "c2c_gth_example_bit_0": "",
+      "c2c_reset_fsm_0": ""
     },
     "ports": {
       "drp_clk": {
@@ -420,16 +419,16 @@
               }
             },
             "interface_nets": {
-              "s00_couplers_to_auto_us": {
-                "interface_ports": [
-                  "S_AXI",
-                  "auto_us/S_AXI"
-                ]
-              },
               "auto_us_to_s00_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "auto_us/M_AXI"
+                ]
+              },
+              "s00_couplers_to_auto_us": {
+                "interface_ports": [
+                  "S_AXI",
+                  "auto_us/S_AXI"
                 ]
               }
             },
@@ -518,16 +517,16 @@
               }
             },
             "interface_nets": {
-              "auto_ds_to_m00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_ds/M_AXI"
-                ]
-              },
               "m00_couplers_to_auto_ds": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_ds/S_AXI"
+                ]
+              },
+              "auto_ds_to_m00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_ds/M_AXI"
                 ]
               }
             },
@@ -748,36 +747,6 @@
           }
         },
         "interface_nets": {
-          "m00_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
-            ]
-          },
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
-            ]
-          },
-          "xbar_to_m00_couplers": {
-            "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
-            ]
-          },
-          "m01_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
-            ]
-          },
-          "axi_interconnect_0_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
           "m02_couplers_to_axi_interconnect_0": {
             "interface_ports": [
               "M02_AXI",
@@ -790,10 +759,40 @@
               "m01_couplers/S_AXI"
             ]
           },
+          "axi_interconnect_0_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
+            ]
+          },
+          "m00_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
+            ]
+          },
+          "xbar_to_m00_couplers": {
+            "interface_ports": [
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
+            ]
+          },
           "xbar_to_m02_couplers": {
             "interface_ports": [
               "xbar/M02_AXI",
               "m02_couplers/S_AXI"
+            ]
+          },
+          "m01_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M01_AXI",
+              "m01_couplers/M_AXI"
             ]
           }
         },
@@ -972,7 +971,7 @@
             "xci_name": "apex_blk_axi_bram_ctrl_0_0",
             "parameters": {
               "READ_LATENCY": {
-                "value": "20"
+                "value": "1"
               },
               "SINGLE_PORT_BRAM": {
                 "value": "1"
@@ -996,36 +995,6 @@
                 "value": "0"
               }
             }
-          },
-          "bram_delay_0": {
-            "vlnv": "xilinx.com:module_ref:bram_delay:1.0",
-            "xci_name": "apex_blk_bram_delay_0_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "bram_delay",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "delay": {
-                "direction": "I",
-                "left": "6",
-                "right": "0"
-              },
-              "di": {
-                "direction": "I",
-                "left": "31",
-                "right": "0"
-              },
-              "dout": {
-                "direction": "O",
-                "left": "31",
-                "right": "0"
-              },
-              "clk": {
-                "type": "clk",
-                "direction": "I"
-              }
-            }
           }
         },
         "interface_nets": {
@@ -1034,58 +1003,15 @@
               "S_AXI",
               "axi_bram_ctrl_0/S_AXI"
             ]
+          },
+          "axi_bram_ctrl_0_BRAM_PORTA": {
+            "interface_ports": [
+              "axi_bram_ctrl_0_bram/BRAM_PORTA",
+              "axi_bram_ctrl_0/BRAM_PORTA"
+            ]
           }
         },
         "nets": {
-          "axi_bram_ctrl_0_bram_rst_a": {
-            "ports": [
-              "axi_bram_ctrl_0/bram_rst_a",
-              "axi_bram_ctrl_0_bram/rsta"
-            ]
-          },
-          "axi_bram_ctrl_0_bram_clk_a": {
-            "ports": [
-              "axi_bram_ctrl_0/bram_clk_a",
-              "axi_bram_ctrl_0_bram/clka",
-              "bram_delay_0/clk"
-            ]
-          },
-          "axi_bram_ctrl_0_bram_en_a": {
-            "ports": [
-              "axi_bram_ctrl_0/bram_en_a",
-              "axi_bram_ctrl_0_bram/ena"
-            ]
-          },
-          "axi_bram_ctrl_0_bram_we_a": {
-            "ports": [
-              "axi_bram_ctrl_0/bram_we_a",
-              "axi_bram_ctrl_0_bram/wea"
-            ]
-          },
-          "axi_bram_ctrl_0_bram_addr_a": {
-            "ports": [
-              "axi_bram_ctrl_0/bram_addr_a",
-              "axi_bram_ctrl_0_bram/addra"
-            ]
-          },
-          "axi_bram_ctrl_0_bram_wrdata_a": {
-            "ports": [
-              "axi_bram_ctrl_0/bram_wrdata_a",
-              "axi_bram_ctrl_0_bram/dina"
-            ]
-          },
-          "bram_delay_0_dout": {
-            "ports": [
-              "bram_delay_0/dout",
-              "axi_bram_ctrl_0/bram_rddata_a"
-            ]
-          },
-          "axi_bram_ctrl_0_bram_douta": {
-            "ports": [
-              "axi_bram_ctrl_0_bram/douta",
-              "bram_delay_0/di"
-            ]
-          },
           "clk_wiz_clk_out1": {
             "ports": [
               "s_axi_aclk",
@@ -1096,12 +1022,6 @@
             "ports": [
               "s_axi_aresetn",
               "axi_bram_ctrl_0/s_axi_aresetn"
-            ]
-          },
-          "vio_0_probe_out3": {
-            "ports": [
-              "delay",
-              "bram_delay_0/delay"
             ]
           }
         }
@@ -1134,40 +1054,10 @@
             "xci_name": "apex_blk_axi_bram_ctrl_0_1",
             "parameters": {
               "READ_LATENCY": {
-                "value": "100"
+                "value": "1"
               },
               "SINGLE_PORT_BRAM": {
                 "value": "1"
-              }
-            }
-          },
-          "bram_delay_1": {
-            "vlnv": "xilinx.com:module_ref:bram_delay:1.0",
-            "xci_name": "apex_blk_bram_delay_0_1",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "bram_delay",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "delay": {
-                "direction": "I",
-                "left": "6",
-                "right": "0"
-              },
-              "di": {
-                "direction": "I",
-                "left": "31",
-                "right": "0"
-              },
-              "dout": {
-                "direction": "O",
-                "left": "31",
-                "right": "0"
-              },
-              "clk": {
-                "type": "clk",
-                "direction": "I"
               }
             }
           },
@@ -1177,6 +1067,12 @@
           }
         },
         "interface_nets": {
+          "axi_bram_ctrl_1_BRAM_PORTA": {
+            "interface_ports": [
+              "axi_bram_ctrl_0_bram1/BRAM_PORTA",
+              "axi_bram_ctrl_1/BRAM_PORTA"
+            ]
+          },
           "axi_interconnect_0_M02_AXI": {
             "interface_ports": [
               "S_AXI",
@@ -1185,55 +1081,6 @@
           }
         },
         "nets": {
-          "axi_bram_ctrl_1_bram_rst_a": {
-            "ports": [
-              "axi_bram_ctrl_1/bram_rst_a",
-              "axi_bram_ctrl_0_bram1/rsta"
-            ]
-          },
-          "axi_bram_ctrl_1_bram_clk_a": {
-            "ports": [
-              "axi_bram_ctrl_1/bram_clk_a",
-              "axi_bram_ctrl_0_bram1/clka",
-              "bram_delay_1/clk"
-            ]
-          },
-          "axi_bram_ctrl_1_bram_en_a": {
-            "ports": [
-              "axi_bram_ctrl_1/bram_en_a",
-              "axi_bram_ctrl_0_bram1/ena"
-            ]
-          },
-          "axi_bram_ctrl_1_bram_we_a": {
-            "ports": [
-              "axi_bram_ctrl_1/bram_we_a",
-              "axi_bram_ctrl_0_bram1/wea"
-            ]
-          },
-          "axi_bram_ctrl_1_bram_addr_a": {
-            "ports": [
-              "axi_bram_ctrl_1/bram_addr_a",
-              "axi_bram_ctrl_0_bram1/addra"
-            ]
-          },
-          "axi_bram_ctrl_1_bram_wrdata_a": {
-            "ports": [
-              "axi_bram_ctrl_1/bram_wrdata_a",
-              "axi_bram_ctrl_0_bram1/dina"
-            ]
-          },
-          "bram_delay_1_dout": {
-            "ports": [
-              "bram_delay_1/dout",
-              "axi_bram_ctrl_1/bram_rddata_a"
-            ]
-          },
-          "axi_bram_ctrl_0_bram1_douta": {
-            "ports": [
-              "axi_bram_ctrl_0_bram1/douta",
-              "bram_delay_1/di"
-            ]
-          },
           "clk_wiz_clk_out1": {
             "ports": [
               "s_axi_aclk",
@@ -1244,12 +1091,6 @@
             "ports": [
               "s_axi_aresetn",
               "axi_bram_ctrl_1/s_axi_aresetn"
-            ]
-          },
-          "vio_0_probe_out4": {
-            "ports": [
-              "delay",
-              "bram_delay_1/delay"
             ]
           }
         }
@@ -1485,7 +1326,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "17"
+            "value": "20"
           },
           "C_PROBE15_WIDTH": {
             "value": "3"
@@ -1541,6 +1382,63 @@
                 "value_src": "weak"
               }
             }
+          }
+        }
+      },
+      "c2c_reset_fsm_0": {
+        "vlnv": "xilinx.com:module_ref:c2c_reset_fsm:1.0",
+        "xci_name": "apex_blk_c2c_reset_fsm_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "c2c_reset_fsm",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "c2c_link_up": {
+            "direction": "I"
+          },
+          "mgt_channel_up": {
+            "direction": "I"
+          },
+          "manual_reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "phy_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "apex_blk_axi_c2c_phy_clk_0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "93750000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "c2c_channel_up": {
+            "direction": "O"
+          },
+          "m_aresetn": {
+            "type": "rst",
+            "direction": "O",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "state": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
           }
         }
       }
@@ -1624,7 +1522,8 @@
           "rst_clk_wiz_100M/ext_reset_in",
           "rst_clk_wiz_100M/aux_reset_in",
           "ila_0/probe12",
-          "link_up"
+          "link_up",
+          "c2c_reset_fsm_0/c2c_link_up"
         ],
         "hdl_attributes": {
           "DEBUG": {
@@ -1783,7 +1682,9 @@
       "axi_c2c_aurora_channel_up_0_1": {
         "ports": [
           "c2c_channel_up",
-          "ila_0/probe2"
+          "ila_0/probe2",
+          "axi_chip2chip_0/axi_c2c_aurora_tx_tready",
+          "c2c_reset_fsm_0/mgt_channel_up"
         ]
       },
       "axi_c2c_phy_clk_0_1": {
@@ -1791,7 +1692,8 @@
           "c2c_phy_clk",
           "axi_chip2chip_0/axi_c2c_phy_clk",
           "ila_0/clk",
-          "vio_0/clk"
+          "vio_0/clk",
+          "c2c_reset_fsm_0/phy_clk"
         ]
       },
       "clk_in1_0_1": {
@@ -1830,16 +1732,9 @@
       "channel_up": {
         "ports": [
           "vio_0/probe_out0",
-          "axi_chip2chip_0/axi_c2c_aurora_channel_up",
           "ila_0/probe14",
-          "axi_chip2chip_0/axi_c2c_aurora_tx_tready",
-          "c2c_gth_example_bit_0/i_in"
-        ]
-      },
-      "c2c_gth_example_bit_0_o_out": {
-        "ports": [
-          "c2c_gth_example_bit_0/o_out",
-          "axi_chip2chip_0/m_aresetn"
+          "c2c_gth_example_bit_0/i_in",
+          "c2c_reset_fsm_0/manual_reset"
         ]
       },
       "c2c_rxbufstatus": {
@@ -1852,6 +1747,26 @@
         "ports": [
           "c2c_rxclkcorcnt",
           "ila_0/probe16"
+        ]
+      },
+      "c2c_reset_fsm_0_c2c_channel_up": {
+        "ports": [
+          "c2c_reset_fsm_0/c2c_channel_up",
+          "axi_chip2chip_0/axi_c2c_aurora_channel_up",
+          "ila_0/probe17"
+        ]
+      },
+      "c2c_reset_fsm_0_m_aresetn": {
+        "ports": [
+          "c2c_reset_fsm_0/m_aresetn",
+          "axi_chip2chip_0/m_aresetn",
+          "ila_0/probe18"
+        ]
+      },
+      "c2c_reset_fsm_0_state": {
+        "ports": [
+          "c2c_reset_fsm_0/state",
+          "ila_0/probe19"
         ]
       }
     },

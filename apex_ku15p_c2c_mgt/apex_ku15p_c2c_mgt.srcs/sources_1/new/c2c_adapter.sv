@@ -37,6 +37,8 @@ module c2c_adapter
     reg [31:0] c2c_rx_data_r;
     reg [3:0] c2c_rx_valid_r;
     
+    reg do_cc_r;
+    
     always @(posedge c2c_phy_clk)
     begin
         // rx logic
@@ -61,10 +63,11 @@ module c2c_adapter
         // tx logic
         if (c2c_tx_tvalid == 1'b0)
         begin 
-            if (do_cc) // CC needed
+            if (do_cc_r) // CC needed
             begin
                 mgt_tx_data = clkc_d; 
                 mgt_tx_k = clkc_k;
+                do_cc_r = 1'b0;
             end
             else
             begin
@@ -75,10 +78,11 @@ module c2c_adapter
         end
         else
         begin 
-            if (do_cc && tx_can_cc) // CC needed and pattern can be interrupted
+            if (do_cc_r && tx_can_cc) // CC needed and pattern can be interrupted
             begin
                 mgt_tx_data = clkc_d; 
                 mgt_tx_k = clkc_k;
+                do_cc_r = 1'b0;
             end
             else
             begin
@@ -87,6 +91,8 @@ module c2c_adapter
                 mgt_tx_k = zero_k;
             end
         end
+        
+        if (do_cc) do_cc_r = 1'b1;
     end
 
 endmodule

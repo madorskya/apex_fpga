@@ -1,11 +1,11 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Fri Feb 19 17:19:08 2021
+-- Date        : Mon Mar  1 13:50:46 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top apex_blk_axi_bram_ctrl_0_1 -prefix
---               apex_blk_axi_bram_ctrl_0_1_ apex_blk_axi_bram_ctrl_0_1_stub.vhdl
--- Design      : apex_blk_axi_bram_ctrl_0_1
+--               apex_blk_axi_bram_ctrl_0_1_ apex_blk_axi_bram_ctrl_0_0_stub.vhdl
+-- Design      : apex_blk_axi_bram_ctrl_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xcku15p-ffva1760-2-e
 -- --------------------------------------------------------------------------------

@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# c2c_gth_example_bit_synchronizer, bram_delay, bram_delay
+# c2c_gth_example_bit_synchronizer, c2c_reset_fsm
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -259,36 +259,17 @@ proc create_hier_cell_bram2 { parentCell nameHier } {
   # Create instance: axi_bram_ctrl_1, and set properties
   set axi_bram_ctrl_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_1 ]
   set_property -dict [ list \
-   CONFIG.READ_LATENCY {100} \
+   CONFIG.READ_LATENCY {1} \
    CONFIG.SINGLE_PORT_BRAM {1} \
  ] $axi_bram_ctrl_1
 
-  # Create instance: bram_delay_1, and set properties
-  set block_name bram_delay
-  set block_cell_name bram_delay_1
-  if { [catch {set bram_delay_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $bram_delay_1 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create interface connections
+  connect_bd_intf_net -intf_net axi_bram_ctrl_1_BRAM_PORTA [get_bd_intf_pins axi_bram_ctrl_0_bram1/BRAM_PORTA] [get_bd_intf_pins axi_bram_ctrl_1/BRAM_PORTA]
   connect_bd_intf_net -intf_net axi_interconnect_0_M02_AXI [get_bd_intf_pins S_AXI] [get_bd_intf_pins axi_bram_ctrl_1/S_AXI]
 
   # Create port connections
-  connect_bd_net -net axi_bram_ctrl_0_bram1_douta [get_bd_pins axi_bram_ctrl_0_bram1/douta] [get_bd_pins bram_delay_1/di]
-  connect_bd_net -net axi_bram_ctrl_1_bram_addr_a [get_bd_pins axi_bram_ctrl_0_bram1/addra] [get_bd_pins axi_bram_ctrl_1/bram_addr_a]
-  connect_bd_net -net axi_bram_ctrl_1_bram_clk_a [get_bd_pins axi_bram_ctrl_0_bram1/clka] [get_bd_pins axi_bram_ctrl_1/bram_clk_a] [get_bd_pins bram_delay_1/clk]
-  connect_bd_net -net axi_bram_ctrl_1_bram_en_a [get_bd_pins axi_bram_ctrl_0_bram1/ena] [get_bd_pins axi_bram_ctrl_1/bram_en_a]
-  connect_bd_net -net axi_bram_ctrl_1_bram_rst_a [get_bd_pins axi_bram_ctrl_0_bram1/rsta] [get_bd_pins axi_bram_ctrl_1/bram_rst_a]
-  connect_bd_net -net axi_bram_ctrl_1_bram_we_a [get_bd_pins axi_bram_ctrl_0_bram1/wea] [get_bd_pins axi_bram_ctrl_1/bram_we_a]
-  connect_bd_net -net axi_bram_ctrl_1_bram_wrdata_a [get_bd_pins axi_bram_ctrl_0_bram1/dina] [get_bd_pins axi_bram_ctrl_1/bram_wrdata_a]
-  connect_bd_net -net bram_delay_1_dout [get_bd_pins axi_bram_ctrl_1/bram_rddata_a] [get_bd_pins bram_delay_1/dout]
   connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins s_axi_aclk] [get_bd_pins axi_bram_ctrl_1/s_axi_aclk]
   connect_bd_net -net rst_clk_wiz_100M_peripheral_aresetn [get_bd_pins s_axi_aresetn] [get_bd_pins axi_bram_ctrl_1/s_axi_aresetn]
-  connect_bd_net -net vio_0_probe_out4 [get_bd_pins delay] [get_bd_pins bram_delay_1/delay]
 
   # Restore current instance
   current_bd_instance $oldCurInst
@@ -340,7 +321,7 @@ proc create_hier_cell_bram0 { parentCell nameHier } {
   # Create instance: axi_bram_ctrl_0, and set properties
   set axi_bram_ctrl_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0 ]
   set_property -dict [ list \
-   CONFIG.READ_LATENCY {20} \
+   CONFIG.READ_LATENCY {1} \
    CONFIG.SINGLE_PORT_BRAM {1} \
  ] $axi_bram_ctrl_0
 
@@ -355,32 +336,13 @@ proc create_hier_cell_bram0 { parentCell nameHier } {
    CONFIG.Use_RSTB_Pin {false} \
  ] $axi_bram_ctrl_0_bram
 
-  # Create instance: bram_delay_0, and set properties
-  set block_name bram_delay
-  set block_cell_name bram_delay_0
-  if { [catch {set bram_delay_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $bram_delay_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create interface connections
+  connect_bd_intf_net -intf_net axi_bram_ctrl_0_BRAM_PORTA [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins axi_bram_ctrl_0_bram/BRAM_PORTA]
   connect_bd_intf_net -intf_net axi_interconnect_0_M00_AXI [get_bd_intf_pins S_AXI] [get_bd_intf_pins axi_bram_ctrl_0/S_AXI]
 
   # Create port connections
-  connect_bd_net -net axi_bram_ctrl_0_bram_addr_a [get_bd_pins axi_bram_ctrl_0/bram_addr_a] [get_bd_pins axi_bram_ctrl_0_bram/addra]
-  connect_bd_net -net axi_bram_ctrl_0_bram_clk_a [get_bd_pins axi_bram_ctrl_0/bram_clk_a] [get_bd_pins axi_bram_ctrl_0_bram/clka] [get_bd_pins bram_delay_0/clk]
-  connect_bd_net -net axi_bram_ctrl_0_bram_douta [get_bd_pins axi_bram_ctrl_0_bram/douta] [get_bd_pins bram_delay_0/di]
-  connect_bd_net -net axi_bram_ctrl_0_bram_en_a [get_bd_pins axi_bram_ctrl_0/bram_en_a] [get_bd_pins axi_bram_ctrl_0_bram/ena]
-  connect_bd_net -net axi_bram_ctrl_0_bram_rst_a [get_bd_pins axi_bram_ctrl_0/bram_rst_a] [get_bd_pins axi_bram_ctrl_0_bram/rsta]
-  connect_bd_net -net axi_bram_ctrl_0_bram_we_a [get_bd_pins axi_bram_ctrl_0/bram_we_a] [get_bd_pins axi_bram_ctrl_0_bram/wea]
-  connect_bd_net -net axi_bram_ctrl_0_bram_wrdata_a [get_bd_pins axi_bram_ctrl_0/bram_wrdata_a] [get_bd_pins axi_bram_ctrl_0_bram/dina]
-  connect_bd_net -net bram_delay_0_dout [get_bd_pins axi_bram_ctrl_0/bram_rddata_a] [get_bd_pins bram_delay_0/dout]
   connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins s_axi_aclk] [get_bd_pins axi_bram_ctrl_0/s_axi_aclk]
   connect_bd_net -net rst_clk_wiz_100M_peripheral_aresetn [get_bd_pins s_axi_aresetn] [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn]
-  connect_bd_net -net vio_0_probe_out3 [get_bd_pins delay] [get_bd_pins bram_delay_0/delay]
 
   # Restore current instance
   current_bd_instance $oldCurInst
@@ -485,6 +447,17 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: c2c_reset_fsm_0, and set properties
+  set block_name c2c_reset_fsm
+  set block_cell_name c2c_reset_fsm_0
+  if { [catch {set c2c_reset_fsm_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $c2c_reset_fsm_0 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: clk_wiz, and set properties
   set clk_wiz [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz ]
   set_property -dict [ list \
@@ -513,7 +486,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_INPUT_PIPE_STAGES {6} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {17} \
+   CONFIG.C_NUM_OF_PROBES {20} \
    CONFIG.C_PROBE15_WIDTH {3} \
    CONFIG.C_PROBE16_WIDTH {2} \
  ] $ila_0
@@ -565,17 +538,17 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   connect_bd_net -net aurora_mmcm_not_locked_0_1 [get_bd_ports c2c_mmcm_unlocked] [get_bd_pins axi_chip2chip_0/aurora_mmcm_not_locked] [get_bd_pins ila_0/probe4]
   connect_bd_net -net aurora_pma_init [get_bd_pins axi_chip2chip_0/aurora_pma_init_in] [get_bd_pins ila_0/probe3] [get_bd_pins vio_0/probe_out1]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets aurora_pma_init]
-  connect_bd_net -net axi_c2c_aurora_channel_up_0_1 [get_bd_ports c2c_channel_up] [get_bd_pins ila_0/probe2]
+  connect_bd_net -net axi_c2c_aurora_channel_up_0_1 [get_bd_ports c2c_channel_up] [get_bd_pins axi_chip2chip_0/axi_c2c_aurora_tx_tready] [get_bd_pins c2c_reset_fsm_0/mgt_channel_up] [get_bd_pins ila_0/probe2]
   connect_bd_net -net axi_c2c_aurora_rx_tdata_0_1 [get_bd_ports c2c_rx_data] [get_bd_pins axi_chip2chip_0/axi_c2c_aurora_rx_tdata] [get_bd_pins ila_0/probe0]
   connect_bd_net -net axi_c2c_aurora_rx_tvalid_0_1 [get_bd_ports c2c_rx_valid] [get_bd_pins axi_chip2chip_0/axi_c2c_aurora_rx_tvalid] [get_bd_pins ila_0/probe1]
   connect_bd_net -net axi_c2c_aurora_tx_tready_0_1 [get_bd_ports c2c_tx_ready] [get_bd_pins ila_0/probe6]
   connect_bd_net -net axi_c2c_config_error_out [get_bd_pins axi_chip2chip_0/axi_c2c_config_error_out] [get_bd_pins ila_0/probe11]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_c2c_config_error_out]
-  connect_bd_net -net axi_c2c_link_status_out [get_bd_ports link_up] [get_bd_pins axi_chip2chip_0/axi_c2c_link_status_out] [get_bd_pins ila_0/probe12] [get_bd_pins rst_clk_wiz_100M/aux_reset_in] [get_bd_pins rst_clk_wiz_100M/ext_reset_in]
+  connect_bd_net -net axi_c2c_link_status_out [get_bd_ports link_up] [get_bd_pins axi_chip2chip_0/axi_c2c_link_status_out] [get_bd_pins c2c_reset_fsm_0/c2c_link_up] [get_bd_pins ila_0/probe12] [get_bd_pins rst_clk_wiz_100M/aux_reset_in] [get_bd_pins rst_clk_wiz_100M/ext_reset_in]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_c2c_link_status_out]
   connect_bd_net -net axi_c2c_multi_bit_error_out [get_bd_pins axi_chip2chip_0/axi_c2c_multi_bit_error_out] [get_bd_pins ila_0/probe13]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_c2c_multi_bit_error_out]
-  connect_bd_net -net axi_c2c_phy_clk_0_1 [get_bd_ports c2c_phy_clk] [get_bd_pins axi_chip2chip_0/axi_c2c_phy_clk] [get_bd_pins ila_0/clk] [get_bd_pins vio_0/clk]
+  connect_bd_net -net axi_c2c_phy_clk_0_1 [get_bd_ports c2c_phy_clk] [get_bd_pins axi_chip2chip_0/axi_c2c_phy_clk] [get_bd_pins c2c_reset_fsm_0/phy_clk] [get_bd_pins ila_0/clk] [get_bd_pins vio_0/clk]
   connect_bd_net -net axi_chip2chip_0_aurora_do_cc [get_bd_ports c2c_do_cc] [get_bd_pins axi_chip2chip_0/aurora_do_cc] [get_bd_pins ila_0/probe8]
   connect_bd_net -net axi_chip2chip_0_aurora_pma_init_out [get_bd_ports c2c_pma_init] [get_bd_pins axi_chip2chip_0/aurora_pma_init_out] [get_bd_pins ila_0/probe9]
   connect_bd_net -net axi_chip2chip_0_aurora_reset_pb [get_bd_pins axi_chip2chip_0/aurora_reset_pb] [get_bd_pins ila_0/probe10]
@@ -584,10 +557,12 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   connect_bd_net -net axi_chip2chip_0_axi_c2c_lnk_hndlr_in_progress [get_bd_pins axi_chip2chip_0/axi_c2c_lnk_hndlr_in_progress] [get_bd_pins system_ila_0/probe7]
   connect_bd_net -net bram1_delay [get_bd_pins bram0/delay] [get_bd_pins vio_0/probe_out3]
   connect_bd_net -net bram2_delay [get_bd_pins bram2/delay] [get_bd_pins vio_0/probe_out4]
-  connect_bd_net -net c2c_gth_example_bit_0_o_out [get_bd_pins axi_chip2chip_0/m_aresetn] [get_bd_pins c2c_gth_example_bit_0/o_out]
+  connect_bd_net -net c2c_reset_fsm_0_c2c_channel_up [get_bd_pins axi_chip2chip_0/axi_c2c_aurora_channel_up] [get_bd_pins c2c_reset_fsm_0/c2c_channel_up] [get_bd_pins ila_0/probe17]
+  connect_bd_net -net c2c_reset_fsm_0_m_aresetn [get_bd_pins axi_chip2chip_0/m_aresetn] [get_bd_pins c2c_reset_fsm_0/m_aresetn] [get_bd_pins ila_0/probe18]
+  connect_bd_net -net c2c_reset_fsm_0_state [get_bd_pins c2c_reset_fsm_0/state] [get_bd_pins ila_0/probe19]
   connect_bd_net -net c2c_rxbufstatus [get_bd_ports c2c_rxbufstatus] [get_bd_pins ila_0/probe15]
   connect_bd_net -net c2c_rxclkcorcnt [get_bd_ports c2c_rxclkcorcnt] [get_bd_pins ila_0/probe16]
-  connect_bd_net -net channel_up [get_bd_pins axi_chip2chip_0/axi_c2c_aurora_channel_up] [get_bd_pins axi_chip2chip_0/axi_c2c_aurora_tx_tready] [get_bd_pins c2c_gth_example_bit_0/i_in] [get_bd_pins ila_0/probe14] [get_bd_pins vio_0/probe_out0]
+  connect_bd_net -net channel_up [get_bd_pins c2c_gth_example_bit_0/i_in] [get_bd_pins c2c_reset_fsm_0/manual_reset] [get_bd_pins ila_0/probe14] [get_bd_pins vio_0/probe_out0]
   connect_bd_net -net clk_in1_0_1 [get_bd_ports c2c_init_clk] [get_bd_pins clk_wiz/clk_in1]
   connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_chip2chip_0/m_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins bram0/s_axi_aclk] [get_bd_pins bram2/s_axi_aclk] [get_bd_pins c2c_gth_example_bit_0/clk_in] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins system_ila_0/clk]
   connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz/locked] [get_bd_pins rst_clk_wiz_100M/dcm_locked]
