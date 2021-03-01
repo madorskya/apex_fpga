@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Wed Feb 24 11:11:55 2021
+// Date        : Sun Feb 28 21:44:12 2021
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 // Command     : write_verilog -force -mode funcsim
-//               /home/madorsky/github/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/sources_1/ip/c2c_gth/c2c_gth_sim_netlist.v
+//               /home/madorsky/github/apex_ku15p_revert/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/sources_1/ip/c2c_gth/c2c_gth_sim_netlist.v
 // Design      : c2c_gth
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -387,11 +387,11 @@ module c2c_gth
   (* C_RX_CB_VAL = "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
   (* C_RX_CC_DISP = "8'b00000000" *) 
   (* C_RX_CC_ENABLE = "1" *) 
-  (* C_RX_CC_K = "8'b00000001" *) 
+  (* C_RX_CC_K = "8'b00010001" *) 
   (* C_RX_CC_LEN_SEQ = "4" *) 
-  (* C_RX_CC_NUM_SEQ = "1" *) 
+  (* C_RX_CC_NUM_SEQ = "2" *) 
   (* C_RX_CC_PERIODICITY = "5000" *) 
-  (* C_RX_CC_VAL = "80'b00000000000000000000000000000000000000000000000100000000001100000000100000011100" *) 
+  (* C_RX_CC_VAL = "80'b00000000000000001000000000100000110111000000000000000000000000010100000010111100" *) 
   (* C_RX_COMMA_M_ENABLE = "0" *) 
   (* C_RX_COMMA_M_VAL = "10'b1010000011" *) 
   (* C_RX_COMMA_P_ENABLE = "1" *) 
@@ -4385,9 +4385,9 @@ endmodule
 (* C_RX_BUFFBYPASS_MODE = "0" *) (* C_RX_BUFFER_BYPASS_INSTANCE_CTRL = "0" *) (* C_RX_BUFFER_MODE = "1" *) 
 (* C_RX_CB_DISP = "8'b00000000" *) (* C_RX_CB_K = "8'b00000000" *) (* C_RX_CB_LEN_SEQ = "1" *) 
 (* C_RX_CB_MAX_LEVEL = "1" *) (* C_RX_CB_NUM_SEQ = "0" *) (* C_RX_CB_VAL = "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
-(* C_RX_CC_DISP = "8'b00000000" *) (* C_RX_CC_ENABLE = "1" *) (* C_RX_CC_K = "8'b00000001" *) 
-(* C_RX_CC_LEN_SEQ = "4" *) (* C_RX_CC_NUM_SEQ = "1" *) (* C_RX_CC_PERIODICITY = "5000" *) 
-(* C_RX_CC_VAL = "80'b00000000000000000000000000000000000000000000000100000000001100000000100000011100" *) (* C_RX_COMMA_M_ENABLE = "0" *) (* C_RX_COMMA_M_VAL = "10'b1010000011" *) 
+(* C_RX_CC_DISP = "8'b00000000" *) (* C_RX_CC_ENABLE = "1" *) (* C_RX_CC_K = "8'b00010001" *) 
+(* C_RX_CC_LEN_SEQ = "4" *) (* C_RX_CC_NUM_SEQ = "2" *) (* C_RX_CC_PERIODICITY = "5000" *) 
+(* C_RX_CC_VAL = "80'b00000000000000001000000000100000110111000000000000000000000000010100000010111100" *) (* C_RX_COMMA_M_ENABLE = "0" *) (* C_RX_COMMA_M_VAL = "10'b1010000011" *) 
 (* C_RX_COMMA_P_ENABLE = "1" *) (* C_RX_COMMA_P_VAL = "10'b0101111100" *) (* C_RX_DATA_DECODING = "1" *) 
 (* C_RX_ENABLE = "1" *) (* C_RX_INT_DATA_WIDTH = "40" *) (* C_RX_LINE_RATE = "3.750000" *) 
 (* C_RX_MASTER_CHANNEL_IDX = "25" *) (* C_RX_OUTCLK_BUFG_GT_DIV = "1" *) (* C_RX_OUTCLK_FREQUENCY = "93.750000" *) 
@@ -13442,22 +13442,22 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_channel
     .CKCAL_RSVD0(16'h0080),
     .CKCAL_RSVD1(16'h0400),
     .CLK_CORRECT_USE("TRUE"),
-    .CLK_COR_KEEP_IDLE("FALSE"),
+    .CLK_COR_KEEP_IDLE("TRUE"),
     .CLK_COR_MAX_LAT(31),
     .CLK_COR_MIN_LAT(24),
     .CLK_COR_PRECEDENCE("TRUE"),
     .CLK_COR_REPEAT_WAIT(0),
-    .CLK_COR_SEQ_1_1(10'b0100011100),
-    .CLK_COR_SEQ_1_2(10'b0000000010),
-    .CLK_COR_SEQ_1_3(10'b0000000011),
-    .CLK_COR_SEQ_1_4(10'b0000000100),
+    .CLK_COR_SEQ_1_1(10'b0110111100),
+    .CLK_COR_SEQ_1_2(10'b0001010000),
+    .CLK_COR_SEQ_1_3(10'b0000000000),
+    .CLK_COR_SEQ_1_4(10'b0000000000),
     .CLK_COR_SEQ_1_ENABLE(4'b1111),
-    .CLK_COR_SEQ_2_1(10'b0000000000),
-    .CLK_COR_SEQ_2_2(10'b0000000000),
-    .CLK_COR_SEQ_2_3(10'b0000000000),
+    .CLK_COR_SEQ_2_1(10'b0111011100),
+    .CLK_COR_SEQ_2_2(10'b0000001000),
+    .CLK_COR_SEQ_2_3(10'b0000001000),
     .CLK_COR_SEQ_2_4(10'b0000000000),
     .CLK_COR_SEQ_2_ENABLE(4'b1111),
-    .CLK_COR_SEQ_2_USE("FALSE"),
+    .CLK_COR_SEQ_2_USE("TRUE"),
     .CLK_COR_SEQ_LEN(4),
     .CPLL_CFG0(16'h0FFA),
     .CPLL_CFG1(16'h0021),
@@ -13571,7 +13571,7 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_channel
     .RXBUF_EIDLE_LO_CNT(4'b0000),
     .RXBUF_EN("TRUE"),
     .RXBUF_RESET_ON_CB_CHANGE("TRUE"),
-    .RXBUF_RESET_ON_COMMAALIGN("FALSE"),
+    .RXBUF_RESET_ON_COMMAALIGN("TRUE"),
     .RXBUF_RESET_ON_EIDLE("FALSE"),
     .RXBUF_RESET_ON_RATE_CHANGE("TRUE"),
     .RXBUF_THRESH_OVFLW(0),
@@ -14290,22 +14290,22 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_channel
     .CKCAL_RSVD0(16'h0080),
     .CKCAL_RSVD1(16'h0400),
     .CLK_CORRECT_USE("TRUE"),
-    .CLK_COR_KEEP_IDLE("FALSE"),
+    .CLK_COR_KEEP_IDLE("TRUE"),
     .CLK_COR_MAX_LAT(31),
     .CLK_COR_MIN_LAT(24),
     .CLK_COR_PRECEDENCE("TRUE"),
     .CLK_COR_REPEAT_WAIT(0),
-    .CLK_COR_SEQ_1_1(10'b0100011100),
-    .CLK_COR_SEQ_1_2(10'b0000000010),
-    .CLK_COR_SEQ_1_3(10'b0000000011),
-    .CLK_COR_SEQ_1_4(10'b0000000100),
+    .CLK_COR_SEQ_1_1(10'b0110111100),
+    .CLK_COR_SEQ_1_2(10'b0001010000),
+    .CLK_COR_SEQ_1_3(10'b0000000000),
+    .CLK_COR_SEQ_1_4(10'b0000000000),
     .CLK_COR_SEQ_1_ENABLE(4'b1111),
-    .CLK_COR_SEQ_2_1(10'b0000000000),
-    .CLK_COR_SEQ_2_2(10'b0000000000),
-    .CLK_COR_SEQ_2_3(10'b0000000000),
+    .CLK_COR_SEQ_2_1(10'b0111011100),
+    .CLK_COR_SEQ_2_2(10'b0000001000),
+    .CLK_COR_SEQ_2_3(10'b0000001000),
     .CLK_COR_SEQ_2_4(10'b0000000000),
     .CLK_COR_SEQ_2_ENABLE(4'b1111),
-    .CLK_COR_SEQ_2_USE("FALSE"),
+    .CLK_COR_SEQ_2_USE("TRUE"),
     .CLK_COR_SEQ_LEN(4),
     .CPLL_CFG0(16'h0FFA),
     .CPLL_CFG1(16'h0021),
@@ -14419,7 +14419,7 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_channel
     .RXBUF_EIDLE_LO_CNT(4'b0000),
     .RXBUF_EN("TRUE"),
     .RXBUF_RESET_ON_CB_CHANGE("TRUE"),
-    .RXBUF_RESET_ON_COMMAALIGN("FALSE"),
+    .RXBUF_RESET_ON_COMMAALIGN("TRUE"),
     .RXBUF_RESET_ON_EIDLE("FALSE"),
     .RXBUF_RESET_ON_RATE_CHANGE("TRUE"),
     .RXBUF_THRESH_OVFLW(0),

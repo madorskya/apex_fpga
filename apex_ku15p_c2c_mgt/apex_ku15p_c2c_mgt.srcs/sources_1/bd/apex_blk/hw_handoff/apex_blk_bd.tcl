@@ -448,6 +448,7 @@ proc create_root_design { parentCell } {
   set drp_en [ create_bd_port -dir O drp_en ]
   set drp_rdy [ create_bd_port -dir I drp_rdy ]
   set drp_we [ create_bd_port -dir O -from 7 -to 0 drp_we ]
+  set link_up [ create_bd_port -dir O link_up ]
 
   # Create instance: axi_chip2chip_0, and set properties
   set axi_chip2chip_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_chip2chip:5.0 axi_chip2chip_0 ]
@@ -570,7 +571,7 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   connect_bd_net -net axi_c2c_aurora_tx_tready_0_1 [get_bd_ports c2c_tx_ready] [get_bd_pins ila_0/probe6]
   connect_bd_net -net axi_c2c_config_error_out [get_bd_pins axi_chip2chip_0/axi_c2c_config_error_out] [get_bd_pins ila_0/probe11]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_c2c_config_error_out]
-  connect_bd_net -net axi_c2c_link_status_out [get_bd_pins axi_chip2chip_0/axi_c2c_link_status_out] [get_bd_pins ila_0/probe12] [get_bd_pins rst_clk_wiz_100M/aux_reset_in] [get_bd_pins rst_clk_wiz_100M/ext_reset_in]
+  connect_bd_net -net axi_c2c_link_status_out [get_bd_ports link_up] [get_bd_pins axi_chip2chip_0/axi_c2c_link_status_out] [get_bd_pins ila_0/probe12] [get_bd_pins rst_clk_wiz_100M/aux_reset_in] [get_bd_pins rst_clk_wiz_100M/ext_reset_in]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_c2c_link_status_out]
   connect_bd_net -net axi_c2c_multi_bit_error_out [get_bd_pins axi_chip2chip_0/axi_c2c_multi_bit_error_out] [get_bd_pins ila_0/probe13]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_c2c_multi_bit_error_out]

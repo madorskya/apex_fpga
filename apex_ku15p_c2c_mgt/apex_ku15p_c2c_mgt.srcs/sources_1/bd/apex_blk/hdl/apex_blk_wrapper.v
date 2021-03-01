@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Wed Feb 24 18:03:15 2021
+//Date        : Sun Feb 28 21:50:07 2021
 //Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 //Command     : generate_target apex_blk_wrapper.bd
 //Design      : apex_blk_wrapper
@@ -29,7 +29,8 @@ module apex_blk_wrapper
     drp_do,
     drp_en,
     drp_rdy,
-    drp_we);
+    drp_we,
+    link_up);
   input c2c_channel_up;
   output c2c_do_cc;
   input c2c_init_clk;
@@ -50,6 +51,7 @@ module apex_blk_wrapper
   output drp_en;
   input drp_rdy;
   output [7:0]drp_we;
+  output link_up;
 
   wire c2c_channel_up;
   wire c2c_do_cc;
@@ -71,6 +73,7 @@ module apex_blk_wrapper
   wire drp_en;
   wire drp_rdy;
   wire [7:0]drp_we;
+  wire link_up;
 
   apex_blk apex_blk_i
        (.c2c_channel_up(c2c_channel_up),
@@ -92,5 +95,6 @@ module apex_blk_wrapper
         .drp_do(drp_do),
         .drp_en(drp_en),
         .drp_rdy(drp_rdy),
-        .drp_we(drp_we));
+        .drp_we(drp_we),
+        .link_up(link_up));
 endmodule

@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="49" Path="/home/madorsky/github/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.xpr">
+<Project Version="7" Minor="49" Path="/home/madorsky/github/apex_ku15p_revert/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="f8caee0d9f424625a486822091bb92c8"/>
@@ -44,13 +44,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="19"/>
-    <Option Name="WTModelSimExportSim" Val="19"/>
-    <Option Name="WTQuestaExportSim" Val="19"/>
-    <Option Name="WTIesExportSim" Val="19"/>
-    <Option Name="WTVcsExportSim" Val="19"/>
-    <Option Name="WTRivieraExportSim" Val="19"/>
-    <Option Name="WTActivehdlExportSim" Val="19"/>
+    <Option Name="WTXSimExportSim" Val="21"/>
+    <Option Name="WTModelSimExportSim" Val="21"/>
+    <Option Name="WTQuestaExportSim" Val="21"/>
+    <Option Name="WTIesExportSim" Val="21"/>
+    <Option Name="WTVcsExportSim" Val="21"/>
+    <Option Name="WTRivieraExportSim" Val="21"/>
+    <Option Name="WTActivehdlExportSim" Val="21"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -92,11 +92,8 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_axi_bram_ctrl_0_0/apex_blk_axi_bram_ctrl_0_0.xci">
-          <Proxy FileSetName="apex_blk_axi_bram_ctrl_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_vio_0_0/apex_blk_vio_0_0.xci">
-          <Proxy FileSetName="apex_blk_vio_0_0"/>
+        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_c2c_gth_example_bit_0_0/apex_blk_c2c_gth_example_bit_0_0.xci">
+          <Proxy FileSetName="apex_blk_c2c_gth_example_bit_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_ila_0_0/apex_blk_ila_0_0.xci">
           <Proxy FileSetName="apex_blk_ila_0_0"/>
@@ -113,8 +110,11 @@
         <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_axi_bram_ctrl_0_1/apex_blk_axi_bram_ctrl_0_1.xci">
           <Proxy FileSetName="apex_blk_axi_bram_ctrl_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_c2c_gth_example_bit_0_0/apex_blk_c2c_gth_example_bit_0_0.xci">
-          <Proxy FileSetName="apex_blk_c2c_gth_example_bit_0_0"/>
+        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_vio_0_0/apex_blk_vio_0_0.xci">
+          <Proxy FileSetName="apex_blk_vio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_axi_bram_ctrl_0_0/apex_blk_axi_bram_ctrl_0_0.xci">
+          <Proxy FileSetName="apex_blk_axi_bram_ctrl_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/apex_blk/hdl/apex_blk_wrapper.v">
@@ -764,7 +764,6 @@
       </File>
       <File Path="$PSRCDIR/constrs_1/new/c2c_gth.xdc">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
@@ -1084,9 +1083,7 @@
     </Run>
     <Run Id="apex_blk_c2c_gth_example_bit_0_0_synth_1" Type="Ft3:Synth" SrcSet="apex_blk_c2c_gth_example_bit_0_0" Part="xcku15p-ffva1760-2-e" ConstrsSet="apex_blk_c2c_gth_example_bit_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/apex_blk_c2c_gth_example_bit_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1329,9 +1326,7 @@
     </Run>
     <Run Id="apex_blk_c2c_gth_example_bit_0_0_impl_1" Type="Ft2:EntireDesign" Part="xcku15p-ffva1760-2-e" ConstrsSet="apex_blk_c2c_gth_example_bit_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="apex_blk_c2c_gth_example_bit_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

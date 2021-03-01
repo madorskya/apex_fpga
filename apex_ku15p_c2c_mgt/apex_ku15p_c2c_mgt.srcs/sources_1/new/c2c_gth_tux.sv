@@ -30,7 +30,8 @@ module c2c_gth_tux
   input        c2c_tx_tvalid,
   input        c2c_do_cc,
   output [2:0] c2c_rxbufstatus,
-  output [1:0] c2c_rxclkcorcnt
+  output [1:0] c2c_rxclkcorcnt,
+  input        link_up
 );
 
   wire link_down_latched_reset_in = 1'b0; // unused
@@ -340,9 +341,9 @@ module c2c_gth_tux
   assign ch1_rxctrl1_int = rxctrl1_int[31:16];
 
   //--------------------------------------------------------------------------------------------------------------------
-  wire [15:0] rxctrl2_int;
+  (* mark_debug *) wire [15:0] rxctrl2_int;
   wire [7:0] ch0_rxctrl2_int;
-  (* mark_debug *) wire [7:0] ch1_rxctrl2_int;
+  wire [7:0] ch1_rxctrl2_int;
   assign ch0_rxctrl2_int = rxctrl2_int[7:0];
   assign ch1_rxctrl2_int = rxctrl2_int[15:8];
 
@@ -804,8 +805,8 @@ module c2c_gth_tux
   );
 
 
-   wire [5 : 0] rxbufstatus_out;
-   wire [3 : 0] rxclkcorcnt_out;
+   (* mark_debug *) wire [5 : 0] rxbufstatus_out;
+   (* mark_debug *) wire [3 : 0] rxclkcorcnt_out;
   // ===================================================================================================================
   // EXAMPLE WRAPPER INSTANCE
   // ===================================================================================================================
@@ -903,7 +904,7 @@ wire local_do_cc = (cc_cnt == 12'h0);
         
         .c2c_tx_tdata  (c2c_tx_tdata),
         .c2c_tx_tvalid (c2c_tx_tvalid),
-        .do_cc         (local_do_cc),
+        .link_up       (link_up),
         
         .mgt_rx_data  (hb1_gtwiz_userdata_rx_int),
         .mgt_rx_k     (ch1_rxctrl2_int[3:0]),

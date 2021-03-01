@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Wed Feb 24 18:03:14 2021
+//Date        : Sun Feb 28 21:50:06 2021
 //Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 //Command     : generate_target apex_blk.bd
 //Design      : apex_blk
@@ -30,7 +30,8 @@ module apex_blk
     drp_do,
     drp_en,
     drp_rdy,
-    drp_we);
+    drp_we,
+    link_up);
   input c2c_channel_up;
   output c2c_do_cc;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.C2C_INIT_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.C2C_INIT_CLK, CLK_DOMAIN apex_blk_clk_in1_0, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) input c2c_init_clk;
@@ -51,6 +52,7 @@ module apex_blk
   output drp_en;
   input drp_rdy;
   output [7:0]drp_we;
+  output link_up;
 
   wire Net_1;
   (* CONN_BUS_INFO = "S00_AXI_1 xilinx.com:interface:aximm:1.0 AXI4 ARADDR" *) (* DONT_TOUCH *) wire [31:0]S00_AXI_1_ARADDR;
@@ -227,6 +229,7 @@ module apex_blk
   assign drp_en = drp_bridge_0_drp0_en;
   assign drp_rdy_1 = drp_rdy;
   assign drp_we[7:0] = drp_bridge_0_drp0_we;
+  assign link_up = axi_c2c_link_status_out;
   apex_blk_axi_chip2chip_0_0 axi_chip2chip_0
        (.aurora_do_cc(axi_chip2chip_0_aurora_do_cc),
         .aurora_init_clk(Net_1),

@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Fri Feb 19 17:19:10 2021
+-- Date        : Fri Feb 19 17:19:09 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
--- Command     : write_vhdl -force -mode funcsim
---               /home/madorsky/github/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/sources_1/bd/apex_blk/ip/apex_blk_axi_bram_ctrl_0_1/apex_blk_axi_bram_ctrl_0_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top apex_blk_axi_bram_ctrl_0_1 -prefix
+--               apex_blk_axi_bram_ctrl_0_1_ apex_blk_axi_bram_ctrl_0_1_sim_netlist.vhdl
 -- Design      : apex_blk_axi_bram_ctrl_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -37,8 +37,6 @@ entity apex_blk_axi_bram_ctrl_0_1_SRL_FIFO is
     axi_wr_burst : in STD_LOGIC;
     s_axi_bid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_bram_ctrl_0_1_SRL_FIFO : entity is "SRL_FIFO";
 end apex_blk_axi_bram_ctrl_0_1_SRL_FIFO;
 
 architecture STRUCTURE of apex_blk_axi_bram_ctrl_0_1_SRL_FIFO is
@@ -402,8 +400,6 @@ entity apex_blk_axi_bram_ctrl_0_1_sng_port_arb is
     \bram_we_a[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     last_arb_won_reg_1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_bram_ctrl_0_1_sng_port_arb : entity is "sng_port_arb";
 end apex_blk_axi_bram_ctrl_0_1_sng_port_arb;
 
 architecture STRUCTURE of apex_blk_axi_bram_ctrl_0_1_sng_port_arb is
@@ -833,8 +829,6 @@ entity apex_blk_axi_bram_ctrl_0_1_wrap_brst is
     aw_active_re : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_bram_ctrl_0_1_wrap_brst : entity is "wrap_brst";
 end apex_blk_axi_bram_ctrl_0_1_wrap_brst;
 
 architecture STRUCTURE of apex_blk_axi_bram_ctrl_0_1_wrap_brst is
@@ -2222,8 +2216,6 @@ entity apex_blk_axi_bram_ctrl_0_1_rd_chnl is
     \GEN_NO_RD_CMD_OPT.GEN_CURR_ARLEN_RL.GEN_CURR_ARLEN_SNG.curr_arlen_reg_reg[7]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     bram_rddata_a : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_bram_ctrl_0_1_rd_chnl : entity is "rd_chnl";
 end apex_blk_axi_bram_ctrl_0_1_rd_chnl;
 
 architecture STRUCTURE of apex_blk_axi_bram_ctrl_0_1_rd_chnl is
@@ -7848,8 +7840,6 @@ entity apex_blk_axi_bram_ctrl_0_1_wr_chnl is
     s_axi_awlen : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_bram_ctrl_0_1_wr_chnl : entity is "wr_chnl";
 end apex_blk_axi_bram_ctrl_0_1_wr_chnl;
 
 architecture STRUCTURE of apex_blk_axi_bram_ctrl_0_1_wr_chnl is
@@ -8839,8 +8829,6 @@ entity apex_blk_axi_bram_ctrl_0_1_full_axi is
     s_axi_awvalid : in STD_LOGIC;
     s_axi_awlen : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_bram_ctrl_0_1_full_axi : entity is "full_axi";
 end apex_blk_axi_bram_ctrl_0_1_full_axi;
 
 architecture STRUCTURE of apex_blk_axi_bram_ctrl_0_1_full_axi is
@@ -9313,8 +9301,6 @@ entity apex_blk_axi_bram_ctrl_0_1_axi_bram_ctrl_top is
     s_axi_awvalid : in STD_LOGIC;
     s_axi_awlen : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_bram_ctrl_0_1_axi_bram_ctrl_top : entity is "axi_bram_ctrl_top";
 end apex_blk_axi_bram_ctrl_0_1_axi_bram_ctrl_top;
 
 architecture STRUCTURE of apex_blk_axi_bram_ctrl_0_1_axi_bram_ctrl_top is
@@ -9468,8 +9454,6 @@ entity apex_blk_axi_bram_ctrl_0_1_axi_bram_ctrl is
   attribute C_S_AXI_PROTOCOL of apex_blk_axi_bram_ctrl_0_1_axi_bram_ctrl : entity is "AXI4";
   attribute C_S_AXI_SUPPORTS_NARROW_BURST : integer;
   attribute C_S_AXI_SUPPORTS_NARROW_BURST of apex_blk_axi_bram_ctrl_0_1_axi_bram_ctrl : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_axi_bram_ctrl_0_1_axi_bram_ctrl : entity is "axi_bram_ctrl";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of apex_blk_axi_bram_ctrl_0_1_axi_bram_ctrl : entity is "yes";
 end apex_blk_axi_bram_ctrl_0_1_axi_bram_ctrl;
