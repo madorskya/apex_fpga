@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-
+// diff test
 module c2c_adapter
 (
     input c2c_phy_clk,
