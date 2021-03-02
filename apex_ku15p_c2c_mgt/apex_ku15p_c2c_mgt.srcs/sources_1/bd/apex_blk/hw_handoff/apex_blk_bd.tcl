@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# c2c_gth_example_bit_synchronizer, c2c_reset_fsm
+# c2c_reset_fsm
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -387,6 +387,7 @@ proc create_root_design { parentCell } {
   set c2c_channel_up [ create_bd_port -dir I c2c_channel_up ]
   set c2c_do_cc [ create_bd_port -dir O c2c_do_cc ]
   set c2c_init_clk [ create_bd_port -dir I -type clk -freq_hz 250000000 c2c_init_clk ]
+  set c2c_link_reset [ create_bd_port -dir I c2c_link_reset ]
   set c2c_mmcm_unlocked [ create_bd_port -dir I -type rst c2c_mmcm_unlocked ]
   set_property -dict [ list \
    CONFIG.POLARITY {ACTIVE_HIGH} \
@@ -410,7 +411,6 @@ proc create_root_design { parentCell } {
   set drp_en [ create_bd_port -dir O drp_en ]
   set drp_rdy [ create_bd_port -dir I drp_rdy ]
   set drp_we [ create_bd_port -dir O -from 7 -to 0 drp_we ]
-  set link_up [ create_bd_port -dir O link_up ]
 
   # Create instance: axi_chip2chip_0, and set properties
   set axi_chip2chip_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_chip2chip:5.0 axi_chip2chip_0 ]
@@ -436,17 +436,6 @@ proc create_root_design { parentCell } {
   # Create instance: bram2
   create_hier_cell_bram2 [current_bd_instance .] bram2
 
-  # Create instance: c2c_gth_example_bit_0, and set properties
-  set block_name c2c_gth_example_bit_synchronizer
-  set block_cell_name c2c_gth_example_bit_0
-  if { [catch {set c2c_gth_example_bit_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $c2c_gth_example_bit_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create instance: c2c_reset_fsm_0, and set properties
   set block_name c2c_reset_fsm
   set block_cell_name c2c_reset_fsm_0
@@ -458,6 +447,14 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  set_property -dict [ list \
+   CONFIG.POLARITY {ACTIVE_HIGH} \
+ ] [get_bd_pins /c2c_reset_fsm_0/manual_reset]
+
+  set_property -dict [ list \
+   CONFIG.POLARITY {ACTIVE_HIGH} \
+ ] [get_bd_pins /c2c_reset_fsm_0/reset_command]
+
   # Create instance: clk_wiz, and set properties
   set clk_wiz [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz ]
   set_property -dict [ list \
@@ -538,13 +535,13 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   connect_bd_net -net aurora_mmcm_not_locked_0_1 [get_bd_ports c2c_mmcm_unlocked] [get_bd_pins axi_chip2chip_0/aurora_mmcm_not_locked] [get_bd_pins ila_0/probe4]
   connect_bd_net -net aurora_pma_init [get_bd_pins axi_chip2chip_0/aurora_pma_init_in] [get_bd_pins ila_0/probe3] [get_bd_pins vio_0/probe_out1]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets aurora_pma_init]
-  connect_bd_net -net axi_c2c_aurora_channel_up_0_1 [get_bd_ports c2c_channel_up] [get_bd_pins axi_chip2chip_0/axi_c2c_aurora_tx_tready] [get_bd_pins c2c_reset_fsm_0/mgt_channel_up] [get_bd_pins ila_0/probe2]
+  connect_bd_net -net axi_c2c_aurora_channel_up_0_1 [get_bd_ports c2c_channel_up] [get_bd_pins axi_chip2chip_0/axi_c2c_aurora_tx_tready] [get_bd_pins ila_0/probe2]
   connect_bd_net -net axi_c2c_aurora_rx_tdata_0_1 [get_bd_ports c2c_rx_data] [get_bd_pins axi_chip2chip_0/axi_c2c_aurora_rx_tdata] [get_bd_pins ila_0/probe0]
   connect_bd_net -net axi_c2c_aurora_rx_tvalid_0_1 [get_bd_ports c2c_rx_valid] [get_bd_pins axi_chip2chip_0/axi_c2c_aurora_rx_tvalid] [get_bd_pins ila_0/probe1]
   connect_bd_net -net axi_c2c_aurora_tx_tready_0_1 [get_bd_ports c2c_tx_ready] [get_bd_pins ila_0/probe6]
   connect_bd_net -net axi_c2c_config_error_out [get_bd_pins axi_chip2chip_0/axi_c2c_config_error_out] [get_bd_pins ila_0/probe11]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_c2c_config_error_out]
-  connect_bd_net -net axi_c2c_link_status_out [get_bd_ports link_up] [get_bd_pins axi_chip2chip_0/axi_c2c_link_status_out] [get_bd_pins c2c_reset_fsm_0/c2c_link_up] [get_bd_pins ila_0/probe12] [get_bd_pins rst_clk_wiz_100M/aux_reset_in] [get_bd_pins rst_clk_wiz_100M/ext_reset_in]
+  connect_bd_net -net axi_c2c_link_status_out [get_bd_pins axi_chip2chip_0/axi_c2c_link_status_out] [get_bd_pins ila_0/probe12] [get_bd_pins rst_clk_wiz_100M/aux_reset_in] [get_bd_pins rst_clk_wiz_100M/ext_reset_in]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_c2c_link_status_out]
   connect_bd_net -net axi_c2c_multi_bit_error_out [get_bd_pins axi_chip2chip_0/axi_c2c_multi_bit_error_out] [get_bd_pins ila_0/probe13]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_c2c_multi_bit_error_out]
@@ -557,14 +554,15 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   connect_bd_net -net axi_chip2chip_0_axi_c2c_lnk_hndlr_in_progress [get_bd_pins axi_chip2chip_0/axi_c2c_lnk_hndlr_in_progress] [get_bd_pins system_ila_0/probe7]
   connect_bd_net -net bram1_delay [get_bd_pins bram0/delay] [get_bd_pins vio_0/probe_out3]
   connect_bd_net -net bram2_delay [get_bd_pins bram2/delay] [get_bd_pins vio_0/probe_out4]
+  connect_bd_net -net c2c_link_reset_1 [get_bd_ports c2c_link_reset] [get_bd_pins c2c_reset_fsm_0/reset_command]
   connect_bd_net -net c2c_reset_fsm_0_c2c_channel_up [get_bd_pins axi_chip2chip_0/axi_c2c_aurora_channel_up] [get_bd_pins c2c_reset_fsm_0/c2c_channel_up] [get_bd_pins ila_0/probe17]
   connect_bd_net -net c2c_reset_fsm_0_m_aresetn [get_bd_pins axi_chip2chip_0/m_aresetn] [get_bd_pins c2c_reset_fsm_0/m_aresetn] [get_bd_pins ila_0/probe18]
   connect_bd_net -net c2c_reset_fsm_0_state [get_bd_pins c2c_reset_fsm_0/state] [get_bd_pins ila_0/probe19]
   connect_bd_net -net c2c_rxbufstatus [get_bd_ports c2c_rxbufstatus] [get_bd_pins ila_0/probe15]
   connect_bd_net -net c2c_rxclkcorcnt [get_bd_ports c2c_rxclkcorcnt] [get_bd_pins ila_0/probe16]
-  connect_bd_net -net channel_up [get_bd_pins c2c_gth_example_bit_0/i_in] [get_bd_pins c2c_reset_fsm_0/manual_reset] [get_bd_pins ila_0/probe14] [get_bd_pins vio_0/probe_out0]
+  connect_bd_net -net channel_up [get_bd_pins c2c_reset_fsm_0/manual_reset] [get_bd_pins ila_0/probe14] [get_bd_pins vio_0/probe_out0]
   connect_bd_net -net clk_in1_0_1 [get_bd_ports c2c_init_clk] [get_bd_pins clk_wiz/clk_in1]
-  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_chip2chip_0/m_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins bram0/s_axi_aclk] [get_bd_pins bram2/s_axi_aclk] [get_bd_pins c2c_gth_example_bit_0/clk_in] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins system_ila_0/clk]
+  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_chip2chip_0/m_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins bram0/s_axi_aclk] [get_bd_pins bram2/s_axi_aclk] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins system_ila_0/clk]
   connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz/locked] [get_bd_pins rst_clk_wiz_100M/dcm_locked]
   connect_bd_net -net drp_bridge_0_drp0_addr [get_bd_ports drp_addr] [get_bd_pins drp1/drp_addr] [get_bd_pins system_ila_0/probe6]
   connect_bd_net -net drp_bridge_0_drp0_di [get_bd_ports drp_di] [get_bd_pins drp1/drp_di] [get_bd_pins system_ila_0/probe2]

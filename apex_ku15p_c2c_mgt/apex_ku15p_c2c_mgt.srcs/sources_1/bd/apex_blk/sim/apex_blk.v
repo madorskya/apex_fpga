@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Mon Mar  1 17:04:16 2021
+//Date        : Tue Mar  2 10:42:15 2021
 //Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 //Command     : generate_target apex_blk.bd
 //Design      : apex_blk
@@ -9,11 +9,12 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "apex_blk,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=apex_blk,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=28,numReposBlks=20,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_axi_chip2chip_cnt=3,da_bram_cntlr_cnt=2,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "apex_blk.hwdef" *) 
+(* CORE_GENERATION_INFO = "apex_blk,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=apex_blk,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=27,numReposBlks=19,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_axi_chip2chip_cnt=3,da_bram_cntlr_cnt=2,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "apex_blk.hwdef" *) 
 module apex_blk
    (c2c_channel_up,
     c2c_do_cc,
     c2c_init_clk,
+    c2c_link_reset,
     c2c_mmcm_unlocked,
     c2c_phy_clk,
     c2c_pma_init,
@@ -30,11 +31,11 @@ module apex_blk
     drp_do,
     drp_en,
     drp_rdy,
-    drp_we,
-    link_up);
+    drp_we);
   input c2c_channel_up;
   output c2c_do_cc;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.C2C_INIT_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.C2C_INIT_CLK, CLK_DOMAIN apex_blk_clk_in1_0, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) input c2c_init_clk;
+  input c2c_link_reset;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.C2C_MMCM_UNLOCKED RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.C2C_MMCM_UNLOCKED, INSERT_VIP 0, POLARITY ACTIVE_HIGH" *) input c2c_mmcm_unlocked;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.C2C_PHY_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.C2C_PHY_CLK, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0" *) input c2c_phy_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.C2C_PMA_INIT RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.C2C_PMA_INIT, INSERT_VIP 0, POLARITY ACTIVE_HIGH" *) output c2c_pma_init;
@@ -52,7 +53,6 @@ module apex_blk
   output drp_en;
   input drp_rdy;
   output [7:0]drp_we;
-  output link_up;
 
   wire Net_1;
   (* CONN_BUS_INFO = "S00_AXI_1 xilinx.com:interface:aximm:1.0 AXI4 ARADDR" *) (* DONT_TOUCH *) wire [31:0]S00_AXI_1_ARADDR;
@@ -195,6 +195,7 @@ module apex_blk
   (* CONN_BUS_INFO = "axi_interconnect_0_M02_AXI xilinx.com:interface:aximm:1.0 AXI4 WVALID" *) (* DONT_TOUCH *) wire axi_interconnect_0_M02_AXI_WVALID;
   wire [6:0]bram1_delay;
   wire [6:0]bram2_delay;
+  wire c2c_link_reset_1;
   wire c2c_reset_fsm_0_c2c_channel_up;
   wire c2c_reset_fsm_0_m_aresetn;
   wire [1:0]c2c_reset_fsm_0_state;
@@ -220,6 +221,7 @@ module apex_blk
   assign axi_c2c_aurora_tx_tready_0_1 = c2c_tx_ready;
   assign axi_c2c_phy_clk_0_1 = c2c_phy_clk;
   assign c2c_do_cc = axi_chip2chip_0_aurora_do_cc;
+  assign c2c_link_reset_1 = c2c_link_reset;
   assign c2c_pma_init = axi_chip2chip_0_aurora_pma_init_out;
   assign c2c_tx_tdata[31:0] = axi_chip2chip_0_axi_c2c_aurora_tx_tdata;
   assign c2c_tx_tvalid = axi_chip2chip_0_axi_c2c_aurora_tx_tvalid;
@@ -231,7 +233,6 @@ module apex_blk
   assign drp_en = drp_bridge_0_drp0_en;
   assign drp_rdy_1 = drp_rdy;
   assign drp_we[7:0] = drp_bridge_0_drp0_we;
-  assign link_up = axi_c2c_link_status_out;
   apex_blk_axi_chip2chip_0_0 axi_chip2chip_0
        (.aurora_do_cc(axi_chip2chip_0_aurora_do_cc),
         .aurora_init_clk(Net_1),
@@ -485,16 +486,12 @@ module apex_blk
         .delay(bram2_delay),
         .s_axi_aclk(clk_wiz_clk_out1),
         .s_axi_aresetn(rst_clk_wiz_100M_peripheral_aresetn));
-  apex_blk_c2c_gth_example_bit_0_0 c2c_gth_example_bit_0
-       (.clk_in(clk_wiz_clk_out1),
-        .i_in(channel_up));
   apex_blk_c2c_reset_fsm_0_0 c2c_reset_fsm_0
        (.c2c_channel_up(c2c_reset_fsm_0_c2c_channel_up),
-        .c2c_link_up(axi_c2c_link_status_out),
         .m_aresetn(c2c_reset_fsm_0_m_aresetn),
         .manual_reset(channel_up),
-        .mgt_channel_up(axi_c2c_aurora_channel_up_0_1),
         .phy_clk(axi_c2c_phy_clk_0_1),
+        .reset_command(c2c_link_reset_1),
         .state(c2c_reset_fsm_0_state));
   apex_blk_clk_wiz_0 clk_wiz
        (.clk_in1(clk_in1_0_1),

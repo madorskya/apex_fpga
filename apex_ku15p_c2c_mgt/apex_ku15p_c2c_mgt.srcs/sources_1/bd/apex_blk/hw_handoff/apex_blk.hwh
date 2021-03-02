@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar  1 17:04:25 2021" VIVADOVERSION="2020.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Mar  2 10:42:24 2021" VIVADOVERSION="2020.1">
 
   <SYSTEMINFO ARCH="kintexuplus" DEVICE="xcku15p" NAME="apex_blk" PACKAGE="ffva1760" SPEEDGRADE="-2"/>
 
@@ -77,7 +77,6 @@
       <CONNECTIONS>
         <CONNECTION INSTANCE="ila_0" PORT="probe2"/>
         <CONNECTION INSTANCE="axi_chip2chip_0" PORT="axi_c2c_aurora_tx_tready"/>
-        <CONNECTION INSTANCE="c2c_reset_fsm_0" PORT="mgt_channel_up"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="93750000" DIR="I" NAME="c2c_phy_clk" SIGIS="clk" SIGNAME="External_Ports_c2c_phy_clk">
@@ -113,9 +112,9 @@
         <CONNECTION INSTANCE="ila_0" PORT="probe16"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="link_up" SIGIS="undef" SIGNAME="axi_chip2chip_0_axi_c2c_link_status_out">
+    <PORT DIR="I" NAME="c2c_link_reset" SIGIS="undef" SIGNAME="External_Ports_c2c_link_reset">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_chip2chip_0" PORT="axi_c2c_link_status_out"/>
+        <CONNECTION INSTANCE="c2c_reset_fsm_0" PORT="reset_command"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -412,8 +411,6 @@
             <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="ext_reset_in"/>
             <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="aux_reset_in"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe12"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="link_up"/>
-            <CONNECTION INSTANCE="c2c_reset_fsm_0" PORT="c2c_link_up"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="axi_c2c_multi_bit_error_out" SIGIS="undef" SIGNAME="axi_chip2chip_0_axi_c2c_multi_bit_error_out">
@@ -2791,29 +2788,6 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/c2c_gth_example_bit_0" HWVERSION="1.0" INSTANCE="c2c_gth_example_bit_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="c2c_gth_example_bit_synchronizer" VLNV="xilinx.com:module_ref:c2c_gth_example_bit_synchronizer:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="INITIALIZE" VALUE="&quot;00000&quot;"/>
-        <PARAMETER NAME="FREQUENCY" VALUE="512"/>
-        <PARAMETER NAME="Component_Name" VALUE="apex_blk_c2c_gth_example_bit_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="clk_in" SIGIS="undef" SIGNAME="clk_wiz_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="i_in" SIGIS="undef" SIGNAME="vio_0_probe_out0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="vio_0" PORT="probe_out0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="o_out" SIGIS="undef"/>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/c2c_reset_fsm_0" HWVERSION="1.0" INSTANCE="c2c_reset_fsm_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="c2c_reset_fsm" VLNV="xilinx.com:module_ref:c2c_reset_fsm:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -2821,19 +2795,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="c2c_link_up" SIGIS="undef" SIGNAME="axi_chip2chip_0_axi_c2c_link_status_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_chip2chip_0" PORT="axi_c2c_link_status_out"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="mgt_channel_up" SIGIS="undef" SIGNAME="External_Ports_c2c_channel_up">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="c2c_channel_up"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="manual_reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="vio_0_probe_out0">
+        <PORT DIR="I" NAME="manual_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="vio_0_probe_out0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="vio_0" PORT="probe_out0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset_command" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_c2c_link_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c2c_link_reset"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="93750000" DIR="I" NAME="phy_clk" SIGIS="clk" SIGNAME="External_Ports_c2c_phy_clk">
@@ -3459,7 +3428,6 @@
             <CONNECTION INSTANCE="bram0_axi_bram_ctrl_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="bram2_axi_bram_ctrl_1" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="system_ila_0" PORT="clk"/>
-            <CONNECTION INSTANCE="c2c_gth_example_bit_0" PORT="clk_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="50000000" DIR="O" NAME="clk_out2" SIGIS="clk" SIGNAME="clk_wiz_clk_out2">
@@ -12115,7 +12083,6 @@
         <PORT DIR="O" LEFT="0" NAME="probe_out0" RIGHT="0" SIGIS="undef" SIGNAME="vio_0_probe_out0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe14"/>
-            <CONNECTION INSTANCE="c2c_gth_example_bit_0" PORT="i_in"/>
             <CONNECTION INSTANCE="c2c_reset_fsm_0" PORT="manual_reset"/>
           </CONNECTIONS>
         </PORT>

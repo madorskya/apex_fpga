@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Mon Mar  1 17:04:16 2021
+//Date        : Tue Mar  2 10:42:16 2021
 //Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 //Command     : generate_target apex_blk_wrapper.bd
 //Design      : apex_blk_wrapper
@@ -13,6 +13,7 @@ module apex_blk_wrapper
    (c2c_channel_up,
     c2c_do_cc,
     c2c_init_clk,
+    c2c_link_reset,
     c2c_mmcm_unlocked,
     c2c_phy_clk,
     c2c_pma_init,
@@ -29,11 +30,11 @@ module apex_blk_wrapper
     drp_do,
     drp_en,
     drp_rdy,
-    drp_we,
-    link_up);
+    drp_we);
   input c2c_channel_up;
   output c2c_do_cc;
   input c2c_init_clk;
+  input c2c_link_reset;
   input c2c_mmcm_unlocked;
   input c2c_phy_clk;
   output c2c_pma_init;
@@ -51,11 +52,11 @@ module apex_blk_wrapper
   output drp_en;
   input drp_rdy;
   output [7:0]drp_we;
-  output link_up;
 
   wire c2c_channel_up;
   wire c2c_do_cc;
   wire c2c_init_clk;
+  wire c2c_link_reset;
   wire c2c_mmcm_unlocked;
   wire c2c_phy_clk;
   wire c2c_pma_init;
@@ -73,12 +74,12 @@ module apex_blk_wrapper
   wire drp_en;
   wire drp_rdy;
   wire [7:0]drp_we;
-  wire link_up;
 
   apex_blk apex_blk_i
        (.c2c_channel_up(c2c_channel_up),
         .c2c_do_cc(c2c_do_cc),
         .c2c_init_clk(c2c_init_clk),
+        .c2c_link_reset(c2c_link_reset),
         .c2c_mmcm_unlocked(c2c_mmcm_unlocked),
         .c2c_phy_clk(c2c_phy_clk),
         .c2c_pma_init(c2c_pma_init),
@@ -95,6 +96,5 @@ module apex_blk_wrapper
         .drp_do(drp_do),
         .drp_en(drp_en),
         .drp_rdy(drp_rdy),
-        .drp_we(drp_we),
-        .link_up(link_up));
+        .drp_we(drp_we));
 endmodule

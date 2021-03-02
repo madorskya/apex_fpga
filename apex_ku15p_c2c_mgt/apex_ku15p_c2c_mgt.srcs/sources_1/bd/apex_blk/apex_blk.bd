@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x892FE62C8D544F2A",
+      "boundary_crc": "0xBA4CDDB1AF791BDB",
       "device": "xcku15p-ffva1760-2-e",
       "name": "apex_blk",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -44,7 +44,6 @@
       "system_ila_0": "",
       "ila_0": "",
       "xlconstant_0": "",
-      "c2c_gth_example_bit_0": "",
       "c2c_reset_fsm_0": ""
     },
     "ports": {
@@ -211,8 +210,14 @@
         "left": "1",
         "right": "0"
       },
-      "link_up": {
-        "direction": "O"
+      "c2c_link_reset": {
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "",
+            "value_src": "weak"
+          }
+        }
       }
     },
     "components": {
@@ -607,16 +612,16 @@
               }
             },
             "interface_nets": {
-              "m01_couplers_to_auto_cc": {
-                "interface_ports": [
-                  "S_AXI",
-                  "auto_cc/S_AXI"
-                ]
-              },
               "auto_cc_to_m01_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "auto_cc/M_AXI"
+                ]
+              },
+              "m01_couplers_to_auto_cc": {
+                "interface_ports": [
+                  "S_AXI",
+                  "auto_cc/S_AXI"
                 ]
               }
             },
@@ -747,10 +752,10 @@
           }
         },
         "interface_nets": {
-          "m02_couplers_to_axi_interconnect_0": {
+          "xbar_to_m00_couplers": {
             "interface_ports": [
-              "M02_AXI",
-              "m02_couplers/M_AXI"
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
             ]
           },
           "xbar_to_m01_couplers": {
@@ -777,22 +782,22 @@
               "m00_couplers/M_AXI"
             ]
           },
-          "xbar_to_m00_couplers": {
+          "m02_couplers_to_axi_interconnect_0": {
             "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
-            ]
-          },
-          "xbar_to_m02_couplers": {
-            "interface_ports": [
-              "xbar/M02_AXI",
-              "m02_couplers/S_AXI"
+              "M02_AXI",
+              "m02_couplers/M_AXI"
             ]
           },
           "m01_couplers_to_axi_interconnect_0": {
             "interface_ports": [
               "M01_AXI",
               "m01_couplers/M_AXI"
+            ]
+          },
+          "xbar_to_m02_couplers": {
+            "interface_ports": [
+              "xbar/M02_AXI",
+              "m02_couplers/S_AXI"
             ]
           }
         },
@@ -1345,46 +1350,6 @@
           }
         }
       },
-      "c2c_gth_example_bit_0": {
-        "vlnv": "xilinx.com:module_ref:c2c_gth_example_bit_synchronizer:1.0",
-        "xci_name": "apex_blk_c2c_gth_example_bit_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "c2c_gth_example_bit_synchronizer",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk_in": {
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "apex_blk_clk_wiz_0_clk_out1",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "i_in": {
-            "direction": "I"
-          },
-          "o_out": {
-            "direction": "O",
-            "parameters": {
-              "POLARITY": {
-                "value": "",
-                "value_src": "weak"
-              }
-            }
-          }
-        }
-      },
       "c2c_reset_fsm_0": {
         "vlnv": "xilinx.com:module_ref:c2c_reset_fsm:1.0",
         "xci_name": "apex_blk_c2c_reset_fsm_0_0",
@@ -1394,15 +1359,23 @@
           "boundary_crc": "0x0"
         },
         "ports": {
-          "c2c_link_up": {
-            "direction": "I"
-          },
-          "mgt_channel_up": {
-            "direction": "I"
-          },
           "manual_reset": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "reset_command": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
           },
           "phy_clk": {
             "type": "clk",
@@ -1483,8 +1456,7 @@
           "axi_chip2chip_0/m_aclk",
           "bram0/s_axi_aclk",
           "bram2/s_axi_aclk",
-          "system_ila_0/clk",
-          "c2c_gth_example_bit_0/clk_in"
+          "system_ila_0/clk"
         ]
       },
       "rst_clk_wiz_100M_peripheral_aresetn": {
@@ -1521,9 +1493,7 @@
           "axi_chip2chip_0/axi_c2c_link_status_out",
           "rst_clk_wiz_100M/ext_reset_in",
           "rst_clk_wiz_100M/aux_reset_in",
-          "ila_0/probe12",
-          "link_up",
-          "c2c_reset_fsm_0/c2c_link_up"
+          "ila_0/probe12"
         ],
         "hdl_attributes": {
           "DEBUG": {
@@ -1683,8 +1653,7 @@
         "ports": [
           "c2c_channel_up",
           "ila_0/probe2",
-          "axi_chip2chip_0/axi_c2c_aurora_tx_tready",
-          "c2c_reset_fsm_0/mgt_channel_up"
+          "axi_chip2chip_0/axi_c2c_aurora_tx_tready"
         ]
       },
       "axi_c2c_phy_clk_0_1": {
@@ -1733,7 +1702,6 @@
         "ports": [
           "vio_0/probe_out0",
           "ila_0/probe14",
-          "c2c_gth_example_bit_0/i_in",
           "c2c_reset_fsm_0/manual_reset"
         ]
       },
@@ -1767,6 +1735,12 @@
         "ports": [
           "c2c_reset_fsm_0/state",
           "ila_0/probe19"
+        ]
+      },
+      "c2c_link_reset_1": {
+        "ports": [
+          "c2c_link_reset",
+          "c2c_reset_fsm_0/reset_command"
         ]
       }
     },

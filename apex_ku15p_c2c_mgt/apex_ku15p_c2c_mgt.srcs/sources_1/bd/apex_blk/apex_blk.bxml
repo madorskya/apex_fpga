@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="apex_blk" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1614636265"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1614636265"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1614636265"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1614636265"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1614699745"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1614699745"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1614699745"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1614699745"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/apex_blk_axi_chip2chip_0_0/apex_blk_axi_chip2chip_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_chip2chip_0"/>
@@ -121,14 +121,6 @@
       </File>
       <File Name="ip/apex_blk_xlconstant_0_5/apex_blk_xlconstant_0_5.xci" Type="IP">
         <Instance HierarchyPath="xlconstant_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/apex_blk_c2c_gth_example_bit_0_0/apex_blk_c2c_gth_example_bit_0_0.xci" Type="IP">
-        <Instance HierarchyPath="c2c_gth_example_bit_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

@@ -9,8 +9,8 @@ module c2c_adapter
     
     input [31:0] c2c_tx_tdata,
     input        c2c_tx_tvalid,
-    input        link_up,
     input        do_cc,
+    output reg   link_reset,
     
     input [31:0] mgt_rx_data,
     input [ 3:0] mgt_rx_k,
@@ -23,7 +23,11 @@ module c2c_adapter
     // clock correction pattern    
     wire [31:0] clkc_d = 32'h000050bc;
     wire [ 3:0] clkc_k = 4'b0001;
-    
+
+    // link reset command pattern    
+    wire [31:0] lrst_d = 32'hfcfcfcfc;
+    wire [ 3:0] lrst_k = 4'b1111;
+
     wire [31:0] zero_d = 32'h0;
     wire [ 3:0] zero_k = 4'b0;
     
@@ -38,14 +42,29 @@ module c2c_adapter
     reg [3:0] c2c_rx_valid_r;
     
     reg do_cc_r;
+    reg [9:0] link_reset_cnt = 10'd0;
     
     always @(posedge c2c_phy_clk)
     begin
+    
+        // link reset logic
+        if (link_reset_cnt == 10'd0) link_reset = 1'b0;
+        else link_reset_cnt--;
+    
         // rx logic
 
         c2c_rx_data_r  = c2c_rx_data ;
         c2c_rx_valid_r = c2c_rx_valid;
 
+        if (mgt_rx_data == lrst_d && mgt_rx_k == lrst_k) // link reset command from master
+        begin
+            // replace with invalid data
+            c2c_rx_data  = zero_d;
+            c2c_rx_valid = 1'b0;
+            link_reset_cnt = 10'd1000;
+            link_reset = 1'b1;
+        end
+        else
         if (mgt_rx_data == clkc_d && mgt_rx_k == clkc_k) // CC symbol
         begin
             // replace with invalid data

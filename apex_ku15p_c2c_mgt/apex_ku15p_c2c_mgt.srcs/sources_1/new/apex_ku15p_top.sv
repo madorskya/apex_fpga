@@ -74,7 +74,7 @@ module apex_ku15p_top
     wire        c2c_do_cc;
     wire [2:0]  c2c_rxbufstatus;
     wire [1:0]  c2c_rxclkcorcnt;
-    wire        link_up;
+    wire        c2c_link_reset;
 
     apex_blk_wrapper apex_blk_w
     (
@@ -91,7 +91,7 @@ module apex_ku15p_top
         .c2c_do_cc         (c2c_do_cc        ),
         .c2c_rxbufstatus   (c2c_rxbufstatus  ),
         .c2c_rxclkcorcnt   (c2c_rxclkcorcnt  ),
-        .link_up           (link_up),
+        .c2c_link_reset    (c2c_link_reset   ),
 
         .drp_clk         (drp_clk),
 //        .drp_addr        (drp_gth_i.drpaddr),
@@ -130,7 +130,7 @@ module apex_ku15p_top
         .c2c_do_cc         (c2c_do_cc        ),
         .c2c_rxbufstatus   (c2c_rxbufstatus  ),
         .c2c_rxclkcorcnt   (c2c_rxclkcorcnt  ),
-        .link_up           (link_up)
+        .c2c_link_reset    (c2c_link_reset   )
     );
     
 

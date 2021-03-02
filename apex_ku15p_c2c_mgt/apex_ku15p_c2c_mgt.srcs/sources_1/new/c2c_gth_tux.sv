@@ -31,7 +31,7 @@ module c2c_gth_tux
   input        c2c_do_cc,
   output [2:0] c2c_rxbufstatus,
   output [1:0] c2c_rxclkcorcnt,
-  input        link_up
+  output       c2c_link_reset
 );
 
   wire link_down_latched_reset_in = 1'b0; // unused
@@ -900,8 +900,8 @@ wire local_do_cc = (cc_cnt == 8'h0);
         
         .c2c_tx_tdata  (c2c_tx_tdata),
         .c2c_tx_tvalid (c2c_tx_tvalid),
-        .link_up       (link_up),
         .do_cc         (local_do_cc),
+        .link_reset    (c2c_link_reset),
         
         .mgt_rx_data  (hb1_gtwiz_userdata_rx_int),
         .mgt_rx_k     (ch1_rxctrl2_int[3:0]),
