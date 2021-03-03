@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Mon Feb 22 23:43:34 2021
+-- Date        : Mon Feb 22 23:43:33 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
--- Command     : write_vhdl -force -mode funcsim
---               /home/madorsky/github/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/sources_1/bd/apex_blk/ip/apex_blk_vio_0_0/apex_blk_vio_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top apex_blk_vio_0_0 -prefix
+--               apex_blk_vio_0_0_ apex_blk_vio_0_0_sim_netlist.vhdl
 -- Design      : apex_blk_vio_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -37,8 +37,6 @@ entity apex_blk_vio_0_0_vio_v3_0_19_decoder is
     \Bus_data_out_reg[9]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \xsdb_addr_2_0_p2_reg[2]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_vio_0_0_vio_v3_0_19_decoder : entity is "vio_v3_0_19_decoder";
 end apex_blk_vio_0_0_vio_v3_0_19_decoder;
 
 architecture STRUCTURE of apex_blk_vio_0_0_vio_v3_0_19_decoder is
@@ -765,8 +763,6 @@ entity apex_blk_vio_0_0_vio_v3_0_19_probe_out_one is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     \G_PROBE_OUT[0].wr_probe_out_reg\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_vio_0_0_vio_v3_0_19_probe_out_one : entity is "vio_v3_0_19_probe_out_one";
 end apex_blk_vio_0_0_vio_v3_0_19_probe_out_one;
 
 architecture STRUCTURE of apex_blk_vio_0_0_vio_v3_0_19_probe_out_one is
@@ -1231,8 +1227,6 @@ entity apex_blk_vio_0_0_vio_v3_0_19_probe_width is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     CLK : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_vio_0_0_vio_v3_0_19_probe_width : entity is "vio_v3_0_19_probe_width";
 end apex_blk_vio_0_0_vio_v3_0_19_probe_width;
 
 architecture STRUCTURE of apex_blk_vio_0_0_vio_v3_0_19_probe_width is
@@ -1359,8 +1353,6 @@ entity apex_blk_vio_0_0_xsdbs_v1_0_2_xsdbs is
   attribute C_XDEVICEFAMILY of apex_blk_vio_0_0_xsdbs_v1_0_2_xsdbs : entity is "kintexuplus";
   attribute C_XSDB_SLAVE_TYPE : integer;
   attribute C_XSDB_SLAVE_TYPE of apex_blk_vio_0_0_xsdbs_v1_0_2_xsdbs : entity is 33;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_vio_0_0_xsdbs_v1_0_2_xsdbs : entity is "xsdbs_v1_0_2_xsdbs";
   attribute dont_touch : string;
   attribute dont_touch of apex_blk_vio_0_0_xsdbs_v1_0_2_xsdbs : entity is "true";
 end apex_blk_vio_0_0_xsdbs_v1_0_2_xsdbs;
@@ -4332,8 +4324,6 @@ entity apex_blk_vio_0_0_vio_v3_0_19_probe_out_all is
     s_den_o : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_vio_0_0_vio_v3_0_19_probe_out_all : entity is "vio_v3_0_19_probe_out_all";
 end apex_blk_vio_0_0_vio_v3_0_19_probe_out_all;
 
 architecture STRUCTURE of apex_blk_vio_0_0_vio_v3_0_19_probe_out_all is
@@ -7963,8 +7953,6 @@ entity apex_blk_vio_0_0_vio_v3_0_19_vio is
   attribute LC_TOTAL_PROBE_IN_WIDTH of apex_blk_vio_0_0_vio_v3_0_19_vio : entity is 0;
   attribute LC_TOTAL_PROBE_OUT_WIDTH : integer;
   attribute LC_TOTAL_PROBE_OUT_WIDTH of apex_blk_vio_0_0_vio_v3_0_19_vio : entity is 17;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of apex_blk_vio_0_0_vio_v3_0_19_vio : entity is "vio_v3_0_19_vio";
   attribute dont_touch : string;
   attribute dont_touch of apex_blk_vio_0_0_vio_v3_0_19_vio : entity is "true";
 end apex_blk_vio_0_0_vio_v3_0_19_vio;

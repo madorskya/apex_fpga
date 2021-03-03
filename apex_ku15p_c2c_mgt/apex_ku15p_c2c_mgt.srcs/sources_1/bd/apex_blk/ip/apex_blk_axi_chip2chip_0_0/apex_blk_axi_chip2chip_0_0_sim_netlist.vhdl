@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Mon Dec  7 22:01:18 2020
+-- Date        : Sat Feb 27 17:59:23 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 -- Command     : write_vhdl -force -mode funcsim -rename_top apex_blk_axi_chip2chip_0_0 -prefix
 --               apex_blk_axi_chip2chip_0_0_ apex_blk_axi_chip2chip_0_0_sim_netlist.vhdl
@@ -62876,12 +62876,12 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0 is
   attribute X_INTERFACE_INFO of aurora_reset_pb : signal is "xilinx.com:signal:reset:1.0 AURORA_RST_OUT RST";
   attribute X_INTERFACE_PARAMETER of aurora_reset_pb : signal is "XIL_INTERFACENAME AURORA_RST_OUT, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of axi_c2c_aurora_rx_tvalid : signal is "xilinx.com:interface:axis:1.0 AXIS_RX TVALID";
-  attribute X_INTERFACE_PARAMETER of axi_c2c_aurora_rx_tvalid : signal is "XIL_INTERFACENAME AXIS_RX, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 93750000, PHASE 0, CLK_DOMAIN apex_blk_axi_chip2chip_0_aurora8_1_user_clk_out, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of axi_c2c_aurora_rx_tvalid : signal is "XIL_INTERFACENAME AXIS_RX, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 93750000, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of axi_c2c_aurora_tx_tready : signal is "xilinx.com:interface:axis:1.0 AXIS_TX TREADY";
   attribute X_INTERFACE_INFO of axi_c2c_aurora_tx_tvalid : signal is "xilinx.com:interface:axis:1.0 AXIS_TX TVALID";
-  attribute X_INTERFACE_PARAMETER of axi_c2c_aurora_tx_tvalid : signal is "XIL_INTERFACENAME AXIS_TX, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 93750000, PHASE 0, CLK_DOMAIN apex_blk_axi_chip2chip_0_aurora8_1_user_clk_out, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of axi_c2c_aurora_tx_tvalid : signal is "XIL_INTERFACENAME AXIS_TX, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 93750000, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of axi_c2c_phy_clk : signal is "xilinx.com:signal:clock:1.0 axi_c2c_phy_clk CLK";
-  attribute X_INTERFACE_PARAMETER of axi_c2c_phy_clk : signal is "XIL_INTERFACENAME axi_c2c_phy_clk, ASSOCIATED_BUSIF AXIS_TX:AXIS_RX, ASSOCIATED_RESET aurora_reset_pb, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN apex_blk_axi_chip2chip_0_aurora8_1_user_clk_out, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of axi_c2c_phy_clk : signal is "XIL_INTERFACENAME axi_c2c_phy_clk, ASSOCIATED_BUSIF AXIS_TX:AXIS_RX, ASSOCIATED_RESET aurora_reset_pb, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_aclk : signal is "xilinx.com:signal:clock:1.0 m_aclk CLK";
   attribute X_INTERFACE_PARAMETER of m_aclk : signal is "XIL_INTERFACENAME m_aclk, ASSOCIATED_BUSIF m_axi, ASSOCIATED_RESET m_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_aresetn : signal is "xilinx.com:signal:reset:1.0 m_aresetn RST";

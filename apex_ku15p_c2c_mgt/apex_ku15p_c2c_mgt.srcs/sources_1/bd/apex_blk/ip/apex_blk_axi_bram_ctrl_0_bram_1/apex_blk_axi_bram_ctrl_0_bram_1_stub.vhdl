@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Wed Nov 25 11:02:12 2020
+-- Date        : Tue Mar  2 18:45:39 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top apex_blk_axi_bram_ctrl_0_bram_1 -prefix
 --               apex_blk_axi_bram_ctrl_0_bram_1_ apex_blk_axi_bram_ctrl_0_bram_0_stub.vhdl

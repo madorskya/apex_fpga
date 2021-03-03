@@ -179,7 +179,6 @@ proc create_hier_cell_drp1 { parentCell nameHier } {
   set axi_bram_drp_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_drp_1 ]
   set_property -dict [ list \
    CONFIG.DATA_WIDTH {64} \
-   CONFIG.ECC_TYPE {0} \
    CONFIG.READ_LATENCY {20} \
    CONFIG.SINGLE_PORT_BRAM {1} \
  ] $axi_bram_drp_1
@@ -415,7 +414,6 @@ proc create_root_design { parentCell } {
   # Create instance: axi_chip2chip_0, and set properties
   set axi_chip2chip_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_chip2chip:5.0 axi_chip2chip_0 ]
   set_property -dict [ list \
-   CONFIG.C_AURORA_WIDTH {1} \
    CONFIG.C_ECC_ENABLE {false} \
    CONFIG.C_EN_AXI_LINK_HNDLR {true} \
    CONFIG.C_INTERFACE_MODE {1} \
@@ -494,7 +492,6 @@ proc create_root_design { parentCell } {
   # Create instance: system_ila_0, and set properties
   set system_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0 ]
   set_property -dict [ list \
-   CONFIG.C_BRAM_CNT {14.5} \
    CONFIG.C_INPUT_PIPE_STAGES {6} \
    CONFIG.C_MON_TYPE {MIX} \
    CONFIG.C_NUM_MONITOR_SLOTS {3} \
@@ -504,7 +501,6 @@ proc create_root_design { parentCell } {
   # Create instance: vio_0, and set properties
   set vio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:vio:3.0 vio_0 ]
   set_property -dict [ list \
-   CONFIG.C_EN_PROBE_IN_ACTIVITY {0} \
    CONFIG.C_NUM_PROBE_IN {0} \
    CONFIG.C_NUM_PROBE_OUT {5} \
    CONFIG.C_PROBE_OUT0_WIDTH {1} \

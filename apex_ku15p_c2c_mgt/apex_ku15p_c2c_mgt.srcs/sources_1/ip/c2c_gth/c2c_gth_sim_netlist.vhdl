@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Mon Mar  1 10:42:25 2021
+-- Date        : Mon Mar  1 10:42:23 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
--- Command     : write_vhdl -force -mode funcsim
---               /home/madorsky/github/apex_ku15p_revert/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/sources_1/ip/c2c_gth/c2c_gth_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top c2c_gth -prefix
+--               c2c_gth_ c2c_gth_sim_netlist.vhdl
 -- Design      : c2c_gth
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -28,8 +28,6 @@ entity c2c_gth_gtwizard_ultrascale_v1_7_8_bit_synchronizer is
     drpaddr_in : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \addr_i_reg[1]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of c2c_gth_gtwizard_ultrascale_v1_7_8_bit_synchronizer : entity is "gtwizard_ultrascale_v1_7_8_bit_synchronizer";
 end c2c_gth_gtwizard_ultrascale_v1_7_8_bit_synchronizer;
 
 architecture STRUCTURE of c2c_gth_gtwizard_ultrascale_v1_7_8_bit_synchronizer is
@@ -1705,8 +1703,6 @@ entity c2c_gth_gtwizard_ultrascale_v1_7_8_gte4_drp_arb is
     drpdi_in : in STD_LOGIC_VECTOR ( 14 downto 0 );
     \data_i_reg[15]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of c2c_gth_gtwizard_ultrascale_v1_7_8_gte4_drp_arb : entity is "gtwizard_ultrascale_v1_7_8_gte4_drp_arb";
 end c2c_gth_gtwizard_ultrascale_v1_7_8_gte4_drp_arb;
 
 architecture STRUCTURE of c2c_gth_gtwizard_ultrascale_v1_7_8_gte4_drp_arb is
@@ -8149,8 +8145,6 @@ entity c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_channel is
     lopt_5 : out STD_LOGIC;
     lopt_6 : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_channel : entity is "gtwizard_ultrascale_v1_7_8_gthe4_channel";
 end c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_channel;
 
 architecture STRUCTURE of c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_channel is
@@ -9931,8 +9925,6 @@ entity c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_delay_powergood is
     GTHE4_CHANNEL_GTPOWERGOOD : in STD_LOGIC_VECTOR ( 0 to 0 );
     rxpmareset_in : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_delay_powergood : entity is "gtwizard_ultrascale_v1_7_8_gthe4_delay_powergood";
 end c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_delay_powergood;
 
 architecture STRUCTURE of c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_delay_powergood is
@@ -10630,8 +10622,6 @@ entity c2c_gth_gtwizard_ultrascale_v1_7_8_reset_synchronizer is
   port (
     drpclk_in : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of c2c_gth_gtwizard_ultrascale_v1_7_8_reset_synchronizer : entity is "gtwizard_ultrascale_v1_7_8_reset_synchronizer";
 end c2c_gth_gtwizard_ultrascale_v1_7_8_reset_synchronizer;
 
 architecture STRUCTURE of c2c_gth_gtwizard_ultrascale_v1_7_8_reset_synchronizer is
@@ -11499,8 +11489,6 @@ entity c2c_gth_c2c_gth_gthe4_channel_wrapper is
     lopt_5 : out STD_LOGIC;
     lopt_6 : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of c2c_gth_c2c_gth_gthe4_channel_wrapper : entity is "c2c_gth_gthe4_channel_wrapper";
 end c2c_gth_c2c_gth_gthe4_channel_wrapper;
 
 architecture STRUCTURE of c2c_gth_c2c_gth_gthe4_channel_wrapper is
@@ -11893,8 +11881,6 @@ entity c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_freq_counter is
     \cpll_cal_state_reg[13]_1\ : in STD_LOGIC;
     \cpll_cal_state_reg[13]_2\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_freq_counter : entity is "gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_freq_counter";
 end c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_freq_counter;
 
 architecture STRUCTURE of c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_freq_counter is
@@ -15279,8 +15265,6 @@ entity c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx is
     lopt_1 : in STD_LOGIC;
     lopt_2 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx : entity is "gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx";
 end c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx;
 
 architecture STRUCTURE of c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx is
@@ -23354,8 +23338,6 @@ entity c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal is
     lopt_1 : in STD_LOGIC;
     lopt_2 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal : entity is "gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal";
 end c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal;
 
 architecture STRUCTURE of c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal is
@@ -24138,8 +24120,6 @@ entity c2c_gth_c2c_gth_gtwizard_gthe4 is
     gtrxreset_in : in STD_LOGIC_VECTOR ( 1 downto 0 );
     rxpmareset_in : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of c2c_gth_c2c_gth_gtwizard_gthe4 : entity is "c2c_gth_gtwizard_gthe4";
 end c2c_gth_c2c_gth_gtwizard_gthe4;
 
 architecture STRUCTURE of c2c_gth_c2c_gth_gtwizard_gthe4 is
@@ -25977,8 +25957,6 @@ entity c2c_gth_c2c_gth_gtwizard_top is
   attribute C_TX_USRCLK_FREQUENCY of c2c_gth_c2c_gth_gtwizard_top : entity is "93.750000";
   attribute C_USER_GTPOWERGOOD_DELAY_EN : integer;
   attribute C_USER_GTPOWERGOOD_DELAY_EN of c2c_gth_c2c_gth_gtwizard_top : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of c2c_gth_c2c_gth_gtwizard_top : entity is "c2c_gth_gtwizard_top";
 end c2c_gth_c2c_gth_gtwizard_top;
 
 architecture STRUCTURE of c2c_gth_c2c_gth_gtwizard_top is

@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Mon Mar  1 10:42:25 2021
+-- Date        : Mon Mar  1 10:42:23 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
--- Command     : write_vhdl -force -mode synth_stub
---               /home/madorsky/github/apex_ku15p_revert/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/sources_1/ip/c2c_gth/c2c_gth_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top c2c_gth -prefix
+--               c2c_gth_ c2c_gth_stub.vhdl
 -- Design      : c2c_gth
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xcku15p-ffva1760-2-e

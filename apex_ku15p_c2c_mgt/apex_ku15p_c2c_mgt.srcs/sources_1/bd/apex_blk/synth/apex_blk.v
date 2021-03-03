@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Tue Mar  2 10:42:15 2021
+//Date        : Tue Mar  2 18:38:30 2021
 //Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 //Command     : generate_target apex_blk.bd
 //Design      : apex_blk
@@ -669,7 +669,7 @@ module apex_blk
         .probe_out1(aurora_pma_init),
         .probe_out3(bram1_delay),
         .probe_out4(bram2_delay));
-  apex_blk_xlconstant_0_5 xlconstant_0
+  apex_blk_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));
 endmodule
 
@@ -2241,7 +2241,7 @@ module drp1_imp_W4DWYU
   assign drp_en[0] = drp_bridge_0_drp0_en;
   assign drp_we[7:0] = drp_bridge_0_drp0_we;
   assign rst_clk_wiz_100M_peripheral_aresetn = probe0[0];
-  apex_blk_axi_bram_ctrl_0_2 axi_bram_drp_1
+  apex_blk_axi_bram_drp_1_0 axi_bram_drp_1
        (.bram_addr_a(axi_bram_drp_1_bram_addr_a),
         .bram_en_a(drp_bridge_0_drp0_en),
         .bram_rddata_a(drp_do_1),

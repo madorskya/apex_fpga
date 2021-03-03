@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Wed Nov 25 11:02:12 2020
+-- Date        : Tue Mar  2 18:45:41 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
--- Command     : write_vhdl -force -mode funcsim -rename_top apex_blk_axi_bram_ctrl_0_bram_0 -prefix
---               apex_blk_axi_bram_ctrl_0_bram_0_ apex_blk_axi_bram_ctrl_0_bram_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/madorsky/github/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/sources_1/bd/apex_blk/ip/apex_blk_axi_bram_ctrl_0_bram_0/apex_blk_axi_bram_ctrl_0_bram_0_sim_netlist.vhdl
 -- Design      : apex_blk_axi_bram_ctrl_0_bram_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,6 +25,8 @@ entity apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_prim_wrapper is
     dina : in STD_LOGIC_VECTOR ( 1 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_prim_wrapper is
@@ -4625,6 +4627,8 @@ entity apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_prim_width is
     dina : in STD_LOGIC_VECTOR ( 1 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_prim_width is
@@ -5270,6 +5274,8 @@ entity apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_generic_cstr is
     rsta : in STD_LOGIC;
     ena : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_generic_cstr is
@@ -5472,6 +5478,8 @@ entity apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_top is
     rsta : in STD_LOGIC;
     ena : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_top;
 
 architecture STRUCTURE of apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_top is
@@ -5505,6 +5513,8 @@ entity apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_v8_4_4_synth is
     rsta : in STD_LOGIC;
     ena : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_v8_4_4_synth : entity is "blk_mem_gen_v8_4_4_synth";
 end apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_v8_4_4_synth;
 
 architecture STRUCTURE of apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_v8_4_4_synth is
@@ -5742,6 +5752,8 @@ entity apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_v8_4_4 is
   attribute C_WRITE_WIDTH_B of apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_v8_4_4 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_v8_4_4 : entity is "kintexuplus";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_v8_4_4 : entity is "blk_mem_gen_v8_4_4";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_v8_4_4 : entity is "yes";
 end apex_blk_axi_bram_ctrl_0_bram_0_blk_mem_gen_v8_4_4;

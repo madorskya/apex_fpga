@@ -38,57 +38,6 @@
         </spirit:parameters>
       </spirit:view>
       <spirit:view>
-        <spirit:name>xilinx_verilogsynthesis</spirit:name>
-        <spirit:displayName>Verilog Synthesis</spirit:displayName>
-        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
-        <spirit:language>verilog</spirit:language>
-        <spirit:modelName>c2c_gth_gtwizard_top</spirit:modelName>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 01 15:37:37 UTC 2021</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6f115e78</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_synthesisconstraints</spirit:name>
-        <spirit:displayName>Synthesis Constraints</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:synthesis.constraints</spirit:envIdentifier>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6f115e78</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_verilogsynthesiswrapper</spirit:name>
-        <spirit:displayName>Verilog Synthesis Wrapper</spirit:displayName>
-        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
-        <spirit:language>verilog</spirit:language>
-        <spirit:modelName>c2c_gth</spirit:modelName>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_verilogsynthesiswrapper_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 01 15:37:37 UTC 2021</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6f115e78</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
         <spirit:name>xilinx_verilogbehavioralsimulation</spirit:name>
         <spirit:displayName>Verilog Simulation</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
@@ -148,6 +97,57 @@
         </spirit:parameters>
       </spirit:view>
       <spirit:view>
+        <spirit:name>xilinx_verilogsynthesis</spirit:name>
+        <spirit:displayName>Verilog Synthesis</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>c2c_gth_gtwizard_top</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Tue Mar 02 23:39:12 UTC 2021</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:6f115e78</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_synthesisconstraints</spirit:name>
+        <spirit:displayName>Synthesis Constraints</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis.constraints</spirit:envIdentifier>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:6f115e78</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesiswrapper</spirit:name>
+        <spirit:displayName>Verilog Synthesis Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>c2c_gth</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesiswrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Tue Mar 02 23:39:12 UTC 2021</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:6f115e78</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
         <spirit:name>xilinx_externalfiles</spirit:name>
         <spirit:displayName>External Files</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
@@ -157,7 +157,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 01 15:42:26 UTC 2021</spirit:value>
+            <spirit:value>Tue Mar 02 23:39:56 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -15651,165 +15651,6 @@
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>synth/c2c_gth_ooc.xdc</spirit:name>
-        <spirit:userFileType>xdc</spirit:userFileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>synth/c2c_gth.xdc</spirit:name>
-        <spirit:userFileType>xdc</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_bit_sync.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gte4_drp_arb.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtye4_delay_powergood.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gthe3_cpll_cal.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gthe3_cal_freqcnt.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_rx.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gthe4_cal_freqcnt.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtye4_cpll_cal.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtye4_cpll_cal_rx.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtye4_cpll_cal_tx.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtye4_cal_freqcnt.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtwiz_buffbypass_rx.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtwiz_buffbypass_tx.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtwiz_userclk_rx.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtwiz_userclk_tx.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_rx.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_tx.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_reset_sync.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/gtwizard_ultrascale_v1_7_reset_inv_sync.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>synth/gtwizard_ultrascale_v1_7_gthe4_channel.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>synth/c2c_gth_gthe4_channel_wrapper.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>synth/c2c_gth_gtwizard_gthe4.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-        <spirit:exportedName>c2c_gth_gtwizard_gthe4</spirit:exportedName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>synth/c2c_gth_gtwizard_top.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-        <spirit:exportedName>c2c_gth_gtwizard_top</spirit:exportedName>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_verilogsynthesiswrapper_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>synth/c2c_gth.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>hdl/gtwizard_ultrascale_v1_7_bit_sync.v</spirit:name>
@@ -15986,6 +15827,165 @@
         <spirit:name>doc/gtwizard_ultrascale_v1_7_changelog.txt</spirit:name>
         <spirit:userFileType>text</spirit:userFileType>
         <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>synth/c2c_gth_ooc.xdc</spirit:name>
+        <spirit:userFileType>xdc</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>synth/c2c_gth.xdc</spirit:name>
+        <spirit:userFileType>xdc</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_bit_sync.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gte4_drp_arb.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtye4_delay_powergood.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gthe3_cpll_cal.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gthe3_cal_freqcnt.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_rx.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gthe4_cal_freqcnt.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtye4_cpll_cal.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtye4_cpll_cal_rx.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtye4_cpll_cal_tx.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtye4_cal_freqcnt.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtwiz_buffbypass_rx.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtwiz_buffbypass_tx.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtwiz_userclk_rx.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtwiz_userclk_tx.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_rx.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_tx.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_reset_sync.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/gtwizard_ultrascale_v1_7_reset_inv_sync.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>gtwizard_ultrascale_v1_7_8</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>synth/gtwizard_ultrascale_v1_7_gthe4_channel.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>synth/c2c_gth_gthe4_channel_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>synth/c2c_gth_gtwizard_gthe4.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+        <spirit:exportedName>c2c_gth_gtwizard_gthe4</spirit:exportedName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>synth/c2c_gth_gtwizard_top.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+        <spirit:exportedName>c2c_gth_gtwizard_top</spirit:exportedName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesiswrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>synth/c2c_gth.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
