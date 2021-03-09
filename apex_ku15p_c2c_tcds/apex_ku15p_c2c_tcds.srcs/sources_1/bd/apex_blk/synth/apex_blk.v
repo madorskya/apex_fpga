@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Tue Mar  2 18:38:30 2021
+//Date        : Mon Mar  8 15:17:26 2021
 //Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 //Command     : generate_target apex_blk.bd
 //Design      : apex_blk
@@ -25,6 +25,7 @@ module apex_blk
     c2c_tx_ready,
     c2c_tx_tdata,
     c2c_tx_tvalid,
+    clk_125,
     drp_addr,
     drp_clk,
     drp_di,
@@ -46,6 +47,7 @@ module apex_blk
   input c2c_tx_ready;
   output [31:0]c2c_tx_tdata;
   output c2c_tx_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_125 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_125, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output clk_125;
   output [13:0]drp_addr;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.DRP_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.DRP_CLK, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output drp_clk;
   output [63:0]drp_di;
@@ -204,6 +206,7 @@ module apex_blk
   wire [0:0]channel_up;
   wire clk_in1_0_1;
   wire clk_wiz_clk_out1;
+  wire clk_wiz_clk_out3;
   wire clk_wiz_locked;
   wire [13:0]drp_bridge_0_drp0_addr;
   wire [63:0]drp_bridge_0_drp0_di;
@@ -225,6 +228,7 @@ module apex_blk
   assign c2c_pma_init = axi_chip2chip_0_aurora_pma_init_out;
   assign c2c_tx_tdata[31:0] = axi_chip2chip_0_axi_c2c_aurora_tx_tdata;
   assign c2c_tx_tvalid = axi_chip2chip_0_axi_c2c_aurora_tx_tvalid;
+  assign clk_125 = clk_wiz_clk_out3;
   assign clk_in1_0_1 = c2c_init_clk;
   assign drp_addr[13:0] = drp_bridge_0_drp0_addr;
   assign drp_clk = Net_1;
@@ -497,6 +501,7 @@ module apex_blk
        (.clk_in1(clk_in1_0_1),
         .clk_out1(clk_wiz_clk_out1),
         .clk_out2(Net_1),
+        .clk_out3(clk_wiz_clk_out3),
         .locked(clk_wiz_locked),
         .reset(xlconstant_0_dout));
   drp1_imp_W4DWYU drp1

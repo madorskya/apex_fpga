@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Sat Feb 20 20:46:47 2021
+-- Date        : Mon Mar  8 15:24:29 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
--- Command     : write_vhdl -force -mode funcsim -rename_top c2c_gth_vio_0 -prefix
---               c2c_gth_vio_0_ c2c_gth_vio_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/madorsky/github/apex_ku15p/apex_ku15p_c2c_tcds/apex_ku15p_c2c_tcds.srcs/c2c_gth_vio_0/ip/c2c_gth_vio_0/c2c_gth_vio_0_sim_netlist.vhdl
 -- Design      : c2c_gth_vio_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -48,6 +48,8 @@ entity c2c_gth_vio_0_vio_v3_0_19_decoder is
     s_dwe_o : in STD_LOGIC;
     \xsdb_addr_2_0_p2_reg[2]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_vio_0_vio_v3_0_19_decoder : entity is "vio_v3_0_19_decoder";
 end c2c_gth_vio_0_vio_v3_0_19_decoder;
 
 architecture STRUCTURE of c2c_gth_vio_0_vio_v3_0_19_decoder is
@@ -1044,6 +1046,8 @@ entity c2c_gth_vio_0_vio_v3_0_19_probe_in_one is
     D : in STD_LOGIC_VECTOR ( 18 downto 0 );
     clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_vio_0_vio_v3_0_19_probe_in_one : entity is "vio_v3_0_19_probe_in_one";
 end c2c_gth_vio_0_vio_v3_0_19_probe_in_one;
 
 architecture STRUCTURE of c2c_gth_vio_0_vio_v3_0_19_probe_in_one is
@@ -3159,6 +3163,8 @@ entity c2c_gth_vio_0_vio_v3_0_19_probe_out_one is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     wr_probe_out : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_vio_0_vio_v3_0_19_probe_out_one : entity is "vio_v3_0_19_probe_out_one";
 end c2c_gth_vio_0_vio_v3_0_19_probe_out_one;
 
 architecture STRUCTURE of c2c_gth_vio_0_vio_v3_0_19_probe_out_one is
@@ -3824,6 +3830,8 @@ entity c2c_gth_vio_0_vio_v3_0_19_probe_width is
     s_rst_o : in STD_LOGIC;
     \out\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_vio_0_vio_v3_0_19_probe_width : entity is "vio_v3_0_19_probe_width";
 end c2c_gth_vio_0_vio_v3_0_19_probe_width;
 
 architecture STRUCTURE of c2c_gth_vio_0_vio_v3_0_19_probe_width is
@@ -4090,6 +4098,8 @@ entity c2c_gth_vio_0_xsdbs_v1_0_2_xsdbs is
   attribute C_XDEVICEFAMILY of c2c_gth_vio_0_xsdbs_v1_0_2_xsdbs : entity is "kintexuplus";
   attribute C_XSDB_SLAVE_TYPE : integer;
   attribute C_XSDB_SLAVE_TYPE of c2c_gth_vio_0_xsdbs_v1_0_2_xsdbs : entity is 33;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_vio_0_xsdbs_v1_0_2_xsdbs : entity is "xsdbs_v1_0_2_xsdbs";
   attribute dont_touch : string;
   attribute dont_touch of c2c_gth_vio_0_xsdbs_v1_0_2_xsdbs : entity is "true";
 end c2c_gth_vio_0_xsdbs_v1_0_2_xsdbs;
@@ -7070,6 +7080,8 @@ entity c2c_gth_vio_0_vio_v3_0_19_probe_out_all is
     s_dwe_o : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_vio_0_vio_v3_0_19_probe_out_all : entity is "vio_v3_0_19_probe_out_all";
 end c2c_gth_vio_0_vio_v3_0_19_probe_out_all;
 
 architecture STRUCTURE of c2c_gth_vio_0_vio_v3_0_19_probe_out_all is
@@ -10766,6 +10778,8 @@ entity c2c_gth_vio_0_vio_v3_0_19_vio is
   attribute LC_TOTAL_PROBE_IN_WIDTH of c2c_gth_vio_0_vio_v3_0_19_vio : entity is 19;
   attribute LC_TOTAL_PROBE_OUT_WIDTH : integer;
   attribute LC_TOTAL_PROBE_OUT_WIDTH of c2c_gth_vio_0_vio_v3_0_19_vio : entity is 22;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_vio_0_vio_v3_0_19_vio : entity is "vio_v3_0_19_vio";
   attribute dont_touch : string;
   attribute dont_touch of c2c_gth_vio_0_vio_v3_0_19_vio : entity is "true";
 end c2c_gth_vio_0_vio_v3_0_19_vio;

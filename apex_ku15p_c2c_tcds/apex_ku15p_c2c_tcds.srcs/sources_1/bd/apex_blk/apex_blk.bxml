@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="apex_blk" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1614728322"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1614728322"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1614728322"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1614728322"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1615234656"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1615234656"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1615234656"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1615234656"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/apex_blk_axi_bram_ctrl_0_0/apex_blk_axi_bram_ctrl_0_0.xci" Type="IP">
         <Instance HierarchyPath="bram0/axi_bram_ctrl_0"/>
@@ -146,7 +146,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/apex_blk_auto_us_0_1/apex_blk_auto_us_0.xci" Type="IP">
+      <File Name="ip/apex_blk_auto_us_0/apex_blk_auto_us_0.xci" Type="IP">
         <Instance HierarchyPath="axi_interconnect_0/s00_couplers/auto_us"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -154,7 +154,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/apex_blk_auto_ds_0_1/apex_blk_auto_ds_0.xci" Type="IP">
+      <File Name="ip/apex_blk_auto_ds_0/apex_blk_auto_ds_0.xci" Type="IP">
         <Instance HierarchyPath="axi_interconnect_0/m00_couplers/auto_ds"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -162,7 +162,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/apex_blk_auto_cc_0_1/apex_blk_auto_cc_0.xci" Type="IP">
+      <File Name="ip/apex_blk_auto_cc_0/apex_blk_auto_cc_0.xci" Type="IP">
         <Instance HierarchyPath="axi_interconnect_0/m01_couplers/auto_cc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -170,7 +170,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/apex_blk_auto_ds_1_1/apex_blk_auto_ds_1.xci" Type="IP">
+      <File Name="ip/apex_blk_auto_ds_1/apex_blk_auto_ds_1.xci" Type="IP">
         <Instance HierarchyPath="axi_interconnect_0/m02_couplers/auto_ds"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>

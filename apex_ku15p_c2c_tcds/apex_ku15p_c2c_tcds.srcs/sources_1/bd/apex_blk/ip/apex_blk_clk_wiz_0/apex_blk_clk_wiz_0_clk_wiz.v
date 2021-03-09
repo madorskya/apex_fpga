@@ -56,8 +56,9 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out1__100.00000______0.000______50.0______134.506____154.678
-// clk_out2__50.00000______0.000______50.0______153.164____154.678
+// clk_out1__100.00000______0.000______50.0______102.484_____79.008
+// clk_out2__50.00000______0.000______50.0______117.522_____79.008
+// clk_out3__125.00000______0.000______50.0_______98.122_____79.008
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -72,6 +73,7 @@ module apex_blk_clk_wiz_0_clk_wiz
   // Clock out ports
   output        clk_out1,
   output        clk_out2,
+  output        clk_out3,
   // Status and control signals
   input         reset,
   output        locked,
@@ -111,7 +113,6 @@ wire clk_in2_apex_blk_clk_wiz_0;
   wire        clkfboutb_unused;
     wire clkout0b_unused;
    wire clkout1b_unused;
-   wire clkout2_unused;
    wire clkout2b_unused;
    wire clkout3_unused;
    wire clkout3b_unused;
@@ -130,18 +131,22 @@ wire clk_in2_apex_blk_clk_wiz_0;
     .CLKOUT4_CASCADE      ("FALSE"),
     .COMPENSATION         ("AUTO"),
     .STARTUP_WAIT         ("FALSE"),
-    .DIVCLK_DIVIDE        (5),
-    .CLKFBOUT_MULT_F      (24.000),
+    .DIVCLK_DIVIDE        (1),
+    .CLKFBOUT_MULT_F      (5.000),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
-    .CLKOUT0_DIVIDE_F     (12.000),
+    .CLKOUT0_DIVIDE_F     (12.500),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (24),
+    .CLKOUT1_DIVIDE       (25),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
+    .CLKOUT2_DIVIDE       (10),
+    .CLKOUT2_PHASE        (0.000),
+    .CLKOUT2_DUTY_CYCLE   (0.500),
+    .CLKOUT2_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (4.000))
   
   mmcme4_adv_inst
@@ -153,7 +158,7 @@ wire clk_in2_apex_blk_clk_wiz_0;
     .CLKOUT0B            (clkout0b_unused),
     .CLKOUT1             (clk_out2_apex_blk_clk_wiz_0),
     .CLKOUT1B            (clkout1b_unused),
-    .CLKOUT2             (clkout2_unused),
+    .CLKOUT2             (clk_out3_apex_blk_clk_wiz_0),
     .CLKOUT2B            (clkout2b_unused),
     .CLKOUT3             (clkout3_unused),
     .CLKOUT3B            (clkout3b_unused),
@@ -208,6 +213,10 @@ wire clk_in2_apex_blk_clk_wiz_0;
   BUFG clkout2_buf
    (.O   (clk_out2),
     .I   (clk_out2_apex_blk_clk_wiz_0));
+
+  BUFG clkout3_buf
+   (.O   (clk_out3),
+    .I   (clk_out3_apex_blk_clk_wiz_0));
 
 
 

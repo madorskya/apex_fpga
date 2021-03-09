@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Fri Feb 19 17:26:00 2021
+// Date        : Mon Mar  8 15:25:55 2021
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
-// Command     : write_verilog -force -mode funcsim -rename_top c2c_gth_in_system_ibert_0 -prefix
-//               c2c_gth_in_system_ibert_0_ c2c_gth_in_system_ibert_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /home/madorsky/github/apex_ku15p/apex_ku15p_c2c_tcds/apex_ku15p_c2c_tcds.srcs/c2c_gth_in_system_ibert_0/ip/c2c_gth_in_system_ibert_0/c2c_gth_in_system_ibert_0_sim_netlist.v
 // Design      : c2c_gth_in_system_ibert_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -2104,6 +2104,7 @@ module c2c_gth_in_system_ibert_0
         .txprecursor_o(txprecursor_o));
 endmodule
 
+(* ORIG_REF_NAME = "iomodule" *) 
 module c2c_gth_in_system_ibert_0_iomodule
    (mb_den_i,
     mb_rden_i,
@@ -3618,6 +3619,7 @@ module c2c_gth_in_system_ibert_0_iomodule
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "lmb_bram_if_cntlr" *) 
 module c2c_gth_in_system_ibert_0_lmb_bram_if_cntlr
    (Sl_Rdy,
     lmb_as,
@@ -3721,6 +3723,7 @@ module c2c_gth_in_system_ibert_0_lmb_bram_if_cntlr__parameterized1
         .O(\No_ECC.Sl_Rdy_reg_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "lmb_v10" *) 
 module c2c_gth_in_system_ibert_0_lmb_v10
    (ilmb_LMB_Rst,
     SR,
@@ -3770,6 +3773,7 @@ module c2c_gth_in_system_ibert_0_lmb_v10__parameterized1
         .S(SR));
 endmodule
 
+(* ORIG_REF_NAME = "ALU" *) 
 module c2c_gth_in_system_ibert_0_ALU
    (lmb_select,
     O,
@@ -4675,6 +4679,7 @@ module c2c_gth_in_system_ibert_0_ALU
         .control_carry(control_carry));
 endmodule
 
+(* ORIG_REF_NAME = "ALU_Bit" *) 
 module c2c_gth_in_system_ibert_0_ALU_Bit
    (EX_CarryOut,
     dlmb_M_ABus,
@@ -7040,6 +7045,7 @@ module c2c_gth_in_system_ibert_0_ALU_Bit__parameterized2
         .O(maintain_sign_n_rep_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "Byte_Doublet_Handle" *) 
 module c2c_gth_in_system_ibert_0_Byte_Doublet_Handle
    (dlmb_M_BE,
     O,
@@ -7146,6 +7152,7 @@ module c2c_gth_in_system_ibert_0_Byte_Doublet_Handle
         .low_addr_i_1(low_addr_i_1));
 endmodule
 
+(* ORIG_REF_NAME = "Data_Flow" *) 
 module c2c_gth_in_system_ibert_0_Data_Flow
    (\Result_Sel_reg[1] ,
     Op1_Low,
@@ -8055,6 +8062,7 @@ module c2c_gth_in_system_ibert_0_Data_Flow
         .reg_Test_Equal_N(reg_Test_Equal_N));
 endmodule
 
+(* ORIG_REF_NAME = "Decode" *) 
 module c2c_gth_in_system_ibert_0_Decode
    (IReady,
     Buffer_Addr,
@@ -9761,6 +9769,7 @@ module c2c_gth_in_system_ibert_0_Decode
         .R(\Using_FPGA.Native_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "MB_FDE" *) 
 module c2c_gth_in_system_ibert_0_MB_FDE
    (op2_C,
     normal_piperun,
@@ -10656,6 +10665,7 @@ module c2c_gth_in_system_ibert_0_MB_FDE_613
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "MB_FDR" *) 
 module c2c_gth_in_system_ibert_0_MB_FDR
    (\Using_FPGA.Native_0 ,
     \Using_FPGA.Native_1 ,
@@ -10772,6 +10782,7 @@ module c2c_gth_in_system_ibert_0_MB_FDR
         .O(\Using_FPGA.Native_1 ));
 endmodule
 
+(* ORIG_REF_NAME = "MB_FDRSE" *) 
 module c2c_gth_in_system_ibert_0_MB_FDRSE
    (force_Val2_N,
     \Using_FPGA.Native_0 ,
@@ -10954,6 +10965,7 @@ module c2c_gth_in_system_ibert_0_MB_FDRSE_618
         .O(I3_1));
 endmodule
 
+(* ORIG_REF_NAME = "MB_FDS" *) 
 module c2c_gth_in_system_ibert_0_MB_FDS
    (\Using_FPGA.Native_0 ,
     Increment,
@@ -11029,6 +11041,7 @@ module c2c_gth_in_system_ibert_0_MB_FDS
         .O(Increment));
 endmodule
 
+(* ORIG_REF_NAME = "MB_FDSE" *) 
 module c2c_gth_in_system_ibert_0_MB_FDSE
    (Reg_Test_Equal,
     R,
@@ -11591,6 +11604,7 @@ module c2c_gth_in_system_ibert_0_MB_FDS_31
         .S(S));
 endmodule
 
+(* ORIG_REF_NAME = "MB_LUT2" *) 
 module c2c_gth_in_system_ibert_0_MB_LUT2
    (byte_i_reg,
     byte_selects_0,
@@ -11612,6 +11626,7 @@ module c2c_gth_in_system_ibert_0_MB_LUT2
         .O(byte_i_reg));
 endmodule
 
+(* ORIG_REF_NAME = "MB_LUT3" *) 
 module c2c_gth_in_system_ibert_0_MB_LUT3
    (opsel1_SPR_Select_2_2,
     D,
@@ -11810,6 +11825,7 @@ module c2c_gth_in_system_ibert_0_MB_LUT3__parameterized9
         .O(O));
 endmodule
 
+(* ORIG_REF_NAME = "MB_LUT4" *) 
 module c2c_gth_in_system_ibert_0_MB_LUT4
    (write_Reg_I_S,
     dlmb_LMB_Ready,
@@ -15455,6 +15471,7 @@ module c2c_gth_in_system_ibert_0_MB_LUT4__parameterized9_14
         .O(res_forward2_2));
 endmodule
 
+(* ORIG_REF_NAME = "MB_LUT6_2" *) 
 module c2c_gth_in_system_ibert_0_MB_LUT6_2
    (op1_Reg,
     op1_I,
@@ -18193,6 +18210,7 @@ module c2c_gth_in_system_ibert_0_MB_LUT6_2__parameterized8
         .O6(dlmb_M_BE[1]));
 endmodule
 
+(* ORIG_REF_NAME = "MB_MULT_AND" *) 
 module c2c_gth_in_system_ibert_0_MB_MULT_AND
    (sub_Carry,
     \Using_FPGA.Native_0 ,
@@ -18240,6 +18258,7 @@ module c2c_gth_in_system_ibert_0_MB_MULT_AND_711
         .O(DI));
 endmodule
 
+(* ORIG_REF_NAME = "MB_MUXCY_XORCY" *) 
 module c2c_gth_in_system_ibert_0_MB_MUXCY_XORCY
    (buffer_Addr_S_I_2,
     \Using_FPGA.Native ,
@@ -20469,6 +20488,7 @@ module c2c_gth_in_system_ibert_0_MB_MUXCY_XORCY_712
         .O(lmb_select));
 endmodule
 
+(* ORIG_REF_NAME = "MB_RAM32X1D" *) 
 module c2c_gth_in_system_ibert_0_MB_RAM32X1D
    (Reg1_Data,
     Data_Write,
@@ -23652,6 +23672,7 @@ module c2c_gth_in_system_ibert_0_MB_RAM32X1D_381
         .O(\Using_FPGA.take_Intr_2nd_Phase_reg ));
 endmodule
 
+(* ORIG_REF_NAME = "MB_SRL16E" *) 
 module c2c_gth_in_system_ibert_0_MB_SRL16E
    (\Using_B36_S2.The_BRAMs[0].RAMB36_I1 ,
     inHibit_EX_reg,
@@ -27274,6 +27295,7 @@ module c2c_gth_in_system_ibert_0_MB_SRL16E_63
         .O(D));
 endmodule
 
+(* ORIG_REF_NAME = "MSR_Reg" *) 
 module c2c_gth_in_system_ibert_0_MSR_Reg
    (MSR,
     I3,
@@ -27348,6 +27370,7 @@ module c2c_gth_in_system_ibert_0_MSR_Reg
         .out(out));
 endmodule
 
+(* ORIG_REF_NAME = "MSR_Reg_Bit" *) 
 module c2c_gth_in_system_ibert_0_MSR_Reg_Bit
    (MSR,
     I3_1,
@@ -27452,6 +27475,7 @@ module c2c_gth_in_system_ibert_0_MSR_Reg_Bit_615
         .out(out));
 endmodule
 
+(* ORIG_REF_NAME = "MicroBlaze" *) 
 module c2c_gth_in_system_ibert_0_MicroBlaze
    (nonvalid_IFetch_n_reg,
     O,
@@ -27590,6 +27614,7 @@ module c2c_gth_in_system_ibert_0_MicroBlaze
         .out(out));
 endmodule
 
+(* ORIG_REF_NAME = "MicroBlaze_Area" *) 
 module c2c_gth_in_system_ibert_0_MicroBlaze_Area
    (nonvalid_IFetch_n_reg,
     jump,
@@ -28125,6 +28150,7 @@ module c2c_gth_in_system_ibert_0_MicroBlaze_Area
         .sext8(sext8));
 endmodule
 
+(* ORIG_REF_NAME = "MicroBlaze_Core" *) 
 module c2c_gth_in_system_ibert_0_MicroBlaze_Core
    (nonvalid_IFetch_n_reg,
     O,
@@ -28283,6 +28309,7 @@ module c2c_gth_in_system_ibert_0_MicroBlaze_Core
         .take_Intr_Now_III(\Decode_I/take_Intr_Now_III ));
 endmodule
 
+(* ORIG_REF_NAME = "Operand_Select" *) 
 module c2c_gth_in_system_ibert_0_Operand_Select
    (Op1_Logic,
     EX_Op2,
@@ -29164,6 +29191,7 @@ module c2c_gth_in_system_ibert_0_Operand_Select
         .R(\Using_FPGA.Native_60 ));
 endmodule
 
+(* ORIG_REF_NAME = "Operand_Select_Bit" *) 
 module c2c_gth_in_system_ibert_0_Operand_Select_Bit
    (\Using_FPGA.Native ,
     \Using_FPGA.Native_0 ,
@@ -31311,6 +31339,7 @@ module c2c_gth_in_system_ibert_0_Operand_Select_Bit__parameterized8_475
         .out(out));
 endmodule
 
+(* ORIG_REF_NAME = "PC_Bit" *) 
 module c2c_gth_in_system_ibert_0_PC_Bit
    (ADDRARDADDR,
     PC_OF,
@@ -32713,6 +32742,7 @@ module c2c_gth_in_system_ibert_0_PC_Bit_394
         .pc_I(pc_I));
 endmodule
 
+(* ORIG_REF_NAME = "PC_Module" *) 
 module c2c_gth_in_system_ibert_0_PC_Module
    (I3,
     I3_0,
@@ -33147,6 +33177,7 @@ module c2c_gth_in_system_ibert_0_PC_Module
         .out(out));
 endmodule
 
+(* ORIG_REF_NAME = "PreFetch_Buffer" *) 
 module c2c_gth_in_system_ibert_0_PreFetch_Buffer
    (\Using_B36_S2.The_BRAMs[0].RAMB36_I1 ,
     \Using_FPGA.Native ,
@@ -34249,6 +34280,7 @@ module c2c_gth_in_system_ibert_0_PreFetch_Buffer
         .out(out));
 endmodule
 
+(* ORIG_REF_NAME = "RAM_Module_Top" *) 
 module c2c_gth_in_system_ibert_0_RAM_Module_Top
    (DATA_OUTA,
     DATA_OUTB,
@@ -38281,6 +38313,7 @@ module c2c_gth_in_system_ibert_0_RAM_Module_Top
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,dlmb_port_BRAM_WEN[2]}));
 endmodule
 
+(* ORIG_REF_NAME = "Register_File" *) 
 module c2c_gth_in_system_ibert_0_Register_File
    (\Using_FPGA.take_Intr_2nd_Phase_reg ,
     \Using_FPGA.take_Intr_2nd_Phase_reg_0 ,
@@ -38719,6 +38752,7 @@ module c2c_gth_in_system_ibert_0_Register_File
         .res_Forward2(res_Forward2));
 endmodule
 
+(* ORIG_REF_NAME = "Register_File_Bit" *) 
 module c2c_gth_in_system_ibert_0_Register_File_Bit
    (\Using_FPGA.take_Intr_2nd_Phase_reg ,
     Reg1_Data,
@@ -40382,6 +40416,7 @@ module c2c_gth_in_system_ibert_0_Register_File_Bit_318
         .res_Forward2(res_Forward2));
 endmodule
 
+(* ORIG_REF_NAME = "Result_Mux" *) 
 module c2c_gth_in_system_ibert_0_Result_Mux
    (EX_Result,
     Op1_Logic,
@@ -40751,6 +40786,7 @@ module c2c_gth_in_system_ibert_0_Result_Mux
         .O(Upper_extend_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "Result_Mux_Bit" *) 
 module c2c_gth_in_system_ibert_0_Result_Mux_Bit
    (EX_Result,
     \Using_FPGA.Native ,
@@ -41870,6 +41906,7 @@ module c2c_gth_in_system_ibert_0_Result_Mux_Bit_225
         .mul_ALU_Res(mul_ALU_Res));
 endmodule
 
+(* ORIG_REF_NAME = "Shift_Logic_Bit" *) 
 module c2c_gth_in_system_ibert_0_Shift_Logic_Bit
    (Select_Logic_reg,
     op2_C,
@@ -43373,6 +43410,7 @@ module c2c_gth_in_system_ibert_0_Shift_Logic_Bit_99
         .shift_Res(shift_Res));
 endmodule
 
+(* ORIG_REF_NAME = "Shift_Logic_Module" *) 
 module c2c_gth_in_system_ibert_0_Shift_Logic_Module
    (Shift_Logic_Res,
     Select_Logic_reg,
@@ -43902,6 +43940,7 @@ module c2c_gth_in_system_ibert_0_Shift_Logic_Module
         .O(\Using_FPGA.Native_i_1__0_n_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "Zero_Detect" *) 
 module c2c_gth_in_system_ibert_0_Zero_Detect
    (Reg_zero,
     Reg_Test_Equal,
@@ -44160,7 +44199,7 @@ endmodule
 (* ARB_WAIT = "4'b0010" *) (* C_ADDR_WIDTH = "17" *) (* C_DATA_WIDTH = "16" *) 
 (* C_NUM_CLIENTS = "3" *) (* DRP_DONE = "7'b1000000" *) (* DRP_MODIFY = "7'b0001000" *) 
 (* DRP_READ = "7'b0000010" *) (* DRP_READ_ACK = "7'b0000100" *) (* DRP_WAIT = "7'b0000001" *) 
-(* DRP_WRITE = "7'b0010000" *) (* DRP_WRITE_ACK = "7'b0100000" *) 
+(* DRP_WRITE = "7'b0010000" *) (* DRP_WRITE_ACK = "7'b0100000" *) (* ORIG_REF_NAME = "ibert_lib_v1_0_7_drp_arbiter" *) 
 module c2c_gth_in_system_ibert_0_ibert_lib_v1_0_7_drp_arbiter
    (DCLK_I,
     RESET_I,
@@ -50387,6 +50426,7 @@ module c2c_gth_in_system_ibert_0_ibert_lib_v1_0_7_drp_arbiter__1
 endmodule
 
 (* C_NUM_CLIENTS = "2" *) (* C_SLAVE_LSB_IDX = "18" *) (* C_SLAVE_MSB_IDX = "26" *) 
+(* ORIG_REF_NAME = "ibert_lib_v1_0_7_mbio2xsdb" *) 
 module c2c_gth_in_system_ibert_0_ibert_lib_v1_0_7_mbio2xsdb
    (rst_i,
     clk_i,
@@ -51116,6 +51156,7 @@ module c2c_gth_in_system_ibert_0_ibert_lib_v1_0_7_mbio2xsdb
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "in_system_ibert_v1_0_11_drp_syncronizer" *) 
 module c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_drp_syncronizer
    (drpen_o,
     CLK,
@@ -52587,7 +52628,7 @@ endmodule
 (* C_MINOR_VERSION = "3" *) (* C_NEXT_SLAVE = "1" *) (* C_NUM_GT = "2" *) 
 (* C_PIPE_IFACE = "1" *) (* C_QUAD_NUMBER = "16'b0000000011100110" *) (* C_USE_TEST_REG = "1" *) 
 (* C_XSDB_SLAVE_TYPE = "16'b0000010000010010" *) (* LC_AWIDTH = "17" *) (* LC_DWIDTH = "16" *) 
-(* LC_D_ZERO = "16'b0000000000000000" *) (* LC_LSB_AWIDTH = "11" *) 
+(* LC_D_ZERO = "16'b0000000000000000" *) (* LC_LSB_AWIDTH = "11" *) (* ORIG_REF_NAME = "in_system_ibert_v1_0_11_gthe4_channel_regs" *) 
 module c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_gthe4_channel_regs
    (rxlpmen_i,
     rxrate_i,
@@ -54858,7 +54899,7 @@ endmodule
 (* C_ARBITER_USER_PORTS = "2" *) (* C_BUILD_REVISION = "0" *) (* C_CORE_MAJOR_VER = "3" *) 
 (* C_CORE_MINOR_VER = "0" *) (* C_ENABLE_INPUT_PORTS = "1" *) (* C_GT_COORDINATE = "16'b0000000000011000" *) 
 (* C_GT_TYPE = "GTHE4" *) (* C_NEXT_SLAVE = "1" *) (* C_NUM_GT = "2" *) 
-(* C_QUAD_NUMBER = "16'b0000000011100110" *) 
+(* C_QUAD_NUMBER = "16'b0000000011100110" *) (* ORIG_REF_NAME = "in_system_ibert_v1_0_11_gthe4_channel_slave" *) 
 module c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_gthe4_channel_slave
    (drpclk_o,
     drpen_o,
@@ -56339,7 +56380,8 @@ endmodule
 (* C_QUAD_NUMBER_92 = "16'b0000000000000000" *) (* C_QUAD_NUMBER_93 = "16'b0000000000000000" *) (* C_QUAD_NUMBER_94 = "16'b0000000000000000" *) 
 (* C_QUAD_NUMBER_95 = "16'b0000000000000000" *) (* C_QUAD_NUMBER_96 = "16'b0000000000000000" *) (* C_QUAD_NUMBER_97 = "16'b0000000000000000" *) 
 (* C_QUAD_NUMBER_98 = "16'b0000000000000000" *) (* C_QUAD_NUMBER_99 = "16'b0000000000000000" *) (* C_TXDIFFCTRL_WIDTH = "5" *) 
-(* C_USE_MDM = "0" *) (* C_XDEVICEFAMILY = "kintexuplus" *) (* dont_touch = "true" *) 
+(* C_USE_MDM = "0" *) (* C_XDEVICEFAMILY = "kintexuplus" *) (* ORIG_REF_NAME = "in_system_ibert_v1_0_11_in_system_ibert" *) 
+(* dont_touch = "true" *) 
 module c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_in_system_ibert
    (drpclk_o,
     gt0_drpen_o,
@@ -64499,6 +64541,7 @@ module c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_in_system_ibert
         .p_0_in(p_0_in));
 endmodule
 
+(* ORIG_REF_NAME = "lmb_bram" *) 
 module c2c_gth_in_system_ibert_0_lmb_bram
    (DATA_OUTA,
     DATA_OUTB,
@@ -64541,6 +64584,7 @@ module c2c_gth_in_system_ibert_0_lmb_bram
         .out(out));
 endmodule
 
+(* ORIG_REF_NAME = "mb_sync_bit" *) 
 module c2c_gth_in_system_ibert_0_mb_sync_bit
    (out,
     S,
@@ -64608,6 +64652,7 @@ module c2c_gth_in_system_ibert_0_mb_sync_bit
         .O(\Synchronize.use_sync_reset.sync_reg[2]_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "microblaze_mcs" *) 
 module c2c_gth_in_system_ibert_0_microblaze_mcs
    (mb_den_i,
     mb_rden_i,
@@ -64815,6 +64860,7 @@ module c2c_gth_in_system_ibert_0_microblaze_mcs
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "microblaze_v9_5_4_MB_FDRE" *) 
 module c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_FDRE
    (carry_In,
     \Using_FPGA.Native_0 ,
@@ -67233,6 +67279,7 @@ module c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_FDRE_612
         .R(\Using_FPGA.Native_1 ));
 endmodule
 
+(* ORIG_REF_NAME = "microblaze_v9_5_4_MB_LUT6" *) 
 module c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_LUT6
    (alu_AddSub_1,
     op2_C,
@@ -68357,6 +68404,7 @@ module c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_LUT6__parameterized0_286
         .O(EX_Result));
 endmodule
 
+(* ORIG_REF_NAME = "microblaze_v9_5_4_MB_MUXCY" *) 
 module c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_MUXCY
    (correct_Carry_I,
     correct_Carry_Select,
@@ -69791,6 +69839,7 @@ module c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_MUXCY_9
         .O(using_Imm0));
 endmodule
 
+(* ORIG_REF_NAME = "microblaze_v9_5_4_MB_MUXF7" *) 
 module c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_MUXF7
    (Select_Logic_reg,
     Select_Logic,
@@ -70558,6 +70607,7 @@ module c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_MUXF7_194
         .S(Select_Logic));
 endmodule
 
+(* ORIG_REF_NAME = "mux4_8" *) 
 module c2c_gth_in_system_ibert_0_mux4_8
    (DATA_INB,
     D,
@@ -70604,6 +70654,7 @@ module c2c_gth_in_system_ibert_0_mux4_8
         .sel_Write_Mux_MSB(sel_Write_Mux_MSB));
 endmodule
 
+(* ORIG_REF_NAME = "xsdbs_v1_0_2_reg" *) 
 module c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg
    (\G_1PIPE_IFACE.s_daddr_r_reg[5] ,
     \G_1PIPE_IFACE.s_daddr_r_reg[9] ,
@@ -72399,6 +72450,7 @@ module c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg__parameterized8_750
         .\xsdb_reg_reg[2]_0 (\xsdb_reg_reg[2] ));
 endmodule
 
+(* ORIG_REF_NAME = "xsdbs_v1_0_2_reg_ctl" *) 
 module c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg_ctl
    (\G_1PIPE_IFACE.s_daddr_r_reg[0] ,
     \G_1PIPE_IFACE.s_daddr_r_reg[4] ,
@@ -76739,6 +76791,7 @@ module c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg_ctl__parameterized0_760
         .R(reg_rst_i));
 endmodule
 
+(* ORIG_REF_NAME = "xsdbs_v1_0_2_reg_stat" *) 
 module c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg_stat
    (\G_1PIPE_IFACE.s_daddr_r_reg[4] ,
     \xsdb_reg_reg[1]_0 ,
@@ -77450,7 +77503,8 @@ endmodule
 (* C_CORE_MAJOR_VER = "3" *) (* C_CORE_MINOR_VER = "0" *) (* C_CORE_TYPE = "16'b0000000000000100" *) 
 (* C_CSE_DRV_VER = "16'b0000000000000001" *) (* C_MAJOR_VERSION = "2013" *) (* C_MINOR_VERSION = "3" *) 
 (* C_NEXT_SLAVE = "1" *) (* C_PIPE_IFACE = "1" *) (* C_USE_TEST_REG = "1" *) 
-(* C_XDEVICEFAMILY = "virtex7" *) (* C_XSDB_SLAVE_TYPE = "16'b0000010000010010" *) (* dont_touch = "true" *) 
+(* C_XDEVICEFAMILY = "virtex7" *) (* C_XSDB_SLAVE_TYPE = "16'b0000010000010010" *) (* ORIG_REF_NAME = "xsdbs_v1_0_2_xsdbs" *) 
+(* dont_touch = "true" *) 
 module c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_xsdbs
    (s_rst_o,
     s_dclk_o,

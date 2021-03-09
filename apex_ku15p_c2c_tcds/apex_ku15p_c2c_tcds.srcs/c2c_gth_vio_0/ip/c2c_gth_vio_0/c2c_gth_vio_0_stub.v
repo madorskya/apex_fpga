@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Sat Feb 20 20:46:47 2021
+// Date        : Mon Mar  8 15:24:28 2021
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
-// Command     : write_verilog -force -mode synth_stub -rename_top c2c_gth_vio_0 -prefix
-//               c2c_gth_vio_0_ c2c_gth_vio_0_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               /home/madorsky/github/apex_ku15p/apex_ku15p_c2c_tcds/apex_ku15p_c2c_tcds.srcs/c2c_gth_vio_0/ip/c2c_gth_vio_0/c2c_gth_vio_0_stub.v
 // Design      : c2c_gth_vio_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcku15p-ffva1760-2-e

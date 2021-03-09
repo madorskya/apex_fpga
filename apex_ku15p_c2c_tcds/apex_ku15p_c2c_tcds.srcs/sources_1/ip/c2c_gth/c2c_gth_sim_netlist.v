@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Mon Mar  1 10:42:23 2021
+// Date        : Mon Mar  8 15:24:49 2021
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
-// Command     : write_verilog -force -mode funcsim -rename_top c2c_gth -prefix
-//               c2c_gth_ c2c_gth_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /home/madorsky/github/apex_ku15p/apex_ku15p_c2c_tcds/apex_ku15p_c2c_tcds.srcs/sources_1/ip/c2c_gth/c2c_gth_sim_netlist.v
 // Design      : c2c_gth
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -984,6 +984,7 @@ module c2c_gth
         .ubtxuart_out(NLW_inst_ubtxuart_out_UNCONNECTED[0]));
 endmodule
 
+(* ORIG_REF_NAME = "c2c_gth_gthe4_channel_wrapper" *) 
 module c2c_gth_c2c_gth_gthe4_channel_wrapper
    (cpllpd_int_reg,
     GTHE4_CHANNEL_GTPOWERGOOD,
@@ -2390,6 +2391,7 @@ module c2c_gth_c2c_gth_gthe4_channel_wrapper
         .txusrclk_in(txusrclk_in));
 endmodule
 
+(* ORIG_REF_NAME = "c2c_gth_gtwizard_gthe4" *) 
 module c2c_gth_c2c_gth_gtwizard_gthe4
    (gtpowergood_out,
     bufgtce_out,
@@ -4403,7 +4405,7 @@ endmodule
 (* C_TX_PLL_TYPE = "2" *) (* C_TX_REFCLK_FREQUENCY = "250.000000" *) (* C_TX_USER_CLOCKING_CONTENTS = "0" *) 
 (* C_TX_USER_CLOCKING_INSTANCE_CTRL = "0" *) (* C_TX_USER_CLOCKING_RATIO_FSRC_FUSRCLK = "1" *) (* C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 = "1" *) 
 (* C_TX_USER_CLOCKING_SOURCE = "0" *) (* C_TX_USER_DATA_WIDTH = "32" *) (* C_TX_USRCLK2_FREQUENCY = "93.750000" *) 
-(* C_TX_USRCLK_FREQUENCY = "93.750000" *) (* C_USER_GTPOWERGOOD_DELAY_EN = "1" *) 
+(* C_TX_USRCLK_FREQUENCY = "93.750000" *) (* C_USER_GTPOWERGOOD_DELAY_EN = "1" *) (* ORIG_REF_NAME = "c2c_gth_gtwizard_top" *) 
 module c2c_gth_c2c_gth_gtwizard_top
    (gtwiz_userclk_tx_reset_in,
     gtwiz_userclk_tx_active_in,
@@ -6317,6 +6319,7 @@ module c2c_gth_c2c_gth_gtwizard_top
         .txusrclk_in(txusrclk_in));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_8_bit_synchronizer" *) 
 module c2c_gth_gtwizard_ultrascale_v1_7_8_bit_synchronizer
    (drprst_in_sync,
     E,
@@ -7632,6 +7635,7 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_bit_synchronizer_8
         .O(txprogdivreset_int_reg));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_8_gte4_drp_arb" *) 
 module c2c_gth_gtwizard_ultrascale_v1_7_8_gte4_drp_arb
    (GTHE4_CHANNEL_DRPEN,
     GTHE4_CHANNEL_DRPWE,
@@ -12304,6 +12308,7 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_gte4_drp_arb_11
         .R(drprst_in_sync));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_8_gthe4_channel" *) 
 module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_channel
    (cpllpd_int_reg,
     GTHE4_CHANNEL_GTPOWERGOOD,
@@ -15084,6 +15089,7 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_channel
         .TXUSRCLK2(txusrclk2_in[1]));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal" *) 
 module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal
    (gthe4_txprgdivresetdone_sync,
     freq_counter_rst_reg,
@@ -15843,6 +15849,7 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_0
         .drpclk_in(drpclk_in));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_freq_counter" *) 
 module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_freq_counter
    (done_o_reg_0,
     rst_in_out_reg,
@@ -18338,6 +18345,7 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_freq_counter_15
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx" *) 
 module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx
    (i_in_out_reg,
     AR,
@@ -24544,6 +24552,7 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_cpll_cal_tx_12
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_8_gthe4_delay_powergood" *) 
 module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_delay_powergood
    (out,
     GTHE4_CHANNEL_RXPD,
@@ -25113,6 +25122,7 @@ module c2c_gth_gtwizard_ultrascale_v1_7_8_gthe4_delay_powergood_1
         .O(GTHE4_CHANNEL_RXRATE[0]));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_8_reset_synchronizer" *) 
 module c2c_gth_gtwizard_ultrascale_v1_7_8_reset_synchronizer
    (drpclk_in);
   input [0:0]drpclk_in;

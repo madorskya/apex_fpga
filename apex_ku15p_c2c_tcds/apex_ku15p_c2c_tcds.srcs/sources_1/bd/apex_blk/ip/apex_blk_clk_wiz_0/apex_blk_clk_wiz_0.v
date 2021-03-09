@@ -56,8 +56,9 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out1__100.00000______0.000______50.0______134.506____154.678
-// clk_out2__50.00000______0.000______50.0______153.164____154.678
+// clk_out1__100.00000______0.000______50.0______102.484_____79.008
+// clk_out2__50.00000______0.000______50.0______117.522_____79.008
+// clk_out3__125.00000______0.000______50.0_______98.122_____79.008
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -66,13 +67,14 @@
 
 `timescale 1ps/1ps
 
-(* CORE_GENERATION_INFO = "apex_blk_clk_wiz_0,clk_wiz_v6_0_5_0_0,{component_name=apex_blk_clk_wiz_0,use_phase_alignment=false,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=2,clkin1_period=4.000,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=true,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
+(* CORE_GENERATION_INFO = "apex_blk_clk_wiz_0,clk_wiz_v6_0_5_0_0,{component_name=apex_blk_clk_wiz_0,use_phase_alignment=false,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=3,clkin1_period=4.000,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=true,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
 
 module apex_blk_clk_wiz_0 
  (
   // Clock out ports
   output        clk_out1,
   output        clk_out2,
+  output        clk_out3,
   // Status and control signals
   input         reset,
   output        locked,
@@ -85,6 +87,7 @@ module apex_blk_clk_wiz_0
   // Clock out ports  
   .clk_out1(clk_out1),
   .clk_out2(clk_out2),
+  .clk_out3(clk_out3),
   // Status and control signals               
   .reset(reset), 
   .locked(locked),

@@ -403,6 +403,10 @@ proc create_root_design { parentCell } {
   set c2c_tx_ready [ create_bd_port -dir I c2c_tx_ready ]
   set c2c_tx_tdata [ create_bd_port -dir O -from 31 -to 0 c2c_tx_tdata ]
   set c2c_tx_tvalid [ create_bd_port -dir O c2c_tx_tvalid ]
+  set clk_125 [ create_bd_port -dir O -type clk clk_125 ]
+  set_property -dict [ list \
+   CONFIG.FREQ_HZ {125000000} \
+ ] $clk_125
   set drp_addr [ create_bd_port -dir O -from 13 -to 0 drp_addr ]
   set drp_clk [ create_bd_port -dir O -type clk drp_clk ]
   set drp_di [ create_bd_port -dir O -from 63 -to 0 drp_di ]
@@ -457,18 +461,23 @@ proc create_root_design { parentCell } {
   set clk_wiz [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz ]
   set_property -dict [ list \
    CONFIG.CLKIN1_JITTER_PS {40.0} \
-   CONFIG.CLKOUT1_JITTER {134.506} \
-   CONFIG.CLKOUT1_PHASE_ERROR {154.678} \
-   CONFIG.CLKOUT2_JITTER {153.164} \
-   CONFIG.CLKOUT2_PHASE_ERROR {154.678} \
+   CONFIG.CLKOUT1_JITTER {102.484} \
+   CONFIG.CLKOUT1_PHASE_ERROR {79.008} \
+   CONFIG.CLKOUT2_JITTER {117.522} \
+   CONFIG.CLKOUT2_PHASE_ERROR {79.008} \
    CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {50} \
    CONFIG.CLKOUT2_USED {true} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {24.000} \
+   CONFIG.CLKOUT3_JITTER {98.122} \
+   CONFIG.CLKOUT3_PHASE_ERROR {79.008} \
+   CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {125.000} \
+   CONFIG.CLKOUT3_USED {true} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {5.000} \
    CONFIG.MMCM_CLKIN1_PERIOD {4.000} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {12.000} \
-   CONFIG.MMCM_CLKOUT1_DIVIDE {24} \
-   CONFIG.MMCM_DIVCLK_DIVIDE {5} \
-   CONFIG.NUM_OUT_CLKS {2} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {12.500} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {25} \
+   CONFIG.MMCM_CLKOUT2_DIVIDE {10} \
+   CONFIG.MMCM_DIVCLK_DIVIDE {1} \
+   CONFIG.NUM_OUT_CLKS {3} \
    CONFIG.PRIM_IN_FREQ {250} \
  ] $clk_wiz
 
@@ -559,6 +568,7 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   connect_bd_net -net channel_up [get_bd_pins c2c_reset_fsm_0/manual_reset] [get_bd_pins ila_0/probe14] [get_bd_pins vio_0/probe_out0]
   connect_bd_net -net clk_in1_0_1 [get_bd_ports c2c_init_clk] [get_bd_pins clk_wiz/clk_in1]
   connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_chip2chip_0/m_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins bram0/s_axi_aclk] [get_bd_pins bram2/s_axi_aclk] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins system_ila_0/clk]
+  connect_bd_net -net clk_wiz_clk_out3 [get_bd_ports clk_125] [get_bd_pins clk_wiz/clk_out3]
   connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz/locked] [get_bd_pins rst_clk_wiz_100M/dcm_locked]
   connect_bd_net -net drp_bridge_0_drp0_addr [get_bd_ports drp_addr] [get_bd_pins drp1/drp_addr] [get_bd_pins system_ila_0/probe6]
   connect_bd_net -net drp_bridge_0_drp0_di [get_bd_ports drp_di] [get_bd_pins drp1/drp_di] [get_bd_pins system_ila_0/probe2]

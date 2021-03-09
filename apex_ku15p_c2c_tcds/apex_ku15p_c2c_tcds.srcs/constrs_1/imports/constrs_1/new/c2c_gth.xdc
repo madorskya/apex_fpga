@@ -2,12 +2,14 @@
 # Note: the IP core-level XDC constrains the transceiver channel data pin locations
 # ----------------------------------------------------------------------------------------------------------------------
 set_property package_pin Y10 [get_ports mgtrefclk1_x0y5_p]
+set_property package_pin AA12 [get_ports tcds2_refclk_p]
 
 # Clock constraints for clocks provided as inputs to the core
 # Note: the IP core-level XDC constrains clocks produced by the core, which drive user clocks via helper blocks
 # ----------------------------------------------------------------------------------------------------------------------
 #create_clock -name clk_freerun -period 20.0 [get_ports hb_gtwiz_reset_clk_freerun_in]
 create_clock -name clk_mgtrefclk1_x0y5_p -period 4.0 [get_ports mgtrefclk1_x0y5_p]
+create_clock -name clk_tcds2_refclk_p -period 6.2 [get_ports tcds2_refclk_p]
 
 # False path constraints
 # ----------------------------------------------------------------------------------------------------------------------

@@ -1,12 +1,20 @@
 `timescale 1ns / 1ps
 
+`include "tcds2_header.vh"
+
+
 module apex_ku15p_top
 (
-    // Differential reference clock inputs
+    // Reference clock input for c2c
     input  wire mgtrefclk1_x0y5_p,
-    input  wire mgtrefclk1_x0y5_n
+    input  wire mgtrefclk1_x0y5_n,
+    
+    // ref clock for TCDS
+    input tcds2_refclk_p,
+    input tcds2_refclk_n
     
 );
+
 
     wire        drp_clk;
 //	drp #(.AW(13)) drp_gth_i (); // AW parameter must match AW_QUAD parameter in top serial module
@@ -33,32 +41,6 @@ module apex_ku15p_top
     (* mark_debug *) wire [233:0] lb_gbt_tx_frame [7:0] ;
 
     
-    // vio
-    wire logic_reset;
-    wire tx_ready, rx_ready;
-    
-    wire clk40; // from mmcm
-    wire clk_tx; // should be 320 M
-
-    vio_0 tcds_vio 
-    (
-        .clk        (clk_tx),                // input wire clk
-        .probe_out0 (logic_reset),  // output wire [0 : 0] probe_out0
-        .probe_out1 (tx_ready),  // output wire [0 : 0] probe_out1
-        .probe_out2 (rx_ready)   // output wire [0 : 0] probe_out2
-    );
-
-    tcds_mmcm tcds_mmcm_i
-    (
-        .clk_out1 (clk40),
-        .reset    (1'b0),
-        .locked   (),
-        .clk_in1  (clk_tx)
-    );     
-    
-    reg [8:0] cnt;
-    always @(posedge clk40) cnt++;
-
     wire c2c_channel_up;
     wire c2c_init_clk;
     wire c2c_mmcm_unlocked;
@@ -75,6 +57,7 @@ module apex_ku15p_top
     wire [2:0]  c2c_rxbufstatus;
     wire [1:0]  c2c_rxclkcorcnt;
     wire        c2c_link_reset;
+    wire        clk_125;
 
     apex_blk_wrapper apex_blk_w
     (
@@ -92,6 +75,8 @@ module apex_ku15p_top
         .c2c_rxbufstatus   (c2c_rxbufstatus  ),
         .c2c_rxclkcorcnt   (c2c_rxclkcorcnt  ),
         .c2c_link_reset    (c2c_link_reset   ),
+        
+        .clk_125 (clk_125),
 
         .drp_clk         (drp_clk),
 //        .drp_addr        (drp_gth_i.drpaddr),
@@ -132,8 +117,216 @@ module apex_ku15p_top
         .c2c_rxclkcorcnt   (c2c_rxclkcorcnt  ),
         .c2c_link_reset    (c2c_link_reset   )
     );
-    
 
+    wire clk40;
+    wire tcds2_refclk;
+
+    wire mgt_reset_all_in;
+    wire mgt_reset_tx;
+    wire mgt_reset_rx;
+    wire link_test_mode;
+    wire prbsgen_reset;
+    wire prbschk_reset;
+    wire is_link_speed_10g;
+    wire has_link_test_mode;
+    wire has_spy_registers;
+    wire mgt_powergood;
+    wire mgt_txpll_lock;
+    wire mgt_rxpll_lock;
+    wire mgt_reset_tx_done;
+    wire mgt_reset_rx_done;
+    wire mgt_tx_ready;
+    wire mgt_rx_ready;
+    wire rx_frame_locked;
+    wire [31:0] final1;
+    
+    (* mark_debug *) wire [31:0] rx_frame_unlock_count;
+    (* mark_debug *) wire prbschk_error;
+    (* mark_debug *) wire prbschk_locked;
+    (* mark_debug *) wire [31:0] prbschk_unlock_count;
+    (* mark_debug *) wire [7:0] prbsgen_o_hint;
+    (* mark_debug *) wire [7:0] prbschk_i_hint;
+    (* mark_debug *) wire [7:0] prbschk_o_hint;
+    (* mark_debug *) wire [C_TCDS2_FRAME_WIDTH_10G - 1 : 0] frame_tx;
+    (* mark_debug *) wire [C_TCDS2_FRAME_WIDTH_10G - 1 : 0] frame_rx;
+    
+    (* mark_debug *) wire orbit_o;
+
+    (* mark_debug *) wire [15:0] ch0_c2_l1a_types;
+    (* mark_debug *) wire [7:0]  ch0_c2_physics_l1a_subtypes; 
+    (* mark_debug *) wire [15:0] ch0_c2_bril_trigger_data; 
+    (* mark_debug *) wire [48:0] ch0_c2_sync_flags_and_commands; 
+    (* mark_debug *) wire [4:0]  ch0_c2_status; 
+    (* mark_debug *) wire [17:0] ch0_c2_reserved; 
+    (* mark_debug *) wire [15:0] ch1_c2_l1a_types;
+    (* mark_debug *) wire [7:0]  ch1_c2_physics_l1a_subtypes; 
+    (* mark_debug *) wire [15:0] ch1_c2_bril_trigger_data; 
+    (* mark_debug *) wire [48:0] ch1_c2_sync_flags_and_commands; 
+    (* mark_debug *) wire [4:0]  ch1_c2_status;
+    (* mark_debug *) wire [17:0] ch1_c2_reserved; 
+    (* mark_debug *) wire [C_TCDS2_TTS2_VALUES_WIDTH-1 : 0] ch0_s2;
+    (* mark_debug *) wire [C_TCDS2_TTS2_VALUES_WIDTH-1 : 0] ch1_s2;
+
+    (* mark_debug *) wire [15:0] ch0_c2o_l1a_types;
+    (* mark_debug *) wire [7:0]  ch0_c2o_physics_l1a_subtypes; 
+    (* mark_debug *) wire [15:0] ch0_c2o_bril_trigger_data; 
+    (* mark_debug *) wire [48:0] ch0_c2o_sync_flags_and_commands; 
+    (* mark_debug *) wire [4:0]  ch0_c2o_status; 
+    (* mark_debug *) wire [17:0] ch0_c2o_reserved;
+    (* mark_debug *) wire [C_TCDS2_TTS2_VALUES_WIDTH-1 : 0] ch0_s2i; // input
+    (* mark_debug *) wire [15:0] ch1_c2o_l1a_types;
+    (* mark_debug *) wire [7:0]  ch1_c2o_physics_l1a_subtypes; 
+    (* mark_debug *) wire [15:0] ch1_c2o_bril_trigger_data; 
+    (* mark_debug *) wire [48:0] ch1_c2o_sync_flags_and_commands; 
+    (* mark_debug *) wire [4:0]  ch1_c2o_status; 
+    (* mark_debug *) wire [17:0] ch1_c2o_reserved;
+    (* mark_debug *) wire [C_TCDS2_TTS2_VALUES_WIDTH-1 : 0] ch1_s2i; // input
+
+    freq_meter#(.REF_F(32'd125000000)) fm
+    (
+        .ref_clk (clk_125),
+        .f1      (clk40),
+        .f2      (clk40),
+        .f3      (clk40),
+        .final1  (final1),
+        .final2  (),
+        .final3  ()
+    );
+
+    vio_0 tcds_vio 
+    (
+        .clk        (clk_125),
+        .probe_out0 (mgt_reset_all_in),
+        .probe_out1 (mgt_reset_tx    ),
+        .probe_out2 (mgt_reset_rx    ),
+        .probe_out3 (link_test_mode  ),
+        .probe_out4 (prbsgen_reset   ),
+        .probe_out5 (prbschk_reset   ),
+        
+        .probe_in0  (is_link_speed_10g ), 
+        .probe_in1  (has_link_test_mode), 
+        .probe_in2  (has_spy_registers ), 
+        .probe_in3  (mgt_powergood     ), 
+        .probe_in4  (mgt_txpll_lock    ), 
+        .probe_in5  (mgt_rxpll_lock    ), 
+        .probe_in6  (mgt_reset_tx_done ), 
+        .probe_in7  (mgt_reset_rx_done ), 
+        .probe_in8  (mgt_tx_ready      ), 
+        .probe_in9  (mgt_rx_ready      ), 
+        .probe_in10 (rx_frame_locked   ),
+        .probe_in11 (final1)
+    );
+    
+    IBUFDS_GTE4 #
+    (
+        .REFCLK_EN_TX_PATH  (1'b0),
+        .REFCLK_HROW_CK_SEL (2'b00),
+        .REFCLK_ICNTL_RX    (2'b00)
+    ) 
+    refclk_buf
+    (
+        .I     (tcds2_refclk_p),
+        .IB    (tcds2_refclk_n),
+        .CEB   (1'b0),
+        .O     (tcds2_refclk),
+        .ODIV2 ()
+    );
+    
+    
+    tcds2_endpoint_sv tcds2_ep
+    (
+        .mgt_reset_all_in (mgt_reset_all_in),
+        .mgt_reset_tx     (mgt_reset_tx    ),
+        .mgt_reset_rx     (mgt_reset_rx    ),
+        .link_test_mode   (link_test_mode  ),
+        .prbsgen_reset    (prbsgen_reset   ),
+        .prbschk_reset    (prbschk_reset   ),
+
+        .is_link_speed_10g  (is_link_speed_10g ),
+        .has_link_test_mode (has_link_test_mode),
+        .has_spy_registers  (has_spy_registers ),
+        .mgt_powergood      (mgt_powergood     ),
+        .mgt_txpll_lock     (mgt_txpll_lock    ),
+        .mgt_rxpll_lock     (mgt_rxpll_lock    ),
+        .mgt_reset_tx_done  (mgt_reset_tx_done ),
+        .mgt_reset_rx_done  (mgt_reset_rx_done ),
+        .mgt_tx_ready       (mgt_tx_ready      ),
+        .mgt_rx_ready       (mgt_rx_ready      ),
+        .rx_frame_locked    (rx_frame_locked   ),
+        .rx_frame_unlock_count (rx_frame_unlock_count),
+        .prbschk_error         (prbschk_error        ),
+        .prbschk_locked        (prbschk_locked       ),
+        .prbschk_unlock_count  (prbschk_unlock_count ),
+        .prbsgen_o_hint        (prbsgen_o_hint       ),
+        .prbschk_i_hint        (prbschk_i_hint       ),
+        .prbschk_o_hint        (prbschk_o_hint       ),
+        
+        .frame_tx (frame_tx),
+        .frame_rx (frame_rx),
+        
+        .ch0_c2_l1a_types               (ch0_c2_l1a_types              ),
+        .ch0_c2_physics_l1a_subtypes    (ch0_c2_physics_l1a_subtypes   ), 
+        .ch0_c2_bril_trigger_data       (ch0_c2_bril_trigger_data      ), 
+        .ch0_c2_sync_flags_and_commands (ch0_c2_sync_flags_and_commands), 
+        .ch0_c2_status                  (ch0_c2_status                 ), 
+        .ch0_c2_reserved                (ch0_c2_reserved               ), 
+        .ch1_c2_l1a_types               (ch1_c2_l1a_types              ),
+        .ch1_c2_physics_l1a_subtypes    (ch1_c2_physics_l1a_subtypes   ), 
+        .ch1_c2_bril_trigger_data       (ch1_c2_bril_trigger_data      ), 
+        .ch1_c2_sync_flags_and_commands (ch1_c2_sync_flags_and_commands), 
+        .ch1_c2_status                  (ch1_c2_status                 ),
+        .ch1_c2_reserved                (ch1_c2_reserved               ), 
+        .ch0_s2                         (ch0_s2                        ), // 14 words x 2 bits each
+        .ch1_s2                         (ch1_s2                        ), // 14 words x 2 bits each
+
+        .clk_sys_125mhz    (clk_125),
+        .clk_320_mgt_ref_i (tcds2_refclk),
+        .clk_40_o          (clk40),
+
+        .clk_40_oddr_c_o  (),
+        .clk_40_oddr_d1_o (),
+        .clk_40_oddr_d2_o (),
+
+        .orbit_o (orbit_o),
+       
+        .ch0_c2o_l1a_types               (ch0_c2o_l1a_types              ),
+        .ch0_c2o_physics_l1a_subtypes    (ch0_c2o_physics_l1a_subtypes   ), 
+        .ch0_c2o_bril_trigger_data       (ch0_c2o_bril_trigger_data      ), 
+        .ch0_c2o_sync_flags_and_commands (ch0_c2o_sync_flags_and_commands), 
+        .ch0_c2o_status                  (ch0_c2o_status                 ), 
+        .ch0_c2o_reserved                (ch0_c2o_reserved               ),
+
+        .ch0_s2i                         (ch0_s2i                        ), // 14*8=112
+
+        .ch1_c2o_l1a_types               (ch1_c2o_l1a_types              ),
+        .ch1_c2o_physics_l1a_subtypes    (ch1_c2o_physics_l1a_subtypes   ), 
+        .ch1_c2o_bril_trigger_data       (ch1_c2o_bril_trigger_data      ), 
+        .ch1_c2o_sync_flags_and_commands (ch1_c2o_sync_flags_and_commands), 
+        .ch1_c2o_status                  (ch1_c2o_status                 ), 
+        .ch1_c2o_reserved                (ch1_c2o_reserved               ),
+
+        .ch1_s2i                         (ch1_s2i                        )
+        
+    );
+
+//    // vio
+//    wire logic_reset;
+//    wire tx_ready, rx_ready;
+    
+//    wire clk_tx; // should be 320 M
+
+
+//    tcds_mmcm tcds_mmcm_i
+//    (
+//        .clk_out1 (clk40),
+//        .reset    (1'b0),
+//        .locked   (),
+//        .clk_in1  (clk_tx)
+//    );     
+    
+//    reg [8:0] cnt;
+//    always @(posedge clk40) cnt++;
+    
 //	mgt_gth_rx tcds_rx [0:0]();
 //	mgt_gth_tx tcds_tx [0:0]();
 //    apex_ku15p_gth_serial_io gth_io

@@ -19,3 +19,4 @@ set_clock_groups -group [get_clocks -include_generated_clocks txclk1 ] -asynchro
 
 set_clock_groups -group [get_clocks -include_generated_clocks rxclk0 ] -asynchronous
 set_clock_groups -group [get_clocks -include_generated_clocks rxclk1 ] -asynchronous
+
