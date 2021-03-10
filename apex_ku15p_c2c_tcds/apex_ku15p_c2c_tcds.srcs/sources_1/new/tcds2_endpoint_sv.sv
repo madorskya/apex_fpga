@@ -99,7 +99,8 @@ module tcds2_endpoint_sv
     // NOTE: This clock originates from a BUFGCE_DIV and is intended
     // for use in the FPGA clocking fabric.
     output clk_40_o,
-    
+    output mgt_txoutclk,
+    output mgt_rxoutclk,
     // LHC bunch clock ODDR outputs.
     // NOTE: These lines are intended to drive an ODDR1, in order to
     // extract the bunch clock from the FPGA.

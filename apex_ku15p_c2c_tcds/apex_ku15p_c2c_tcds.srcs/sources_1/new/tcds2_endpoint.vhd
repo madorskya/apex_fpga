@@ -121,6 +121,8 @@ entity tcds2_endpoint is
         -- NOTE: This clock originates from a BUFGCE_DIV and is intended
         -- for use in the FPGA clocking fabric.
         clk_40_o : out std_logic;
+        mgt_txoutclk : out std_logic;
+        mgt_rxoutclk : out std_logic;
     
         -- LHC bunch clock ODDR outputs.
         -- NOTE: These lines are intended to drive an ODDR1, in order to
@@ -351,6 +353,8 @@ begin
             
         clk_320_mgt_ref_i => clk_320_mgt_ref_i,
         clk_40_o => clk_40_o,
+        mgt_txoutclk => mgt_txoutclk,
+        mgt_rxoutclk => mgt_rxoutclk,
         
         clk_40_oddr_c_o  => clk_40_oddr_c_o,
         clk_40_oddr_d1_o => clk_40_oddr_d1_o,

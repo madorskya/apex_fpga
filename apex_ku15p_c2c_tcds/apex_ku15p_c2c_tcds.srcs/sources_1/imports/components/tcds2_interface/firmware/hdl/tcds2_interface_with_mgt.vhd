@@ -55,6 +55,9 @@ entity tcds2_interface_with_mgt is
     -- NOTE: This clock originates from a BUFGCE_DIV and is intended
     -- for use in the FPGA clocking fabric.
     clk_40_o : out std_logic;
+    mgt_txoutclk : out std_logic;
+    mgt_rxoutclk : out std_logic;
+
 
     -- LHC bunch clock ODDR outputs.
     -- NOTE: These lines are intended to drive an ODDR1, in order to
@@ -214,6 +217,10 @@ begin
       rxn_in(0)                             => mgt_rx_p_i,
       rxp_in(0)                             => mgt_rx_n_i
     );
+    
+    mgt_txoutclk <= mgt_clk_ctrl.txusrclk;
+    mgt_rxoutclk <= mgt_clk_ctrl.txusrclk;
+
 
 end arch;
 

@@ -9,7 +9,9 @@ set_property package_pin AA12 [get_ports tcds2_refclk_p]
 # ----------------------------------------------------------------------------------------------------------------------
 #create_clock -name clk_freerun -period 20.0 [get_ports hb_gtwiz_reset_clk_freerun_in]
 create_clock -name clk_mgtrefclk1_x0y5_p -period 4.0 [get_ports mgtrefclk1_x0y5_p]
-create_clock -name clk_tcds2_refclk_p -period 6.2 [get_ports tcds2_refclk_p]
+create_clock -name clk_tcds2_refclk_p -period 3.12 [get_ports tcds2_refclk_p]
+
+set_clock_groups -group [get_clocks -include_generated_clocks clk_tcds2_refclk_p ] -asynchronous
 
 # False path constraints
 # ----------------------------------------------------------------------------------------------------------------------

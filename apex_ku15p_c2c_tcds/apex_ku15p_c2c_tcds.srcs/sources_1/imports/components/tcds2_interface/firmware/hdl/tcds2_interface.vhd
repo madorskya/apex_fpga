@@ -287,6 +287,9 @@ begin
   core_ctrl.phase_cdc40_tx_force <= '0';
   core_ctrl.phase_cdc40_rx_calib <= (others => '0');
   core_ctrl.phase_cdc40_rx_force <= '0';
+  -- Madorsky: change TX polarity for APEX prototype
+  core_ctrl.mgt_rxpolarity <= '0';
+  core_ctrl.mgt_txpolarity <= '1';
   -- TODO TODO TODO end
 
   rx_frame_locked_bit_sync_40 : entity work.bit_synchronizer

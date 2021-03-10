@@ -138,7 +138,11 @@ module apex_ku15p_top
     wire mgt_tx_ready;
     wire mgt_rx_ready;
     wire rx_frame_locked;
-    wire [31:0] final1;
+    wire [31:0] clk40_monitor, tdcs2_refclk_monitor;
+    wire mgt_txoutclk;
+    wire mgt_rxoutclk;
+    wire [31:0] mgt_txoutclk_monitor;
+    wire [31:0] mgt_rxoutclk_monitor;
     
     (* mark_debug *) wire [31:0] rx_frame_unlock_count;
     (* mark_debug *) wire prbschk_error;
@@ -186,11 +190,13 @@ module apex_ku15p_top
     (
         .ref_clk (clk_125),
         .f1      (clk40),
-        .f2      (clk40),
-        .f3      (clk40),
-        .final1  (final1),
-        .final2  (),
-        .final3  ()
+        .f2      (tcds2_refclk_fab),
+        .f3      (mgt_txoutclk),
+        .f4      (mgt_rxoutclk),
+        .final1  (clk40_monitor),
+        .final2  (tdcs2_refclk_monitor),
+        .final3  (mgt_txoutclk_monitor),
+        .final4  (mgt_rxoutclk_monitor)
     );
 
     vio_0 tcds_vio 
@@ -214,9 +220,13 @@ module apex_ku15p_top
         .probe_in8  (mgt_tx_ready      ), 
         .probe_in9  (mgt_rx_ready      ), 
         .probe_in10 (rx_frame_locked   ),
-        .probe_in11 (final1)
+        .probe_in11 (clk40_monitor       ),
+        .probe_in12 (tdcs2_refclk_monitor),
+        .probe_in13 (mgt_txoutclk_monitor),
+        .probe_in14 (mgt_rxoutclk_monitor)
     );
     
+    wire tcds2_refclk_odiv2, tcds2_refclk_fab;
     IBUFDS_GTE4 #
     (
         .REFCLK_EN_TX_PATH  (1'b0),
@@ -229,7 +239,18 @@ module apex_ku15p_top
         .IB    (tcds2_refclk_n),
         .CEB   (1'b0),
         .O     (tcds2_refclk),
-        .ODIV2 ()
+        .ODIV2 (tcds2_refclk_odiv2)
+    );
+    
+    BUFG_GT buf_tcds2_refclk 
+    (
+        .O       (tcds2_refclk_fab),  // 1-bit output: Buffer
+        .CE      (1'b1),              // 1-bit input: Buffer enable
+        .CEMASK  (1'b0),              // 1-bit input: CE Mask
+        .CLR     (1'b0),              // 1-bit input: Asynchronous clear
+        .CLRMASK (1'b0),              // 1-bit input: CLR Mask
+        .DIV     (3'b000),            // 3-bit input: Dynamic divide Value
+        .I       (tcds2_refclk_odiv2) // 1-bit input: Buffer
     );
     
     
@@ -282,6 +303,8 @@ module apex_ku15p_top
         .clk_sys_125mhz    (clk_125),
         .clk_320_mgt_ref_i (tcds2_refclk),
         .clk_40_o          (clk40),
+        .mgt_txoutclk  (mgt_txoutclk),
+        .mgt_rxoutclk  (mgt_rxoutclk),
 
         .clk_40_oddr_c_o  (),
         .clk_40_oddr_d1_o (),

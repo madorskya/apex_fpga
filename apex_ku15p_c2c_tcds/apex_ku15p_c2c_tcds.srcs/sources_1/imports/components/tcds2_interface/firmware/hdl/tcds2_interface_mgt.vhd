@@ -548,7 +548,7 @@ begin
     end generate;
 
     if_10g : if G_LINK_SPEED = TCDS2_LINK_SPEED_10G generate
-      mgt : entity work.gthe4_slave_timing
+      mgt : entity work.gthe4_slave_10p24 -- Madorsky
         port map (
           -- Quad.
           gtwiz_reset_clk_freerun_in         => gtwiz_reset_clk_freerun_in,

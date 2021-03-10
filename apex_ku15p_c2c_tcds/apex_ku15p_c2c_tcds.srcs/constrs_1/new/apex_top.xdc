@@ -20,3 +20,5 @@ set_clock_groups -group [get_clocks -include_generated_clocks txclk1 ] -asynchro
 set_clock_groups -group [get_clocks -include_generated_clocks rxclk0 ] -asynchronous
 set_clock_groups -group [get_clocks -include_generated_clocks rxclk1 ] -asynchronous
 
+#set_false_path -from [get_clocks -of_objects [get_pins apex_blk_w/apex_blk_i/clk_wiz/inst/mmcme4_adv_inst/CLKOUT2]] -to [get_clocks clk_tcds2_refclk_p]
+
