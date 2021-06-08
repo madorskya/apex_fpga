@@ -12,6 +12,10 @@ module c2c_gth_tux
   // Differential reference clock inputs
   input  wire mgtrefclk1_x0y5_p,
   input  wire mgtrefclk1_x0y5_n,
+  input  wire [1:0] gthrxn_int,
+  input  wire [1:0] gthrxp_int,
+  output wire [1:0] gthtxn_int,
+  output wire [1:0] gthtxp_int,
 
   // User-provided ports for reset helper block(s)
   input  drp_clk, // drp clock, 50M from MMCM in BD
@@ -48,10 +52,6 @@ module c2c_gth_tux
   // are prefixed "ch#", where "#" is the sequential resource number.
 
   //--------------------------------------------------------------------------------------------------------------------
-  wire [1:0] gthrxn_int;
-  wire [1:0] gthrxp_int;
-  wire [1:0] gthtxn_int;
-  wire [1:0] gthtxp_int;
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] gtwiz_userclk_tx_reset_int;

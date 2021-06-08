@@ -4,8 +4,12 @@ module apex_ku15p_top
 (
     // Differential reference clock inputs
     input  wire mgtrefclk1_x0y5_p,
-    input  wire mgtrefclk1_x0y5_n
+    input  wire mgtrefclk1_x0y5_n,
     
+    input  wire [1:0] c2c_rxn,
+    input  wire [1:0] c2c_rxp,
+    output wire [1:0] c2c_txn,
+    output wire [1:0] c2c_txp
 );
 
     wire        drp_clk;
@@ -114,6 +118,10 @@ module apex_ku15p_top
     (
         .mgtrefclk1_x0y5_p (mgtrefclk1_x0y5_p),
         .mgtrefclk1_x0y5_n (mgtrefclk1_x0y5_n),
+        .gthrxn_int (c2c_rxn),
+        .gthrxp_int (c2c_rxp),
+        .gthtxn_int (c2c_txn),
+        .gthtxp_int (c2c_txp),
         
         .drp_clk (drp_clk),
         
