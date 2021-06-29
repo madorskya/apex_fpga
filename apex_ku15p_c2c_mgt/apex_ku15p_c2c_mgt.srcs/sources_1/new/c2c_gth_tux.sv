@@ -774,7 +774,18 @@ module c2c_gth_tux
   // Vivado Design Suite User Guide: Programming and Debugging (UG908)
   // In-System IBERT IP instance property dictionary is as follows:
   // CONFIG.C_GT_TYPE {GTH} CONFIG.C_GTS_USED {X0Y24 X0Y25} CONFIG.C_ENABLE_INPUT_PORTS {true}
-  c2c_gth_in_system_ibert_0 c2c_gth_in_system_ibert_0_inst (
+
+    assign drpclk_int = {2{hb_gtwiz_reset_clk_freerun_buf_int}};
+
+  
+`ifdef C2C_R1_UEC3 // for revision 1 KU15P module, using different MGTs
+    c2c_gth_in_system_ibert_0_R1_UEC3
+`else
+    c2c_gth_in_system_ibert_0
+`endif
+   
+  c2c_gth_in_system_ibert_0_inst 
+  (
     .drpclk_o       (drpclk_int),
     .gt0_drpen_o    (drpen_int[0:0]),
     .gt0_drpwe_o    (drpwe_int[0:0]),
@@ -903,19 +914,20 @@ wire local_do_cc = (cc_cnt == 8'h0);
         .do_cc         (local_do_cc),
         .link_reset    (c2c_link_reset),
         
+
+`ifdef C2C_R1_UEC3 // for revision 1 KU15P module, need to use RX and TX in different MGTs due to PCB routing in UEC3 connector
         .mgt_rx_data  (hb1_gtwiz_userdata_rx_int),
         .mgt_rx_k     (ch1_rxctrl2_int[3:0]),
         .rx_aligned   (ch1_rxbyteisaligned_int),
-
-        .mgt_tx_data  
-        (
-`ifdef C2C_R1_UEC3 // for revision 1 KU15P module, need to use RX and TX in different MGTs due to PCB routing in UEC3 connector
-            hb0_gtwiz_userdata_tx_int
+        .mgt_tx_data  (hb0_gtwiz_userdata_tx_int),
+        .mgt_tx_k     (ch0_txctrl2_int)
 `else
-            hb1_gtwiz_userdata_tx_int
-`endif
-        ),
+        .mgt_rx_data  (hb1_gtwiz_userdata_rx_int),
+        .mgt_rx_k     (ch1_rxctrl2_int[3:0]),
+        .rx_aligned   (ch1_rxbyteisaligned_int),
+        .mgt_tx_data  (hb1_gtwiz_userdata_tx_int),
         .mgt_tx_k     (ch1_txctrl2_int)
+`endif
     );
 
 assign c2c_tx_ready      = 1'b1; // always ready
