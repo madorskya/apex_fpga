@@ -779,8 +779,10 @@ module c2c_gth_tux
 
   
 `ifdef C2C_R1_UEC3 // for revision 1 KU15P module, using different MGTs
+    c2c_gth_in_system_ibert_0 (); // have to instantiate both IPs due to Vivado way of working with Verilog defines in multiple runs
     c2c_gth_in_system_ibert_0_R1_UEC3
 `else
+    c2c_gth_in_system_ibert_0_R1_UEC3 ();
     c2c_gth_in_system_ibert_0
 `endif
    

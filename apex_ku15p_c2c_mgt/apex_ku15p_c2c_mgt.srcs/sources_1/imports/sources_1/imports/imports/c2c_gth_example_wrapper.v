@@ -309,12 +309,18 @@ module c2c_gth_example_wrapper (
 
   // Instantiate the core, mapping its enabled ports to example design ports and helper blocks as appropriate
 `ifdef C2C_2P5G
-    c2c_gth_2p5g c2c_gth_inst// 2.5G
+    c2c_gth        c2c_gth_inst_1 (); // 3.75G
+    c2c_gth_3p125g c2c_gth_inst_2 (); // 3.125G
+    c2c_gth_2p5g   c2c_gth_inst     // 2.5G
 `else
 `ifdef C2C_3P125G
-    c2c_gth_3p125g c2c_gth_inst// 3.125G
+    c2c_gth        c2c_gth_inst_1 (); // 3.75G
+    c2c_gth_2p5g   c2c_gth_inst_2 (); // 2.5G
+    c2c_gth_3p125g c2c_gth_inst     // 3.125G
 `else  
-    c2c_gth c2c_gth_inst// 3.75G
+    c2c_gth_2p5g   c2c_gth_inst_1 (); // 2.5G
+    c2c_gth_3p125g c2c_gth_inst_2 (); // 3.125G
+    c2c_gth        c2c_gth_inst     // 3.75G
 `endif
 `endif 
     (
