@@ -7,6 +7,18 @@
   <spirit:model>
     <spirit:views>
       <spirit:view>
+        <spirit:name>xilinx_elaborateports</spirit:name>
+        <spirit:displayName>Elaborate Ports</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:elaborate.ports</spirit:envIdentifier>
+        <spirit:modelName>gtwizard_ultrascale_v1_7_8_gtwizard_ultrascale</spirit:modelName>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:889141b2</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
         <spirit:name>xilinx_veriloginstantiationtemplate</spirit:name>
         <spirit:displayName>Verilog Instantiation Template</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.template</spirit:envIdentifier>
@@ -17,11 +29,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 07 21:03:56 UTC 2021</spirit:value>
+            <spirit:value>Wed Aug 18 18:19:28 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:186cf94c</spirit:value>
+            <spirit:value>9:8ee6ea0a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -37,11 +49,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 07 21:04:08 UTC 2021</spirit:value>
+            <spirit:value>Wed Aug 18 18:19:32 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:186cf94c</spirit:value>
+            <spirit:value>9:8ee6ea0a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -52,7 +64,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:186cf94c</spirit:value>
+            <spirit:value>9:8ee6ea0a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -68,11 +80,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 07 21:04:08 UTC 2021</spirit:value>
+            <spirit:value>Wed Aug 18 18:19:33 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:186cf94c</spirit:value>
+            <spirit:value>9:8ee6ea0a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -88,11 +100,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 07 21:04:12 UTC 2021</spirit:value>
+            <spirit:value>Wed Aug 18 18:19:37 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8ff6a99a</spirit:value>
+            <spirit:value>9:2b482b50</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -108,11 +120,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 07 21:04:12 UTC 2021</spirit:value>
+            <spirit:value>Wed Aug 18 18:19:37 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8ff6a99a</spirit:value>
+            <spirit:value>9:2b482b50</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -127,11 +139,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 07 21:04:12 UTC 2021</spirit:value>
+            <spirit:value>Wed Aug 18 18:19:37 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:186cf94c</spirit:value>
+            <spirit:value>9:8ee6ea0a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -145,23 +157,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 07 21:08:55 UTC 2021</spirit:value>
+            <spirit:value>Wed Aug 18 18:24:29 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:186cf94c</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_elaborateports</spirit:name>
-        <spirit:displayName>Elaborate Ports</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:elaborate.ports</spirit:envIdentifier>
-        <spirit:modelName>gtwizard_ultrascale_v1_7_8_gtwizard_ultrascale</spirit:modelName>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:dd2c96cf</spirit:value>
+            <spirit:value>9:8ee6ea0a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4850,7 +4850,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -4986,7 +4986,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="10">0x000</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -5041,7 +5041,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="16">0x0000</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -5069,7 +5069,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -5124,7 +5124,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -5404,7 +5404,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -5733,7 +5733,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -5842,7 +5842,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -6554,7 +6554,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -8450,7 +8450,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x1</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -9324,13 +9324,13 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="2">0x0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PORT_ENABLEMENT.rxpolarity_in">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PORT_ENABLEMENT.rxpolarity_in">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -9378,7 +9378,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="4">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -9405,7 +9405,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -9461,7 +9461,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="3">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -9732,7 +9732,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x1</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -10281,7 +10281,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="5">0x18</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -11364,7 +11364,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -11391,7 +11391,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="5">0x00</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -11474,7 +11474,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="4">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -11501,7 +11501,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="5">0x00</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -11557,7 +11557,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -11885,7 +11885,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x1</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -13370,7 +13370,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PORT_ENABLEMENT.rxdata_out">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PORT_ENABLEMENT.rxdata_out">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -14847,7 +14847,7 @@
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="std_logic_vector">
         <spirit:name>C_CHANNEL_ENABLE</spirit:name>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CHANNEL_ENABLE" spirit:bitStringLength="192">&quot;000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000001&quot;</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CHANNEL_ENABLE" spirit:bitStringLength="192">&quot;000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010100&quot;</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_PCIE_ENABLE</spirit:name>
@@ -14871,7 +14871,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="signed">
         <spirit:name>C_FREERUN_FREQUENCY</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FREERUN_FREQUENCY">39.0625</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FREERUN_FREQUENCY">78.125</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_GT_TYPE</spirit:name>
@@ -15035,7 +15035,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_MASTER_CHANNEL_IDX</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_MASTER_CHANNEL_IDX">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_MASTER_CHANNEL_IDX">2</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_OUTCLK_BUFG_GT_DIV</spirit:name>
@@ -15159,7 +15159,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_TX_MASTER_CHANNEL_IDX</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_MASTER_CHANNEL_IDX">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_MASTER_CHANNEL_IDX">2</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_TX_OUTCLK_BUFG_GT_DIV</spirit:name>
@@ -15221,11 +15221,6 @@
       <spirit:enumeration>16</spirit:enumeration>
       <spirit:enumeration>32</spirit:enumeration>
       <spirit:enumeration>64</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_13717074</spirit:name>
-      <spirit:enumeration>-20</spirit:enumeration>
-      <spirit:enumeration>-40</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_20920dd1</spirit:name>
@@ -15391,11 +15386,6 @@
       <spirit:enumeration>CPLL</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_8952fafd</spirit:name>
-      <spirit:enumeration>X0Y6</spirit:enumeration>
-      <spirit:enumeration>X0Y0</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_98c4d361</spirit:name>
       <spirit:enumeration>257.8125</spirit:enumeration>
     </spirit:choice>
@@ -15417,6 +15407,10 @@
       <spirit:enumeration>13</spirit:enumeration>
       <spirit:enumeration>14</spirit:enumeration>
       <spirit:enumeration>15</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_bf3f30a9</spirit:name>
+      <spirit:enumeration>-20</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_c70dfaa0</spirit:name>
@@ -15451,6 +15445,11 @@
       <spirit:enumeration>156.25</spirit:enumeration>
       <spirit:enumeration>312.5</spirit:enumeration>
       <spirit:enumeration>468.75</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_f558a678</spirit:name>
+      <spirit:enumeration>X0Y4</spirit:enumeration>
+      <spirit:enumeration>X0Y2</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_03018cc1</spirit:name>
@@ -16103,19 +16102,19 @@
       <spirit:name>CHANNEL_ENABLE</spirit:name>
       <spirit:displayName>Enable channel</spirit:displayName>
       <spirit:description>Indicate whether this transceiver channel is instantiated and enabled for use</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CHANNEL_ENABLE" spirit:order="8">X0Y6 X0Y0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CHANNEL_ENABLE" spirit:order="8">X0Y4 X0Y2</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>TX_MASTER_CHANNEL</spirit:name>
       <spirit:displayName>Master TX channel</spirit:displayName>
       <spirit:description>Designate an enabled transceiver as the master TX channel for various purposes such as user clock generation and buffer bypass (if selected)</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TX_MASTER_CHANNEL" spirit:choiceRef="choice_list_8952fafd" spirit:order="9">X0Y0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TX_MASTER_CHANNEL" spirit:choiceRef="choice_list_f558a678" spirit:order="9">X0Y2</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_MASTER_CHANNEL</spirit:name>
       <spirit:displayName>Master RX channel</spirit:displayName>
       <spirit:description>Designate an enabled transceiver as the master RX channel for various purposes such as user clock generation and buffer bypass (if selected)</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_MASTER_CHANNEL" spirit:choiceRef="choice_list_8952fafd" spirit:order="10">X0Y0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_MASTER_CHANNEL" spirit:choiceRef="choice_list_f558a678" spirit:order="10">X0Y2</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>INTERNAL_TOTAL_NUM_CHANNELS</spirit:name>
@@ -16363,7 +16362,7 @@
       <spirit:name>RX_JTOL_LF_SLOPE</spirit:name>
       <spirit:displayName>Mask low frequency slope (dB/decade)</spirit:displayName>
       <spirit:description>Refer to the product guide for guidelines on setting jitter tolerance mask low frequency slope.</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_JTOL_LF_SLOPE" spirit:choiceRef="choice_list_13717074" spirit:order="44">-20</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_JTOL_LF_SLOPE" spirit:choiceRef="choice_list_bf3f30a9" spirit:order="44">-20</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_OUTCLK_SOURCE</spirit:name>
@@ -17421,19 +17420,19 @@
       <spirit:name>ENABLE_OPTIONAL_PORTS</spirit:name>
       <spirit:displayName>Enable optional ports</spirit:displayName>
       <spirit:description>Indicate whether a port should be included</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ENABLE_OPTIONAL_PORTS" spirit:order="150">rxpolarity_in rxprbssel_in txpolarity_in txprbssel_in rxprbserr_out</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ENABLE_OPTIONAL_PORTS" spirit:order="150">rxprbssel_in txpolarity_in txprbssel_in rxdata_out rxprbserr_out</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_REFCLK_SOURCE</spirit:name>
       <spirit:displayName>Receiver reference clock source</spirit:displayName>
       <spirit:description>Select a reference clock input to drive the PLL chosen for receiver operation</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_REFCLK_SOURCE" spirit:order="151">X0Y6 clk0-1</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_REFCLK_SOURCE" spirit:order="151"/>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>TX_REFCLK_SOURCE</spirit:name>
       <spirit:displayName>Transmitter reference clock source</spirit:displayName>
       <spirit:description>Select a reference clock input to drive the PLL chosen for transmitter operation</spirit:description>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TX_REFCLK_SOURCE" spirit:order="152">X0Y6 clk0-1</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TX_REFCLK_SOURCE" spirit:order="152"/>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_RECCLK_OUTPUT</spirit:name>
@@ -17527,7 +17526,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>INTERNAL_PORT_ENABLEMENT_UPDATED</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLEMENT_UPDATED" spirit:order="165">20</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="PARAM_VALUE.INTERNAL_PORT_ENABLEMENT_UPDATED" spirit:order="165">37</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -17538,7 +17537,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>INTERNAL_CHANNEL_SITES_UPDATED</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="PARAM_VALUE.INTERNAL_CHANNEL_SITES_UPDATED" spirit:order="166">6</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="PARAM_VALUE.INTERNAL_CHANNEL_SITES_UPDATED" spirit:order="166">8</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -17560,7 +17559,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>INTERNAL_RX_COMMA_PRESET_UPDATE</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="PARAM_VALUE.INTERNAL_RX_COMMA_PRESET_UPDATE" spirit:order="168">7</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="PARAM_VALUE.INTERNAL_RX_COMMA_PRESET_UPDATE" spirit:order="168">9</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -17681,7 +17680,7 @@
       <spirit:name>FREERUN_FREQUENCY</spirit:name>
       <spirit:displayName>Free-running and DRP clock frequency (MHz)</spirit:displayName>
       <spirit:description>Enter the frequency of the free-running clock used to bring up the core. For configurations which use the CPLL, this clock must also be used for the transceiver channel DRP interface</spirit:description>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.FREERUN_FREQUENCY" spirit:order="178" spirit:minimum="3.125" spirit:maximum="78.125">39.0625</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.FREERUN_FREQUENCY" spirit:order="178" spirit:minimum="3.125" spirit:maximum="78.125">78.125</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>INCLUDE_CPLL_CAL</spirit:name>
@@ -23603,18 +23602,27 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GT_TYPE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.LOCATE_IN_SYSTEM_IBERT_CORE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.LOCATE_RESET_CONTROLLER" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.LOCATE_RX_USER_CLOCKING" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.LOCATE_TX_USER_CLOCKING" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_BUFFER_RESET_ON_COMMAALIGN" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_CC_KEEP_IDLE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_CC_K_0_0" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_CC_K_1_0" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_CC_LEN_SEQ" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_CC_NUM_SEQ" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_CC_VAL" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_CC_VAL_0_0" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_CC_VAL_0_1" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_CC_VAL_0_2" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_CC_VAL_0_3" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_CC_VAL_1_0" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_CC_VAL_1_1" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_CC_VAL_1_2" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_COMMA_ALIGN_WORD" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_COMMA_MASK" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_COMMA_PRESET" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_COMMA_P_ENABLE" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_COMMA_VALID_ONLY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_COMMA_P_VAL" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_DATA_DECODING" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_EQ_MODE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.RX_INT_DATA_WIDTH" xilinx:valueSource="user"/>

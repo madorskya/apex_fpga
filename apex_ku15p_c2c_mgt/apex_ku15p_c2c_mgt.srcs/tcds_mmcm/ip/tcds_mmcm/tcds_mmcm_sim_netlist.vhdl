@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Fri Feb 19 17:18:54 2021
+-- Date        : Wed Aug 18 15:18:01 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
--- Command     : write_vhdl -force -mode funcsim -rename_top tcds_mmcm -prefix
---               tcds_mmcm_ tcds_mmcm_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/madorsky/github/vivado/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/tcds_mmcm/ip/tcds_mmcm/tcds_mmcm_sim_netlist.vhdl
 -- Design      : tcds_mmcm
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,6 +21,8 @@ entity tcds_mmcm_tcds_mmcm_clk_wiz is
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of tcds_mmcm_tcds_mmcm_clk_wiz : entity is "tcds_mmcm_clk_wiz";
 end tcds_mmcm_tcds_mmcm_clk_wiz;
 
 architecture STRUCTURE of tcds_mmcm_tcds_mmcm_clk_wiz is

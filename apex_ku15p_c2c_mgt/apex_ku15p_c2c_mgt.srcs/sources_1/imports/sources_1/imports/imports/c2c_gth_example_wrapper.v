@@ -311,23 +311,40 @@ module c2c_gth_example_wrapper (
 `ifdef C2C_2P5G
     c2c_gth        c2c_gth_inst_1 (); // 3.75G
     c2c_gth_3p125g c2c_gth_inst_2 (); // 3.125G
+    c2c_gty_3p125g c2c_gth_inst_3 (); // VU13P
     c2c_gth_2p5g   c2c_gth_inst     // 2.5G
 `else
-`ifdef C2C_3P125G
-    c2c_gth        c2c_gth_inst_1 (); // 3.75G
-    c2c_gth_2p5g   c2c_gth_inst_2 (); // 2.5G
-    c2c_gth_3p125g c2c_gth_inst     // 3.125G
-`else  
-    c2c_gth_2p5g   c2c_gth_inst_1 (); // 2.5G
-    c2c_gth_3p125g c2c_gth_inst_2 (); // 3.125G
-    c2c_gth        c2c_gth_inst     // 3.75G
-`endif
+    `ifdef C2C_3P125G
+        c2c_gth        c2c_gth_inst_1 (); // 3.75G
+        c2c_gth_2p5g   c2c_gth_inst_2 (); // 2.5G
+        c2c_gty_3p125g c2c_gth_inst_3 (); // VU13P
+        c2c_gth_3p125g c2c_gth_inst     // 3.125G
+    `else 
+        `ifdef VU13P
+            c2c_gth_2p5g   c2c_gth_inst_1 (); // 2.5G
+            c2c_gth_3p125g c2c_gth_inst_2 (); // 3.125G
+            c2c_gth        c2c_gth_inst_3 (); // 3.75G
+            c2c_gty_3p125g c2c_gth_inst       // VU13P
+        `else 
+            c2c_gth_2p5g   c2c_gth_inst_1 (); // 2.5G
+            c2c_gth_3p125g c2c_gth_inst_2 (); // 3.125G
+            c2c_gty_3p125g c2c_gth_inst_3 (); // VU13P
+            c2c_gth        c2c_gth_inst     // 3.75G
+        `endif
+    `endif
 `endif 
     (
-    .gthrxn_in                               (gthrxn_in)
-   ,.gthrxp_in                               (gthrxp_in)
-   ,.gthtxn_out                              (gthtxn_out)
-   ,.gthtxp_out                              (gthtxp_out)
+    `ifdef VU13P
+        .gtyrxn_in                               (gthrxn_in)
+       ,.gtyrxp_in                               (gthrxp_in)
+       ,.gtytxn_out                              (gthtxn_out)
+       ,.gtytxp_out                              (gthtxp_out)
+    `else
+        .gthrxn_in                               (gthrxn_in)
+       ,.gthrxp_in                               (gthrxp_in)
+       ,.gthtxn_out                              (gthtxn_out)
+       ,.gthtxp_out                              (gthtxp_out)
+   `endif
    ,.gtwiz_userclk_tx_reset_in               (gtwiz_userclk_tx_reset_in)
    ,.gtwiz_userclk_tx_active_in              (gtwiz_userclk_tx_active_out)
    ,.gtwiz_userclk_rx_active_in              (gtwiz_userclk_rx_active_out)

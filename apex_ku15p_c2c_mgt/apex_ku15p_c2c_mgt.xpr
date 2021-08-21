@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="49" Path="/home/madorsky/github/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.xpr">
+<Project Version="7" Minor="49" Path="/home/madorsky/github/vivado/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="f8caee0d9f424625a486822091bb92c8"/>
@@ -44,13 +44,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="28"/>
-    <Option Name="WTModelSimExportSim" Val="28"/>
-    <Option Name="WTQuestaExportSim" Val="28"/>
-    <Option Name="WTIesExportSim" Val="28"/>
-    <Option Name="WTVcsExportSim" Val="28"/>
-    <Option Name="WTRivieraExportSim" Val="28"/>
-    <Option Name="WTActivehdlExportSim" Val="28"/>
+    <Option Name="WTXSimExportSim" Val="29"/>
+    <Option Name="WTModelSimExportSim" Val="29"/>
+    <Option Name="WTQuestaExportSim" Val="29"/>
+    <Option Name="WTIesExportSim" Val="29"/>
+    <Option Name="WTVcsExportSim" Val="29"/>
+    <Option Name="WTRivieraExportSim" Val="29"/>
+    <Option Name="WTActivehdlExportSim" Val="29"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -81,23 +81,23 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_axi_bram_ctrl_0_bram_0/apex_blk_axi_bram_ctrl_0_bram_0.xci">
-          <Proxy FileSetName="apex_blk_axi_bram_ctrl_0_bram_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_rst_clk_wiz_100M_0/apex_blk_rst_clk_wiz_100M_0.xci">
-          <Proxy FileSetName="apex_blk_rst_clk_wiz_100M_0"/>
+        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_system_ila_0_0_1/apex_blk_system_ila_0_0.xci">
+          <Proxy FileSetName="apex_blk_system_ila_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_clk_wiz_0/apex_blk_clk_wiz_0.xci">
           <Proxy FileSetName="apex_blk_clk_wiz_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_system_ila_0_0_1/apex_blk_system_ila_0_0.xci">
-          <Proxy FileSetName="apex_blk_system_ila_0_0"/>
+        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_rst_clk_wiz_100M_0/apex_blk_rst_clk_wiz_100M_0.xci">
+          <Proxy FileSetName="apex_blk_rst_clk_wiz_100M_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_axi_bram_ctrl_0_bram_1/apex_blk_axi_bram_ctrl_0_bram_1.xci">
           <Proxy FileSetName="apex_blk_axi_bram_ctrl_0_bram_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_c2c_reset_fsm_0_0/apex_blk_c2c_reset_fsm_0_0.xci">
           <Proxy FileSetName="apex_blk_c2c_reset_fsm_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_axi_bram_ctrl_0_bram_0/apex_blk_axi_bram_ctrl_0_bram_0.xci">
+          <Proxy FileSetName="apex_blk_axi_bram_ctrl_0_bram_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/apex_blk/hdl/apex_blk_wrapper.v">
@@ -111,7 +111,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/imports/c2c_gth_example_bit_sync.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_bit_sync.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_bit_sync.v"/>
           <Attr Name="ImportTime" Val="1613769375"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -120,7 +120,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/imports/c2c_gth_example_gtwiz_reset.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_gtwiz_reset.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_gtwiz_reset.v"/>
           <Attr Name="ImportTime" Val="1613769375"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -129,7 +129,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/imports/c2c_gth_example_gtwiz_userclk_rx.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_gtwiz_userclk_rx.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_gtwiz_userclk_rx.v"/>
           <Attr Name="ImportTime" Val="1613769375"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -138,7 +138,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/imports/c2c_gth_example_gtwiz_userclk_tx.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_gtwiz_userclk_tx.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_gtwiz_userclk_tx.v"/>
           <Attr Name="ImportTime" Val="1613769375"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -147,7 +147,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/imports/c2c_gth_example_init.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_init.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_init.v"/>
           <Attr Name="ImportTime" Val="1613769375"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -156,7 +156,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/imports/c2c_gth_example_reset_inv_sync.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_reset_inv_sync.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_reset_inv_sync.v"/>
           <Attr Name="ImportTime" Val="1613769377"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -165,7 +165,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/imports/c2c_gth_example_reset_sync.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_reset_sync.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_reset_sync.v"/>
           <Attr Name="ImportTime" Val="1613769377"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -174,7 +174,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/imports/c2c_gth_example_wrapper_functions.v">
         <FileInfo SFType="VHeader">
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_wrapper_functions.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_wrapper_functions.v"/>
           <Attr Name="ImportTime" Val="1613769376"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -182,7 +182,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/imports/c2c_gth_example_wrapper.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_wrapper.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/imports/c2c_gth_example_wrapper.v"/>
           <Attr Name="ImportTime" Val="1613769377"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -877,7 +877,7 @@
     <FileSet Name="c2c_gth_vio_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/c2c_gth_vio_0">
       <File Path="$PSRCDIR/c2c_gth_vio_0/ip/c2c_gth_vio_0/c2c_gth_vio_0.xci">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/c2c_gth_ex.srcs/sources_1/ip/c2c_gth_vio_0/c2c_gth_vio_0.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/c2c_gth_ex.srcs/sources_1/ip/c2c_gth_vio_0/c2c_gth_vio_0.xci"/>
           <Attr Name="ImportTime" Val="1613769498"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -892,7 +892,7 @@
     <FileSet Name="c2c_gth_in_system_ibert_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/c2c_gth_in_system_ibert_0">
       <File Path="$PSRCDIR/c2c_gth_in_system_ibert_0/ip/c2c_gth_in_system_ibert_0/c2c_gth_in_system_ibert_0.xci">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/c2c_gth_ex.srcs/sources_1/ip/c2c_gth_in_system_ibert_0/c2c_gth_in_system_ibert_0.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../mnt/slc6_disk/madorsky/projects/vivado/apex/examples/c2c_gth_ex/c2c_gth_ex.srcs/sources_1/ip/c2c_gth_in_system_ibert_0/c2c_gth_in_system_ibert_0.xci"/>
           <Attr Name="ImportTime" Val="1613769496"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1033,7 +1033,6 @@
     <FileSet Name="c2c_gty_3p125g" Type="BlockSrcs" RelSrcDir="$PSRCDIR/c2c_gty_3p125g">
       <File Path="$PSRCDIR/sources_1/ip/c2c_gty_3p125g/c2c_gty_3p125g.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -1043,6 +1042,23 @@
         <Option Name="TopModule" Val="c2c_gty_3p125g"/>
         <Option Name="UseBlackboxStub" Val="1"/>
         <Define Name="C2C_3P125G"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="constr_vu13p" Type="Constrs" RelSrcDir="$PSRCDIR/constr_vu13p">
+      <File Path="$PSRCDIR/constrs_rev2_uec8/imports/constrs_1/imports/new/c2c_gth_rev2_utc8.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/constrs_rev2_uec8/imports/constrs_1/new/apex_top.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
   </FileSets>
@@ -1201,11 +1217,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="synth_rev2_uec8_3p125g" Type="Ft3:Synth" SrcSet="sources_1" Part="xcku15p-ffva1760-2-e" ConstrsSet="constrs_rev2_uec8" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_rev2_uec8_3p125g" IncludeInArchive="true">
+    <Run Id="synth_rev2_uec8_3p125g" Type="Ft3:Synth" SrcSet="sources_1" Part="xcku15p-ffva1760-2-e" ConstrsSet="constrs_rev2_uec8" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/synth_rev2_uec8_3p125g" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design">
           <Option Id="MoreOptsStr"><![CDATA[-verilog_define C2C_3P125G]]></Option>
         </Step>
@@ -1227,9 +1241,7 @@
     </Run>
     <Run Id="synth_rev1_uec3_3p125" Type="Ft3:Synth" SrcSet="sources_1" Part="xcku15p-ffva1760-2-e" ConstrsSet="constrs_rev1_uec3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/synth_rev1_uec3_3p125" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design">
           <Option Id="MoreOptsStr"><![CDATA[-verilog_define C2C_R1_UEC3 -verilog_define C2C_3P125G]]></Option>
         </Step>
@@ -1241,9 +1253,7 @@
     </Run>
     <Run Id="c2c_gth_in_system_ibert_0_R1_UEC3_synth_1" Type="Ft3:Synth" SrcSet="c2c_gth_in_system_ibert_0_R1_UEC3" Part="xcku15p-ffva1760-2-e" ConstrsSet="c2c_gth_in_system_ibert_0_R1_UEC3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/c2c_gth_in_system_ibert_0_R1_UEC3_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1257,6 +1267,20 @@
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
         <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="synth_vu13p" Type="Ft3:Synth" SrcSet="sources_1" Part="xcvu13p-fsga2577-1-e" ConstrsSet="constr_vu13p" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_vu13p" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design">
+          <Option Id="MoreOptsStr"><![CDATA[-verilog_define VU13P -verilog_define C2C_R1_UEC3]]></Option>
+        </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
@@ -1513,11 +1537,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_rev2_uec8_3p125g" Type="Ft2:EntireDesign" Part="xcku15p-ffva1760-2-e" ConstrsSet="constrs_rev2_uec8" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_rev2_uec8_3p125g" SynthRun="synth_rev2_uec8_3p125g" IncludeInArchive="true" GenFullBitstream="true">
+    <Run Id="impl_rev2_uec8_3p125g" Type="Ft2:EntireDesign" Part="xcku15p-ffva1760-2-e" ConstrsSet="constrs_rev2_uec8" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/impl_rev2_uec8_3p125g" SynthRun="synth_rev2_uec8_3p125g" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1552,9 +1574,7 @@
     </Run>
     <Run Id="impl_rev1_uec3_3p125" Type="Ft2:EntireDesign" Part="xcku15p-ffva1760-2-e" ConstrsSet="constrs_rev1_uec3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/impl_rev1_uec3_3p125" SynthRun="synth_rev1_uec3_3p125" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1572,9 +1592,7 @@
     </Run>
     <Run Id="c2c_gth_in_system_ibert_0_R1_UEC3_impl_1" Type="Ft2:EntireDesign" Part="xcku15p-ffva1760-2-e" ConstrsSet="c2c_gth_in_system_ibert_0_R1_UEC3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="c2c_gth_in_system_ibert_0_R1_UEC3_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1604,6 +1622,26 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="impl_vu13p" Type="Ft2:EntireDesign" Part="xcvu13p-fsga2577-1-e" ConstrsSet="constr_vu13p" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_vu13p" SynthRun="synth_vu13p" IncludeInArchive="true" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>

@@ -53,30 +53,30 @@
 # This constraints file contains default clock frequencies to be used during out-of-context flows such as
 # OOC Synthesis and Hierarchical Designs.
 
-# Free-running clock constraint
-create_clock -period 12.8 [get_ports gtwiz_reset_clk_freerun_in]
-
 # CPLL reference clock constraint (will be overridden by required constraint on IBUFDS_GTE4 input in context)
 create_clock -period 6.4 [get_ports gtrefclk0_in[0]]
+create_clock -period 6.4 [get_ports gtrefclk0_in[1]]
 
 # Internal TX user clock constraint (will be overridden by required reference clock constraint propagated through CHANNEL primitive in context)
 create_clock -period 12.8 [get_ports txusrclk_in[0]]
+create_clock -period 12.8 [get_ports txusrclk_in[1]]
 
 # External TX user clock constraint (will be overridden by required reference clock constraint propagated through CHANNEL primitive in context)
 create_clock -period 12.8 [get_ports txusrclk2_in[0]]
+create_clock -period 12.8 [get_ports txusrclk2_in[1]]
 
 # Internal RX user clock constraint (will be overridden by required reference clock constraint propagated through CHANNEL primitive in context)
 create_clock -period 12.8 [get_ports rxusrclk_in[0]]
+create_clock -period 12.8 [get_ports rxusrclk_in[1]]
 
 # External RX user clock constraint (will be overridden by required reference clock constraint propagated through CHANNEL primitive in context)
 create_clock -period 12.8 [get_ports rxusrclk2_in[0]]
+create_clock -period 12.8 [get_ports rxusrclk2_in[1]]
 
 # DRP clock constraint for CHANNEL primitive
 create_clock -period 12.8 [get_ports drpclk_in[0]]
+create_clock -period 12.8 [get_ports drpclk_in[1]]
 
-# False path constraints
-# ----------------------------------------------------------------------------------------------------------------------
-set_false_path -to [get_cells -hierarchical -filter {NAME =~ *bit_synchronizer*inst/i_in_meta_reg}] -quiet
 
 ##set_false_path -to [get_cells -hierarchical -filter {NAME =~ *reset_synchronizer*inst/rst_in_*_reg}] -quiet
 set_false_path -to [get_pins -filter {REF_PIN_NAME=~*D} -of_objects [get_cells -hierarchical -filter {NAME =~ *reset_synchronizer*inst/rst_in_meta*}]] -quiet
@@ -85,9 +85,4 @@ set_false_path -to [get_pins -filter {REF_PIN_NAME=~*PRE} -of_objects [get_cells
 set_false_path -to [get_pins -filter {REF_PIN_NAME=~*PRE} -of_objects [get_cells -hierarchical -filter {NAME =~ *reset_synchronizer*inst/rst_in_sync2*}]] -quiet
 set_false_path -to [get_pins -filter {REF_PIN_NAME=~*PRE} -of_objects [get_cells -hierarchical -filter {NAME =~ *reset_synchronizer*inst/rst_in_sync3*}]] -quiet
 set_false_path -to [get_pins -filter {REF_PIN_NAME=~*PRE} -of_objects [get_cells -hierarchical -filter {NAME =~ *reset_synchronizer*inst/rst_in_out*}]] -quiet
-set_false_path -to [get_pins -filter {REF_PIN_NAME=~*CLR} -of_objects [get_cells -hierarchical -filter {NAME =~ *reset_synchronizer*inst/rst_in_meta*}]] -quiet
-set_false_path -to [get_pins -filter {REF_PIN_NAME=~*CLR} -of_objects [get_cells -hierarchical -filter {NAME =~ *reset_synchronizer*inst/rst_in_sync1*}]] -quiet
-set_false_path -to [get_pins -filter {REF_PIN_NAME=~*CLR} -of_objects [get_cells -hierarchical -filter {NAME =~ *reset_synchronizer*inst/rst_in_sync2*}]] -quiet
-set_false_path -to [get_pins -filter {REF_PIN_NAME=~*CLR} -of_objects [get_cells -hierarchical -filter {NAME =~ *reset_synchronizer*inst/rst_in_sync3*}]] -quiet
-set_false_path -to [get_pins -filter {REF_PIN_NAME=~*CLR} -of_objects [get_cells -hierarchical -filter {NAME =~ *reset_synchronizer*inst/rst_in_out*}]] -quiet
 

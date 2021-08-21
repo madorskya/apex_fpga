@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Fri Feb 19 17:19:07 2021
+-- Date        : Wed Aug 18 15:18:07 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
--- Command     : write_vhdl -force -mode funcsim -rename_top vio_0 -prefix
---               vio_0_ vio_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/madorsky/github/vivado/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/vio_0/ip/vio_0/vio_0_sim_netlist.vhdl
 -- Design      : vio_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -30,6 +30,8 @@ entity vio_0_vio_v3_0_19_decoder is
     s_dwe_o : in STD_LOGIC;
     Probe_out_reg : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of vio_0_vio_v3_0_19_decoder : entity is "vio_v3_0_19_decoder";
 end vio_0_vio_v3_0_19_decoder;
 
 architecture STRUCTURE of vio_0_vio_v3_0_19_decoder is
@@ -702,6 +704,8 @@ entity vio_0_vio_v3_0_19_probe_out_one is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     wr_probe_out : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of vio_0_vio_v3_0_19_probe_out_one : entity is "vio_v3_0_19_probe_out_one";
 end vio_0_vio_v3_0_19_probe_out_one;
 
 architecture STRUCTURE of vio_0_vio_v3_0_19_probe_out_one is
@@ -895,6 +899,8 @@ entity vio_0_xsdbs_v1_0_2_xsdbs is
   attribute C_XDEVICEFAMILY of vio_0_xsdbs_v1_0_2_xsdbs : entity is "kintexuplus";
   attribute C_XSDB_SLAVE_TYPE : integer;
   attribute C_XSDB_SLAVE_TYPE of vio_0_xsdbs_v1_0_2_xsdbs : entity is 33;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of vio_0_xsdbs_v1_0_2_xsdbs : entity is "xsdbs_v1_0_2_xsdbs";
   attribute dont_touch : string;
   attribute dont_touch of vio_0_xsdbs_v1_0_2_xsdbs : entity is "true";
 end vio_0_xsdbs_v1_0_2_xsdbs;
@@ -3861,6 +3867,8 @@ entity vio_0_vio_v3_0_19_probe_out_all is
     s_dwe_o : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of vio_0_vio_v3_0_19_probe_out_all : entity is "vio_v3_0_19_probe_out_all";
 end vio_0_vio_v3_0_19_probe_out_all;
 
 architecture STRUCTURE of vio_0_vio_v3_0_19_probe_out_all is
@@ -7235,6 +7243,8 @@ entity vio_0_vio_v3_0_19_vio is
   attribute LC_TOTAL_PROBE_IN_WIDTH of vio_0_vio_v3_0_19_vio : entity is 0;
   attribute LC_TOTAL_PROBE_OUT_WIDTH : integer;
   attribute LC_TOTAL_PROBE_OUT_WIDTH of vio_0_vio_v3_0_19_vio : entity is 3;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of vio_0_vio_v3_0_19_vio : entity is "vio_v3_0_19_vio";
   attribute dont_touch : string;
   attribute dont_touch of vio_0_vio_v3_0_19_vio : entity is "true";
 end vio_0_vio_v3_0_19_vio;

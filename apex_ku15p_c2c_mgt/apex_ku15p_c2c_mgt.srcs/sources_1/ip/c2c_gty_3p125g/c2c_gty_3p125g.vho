@@ -57,47 +57,71 @@ COMPONENT c2c_gty_3p125g
     gtwiz_userclk_tx_reset_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     gtwiz_userclk_tx_active_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     gtwiz_userclk_rx_active_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtwiz_reset_clk_freerun_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtwiz_reset_all_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtwiz_reset_tx_pll_and_datapath_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtwiz_reset_tx_datapath_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtwiz_reset_rx_pll_and_datapath_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtwiz_reset_rx_datapath_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtwiz_reset_rx_cdr_stable_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtwiz_reset_tx_done_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtwiz_reset_rx_done_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtwiz_userdata_tx_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    gtwiz_userdata_rx_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    drpclk_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtrefclk0_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtyrxn_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtyrxp_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    rx8b10ben_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    rxcommadeten_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    rxmcommaalignen_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    rxpcommaalignen_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    rxusrclk_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    rxusrclk2_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    tx8b10ben_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    txctrl0_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    txctrl1_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    txctrl2_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    txusrclk_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    txusrclk2_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtpowergood_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtytxn_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    gtytxp_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    rxbyteisaligned_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    rxbyterealign_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    rxcommadet_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    rxctrl0_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-    rxctrl1_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-    rxctrl2_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    rxctrl3_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    rxoutclk_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    rxpmaresetdone_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    txoutclk_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    txpmaresetdone_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
+    gtwiz_reset_tx_done_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    gtwiz_reset_rx_done_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    gtwiz_userdata_tx_in : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
+    gtwiz_userdata_rx_out : OUT STD_LOGIC_VECTOR(63 DOWNTO 0);
+    cpllpd_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    drpaddr_in : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+    drpclk_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    drpdi_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    drpen_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    drpwe_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    eyescanreset_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    gtrefclk0_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    gtrxreset_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    gttxreset_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    gtyrxn_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    gtyrxp_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rx8b10ben_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxbufreset_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxcommadeten_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxlpmen_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxmcommaalignen_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxpcommaalignen_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxprbssel_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    rxprogdivreset_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxrate_in : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+    rxuserrdy_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxusrclk_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxusrclk2_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    tx8b10ben_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    txctrl0_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    txctrl1_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    txctrl2_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    txdiffctrl_in : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    txpolarity_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    txpostcursor_in : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    txprbssel_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    txprecursor_in : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    txprogdivreset_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    txuserrdy_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    txusrclk_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    txusrclk2_in : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    cplllock_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    drpdo_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    drprdy_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    gtpowergood_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    gtytxn_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    gtytxp_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxbufstatus_out : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+    rxbyteisaligned_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxbyterealign_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxcdrlock_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxclkcorcnt_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    rxcommadet_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxctrl0_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    rxctrl1_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    rxctrl2_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    rxctrl3_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    rxdata_out : OUT STD_LOGIC_VECTOR(255 DOWNTO 0);
+    rxoutclk_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxpmaresetdone_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxprbserr_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    rxresetdone_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    txoutclk_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    txpmaresetdone_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    txresetdone_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -111,47 +135,71 @@ your_instance_name : c2c_gty_3p125g
     gtwiz_userclk_tx_reset_in => gtwiz_userclk_tx_reset_in,
     gtwiz_userclk_tx_active_in => gtwiz_userclk_tx_active_in,
     gtwiz_userclk_rx_active_in => gtwiz_userclk_rx_active_in,
-    gtwiz_reset_clk_freerun_in => gtwiz_reset_clk_freerun_in,
-    gtwiz_reset_all_in => gtwiz_reset_all_in,
-    gtwiz_reset_tx_pll_and_datapath_in => gtwiz_reset_tx_pll_and_datapath_in,
-    gtwiz_reset_tx_datapath_in => gtwiz_reset_tx_datapath_in,
-    gtwiz_reset_rx_pll_and_datapath_in => gtwiz_reset_rx_pll_and_datapath_in,
-    gtwiz_reset_rx_datapath_in => gtwiz_reset_rx_datapath_in,
-    gtwiz_reset_rx_cdr_stable_out => gtwiz_reset_rx_cdr_stable_out,
-    gtwiz_reset_tx_done_out => gtwiz_reset_tx_done_out,
-    gtwiz_reset_rx_done_out => gtwiz_reset_rx_done_out,
+    gtwiz_reset_tx_done_in => gtwiz_reset_tx_done_in,
+    gtwiz_reset_rx_done_in => gtwiz_reset_rx_done_in,
     gtwiz_userdata_tx_in => gtwiz_userdata_tx_in,
     gtwiz_userdata_rx_out => gtwiz_userdata_rx_out,
+    cpllpd_in => cpllpd_in,
+    drpaddr_in => drpaddr_in,
     drpclk_in => drpclk_in,
+    drpdi_in => drpdi_in,
+    drpen_in => drpen_in,
+    drpwe_in => drpwe_in,
+    eyescanreset_in => eyescanreset_in,
     gtrefclk0_in => gtrefclk0_in,
+    gtrxreset_in => gtrxreset_in,
+    gttxreset_in => gttxreset_in,
     gtyrxn_in => gtyrxn_in,
     gtyrxp_in => gtyrxp_in,
     rx8b10ben_in => rx8b10ben_in,
+    rxbufreset_in => rxbufreset_in,
     rxcommadeten_in => rxcommadeten_in,
+    rxlpmen_in => rxlpmen_in,
     rxmcommaalignen_in => rxmcommaalignen_in,
     rxpcommaalignen_in => rxpcommaalignen_in,
+    rxprbssel_in => rxprbssel_in,
+    rxprogdivreset_in => rxprogdivreset_in,
+    rxrate_in => rxrate_in,
+    rxuserrdy_in => rxuserrdy_in,
     rxusrclk_in => rxusrclk_in,
     rxusrclk2_in => rxusrclk2_in,
     tx8b10ben_in => tx8b10ben_in,
     txctrl0_in => txctrl0_in,
     txctrl1_in => txctrl1_in,
     txctrl2_in => txctrl2_in,
+    txdiffctrl_in => txdiffctrl_in,
+    txpolarity_in => txpolarity_in,
+    txpostcursor_in => txpostcursor_in,
+    txprbssel_in => txprbssel_in,
+    txprecursor_in => txprecursor_in,
+    txprogdivreset_in => txprogdivreset_in,
+    txuserrdy_in => txuserrdy_in,
     txusrclk_in => txusrclk_in,
     txusrclk2_in => txusrclk2_in,
+    cplllock_out => cplllock_out,
+    drpdo_out => drpdo_out,
+    drprdy_out => drprdy_out,
     gtpowergood_out => gtpowergood_out,
     gtytxn_out => gtytxn_out,
     gtytxp_out => gtytxp_out,
+    rxbufstatus_out => rxbufstatus_out,
     rxbyteisaligned_out => rxbyteisaligned_out,
     rxbyterealign_out => rxbyterealign_out,
+    rxcdrlock_out => rxcdrlock_out,
+    rxclkcorcnt_out => rxclkcorcnt_out,
     rxcommadet_out => rxcommadet_out,
     rxctrl0_out => rxctrl0_out,
     rxctrl1_out => rxctrl1_out,
     rxctrl2_out => rxctrl2_out,
     rxctrl3_out => rxctrl3_out,
+    rxdata_out => rxdata_out,
     rxoutclk_out => rxoutclk_out,
     rxpmaresetdone_out => rxpmaresetdone_out,
+    rxprbserr_out => rxprbserr_out,
+    rxresetdone_out => rxresetdone_out,
     txoutclk_out => txoutclk_out,
-    txpmaresetdone_out => txpmaresetdone_out
+    txpmaresetdone_out => txpmaresetdone_out,
+    txresetdone_out => txresetdone_out
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 

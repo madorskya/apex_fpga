@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Fri Feb 19 17:26:00 2021
+-- Date        : Wed Aug 18 15:19:30 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
--- Command     : write_vhdl -force -mode funcsim -rename_top c2c_gth_in_system_ibert_0 -prefix
---               c2c_gth_in_system_ibert_0_ c2c_gth_in_system_ibert_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/madorsky/github/vivado/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/c2c_gth_in_system_ibert_0/ip/c2c_gth_in_system_ibert_0/c2c_gth_in_system_ibert_0_sim_netlist.vhdl
 -- Design      : c2c_gth_in_system_ibert_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -45,6 +45,8 @@ entity c2c_gth_in_system_ibert_0_iomodule is
     D : in STD_LOGIC_VECTOR ( 31 downto 0 );
     mb_do_o : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_iomodule : entity is "iomodule";
 end c2c_gth_in_system_ibert_0_iomodule;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_iomodule is
@@ -1948,6 +1950,8 @@ entity c2c_gth_in_system_ibert_0_lmb_bram_if_cntlr is
     \out\ : in STD_LOGIC;
     dlmb_M_AddrStrobe : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_lmb_bram_if_cntlr : entity is "lmb_bram_if_cntlr";
 end c2c_gth_in_system_ibert_0_lmb_bram_if_cntlr;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_lmb_bram_if_cntlr is
@@ -2055,6 +2059,8 @@ entity c2c_gth_in_system_ibert_0_lmb_v10 is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     \out\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_lmb_v10 : entity is "lmb_v10";
 end c2c_gth_in_system_ibert_0_lmb_v10;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_lmb_v10 is
@@ -2118,6 +2124,8 @@ entity c2c_gth_in_system_ibert_0_MB_FDE is
     D_21 : in STD_LOGIC;
     \out\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MB_FDE : entity is "MB_FDE";
 end c2c_gth_in_system_ibert_0_MB_FDE;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MB_FDE is
@@ -3189,6 +3197,8 @@ entity c2c_gth_in_system_ibert_0_MB_FDR is
     mul_Executing : in STD_LOGIC;
     ex_Valid_reg_0 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MB_FDR : entity is "MB_FDR";
 end c2c_gth_in_system_ibert_0_MB_FDR;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MB_FDR is
@@ -3275,6 +3285,8 @@ entity c2c_gth_in_system_ibert_0_MB_FDRSE is
     \Using_FPGA.Native_1\ : in STD_LOGIC;
     \out\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MB_FDRSE : entity is "MB_FDRSE";
 end c2c_gth_in_system_ibert_0_MB_FDRSE;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MB_FDRSE is
@@ -3489,6 +3501,8 @@ entity c2c_gth_in_system_ibert_0_MB_FDS is
     \Using_FPGA.Native_3\ : in STD_LOGIC;
     \Using_FPGA.Native_4\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MB_FDS : entity is "MB_FDS";
 end c2c_gth_in_system_ibert_0_MB_FDS;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MB_FDS is
@@ -3556,6 +3570,8 @@ entity c2c_gth_in_system_ibert_0_MB_FDSE is
     Reg_Test_Equal_i : in STD_LOGIC;
     \out\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MB_FDSE : entity is "MB_FDSE";
 end c2c_gth_in_system_ibert_0_MB_FDSE;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MB_FDSE is
@@ -4156,6 +4172,8 @@ entity c2c_gth_in_system_ibert_0_MB_LUT2 is
     byte_selects_0 : in STD_LOGIC;
     isbyte : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MB_LUT2 : entity is "MB_LUT2";
 end c2c_gth_in_system_ibert_0_MB_LUT2;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MB_LUT2 is
@@ -4182,6 +4200,8 @@ entity c2c_gth_in_system_ibert_0_MB_LUT3 is
     D : in STD_LOGIC_VECTOR ( 1 downto 0 );
     imm_Value : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MB_LUT3 : entity is "MB_LUT3";
 end c2c_gth_in_system_ibert_0_MB_LUT3;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MB_LUT3 is
@@ -4419,6 +4439,8 @@ entity c2c_gth_in_system_ibert_0_MB_LUT4 is
     \Using_FPGA.Native_1\ : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MB_LUT4 : entity is "MB_LUT4";
 end c2c_gth_in_system_ibert_0_MB_LUT4;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MB_LUT4 is
@@ -8708,6 +8730,8 @@ entity c2c_gth_in_system_ibert_0_MB_LUT6_2 is
     res_Forward1 : in STD_LOGIC;
     opsel1_SPR : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MB_LUT6_2 : entity is "MB_LUT6_2";
 end c2c_gth_in_system_ibert_0_MB_LUT6_2;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MB_LUT6_2 is
@@ -11560,6 +11584,8 @@ entity c2c_gth_in_system_ibert_0_MB_MULT_AND is
     \Using_FPGA.Native_0\ : in STD_LOGIC;
     \Using_FPGA.Native_1\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MB_MULT_AND : entity is "MB_MULT_AND";
 end c2c_gth_in_system_ibert_0_MB_MULT_AND;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MB_MULT_AND is
@@ -11623,6 +11649,8 @@ entity c2c_gth_in_system_ibert_0_MB_MUXCY_XORCY is
     LO : in STD_LOGIC;
     lopt : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MB_MUXCY_XORCY : entity is "MB_MUXCY_XORCY";
 end c2c_gth_in_system_ibert_0_MB_MUXCY_XORCY;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MB_MUXCY_XORCY is
@@ -13829,6 +13857,8 @@ entity c2c_gth_in_system_ibert_0_MB_RAM32X1D is
     \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
     reg1_Addr : in STD_LOGIC_VECTOR ( 0 to 4 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MB_RAM32X1D : entity is "MB_RAM32X1D";
 end c2c_gth_in_system_ibert_0_MB_RAM32X1D;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MB_RAM32X1D is
@@ -16954,6 +16984,8 @@ entity c2c_gth_in_system_ibert_0_MB_SRL16E is
     instr_OF : in STD_LOGIC_VECTOR ( 2 downto 0 );
     doublet_i_reg_0 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MB_SRL16E : entity is "MB_SRL16E";
 end c2c_gth_in_system_ibert_0_MB_SRL16E;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MB_SRL16E is
@@ -20367,6 +20399,8 @@ entity c2c_gth_in_system_ibert_0_RAM_Module_Top is
     DATA_INB : in STD_LOGIC_VECTOR ( 0 to 31 );
     dlmb_port_BRAM_WEN : in STD_LOGIC_VECTOR ( 0 to 3 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_RAM_Module_Top : entity is "RAM_Module_Top";
 end c2c_gth_in_system_ibert_0_RAM_Module_Top;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_RAM_Module_Top is
@@ -24649,6 +24683,8 @@ entity c2c_gth_in_system_ibert_0_ibert_lib_v1_0_7_drp_arbiter is
   attribute DRP_WRITE of c2c_gth_in_system_ibert_0_ibert_lib_v1_0_7_drp_arbiter : entity is "7'b0010000";
   attribute DRP_WRITE_ACK : string;
   attribute DRP_WRITE_ACK of c2c_gth_in_system_ibert_0_ibert_lib_v1_0_7_drp_arbiter : entity is "7'b0100000";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_ibert_lib_v1_0_7_drp_arbiter : entity is "ibert_lib_v1_0_7_drp_arbiter";
 end c2c_gth_in_system_ibert_0_ibert_lib_v1_0_7_drp_arbiter;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_ibert_lib_v1_0_7_drp_arbiter is
@@ -33024,6 +33060,8 @@ entity c2c_gth_in_system_ibert_0_ibert_lib_v1_0_7_mbio2xsdb is
   attribute C_SLAVE_LSB_IDX of c2c_gth_in_system_ibert_0_ibert_lib_v1_0_7_mbio2xsdb : entity is 18;
   attribute C_SLAVE_MSB_IDX : integer;
   attribute C_SLAVE_MSB_IDX of c2c_gth_in_system_ibert_0_ibert_lib_v1_0_7_mbio2xsdb : entity is 26;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_ibert_lib_v1_0_7_mbio2xsdb : entity is "ibert_lib_v1_0_7_mbio2xsdb";
 end c2c_gth_in_system_ibert_0_ibert_lib_v1_0_7_mbio2xsdb;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_ibert_lib_v1_0_7_mbio2xsdb is
@@ -33960,6 +33998,8 @@ entity c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_drp_syncronizer is
     drpclk_i : in STD_LOGIC;
     drp_den_o : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_drp_syncronizer : entity is "in_system_ibert_v1_0_11_drp_syncronizer";
 end c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_drp_syncronizer;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_drp_syncronizer is
@@ -35860,6 +35900,8 @@ entity c2c_gth_in_system_ibert_0_mb_sync_bit is
     ilmb_LMB_Rst : in STD_LOGIC;
     \Synchronize.use_sync_reset.sync_reg[1]_0\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_mb_sync_bit : entity is "mb_sync_bit";
 end c2c_gth_in_system_ibert_0_mb_sync_bit;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_mb_sync_bit is
@@ -35935,6 +35977,8 @@ entity c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_FDRE is
     correct_Carry_II : in STD_LOGIC;
     \out\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_FDRE : entity is "microblaze_v9_5_4_MB_FDRE";
 end c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_FDRE;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_FDRE is
@@ -38498,6 +38542,8 @@ entity c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_LUT6 is
     alu_Op : in STD_LOGIC_VECTOR ( 0 to 1 );
     Op1_Logic : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_LUT6 : entity is "microblaze_v9_5_4_MB_LUT6";
 end c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_LUT6;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_LUT6 is
@@ -39646,6 +39692,8 @@ entity c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_MUXCY is
     lopt_3 : in STD_LOGIC;
     lopt_4 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_MUXCY : entity is "microblaze_v9_5_4_MB_MUXCY";
 end c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_MUXCY;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_MUXCY is
@@ -41104,6 +41152,8 @@ entity c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_MUXF7 is
     shift_Res : in STD_LOGIC;
     logic_Res_i : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_MUXF7 : entity is "microblaze_v9_5_4_MB_MUXF7";
 end c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_MUXF7;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_microblaze_v9_5_4_MB_MUXF7 is
@@ -41985,6 +42035,8 @@ entity c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg_ctl is
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg_ctl : entity is "xsdbs_v1_0_2_reg_ctl";
 end c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg_ctl;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg_ctl is
@@ -46876,6 +46928,8 @@ entity c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg_stat is
     txprecursor_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg_stat : entity is "xsdbs_v1_0_2_reg_stat";
 end c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg_stat;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg_stat is
@@ -47669,6 +47723,8 @@ entity c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_xsdbs is
   attribute C_XDEVICEFAMILY of c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_xsdbs : entity is "virtex7";
   attribute C_XSDB_SLAVE_TYPE : string;
   attribute C_XSDB_SLAVE_TYPE of c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_xsdbs : entity is "16'b0000010000010010";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_xsdbs : entity is "xsdbs_v1_0_2_xsdbs";
   attribute dont_touch : string;
   attribute dont_touch of c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_xsdbs : entity is "true";
 end c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_xsdbs;
@@ -54785,6 +54841,8 @@ entity c2c_gth_in_system_ibert_0_ALU_Bit is
     lopt_2 : out STD_LOGIC;
     lopt_3 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_ALU_Bit : entity is "ALU_Bit";
 end c2c_gth_in_system_ibert_0_ALU_Bit;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_ALU_Bit is
@@ -56684,6 +56742,8 @@ entity c2c_gth_in_system_ibert_0_MSR_Reg_Bit is
     \Using_FPGA.Native_0\ : in STD_LOGIC;
     PC_OF : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MSR_Reg_Bit : entity is "MSR_Reg_Bit";
 end c2c_gth_in_system_ibert_0_MSR_Reg_Bit;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MSR_Reg_Bit is
@@ -56780,6 +56840,8 @@ entity c2c_gth_in_system_ibert_0_Operand_Select_Bit is
     \out\ : in STD_LOGIC;
     D_6 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_Operand_Select_Bit : entity is "Operand_Select_Bit";
 end c2c_gth_in_system_ibert_0_Operand_Select_Bit;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_Operand_Select_Bit is
@@ -58700,6 +58762,8 @@ entity c2c_gth_in_system_ibert_0_PC_Bit is
     lopt : in STD_LOGIC;
     lopt_1 : out STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_PC_Bit : entity is "PC_Bit";
 end c2c_gth_in_system_ibert_0_PC_Bit;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_PC_Bit is
@@ -59996,6 +60060,8 @@ entity c2c_gth_in_system_ibert_0_PreFetch_Buffer is
     lopt_5 : in STD_LOGIC;
     lopt_6 : out STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_PreFetch_Buffer : entity is "PreFetch_Buffer";
 end c2c_gth_in_system_ibert_0_PreFetch_Buffer;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_PreFetch_Buffer is
@@ -60789,6 +60855,8 @@ entity c2c_gth_in_system_ibert_0_Register_File_Bit is
     reg1_Addr : in STD_LOGIC_VECTOR ( 0 to 4 );
     imm_Value : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_Register_File_Bit : entity is "Register_File_Bit";
 end c2c_gth_in_system_ibert_0_Register_File_Bit;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_Register_File_Bit is
@@ -62190,6 +62258,8 @@ entity c2c_gth_in_system_ibert_0_Result_Mux_Bit is
     Data_Read_Mask : in STD_LOGIC;
     dlmb_LMB_ReadDBus : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_Result_Mux_Bit : entity is "Result_Mux_Bit";
 end c2c_gth_in_system_ibert_0_Result_Mux_Bit;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_Result_Mux_Bit is
@@ -63326,6 +63396,8 @@ entity c2c_gth_in_system_ibert_0_Shift_Logic_Bit is
     Shift_Oper : in STD_LOGIC;
     Select_Logic : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_Shift_Logic_Bit : entity is "Shift_Logic_Bit";
 end c2c_gth_in_system_ibert_0_Shift_Logic_Bit;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_Shift_Logic_Bit is
@@ -64809,6 +64881,8 @@ entity c2c_gth_in_system_ibert_0_Zero_Detect is
     lopt_1 : in STD_LOGIC;
     lopt_2 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_Zero_Detect : entity is "Zero_Detect";
 end c2c_gth_in_system_ibert_0_Zero_Detect;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_Zero_Detect is
@@ -65000,6 +65074,8 @@ entity c2c_gth_in_system_ibert_0_lmb_bram is
     DATA_INB : in STD_LOGIC_VECTOR ( 0 to 31 );
     dlmb_port_BRAM_WEN : in STD_LOGIC_VECTOR ( 0 to 3 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_lmb_bram : entity is "lmb_bram";
 end c2c_gth_in_system_ibert_0_lmb_bram;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_lmb_bram is
@@ -65027,6 +65103,8 @@ entity c2c_gth_in_system_ibert_0_mux4_8 is
     D : in STD_LOGIC_VECTOR ( 0 to 31 );
     sel_Write_Mux_MSB : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_mux4_8 : entity is "mux4_8";
 end c2c_gth_in_system_ibert_0_mux4_8;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_mux4_8 is
@@ -65166,6 +65244,8 @@ entity c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg is
     D : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg : entity is "xsdbs_v1_0_2_reg";
 end c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_xsdbs_v1_0_2_reg is
@@ -66344,6 +66424,8 @@ entity c2c_gth_in_system_ibert_0_ALU is
     lopt_10 : in STD_LOGIC;
     lopt_11 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_ALU : entity is "ALU";
 end c2c_gth_in_system_ibert_0_ALU;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_ALU is
@@ -67170,6 +67252,8 @@ entity c2c_gth_in_system_ibert_0_Byte_Doublet_Handle is
     isdoublet : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 0 to 31 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_Byte_Doublet_Handle : entity is "Byte_Doublet_Handle";
 end c2c_gth_in_system_ibert_0_Byte_Doublet_Handle;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_Byte_Doublet_Handle is
@@ -67440,6 +67524,8 @@ entity c2c_gth_in_system_ibert_0_Decode is
     lopt_12 : out STD_LOGIC;
     lopt_13 : out STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_Decode : entity is "Decode";
 end c2c_gth_in_system_ibert_0_Decode;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_Decode is
@@ -69100,6 +69186,8 @@ entity c2c_gth_in_system_ibert_0_MSR_Reg is
     PC_OF : in STD_LOGIC;
     \Using_FPGA.Native_5\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MSR_Reg : entity is "MSR_Reg";
 end c2c_gth_in_system_ibert_0_MSR_Reg;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MSR_Reg is
@@ -69268,6 +69356,8 @@ entity c2c_gth_in_system_ibert_0_Operand_Select is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     imm_Value : in STD_LOGIC_VECTOR ( 0 to 15 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_Operand_Select : entity is "Operand_Select";
 end c2c_gth_in_system_ibert_0_Operand_Select;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_Operand_Select is
@@ -69900,6 +69990,8 @@ entity c2c_gth_in_system_ibert_0_PC_Module is
     Increment : in STD_LOGIC;
     DI : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_PC_Module : entity is "PC_Module";
 end c2c_gth_in_system_ibert_0_PC_Module;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_PC_Module is
@@ -70318,6 +70410,8 @@ entity c2c_gth_in_system_ibert_0_Register_File is
     reg1_Addr : in STD_LOGIC_VECTOR ( 0 to 4 );
     imm_Value : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_Register_File : entity is "Register_File";
 end c2c_gth_in_system_ibert_0_Register_File;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_Register_File is
@@ -70792,6 +70886,8 @@ entity c2c_gth_in_system_ibert_0_Result_Mux is
     O : in STD_LOGIC;
     \Using_FPGA.Native_24\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_Result_Mux : entity is "Result_Mux";
 end c2c_gth_in_system_ibert_0_Result_Mux;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_Result_Mux is
@@ -71172,6 +71268,8 @@ entity c2c_gth_in_system_ibert_0_Shift_Logic_Module is
     Sext16 : in STD_LOGIC;
     sext8 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_Shift_Logic_Module : entity is "Shift_Logic_Module";
 end c2c_gth_in_system_ibert_0_Shift_Logic_Module;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_Shift_Logic_Module is
@@ -71629,6 +71727,8 @@ entity c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_gthe4_channel_regs is
   attribute LC_D_ZERO of c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_gthe4_channel_regs : entity is "16'b0000000000000000";
   attribute LC_LSB_AWIDTH : integer;
   attribute LC_LSB_AWIDTH of c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_gthe4_channel_regs : entity is 11;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_gthe4_channel_regs : entity is "in_system_ibert_v1_0_11_gthe4_channel_regs";
 end c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_gthe4_channel_regs;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_gthe4_channel_regs is
@@ -74657,6 +74757,8 @@ entity c2c_gth_in_system_ibert_0_Data_Flow is
     lopt_13 : in STD_LOGIC;
     lopt_14 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_Data_Flow : entity is "Data_Flow";
 end c2c_gth_in_system_ibert_0_Data_Flow;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_Data_Flow is
@@ -75422,6 +75524,8 @@ entity c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_gthe4_channel_slave is
   attribute C_NUM_GT of c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_gthe4_channel_slave : entity is 2;
   attribute C_QUAD_NUMBER : string;
   attribute C_QUAD_NUMBER of c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_gthe4_channel_slave : entity is "16'b0000000011100110";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_gthe4_channel_slave : entity is "in_system_ibert_v1_0_11_gthe4_channel_slave";
 end c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_gthe4_channel_slave;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_gthe4_channel_slave is
@@ -77134,6 +77238,8 @@ entity c2c_gth_in_system_ibert_0_MicroBlaze_Area is
     extend_Data_Read : in STD_LOGIC_VECTOR ( 15 downto 0 );
     dlmb_LMB_ReadDBus : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MicroBlaze_Area : entity is "MicroBlaze_Area";
 end c2c_gth_in_system_ibert_0_MicroBlaze_Area;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MicroBlaze_Area is
@@ -77779,6 +77885,8 @@ entity c2c_gth_in_system_ibert_0_MicroBlaze_Core is
     dlmb_LMB_ReadDBus : in STD_LOGIC_VECTOR ( 15 downto 0 );
     ilmb_LMB_Rst : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MicroBlaze_Core : entity is "MicroBlaze_Core";
 end c2c_gth_in_system_ibert_0_MicroBlaze_Core;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MicroBlaze_Core is
@@ -77882,6 +77990,8 @@ entity c2c_gth_in_system_ibert_0_MicroBlaze is
     dlmb_LMB_ReadDBus : in STD_LOGIC_VECTOR ( 15 downto 0 );
     ilmb_LMB_Rst : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_MicroBlaze : entity is "MicroBlaze";
 end c2c_gth_in_system_ibert_0_MicroBlaze;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_MicroBlaze is
@@ -77939,6 +78049,8 @@ entity c2c_gth_in_system_ibert_0_microblaze_mcs is
     mb_rdy_o : in STD_LOGIC;
     mb_do_o : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_microblaze_mcs : entity is "microblaze_mcs";
 end c2c_gth_in_system_ibert_0_microblaze_mcs;
 
 architecture STRUCTURE of c2c_gth_in_system_ibert_0_microblaze_mcs is
@@ -79911,6 +80023,8 @@ entity c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_in_system_ibert is
   attribute C_USE_MDM of c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_in_system_ibert : entity is 0;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_in_system_ibert : entity is "kintexuplus";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_in_system_ibert : entity is "in_system_ibert_v1_0_11_in_system_ibert";
   attribute dont_touch : string;
   attribute dont_touch of c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_in_system_ibert : entity is "true";
 end c2c_gth_in_system_ibert_0_in_system_ibert_v1_0_11_in_system_ibert;

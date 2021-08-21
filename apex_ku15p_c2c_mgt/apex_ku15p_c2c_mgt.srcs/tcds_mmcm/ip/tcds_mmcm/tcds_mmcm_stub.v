@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Fri Feb 19 17:18:54 2021
+// Date        : Wed Aug 18 15:18:01 2021
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
-// Command     : write_verilog -force -mode synth_stub -rename_top tcds_mmcm -prefix
-//               tcds_mmcm_ tcds_mmcm_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               /home/madorsky/github/vivado/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/tcds_mmcm/ip/tcds_mmcm/tcds_mmcm_stub.v
 // Design      : tcds_mmcm
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcku15p-ffva1760-2-e
