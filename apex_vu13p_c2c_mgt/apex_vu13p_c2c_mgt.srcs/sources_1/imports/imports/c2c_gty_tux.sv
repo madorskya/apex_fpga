@@ -355,6 +355,14 @@ module c2c_gty_tux (
   assign ch0_rxprbserr_int = rxprbserr_int[0:0];
   assign ch1_rxprbserr_int = rxprbserr_int[1:1];
 
+    reg [1:0] prbs_err_sticky;
+    wire prbs_reset_sticky;
+    always @(posedge gtwiz_userclk_tx_usrclk2_int)
+    begin
+        prbs_err_sticky |= rxprbserr_int;
+        if (prbs_reset_sticky == 1'b1) prbs_err_sticky = 0;
+    end
+
   //--------------------------------------------------------------------------------------------------------------------
   wire [1:0] txpmaresetdone_int;
   wire [0:0] ch0_txpmaresetdone_int;
@@ -379,7 +387,7 @@ module c2c_gty_tux (
     .O (hb_gtwiz_reset_all_buf_int)
   );
 
-  assign hb_gtwiz_reset_all_int = hb_gtwiz_reset_all_buf_int || hb_gtwiz_reset_all_init_int || hb_gtwiz_reset_all_vio_int;
+  assign hb_gtwiz_reset_all_int = hb_gtwiz_reset_all_vio_int;
 
   // Globally buffer the free-running input clock
   wire hb_gtwiz_reset_clk_freerun_buf_int;
@@ -515,7 +523,7 @@ module c2c_gty_tux (
   wire hb_gtwiz_reset_rx_datapath_vio_int;
   wire hb_gtwiz_reset_rx_datapath_init_int;
 
-  assign hb_gtwiz_reset_rx_datapath_int = hb_gtwiz_reset_rx_datapath_init_int || hb_gtwiz_reset_rx_datapath_vio_int;
+  assign hb_gtwiz_reset_rx_datapath_int = hb_gtwiz_reset_rx_datapath_vio_int;
 
   // The example initialization module interacts with the reset controller helper block and other example design logic
   // to retry failed reset attempts in order to mitigate bring-up issues such as initially-unavilable reference clocks
@@ -753,6 +761,7 @@ module c2c_gty_tux (
     ,.probe_in8 (gtwiz_reset_rx_done_vio_sync)
     ,.probe_in9 (rxbufstatus_vio_sync)
     ,.probe_in10 (rxprbserr_vio_sync)
+    ,.probe_in11 (prbs_err_sticky)
     ,.probe_out0 (hb_gtwiz_reset_all_vio_int)
     ,.probe_out1 (hb0_gtwiz_reset_tx_pll_and_datapath_int)
     ,.probe_out2 (hb0_gtwiz_reset_tx_datapath_int)
@@ -761,6 +770,7 @@ module c2c_gty_tux (
     ,.probe_out5 (link_down_latched_reset_vio_int)
     ,.probe_out6 (txprbssel_vio_async)
     ,.probe_out7 (rxprbssel_vio_async)
+    ,.probe_out8 (prbs_reset_sticky)
   );
 
 
@@ -786,11 +796,11 @@ module c2c_gty_tux (
    ,.gtwiz_userclk_rx_usrclk2_out            (gtwiz_userclk_rx_usrclk2_int)
    ,.gtwiz_userclk_rx_active_out             (gtwiz_userclk_rx_active_int)
    ,.gtwiz_reset_clk_freerun_in              ({1{hb_gtwiz_reset_clk_freerun_buf_int}})
-   ,.gtwiz_reset_all_in                      ({1{hb_gtwiz_reset_all_int}})
-   ,.gtwiz_reset_tx_pll_and_datapath_in      (gtwiz_reset_tx_pll_and_datapath_int)
-   ,.gtwiz_reset_tx_datapath_in              (gtwiz_reset_tx_datapath_int)
-   ,.gtwiz_reset_rx_pll_and_datapath_in      ({1{hb_gtwiz_reset_rx_pll_and_datapath_int}})
-   ,.gtwiz_reset_rx_datapath_in              ({1{hb_gtwiz_reset_rx_datapath_int}})
+   ,.gtwiz_reset_all_in                      ({1{hb_gtwiz_reset_all_int}}) // vio
+   ,.gtwiz_reset_tx_pll_and_datapath_in      (gtwiz_reset_tx_pll_and_datapath_int) // vio
+   ,.gtwiz_reset_tx_datapath_in              (gtwiz_reset_tx_datapath_int) // vio
+   ,.gtwiz_reset_rx_pll_and_datapath_in      ({1{hb_gtwiz_reset_rx_pll_and_datapath_int}}) // = 0
+   ,.gtwiz_reset_rx_datapath_in              ({1{hb_gtwiz_reset_rx_datapath_int}})// vio
    ,.gtwiz_reset_rx_cdr_stable_out           (gtwiz_reset_rx_cdr_stable_int)
    ,.gtwiz_reset_tx_done_out                 (gtwiz_reset_tx_done_int)
    ,.gtwiz_reset_rx_done_out                 (gtwiz_reset_rx_done_int)

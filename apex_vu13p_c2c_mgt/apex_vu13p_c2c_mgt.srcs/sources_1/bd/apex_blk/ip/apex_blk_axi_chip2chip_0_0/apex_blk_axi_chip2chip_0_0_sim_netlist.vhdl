@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Thu Aug 19 14:07:11 2021
+-- Date        : Sat Aug 21 19:21:15 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/madorsky/github/vivado/apex_ku15p/apex_vu13p_c2c_mgt/apex_vu13p_c2c_mgt.srcs/sources_1/bd/apex_blk/ip/apex_blk_axi_chip2chip_0_0/apex_blk_axi_chip2chip_0_0_sim_netlist.vhdl
@@ -138,12 +138,12 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_xpm_cdc_gray is
   attribute KEEP of \dest_graysync_ff_reg[2][7]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[2][7]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair155";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair155";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair156";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair156";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair157";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair157";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair154";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair154";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair155";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair155";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair156";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair156";
 begin
   dest_out_bin(7) <= \dest_graysync_ff[2]\(7);
   dest_out_bin(6 downto 0) <= \^dest_out_bin\(6 downto 0);
@@ -669,12 +669,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__10\ is
   attribute KEEP of \dest_graysync_ff_reg[2][7]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[2][7]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair150";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair150";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair151";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair151";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair149";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair149";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair149";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair149";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair150";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair150";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair148";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair148";
 begin
   dest_out_bin(7) <= \dest_graysync_ff[2]\(7);
   dest_out_bin(6 downto 0) <= \^dest_out_bin\(6 downto 0);
@@ -1200,12 +1200,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__6\ is
   attribute KEEP of \dest_graysync_ff_reg[2][7]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[2][7]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair116";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair116";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair117";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair117";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair118";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair118";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair115";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair115";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair116";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair116";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair117";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair117";
 begin
   dest_out_bin(7) <= \dest_graysync_ff[2]\(7);
   dest_out_bin(6 downto 0) <= \^dest_out_bin\(6 downto 0);
@@ -1731,12 +1731,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__7\ is
   attribute KEEP of \dest_graysync_ff_reg[2][7]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[2][7]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair123";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair123";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair124";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair124";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair125";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair125";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair122";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair122";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair123";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair123";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair124";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair124";
 begin
   dest_out_bin(7) <= \dest_graysync_ff[2]\(7);
   dest_out_bin(6 downto 0) <= \^dest_out_bin\(6 downto 0);
@@ -2262,12 +2262,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__8\ is
   attribute KEEP of \dest_graysync_ff_reg[2][7]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[2][7]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair83";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair83";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair84";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair84";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair85";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair85";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair82";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair82";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair83";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair83";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair84";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair84";
 begin
   dest_out_bin(7) <= \dest_graysync_ff[2]\(7);
   dest_out_bin(6 downto 0) <= \^dest_out_bin\(6 downto 0);
@@ -2793,12 +2793,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__9\ is
   attribute KEEP of \dest_graysync_ff_reg[2][7]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[2][7]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair90";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair90";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair91";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair91";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair92";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair92";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair89";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair89";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair90";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair90";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair91";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair91";
 begin
   dest_out_bin(7) <= \dest_graysync_ff[2]\(7);
   dest_out_bin(6 downto 0) <= \^dest_out_bin\(6 downto 0);
@@ -3395,12 +3395,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterize
   attribute KEEP of \dest_graysync_ff_reg[4][8]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[4][8]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair153";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair153";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair154";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair154";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair152";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair152";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair152";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair152";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair153";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair153";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair151";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair151";
 begin
   dest_out_bin(8) <= \dest_graysync_ff[4]\(8);
   dest_out_bin(7 downto 0) <= \^dest_out_bin\(7 downto 0);
@@ -4193,14 +4193,14 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterize
   attribute KEEP of \dest_graysync_ff_reg[4][8]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[4][8]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair119";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair119";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair120";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair120";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair121";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair121";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair122";
-  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair122";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair118";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair118";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair119";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair119";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair120";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair120";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair121";
+  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair121";
 begin
   dest_out_bin(8) <= \dest_graysync_ff[4]\(8);
   dest_out_bin(7 downto 0) <= \^dest_out_bin\(7 downto 0);
@@ -4993,14 +4993,14 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterize
   attribute KEEP of \dest_graysync_ff_reg[4][8]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[4][8]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair86";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair86";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair87";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair87";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair88";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair88";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair89";
-  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair89";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair85";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair85";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair86";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair86";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair87";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair87";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair88";
+  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair88";
 begin
   dest_out_bin(8) <= \dest_graysync_ff[4]\(8);
   dest_out_bin(7 downto 0) <= \^dest_out_bin\(7 downto 0);
@@ -5731,14 +5731,14 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterize
   attribute KEEP of \dest_graysync_ff_reg[2][8]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[2][8]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair161";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair161";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair160";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair160";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair159";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair159";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair158";
-  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair158";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair160";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair160";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair159";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair159";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair158";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair158";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair157";
+  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair157";
 begin
   dest_out_bin(8) <= \dest_graysync_ff[2]\(8);
   dest_out_bin(7 downto 0) <= \^dest_out_bin\(7 downto 0);
@@ -6325,14 +6325,14 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterize
   attribute KEEP of \dest_graysync_ff_reg[2][8]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[2][8]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair237";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair237";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair236";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair236";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair238";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair238";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair239";
-  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair239";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair236";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair236";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair235";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair235";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair237";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair237";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair238";
+  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair238";
 begin
   dest_out_bin(8) <= \dest_graysync_ff[2]\(8);
   dest_out_bin(7 downto 0) <= \^dest_out_bin\(7 downto 0);
@@ -6919,14 +6919,14 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterize
   attribute KEEP of \dest_graysync_ff_reg[2][8]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[2][8]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair184";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair184";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair185";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair185";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair186";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair186";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair187";
-  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair187";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair183";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair183";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair184";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair184";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair185";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair185";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair186";
+  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair186";
 begin
   dest_out_bin(8) <= \dest_graysync_ff[2]\(8);
   dest_out_bin(7 downto 0) <= \^dest_out_bin\(7 downto 0);
@@ -7513,14 +7513,14 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterize
   attribute KEEP of \dest_graysync_ff_reg[2][8]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[2][8]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair193";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair193";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair192";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair192";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair194";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair194";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair195";
-  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair195";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair192";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair192";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair191";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair191";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair193";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair193";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair194";
+  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair194";
 begin
   dest_out_bin(8) <= \dest_graysync_ff[2]\(8);
   dest_out_bin(7 downto 0) <= \^dest_out_bin\(7 downto 0);
@@ -8107,14 +8107,14 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterize
   attribute KEEP of \dest_graysync_ff_reg[2][8]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[2][8]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair129";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair129";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair128";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair128";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair127";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair127";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair126";
-  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair126";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair128";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair128";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair127";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair127";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair126";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair126";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair125";
+  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair125";
 begin
   dest_out_bin(8) <= \dest_graysync_ff[2]\(8);
   dest_out_bin(7 downto 0) <= \^dest_out_bin\(7 downto 0);
@@ -8701,14 +8701,14 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterize
   attribute KEEP of \dest_graysync_ff_reg[2][8]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[2][8]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair96";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair96";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair95";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair95";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair94";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair94";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair93";
-  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair93";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair95";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair95";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair94";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair94";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair93";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair93";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair92";
+  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair92";
 begin
   dest_out_bin(8) <= \dest_graysync_ff[2]\(8);
   dest_out_bin(7 downto 0) <= \^dest_out_bin\(7 downto 0);
@@ -9295,14 +9295,14 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterize
   attribute KEEP of \dest_graysync_ff_reg[2][8]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[2][8]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair228";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair228";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair229";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair229";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair230";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair230";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair231";
-  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair231";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair227";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair227";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair228";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair228";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair229";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair229";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair230";
+  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair230";
 begin
   dest_out_bin(8) <= \dest_graysync_ff[2]\(8);
   dest_out_bin(7 downto 0) <= \^dest_out_bin\(7 downto 0);
@@ -9966,14 +9966,14 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterize
   attribute KEEP of \dest_graysync_ff_reg[4][9]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[4][9]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair188";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair188";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair189";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair189";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair190";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair190";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair191";
-  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair191";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair187";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair187";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair188";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair188";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair189";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair189";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair190";
+  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair190";
 begin
   dest_out_bin(9) <= \dest_graysync_ff[4]\(9);
   dest_out_bin(8 downto 0) <= \^dest_out_bin\(8 downto 0);
@@ -10850,14 +10850,14 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterize
   attribute KEEP of \dest_graysync_ff_reg[4][9]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[4][9]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair232";
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair232";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair233";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair233";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair234";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair234";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair235";
-  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair235";
+  attribute SOFT_HLUTNM of \src_gray_ff[0]_i_1\ : label is "soft_lutpair231";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair231";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair232";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair232";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair233";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair233";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair234";
+  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair234";
 begin
   dest_out_bin(9) <= \dest_graysync_ff[4]\(9);
   dest_out_bin(8 downto 0) <= \^dest_out_bin\(8 downto 0);
@@ -11666,14 +11666,14 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterize
   attribute KEEP of \dest_graysync_ff_reg[2][9]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[2][9]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair199";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair199";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair198";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair198";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair197";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair197";
-  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair196";
-  attribute SOFT_HLUTNM of \src_gray_ff[8]_i_1\ : label is "soft_lutpair196";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair198";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair198";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair197";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair197";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair196";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair196";
+  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair195";
+  attribute SOFT_HLUTNM of \src_gray_ff[8]_i_1\ : label is "soft_lutpair195";
 begin
   dest_out_bin(9) <= \dest_graysync_ff[2]\(9);
   dest_out_bin(8 downto 0) <= \^dest_out_bin\(8 downto 0);
@@ -12322,14 +12322,14 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterize
   attribute KEEP of \dest_graysync_ff_reg[2][9]\ : label is "true";
   attribute XPM_CDC of \dest_graysync_ff_reg[2][9]\ : label is "GRAY";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair243";
-  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair243";
-  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair242";
-  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair242";
-  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair241";
-  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair241";
-  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair240";
-  attribute SOFT_HLUTNM of \src_gray_ff[8]_i_1\ : label is "soft_lutpair240";
+  attribute SOFT_HLUTNM of \src_gray_ff[1]_i_1\ : label is "soft_lutpair242";
+  attribute SOFT_HLUTNM of \src_gray_ff[2]_i_1\ : label is "soft_lutpair242";
+  attribute SOFT_HLUTNM of \src_gray_ff[3]_i_1\ : label is "soft_lutpair241";
+  attribute SOFT_HLUTNM of \src_gray_ff[4]_i_1\ : label is "soft_lutpair241";
+  attribute SOFT_HLUTNM of \src_gray_ff[5]_i_1\ : label is "soft_lutpair240";
+  attribute SOFT_HLUTNM of \src_gray_ff[6]_i_1\ : label is "soft_lutpair240";
+  attribute SOFT_HLUTNM of \src_gray_ff[7]_i_1\ : label is "soft_lutpair239";
+  attribute SOFT_HLUTNM of \src_gray_ff[8]_i_1\ : label is "soft_lutpair239";
 begin
   dest_out_bin(9) <= \dest_graysync_ff[2]\(9);
   dest_out_bin(8 downto 0) <= \^dest_out_bin\(8 downto 0);
@@ -13718,8 +13718,8 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_xpm_counter_updn is
   signal \count_value_i[1]_i_3_n_0\ : STD_LOGIC;
   signal \gen_fwft.count_en\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_10\ : label is "soft_lutpair244";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_9\ : label is "soft_lutpair244";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_10\ : label is "soft_lutpair243";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_9\ : label is "soft_lutpair243";
 begin
   Q(1 downto 0) <= \^q\(1 downto 0);
 \count_value_i[0]_i_1__2\: unisim.vcomponents.LUT5
@@ -14370,8 +14370,8 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_xpm_counter_updn_9 is
   signal \count_value_i[1]_i_3_n_0\ : STD_LOGIC;
   signal \gen_fwft.count_en\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_10\ : label is "soft_lutpair200";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_9\ : label is "soft_lutpair200";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_10\ : label is "soft_lutpair199";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_9\ : label is "soft_lutpair199";
 begin
   Q(1 downto 0) <= \^q\(1 downto 0);
 \count_value_i[0]_i_1__2\: unisim.vcomponents.LUT5
@@ -14519,16 +14519,16 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \gen_pf_ic_rc.ram_empty_i_i_6_n_0\ : STD_LOGIC;
   signal \gen_pf_ic_rc.ram_empty_i_i_7_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__3\ : label is "soft_lutpair164";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__3\ : label is "soft_lutpair165";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__3\ : label is "soft_lutpair165";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__2\ : label is "soft_lutpair162";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__0\ : label is "soft_lutpair162";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11\ : label is "soft_lutpair166";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2\ : label is "soft_lutpair163";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_3\ : label is "soft_lutpair163";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_7\ : label is "soft_lutpair164";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_9\ : label is "soft_lutpair166";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__3\ : label is "soft_lutpair163";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__3\ : label is "soft_lutpair164";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__3\ : label is "soft_lutpair164";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__2\ : label is "soft_lutpair161";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__0\ : label is "soft_lutpair161";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11\ : label is "soft_lutpair165";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2\ : label is "soft_lutpair162";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_3\ : label is "soft_lutpair162";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_7\ : label is "soft_lutpair163";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_9\ : label is "soft_lutpair165";
 begin
   Q(7 downto 0) <= \^q\(7 downto 0);
   enb <= \^enb\;
@@ -15126,12 +15126,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \NLW_gwdc.wr_data_count_i_reg[8]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_gwdc.wr_data_count_i_reg[8]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 1 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__1\ : label is "soft_lutpair171";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__1\ : label is "soft_lutpair171";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__1\ : label is "soft_lutpair170";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__1\ : label is "soft_lutpair170";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__1\ : label is "soft_lutpair169";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1\ : label is "soft_lutpair169";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__1\ : label is "soft_lutpair170";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__1\ : label is "soft_lutpair170";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__1\ : label is "soft_lutpair169";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__1\ : label is "soft_lutpair169";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__1\ : label is "soft_lutpair168";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1\ : label is "soft_lutpair168";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \gwdc.wr_data_count_i_reg[7]_i_1\ : label is 35;
   attribute ADDER_THRESHOLD of \gwdc.wr_data_count_i_reg[8]_i_1\ : label is 35;
@@ -15525,16 +15525,16 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \gen_pf_ic_rc.ram_empty_i_i_6_n_0\ : STD_LOGIC;
   signal \gen_pf_ic_rc.ram_empty_i_i_7_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__3\ : label is "soft_lutpair132";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__3\ : label is "soft_lutpair133";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__3\ : label is "soft_lutpair133";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__2\ : label is "soft_lutpair130";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__0\ : label is "soft_lutpair130";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11\ : label is "soft_lutpair134";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2\ : label is "soft_lutpair131";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_3\ : label is "soft_lutpair131";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_7\ : label is "soft_lutpair132";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_9\ : label is "soft_lutpair134";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__3\ : label is "soft_lutpair131";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__3\ : label is "soft_lutpair132";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__3\ : label is "soft_lutpair132";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__2\ : label is "soft_lutpair129";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__0\ : label is "soft_lutpair129";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11\ : label is "soft_lutpair133";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2\ : label is "soft_lutpair130";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_3\ : label is "soft_lutpair130";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_7\ : label is "soft_lutpair131";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_9\ : label is "soft_lutpair133";
 begin
   Q(7 downto 0) <= \^q\(7 downto 0);
   enb <= \^enb\;
@@ -16132,12 +16132,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \NLW_gwdc.wr_data_count_i_reg[8]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_gwdc.wr_data_count_i_reg[8]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 1 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__1\ : label is "soft_lutpair139";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__1\ : label is "soft_lutpair139";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__1\ : label is "soft_lutpair138";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__1\ : label is "soft_lutpair138";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__1\ : label is "soft_lutpair137";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1\ : label is "soft_lutpair137";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__1\ : label is "soft_lutpair138";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__1\ : label is "soft_lutpair138";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__1\ : label is "soft_lutpair137";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__1\ : label is "soft_lutpair137";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__1\ : label is "soft_lutpair136";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1\ : label is "soft_lutpair136";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \gwdc.wr_data_count_i_reg[7]_i_1\ : label is 35;
   attribute ADDER_THRESHOLD of \gwdc.wr_data_count_i_reg[8]_i_1\ : label is 35;
@@ -16531,16 +16531,16 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \gen_pf_ic_rc.ram_empty_i_i_6_n_0\ : STD_LOGIC;
   signal \gen_pf_ic_rc.ram_empty_i_i_7_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__3\ : label is "soft_lutpair99";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__3\ : label is "soft_lutpair100";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__3\ : label is "soft_lutpair100";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__2\ : label is "soft_lutpair97";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__0\ : label is "soft_lutpair97";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11\ : label is "soft_lutpair101";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2\ : label is "soft_lutpair98";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_3\ : label is "soft_lutpair98";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_7\ : label is "soft_lutpair99";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_9\ : label is "soft_lutpair101";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__3\ : label is "soft_lutpair98";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__3\ : label is "soft_lutpair99";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__3\ : label is "soft_lutpair99";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__2\ : label is "soft_lutpair96";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__0\ : label is "soft_lutpair96";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11\ : label is "soft_lutpair100";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2\ : label is "soft_lutpair97";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_3\ : label is "soft_lutpair97";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_7\ : label is "soft_lutpair98";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_9\ : label is "soft_lutpair100";
 begin
   Q(7 downto 0) <= \^q\(7 downto 0);
   enb <= \^enb\;
@@ -17138,12 +17138,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \NLW_gwdc.wr_data_count_i_reg[8]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_gwdc.wr_data_count_i_reg[8]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 1 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__1\ : label is "soft_lutpair106";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__1\ : label is "soft_lutpair106";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__1\ : label is "soft_lutpair105";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__1\ : label is "soft_lutpair105";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__1\ : label is "soft_lutpair104";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1\ : label is "soft_lutpair104";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__1\ : label is "soft_lutpair105";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__1\ : label is "soft_lutpair105";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__1\ : label is "soft_lutpair104";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__1\ : label is "soft_lutpair104";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__1\ : label is "soft_lutpair103";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1\ : label is "soft_lutpair103";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \gwdc.wr_data_count_i_reg[7]_i_1\ : label is 35;
   attribute ADDER_THRESHOLD of \gwdc.wr_data_count_i_reg[8]_i_1\ : label is 35;
@@ -17500,8 +17500,8 @@ entity \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_48\ is
     \FSM_sequential_gen_fwft.curr_fwft_state_reg[1]\ : out STD_LOGIC;
     ram_full_i0 : out STD_LOGIC;
     leaving_empty0 : out STD_LOGIC;
-    S : out STD_LOGIC_VECTOR ( 5 downto 0 );
     \count_value_i_reg[1]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    S : out STD_LOGIC_VECTOR ( 5 downto 0 );
     \count_value_i_reg[7]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \count_value_i_reg[6]_0\ : out STD_LOGIC_VECTOR ( 4 downto 0 );
     \count_value_i_reg[7]_1\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
@@ -17542,12 +17542,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal going_full1 : STD_LOGIC;
   signal \^leaving_empty0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[0]_i_1__1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \count_value_i[0]_i_1__1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__0\ : label is "soft_lutpair2";
 begin
   \FSM_sequential_gen_fwft.curr_fwft_state_reg[1]\ <= \^fsm_sequential_gen_fwft.curr_fwft_state_reg[1]\;
   Q(7 downto 0) <= \^q\(7 downto 0);
@@ -18173,12 +18173,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \NLW_gwdc.wr_data_count_i_reg[8]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_gwdc.wr_data_count_i_reg[8]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 1 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__0\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1\ : label is "soft_lutpair7";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.diff_pntr_pe_reg[7]_i_1\ : label is 35;
   attribute METHODOLOGY_DRC_VIOS : string;
@@ -18616,8 +18616,8 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \gen_pf_ic_rc.ram_empty_i_i_5_n_0\ : STD_LOGIC;
   signal going_empty0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__2\ : label is "soft_lutpair167";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__2\ : label is "soft_lutpair167";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__2\ : label is "soft_lutpair166";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__2\ : label is "soft_lutpair166";
 begin
 \count_value_i[0]_i_1__2\: unisim.vcomponents.LUT4
     generic map(
@@ -18916,10 +18916,10 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_5_n_0\ : STD_LOGIC;
   signal leaving_full : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__0\ : label is "soft_lutpair173";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__0\ : label is "soft_lutpair173";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__0\ : label is "soft_lutpair172";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__0\ : label is "soft_lutpair172";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__0\ : label is "soft_lutpair172";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__0\ : label is "soft_lutpair172";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__0\ : label is "soft_lutpair171";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__0\ : label is "soft_lutpair171";
 begin
   Q(7 downto 0) <= \^q\(7 downto 0);
 \count_value_i[0]_i_1__0\: unisim.vcomponents.LUT1
@@ -19217,8 +19217,8 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \gen_pf_ic_rc.ram_empty_i_i_5_n_0\ : STD_LOGIC;
   signal going_empty0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__2\ : label is "soft_lutpair135";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__2\ : label is "soft_lutpair135";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__2\ : label is "soft_lutpair134";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__2\ : label is "soft_lutpair134";
 begin
 \count_value_i[0]_i_1__2\: unisim.vcomponents.LUT4
     generic map(
@@ -19517,10 +19517,10 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_5_n_0\ : STD_LOGIC;
   signal leaving_full : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__0\ : label is "soft_lutpair141";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__0\ : label is "soft_lutpair141";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__0\ : label is "soft_lutpair140";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__0\ : label is "soft_lutpair140";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__0\ : label is "soft_lutpair140";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__0\ : label is "soft_lutpair140";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__0\ : label is "soft_lutpair139";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__0\ : label is "soft_lutpair139";
 begin
   Q(7 downto 0) <= \^q\(7 downto 0);
 \count_value_i[0]_i_1__0\: unisim.vcomponents.LUT1
@@ -19818,8 +19818,8 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \gen_pf_ic_rc.ram_empty_i_i_5_n_0\ : STD_LOGIC;
   signal going_empty0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__2\ : label is "soft_lutpair102";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__2\ : label is "soft_lutpair102";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__2\ : label is "soft_lutpair101";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__2\ : label is "soft_lutpair101";
 begin
 \count_value_i[0]_i_1__2\: unisim.vcomponents.LUT4
     generic map(
@@ -20118,10 +20118,10 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_5_n_0\ : STD_LOGIC;
   signal leaving_full : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__0\ : label is "soft_lutpair108";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__0\ : label is "soft_lutpair108";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__0\ : label is "soft_lutpair107";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__0\ : label is "soft_lutpair107";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__0\ : label is "soft_lutpair107";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__0\ : label is "soft_lutpair107";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__0\ : label is "soft_lutpair106";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__0\ : label is "soft_lutpair106";
 begin
   Q(7 downto 0) <= \^q\(7 downto 0);
 \count_value_i[0]_i_1__0\: unisim.vcomponents.LUT1
@@ -20407,8 +20407,8 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \count_value_i[7]_i_1__2_n_0\ : STD_LOGIC;
   signal \count_value_i[7]_i_2__0_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__2\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__2\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__2\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__2\ : label is "soft_lutpair5";
 begin
   Q(7 downto 0) <= \^q\(7 downto 0);
 \count_value_i[0]_i_1__2\: unisim.vcomponents.LUT4
@@ -20669,10 +20669,10 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpf_cc_sym.diff_pntr_pf_q_reg[8]_i_1_n_7\ : STD_LOGIC;
   signal \NLW_gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpf_cc_sym.diff_pntr_pf_q_reg[8]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 to 7 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__0\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__0\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__0\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__0\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__0\ : label is "soft_lutpair10";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpf_cc_sym.diff_pntr_pf_q_reg[8]_i_1\ : label is 35;
 begin
@@ -21013,10 +21013,10 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_6_n_0\ : STD_LOGIC;
   signal \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_7_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[0]_i_1\ : label is "soft_lutpair175";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1\ : label is "soft_lutpair175";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1\ : label is "soft_lutpair174";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1\ : label is "soft_lutpair174";
+  attribute SOFT_HLUTNM of \count_value_i[0]_i_1\ : label is "soft_lutpair174";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1\ : label is "soft_lutpair174";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1\ : label is "soft_lutpair173";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1\ : label is "soft_lutpair173";
 begin
 \count_value_i[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
@@ -21299,10 +21299,10 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_6_n_0\ : STD_LOGIC;
   signal \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_7_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[0]_i_1\ : label is "soft_lutpair143";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1\ : label is "soft_lutpair143";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1\ : label is "soft_lutpair142";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1\ : label is "soft_lutpair142";
+  attribute SOFT_HLUTNM of \count_value_i[0]_i_1\ : label is "soft_lutpair142";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1\ : label is "soft_lutpair142";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1\ : label is "soft_lutpair141";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1\ : label is "soft_lutpair141";
 begin
 \count_value_i[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
@@ -21585,10 +21585,10 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_6_n_0\ : STD_LOGIC;
   signal \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_7_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[0]_i_1\ : label is "soft_lutpair110";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1\ : label is "soft_lutpair110";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1\ : label is "soft_lutpair109";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1\ : label is "soft_lutpair109";
+  attribute SOFT_HLUTNM of \count_value_i[0]_i_1\ : label is "soft_lutpair109";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1\ : label is "soft_lutpair109";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1\ : label is "soft_lutpair108";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1\ : label is "soft_lutpair108";
 begin
 \count_value_i[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
@@ -21900,18 +21900,18 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \NLW_grdc.rd_data_count_i_reg[9]_i_2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 1 );
   signal \NLW_grdc.rd_data_count_i_reg[9]_i_2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 2 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__3\ : label is "soft_lutpair248";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__3\ : label is "soft_lutpair248";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__3\ : label is "soft_lutpair245";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__3\ : label is "soft_lutpair245";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_1\ : label is "soft_lutpair249";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11\ : label is "soft_lutpair246";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_12\ : label is "soft_lutpair247";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2\ : label is "soft_lutpair249";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_4\ : label is "soft_lutpair246";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_5\ : label is "soft_lutpair250";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6\ : label is "soft_lutpair250";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_8\ : label is "soft_lutpair247";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__3\ : label is "soft_lutpair247";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__3\ : label is "soft_lutpair247";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__3\ : label is "soft_lutpair244";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__3\ : label is "soft_lutpair244";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_1\ : label is "soft_lutpair248";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11\ : label is "soft_lutpair245";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_12\ : label is "soft_lutpair246";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2\ : label is "soft_lutpair248";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_4\ : label is "soft_lutpair245";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_5\ : label is "soft_lutpair249";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6\ : label is "soft_lutpair249";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_8\ : label is "soft_lutpair246";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \grdc.rd_data_count_i_reg[7]_i_1\ : label is 35;
   attribute METHODOLOGY_DRC_VIOS : string;
@@ -22634,18 +22634,18 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \NLW_grdc.rd_data_count_i_reg[9]_i_2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 1 );
   signal \NLW_grdc.rd_data_count_i_reg[9]_i_2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 2 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__3\ : label is "soft_lutpair204";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__3\ : label is "soft_lutpair204";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__3\ : label is "soft_lutpair201";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__3\ : label is "soft_lutpair201";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_1\ : label is "soft_lutpair205";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11\ : label is "soft_lutpair202";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_12\ : label is "soft_lutpair203";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2\ : label is "soft_lutpair205";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_4\ : label is "soft_lutpair202";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_5\ : label is "soft_lutpair206";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6\ : label is "soft_lutpair206";
-  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_8\ : label is "soft_lutpair203";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__3\ : label is "soft_lutpair203";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__3\ : label is "soft_lutpair203";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__3\ : label is "soft_lutpair200";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__3\ : label is "soft_lutpair200";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_1\ : label is "soft_lutpair204";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11\ : label is "soft_lutpair201";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_12\ : label is "soft_lutpair202";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2\ : label is "soft_lutpair204";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_4\ : label is "soft_lutpair201";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_5\ : label is "soft_lutpair205";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6\ : label is "soft_lutpair205";
+  attribute SOFT_HLUTNM of \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_8\ : label is "soft_lutpair202";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \grdc.rd_data_count_i_reg[7]_i_1\ : label is 35;
   attribute METHODOLOGY_DRC_VIOS : string;
@@ -23355,12 +23355,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \NLW_gwdc.wr_data_count_i_reg[9]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 1 );
   signal \NLW_gwdc.wr_data_count_i_reg[9]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 2 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__1\ : label is "soft_lutpair212";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__1\ : label is "soft_lutpair212";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__1\ : label is "soft_lutpair211";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__1\ : label is "soft_lutpair211";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1\ : label is "soft_lutpair210";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1\ : label is "soft_lutpair210";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__1\ : label is "soft_lutpair211";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__1\ : label is "soft_lutpair211";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__1\ : label is "soft_lutpair210";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__1\ : label is "soft_lutpair210";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1\ : label is "soft_lutpair209";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1\ : label is "soft_lutpair209";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \gwdc.wr_data_count_i_reg[7]_i_1\ : label is 35;
   attribute ADDER_THRESHOLD of \gwdc.wr_data_count_i_reg[9]_i_1\ : label is 35;
@@ -23799,12 +23799,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \NLW_gwdc.wr_data_count_i_reg[9]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 1 );
   signal \NLW_gwdc.wr_data_count_i_reg[9]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 2 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__1\ : label is "soft_lutpair256";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__1\ : label is "soft_lutpair256";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__1\ : label is "soft_lutpair255";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__1\ : label is "soft_lutpair255";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1\ : label is "soft_lutpair254";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1\ : label is "soft_lutpair254";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__1\ : label is "soft_lutpair255";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__1\ : label is "soft_lutpair255";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__1\ : label is "soft_lutpair254";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__1\ : label is "soft_lutpair254";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1\ : label is "soft_lutpair253";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1\ : label is "soft_lutpair253";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \gwdc.wr_data_count_i_reg[7]_i_1\ : label is 35;
   attribute ADDER_THRESHOLD of \gwdc.wr_data_count_i_reg[9]_i_1\ : label is 35;
@@ -24232,10 +24232,10 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \gen_pf_ic_rc.ram_empty_i_i_3_n_0\ : STD_LOGIC;
   signal \gen_pf_ic_rc.ram_empty_i_i_4_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__2\ : label is "soft_lutpair252";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__2\ : label is "soft_lutpair252";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__2\ : label is "soft_lutpair251";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__2\ : label is "soft_lutpair251";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__2\ : label is "soft_lutpair251";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__2\ : label is "soft_lutpair251";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__2\ : label is "soft_lutpair250";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__2\ : label is "soft_lutpair250";
 begin
 \count_value_i[0]_i_1__3\: unisim.vcomponents.LUT4
     generic map(
@@ -24565,10 +24565,10 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \gen_pf_ic_rc.ram_empty_i_i_3_n_0\ : STD_LOGIC;
   signal \gen_pf_ic_rc.ram_empty_i_i_4_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__2\ : label is "soft_lutpair208";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__2\ : label is "soft_lutpair208";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__2\ : label is "soft_lutpair207";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__2\ : label is "soft_lutpair207";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__2\ : label is "soft_lutpair207";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__2\ : label is "soft_lutpair207";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__2\ : label is "soft_lutpair206";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__2\ : label is "soft_lutpair206";
 begin
 \count_value_i[0]_i_1__3\: unisim.vcomponents.LUT4
     generic map(
@@ -24906,12 +24906,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \NLW_gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[9]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[9]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 1 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__0\ : label is "soft_lutpair215";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__0\ : label is "soft_lutpair215";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__0\ : label is "soft_lutpair214";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__0\ : label is "soft_lutpair214";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__0\ : label is "soft_lutpair213";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__0\ : label is "soft_lutpair213";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__0\ : label is "soft_lutpair214";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__0\ : label is "soft_lutpair214";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__0\ : label is "soft_lutpair213";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__0\ : label is "soft_lutpair213";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__0\ : label is "soft_lutpair212";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__0\ : label is "soft_lutpair212";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[8]_i_1\ : label is 35;
   attribute ADDER_THRESHOLD of \gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[9]_i_1\ : label is 35;
@@ -25311,12 +25311,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \NLW_gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[9]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[9]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 1 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__0\ : label is "soft_lutpair259";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__0\ : label is "soft_lutpair259";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__0\ : label is "soft_lutpair258";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__0\ : label is "soft_lutpair258";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__0\ : label is "soft_lutpair257";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__0\ : label is "soft_lutpair257";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__0\ : label is "soft_lutpair258";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1__0\ : label is "soft_lutpair258";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1__0\ : label is "soft_lutpair257";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1__0\ : label is "soft_lutpair257";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__0\ : label is "soft_lutpair256";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__0\ : label is "soft_lutpair256";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[8]_i_1\ : label is 35;
   attribute ADDER_THRESHOLD of \gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[9]_i_1\ : label is 35;
@@ -25694,12 +25694,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \count_value_i[8]_i_1__1_n_0\ : STD_LOGIC;
   signal \count_value_i[8]_i_2__0_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[0]_i_1\ : label is "soft_lutpair262";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1\ : label is "soft_lutpair262";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1\ : label is "soft_lutpair261";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1\ : label is "soft_lutpair261";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__1\ : label is "soft_lutpair260";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__1\ : label is "soft_lutpair260";
+  attribute SOFT_HLUTNM of \count_value_i[0]_i_1\ : label is "soft_lutpair261";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1\ : label is "soft_lutpair261";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1\ : label is "soft_lutpair260";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1\ : label is "soft_lutpair260";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__1\ : label is "soft_lutpair259";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__1\ : label is "soft_lutpair259";
 begin
   Q(8 downto 0) <= \^q\(8 downto 0);
 \count_value_i[0]_i_1\: unisim.vcomponents.LUT1
@@ -25958,12 +25958,12 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_counter_updn__paramete
   signal \count_value_i[8]_i_1__1_n_0\ : STD_LOGIC;
   signal \count_value_i[8]_i_2__0_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[0]_i_1\ : label is "soft_lutpair218";
-  attribute SOFT_HLUTNM of \count_value_i[2]_i_1\ : label is "soft_lutpair218";
-  attribute SOFT_HLUTNM of \count_value_i[3]_i_1\ : label is "soft_lutpair217";
-  attribute SOFT_HLUTNM of \count_value_i[4]_i_1\ : label is "soft_lutpair217";
-  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__1\ : label is "soft_lutpair216";
-  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__1\ : label is "soft_lutpair216";
+  attribute SOFT_HLUTNM of \count_value_i[0]_i_1\ : label is "soft_lutpair217";
+  attribute SOFT_HLUTNM of \count_value_i[2]_i_1\ : label is "soft_lutpair217";
+  attribute SOFT_HLUTNM of \count_value_i[3]_i_1\ : label is "soft_lutpair216";
+  attribute SOFT_HLUTNM of \count_value_i[4]_i_1\ : label is "soft_lutpair216";
+  attribute SOFT_HLUTNM of \count_value_i[7]_i_1__1\ : label is "soft_lutpair215";
+  attribute SOFT_HLUTNM of \count_value_i[8]_i_1__1\ : label is "soft_lutpair215";
 begin
   Q(8 downto 0) <= \^q\(8 downto 0);
 \count_value_i[0]_i_1\: unisim.vcomponents.LUT1
@@ -26217,8 +26217,8 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit is
   signal \^clr_full\ : STD_LOGIC;
   signal \^rst_d1\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_6\ : label is "soft_lutpair253";
-  attribute SOFT_HLUTNM of \gof.overflow_i_i_1\ : label is "soft_lutpair253";
+  attribute SOFT_HLUTNM of \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_6\ : label is "soft_lutpair252";
+  attribute SOFT_HLUTNM of \gof.overflow_i_i_1\ : label is "soft_lutpair252";
 begin
   clr_full <= \^clr_full\;
   rst_d1 <= \^rst_d1\;
@@ -26295,8 +26295,8 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_12 is
   signal \^clr_full\ : STD_LOGIC;
   signal \^rst_d1\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_6\ : label is "soft_lutpair209";
-  attribute SOFT_HLUTNM of \gof.overflow_i_i_1\ : label is "soft_lutpair209";
+  attribute SOFT_HLUTNM of \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_6\ : label is "soft_lutpair208";
+  attribute SOFT_HLUTNM of \gof.overflow_i_i_1\ : label is "soft_lutpair208";
 begin
   clr_full <= \^clr_full\;
   rst_d1 <= \^rst_d1\;
@@ -26372,8 +26372,8 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_21 is
   signal clr_full : STD_LOGIC;
   signal \^rst_d1\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \gen_pf_ic_rc.gpf_ic.prog_full_i_i_3\ : label is "soft_lutpair168";
-  attribute SOFT_HLUTNM of \gof.overflow_i_i_1\ : label is "soft_lutpair168";
+  attribute SOFT_HLUTNM of \gen_pf_ic_rc.gpf_ic.prog_full_i_i_3\ : label is "soft_lutpair167";
+  attribute SOFT_HLUTNM of \gof.overflow_i_i_1\ : label is "soft_lutpair167";
 begin
   rst_d1 <= \^rst_d1\;
 d_out_reg: unisim.vcomponents.FDRE
@@ -26447,8 +26447,8 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_31 is
   signal clr_full : STD_LOGIC;
   signal \^rst_d1\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \gen_pf_ic_rc.gpf_ic.prog_full_i_i_3\ : label is "soft_lutpair136";
-  attribute SOFT_HLUTNM of \gof.overflow_i_i_1\ : label is "soft_lutpair136";
+  attribute SOFT_HLUTNM of \gen_pf_ic_rc.gpf_ic.prog_full_i_i_3\ : label is "soft_lutpair135";
+  attribute SOFT_HLUTNM of \gof.overflow_i_i_1\ : label is "soft_lutpair135";
 begin
   rst_d1 <= \^rst_d1\;
 d_out_reg: unisim.vcomponents.FDRE
@@ -26522,8 +26522,8 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_43 is
   signal clr_full : STD_LOGIC;
   signal \^rst_d1\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \gen_pf_ic_rc.gpf_ic.prog_full_i_i_3\ : label is "soft_lutpair103";
-  attribute SOFT_HLUTNM of \gof.overflow_i_i_1\ : label is "soft_lutpair103";
+  attribute SOFT_HLUTNM of \gen_pf_ic_rc.gpf_ic.prog_full_i_i_3\ : label is "soft_lutpair102";
+  attribute SOFT_HLUTNM of \gof.overflow_i_i_1\ : label is "soft_lutpair102";
 begin
   rst_d1 <= \^rst_d1\;
 d_out_reg: unisim.vcomponents.FDRE
@@ -26599,8 +26599,8 @@ end apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_50;
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_50 is
   signal \^rst_d1\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.read_only_q_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.write_only_q_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.read_only_q_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.write_only_q_i_1\ : label is "soft_lutpair6";
 begin
   rst_d1 <= \^rst_d1\;
 d_out_reg: unisim.vcomponents.FDRE
@@ -30621,10 +30621,10 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_xpm_fifo_rst is
   signal \^ram_wr_en_pf\ : STD_LOGIC;
   signal rst_i : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__3\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \gen_sdpram.xpm_memory_base_inst_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \grdc.rd_data_count_i[8]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of wr_rst_busy_INST_0 : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__3\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \gen_sdpram.xpm_memory_base_inst_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \grdc.rd_data_count_i[8]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of wr_rst_busy_INST_0 : label is "soft_lutpair12";
 begin
   Q(0) <= \^q\(0);
   ram_wr_en_pf <= \^ram_wr_en_pf\;
@@ -35011,8 +35011,8 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv1
   signal storage_data2 : STD_LOGIC_VECTOR ( 27 downto 0 );
   signal tx_user_data_valid : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_state[0]_i_1\ : label is "soft_lutpair66";
-  attribute SOFT_HLUTNM of \FSM_onehot_state[1]_i_1\ : label is "soft_lutpair66";
+  attribute SOFT_HLUTNM of \FSM_onehot_state[0]_i_1\ : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of \FSM_onehot_state[1]_i_1\ : label is "soft_lutpair65";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[0]\ : label is "ZERO:1000,TWO:0001,iSTATE:0100,ONE:0010";
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[1]\ : label is "ZERO:1000,TWO:0001,iSTATE:0100,ONE:0010";
@@ -35020,38 +35020,38 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv1
   attribute equivalent_register_removal : string;
   attribute equivalent_register_removal of \areset_d_reg[0]\ : label is "no";
   attribute equivalent_register_removal of \areset_d_reg[1]\ : label is "no";
-  attribute SOFT_HLUTNM of axi_c2c_aurora_tx_tvalid_INST_0 : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of \mux_by_2.data_count[1]_i_1\ : label is "soft_lutpair68";
-  attribute SOFT_HLUTNM of \state[1]_i_1\ : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of \storage_data1[0]_i_1\ : label is "soft_lutpair82";
-  attribute SOFT_HLUTNM of \storage_data1[10]_i_1\ : label is "soft_lutpair77";
-  attribute SOFT_HLUTNM of \storage_data1[11]_i_1\ : label is "soft_lutpair77";
-  attribute SOFT_HLUTNM of \storage_data1[12]_i_1\ : label is "soft_lutpair76";
-  attribute SOFT_HLUTNM of \storage_data1[13]_i_1\ : label is "soft_lutpair76";
-  attribute SOFT_HLUTNM of \storage_data1[14]_i_1\ : label is "soft_lutpair75";
-  attribute SOFT_HLUTNM of \storage_data1[15]_i_1\ : label is "soft_lutpair75";
-  attribute SOFT_HLUTNM of \storage_data1[16]_i_1\ : label is "soft_lutpair74";
-  attribute SOFT_HLUTNM of \storage_data1[17]_i_1\ : label is "soft_lutpair74";
-  attribute SOFT_HLUTNM of \storage_data1[18]_i_1\ : label is "soft_lutpair73";
-  attribute SOFT_HLUTNM of \storage_data1[19]_i_1\ : label is "soft_lutpair73";
-  attribute SOFT_HLUTNM of \storage_data1[1]_i_1\ : label is "soft_lutpair82";
-  attribute SOFT_HLUTNM of \storage_data1[20]_i_1\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \storage_data1[21]_i_1\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \storage_data1[22]_i_1\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \storage_data1[23]_i_1\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \storage_data1[24]_i_1\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \storage_data1[25]_i_1\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \storage_data1[26]_i_1\ : label is "soft_lutpair69";
-  attribute SOFT_HLUTNM of \storage_data1[2]_i_1\ : label is "soft_lutpair81";
-  attribute SOFT_HLUTNM of \storage_data1[30]_i_2\ : label is "soft_lutpair69";
-  attribute SOFT_HLUTNM of \storage_data1[3]_i_1\ : label is "soft_lutpair81";
-  attribute SOFT_HLUTNM of \storage_data1[4]_i_1\ : label is "soft_lutpair80";
-  attribute SOFT_HLUTNM of \storage_data1[5]_i_1\ : label is "soft_lutpair80";
-  attribute SOFT_HLUTNM of \storage_data1[6]_i_1\ : label is "soft_lutpair79";
-  attribute SOFT_HLUTNM of \storage_data1[7]_i_1\ : label is "soft_lutpair79";
-  attribute SOFT_HLUTNM of \storage_data1[8]_i_1\ : label is "soft_lutpair78";
-  attribute SOFT_HLUTNM of \storage_data1[9]_i_1\ : label is "soft_lutpair78";
-  attribute SOFT_HLUTNM of \xpm_fifo_async_inst_i_2__2\ : label is "soft_lutpair68";
+  attribute SOFT_HLUTNM of axi_c2c_aurora_tx_tvalid_INST_0 : label is "soft_lutpair66";
+  attribute SOFT_HLUTNM of \mux_by_2.data_count[1]_i_1\ : label is "soft_lutpair67";
+  attribute SOFT_HLUTNM of \state[1]_i_1\ : label is "soft_lutpair66";
+  attribute SOFT_HLUTNM of \storage_data1[0]_i_1\ : label is "soft_lutpair81";
+  attribute SOFT_HLUTNM of \storage_data1[10]_i_1\ : label is "soft_lutpair76";
+  attribute SOFT_HLUTNM of \storage_data1[11]_i_1\ : label is "soft_lutpair76";
+  attribute SOFT_HLUTNM of \storage_data1[12]_i_1\ : label is "soft_lutpair75";
+  attribute SOFT_HLUTNM of \storage_data1[13]_i_1\ : label is "soft_lutpair75";
+  attribute SOFT_HLUTNM of \storage_data1[14]_i_1\ : label is "soft_lutpair74";
+  attribute SOFT_HLUTNM of \storage_data1[15]_i_1\ : label is "soft_lutpair74";
+  attribute SOFT_HLUTNM of \storage_data1[16]_i_1\ : label is "soft_lutpair73";
+  attribute SOFT_HLUTNM of \storage_data1[17]_i_1\ : label is "soft_lutpair73";
+  attribute SOFT_HLUTNM of \storage_data1[18]_i_1\ : label is "soft_lutpair72";
+  attribute SOFT_HLUTNM of \storage_data1[19]_i_1\ : label is "soft_lutpair72";
+  attribute SOFT_HLUTNM of \storage_data1[1]_i_1\ : label is "soft_lutpair81";
+  attribute SOFT_HLUTNM of \storage_data1[20]_i_1\ : label is "soft_lutpair71";
+  attribute SOFT_HLUTNM of \storage_data1[21]_i_1\ : label is "soft_lutpair71";
+  attribute SOFT_HLUTNM of \storage_data1[22]_i_1\ : label is "soft_lutpair70";
+  attribute SOFT_HLUTNM of \storage_data1[23]_i_1\ : label is "soft_lutpair70";
+  attribute SOFT_HLUTNM of \storage_data1[24]_i_1\ : label is "soft_lutpair69";
+  attribute SOFT_HLUTNM of \storage_data1[25]_i_1\ : label is "soft_lutpair69";
+  attribute SOFT_HLUTNM of \storage_data1[26]_i_1\ : label is "soft_lutpair68";
+  attribute SOFT_HLUTNM of \storage_data1[2]_i_1\ : label is "soft_lutpair80";
+  attribute SOFT_HLUTNM of \storage_data1[30]_i_2\ : label is "soft_lutpair68";
+  attribute SOFT_HLUTNM of \storage_data1[3]_i_1\ : label is "soft_lutpair80";
+  attribute SOFT_HLUTNM of \storage_data1[4]_i_1\ : label is "soft_lutpair79";
+  attribute SOFT_HLUTNM of \storage_data1[5]_i_1\ : label is "soft_lutpair79";
+  attribute SOFT_HLUTNM of \storage_data1[6]_i_1\ : label is "soft_lutpair78";
+  attribute SOFT_HLUTNM of \storage_data1[7]_i_1\ : label is "soft_lutpair78";
+  attribute SOFT_HLUTNM of \storage_data1[8]_i_1\ : label is "soft_lutpair77";
+  attribute SOFT_HLUTNM of \storage_data1[9]_i_1\ : label is "soft_lutpair77";
+  attribute SOFT_HLUTNM of \xpm_fifo_async_inst_i_2__2\ : label is "soft_lutpair67";
 begin
   Q(0) <= \^q\(0);
   s_ready_i_reg_0(0) <= \^s_ready_i_reg_0\(0);
@@ -36211,12 +36211,12 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_aurora
   attribute srl_bus_name of \pma_init_stage_reg[98]_srl32\ : label is "inst/\slave_fpga_gen.axi_chip2chip_slave_phy_inst/aurora_phy.standard_cc_module_inst/pma_init_stage_reg ";
   attribute srl_name of \pma_init_stage_reg[98]_srl32\ : label is "inst/\slave_fpga_gen.axi_chip2chip_slave_phy_inst/aurora_phy.standard_cc_module_inst/pma_init_stage_reg[98]_srl32 ";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of reset_count_start_i_2 : label is "soft_lutpair269";
-  attribute SOFT_HLUTNM of \reset_counter[1]_i_1\ : label is "soft_lutpair270";
-  attribute SOFT_HLUTNM of \reset_counter[2]_i_1\ : label is "soft_lutpair270";
-  attribute SOFT_HLUTNM of \reset_counter[3]_i_1\ : label is "soft_lutpair268";
-  attribute SOFT_HLUTNM of \reset_counter[4]_i_1\ : label is "soft_lutpair268";
-  attribute SOFT_HLUTNM of \reset_counter[6]_i_1\ : label is "soft_lutpair269";
+  attribute SOFT_HLUTNM of reset_count_start_i_2 : label is "soft_lutpair268";
+  attribute SOFT_HLUTNM of \reset_counter[1]_i_1\ : label is "soft_lutpair269";
+  attribute SOFT_HLUTNM of \reset_counter[2]_i_1\ : label is "soft_lutpair269";
+  attribute SOFT_HLUTNM of \reset_counter[3]_i_1\ : label is "soft_lutpair267";
+  attribute SOFT_HLUTNM of \reset_counter[4]_i_1\ : label is "soft_lutpair267";
+  attribute SOFT_HLUTNM of \reset_counter[6]_i_1\ : label is "soft_lutpair268";
 begin
   aurora_rst_out_pma <= \^aurora_rst_out_pma\;
 DO_CC0: unisim.vcomponents.LUT6
@@ -37787,10 +37787,10 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_decode
   signal rx_ch0_valid : STD_LOGIC;
   signal rx_dec_data : STD_LOGIC_VECTOR ( 25 to 25 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of ch0_valid_i_1 : label is "soft_lutpair183";
-  attribute SOFT_HLUTNM of ch1_valid_i_1 : label is "soft_lutpair183";
-  attribute SOFT_HLUTNM of ch2_valid_i_1 : label is "soft_lutpair182";
-  attribute SOFT_HLUTNM of ch3_valid_i_1 : label is "soft_lutpair182";
+  attribute SOFT_HLUTNM of ch0_valid_i_1 : label is "soft_lutpair182";
+  attribute SOFT_HLUTNM of ch1_valid_i_1 : label is "soft_lutpair182";
+  attribute SOFT_HLUTNM of ch2_valid_i_1 : label is "soft_lutpair181";
+  attribute SOFT_HLUTNM of ch3_valid_i_1 : label is "soft_lutpair181";
 begin
   \data_out_reg[24]_0\(24 downto 0) <= \^data_out_reg[24]_0\(24 downto 0);
 ch0_valid_i_1: unisim.vcomponents.LUT5
@@ -38849,12 +38849,12 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_reset_
   attribute shreg_extract : string;
   attribute shreg_extract of sync_reset_flop : signal is "no";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \auto_neg_intr_gen.tx_ch0_data[1]_i_1\ : label is "soft_lutpair273";
-  attribute SOFT_HLUTNM of \auto_neg_intr_gen.tx_ch0_data[24]_i_2\ : label is "soft_lutpair273";
-  attribute SOFT_HLUTNM of \auto_neg_intr_gen.tx_ch0_data[2]_i_1\ : label is "soft_lutpair272";
-  attribute SOFT_HLUTNM of \auto_neg_intr_gen.tx_ch0_data[3]_i_1\ : label is "soft_lutpair272";
-  attribute SOFT_HLUTNM of \rst_cntrl_lnk_hndlr_en.link_dwn_indi_r_i_1\ : label is "soft_lutpair271";
-  attribute SOFT_HLUTNM of \state[4]_i_1\ : label is "soft_lutpair271";
+  attribute SOFT_HLUTNM of \auto_neg_intr_gen.tx_ch0_data[1]_i_1\ : label is "soft_lutpair272";
+  attribute SOFT_HLUTNM of \auto_neg_intr_gen.tx_ch0_data[24]_i_2\ : label is "soft_lutpair272";
+  attribute SOFT_HLUTNM of \auto_neg_intr_gen.tx_ch0_data[2]_i_1\ : label is "soft_lutpair271";
+  attribute SOFT_HLUTNM of \auto_neg_intr_gen.tx_ch0_data[3]_i_1\ : label is "soft_lutpair271";
+  attribute SOFT_HLUTNM of \rst_cntrl_lnk_hndlr_en.link_dwn_indi_r_i_1\ : label is "soft_lutpair270";
+  attribute SOFT_HLUTNM of \state[4]_i_1\ : label is "soft_lutpair270";
   attribute ASYNC_REG_boolean : boolean;
   attribute ASYNC_REG_boolean of \sync_reset_flop_reg[0]\ : label is std.standard.true;
   attribute KEEP : string;
@@ -39038,9 +39038,7 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr is
     m_axi_arid : out STD_LOGIC_VECTOR ( 5 downto 0 );
     m_axi_arvalid : out STD_LOGIC;
     axi_c2c_link_status_out : out STD_LOGIC;
-    axi_c2c_lnk_hndlr_in_progress : out STD_LOGIC;
-    \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg\ : out STD_LOGIC;
-    \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_0\ : out STD_LOGIC;
+    srd_lnk_hndlr_in_progress_r_reg_1 : out STD_LOGIC;
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_aclk : in STD_LOGIC;
     m_axi_arvalid_0 : in STD_LOGIC;
@@ -39053,8 +39051,8 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr is
     \srd_addr_trans_cntr_r_reg[0]_1\ : in STD_LOGIC;
     m_axi_rlast : in STD_LOGIC;
     m_axi_rvalid : in STD_LOGIC;
-    \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep\ : in STD_LOGIC;
-    srd_lnk_hndlr_in_progress_r_reg_1 : in STD_LOGIC
+    \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg\ : in STD_LOGIC;
+    srd_lnk_hndlr_in_progress_r_reg_2 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr : entity is "axi_chip2chip_v5_0_8_srd_lnk_hndlr";
@@ -39111,9 +39109,7 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_ln
   signal \NLW_srd_addr_trans_cntr_r_reg[8]_i_2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 to 7 );
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of axi_c2c_lnk_hndlr_in_progress_INST_0 : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \m_axi_araddr[14]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \m_axi_araddr[16]_INST_0\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \m_axi_araddr[29]_INST_0\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \s_lnk_hndlr_arid_r[5]_i_2\ : label is "soft_lutpair0";
   attribute ADDER_THRESHOLD : integer;
@@ -39133,40 +39129,21 @@ begin
       INIT => X"FE"
     )
         port map (
-      I0 => slv_wait_for_rst_r,
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep\,
-      O => \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg\
-    );
-\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_rep_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"FE"
-    )
-        port map (
-      I0 => slv_wait_for_rst_r,
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep\,
-      O => \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_0\
+      I0 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
+      I1 => \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg\,
+      I2 => slv_wait_for_rst_r,
+      O => srd_lnk_hndlr_in_progress_r_reg_1
     );
 axi_c2c_link_status_out_INST_0: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0010"
+      INIT => X"0004"
     )
         port map (
-      I0 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I1 => \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep\,
-      I2 => \out\(0),
-      I3 => slv_wait_for_rst_r,
+      I0 => slv_wait_for_rst_r,
+      I1 => \out\(0),
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg\,
       O => axi_c2c_link_status_out
-    );
-axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I1 => \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep\,
-      O => axi_c2c_lnk_hndlr_in_progress
     );
 \m_axi_araddr[0]_INST_0\: unisim.vcomponents.LUT4
     generic map(
@@ -39174,8 +39151,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(18),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(0),
       O => \^m_axi_araddr\(0)
     );
@@ -39185,8 +39162,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(28),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(10),
       O => \^m_axi_araddr\(10)
     );
@@ -39196,8 +39173,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(29),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(11),
       O => \^m_axi_araddr\(11)
     );
@@ -39207,8 +39184,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(30),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(12),
       O => \^m_axi_araddr\(12)
     );
@@ -39218,8 +39195,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(31),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(13),
       O => \^m_axi_araddr\(13)
     );
@@ -39229,8 +39206,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(32),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(14),
       O => \^m_axi_araddr\(14)
     );
@@ -39240,8 +39217,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(33),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(15),
       O => \^m_axi_araddr\(15)
     );
@@ -39251,8 +39228,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(34),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(16),
       O => \^m_axi_araddr\(16)
     );
@@ -39262,8 +39239,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(35),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(17),
       O => \^m_axi_araddr\(17)
     );
@@ -39273,8 +39250,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(36),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(18),
       O => \^m_axi_araddr\(18)
     );
@@ -39284,8 +39261,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(37),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(19),
       O => \^m_axi_araddr\(19)
     );
@@ -39295,8 +39272,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(19),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(1),
       O => \^m_axi_araddr\(1)
     );
@@ -39306,8 +39283,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(38),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(20),
       O => \^m_axi_araddr\(20)
     );
@@ -39317,8 +39294,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(39),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(21),
       O => \^m_axi_araddr\(21)
     );
@@ -39328,8 +39305,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(40),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(22),
       O => \^m_axi_araddr\(22)
     );
@@ -39339,8 +39316,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(41),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(23),
       O => \^m_axi_araddr\(23)
     );
@@ -39350,8 +39327,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(42),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(24),
       O => \^m_axi_araddr\(24)
     );
@@ -39361,8 +39338,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(43),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(25),
       O => \^m_axi_araddr\(25)
     );
@@ -39372,8 +39349,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(44),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(26),
       O => \^m_axi_araddr\(26)
     );
@@ -39383,8 +39360,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(45),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(27),
       O => \^m_axi_araddr\(27)
     );
@@ -39394,8 +39371,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(46),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(28),
       O => \^m_axi_araddr\(28)
     );
@@ -39405,8 +39382,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(47),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(29),
       O => \^m_axi_araddr\(29)
     );
@@ -39416,8 +39393,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(20),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(2),
       O => \^m_axi_araddr\(2)
     );
@@ -39427,8 +39404,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(48),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(30),
       O => \^m_axi_araddr\(30)
     );
@@ -39438,8 +39415,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(49),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(31),
       O => \^m_axi_araddr\(31)
     );
@@ -39449,8 +39426,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(21),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(3),
       O => \^m_axi_araddr\(3)
     );
@@ -39460,8 +39437,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(22),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(4),
       O => \^m_axi_araddr\(4)
     );
@@ -39471,8 +39448,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(23),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(5),
       O => \^m_axi_araddr\(5)
     );
@@ -39482,8 +39459,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(24),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(6),
       O => \^m_axi_araddr\(6)
     );
@@ -39493,8 +39470,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(25),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(7),
       O => \^m_axi_araddr\(7)
     );
@@ -39504,8 +39481,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(26),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(8),
       O => \^m_axi_araddr\(8)
     );
@@ -39515,8 +39492,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(27),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_araddr(9),
       O => \^m_axi_araddr\(9)
     );
@@ -39526,8 +39503,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(16),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arburst(0),
       O => \^m_axi_arburst\(0)
     );
@@ -39537,8 +39514,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(17),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arburst(1),
       O => \^m_axi_arburst\(1)
     );
@@ -39548,8 +39525,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(0),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arid(0),
       O => \^m_axi_arid\(0)
     );
@@ -39559,8 +39536,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(1),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arid(1),
       O => \^m_axi_arid\(1)
     );
@@ -39570,8 +39547,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(2),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arid(2),
       O => \^m_axi_arid\(2)
     );
@@ -39581,8 +39558,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(3),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arid(3),
       O => \^m_axi_arid\(3)
     );
@@ -39592,8 +39569,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(4),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arid(4),
       O => \^m_axi_arid\(4)
     );
@@ -39603,8 +39580,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(5),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arid(5),
       O => \^m_axi_arid\(5)
     );
@@ -39614,8 +39591,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(6),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arlen(0),
       O => \^m_axi_arlen\(0)
     );
@@ -39625,8 +39602,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(7),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arlen(1),
       O => \^m_axi_arlen\(1)
     );
@@ -39636,8 +39613,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(8),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arlen(2),
       O => \^m_axi_arlen\(2)
     );
@@ -39647,8 +39624,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(9),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arlen(3),
       O => \^m_axi_arlen\(3)
     );
@@ -39658,8 +39635,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(10),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arlen(4),
       O => \^m_axi_arlen\(4)
     );
@@ -39669,8 +39646,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(11),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arlen(5),
       O => \^m_axi_arlen\(5)
     );
@@ -39680,8 +39657,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(12),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arlen(6),
       O => \^m_axi_arlen\(6)
     );
@@ -39691,8 +39668,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(13),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arlen(7),
       O => \^m_axi_arlen\(7)
     );
@@ -39702,8 +39679,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(14),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arsize(0),
       O => \^m_axi_arsize\(0)
     );
@@ -39713,8 +39690,8 @@ axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
     )
         port map (
       I0 => \s_lnk_hndlr_araddr_r_reg[31]_0\(15),
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => slv_wait_for_rst_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       I3 => s_lnk_hndlr_arsize(1),
       O => \^m_axi_arsize\(1)
     );
@@ -39723,8 +39700,8 @@ m_axi_arvalid_INST_0: unisim.vcomponents.LUT4
       INIT => X"EF01"
     )
         port map (
-      I0 => slv_wait_for_rst_r,
-      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
+      I0 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
+      I1 => slv_wait_for_rst_r,
       I2 => m_axi_arvalid_0,
       I3 => s_lnk_hndlr_arvalid,
       O => m_axi_arvalid
@@ -40019,8 +39996,8 @@ m_axi_arvalid_INST_0: unisim.vcomponents.LUT4
       INIT => X"1"
     )
         port map (
-      I0 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
-      I1 => slv_wait_for_rst_r,
+      I0 => slv_wait_for_rst_r,
+      I1 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       O => \s_lnk_hndlr_arid_r[5]_i_2_n_0\
     );
 \s_lnk_hndlr_arid_r_reg[0]\: unisim.vcomponents.FDRE
@@ -40200,15 +40177,15 @@ s_lnk_hndlr_rready_r_reg: unisim.vcomponents.FDRE
     );
 \srd_addr_trans_cntr_r[8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"555CFFFFAAA30000"
+      INIT => X"666666A5AAAAAAAA"
     )
         port map (
-      I0 => s_lnk_hndlr_arvalid,
-      I1 => m_axi_arvalid_0,
-      I2 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
+      I0 => \srd_addr_trans_cntr_r[8]_i_3_n_0\,
+      I1 => s_lnk_hndlr_arvalid,
+      I2 => m_axi_arvalid_0,
       I3 => slv_wait_for_rst_r,
-      I4 => m_axi_arready,
-      I5 => \srd_addr_trans_cntr_r[8]_i_3_n_0\,
+      I4 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
+      I5 => m_axi_arready,
       O => srd_addr_trans_cntr_r
     );
 \srd_addr_trans_cntr_r[8]_i_10\: unisim.vcomponents.LUT2
@@ -40418,10 +40395,10 @@ srd_lnk_hndlr_in_progress_r_i_1: unisim.vcomponents.LUT6
     )
         port map (
       I0 => srd_lnk_hndlr_in_progress_r_i_2_n_0,
-      I1 => srd_addr_trans_cntr_r_reg(4),
-      I2 => srd_addr_trans_cntr_r_reg(6),
-      I3 => srd_addr_trans_cntr_r_reg(1),
-      I4 => srd_lnk_hndlr_in_progress_r_reg_1,
+      I1 => srd_addr_trans_cntr_r_reg(0),
+      I2 => srd_addr_trans_cntr_r_reg(1),
+      I3 => srd_addr_trans_cntr_r_reg(8),
+      I4 => srd_lnk_hndlr_in_progress_r_reg_2,
       I5 => \^srd_lnk_hndlr_in_progress_r_reg_0\,
       O => srd_lnk_hndlr_in_progress_r_i_1_n_0
     );
@@ -40430,12 +40407,12 @@ srd_lnk_hndlr_in_progress_r_i_2: unisim.vcomponents.LUT6
       INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => srd_addr_trans_cntr_r_reg(8),
-      I1 => srd_addr_trans_cntr_r_reg(7),
-      I2 => srd_addr_trans_cntr_r_reg(3),
-      I3 => srd_addr_trans_cntr_r_reg(5),
-      I4 => srd_addr_trans_cntr_r_reg(2),
-      I5 => srd_addr_trans_cntr_r_reg(0),
+      I0 => srd_addr_trans_cntr_r_reg(3),
+      I1 => srd_addr_trans_cntr_r_reg(2),
+      I2 => srd_addr_trans_cntr_r_reg(6),
+      I3 => srd_addr_trans_cntr_r_reg(7),
+      I4 => srd_addr_trans_cntr_r_reg(4),
+      I5 => srd_addr_trans_cntr_r_reg(5),
       O => srd_lnk_hndlr_in_progress_r_i_2_n_0
     );
 srd_lnk_hndlr_in_progress_r_reg: unisim.vcomponents.FDRE
@@ -41360,7 +41337,7 @@ i_0: unisim.vcomponents.LUT1
       I0 => '0',
       O => n_0_0
     );
-s_lnk_hndlr_awvalid_gen_fsm_r_i_3: unisim.vcomponents.LUT2
+s_lnk_hndlr_awvalid_gen_fsm_r_i_2: unisim.vcomponents.LUT2
     generic map(
       INIT => X"B"
     )
@@ -41547,14 +41524,14 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_tdm is
   signal \tdm_data_out[9]_i_1_n_0\ : STD_LOGIC;
   signal \^tdm_user_data_valid\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_state[3]_i_3\ : label is "soft_lutpair227";
-  attribute SOFT_HLUTNM of int_ch1_ready_i_1 : label is "soft_lutpair224";
-  attribute SOFT_HLUTNM of int_ch2_ready_i_1 : label is "soft_lutpair224";
-  attribute SOFT_HLUTNM of \slot_count[0]_i_1\ : label is "soft_lutpair226";
-  attribute SOFT_HLUTNM of \slot_count[1]_i_1\ : label is "soft_lutpair226";
-  attribute SOFT_HLUTNM of \storage_data2[27]_i_1\ : label is "soft_lutpair227";
-  attribute SOFT_HLUTNM of \tdm_data_out[13]_i_1\ : label is "soft_lutpair225";
-  attribute SOFT_HLUTNM of \tdm_data_out[30]_i_1\ : label is "soft_lutpair225";
+  attribute SOFT_HLUTNM of \FSM_onehot_state[3]_i_3\ : label is "soft_lutpair226";
+  attribute SOFT_HLUTNM of int_ch1_ready_i_1 : label is "soft_lutpair223";
+  attribute SOFT_HLUTNM of int_ch2_ready_i_1 : label is "soft_lutpair223";
+  attribute SOFT_HLUTNM of \slot_count[0]_i_1\ : label is "soft_lutpair225";
+  attribute SOFT_HLUTNM of \slot_count[1]_i_1\ : label is "soft_lutpair225";
+  attribute SOFT_HLUTNM of \storage_data2[27]_i_1\ : label is "soft_lutpair226";
+  attribute SOFT_HLUTNM of \tdm_data_out[13]_i_1\ : label is "soft_lutpair224";
+  attribute SOFT_HLUTNM of \tdm_data_out[30]_i_1\ : label is "soft_lutpair224";
 begin
   int_ch1_ready <= \^int_ch1_ready\;
   int_ch2_ready <= \^int_ch2_ready\;
@@ -42102,8 +42079,8 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_unpac
   signal \tdm_data_out[20]_i_2_n_0\ : STD_LOGIC;
   signal \tdm_data_out[20]_i_3_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \tdm_data_out[20]_i_2\ : label is "soft_lutpair223";
-  attribute SOFT_HLUTNM of \tdm_data_out[20]_i_3\ : label is "soft_lutpair223";
+  attribute SOFT_HLUTNM of \tdm_data_out[20]_i_2\ : label is "soft_lutpair222";
+  attribute SOFT_HLUTNM of \tdm_data_out[20]_i_3\ : label is "soft_lutpair222";
 begin
   Q(1 downto 0) <= \^q\(1 downto 0);
 \mux_by_2.data_count_reg[0]\: unisim.vcomponents.FDSE
@@ -42594,12 +42571,12 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_xpm_fifo_base is
   signal \NLW_gen_sdpram.xpm_memory_base_inst_sbiterrb_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1\ : label is "soft_lutpair15";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_fwft.curr_fwft_state_reg[0]\ : label is "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11";
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_fwft.curr_fwft_state_reg[1]\ : label is "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11";
-  attribute SOFT_HLUTNM of \gen_fwft.empty_fwft_i_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \gen_fwft.empty_fwft_i_i_1\ : label is "soft_lutpair14";
   attribute ADDR_WIDTH_A : integer;
   attribute ADDR_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 8;
   attribute ADDR_WIDTH_B : integer;
@@ -42731,7 +42708,7 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_xpm_fifo_base is
   attribute rsta_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 8;
   attribute rstb_loop_iter : integer;
   attribute rstb_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 8;
-  attribute SOFT_HLUTNM of \gen_sdpram.xpm_memory_base_inst_i_3\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \gen_sdpram.xpm_memory_base_inst_i_3\ : label is "soft_lutpair14";
 begin
   almost_empty <= \<const0>\;
   almost_full <= \<const0>\;
@@ -43328,14 +43305,14 @@ rdp_inst: entity work.\apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterize
       DI(0) => rdp_inst_n_0,
       \FSM_sequential_gen_fwft.curr_fwft_state_reg[1]\ => rdp_inst_n_9,
       Q(7 downto 0) => rd_pntr_ext(7 downto 0),
-      S(5) => rdp_inst_n_12,
-      S(4) => rdp_inst_n_13,
-      S(3) => rdp_inst_n_14,
-      S(2) => rdp_inst_n_15,
-      S(1) => rdp_inst_n_16,
-      S(0) => rdp_inst_n_17,
+      S(5) => rdp_inst_n_13,
+      S(4) => rdp_inst_n_14,
+      S(3) => rdp_inst_n_15,
+      S(2) => rdp_inst_n_16,
+      S(1) => rdp_inst_n_17,
+      S(0) => rdp_inst_n_18,
       \count_value_i_reg[0]_0\(1 downto 0) => curr_fwft_state(1 downto 0),
-      \count_value_i_reg[1]_0\(0) => rdp_inst_n_18,
+      \count_value_i_reg[1]_0\(0) => rdp_inst_n_12,
       \count_value_i_reg[6]_0\(4) => rdp_inst_n_20,
       \count_value_i_reg[6]_0\(3) => rdp_inst_n_21,
       \count_value_i_reg[6]_0\(2) => rdp_inst_n_22,
@@ -43406,7 +43383,7 @@ rst_d1_inst: entity work.apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_50
 wrp_inst: entity work.\apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_51\
      port map (
       D(7 downto 0) => \grdc.diff_wr_rd_pntr_rdc\(8 downto 1),
-      DI(1) => rdp_inst_n_18,
+      DI(1) => rdp_inst_n_12,
       DI(0) => \gen_fwft.rdpp1_inst_n_3\,
       Q(8) => wrp_inst_n_1,
       Q(7 downto 0) => wr_pntr_ext(7 downto 0),
@@ -43461,12 +43438,12 @@ wrpp1_inst: entity work.\apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameteri
       Q(2) => wrpp1_inst_n_5,
       Q(1) => wrpp1_inst_n_6,
       Q(0) => wrpp1_inst_n_7,
-      S(5) => rdp_inst_n_12,
-      S(4) => rdp_inst_n_13,
-      S(3) => rdp_inst_n_14,
-      S(2) => rdp_inst_n_15,
-      S(1) => rdp_inst_n_16,
-      S(0) => rdp_inst_n_17,
+      S(5) => rdp_inst_n_13,
+      S(4) => rdp_inst_n_14,
+      S(3) => rdp_inst_n_15,
+      S(2) => rdp_inst_n_16,
+      S(1) => rdp_inst_n_17,
+      S(0) => rdp_inst_n_18,
       \count_value_i_reg[1]_0\(0) => xpm_fifo_rst_inst_n_1,
       \count_value_i_reg[5]_0\ => \^full\,
       \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpf_cc_sym.diff_pntr_pf_q_reg[8]\(5 downto 0) => rd_pntr_ext(5 downto 0),
@@ -43588,8 +43565,8 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterize
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_rst_ic.curr_rrst_state_reg[1]\ : label is "iSTATE:00,iSTATE0:01,iSTATE1:10,iSTATE2:11";
   attribute KEEP of \FSM_sequential_gen_rst_ic.curr_rrst_state_reg[1]\ : label is "yes";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__4\ : label is "soft_lutpair176";
-  attribute SOFT_HLUTNM of \gen_rst_ic.fifo_wr_rst_ic_i_2\ : label is "soft_lutpair177";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__4\ : label is "soft_lutpair175";
+  attribute SOFT_HLUTNM of \gen_rst_ic.fifo_wr_rst_ic_i_2\ : label is "soft_lutpair176";
   attribute DEF_VAL : string;
   attribute DEF_VAL of \gen_rst_ic.rrst_wr_inst\ : label is "1'b0";
   attribute DEST_SYNC_FF : integer;
@@ -43608,7 +43585,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterize
   attribute XPM_CDC of \gen_rst_ic.rrst_wr_inst\ : label is "SYNC_RST";
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of \gen_rst_ic.rrst_wr_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of \gen_rst_ic.rst_seq_reentered_i_1\ : label is "soft_lutpair177";
+  attribute SOFT_HLUTNM of \gen_rst_ic.rst_seq_reentered_i_1\ : label is "soft_lutpair176";
   attribute DEF_VAL of \gen_rst_ic.wrst_rd_inst\ : label is "1'b0";
   attribute DEST_SYNC_FF of \gen_rst_ic.wrst_rd_inst\ : label is 3;
   attribute INIT of \gen_rst_ic.wrst_rd_inst\ : label is "0";
@@ -43618,7 +43595,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterize
   attribute VERSION of \gen_rst_ic.wrst_rd_inst\ : label is 0;
   attribute XPM_CDC of \gen_rst_ic.wrst_rd_inst\ : label is "SYNC_RST";
   attribute XPM_MODULE of \gen_rst_ic.wrst_rd_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of \grdc.rd_data_count_i[8]_i_1\ : label is "soft_lutpair176";
+  attribute SOFT_HLUTNM of \grdc.rd_data_count_i[8]_i_1\ : label is "soft_lutpair175";
 begin
   \gen_rst_ic.fifo_rd_rst_ic_reg_0\ <= \^gen_rst_ic.fifo_rd_rst_ic_reg_0\;
   wrst_busy <= \^wrst_busy\;
@@ -44116,8 +44093,8 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterize
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_rst_ic.curr_rrst_state_reg[1]\ : label is "iSTATE:00,iSTATE0:01,iSTATE1:10,iSTATE2:11";
   attribute KEEP of \FSM_sequential_gen_rst_ic.curr_rrst_state_reg[1]\ : label is "yes";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__4\ : label is "soft_lutpair144";
-  attribute SOFT_HLUTNM of \gen_rst_ic.fifo_wr_rst_ic_i_2\ : label is "soft_lutpair145";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__4\ : label is "soft_lutpair143";
+  attribute SOFT_HLUTNM of \gen_rst_ic.fifo_wr_rst_ic_i_2\ : label is "soft_lutpair144";
   attribute DEF_VAL : string;
   attribute DEF_VAL of \gen_rst_ic.rrst_wr_inst\ : label is "1'b0";
   attribute DEST_SYNC_FF : integer;
@@ -44136,7 +44113,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterize
   attribute XPM_CDC of \gen_rst_ic.rrst_wr_inst\ : label is "SYNC_RST";
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of \gen_rst_ic.rrst_wr_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of \gen_rst_ic.rst_seq_reentered_i_1\ : label is "soft_lutpair145";
+  attribute SOFT_HLUTNM of \gen_rst_ic.rst_seq_reentered_i_1\ : label is "soft_lutpair144";
   attribute DEF_VAL of \gen_rst_ic.wrst_rd_inst\ : label is "1'b0";
   attribute DEST_SYNC_FF of \gen_rst_ic.wrst_rd_inst\ : label is 3;
   attribute INIT of \gen_rst_ic.wrst_rd_inst\ : label is "0";
@@ -44146,7 +44123,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterize
   attribute VERSION of \gen_rst_ic.wrst_rd_inst\ : label is 0;
   attribute XPM_CDC of \gen_rst_ic.wrst_rd_inst\ : label is "SYNC_RST";
   attribute XPM_MODULE of \gen_rst_ic.wrst_rd_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of \grdc.rd_data_count_i[8]_i_1\ : label is "soft_lutpair144";
+  attribute SOFT_HLUTNM of \grdc.rd_data_count_i[8]_i_1\ : label is "soft_lutpair143";
 begin
   \gen_rst_ic.fifo_rd_rst_ic_reg_0\ <= \^gen_rst_ic.fifo_rd_rst_ic_reg_0\;
   wrst_busy <= \^wrst_busy\;
@@ -44644,8 +44621,8 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterize
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_rst_ic.curr_rrst_state_reg[1]\ : label is "iSTATE:00,iSTATE0:01,iSTATE1:10,iSTATE2:11";
   attribute KEEP of \FSM_sequential_gen_rst_ic.curr_rrst_state_reg[1]\ : label is "yes";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__4\ : label is "soft_lutpair111";
-  attribute SOFT_HLUTNM of \gen_rst_ic.fifo_wr_rst_ic_i_2\ : label is "soft_lutpair112";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__4\ : label is "soft_lutpair110";
+  attribute SOFT_HLUTNM of \gen_rst_ic.fifo_wr_rst_ic_i_2\ : label is "soft_lutpair111";
   attribute DEF_VAL : string;
   attribute DEF_VAL of \gen_rst_ic.rrst_wr_inst\ : label is "1'b0";
   attribute DEST_SYNC_FF : integer;
@@ -44664,7 +44641,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterize
   attribute XPM_CDC of \gen_rst_ic.rrst_wr_inst\ : label is "SYNC_RST";
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of \gen_rst_ic.rrst_wr_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of \gen_rst_ic.rst_seq_reentered_i_1\ : label is "soft_lutpair112";
+  attribute SOFT_HLUTNM of \gen_rst_ic.rst_seq_reentered_i_1\ : label is "soft_lutpair111";
   attribute DEF_VAL of \gen_rst_ic.wrst_rd_inst\ : label is "1'b0";
   attribute DEST_SYNC_FF of \gen_rst_ic.wrst_rd_inst\ : label is 3;
   attribute INIT of \gen_rst_ic.wrst_rd_inst\ : label is "0";
@@ -44674,7 +44651,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterize
   attribute VERSION of \gen_rst_ic.wrst_rd_inst\ : label is 0;
   attribute XPM_CDC of \gen_rst_ic.wrst_rd_inst\ : label is "SYNC_RST";
   attribute XPM_MODULE of \gen_rst_ic.wrst_rd_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of \grdc.rd_data_count_i[8]_i_1\ : label is "soft_lutpair111";
+  attribute SOFT_HLUTNM of \grdc.rd_data_count_i[8]_i_1\ : label is "soft_lutpair110";
 begin
   \gen_rst_ic.fifo_rd_rst_ic_reg_0\ <= \^gen_rst_ic.fifo_rd_rst_ic_reg_0\;
   wrst_busy <= \^wrst_busy\;
@@ -45172,8 +45149,8 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterize
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_rst_ic.curr_rrst_state_reg[1]\ : label is "iSTATE:00,iSTATE0:01,iSTATE1:10,iSTATE2:11";
   attribute KEEP of \FSM_sequential_gen_rst_ic.curr_rrst_state_reg[1]\ : label is "yes";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__4\ : label is "soft_lutpair263";
-  attribute SOFT_HLUTNM of \gen_rst_ic.fifo_wr_rst_ic_i_2\ : label is "soft_lutpair264";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__4\ : label is "soft_lutpair262";
+  attribute SOFT_HLUTNM of \gen_rst_ic.fifo_wr_rst_ic_i_2\ : label is "soft_lutpair263";
   attribute DEF_VAL : string;
   attribute DEF_VAL of \gen_rst_ic.rrst_wr_inst\ : label is "1'b0";
   attribute DEST_SYNC_FF : integer;
@@ -45192,7 +45169,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterize
   attribute XPM_CDC of \gen_rst_ic.rrst_wr_inst\ : label is "SYNC_RST";
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of \gen_rst_ic.rrst_wr_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of \gen_rst_ic.rst_seq_reentered_i_1\ : label is "soft_lutpair264";
+  attribute SOFT_HLUTNM of \gen_rst_ic.rst_seq_reentered_i_1\ : label is "soft_lutpair263";
   attribute DEF_VAL of \gen_rst_ic.wrst_rd_inst\ : label is "1'b0";
   attribute DEST_SYNC_FF of \gen_rst_ic.wrst_rd_inst\ : label is 3;
   attribute INIT of \gen_rst_ic.wrst_rd_inst\ : label is "0";
@@ -45202,7 +45179,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterize
   attribute VERSION of \gen_rst_ic.wrst_rd_inst\ : label is 0;
   attribute XPM_CDC of \gen_rst_ic.wrst_rd_inst\ : label is "SYNC_RST";
   attribute XPM_MODULE of \gen_rst_ic.wrst_rd_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of \grdc.rd_data_count_i[9]_i_1\ : label is "soft_lutpair263";
+  attribute SOFT_HLUTNM of \grdc.rd_data_count_i[9]_i_1\ : label is "soft_lutpair262";
 begin
   \gen_rst_ic.fifo_rd_rst_ic_reg_0\ <= \^gen_rst_ic.fifo_rd_rst_ic_reg_0\;
   wrst_busy <= \^wrst_busy\;
@@ -45700,8 +45677,8 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterize
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_rst_ic.curr_rrst_state_reg[1]\ : label is "iSTATE:00,iSTATE0:01,iSTATE1:10,iSTATE2:11";
   attribute KEEP of \FSM_sequential_gen_rst_ic.curr_rrst_state_reg[1]\ : label is "yes";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__4\ : label is "soft_lutpair219";
-  attribute SOFT_HLUTNM of \gen_rst_ic.fifo_wr_rst_ic_i_2\ : label is "soft_lutpair220";
+  attribute SOFT_HLUTNM of \count_value_i[1]_i_1__4\ : label is "soft_lutpair218";
+  attribute SOFT_HLUTNM of \gen_rst_ic.fifo_wr_rst_ic_i_2\ : label is "soft_lutpair219";
   attribute DEF_VAL : string;
   attribute DEF_VAL of \gen_rst_ic.rrst_wr_inst\ : label is "1'b0";
   attribute DEST_SYNC_FF : integer;
@@ -45720,7 +45697,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterize
   attribute XPM_CDC of \gen_rst_ic.rrst_wr_inst\ : label is "SYNC_RST";
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of \gen_rst_ic.rrst_wr_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of \gen_rst_ic.rst_seq_reentered_i_1\ : label is "soft_lutpair220";
+  attribute SOFT_HLUTNM of \gen_rst_ic.rst_seq_reentered_i_1\ : label is "soft_lutpair219";
   attribute DEF_VAL of \gen_rst_ic.wrst_rd_inst\ : label is "1'b0";
   attribute DEST_SYNC_FF of \gen_rst_ic.wrst_rd_inst\ : label is 3;
   attribute INIT of \gen_rst_ic.wrst_rd_inst\ : label is "0";
@@ -45730,7 +45707,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterize
   attribute VERSION of \gen_rst_ic.wrst_rd_inst\ : label is 0;
   attribute XPM_CDC of \gen_rst_ic.wrst_rd_inst\ : label is "SYNC_RST";
   attribute XPM_MODULE of \gen_rst_ic.wrst_rd_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of \grdc.rd_data_count_i[9]_i_1\ : label is "soft_lutpair219";
+  attribute SOFT_HLUTNM of \grdc.rd_data_count_i[9]_i_1\ : label is "soft_lutpair218";
 begin
   \gen_rst_ic.fifo_rd_rst_ic_reg_0\ <= \^gen_rst_ic.fifo_rd_rst_ic_reg_0\;
   wrst_busy <= \^wrst_busy\;
@@ -46161,7 +46138,7 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_aclk : in STD_LOGIC;
-    \intr_out_reg[3]_0\ : in STD_LOGIC;
+    AR : in STD_LOGIC_VECTOR ( 0 to 0 );
     \auto_neg_intr_gen.tx_ch0_valid_reg_1\ : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 6 downto 0 );
     \intr_data_reg[3]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -46189,10 +46166,10 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ct
   signal sync_intr_sent : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal sync_intr_sent_0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \auto_neg_intr_gen.intr_flop_i_1\ : label is "soft_lutpair181";
-  attribute SOFT_HLUTNM of \auto_neg_intr_gen.send_ch0_i_1\ : label is "soft_lutpair180";
-  attribute SOFT_HLUTNM of \auto_neg_intr_gen.send_intr_i_2\ : label is "soft_lutpair181";
-  attribute SOFT_HLUTNM of \auto_neg_intr_gen.tx_ch0_valid_i_1\ : label is "soft_lutpair180";
+  attribute SOFT_HLUTNM of \auto_neg_intr_gen.intr_flop_i_1\ : label is "soft_lutpair180";
+  attribute SOFT_HLUTNM of \auto_neg_intr_gen.send_ch0_i_1\ : label is "soft_lutpair179";
+  attribute SOFT_HLUTNM of \auto_neg_intr_gen.send_intr_i_2\ : label is "soft_lutpair180";
+  attribute SOFT_HLUTNM of \auto_neg_intr_gen.tx_ch0_valid_i_1\ : label is "soft_lutpair179";
   attribute equivalent_register_removal : string;
   attribute equivalent_register_removal of \sync_intr_in_d1_reg[0]\ : label is "no";
   attribute equivalent_register_removal of \sync_intr_in_d1_reg[1]\ : label is "no";
@@ -46459,7 +46436,7 @@ axi_chip2chip_sync_cell_intr_out_inst: entity work.\apex_blk_axi_chip2chip_0_0_a
      port map (
       C => m_aclk,
       CE => '1',
-      CLR => \intr_out_reg[3]_0\,
+      CLR => AR(0),
       D => sync_intr_out(0),
       Q => axi_c2c_m2s_intr_out(0)
     );
@@ -46467,7 +46444,7 @@ axi_chip2chip_sync_cell_intr_out_inst: entity work.\apex_blk_axi_chip2chip_0_0_a
      port map (
       C => m_aclk,
       CE => '1',
-      CLR => \intr_out_reg[3]_0\,
+      CLR => AR(0),
       D => sync_intr_out(1),
       Q => axi_c2c_m2s_intr_out(1)
     );
@@ -46475,7 +46452,7 @@ axi_chip2chip_sync_cell_intr_out_inst: entity work.\apex_blk_axi_chip2chip_0_0_a
      port map (
       C => m_aclk,
       CE => '1',
-      CLR => \intr_out_reg[3]_0\,
+      CLR => AR(0),
       D => sync_intr_out(2),
       Q => axi_c2c_m2s_intr_out(2)
     );
@@ -46483,7 +46460,7 @@ axi_chip2chip_sync_cell_intr_out_inst: entity work.\apex_blk_axi_chip2chip_0_0_a
      port map (
       C => m_aclk,
       CE => '1',
-      CLR => \intr_out_reg[3]_0\,
+      CLR => AR(0),
       D => sync_intr_out(3),
       Q => axi_c2c_m2s_intr_out(3)
     );
@@ -46607,16 +46584,16 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_in
   attribute DONT_TOUCH of \auro_phy_init.aurora_rst_out_r2_reg\ : label is std.standard.true;
   attribute KEEP of \auro_phy_init.aurora_rst_out_r2_reg\ : label is "yes";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \auto_neg_intr_gen.send_intr_i_1\ : label is "soft_lutpair277";
-  attribute SOFT_HLUTNM of \auto_neg_intr_gen.tx_ch0_data[0]_i_1\ : label is "soft_lutpair277";
-  attribute SOFT_HLUTNM of pat0_valid_i_1 : label is "soft_lutpair278";
-  attribute SOFT_HLUTNM of pat1_valid_i_1 : label is "soft_lutpair278";
-  attribute SOFT_HLUTNM of \pat_count[0]_i_1\ : label is "soft_lutpair276";
-  attribute SOFT_HLUTNM of \pat_count[2]_i_1\ : label is "soft_lutpair274";
-  attribute SOFT_HLUTNM of \pat_count[3]_i_2\ : label is "soft_lutpair274";
-  attribute SOFT_HLUTNM of \pat_count[3]_i_3\ : label is "soft_lutpair276";
-  attribute SOFT_HLUTNM of \state[2]_i_1\ : label is "soft_lutpair275";
-  attribute SOFT_HLUTNM of \state[4]_i_3\ : label is "soft_lutpair275";
+  attribute SOFT_HLUTNM of \auto_neg_intr_gen.send_intr_i_1\ : label is "soft_lutpair276";
+  attribute SOFT_HLUTNM of \auto_neg_intr_gen.tx_ch0_data[0]_i_1\ : label is "soft_lutpair276";
+  attribute SOFT_HLUTNM of pat0_valid_i_1 : label is "soft_lutpair277";
+  attribute SOFT_HLUTNM of pat1_valid_i_1 : label is "soft_lutpair277";
+  attribute SOFT_HLUTNM of \pat_count[0]_i_1\ : label is "soft_lutpair275";
+  attribute SOFT_HLUTNM of \pat_count[2]_i_1\ : label is "soft_lutpair273";
+  attribute SOFT_HLUTNM of \pat_count[3]_i_2\ : label is "soft_lutpair273";
+  attribute SOFT_HLUTNM of \pat_count[3]_i_3\ : label is "soft_lutpair275";
+  attribute SOFT_HLUTNM of \state[2]_i_1\ : label is "soft_lutpair274";
+  attribute SOFT_HLUTNM of \state[4]_i_3\ : label is "soft_lutpair274";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \state_reg[0]\ : label is "PAT0:00000100,PHY_ERROR:00100000,PAT1:00001000,IDLE:00000001,RX_READY:00010000";
   attribute FSM_ENCODED_STATES of \state_reg[2]\ : label is "PAT0:00000100,PHY_ERROR:00100000,PAT1:00001000,IDLE:00000001,RX_READY:00010000";
@@ -47375,8 +47352,8 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameteriz
   signal \NLW_gen_sdpram.xpm_memory_base_inst_sbiterrb_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED\ : STD_LOGIC_VECTOR ( 49 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1\ : label is "soft_lutpair114";
-  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1\ : label is "soft_lutpair114";
+  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1\ : label is "soft_lutpair113";
+  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1\ : label is "soft_lutpair113";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_fwft.curr_fwft_state_reg[0]\ : label is "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11";
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_fwft.curr_fwft_state_reg[1]\ : label is "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11";
@@ -47426,7 +47403,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameteriz
   attribute WIDTH of \gen_cdc_pntr.wr_pntr_cdc_inst\ : label is 8;
   attribute XPM_CDC of \gen_cdc_pntr.wr_pntr_cdc_inst\ : label is "GRAY";
   attribute XPM_MODULE of \gen_cdc_pntr.wr_pntr_cdc_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of \gen_fwft.empty_fwft_i_i_1\ : label is "soft_lutpair113";
+  attribute SOFT_HLUTNM of \gen_fwft.empty_fwft_i_i_1\ : label is "soft_lutpair112";
   attribute ADDR_WIDTH_A : integer;
   attribute ADDR_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 8;
   attribute ADDR_WIDTH_B : integer;
@@ -47570,7 +47547,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameteriz
   attribute rsta_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 52;
   attribute rstb_loop_iter : integer;
   attribute rstb_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 52;
-  attribute SOFT_HLUTNM of \gen_sdpram.xpm_memory_base_inst_i_3\ : label is "soft_lutpair113";
+  attribute SOFT_HLUTNM of \gen_sdpram.xpm_memory_base_inst_i_3\ : label is "soft_lutpair112";
 begin
   almost_empty <= \<const0>\;
   almost_full <= \<const0>\;
@@ -48645,8 +48622,8 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameteriz
   signal \NLW_gen_sdpram.xpm_memory_base_inst_sbiterrb_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED\ : STD_LOGIC_VECTOR ( 49 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1\ : label is "soft_lutpair147";
-  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1\ : label is "soft_lutpair147";
+  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1\ : label is "soft_lutpair146";
+  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1\ : label is "soft_lutpair146";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_fwft.curr_fwft_state_reg[0]\ : label is "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11";
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_fwft.curr_fwft_state_reg[1]\ : label is "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11";
@@ -48696,7 +48673,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameteriz
   attribute WIDTH of \gen_cdc_pntr.wr_pntr_cdc_inst\ : label is 8;
   attribute XPM_CDC of \gen_cdc_pntr.wr_pntr_cdc_inst\ : label is "GRAY";
   attribute XPM_MODULE of \gen_cdc_pntr.wr_pntr_cdc_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of \gen_fwft.empty_fwft_i_i_1\ : label is "soft_lutpair146";
+  attribute SOFT_HLUTNM of \gen_fwft.empty_fwft_i_i_1\ : label is "soft_lutpair145";
   attribute ADDR_WIDTH_A : integer;
   attribute ADDR_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 8;
   attribute ADDR_WIDTH_B : integer;
@@ -48840,7 +48817,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameteriz
   attribute rsta_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 52;
   attribute rstb_loop_iter : integer;
   attribute rstb_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 52;
-  attribute SOFT_HLUTNM of \gen_sdpram.xpm_memory_base_inst_i_3\ : label is "soft_lutpair146";
+  attribute SOFT_HLUTNM of \gen_sdpram.xpm_memory_base_inst_i_3\ : label is "soft_lutpair145";
 begin
   almost_empty <= \<const0>\;
   almost_full <= \<const0>\;
@@ -49922,8 +49899,8 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameteriz
   signal \NLW_gen_sdpram.xpm_memory_base_inst_sbiterrb_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED\ : STD_LOGIC_VECTOR ( 37 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1\ : label is "soft_lutpair266";
-  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1\ : label is "soft_lutpair266";
+  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1\ : label is "soft_lutpair265";
+  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1\ : label is "soft_lutpair265";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_fwft.curr_fwft_state_reg[0]\ : label is "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11";
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_fwft.curr_fwft_state_reg[1]\ : label is "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11";
@@ -49973,7 +49950,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameteriz
   attribute WIDTH of \gen_cdc_pntr.wr_pntr_cdc_inst\ : label is 9;
   attribute XPM_CDC of \gen_cdc_pntr.wr_pntr_cdc_inst\ : label is "GRAY";
   attribute XPM_MODULE of \gen_cdc_pntr.wr_pntr_cdc_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of \gen_fwft.empty_fwft_i_i_1\ : label is "soft_lutpair265";
+  attribute SOFT_HLUTNM of \gen_fwft.empty_fwft_i_i_1\ : label is "soft_lutpair264";
   attribute ADDR_WIDTH_A : integer;
   attribute ADDR_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 9;
   attribute ADDR_WIDTH_B : integer;
@@ -50117,7 +50094,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameteriz
   attribute rsta_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 40;
   attribute rstb_loop_iter : integer;
   attribute rstb_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 40;
-  attribute SOFT_HLUTNM of \gen_sdpram.xpm_memory_base_inst_i_3\ : label is "soft_lutpair265";
+  attribute SOFT_HLUTNM of \gen_sdpram.xpm_memory_base_inst_i_3\ : label is "soft_lutpair264";
 begin
   almost_empty <= \<const0>\;
   almost_full <= \<const0>\;
@@ -51261,8 +51238,8 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameteriz
   signal \NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED\ : STD_LOGIC_VECTOR ( 41 downto 0 );
   signal \NLW_gen_sdpram.xpm_memory_base_inst_doutb_UNCONNECTED\ : STD_LOGIC_VECTOR ( 41 to 41 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1\ : label is "soft_lutpair222";
-  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1\ : label is "soft_lutpair222";
+  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1\ : label is "soft_lutpair221";
+  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1\ : label is "soft_lutpair221";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_fwft.curr_fwft_state_reg[0]\ : label is "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11";
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_fwft.curr_fwft_state_reg[1]\ : label is "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11";
@@ -51312,7 +51289,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameteriz
   attribute WIDTH of \gen_cdc_pntr.wr_pntr_cdc_inst\ : label is 9;
   attribute XPM_CDC of \gen_cdc_pntr.wr_pntr_cdc_inst\ : label is "GRAY";
   attribute XPM_MODULE of \gen_cdc_pntr.wr_pntr_cdc_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of \gen_fwft.empty_fwft_i_i_1\ : label is "soft_lutpair221";
+  attribute SOFT_HLUTNM of \gen_fwft.empty_fwft_i_i_1\ : label is "soft_lutpair220";
   attribute ADDR_WIDTH_A : integer;
   attribute ADDR_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 9;
   attribute ADDR_WIDTH_B : integer;
@@ -51456,7 +51433,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameteriz
   attribute rsta_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 44;
   attribute rstb_loop_iter : integer;
   attribute rstb_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 44;
-  attribute SOFT_HLUTNM of \gen_sdpram.xpm_memory_base_inst_i_3\ : label is "soft_lutpair221";
+  attribute SOFT_HLUTNM of \gen_sdpram.xpm_memory_base_inst_i_3\ : label is "soft_lutpair220";
 begin
   almost_empty <= \<const0>\;
   almost_full <= \<const0>\;
@@ -52595,8 +52572,8 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameteriz
   signal \NLW_gen_sdpram.xpm_memory_base_inst_sbiterrb_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1\ : label is "soft_lutpair179";
-  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1\ : label is "soft_lutpair179";
+  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1\ : label is "soft_lutpair178";
+  attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1\ : label is "soft_lutpair178";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_fwft.curr_fwft_state_reg[0]\ : label is "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11";
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_fwft.curr_fwft_state_reg[1]\ : label is "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11";
@@ -52646,7 +52623,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameteriz
   attribute WIDTH of \gen_cdc_pntr.wr_pntr_cdc_inst\ : label is 8;
   attribute XPM_CDC of \gen_cdc_pntr.wr_pntr_cdc_inst\ : label is "GRAY";
   attribute XPM_MODULE of \gen_cdc_pntr.wr_pntr_cdc_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of \gen_fwft.empty_fwft_i_i_1\ : label is "soft_lutpair178";
+  attribute SOFT_HLUTNM of \gen_fwft.empty_fwft_i_i_1\ : label is "soft_lutpair177";
   attribute ADDR_WIDTH_A : integer;
   attribute ADDR_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 8;
   attribute ADDR_WIDTH_B : integer;
@@ -52778,7 +52755,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameteriz
   attribute rsta_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 8;
   attribute rstb_loop_iter : integer;
   attribute rstb_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 8;
-  attribute SOFT_HLUTNM of \gen_sdpram.xpm_memory_base_inst_i_3\ : label is "soft_lutpair178";
+  attribute SOFT_HLUTNM of \gen_sdpram.xpm_memory_base_inst_i_3\ : label is "soft_lutpair177";
 begin
   almost_empty <= \<const0>\;
   almost_full <= \<const0>\;
@@ -55187,7 +55164,6 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr is
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     swr_lnk_hndlr_in_progress_r_reg_0 : out STD_LOGIC;
     s_lnk_hndlr_bready_r_reg_0 : out STD_LOGIC;
-    m_axi_awvalid : out STD_LOGIC;
     m_axi_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axi_awlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -55196,23 +55172,27 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr is
     m_axi_awid : out STD_LOGIC_VECTOR ( 5 downto 0 );
     m_axi_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axi_wuser : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_wlast : out STD_LOGIC;
+    m_axi_bready : out STD_LOGIC;
+    m_axi_awvalid : out STD_LOGIC;
+    axi_c2c_lnk_hndlr_in_progress : out STD_LOGIC;
     rd_en : out STD_LOGIC;
+    m_axi_wlast : out STD_LOGIC;
     m_aclk : in STD_LOGIC;
     \out\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_awready : in STD_LOGIC;
-    fifo_wr_en_r_reg_0 : in STD_LOGIC;
+    slv_wait_for_rst_r : in STD_LOGIC;
     empty : in STD_LOGIC;
-    s_lnk_hndlr_awvalid_gen_fsm_r_reg_0 : in STD_LOGIC;
+    m_axi_awready : in STD_LOGIC;
     m_axi_bvalid : in STD_LOGIC;
-    wr_rst_busy : in STD_LOGIC;
     full : in STD_LOGIC;
+    wr_rst_busy : in STD_LOGIC;
     dout : in STD_LOGIC_VECTOR ( 37 downto 0 );
     \s_lnk_hndlr_awaddr_r_reg[31]_0\ : in STD_LOGIC_VECTOR ( 49 downto 0 );
-    slv_wait_for_rst_r : in STD_LOGIC;
-    \s_lnk_hndlr_wstrb_r_reg[3]_0\ : in STD_LOGIC;
+    \s_lnk_hndlr_wuser_r_reg[0]_0\ : in STD_LOGIC;
     m_axi_wready : in STD_LOGIC;
-    m_aresetn : in STD_LOGIC
+    s_lnk_hndlr_awvalid_gen_fsm_r_reg_0 : in STD_LOGIC;
+    srd_lnk_hndlr_en : in STD_LOGIC;
+    m_aresetn : in STD_LOGIC;
+    \swr_addr_trans_cntr_r_reg[8]_0\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr : entity is "axi_chip2chip_v5_0_8_swr_lnk_hndlr";
@@ -55221,21 +55201,19 @@ end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr;
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr is
   signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \FSM_sequential_cntrl_fsm_r[0]_i_2_n_0\ : STD_LOGIC;
-  signal \FSM_sequential_cntrl_fsm_r[0]_i_3_n_0\ : STD_LOGIC;
   signal \FSM_sequential_cntrl_fsm_r[1]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_sequential_cntrl_fsm_r[1]_i_3_n_0\ : STD_LOGIC;
   signal \FSM_sequential_cntrl_fsm_r[1]_i_4_n_0\ : STD_LOGIC;
-  signal \FSM_sequential_cntrl_fsm_r[1]_i_5_n_0\ : STD_LOGIC;
   signal \FSM_sequential_s_lnk_hndlr_rd_fsm_r[1]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_sequential_s_lnk_hndlr_rd_fsm_r[1]_i_3_n_0\ : STD_LOGIC;
   signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^chnl_up_r_reg_0\ : STD_LOGIC;
+  signal cntrl_cntr_r : STD_LOGIC;
   signal cntrl_cntr_r217_out : STD_LOGIC;
   signal cntrl_cntr_r318_out : STD_LOGIC;
   signal \cntrl_cntr_r[0]_i_1_n_0\ : STD_LOGIC;
   signal \cntrl_cntr_r[8]_i_10_n_0\ : STD_LOGIC;
   signal \cntrl_cntr_r[8]_i_11_n_0\ : STD_LOGIC;
-  signal \cntrl_cntr_r[8]_i_1_n_0\ : STD_LOGIC;
   signal \cntrl_cntr_r[8]_i_3_n_0\ : STD_LOGIC;
   signal \cntrl_cntr_r[8]_i_4_n_0\ : STD_LOGIC;
   signal \cntrl_cntr_r[8]_i_5_n_0\ : STD_LOGIC;
@@ -55325,7 +55303,7 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_ln
   signal s_lnk_hndlr_awvalid_gen_fsm_r2_carry_n_5 : STD_LOGIC;
   signal s_lnk_hndlr_awvalid_gen_fsm_r2_carry_n_6 : STD_LOGIC;
   signal s_lnk_hndlr_awvalid_gen_fsm_r2_carry_n_7 : STD_LOGIC;
-  signal s_lnk_hndlr_awvalid_gen_fsm_r_i_2_n_0 : STD_LOGIC;
+  signal s_lnk_hndlr_awvalid_gen_fsm_r_i_3_n_0 : STD_LOGIC;
   signal s_lnk_hndlr_awvalid_r : STD_LOGIC;
   signal s_lnk_hndlr_bready_r_i_1_n_0 : STD_LOGIC;
   signal \^s_lnk_hndlr_bready_r_reg_0\ : STD_LOGIC;
@@ -55392,10 +55370,10 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_ln
   signal s_lnk_hndlr_wvalid_r_reg_i_3_n_5 : STD_LOGIC;
   signal s_lnk_hndlr_wvalid_r_reg_i_3_n_6 : STD_LOGIC;
   signal s_lnk_hndlr_wvalid_r_reg_i_3_n_7 : STD_LOGIC;
+  signal swr_addr_trans_cntr_r : STD_LOGIC;
   signal \swr_addr_trans_cntr_r[0]_i_1_n_0\ : STD_LOGIC;
   signal \swr_addr_trans_cntr_r[8]_i_10_n_0\ : STD_LOGIC;
   signal \swr_addr_trans_cntr_r[8]_i_11_n_0\ : STD_LOGIC;
-  signal \swr_addr_trans_cntr_r[8]_i_1_n_0\ : STD_LOGIC;
   signal \swr_addr_trans_cntr_r[8]_i_3_n_0\ : STD_LOGIC;
   signal \swr_addr_trans_cntr_r[8]_i_4_n_0\ : STD_LOGIC;
   signal \swr_addr_trans_cntr_r[8]_i_5_n_0\ : STD_LOGIC;
@@ -55428,7 +55406,6 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_ln
   signal \swr_data_trans_cntr_r[0]_i_1_n_0\ : STD_LOGIC;
   signal \swr_data_trans_cntr_r[8]_i_10_n_0\ : STD_LOGIC;
   signal \swr_data_trans_cntr_r[8]_i_11_n_0\ : STD_LOGIC;
-  signal \swr_data_trans_cntr_r[8]_i_12_n_0\ : STD_LOGIC;
   signal \swr_data_trans_cntr_r[8]_i_3_n_0\ : STD_LOGIC;
   signal \swr_data_trans_cntr_r[8]_i_4_n_0\ : STD_LOGIC;
   signal \swr_data_trans_cntr_r[8]_i_5_n_0\ : STD_LOGIC;
@@ -55481,123 +55458,123 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_ln
   signal NLW_xpm_fifo_sync_inst_swr_rd_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_xpm_fifo_sync_inst_swr_wr_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_cntrl_fsm_r[0]_i_1\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of \FSM_sequential_cntrl_fsm_r[0]_i_2\ : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of \FSM_sequential_cntrl_fsm_r[1]_i_2\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of \FSM_sequential_cntrl_fsm_r[1]_i_3\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \FSM_sequential_cntrl_fsm_r[1]_i_5\ : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of \FSM_sequential_cntrl_fsm_r[0]_i_1\ : label is "soft_lutpair57";
+  attribute SOFT_HLUTNM of \FSM_sequential_cntrl_fsm_r[0]_i_2\ : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \FSM_sequential_cntrl_fsm_r[1]_i_2\ : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \FSM_sequential_cntrl_fsm_r[1]_i_4\ : label is "soft_lutpair57";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_cntrl_fsm_r_reg[0]\ : label is "iSTATE:01,iSTATE0:10,iSTATE1:00";
   attribute FSM_ENCODED_STATES of \FSM_sequential_cntrl_fsm_r_reg[1]\ : label is "iSTATE:01,iSTATE0:10,iSTATE1:00";
-  attribute SOFT_HLUTNM of \FSM_sequential_s_lnk_hndlr_rd_fsm_r[1]_i_1\ : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of \FSM_sequential_s_lnk_hndlr_rd_fsm_r[1]_i_2\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of \FSM_sequential_s_lnk_hndlr_rd_fsm_r[1]_i_1\ : label is "soft_lutpair56";
   attribute FSM_ENCODED_STATES of \FSM_sequential_s_lnk_hndlr_rd_fsm_r_reg[0]\ : label is "iSTATE:01,iSTATE0:10,iSTATE1:00";
   attribute FSM_ENCODED_STATES of \FSM_sequential_s_lnk_hndlr_rd_fsm_r_reg[1]\ : label is "iSTATE:01,iSTATE0:10,iSTATE1:00";
+  attribute SOFT_HLUTNM of axi_c2c_lnk_hndlr_in_progress_INST_0 : label is "soft_lutpair63";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \cntrl_cntr_r_reg[8]_i_2\ : label is 35;
   attribute METHODOLOGY_DRC_VIOS : string;
   attribute METHODOLOGY_DRC_VIOS of \cntrl_cntr_r_reg[8]_i_2\ : label is "{SYNTH-8 {cell *THIS*}}";
-  attribute SOFT_HLUTNM of \delay_cntr_r[1]_i_1\ : label is "soft_lutpair65";
-  attribute SOFT_HLUTNM of \delay_cntr_r[2]_i_2\ : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of \delay_cntr_r[1]_i_1\ : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of \delay_cntr_r[2]_i_2\ : label is "soft_lutpair64";
   attribute COMPARATOR_THRESHOLD : integer;
   attribute COMPARATOR_THRESHOLD of fifo_wr_en_r_reg_i_2 : label is 11;
   attribute METHODOLOGY_DRC_VIOS of fifo_wr_en_r_reg_i_2 : label is "{SYNTH-8 {cell *THIS*}}";
-  attribute SOFT_HLUTNM of last_wr_data_r_i_2 : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of \m_axi_awlen[0]_INST_0\ : label is "soft_lutpair64";
-  attribute SOFT_HLUTNM of \m_axi_wdata[0]_INST_0\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \m_axi_wdata[10]_INST_0\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \m_axi_wdata[11]_INST_0\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \m_axi_wdata[12]_INST_0\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \m_axi_wdata[13]_INST_0\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \m_axi_wdata[14]_INST_0\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \m_axi_wdata[15]_INST_0\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \m_axi_wdata[16]_INST_0\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \m_axi_wdata[17]_INST_0\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \m_axi_wdata[18]_INST_0\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \m_axi_wdata[19]_INST_0\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \m_axi_wdata[1]_INST_0\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \m_axi_wdata[20]_INST_0\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \m_axi_wdata[21]_INST_0\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \m_axi_wdata[22]_INST_0\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \m_axi_wdata[23]_INST_0\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \m_axi_wdata[24]_INST_0\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \m_axi_wdata[25]_INST_0\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \m_axi_wdata[26]_INST_0\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \m_axi_wdata[27]_INST_0\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \m_axi_wdata[28]_INST_0\ : label is "soft_lutpair49";
-  attribute SOFT_HLUTNM of \m_axi_wdata[29]_INST_0\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \m_axi_wdata[2]_INST_0\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \m_axi_wdata[30]_INST_0\ : label is "soft_lutpair51";
-  attribute SOFT_HLUTNM of \m_axi_wdata[31]_INST_0\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \m_axi_wdata[3]_INST_0\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \m_axi_wdata[4]_INST_0\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \m_axi_wdata[5]_INST_0\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \m_axi_wdata[6]_INST_0\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \m_axi_wdata[7]_INST_0\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \m_axi_wdata[8]_INST_0\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \m_axi_wdata[9]_INST_0\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of m_axi_wlast_INST_0_i_1 : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \m_axi_wstrb[0]_INST_0\ : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \m_axi_wstrb[1]_INST_0\ : label is "soft_lutpair54";
-  attribute SOFT_HLUTNM of \m_axi_wstrb[2]_INST_0\ : label is "soft_lutpair55";
-  attribute SOFT_HLUTNM of \m_axi_wstrb[3]_INST_0\ : label is "soft_lutpair56";
-  attribute SOFT_HLUTNM of \m_axi_wuser[0]_INST_0\ : label is "soft_lutpair57";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_awid_r[5]_i_2\ : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of last_wr_data_r_i_2 : label is "soft_lutpair61";
+  attribute SOFT_HLUTNM of \m_axi_awlen[0]_INST_0\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of m_axi_awvalid_INST_0 : label is "soft_lutpair62";
+  attribute SOFT_HLUTNM of m_axi_bready_INST_0 : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of \m_axi_wdata[0]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \m_axi_wdata[10]_INST_0\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \m_axi_wdata[11]_INST_0\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \m_axi_wdata[12]_INST_0\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \m_axi_wdata[13]_INST_0\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \m_axi_wdata[14]_INST_0\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \m_axi_wdata[15]_INST_0\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \m_axi_wdata[16]_INST_0\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \m_axi_wdata[17]_INST_0\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \m_axi_wdata[18]_INST_0\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \m_axi_wdata[19]_INST_0\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \m_axi_wdata[1]_INST_0\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \m_axi_wdata[20]_INST_0\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \m_axi_wdata[21]_INST_0\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \m_axi_wdata[22]_INST_0\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \m_axi_wdata[23]_INST_0\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \m_axi_wdata[24]_INST_0\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \m_axi_wdata[25]_INST_0\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \m_axi_wdata[26]_INST_0\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \m_axi_wdata[27]_INST_0\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \m_axi_wdata[28]_INST_0\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \m_axi_wdata[29]_INST_0\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \m_axi_wdata[2]_INST_0\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \m_axi_wdata[30]_INST_0\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \m_axi_wdata[31]_INST_0\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \m_axi_wdata[3]_INST_0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \m_axi_wdata[4]_INST_0\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \m_axi_wdata[5]_INST_0\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \m_axi_wdata[6]_INST_0\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \m_axi_wdata[7]_INST_0\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \m_axi_wdata[8]_INST_0\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \m_axi_wdata[9]_INST_0\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of m_axi_wlast_INST_0_i_1 : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of \m_axi_wstrb[0]_INST_0\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of \m_axi_wstrb[1]_INST_0\ : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \m_axi_wstrb[2]_INST_0\ : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \m_axi_wstrb[3]_INST_0\ : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of \m_axi_wuser[0]_INST_0\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_awid_r[5]_i_2\ : label is "soft_lutpair59";
   attribute COMPARATOR_THRESHOLD of s_lnk_hndlr_awvalid_gen_fsm_r2_carry : label is 11;
   attribute METHODOLOGY_DRC_VIOS of s_lnk_hndlr_awvalid_gen_fsm_r2_carry : label is "{SYNTH-8 {cell *THIS*}}";
-  attribute SOFT_HLUTNM of s_lnk_hndlr_awvalid_gen_fsm_r_i_2 : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[0]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[10]_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[11]_i_1\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[12]_i_1\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[13]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[14]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[15]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[16]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[17]_i_1\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[18]_i_1\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[19]_i_1\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[1]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[20]_i_1\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[21]_i_1\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[22]_i_1\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[23]_i_1\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[24]_i_1\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[25]_i_1\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[26]_i_1\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[27]_i_1\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[28]_i_1\ : label is "soft_lutpair49";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[29]_i_1\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[2]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[30]_i_1\ : label is "soft_lutpair51";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[31]_i_1\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[3]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[4]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[5]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[6]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[7]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[8]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[9]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wstrb_r[0]_i_1\ : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wstrb_r[1]_i_1\ : label is "soft_lutpair54";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wstrb_r[2]_i_1\ : label is "soft_lutpair55";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wstrb_r[3]_i_1\ : label is "soft_lutpair56";
-  attribute SOFT_HLUTNM of \s_lnk_hndlr_wuser_r[0]_i_1\ : label is "soft_lutpair57";
-  attribute SOFT_HLUTNM of s_lnk_hndlr_wvalid_r_i_4 : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of s_lnk_hndlr_awvalid_gen_fsm_r_i_3 : label is "soft_lutpair62";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[0]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[10]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[11]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[12]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[13]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[14]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[15]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[16]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[17]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[18]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[19]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[1]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[20]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[21]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[22]_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[23]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[24]_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[25]_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[26]_i_1\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[27]_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[28]_i_1\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[29]_i_1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[2]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[30]_i_1\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[31]_i_1\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[3]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[4]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[5]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[6]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[7]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[8]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wdata_r[9]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wstrb_r[0]_i_1\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wstrb_r[1]_i_1\ : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wstrb_r[2]_i_1\ : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wstrb_r[3]_i_1\ : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of \s_lnk_hndlr_wuser_r[0]_i_1\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of s_lnk_hndlr_wvalid_r_i_4 : label is "soft_lutpair54";
   attribute COMPARATOR_THRESHOLD of s_lnk_hndlr_wvalid_r_reg_i_3 : label is 11;
   attribute METHODOLOGY_DRC_VIOS of s_lnk_hndlr_wvalid_r_reg_i_3 : label is "{SYNTH-8 {cell *THIS*}}";
-  attribute SOFT_HLUTNM of \swr_addr_trans_cntr_r[0]_i_1\ : label is "soft_lutpair63";
   attribute ADDER_THRESHOLD of \swr_addr_trans_cntr_r_reg[8]_i_2\ : label is 35;
   attribute METHODOLOGY_DRC_VIOS of \swr_addr_trans_cntr_r_reg[8]_i_2\ : label is "{SYNTH-8 {cell *THIS*}}";
-  attribute SOFT_HLUTNM of \swr_beat_cnt_r[0]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \swr_beat_cnt_r[3]_i_2\ : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \swr_beat_cnt_r[7]_i_3\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \swr_data_trans_cntr_r[0]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \swr_beat_cnt_r[0]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \swr_beat_cnt_r[3]_i_2\ : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of \swr_beat_cnt_r[7]_i_4\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \swr_data_trans_cntr_r[0]_i_1\ : label is "soft_lutpair55";
   attribute ADDER_THRESHOLD of \swr_data_trans_cntr_r_reg[8]_i_2\ : label is 35;
   attribute METHODOLOGY_DRC_VIOS of \swr_data_trans_cntr_r_reg[8]_i_2\ : label is "{SYNTH-8 {cell *THIS*}}";
-  attribute SOFT_HLUTNM of swr_lnk_hndlr_in_progress_r_i_1 : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of swr_lnk_hndlr_in_progress_r_i_2 : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \xpm_fifo_async_inst_i_2__3\ : label is "soft_lutpair62";
+  attribute SOFT_HLUTNM of swr_lnk_hndlr_in_progress_r_i_1 : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of swr_lnk_hndlr_in_progress_r_i_2 : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \xpm_fifo_async_inst_i_2__3\ : label is "soft_lutpair61";
   attribute CASCADE_HEIGHT : integer;
   attribute CASCADE_HEIGHT of xpm_fifo_sync_inst_swr : label is 0;
   attribute DOUT_RESET_VALUE : string;
@@ -55648,7 +55625,7 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_ln
   attribute WR_DATA_COUNT_WIDTH of xpm_fifo_sync_inst_swr : label is 8;
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of xpm_fifo_sync_inst_swr : label is "TRUE";
-  attribute SOFT_HLUTNM of xpm_fifo_sync_inst_swr_i_1 : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of xpm_fifo_sync_inst_swr_i_1 : label is "soft_lutpair56";
 begin
   E(0) <= \^e\(0);
   SR(0) <= \^sr\(0);
@@ -55662,14 +55639,14 @@ begin
   swr_lnk_hndlr_in_progress_r_reg_0 <= \^swr_lnk_hndlr_in_progress_r_reg_0\;
 \FSM_sequential_cntrl_fsm_r[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"10101013"
+      INIT => X"11031100"
     )
         port map (
       I0 => \FSM_sequential_cntrl_fsm_r[0]_i_2_n_0\,
       I1 => cntrl_fsm_r(1),
-      I2 => cntrl_fsm_r(0),
-      I3 => cntrl_data_b4_addr_r,
-      I4 => \FSM_sequential_cntrl_fsm_r[0]_i_3_n_0\,
+      I2 => cntrl_data_b4_addr_r,
+      I3 => cntrl_fsm_r(0),
+      I4 => cntrl_data_b4_addr_c,
       O => \cntrl_fsm_r__0\(0)
     );
 \FSM_sequential_cntrl_fsm_r[0]_i_2\: unisim.vcomponents.LUT3
@@ -55678,80 +55655,55 @@ begin
     )
         port map (
       I0 => \delay_cntr_r_reg_n_0_[2]\,
-      I1 => \delay_cntr_r_reg_n_0_[1]\,
-      I2 => \delay_cntr_r_reg_n_0_[0]\,
+      I1 => \delay_cntr_r_reg_n_0_[0]\,
+      I2 => \delay_cntr_r_reg_n_0_[1]\,
       O => \FSM_sequential_cntrl_fsm_r[0]_i_2_n_0\
-    );
-\FSM_sequential_cntrl_fsm_r[0]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000000001"
-    )
-        port map (
-      I0 => cntrl_cntr_r_reg(0),
-      I1 => cntrl_data_b4_addr_r_i_2_n_0,
-      I2 => cntrl_cntr_r_reg(8),
-      I3 => cntrl_cntr_r_reg(7),
-      I4 => cntrl_cntr_r_reg(6),
-      I5 => cntrl_cntr_r_reg(5),
-      O => \FSM_sequential_cntrl_fsm_r[0]_i_3_n_0\
     );
 \FSM_sequential_cntrl_fsm_r[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFF55551555"
+      INIT => X"AAAAAAAAFFFFEFFF"
     )
         port map (
       I0 => \FSM_sequential_cntrl_fsm_r[1]_i_2_n_0\,
-      I1 => cntrl_cntr_r217_out,
-      I2 => \FSM_sequential_cntrl_fsm_r[1]_i_3_n_0\,
-      I3 => cntrl_cntr_r_reg(0),
-      I4 => \FSM_sequential_cntrl_fsm_r[1]_i_4_n_0\,
-      I5 => \FSM_sequential_cntrl_fsm_r[1]_i_5_n_0\,
+      I1 => \FSM_sequential_cntrl_fsm_r[1]_i_3_n_0\,
+      I2 => cntrl_cntr_r_reg(0),
+      I3 => cntrl_cntr_r217_out,
+      I4 => cntrl_cntr_r318_out,
+      I5 => \FSM_sequential_cntrl_fsm_r[1]_i_4_n_0\,
       O => \cntrl_fsm_r__0\(1)
     );
-\FSM_sequential_cntrl_fsm_r[1]_i_2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"B"
-    )
-        port map (
-      I0 => cntrl_fsm_r(0),
-      I1 => cntrl_fsm_r(1),
-      O => \FSM_sequential_cntrl_fsm_r[1]_i_2_n_0\
-    );
-\FSM_sequential_cntrl_fsm_r[1]_i_3\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"02FEFFFF"
-    )
-        port map (
-      I0 => empty,
-      I1 => fifo_wr_en_r_reg_0,
-      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => s_lnk_hndlr_awvalid,
-      I4 => m_axi_awready,
-      O => \FSM_sequential_cntrl_fsm_r[1]_i_3_n_0\
-    );
-\FSM_sequential_cntrl_fsm_r[1]_i_4\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFFE"
-    )
-        port map (
-      I0 => cntrl_cntr_r_reg(5),
-      I1 => cntrl_cntr_r_reg(6),
-      I2 => cntrl_cntr_r_reg(7),
-      I3 => cntrl_cntr_r_reg(8),
-      I4 => cntrl_data_b4_addr_r_i_2_n_0,
-      O => \FSM_sequential_cntrl_fsm_r[1]_i_4_n_0\
-    );
-\FSM_sequential_cntrl_fsm_r[1]_i_5\: unisim.vcomponents.LUT5
+\FSM_sequential_cntrl_fsm_r[1]_i_2\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00040000"
     )
         port map (
       I0 => cntrl_fsm_r(1),
       I1 => cntrl_fsm_r(0),
-      I2 => \delay_cntr_r_reg_n_0_[0]\,
-      I3 => \delay_cntr_r_reg_n_0_[1]\,
+      I2 => \delay_cntr_r_reg_n_0_[1]\,
+      I3 => \delay_cntr_r_reg_n_0_[0]\,
       I4 => \delay_cntr_r_reg_n_0_[2]\,
-      O => \FSM_sequential_cntrl_fsm_r[1]_i_5_n_0\
+      O => \FSM_sequential_cntrl_fsm_r[1]_i_2_n_0\
+    );
+\FSM_sequential_cntrl_fsm_r[1]_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFFFFE"
+    )
+        port map (
+      I0 => cntrl_cntr_r_reg(3),
+      I1 => cntrl_cntr_r_reg(1),
+      I2 => cntrl_cntr_r_reg(5),
+      I3 => cntrl_cntr_r_reg(7),
+      I4 => cntrl_data_b4_addr_r_i_2_n_0,
+      O => \FSM_sequential_cntrl_fsm_r[1]_i_3_n_0\
+    );
+\FSM_sequential_cntrl_fsm_r[1]_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"B"
+    )
+        port map (
+      I0 => cntrl_fsm_r(0),
+      I1 => cntrl_fsm_r(1),
+      O => \FSM_sequential_cntrl_fsm_r[1]_i_4_n_0\
     );
 \FSM_sequential_cntrl_fsm_r_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -55774,8 +55726,8 @@ begin
       INIT => X"01"
     )
         port map (
-      I0 => s_lnk_hndlr_rd_fsm_r(1),
-      I1 => fifo_empty_w,
+      I0 => fifo_empty_w,
+      I1 => s_lnk_hndlr_rd_fsm_r(1),
       I2 => s_lnk_hndlr_rd_fsm_r(0),
       O => \s_lnk_hndlr_rd_fsm_r__0\(0)
     );
@@ -55796,9 +55748,9 @@ begin
       INIT => X"0001"
     )
         port map (
-      I0 => swr_addr_trans_cntr_r_reg(0),
-      I1 => swr_addr_trans_cntr_r_reg(4),
-      I2 => swr_addr_trans_cntr_r_reg(3),
+      I0 => swr_addr_trans_cntr_r_reg(7),
+      I1 => swr_addr_trans_cntr_r_reg(3),
+      I2 => swr_addr_trans_cntr_r_reg(1),
       I3 => \FSM_sequential_s_lnk_hndlr_rd_fsm_r[1]_i_3_n_0\,
       O => \FSM_sequential_s_lnk_hndlr_rd_fsm_r[1]_i_2_n_0\
     );
@@ -55807,12 +55759,12 @@ begin
       INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => swr_addr_trans_cntr_r_reg(8),
-      I1 => swr_addr_trans_cntr_r_reg(7),
-      I2 => swr_addr_trans_cntr_r_reg(1),
-      I3 => swr_addr_trans_cntr_r_reg(2),
-      I4 => swr_addr_trans_cntr_r_reg(5),
-      I5 => swr_addr_trans_cntr_r_reg(6),
+      I0 => swr_addr_trans_cntr_r_reg(0),
+      I1 => swr_addr_trans_cntr_r_reg(5),
+      I2 => swr_addr_trans_cntr_r_reg(2),
+      I3 => swr_addr_trans_cntr_r_reg(4),
+      I4 => swr_addr_trans_cntr_r_reg(6),
+      I5 => swr_addr_trans_cntr_r_reg(8),
       O => \FSM_sequential_s_lnk_hndlr_rd_fsm_r[1]_i_3_n_0\
     );
 \FSM_sequential_s_lnk_hndlr_rd_fsm_r_reg[0]\: unisim.vcomponents.FDRE
@@ -55830,6 +55782,15 @@ begin
       D => \s_lnk_hndlr_rd_fsm_r__0\(1),
       Q => s_lnk_hndlr_rd_fsm_r(1),
       R => \^sr\(0)
+    );
+axi_c2c_lnk_hndlr_in_progress_INST_0: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I1 => srd_lnk_hndlr_en,
+      O => axi_c2c_lnk_hndlr_in_progress
     );
 chnl_up_r_reg: unisim.vcomponents.FDRE
      port map (
@@ -55849,16 +55810,16 @@ chnl_up_r_reg: unisim.vcomponents.FDRE
     );
 \cntrl_cntr_r[8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"777F77758880888A"
+      INIT => X"5754FFFFA8AB0000"
     )
         port map (
-      I0 => m_axi_awready,
-      I1 => s_lnk_hndlr_awvalid,
+      I0 => s_lnk_hndlr_awvalid,
+      I1 => slv_wait_for_rst_r,
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => fifo_wr_en_r_reg_0,
-      I4 => empty,
+      I3 => empty,
+      I4 => m_axi_awready,
       I5 => cntrl_cntr_r217_out,
-      O => \cntrl_cntr_r[8]_i_1_n_0\
+      O => cntrl_cntr_r
     );
 \cntrl_cntr_r[8]_i_10\: unisim.vcomponents.LUT2
     generic map(
@@ -55871,27 +55832,27 @@ chnl_up_r_reg: unisim.vcomponents.FDRE
     );
 \cntrl_cntr_r[8]_i_11\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"6AAA6A6666666666"
+      INIT => X"A6A666A6666666A6"
     )
         port map (
       I0 => cntrl_cntr_r_reg(1),
       I1 => cntrl_cntr_r217_out,
-      I2 => empty,
-      I3 => \s_lnk_hndlr_awid_r[5]_i_2_n_0\,
-      I4 => s_lnk_hndlr_awvalid,
-      I5 => m_axi_awready,
+      I2 => m_axi_awready,
+      I3 => empty,
+      I4 => \s_lnk_hndlr_awid_r[5]_i_2_n_0\,
+      I5 => s_lnk_hndlr_awvalid,
       O => \cntrl_cntr_r[8]_i_11_n_0\
     );
 \cntrl_cntr_r[8]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8880888AFFFFFFFF"
+      INIT => X"A8AB0000FFFFFFFF"
     )
         port map (
-      I0 => m_axi_awready,
-      I1 => s_lnk_hndlr_awvalid,
+      I0 => s_lnk_hndlr_awvalid,
+      I1 => slv_wait_for_rst_r,
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => fifo_wr_en_r_reg_0,
-      I4 => empty,
+      I3 => empty,
+      I4 => m_axi_awready,
       I5 => cntrl_cntr_r217_out,
       O => \cntrl_cntr_r[8]_i_3_n_0\
     );
@@ -55952,7 +55913,7 @@ chnl_up_r_reg: unisim.vcomponents.FDRE
 \cntrl_cntr_r_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \cntrl_cntr_r[8]_i_1_n_0\,
+      CE => cntrl_cntr_r,
       D => \cntrl_cntr_r[0]_i_1_n_0\,
       Q => cntrl_cntr_r_reg(0),
       R => \^sr\(0)
@@ -55960,7 +55921,7 @@ chnl_up_r_reg: unisim.vcomponents.FDRE
 \cntrl_cntr_r_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \cntrl_cntr_r[8]_i_1_n_0\,
+      CE => cntrl_cntr_r,
       D => \cntrl_cntr_r_reg[8]_i_2_n_15\,
       Q => cntrl_cntr_r_reg(1),
       R => \^sr\(0)
@@ -55968,7 +55929,7 @@ chnl_up_r_reg: unisim.vcomponents.FDRE
 \cntrl_cntr_r_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \cntrl_cntr_r[8]_i_1_n_0\,
+      CE => cntrl_cntr_r,
       D => \cntrl_cntr_r_reg[8]_i_2_n_14\,
       Q => cntrl_cntr_r_reg(2),
       R => \^sr\(0)
@@ -55976,7 +55937,7 @@ chnl_up_r_reg: unisim.vcomponents.FDRE
 \cntrl_cntr_r_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \cntrl_cntr_r[8]_i_1_n_0\,
+      CE => cntrl_cntr_r,
       D => \cntrl_cntr_r_reg[8]_i_2_n_13\,
       Q => cntrl_cntr_r_reg(3),
       R => \^sr\(0)
@@ -55984,7 +55945,7 @@ chnl_up_r_reg: unisim.vcomponents.FDRE
 \cntrl_cntr_r_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \cntrl_cntr_r[8]_i_1_n_0\,
+      CE => cntrl_cntr_r,
       D => \cntrl_cntr_r_reg[8]_i_2_n_12\,
       Q => cntrl_cntr_r_reg(4),
       R => \^sr\(0)
@@ -55992,7 +55953,7 @@ chnl_up_r_reg: unisim.vcomponents.FDRE
 \cntrl_cntr_r_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \cntrl_cntr_r[8]_i_1_n_0\,
+      CE => cntrl_cntr_r,
       D => \cntrl_cntr_r_reg[8]_i_2_n_11\,
       Q => cntrl_cntr_r_reg(5),
       R => \^sr\(0)
@@ -56000,7 +55961,7 @@ chnl_up_r_reg: unisim.vcomponents.FDRE
 \cntrl_cntr_r_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \cntrl_cntr_r[8]_i_1_n_0\,
+      CE => cntrl_cntr_r,
       D => \cntrl_cntr_r_reg[8]_i_2_n_10\,
       Q => cntrl_cntr_r_reg(6),
       R => \^sr\(0)
@@ -56008,7 +55969,7 @@ chnl_up_r_reg: unisim.vcomponents.FDRE
 \cntrl_cntr_r_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \cntrl_cntr_r[8]_i_1_n_0\,
+      CE => cntrl_cntr_r,
       D => \cntrl_cntr_r_reg[8]_i_2_n_9\,
       Q => cntrl_cntr_r_reg(7),
       R => \^sr\(0)
@@ -56016,7 +55977,7 @@ chnl_up_r_reg: unisim.vcomponents.FDRE
 \cntrl_cntr_r_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \cntrl_cntr_r[8]_i_1_n_0\,
+      CE => cntrl_cntr_r,
       D => \cntrl_cntr_r_reg[8]_i_2_n_8\,
       Q => cntrl_cntr_r_reg(8),
       R => \^sr\(0)
@@ -56058,12 +56019,12 @@ cntrl_data_b4_addr_r_i_1: unisim.vcomponents.LUT6
       INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => cntrl_cntr_r_reg(5),
-      I1 => cntrl_cntr_r_reg(6),
+      I0 => cntrl_cntr_r_reg(0),
+      I1 => cntrl_data_b4_addr_r_i_2_n_0,
       I2 => cntrl_cntr_r_reg(7),
-      I3 => cntrl_cntr_r_reg(8),
-      I4 => cntrl_data_b4_addr_r_i_2_n_0,
-      I5 => cntrl_cntr_r_reg(0),
+      I3 => cntrl_cntr_r_reg(5),
+      I4 => cntrl_cntr_r_reg(1),
+      I5 => cntrl_cntr_r_reg(3),
       O => cntrl_data_b4_addr_c
     );
 cntrl_data_b4_addr_r_i_2: unisim.vcomponents.LUT4
@@ -56071,10 +56032,10 @@ cntrl_data_b4_addr_r_i_2: unisim.vcomponents.LUT4
       INIT => X"FFFE"
     )
         port map (
-      I0 => cntrl_cntr_r_reg(2),
-      I1 => cntrl_cntr_r_reg(1),
-      I2 => cntrl_cntr_r_reg(4),
-      I3 => cntrl_cntr_r_reg(3),
+      I0 => cntrl_cntr_r_reg(8),
+      I1 => cntrl_cntr_r_reg(4),
+      I2 => cntrl_cntr_r_reg(6),
+      I3 => cntrl_cntr_r_reg(2),
       O => cntrl_data_b4_addr_r_i_2_n_0
     );
 cntrl_data_b4_addr_r_reg: unisim.vcomponents.FDRE
@@ -56098,8 +56059,8 @@ cntrl_data_b4_addr_r_reg: unisim.vcomponents.FDRE
       INIT => X"6"
     )
         port map (
-      I0 => \delay_cntr_r_reg_n_0_[0]\,
-      I1 => \delay_cntr_r_reg_n_0_[1]\,
+      I0 => \delay_cntr_r_reg_n_0_[1]\,
+      I1 => \delay_cntr_r_reg_n_0_[0]\,
       O => p_1_in(1)
     );
 \delay_cntr_r[2]_i_1\: unisim.vcomponents.LUT3
@@ -56118,8 +56079,8 @@ cntrl_data_b4_addr_r_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \delay_cntr_r_reg_n_0_[2]\,
-      I1 => \delay_cntr_r_reg_n_0_[1]\,
-      I2 => \delay_cntr_r_reg_n_0_[0]\,
+      I1 => \delay_cntr_r_reg_n_0_[0]\,
+      I2 => \delay_cntr_r_reg_n_0_[1]\,
       O => p_1_in(2)
     );
 \delay_cntr_r_reg[0]\: unisim.vcomponents.FDRE
@@ -56148,14 +56109,14 @@ cntrl_data_b4_addr_r_reg: unisim.vcomponents.FDRE
     );
 \fifo_wr_data_r[7]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"8880888A"
+      INIT => X"AAA20002"
     )
         port map (
       I0 => m_axi_awready,
-      I1 => s_lnk_hndlr_awvalid,
+      I1 => empty,
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => fifo_wr_en_r_reg_0,
-      I4 => empty,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_awvalid,
       O => cntrl_cntr_r318_out
     );
 \fifo_wr_data_r_reg[0]\: unisim.vcomponents.FDRE
@@ -56224,15 +56185,15 @@ cntrl_data_b4_addr_r_reg: unisim.vcomponents.FDRE
     );
 fifo_wr_en_r_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8080800080808088"
+      INIT => X"8880888A00000000"
     )
         port map (
       I0 => fifo_wr_en_r1,
-      I1 => m_axi_awready,
-      I2 => s_lnk_hndlr_awvalid,
+      I1 => s_lnk_hndlr_awvalid,
+      I2 => slv_wait_for_rst_r,
       I3 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I4 => fifo_wr_en_r_reg_0,
-      I5 => empty,
+      I4 => empty,
+      I5 => m_axi_awready,
       O => fifo_wr_en_r0
     );
 fifo_wr_en_r_i_10: unisim.vcomponents.LUT4
@@ -56242,8 +56203,8 @@ fifo_wr_en_r_i_10: unisim.vcomponents.LUT4
         port map (
       I0 => swr_addr_trans_cntr_r_reg(4),
       I1 => swr_data_trans_cntr_r_reg(4),
-      I2 => swr_data_trans_cntr_r_reg(5),
-      I3 => swr_addr_trans_cntr_r_reg(5),
+      I2 => swr_addr_trans_cntr_r_reg(5),
+      I3 => swr_data_trans_cntr_r_reg(5),
       O => fifo_wr_en_r_i_10_n_0
     );
 fifo_wr_en_r_i_11: unisim.vcomponents.LUT4
@@ -56253,8 +56214,8 @@ fifo_wr_en_r_i_11: unisim.vcomponents.LUT4
         port map (
       I0 => swr_addr_trans_cntr_r_reg(2),
       I1 => swr_data_trans_cntr_r_reg(2),
-      I2 => swr_data_trans_cntr_r_reg(3),
-      I3 => swr_addr_trans_cntr_r_reg(3),
+      I2 => swr_addr_trans_cntr_r_reg(3),
+      I3 => swr_data_trans_cntr_r_reg(3),
       O => fifo_wr_en_r_i_11_n_0
     );
 fifo_wr_en_r_i_12: unisim.vcomponents.LUT4
@@ -56264,8 +56225,8 @@ fifo_wr_en_r_i_12: unisim.vcomponents.LUT4
         port map (
       I0 => swr_addr_trans_cntr_r_reg(0),
       I1 => swr_data_trans_cntr_r_reg(0),
-      I2 => swr_data_trans_cntr_r_reg(1),
-      I3 => swr_addr_trans_cntr_r_reg(1),
+      I2 => swr_addr_trans_cntr_r_reg(1),
+      I3 => swr_data_trans_cntr_r_reg(1),
       O => fifo_wr_en_r_i_12_n_0
     );
 fifo_wr_en_r_i_3: unisim.vcomponents.LUT2
@@ -56279,46 +56240,46 @@ fifo_wr_en_r_i_3: unisim.vcomponents.LUT2
     );
 fifo_wr_en_r_i_4: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"20F2"
     )
         port map (
       I0 => swr_addr_trans_cntr_r_reg(6),
       I1 => swr_data_trans_cntr_r_reg(6),
-      I2 => swr_data_trans_cntr_r_reg(7),
-      I3 => swr_addr_trans_cntr_r_reg(7),
+      I2 => swr_addr_trans_cntr_r_reg(7),
+      I3 => swr_data_trans_cntr_r_reg(7),
       O => fifo_wr_en_r_i_4_n_0
     );
 fifo_wr_en_r_i_5: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"20F2"
     )
         port map (
       I0 => swr_addr_trans_cntr_r_reg(4),
       I1 => swr_data_trans_cntr_r_reg(4),
-      I2 => swr_data_trans_cntr_r_reg(5),
-      I3 => swr_addr_trans_cntr_r_reg(5),
+      I2 => swr_addr_trans_cntr_r_reg(5),
+      I3 => swr_data_trans_cntr_r_reg(5),
       O => fifo_wr_en_r_i_5_n_0
     );
 fifo_wr_en_r_i_6: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"20F2"
     )
         port map (
       I0 => swr_addr_trans_cntr_r_reg(2),
       I1 => swr_data_trans_cntr_r_reg(2),
-      I2 => swr_data_trans_cntr_r_reg(3),
-      I3 => swr_addr_trans_cntr_r_reg(3),
+      I2 => swr_addr_trans_cntr_r_reg(3),
+      I3 => swr_data_trans_cntr_r_reg(3),
       O => fifo_wr_en_r_i_6_n_0
     );
 fifo_wr_en_r_i_7: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"20F2"
     )
         port map (
       I0 => swr_addr_trans_cntr_r_reg(0),
       I1 => swr_data_trans_cntr_r_reg(0),
-      I2 => swr_data_trans_cntr_r_reg(1),
-      I3 => swr_addr_trans_cntr_r_reg(1),
+      I2 => swr_addr_trans_cntr_r_reg(1),
+      I3 => swr_data_trans_cntr_r_reg(1),
       O => fifo_wr_en_r_i_7_n_0
     );
 fifo_wr_en_r_i_8: unisim.vcomponents.LUT2
@@ -56337,8 +56298,8 @@ fifo_wr_en_r_i_9: unisim.vcomponents.LUT4
         port map (
       I0 => swr_addr_trans_cntr_r_reg(6),
       I1 => swr_data_trans_cntr_r_reg(6),
-      I2 => swr_data_trans_cntr_r_reg(7),
-      I3 => swr_addr_trans_cntr_r_reg(7),
+      I2 => swr_addr_trans_cntr_r_reg(7),
+      I3 => swr_data_trans_cntr_r_reg(7),
       O => fifo_wr_en_r_i_9_n_0
     );
 fifo_wr_en_r_reg: unisim.vcomponents.FDRE
@@ -56399,15 +56360,15 @@ last_wr_data_r2_reg: unisim.vcomponents.FDRE
     );
 last_wr_data_r_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000000F4040000"
+      INIT => X"4440004000400040"
     )
         port map (
-      I0 => m_axi_wlast_INST_0_i_2_n_0,
-      I1 => m_axi_wlast_INST_0_i_1_n_0,
-      I2 => \s_lnk_hndlr_awid_r[5]_i_2_n_0\,
-      I3 => dout(1),
-      I4 => \^e\(0),
-      I5 => last_wr_data_r_i_2_n_0,
+      I0 => last_wr_data_r_i_2_n_0,
+      I1 => \^e\(0),
+      I2 => dout(1),
+      I3 => \s_lnk_hndlr_awid_r[5]_i_2_n_0\,
+      I4 => m_axi_wlast_INST_0_i_2_n_0,
+      I5 => m_axi_wlast_INST_0_i_1_n_0,
       O => cntrl_cntr_r217_out
     );
 last_wr_data_r_i_2: unisim.vcomponents.LUT3
@@ -56430,552 +56391,552 @@ last_wr_data_r_reg: unisim.vcomponents.FDRE
     );
 \m_axi_awaddr[0]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(18),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(0),
+      I0 => s_lnk_hndlr_awaddr(0),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(18),
       O => \^m_axi_awaddr\(0)
     );
 \m_axi_awaddr[10]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(28),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(10),
+      I0 => s_lnk_hndlr_awaddr(10),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(28),
       O => \^m_axi_awaddr\(10)
     );
 \m_axi_awaddr[11]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(29),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(11),
+      I0 => s_lnk_hndlr_awaddr(11),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(29),
       O => \^m_axi_awaddr\(11)
     );
 \m_axi_awaddr[12]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(30),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(12),
+      I0 => s_lnk_hndlr_awaddr(12),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(30),
       O => \^m_axi_awaddr\(12)
     );
 \m_axi_awaddr[13]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(31),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(13),
+      I0 => s_lnk_hndlr_awaddr(13),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(31),
       O => \^m_axi_awaddr\(13)
     );
 \m_axi_awaddr[14]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(32),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(14),
+      I0 => s_lnk_hndlr_awaddr(14),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(32),
       O => \^m_axi_awaddr\(14)
     );
 \m_axi_awaddr[15]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(33),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(15),
+      I0 => s_lnk_hndlr_awaddr(15),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(33),
       O => \^m_axi_awaddr\(15)
     );
 \m_axi_awaddr[16]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(34),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(16),
+      I0 => s_lnk_hndlr_awaddr(16),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(34),
       O => \^m_axi_awaddr\(16)
     );
 \m_axi_awaddr[17]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(35),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(17),
+      I0 => s_lnk_hndlr_awaddr(17),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(35),
       O => \^m_axi_awaddr\(17)
     );
 \m_axi_awaddr[18]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(36),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(18),
+      I0 => s_lnk_hndlr_awaddr(18),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(36),
       O => \^m_axi_awaddr\(18)
     );
 \m_axi_awaddr[19]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(37),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(19),
+      I0 => s_lnk_hndlr_awaddr(19),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(37),
       O => \^m_axi_awaddr\(19)
     );
 \m_axi_awaddr[1]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(19),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(1),
+      I0 => s_lnk_hndlr_awaddr(1),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(19),
       O => \^m_axi_awaddr\(1)
     );
 \m_axi_awaddr[20]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(38),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(20),
+      I0 => s_lnk_hndlr_awaddr(20),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(38),
       O => \^m_axi_awaddr\(20)
     );
 \m_axi_awaddr[21]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(39),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(21),
+      I0 => s_lnk_hndlr_awaddr(21),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(39),
       O => \^m_axi_awaddr\(21)
     );
 \m_axi_awaddr[22]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(40),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(22),
+      I0 => s_lnk_hndlr_awaddr(22),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(40),
       O => \^m_axi_awaddr\(22)
     );
 \m_axi_awaddr[23]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(41),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(23),
+      I0 => s_lnk_hndlr_awaddr(23),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(41),
       O => \^m_axi_awaddr\(23)
     );
 \m_axi_awaddr[24]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(42),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(24),
+      I0 => s_lnk_hndlr_awaddr(24),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(42),
       O => \^m_axi_awaddr\(24)
     );
 \m_axi_awaddr[25]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(43),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(25),
+      I0 => s_lnk_hndlr_awaddr(25),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(43),
       O => \^m_axi_awaddr\(25)
     );
 \m_axi_awaddr[26]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(44),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(26),
+      I0 => s_lnk_hndlr_awaddr(26),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(44),
       O => \^m_axi_awaddr\(26)
     );
 \m_axi_awaddr[27]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(45),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(27),
+      I0 => s_lnk_hndlr_awaddr(27),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(45),
       O => \^m_axi_awaddr\(27)
     );
 \m_axi_awaddr[28]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(46),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(28),
+      I0 => s_lnk_hndlr_awaddr(28),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(46),
       O => \^m_axi_awaddr\(28)
     );
 \m_axi_awaddr[29]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(47),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(29),
+      I0 => s_lnk_hndlr_awaddr(29),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(47),
       O => \^m_axi_awaddr\(29)
     );
 \m_axi_awaddr[2]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(20),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(2),
+      I0 => s_lnk_hndlr_awaddr(2),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(20),
       O => \^m_axi_awaddr\(2)
     );
 \m_axi_awaddr[30]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(48),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(30),
+      I0 => s_lnk_hndlr_awaddr(30),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(48),
       O => \^m_axi_awaddr\(30)
     );
 \m_axi_awaddr[31]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(49),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(31),
+      I0 => s_lnk_hndlr_awaddr(31),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(49),
       O => \^m_axi_awaddr\(31)
     );
 \m_axi_awaddr[3]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(21),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(3),
+      I0 => s_lnk_hndlr_awaddr(3),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(21),
       O => \^m_axi_awaddr\(3)
     );
 \m_axi_awaddr[4]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(22),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(4),
+      I0 => s_lnk_hndlr_awaddr(4),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(22),
       O => \^m_axi_awaddr\(4)
     );
 \m_axi_awaddr[5]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(23),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(5),
+      I0 => s_lnk_hndlr_awaddr(5),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(23),
       O => \^m_axi_awaddr\(5)
     );
 \m_axi_awaddr[6]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(24),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(6),
+      I0 => s_lnk_hndlr_awaddr(6),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(24),
       O => \^m_axi_awaddr\(6)
     );
 \m_axi_awaddr[7]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(25),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(7),
+      I0 => s_lnk_hndlr_awaddr(7),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(25),
       O => \^m_axi_awaddr\(7)
     );
 \m_axi_awaddr[8]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(26),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(8),
+      I0 => s_lnk_hndlr_awaddr(8),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(26),
       O => \^m_axi_awaddr\(8)
     );
 \m_axi_awaddr[9]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(27),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awaddr(9),
+      I0 => s_lnk_hndlr_awaddr(9),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(27),
       O => \^m_axi_awaddr\(9)
     );
 \m_axi_awburst[0]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(16),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awburst(0),
+      I0 => s_lnk_hndlr_awburst(0),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(16),
       O => \^m_axi_awburst\(0)
     );
 \m_axi_awburst[1]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(17),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awburst(1),
+      I0 => s_lnk_hndlr_awburst(1),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(17),
       O => \^m_axi_awburst\(1)
     );
 \m_axi_awid[0]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(0),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awid(0),
+      I0 => s_lnk_hndlr_awid(0),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(0),
       O => \^m_axi_awid\(0)
     );
 \m_axi_awid[1]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(1),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awid(1),
+      I0 => s_lnk_hndlr_awid(1),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(1),
       O => \^m_axi_awid\(1)
     );
 \m_axi_awid[2]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(2),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awid(2),
+      I0 => s_lnk_hndlr_awid(2),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(2),
       O => \^m_axi_awid\(2)
     );
 \m_axi_awid[3]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(3),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awid(3),
+      I0 => s_lnk_hndlr_awid(3),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(3),
       O => \^m_axi_awid\(3)
     );
 \m_axi_awid[4]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(4),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awid(4),
+      I0 => s_lnk_hndlr_awid(4),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(4),
       O => \^m_axi_awid\(4)
     );
 \m_axi_awid[5]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(5),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awid(5),
+      I0 => s_lnk_hndlr_awid(5),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(5),
       O => \^m_axi_awid\(5)
     );
 \m_axi_awlen[0]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(6),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awlen(0),
+      I0 => s_lnk_hndlr_awlen(0),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(6),
       O => \^m_axi_awlen\(0)
     );
 \m_axi_awlen[1]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(7),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awlen(1),
+      I0 => s_lnk_hndlr_awlen(1),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(7),
       O => \^m_axi_awlen\(1)
     );
 \m_axi_awlen[2]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(8),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awlen(2),
+      I0 => s_lnk_hndlr_awlen(2),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(8),
       O => \^m_axi_awlen\(2)
     );
 \m_axi_awlen[3]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(9),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awlen(3),
+      I0 => s_lnk_hndlr_awlen(3),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(9),
       O => \^m_axi_awlen\(3)
     );
 \m_axi_awlen[4]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(10),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awlen(4),
+      I0 => s_lnk_hndlr_awlen(4),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(10),
       O => \^m_axi_awlen\(4)
     );
 \m_axi_awlen[5]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(11),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awlen(5),
+      I0 => s_lnk_hndlr_awlen(5),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(11),
       O => \^m_axi_awlen\(5)
     );
 \m_axi_awlen[6]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(12),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awlen(6),
+      I0 => s_lnk_hndlr_awlen(6),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(12),
       O => \^m_axi_awlen\(6)
     );
 \m_axi_awlen[7]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(13),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awlen(7),
+      I0 => s_lnk_hndlr_awlen(7),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(13),
       O => \^m_axi_awlen\(7)
     );
 \m_axi_awsize[0]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(14),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awsize(0),
+      I0 => s_lnk_hndlr_awsize(0),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(14),
       O => \^m_axi_awsize\(0)
     );
 \m_axi_awsize[1]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(15),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_awsize(1),
+      I0 => s_lnk_hndlr_awsize(1),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_awaddr_r_reg[31]_0\(15),
       O => \^m_axi_awsize\(1)
     );
 m_axi_awvalid_INST_0: unisim.vcomponents.LUT4
@@ -56984,373 +56945,385 @@ m_axi_awvalid_INST_0: unisim.vcomponents.LUT4
     )
         port map (
       I0 => empty,
-      I1 => fifo_wr_en_r_reg_0,
-      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I2 => slv_wait_for_rst_r,
       I3 => s_lnk_hndlr_awvalid,
       O => m_axi_awvalid
     );
-\m_axi_wdata[0]_INST_0\: unisim.vcomponents.LUT4
+m_axi_bready_INST_0: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FE02"
+      INIT => X"A8A8A8AB"
     )
         port map (
-      I0 => dout(6),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(0),
+      I0 => \^s_lnk_hndlr_bready_r_reg_0\,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => full,
+      I4 => wr_rst_busy,
+      O => m_axi_bready
+    );
+\m_axi_wdata[0]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"ABA8"
+    )
+        port map (
+      I0 => s_lnk_hndlr_wdata(0),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(6),
       O => m_axi_wdata(0)
     );
 \m_axi_wdata[10]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(16),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(10),
+      I0 => s_lnk_hndlr_wdata(10),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(16),
       O => m_axi_wdata(10)
     );
 \m_axi_wdata[11]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(17),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(11),
+      I0 => s_lnk_hndlr_wdata(11),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(17),
       O => m_axi_wdata(11)
     );
 \m_axi_wdata[12]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(18),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(12),
+      I0 => s_lnk_hndlr_wdata(12),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(18),
       O => m_axi_wdata(12)
     );
 \m_axi_wdata[13]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(19),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(13),
+      I0 => s_lnk_hndlr_wdata(13),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(19),
       O => m_axi_wdata(13)
     );
 \m_axi_wdata[14]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(20),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(14),
+      I0 => s_lnk_hndlr_wdata(14),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(20),
       O => m_axi_wdata(14)
     );
 \m_axi_wdata[15]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(21),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(15),
+      I0 => s_lnk_hndlr_wdata(15),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(21),
       O => m_axi_wdata(15)
     );
 \m_axi_wdata[16]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(22),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(16),
+      I0 => s_lnk_hndlr_wdata(16),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(22),
       O => m_axi_wdata(16)
     );
 \m_axi_wdata[17]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(23),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(17),
+      I0 => s_lnk_hndlr_wdata(17),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(23),
       O => m_axi_wdata(17)
     );
 \m_axi_wdata[18]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(24),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(18),
+      I0 => s_lnk_hndlr_wdata(18),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(24),
       O => m_axi_wdata(18)
     );
 \m_axi_wdata[19]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(25),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(19),
+      I0 => s_lnk_hndlr_wdata(19),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(25),
       O => m_axi_wdata(19)
     );
 \m_axi_wdata[1]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(7),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(1),
+      I0 => s_lnk_hndlr_wdata(1),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(7),
       O => m_axi_wdata(1)
     );
 \m_axi_wdata[20]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(26),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(20),
+      I0 => s_lnk_hndlr_wdata(20),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(26),
       O => m_axi_wdata(20)
     );
 \m_axi_wdata[21]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(27),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(21),
+      I0 => s_lnk_hndlr_wdata(21),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(27),
       O => m_axi_wdata(21)
     );
 \m_axi_wdata[22]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(28),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(22),
+      I0 => s_lnk_hndlr_wdata(22),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(28),
       O => m_axi_wdata(22)
     );
 \m_axi_wdata[23]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(29),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(23),
+      I0 => s_lnk_hndlr_wdata(23),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(29),
       O => m_axi_wdata(23)
     );
 \m_axi_wdata[24]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(30),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(24),
+      I0 => s_lnk_hndlr_wdata(24),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(30),
       O => m_axi_wdata(24)
     );
 \m_axi_wdata[25]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(31),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(25),
+      I0 => s_lnk_hndlr_wdata(25),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(31),
       O => m_axi_wdata(25)
     );
 \m_axi_wdata[26]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(32),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(26),
+      I0 => s_lnk_hndlr_wdata(26),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(32),
       O => m_axi_wdata(26)
     );
 \m_axi_wdata[27]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(33),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(27),
+      I0 => s_lnk_hndlr_wdata(27),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(33),
       O => m_axi_wdata(27)
     );
 \m_axi_wdata[28]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(34),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(28),
+      I0 => s_lnk_hndlr_wdata(28),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(34),
       O => m_axi_wdata(28)
     );
 \m_axi_wdata[29]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(35),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(29),
+      I0 => s_lnk_hndlr_wdata(29),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(35),
       O => m_axi_wdata(29)
     );
 \m_axi_wdata[2]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(8),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(2),
+      I0 => s_lnk_hndlr_wdata(2),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(8),
       O => m_axi_wdata(2)
     );
 \m_axi_wdata[30]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(36),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(30),
+      I0 => s_lnk_hndlr_wdata(30),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(36),
       O => m_axi_wdata(30)
     );
 \m_axi_wdata[31]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(37),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(31),
+      I0 => s_lnk_hndlr_wdata(31),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(37),
       O => m_axi_wdata(31)
     );
 \m_axi_wdata[3]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(9),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(3),
+      I0 => s_lnk_hndlr_wdata(3),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(9),
       O => m_axi_wdata(3)
     );
 \m_axi_wdata[4]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(10),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(4),
+      I0 => s_lnk_hndlr_wdata(4),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(10),
       O => m_axi_wdata(4)
     );
 \m_axi_wdata[5]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(11),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(5),
+      I0 => s_lnk_hndlr_wdata(5),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(11),
       O => m_axi_wdata(5)
     );
 \m_axi_wdata[6]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(12),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(6),
+      I0 => s_lnk_hndlr_wdata(6),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(12),
       O => m_axi_wdata(6)
     );
 \m_axi_wdata[7]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(13),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(7),
+      I0 => s_lnk_hndlr_wdata(7),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(13),
       O => m_axi_wdata(7)
     );
 \m_axi_wdata[8]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(14),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(8),
+      I0 => s_lnk_hndlr_wdata(8),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(14),
       O => m_axi_wdata(8)
     );
 \m_axi_wdata[9]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(15),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wdata(9),
+      I0 => s_lnk_hndlr_wdata(9),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(15),
       O => m_axi_wdata(9)
     );
 m_axi_wlast_INST_0: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0202FE02"
+      INIT => X"888F8880"
     )
         port map (
-      I0 => dout(1),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I0 => m_axi_wlast_INST_0_i_1_n_0,
+      I1 => m_axi_wlast_INST_0_i_2_n_0,
       I2 => slv_wait_for_rst_r,
-      I3 => m_axi_wlast_INST_0_i_1_n_0,
-      I4 => m_axi_wlast_INST_0_i_2_n_0,
+      I3 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I4 => dout(1),
       O => m_axi_wlast
     );
 m_axi_wlast_INST_0_i_1: unisim.vcomponents.LUT4
@@ -57358,87 +57331,87 @@ m_axi_wlast_INST_0_i_1: unisim.vcomponents.LUT4
       INIT => X"0001"
     )
         port map (
-      I0 => swr_beat_cnt_r(1),
-      I1 => swr_beat_cnt_r(0),
-      I2 => swr_beat_cnt_r(3),
-      I3 => swr_beat_cnt_r(2),
+      I0 => swr_beat_cnt_r(0),
+      I1 => swr_beat_cnt_r(1),
+      I2 => swr_beat_cnt_r(2),
+      I3 => swr_beat_cnt_r(3),
       O => m_axi_wlast_INST_0_i_1_n_0
     );
 m_axi_wlast_INST_0_i_2: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFE"
+      INIT => X"0001"
     )
         port map (
-      I0 => swr_beat_cnt_r(7),
-      I1 => swr_beat_cnt_r(6),
-      I2 => swr_beat_cnt_r(5),
-      I3 => swr_beat_cnt_r(4),
+      I0 => swr_beat_cnt_r(6),
+      I1 => swr_beat_cnt_r(7),
+      I2 => swr_beat_cnt_r(4),
+      I3 => swr_beat_cnt_r(5),
       O => m_axi_wlast_INST_0_i_2_n_0
     );
 \m_axi_wstrb[0]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(2),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wstrb(0),
+      I0 => s_lnk_hndlr_wstrb(0),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(2),
       O => m_axi_wstrb(0)
     );
 \m_axi_wstrb[1]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(3),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wstrb(1),
+      I0 => s_lnk_hndlr_wstrb(1),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(3),
       O => m_axi_wstrb(1)
     );
 \m_axi_wstrb[2]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(4),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wstrb(2),
+      I0 => s_lnk_hndlr_wstrb(2),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(4),
       O => m_axi_wstrb(2)
     );
 \m_axi_wstrb[3]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(5),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wstrb(3),
+      I0 => s_lnk_hndlr_wstrb(3),
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(5),
       O => m_axi_wstrb(3)
     );
 \m_axi_wuser[0]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE02"
+      INIT => X"ABA8"
     )
         port map (
-      I0 => dout(0),
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wuser,
+      I0 => s_lnk_hndlr_wuser,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => dout(0),
       O => m_axi_wuser(0)
     );
 m_axi_wvalid_INST_0: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000000FD010000"
+      INIT => X"00000000A8AB0000"
     )
         port map (
-      I0 => \s_lnk_hndlr_wstrb_r_reg[3]_0\,
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
-      I3 => s_lnk_hndlr_wvalid_r,
+      I0 => s_lnk_hndlr_wvalid_r,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I3 => \s_lnk_hndlr_wuser_r_reg[0]_0\,
       I4 => cntrl_fsm_r(1),
       I5 => cntrl_fsm_r(0),
       O => \^e\(0)
@@ -57717,24 +57690,24 @@ m_axi_wvalid_INST_0: unisim.vcomponents.LUT6
     );
 \s_lnk_hndlr_awid_r[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000F200F2F2F200"
+      INIT => X"8B008B008B8B8B00"
     )
         port map (
-      I0 => \^chnl_up_r_reg_0\,
-      I1 => \out\(0),
-      I2 => m_axi_awready,
-      I3 => s_lnk_hndlr_awvalid,
-      I4 => \s_lnk_hndlr_awid_r[5]_i_2_n_0\,
-      I5 => empty,
+      I0 => s_lnk_hndlr_awvalid,
+      I1 => \s_lnk_hndlr_awid_r[5]_i_2_n_0\,
+      I2 => empty,
+      I3 => m_axi_awready,
+      I4 => \^chnl_up_r_reg_0\,
+      I5 => \out\(0),
       O => s_lnk_hndlr_awid_r0
     );
 \s_lnk_hndlr_awid_r[5]_i_2\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"1"
+      INIT => X"E"
     )
         port map (
-      I0 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => slv_wait_for_rst_r,
+      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
       O => \s_lnk_hndlr_awid_r[5]_i_2_n_0\
     );
 \s_lnk_hndlr_awid_r_reg[0]\: unisim.vcomponents.FDRE
@@ -57905,52 +57878,52 @@ s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_10: unisim.vcomponents.LUT4
         port map (
       I0 => swr_addr_trans_cntr_r_reg(0),
       I1 => swr_data_trans_cntr_r_reg(0),
-      I2 => swr_data_trans_cntr_r_reg(1),
-      I3 => swr_addr_trans_cntr_r_reg(1),
+      I2 => swr_addr_trans_cntr_r_reg(1),
+      I3 => swr_data_trans_cntr_r_reg(1),
       O => s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_10_n_0
     );
 s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_2: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"20F2"
     )
         port map (
       I0 => swr_data_trans_cntr_r_reg(6),
       I1 => swr_addr_trans_cntr_r_reg(6),
-      I2 => swr_addr_trans_cntr_r_reg(7),
-      I3 => swr_data_trans_cntr_r_reg(7),
+      I2 => swr_data_trans_cntr_r_reg(7),
+      I3 => swr_addr_trans_cntr_r_reg(7),
       O => s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_2_n_0
     );
 s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_3: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"20F2"
     )
         port map (
       I0 => swr_data_trans_cntr_r_reg(4),
       I1 => swr_addr_trans_cntr_r_reg(4),
-      I2 => swr_addr_trans_cntr_r_reg(5),
-      I3 => swr_data_trans_cntr_r_reg(5),
+      I2 => swr_data_trans_cntr_r_reg(5),
+      I3 => swr_addr_trans_cntr_r_reg(5),
       O => s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_3_n_0
     );
 s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_4: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"20F2"
     )
         port map (
       I0 => swr_data_trans_cntr_r_reg(2),
       I1 => swr_addr_trans_cntr_r_reg(2),
-      I2 => swr_addr_trans_cntr_r_reg(3),
-      I3 => swr_data_trans_cntr_r_reg(3),
+      I2 => swr_data_trans_cntr_r_reg(3),
+      I3 => swr_addr_trans_cntr_r_reg(3),
       O => s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_4_n_0
     );
 s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_5: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"20F2"
     )
         port map (
       I0 => swr_data_trans_cntr_r_reg(0),
       I1 => swr_addr_trans_cntr_r_reg(0),
-      I2 => swr_addr_trans_cntr_r_reg(1),
-      I3 => swr_data_trans_cntr_r_reg(1),
+      I2 => swr_data_trans_cntr_r_reg(1),
+      I3 => swr_addr_trans_cntr_r_reg(1),
       O => s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_5_n_0
     );
 s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_6: unisim.vcomponents.LUT2
@@ -57969,8 +57942,8 @@ s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_7: unisim.vcomponents.LUT4
         port map (
       I0 => swr_addr_trans_cntr_r_reg(6),
       I1 => swr_data_trans_cntr_r_reg(6),
-      I2 => swr_data_trans_cntr_r_reg(7),
-      I3 => swr_addr_trans_cntr_r_reg(7),
+      I2 => swr_addr_trans_cntr_r_reg(7),
+      I3 => swr_data_trans_cntr_r_reg(7),
       O => s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_7_n_0
     );
 s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_8: unisim.vcomponents.LUT4
@@ -57980,8 +57953,8 @@ s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_8: unisim.vcomponents.LUT4
         port map (
       I0 => swr_addr_trans_cntr_r_reg(4),
       I1 => swr_data_trans_cntr_r_reg(4),
-      I2 => swr_data_trans_cntr_r_reg(5),
-      I3 => swr_addr_trans_cntr_r_reg(5),
+      I2 => swr_addr_trans_cntr_r_reg(5),
+      I3 => swr_data_trans_cntr_r_reg(5),
       O => s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_8_n_0
     );
 s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_9: unisim.vcomponents.LUT4
@@ -57991,33 +57964,33 @@ s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_9: unisim.vcomponents.LUT4
         port map (
       I0 => swr_addr_trans_cntr_r_reg(2),
       I1 => swr_data_trans_cntr_r_reg(2),
-      I2 => swr_data_trans_cntr_r_reg(3),
-      I3 => swr_addr_trans_cntr_r_reg(3),
+      I2 => swr_addr_trans_cntr_r_reg(3),
+      I3 => swr_data_trans_cntr_r_reg(3),
       O => s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_9_n_0
     );
 s_lnk_hndlr_awvalid_gen_fsm_r_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5F5F0A0B0A0B0A0B"
+      INIT => X"0000FFFF8888888F"
     )
         port map (
-      I0 => s_lnk_hndlr_awvalid,
-      I1 => s_lnk_hndlr_awvalid_gen_fsm_r_i_2_n_0,
-      I2 => m_axi_awready,
-      I3 => s_lnk_hndlr_awvalid_gen_fsm_r_reg_0,
-      I4 => s_lnk_hndlr_awvalid_gen_fsm_r2,
-      I5 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I0 => s_lnk_hndlr_awvalid_gen_fsm_r2,
+      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
+      I2 => s_lnk_hndlr_awvalid_gen_fsm_r_reg_0,
+      I3 => s_lnk_hndlr_awvalid_gen_fsm_r_i_3_n_0,
+      I4 => m_axi_awready,
+      I5 => s_lnk_hndlr_awvalid,
       O => s_lnk_hndlr_awvalid_r
     );
-s_lnk_hndlr_awvalid_gen_fsm_r_i_2: unisim.vcomponents.LUT4
+s_lnk_hndlr_awvalid_gen_fsm_r_i_3: unisim.vcomponents.LUT4
     generic map(
       INIT => X"5754"
     )
         port map (
       I0 => s_lnk_hndlr_awvalid,
-      I1 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I2 => fifo_wr_en_r_reg_0,
+      I1 => slv_wait_for_rst_r,
+      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
       I3 => empty,
-      O => s_lnk_hndlr_awvalid_gen_fsm_r_i_2_n_0
+      O => s_lnk_hndlr_awvalid_gen_fsm_r_i_3_n_0
     );
 s_lnk_hndlr_awvalid_gen_fsm_r_reg: unisim.vcomponents.FDRE
      port map (
@@ -58047,386 +58020,386 @@ s_lnk_hndlr_bready_r_reg: unisim.vcomponents.FDRE
     );
 \s_lnk_hndlr_wdata_r[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(0),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(6),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(6),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(0),
       O => \s_lnk_hndlr_wdata_r[0]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[10]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(10),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(16),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(16),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(10),
       O => \s_lnk_hndlr_wdata_r[10]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[11]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(11),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(17),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(17),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(11),
       O => \s_lnk_hndlr_wdata_r[11]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[12]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(12),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(18),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(18),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(12),
       O => \s_lnk_hndlr_wdata_r[12]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[13]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(13),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(19),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(19),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(13),
       O => \s_lnk_hndlr_wdata_r[13]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[14]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(14),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(20),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(20),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(14),
       O => \s_lnk_hndlr_wdata_r[14]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[15]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(15),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(21),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(21),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(15),
       O => \s_lnk_hndlr_wdata_r[15]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[16]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(16),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(22),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(22),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(16),
       O => \s_lnk_hndlr_wdata_r[16]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[17]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(17),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(23),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(23),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(17),
       O => \s_lnk_hndlr_wdata_r[17]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[18]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(18),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(24),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(24),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(18),
       O => \s_lnk_hndlr_wdata_r[18]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[19]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(19),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(25),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(25),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(19),
       O => \s_lnk_hndlr_wdata_r[19]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[1]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(1),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(7),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(7),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(1),
       O => \s_lnk_hndlr_wdata_r[1]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[20]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(20),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(26),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(26),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(20),
       O => \s_lnk_hndlr_wdata_r[20]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[21]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(21),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(27),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(27),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(21),
       O => \s_lnk_hndlr_wdata_r[21]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[22]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(22),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(28),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(28),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(22),
       O => \s_lnk_hndlr_wdata_r[22]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[23]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(23),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(29),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(29),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(23),
       O => \s_lnk_hndlr_wdata_r[23]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[24]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(24),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(30),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(30),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(24),
       O => \s_lnk_hndlr_wdata_r[24]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[25]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(25),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(31),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(31),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(25),
       O => \s_lnk_hndlr_wdata_r[25]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[26]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(26),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(32),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(32),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(26),
       O => \s_lnk_hndlr_wdata_r[26]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[27]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(27),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(33),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(33),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(27),
       O => \s_lnk_hndlr_wdata_r[27]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[28]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(28),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(34),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(34),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(28),
       O => \s_lnk_hndlr_wdata_r[28]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[29]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(29),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(35),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(35),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(29),
       O => \s_lnk_hndlr_wdata_r[29]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[2]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(2),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(8),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(8),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(2),
       O => \s_lnk_hndlr_wdata_r[2]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[30]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(30),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(36),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(36),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(30),
       O => \s_lnk_hndlr_wdata_r[30]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[31]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(31),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(37),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(37),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(31),
       O => \s_lnk_hndlr_wdata_r[31]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[3]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(3),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(9),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(9),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(3),
       O => \s_lnk_hndlr_wdata_r[3]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[4]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(4),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(10),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(10),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(4),
       O => \s_lnk_hndlr_wdata_r[4]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[5]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(5),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(11),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(11),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(5),
       O => \s_lnk_hndlr_wdata_r[5]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[6]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(6),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(12),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(12),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(6),
       O => \s_lnk_hndlr_wdata_r[6]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[7]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(7),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(13),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(13),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(7),
       O => \s_lnk_hndlr_wdata_r[7]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[8]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(8),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(14),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(14),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(8),
       O => \s_lnk_hndlr_wdata_r[8]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r[9]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wdata(9),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(15),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(15),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wdata(9),
       O => \s_lnk_hndlr_wdata_r[9]_i_1_n_0\
     );
 \s_lnk_hndlr_wdata_r_reg[0]\: unisim.vcomponents.FDRE
@@ -58687,60 +58660,60 @@ s_lnk_hndlr_bready_r_reg: unisim.vcomponents.FDRE
     );
 \s_lnk_hndlr_wstrb_r[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wstrb(0),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(2),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(2),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wstrb(0),
       O => \s_lnk_hndlr_wstrb_r[0]_i_1_n_0\
     );
 \s_lnk_hndlr_wstrb_r[1]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wstrb(1),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(3),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(3),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wstrb(1),
       O => \s_lnk_hndlr_wstrb_r[1]_i_1_n_0\
     );
 \s_lnk_hndlr_wstrb_r[2]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wstrb(2),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(4),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(4),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wstrb(2),
       O => \s_lnk_hndlr_wstrb_r[2]_i_1_n_0\
     );
 \s_lnk_hndlr_wstrb_r[3]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wstrb(3),
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(5),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(5),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wstrb(3),
       O => \s_lnk_hndlr_wstrb_r[3]_i_1_n_0\
     );
 \s_lnk_hndlr_wstrb_r[3]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFD1FFFFFFFF"
+      INIT => X"000000D100000000"
     )
         port map (
-      I0 => s_lnk_hndlr_wvalid_r,
+      I0 => \s_lnk_hndlr_wuser_r_reg[0]_0\,
       I1 => \s_lnk_hndlr_awid_r[5]_i_2_n_0\,
-      I2 => \s_lnk_hndlr_wstrb_r_reg[3]_0\,
+      I2 => s_lnk_hndlr_wvalid_r,
       I3 => m_axi_wready,
       I4 => cntrl_fsm_r(0),
       I5 => cntrl_fsm_r(1),
@@ -58780,14 +58753,14 @@ s_lnk_hndlr_bready_r_reg: unisim.vcomponents.FDRE
     );
 \s_lnk_hndlr_wuser_r[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000ABA8"
+      INIT => X"AAA80008"
     )
         port map (
-      I0 => s_lnk_hndlr_wuser,
-      I1 => fifo_wr_en_r_reg_0,
+      I0 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I1 => dout(0),
       I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => dout(0),
-      I4 => \s_lnk_hndlr_wstrb_r[3]_i_2_n_0\,
+      I3 => slv_wait_for_rst_r,
+      I4 => s_lnk_hndlr_wuser,
       O => s_lnk_hndlr_wuser_r
     );
 \s_lnk_hndlr_wuser_r_reg[0]\: unisim.vcomponents.FDRE
@@ -58813,13 +58786,13 @@ s_lnk_hndlr_wvalid_r_i_1: unisim.vcomponents.LUT6
     );
 s_lnk_hndlr_wvalid_r_i_10: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"20F2"
     )
         port map (
       I0 => swr_addr_trans_cntr_r_reg(0),
       I1 => swr_data_trans_cntr_r_reg(0),
-      I2 => swr_data_trans_cntr_r_reg(1),
-      I3 => swr_addr_trans_cntr_r_reg(1),
+      I2 => swr_addr_trans_cntr_r_reg(1),
+      I3 => swr_data_trans_cntr_r_reg(1),
       O => s_lnk_hndlr_wvalid_r_i_10_n_0
     );
 s_lnk_hndlr_wvalid_r_i_11: unisim.vcomponents.LUT2
@@ -58838,8 +58811,8 @@ s_lnk_hndlr_wvalid_r_i_12: unisim.vcomponents.LUT4
         port map (
       I0 => swr_addr_trans_cntr_r_reg(6),
       I1 => swr_data_trans_cntr_r_reg(6),
-      I2 => swr_data_trans_cntr_r_reg(7),
-      I3 => swr_addr_trans_cntr_r_reg(7),
+      I2 => swr_addr_trans_cntr_r_reg(7),
+      I3 => swr_data_trans_cntr_r_reg(7),
       O => s_lnk_hndlr_wvalid_r_i_12_n_0
     );
 s_lnk_hndlr_wvalid_r_i_13: unisim.vcomponents.LUT4
@@ -58849,8 +58822,8 @@ s_lnk_hndlr_wvalid_r_i_13: unisim.vcomponents.LUT4
         port map (
       I0 => swr_addr_trans_cntr_r_reg(4),
       I1 => swr_data_trans_cntr_r_reg(4),
-      I2 => swr_data_trans_cntr_r_reg(5),
-      I3 => swr_addr_trans_cntr_r_reg(5),
+      I2 => swr_addr_trans_cntr_r_reg(5),
+      I3 => swr_data_trans_cntr_r_reg(5),
       O => s_lnk_hndlr_wvalid_r_i_13_n_0
     );
 s_lnk_hndlr_wvalid_r_i_14: unisim.vcomponents.LUT4
@@ -58860,8 +58833,8 @@ s_lnk_hndlr_wvalid_r_i_14: unisim.vcomponents.LUT4
         port map (
       I0 => swr_addr_trans_cntr_r_reg(2),
       I1 => swr_data_trans_cntr_r_reg(2),
-      I2 => swr_data_trans_cntr_r_reg(3),
-      I3 => swr_addr_trans_cntr_r_reg(3),
+      I2 => swr_addr_trans_cntr_r_reg(3),
+      I3 => swr_data_trans_cntr_r_reg(3),
       O => s_lnk_hndlr_wvalid_r_i_14_n_0
     );
 s_lnk_hndlr_wvalid_r_i_15: unisim.vcomponents.LUT4
@@ -58871,8 +58844,8 @@ s_lnk_hndlr_wvalid_r_i_15: unisim.vcomponents.LUT4
         port map (
       I0 => swr_addr_trans_cntr_r_reg(0),
       I1 => swr_data_trans_cntr_r_reg(0),
-      I2 => swr_data_trans_cntr_r_reg(1),
-      I3 => swr_addr_trans_cntr_r_reg(1),
+      I2 => swr_addr_trans_cntr_r_reg(1),
+      I3 => swr_data_trans_cntr_r_reg(1),
       O => s_lnk_hndlr_wvalid_r_i_15_n_0
     );
 s_lnk_hndlr_wvalid_r_i_2: unisim.vcomponents.LUT5
@@ -58883,8 +58856,8 @@ s_lnk_hndlr_wvalid_r_i_2: unisim.vcomponents.LUT5
       I0 => s_lnk_hndlr_rd_fsm_r(1),
       I1 => s_lnk_hndlr_rd_fsm_r(0),
       I2 => last_wr_data_r2,
-      I3 => last_wr_data_r,
-      I4 => last_wr_data_r1,
+      I3 => last_wr_data_r1,
+      I4 => last_wr_data_r,
       O => s_lnk_hndlr_wvalid_r_i_2_n_0
     );
 s_lnk_hndlr_wvalid_r_i_4: unisim.vcomponents.LUT3
@@ -58899,15 +58872,15 @@ s_lnk_hndlr_wvalid_r_i_4: unisim.vcomponents.LUT3
     );
 s_lnk_hndlr_wvalid_r_i_5: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2202222200000000"
+      INIT => X"00000000DF000000"
     )
         port map (
-      I0 => \^chnl_up_r_reg_0\,
-      I1 => \out\(0),
-      I2 => cntrl_fsm_r(1),
-      I3 => cntrl_fsm_r(0),
-      I4 => m_axi_wready,
-      I5 => \^e\(0),
+      I0 => cntrl_fsm_r(1),
+      I1 => cntrl_fsm_r(0),
+      I2 => m_axi_wready,
+      I3 => \^e\(0),
+      I4 => \^chnl_up_r_reg_0\,
+      I5 => \out\(0),
       O => s_lnk_hndlr_wvalid_r_i_5_n_0
     );
 s_lnk_hndlr_wvalid_r_i_6: unisim.vcomponents.LUT2
@@ -58921,35 +58894,35 @@ s_lnk_hndlr_wvalid_r_i_6: unisim.vcomponents.LUT2
     );
 s_lnk_hndlr_wvalid_r_i_7: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"20F2"
     )
         port map (
       I0 => swr_addr_trans_cntr_r_reg(6),
       I1 => swr_data_trans_cntr_r_reg(6),
-      I2 => swr_data_trans_cntr_r_reg(7),
-      I3 => swr_addr_trans_cntr_r_reg(7),
+      I2 => swr_addr_trans_cntr_r_reg(7),
+      I3 => swr_data_trans_cntr_r_reg(7),
       O => s_lnk_hndlr_wvalid_r_i_7_n_0
     );
 s_lnk_hndlr_wvalid_r_i_8: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"20F2"
     )
         port map (
       I0 => swr_addr_trans_cntr_r_reg(4),
       I1 => swr_data_trans_cntr_r_reg(4),
-      I2 => swr_data_trans_cntr_r_reg(5),
-      I3 => swr_addr_trans_cntr_r_reg(5),
+      I2 => swr_addr_trans_cntr_r_reg(5),
+      I3 => swr_data_trans_cntr_r_reg(5),
       O => s_lnk_hndlr_wvalid_r_i_8_n_0
     );
 s_lnk_hndlr_wvalid_r_i_9: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2F02"
+      INIT => X"20F2"
     )
         port map (
       I0 => swr_addr_trans_cntr_r_reg(2),
       I1 => swr_data_trans_cntr_r_reg(2),
-      I2 => swr_data_trans_cntr_r_reg(3),
-      I3 => swr_addr_trans_cntr_r_reg(3),
+      I2 => swr_addr_trans_cntr_r_reg(3),
+      I3 => swr_data_trans_cntr_r_reg(3),
       O => s_lnk_hndlr_wvalid_r_i_9_n_0
     );
 s_lnk_hndlr_wvalid_r_reg: unisim.vcomponents.FDRE
@@ -58994,16 +58967,16 @@ s_lnk_hndlr_wvalid_r_reg_i_3: unisim.vcomponents.CARRY8
     );
 \swr_addr_trans_cntr_r[8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5559999955595555"
+      INIT => X"6AAA6AAA6AAA6A66"
     )
         port map (
-      I0 => \FSM_sequential_cntrl_fsm_r[1]_i_3_n_0\,
+      I0 => cntrl_cntr_r318_out,
       I1 => m_axi_bvalid,
-      I2 => wr_rst_busy,
-      I3 => full,
-      I4 => \s_lnk_hndlr_awid_r[5]_i_2_n_0\,
-      I5 => \^s_lnk_hndlr_bready_r_reg_0\,
-      O => \swr_addr_trans_cntr_r[8]_i_1_n_0\
+      I2 => \^s_lnk_hndlr_bready_r_reg_0\,
+      I3 => \s_lnk_hndlr_awid_r[5]_i_2_n_0\,
+      I4 => full,
+      I5 => wr_rst_busy,
+      O => swr_addr_trans_cntr_r
     );
 \swr_addr_trans_cntr_r[8]_i_10\: unisim.vcomponents.LUT2
     generic map(
@@ -59016,15 +58989,15 @@ s_lnk_hndlr_wvalid_r_reg_i_3: unisim.vcomponents.CARRY8
     );
 \swr_addr_trans_cntr_r[8]_i_11\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"6AAA6A6666666666"
+      INIT => X"A6A666A6666666A6"
     )
         port map (
       I0 => swr_addr_trans_cntr_r_reg(1),
-      I1 => \swr_data_trans_cntr_r[8]_i_12_n_0\,
-      I2 => empty,
-      I3 => \s_lnk_hndlr_awid_r[5]_i_2_n_0\,
-      I4 => s_lnk_hndlr_awvalid,
-      I5 => m_axi_awready,
+      I1 => \swr_addr_trans_cntr_r_reg[8]_0\,
+      I2 => m_axi_awready,
+      I3 => empty,
+      I4 => \s_lnk_hndlr_awid_r[5]_i_2_n_0\,
+      I5 => s_lnk_hndlr_awvalid,
       O => \swr_addr_trans_cntr_r[8]_i_11_n_0\
     );
 \swr_addr_trans_cntr_r[8]_i_3\: unisim.vcomponents.LUT1
@@ -59092,7 +59065,7 @@ s_lnk_hndlr_wvalid_r_reg_i_3: unisim.vcomponents.CARRY8
 \swr_addr_trans_cntr_r_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \swr_addr_trans_cntr_r[8]_i_1_n_0\,
+      CE => swr_addr_trans_cntr_r,
       D => \swr_addr_trans_cntr_r[0]_i_1_n_0\,
       Q => swr_addr_trans_cntr_r_reg(0),
       R => \^sr\(0)
@@ -59100,7 +59073,7 @@ s_lnk_hndlr_wvalid_r_reg_i_3: unisim.vcomponents.CARRY8
 \swr_addr_trans_cntr_r_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \swr_addr_trans_cntr_r[8]_i_1_n_0\,
+      CE => swr_addr_trans_cntr_r,
       D => \swr_addr_trans_cntr_r_reg[8]_i_2_n_15\,
       Q => swr_addr_trans_cntr_r_reg(1),
       R => \^sr\(0)
@@ -59108,7 +59081,7 @@ s_lnk_hndlr_wvalid_r_reg_i_3: unisim.vcomponents.CARRY8
 \swr_addr_trans_cntr_r_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \swr_addr_trans_cntr_r[8]_i_1_n_0\,
+      CE => swr_addr_trans_cntr_r,
       D => \swr_addr_trans_cntr_r_reg[8]_i_2_n_14\,
       Q => swr_addr_trans_cntr_r_reg(2),
       R => \^sr\(0)
@@ -59116,7 +59089,7 @@ s_lnk_hndlr_wvalid_r_reg_i_3: unisim.vcomponents.CARRY8
 \swr_addr_trans_cntr_r_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \swr_addr_trans_cntr_r[8]_i_1_n_0\,
+      CE => swr_addr_trans_cntr_r,
       D => \swr_addr_trans_cntr_r_reg[8]_i_2_n_13\,
       Q => swr_addr_trans_cntr_r_reg(3),
       R => \^sr\(0)
@@ -59124,7 +59097,7 @@ s_lnk_hndlr_wvalid_r_reg_i_3: unisim.vcomponents.CARRY8
 \swr_addr_trans_cntr_r_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \swr_addr_trans_cntr_r[8]_i_1_n_0\,
+      CE => swr_addr_trans_cntr_r,
       D => \swr_addr_trans_cntr_r_reg[8]_i_2_n_12\,
       Q => swr_addr_trans_cntr_r_reg(4),
       R => \^sr\(0)
@@ -59132,7 +59105,7 @@ s_lnk_hndlr_wvalid_r_reg_i_3: unisim.vcomponents.CARRY8
 \swr_addr_trans_cntr_r_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \swr_addr_trans_cntr_r[8]_i_1_n_0\,
+      CE => swr_addr_trans_cntr_r,
       D => \swr_addr_trans_cntr_r_reg[8]_i_2_n_11\,
       Q => swr_addr_trans_cntr_r_reg(5),
       R => \^sr\(0)
@@ -59140,7 +59113,7 @@ s_lnk_hndlr_wvalid_r_reg_i_3: unisim.vcomponents.CARRY8
 \swr_addr_trans_cntr_r_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \swr_addr_trans_cntr_r[8]_i_1_n_0\,
+      CE => swr_addr_trans_cntr_r,
       D => \swr_addr_trans_cntr_r_reg[8]_i_2_n_10\,
       Q => swr_addr_trans_cntr_r_reg(6),
       R => \^sr\(0)
@@ -59148,7 +59121,7 @@ s_lnk_hndlr_wvalid_r_reg_i_3: unisim.vcomponents.CARRY8
 \swr_addr_trans_cntr_r_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \swr_addr_trans_cntr_r[8]_i_1_n_0\,
+      CE => swr_addr_trans_cntr_r,
       D => \swr_addr_trans_cntr_r_reg[8]_i_2_n_9\,
       Q => swr_addr_trans_cntr_r_reg(7),
       R => \^sr\(0)
@@ -59156,7 +59129,7 @@ s_lnk_hndlr_wvalid_r_reg_i_3: unisim.vcomponents.CARRY8
 \swr_addr_trans_cntr_r_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => m_aclk,
-      CE => \swr_addr_trans_cntr_r[8]_i_1_n_0\,
+      CE => swr_addr_trans_cntr_r,
       D => \swr_addr_trans_cntr_r_reg[8]_i_2_n_8\,
       Q => swr_addr_trans_cntr_r_reg(8),
       R => \^sr\(0)
@@ -59195,53 +59168,53 @@ s_lnk_hndlr_wvalid_r_reg_i_3: unisim.vcomponents.CARRY8
     );
 \swr_beat_cnt_r[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"8A88BABB"
+      INIT => X"DFDD1011"
     )
         port map (
-      I0 => fifo_rd_data_w(0),
+      I0 => swr_beat_cnt_r(0),
       I1 => cntrl_cntr_r217_out,
       I2 => s_lnk_hndlr_rd_fsm_r(1),
       I3 => s_lnk_hndlr_rd_fsm_r(0),
-      I4 => swr_beat_cnt_r(0),
+      I4 => fifo_rd_data_w(0),
       O => p_2_in(0)
     );
 \swr_beat_cnt_r[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BABB8A888A88BABB"
+      INIT => X"F9FFF9F909000909"
     )
         port map (
-      I0 => fifo_rd_data_w(1),
-      I1 => cntrl_cntr_r217_out,
-      I2 => s_lnk_hndlr_rd_fsm_r(1),
-      I3 => s_lnk_hndlr_rd_fsm_r(0),
-      I4 => swr_beat_cnt_r(0),
-      I5 => swr_beat_cnt_r(1),
+      I0 => swr_beat_cnt_r(1),
+      I1 => swr_beat_cnt_r(0),
+      I2 => cntrl_cntr_r217_out,
+      I3 => s_lnk_hndlr_rd_fsm_r(1),
+      I4 => s_lnk_hndlr_rd_fsm_r(0),
+      I5 => fifo_rd_data_w(1),
       O => p_2_in(1)
     );
 \swr_beat_cnt_r[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"ABABABA8A8A8A8AB"
+      INIT => X"FFFFFFE1000000E1"
     )
         port map (
-      I0 => fifo_rd_data_w(2),
-      I1 => cntrl_cntr_r217_out,
-      I2 => \swr_beat_cnt_r[7]_i_3_n_0\,
-      I3 => swr_beat_cnt_r(0),
-      I4 => swr_beat_cnt_r(1),
-      I5 => swr_beat_cnt_r(2),
+      I0 => swr_beat_cnt_r(1),
+      I1 => swr_beat_cnt_r(0),
+      I2 => swr_beat_cnt_r(2),
+      I3 => cntrl_cntr_r217_out,
+      I4 => \swr_beat_cnt_r[7]_i_4_n_0\,
+      I5 => fifo_rd_data_w(2),
       O => p_2_in(2)
     );
 \swr_beat_cnt_r[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"ABABABA8A8A8A8AB"
+      INIT => X"FFFFFFE1000000E1"
     )
         port map (
-      I0 => fifo_rd_data_w(3),
-      I1 => cntrl_cntr_r217_out,
-      I2 => \swr_beat_cnt_r[7]_i_3_n_0\,
-      I3 => swr_beat_cnt_r(2),
-      I4 => \swr_beat_cnt_r[3]_i_2_n_0\,
-      I5 => swr_beat_cnt_r(3),
+      I0 => swr_beat_cnt_r(2),
+      I1 => \swr_beat_cnt_r[3]_i_2_n_0\,
+      I2 => swr_beat_cnt_r(3),
+      I3 => cntrl_cntr_r217_out,
+      I4 => \swr_beat_cnt_r[7]_i_4_n_0\,
+      I5 => fifo_rd_data_w(3),
       O => p_2_in(3)
     );
 \swr_beat_cnt_r[3]_i_2\: unisim.vcomponents.LUT2
@@ -59249,95 +59222,95 @@ s_lnk_hndlr_wvalid_r_reg_i_3: unisim.vcomponents.CARRY8
       INIT => X"E"
     )
         port map (
-      I0 => swr_beat_cnt_r(0),
-      I1 => swr_beat_cnt_r(1),
+      I0 => swr_beat_cnt_r(1),
+      I1 => swr_beat_cnt_r(0),
       O => \swr_beat_cnt_r[3]_i_2_n_0\
     );
 \swr_beat_cnt_r[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8A88BABBBABB8A88"
+      INIT => X"F6FFF6F606000606"
     )
         port map (
-      I0 => fifo_rd_data_w(4),
-      I1 => cntrl_cntr_r217_out,
-      I2 => s_lnk_hndlr_rd_fsm_r(1),
-      I3 => s_lnk_hndlr_rd_fsm_r(0),
-      I4 => swr_beat_cnt_r(4),
-      I5 => m_axi_wlast_INST_0_i_1_n_0,
+      I0 => swr_beat_cnt_r(4),
+      I1 => m_axi_wlast_INST_0_i_1_n_0,
+      I2 => cntrl_cntr_r217_out,
+      I3 => s_lnk_hndlr_rd_fsm_r(1),
+      I4 => s_lnk_hndlr_rd_fsm_r(0),
+      I5 => fifo_rd_data_w(4),
       O => p_2_in(4)
     );
 \swr_beat_cnt_r[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"ABA8A8ABABA8ABA8"
+      INIT => X"FFFFFF9A0000009A"
     )
         port map (
-      I0 => fifo_rd_data_w(5),
-      I1 => cntrl_cntr_r217_out,
-      I2 => \swr_beat_cnt_r[7]_i_3_n_0\,
-      I3 => swr_beat_cnt_r(5),
-      I4 => swr_beat_cnt_r(4),
-      I5 => m_axi_wlast_INST_0_i_1_n_0,
+      I0 => swr_beat_cnt_r(5),
+      I1 => swr_beat_cnt_r(4),
+      I2 => m_axi_wlast_INST_0_i_1_n_0,
+      I3 => cntrl_cntr_r217_out,
+      I4 => \swr_beat_cnt_r[7]_i_4_n_0\,
+      I5 => fifo_rd_data_w(5),
       O => p_2_in(5)
     );
 \swr_beat_cnt_r[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8A88BABBBABB8A88"
+      INIT => X"F6FFF6F606000606"
     )
         port map (
-      I0 => fifo_rd_data_w(6),
-      I1 => cntrl_cntr_r217_out,
-      I2 => s_lnk_hndlr_rd_fsm_r(1),
-      I3 => s_lnk_hndlr_rd_fsm_r(0),
-      I4 => swr_beat_cnt_r(6),
-      I5 => \swr_beat_cnt_r[7]_i_4_n_0\,
+      I0 => swr_beat_cnt_r(6),
+      I1 => \swr_beat_cnt_r[7]_i_3_n_0\,
+      I2 => cntrl_cntr_r217_out,
+      I3 => s_lnk_hndlr_rd_fsm_r(1),
+      I4 => s_lnk_hndlr_rd_fsm_r(0),
+      I5 => fifo_rd_data_w(6),
       O => p_2_in(6)
     );
 \swr_beat_cnt_r[7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4444F44444444444"
+      INIT => X"2000FFFF20002000"
     )
         port map (
-      I0 => s_lnk_hndlr_rd_fsm_r(1),
-      I1 => s_lnk_hndlr_rd_fsm_r(0),
-      I2 => \^e\(0),
-      I3 => cntrl_fsm_r(1),
-      I4 => cntrl_fsm_r(0),
-      I5 => m_axi_wready,
+      I0 => cntrl_fsm_r(1),
+      I1 => cntrl_fsm_r(0),
+      I2 => m_axi_wready,
+      I3 => \^e\(0),
+      I4 => s_lnk_hndlr_rd_fsm_r(1),
+      I5 => s_lnk_hndlr_rd_fsm_r(0),
       O => \swr_beat_cnt_r[7]_i_1_n_0\
     );
 \swr_beat_cnt_r[7]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"ABA8A8ABABA8ABA8"
+      INIT => X"FFFFFF9A0000009A"
     )
         port map (
-      I0 => fifo_rd_data_w(7),
-      I1 => cntrl_cntr_r217_out,
+      I0 => swr_beat_cnt_r(7),
+      I1 => swr_beat_cnt_r(6),
       I2 => \swr_beat_cnt_r[7]_i_3_n_0\,
-      I3 => swr_beat_cnt_r(7),
-      I4 => swr_beat_cnt_r(6),
-      I5 => \swr_beat_cnt_r[7]_i_4_n_0\,
+      I3 => cntrl_cntr_r217_out,
+      I4 => \swr_beat_cnt_r[7]_i_4_n_0\,
+      I5 => fifo_rd_data_w(7),
       O => p_2_in(7)
     );
-\swr_beat_cnt_r[7]_i_3\: unisim.vcomponents.LUT2
+\swr_beat_cnt_r[7]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000001"
+    )
+        port map (
+      I0 => swr_beat_cnt_r(4),
+      I1 => swr_beat_cnt_r(0),
+      I2 => swr_beat_cnt_r(1),
+      I3 => swr_beat_cnt_r(2),
+      I4 => swr_beat_cnt_r(3),
+      I5 => swr_beat_cnt_r(5),
+      O => \swr_beat_cnt_r[7]_i_3_n_0\
+    );
+\swr_beat_cnt_r[7]_i_4\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"2"
     )
         port map (
       I0 => s_lnk_hndlr_rd_fsm_r(0),
       I1 => s_lnk_hndlr_rd_fsm_r(1),
-      O => \swr_beat_cnt_r[7]_i_3_n_0\
-    );
-\swr_beat_cnt_r[7]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000000001"
-    )
-        port map (
-      I0 => swr_beat_cnt_r(4),
-      I1 => swr_beat_cnt_r(1),
-      I2 => swr_beat_cnt_r(0),
-      I3 => swr_beat_cnt_r(3),
-      I4 => swr_beat_cnt_r(2),
-      I5 => swr_beat_cnt_r(5),
       O => \swr_beat_cnt_r[7]_i_4_n_0\
     );
 \swr_beat_cnt_r_reg[0]\: unisim.vcomponents.FDRE
@@ -59414,15 +59387,15 @@ s_lnk_hndlr_wvalid_r_reg_i_3: unisim.vcomponents.CARRY8
     );
 \swr_data_trans_cntr_r[8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAA66666AAA6AAAA"
+      INIT => X"6AAA6AAA6AAA6A66"
     )
         port map (
       I0 => cntrl_cntr_r217_out,
       I1 => m_axi_bvalid,
-      I2 => wr_rst_busy,
-      I3 => full,
-      I4 => \s_lnk_hndlr_awid_r[5]_i_2_n_0\,
-      I5 => \^s_lnk_hndlr_bready_r_reg_0\,
+      I2 => \^s_lnk_hndlr_bready_r_reg_0\,
+      I3 => \s_lnk_hndlr_awid_r[5]_i_2_n_0\,
+      I4 => full,
+      I5 => wr_rst_busy,
       O => swr_data_trans_cntr_r
     );
 \swr_data_trans_cntr_r[8]_i_10\: unisim.vcomponents.LUT2
@@ -59440,22 +59413,9 @@ s_lnk_hndlr_wvalid_r_reg_i_3: unisim.vcomponents.CARRY8
     )
         port map (
       I0 => swr_data_trans_cntr_r_reg(1),
-      I1 => \swr_data_trans_cntr_r[8]_i_12_n_0\,
+      I1 => \swr_addr_trans_cntr_r_reg[8]_0\,
       I2 => cntrl_cntr_r217_out,
       O => \swr_data_trans_cntr_r[8]_i_11_n_0\
-    );
-\swr_data_trans_cntr_r[8]_i_12\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A8A8A8AB00000000"
-    )
-        port map (
-      I0 => \^s_lnk_hndlr_bready_r_reg_0\,
-      I1 => fifo_wr_en_r_reg_0,
-      I2 => \^swr_lnk_hndlr_in_progress_r_reg_0\,
-      I3 => full,
-      I4 => wr_rst_busy,
-      I5 => m_axi_bvalid,
-      O => \swr_data_trans_cntr_r[8]_i_12_n_0\
     );
 \swr_data_trans_cntr_r[8]_i_3\: unisim.vcomponents.LUT1
     generic map(
@@ -59641,10 +59601,10 @@ swr_lnk_hndlr_in_progress_r_i_2: unisim.vcomponents.LUT5
     )
         port map (
       I0 => swr_lnk_hndlr_in_progress_r_i_3_n_0,
-      I1 => swr_data_trans_cntr_r_reg(6),
-      I2 => swr_data_trans_cntr_r_reg(4),
-      I3 => swr_data_trans_cntr_r_reg(0),
-      I4 => s_lnk_hndlr_awvalid_gen_fsm_r_i_2_n_0,
+      I1 => swr_data_trans_cntr_r_reg(0),
+      I2 => swr_data_trans_cntr_r_reg(2),
+      I3 => swr_data_trans_cntr_r_reg(3),
+      I4 => s_lnk_hndlr_awvalid_gen_fsm_r_i_3_n_0,
       O => swr_lnk_hndlr_in_progress_r_i_2_n_0
     );
 swr_lnk_hndlr_in_progress_r_i_3: unisim.vcomponents.LUT6
@@ -59652,12 +59612,12 @@ swr_lnk_hndlr_in_progress_r_i_3: unisim.vcomponents.LUT6
       INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => swr_data_trans_cntr_r_reg(8),
-      I1 => swr_data_trans_cntr_r_reg(7),
-      I2 => swr_data_trans_cntr_r_reg(1),
-      I3 => swr_data_trans_cntr_r_reg(3),
-      I4 => swr_data_trans_cntr_r_reg(2),
-      I5 => swr_data_trans_cntr_r_reg(5),
+      I0 => swr_data_trans_cntr_r_reg(4),
+      I1 => swr_data_trans_cntr_r_reg(1),
+      I2 => swr_data_trans_cntr_r_reg(7),
+      I3 => swr_data_trans_cntr_r_reg(6),
+      I4 => swr_data_trans_cntr_r_reg(5),
+      I5 => swr_data_trans_cntr_r_reg(8),
       O => swr_lnk_hndlr_in_progress_r_i_3_n_0
     );
 swr_lnk_hndlr_in_progress_r_reg: unisim.vcomponents.FDRE
@@ -59673,7 +59633,7 @@ swr_lnk_hndlr_in_progress_r_reg: unisim.vcomponents.FDRE
       INIT => X"0400"
     )
         port map (
-      I0 => \s_lnk_hndlr_wstrb_r_reg[3]_0\,
+      I0 => \s_lnk_hndlr_wuser_r_reg[0]_0\,
       I1 => m_axi_wready,
       I2 => cntrl_fsm_r(0),
       I3 => cntrl_fsm_r(1),
@@ -59709,13 +59669,13 @@ xpm_fifo_sync_inst_swr: entity work.apex_blk_axi_chip2chip_0_0_xpm_fifo_sync
     );
 xpm_fifo_sync_inst_swr_i_1: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0F20"
+      INIT => X"1C0C"
     )
         port map (
-      I0 => cntrl_cntr_r217_out,
-      I1 => fifo_empty_w,
+      I0 => fifo_empty_w,
+      I1 => s_lnk_hndlr_rd_fsm_r(0),
       I2 => s_lnk_hndlr_rd_fsm_r(1),
-      I3 => s_lnk_hndlr_rd_fsm_r(0),
+      I3 => cntrl_cntr_r217_out,
       O => fifo_rd_en_s
     );
 end STRUCTURE;
@@ -59761,7 +59721,7 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_
   signal NLW_xpm_fifo_async_inst_rd_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_xpm_fifo_async_inst_wr_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \mux_by_2.pack_reg0[24]_i_1__0\ : label is "soft_lutpair115";
+  attribute SOFT_HLUTNM of \mux_by_2.pack_reg0[24]_i_1__0\ : label is "soft_lutpair114";
   attribute CASCADE_HEIGHT : integer;
   attribute CASCADE_HEIGHT of xpm_fifo_async_inst : label is 0;
   attribute CDC_SYNC_STAGES : integer;
@@ -59814,7 +59774,7 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_
   attribute WR_DATA_COUNT_WIDTH of xpm_fifo_async_inst : label is 8;
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of xpm_fifo_async_inst : label is "TRUE";
-  attribute SOFT_HLUTNM of \xpm_fifo_async_inst_i_1__1\ : label is "soft_lutpair115";
+  attribute SOFT_HLUTNM of \xpm_fifo_async_inst_i_1__1\ : label is "soft_lutpair114";
 begin
   \gen_fwft.empty_fwft_i_reg\ <= \^gen_fwft.empty_fwft_i_reg\;
 \mux_by_2.pack_reg0[24]_i_1__0\: unisim.vcomponents.LUT3
@@ -59926,7 +59886,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async
   signal NLW_xpm_fifo_async_inst_rd_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal NLW_xpm_fifo_async_inst_wr_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 8 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \mux_by_2.pack_reg0[18]_i_1\ : label is "soft_lutpair267";
+  attribute SOFT_HLUTNM of \mux_by_2.pack_reg0[18]_i_1\ : label is "soft_lutpair266";
   attribute CASCADE_HEIGHT : integer;
   attribute CASCADE_HEIGHT of xpm_fifo_async_inst : label is 0;
   attribute CDC_SYNC_STAGES : integer;
@@ -59979,7 +59939,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async
   attribute WR_DATA_COUNT_WIDTH of xpm_fifo_async_inst : label is 9;
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of xpm_fifo_async_inst : label is "TRUE";
-  attribute SOFT_HLUTNM of \xpm_fifo_async_inst_i_1__2\ : label is "soft_lutpair267";
+  attribute SOFT_HLUTNM of \xpm_fifo_async_inst_i_1__2\ : label is "soft_lutpair266";
 begin
 \mux_by_2.pack_reg0[18]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -60063,8 +60023,8 @@ entity \apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo__parameterize
     m_aclk : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 40 downto 0 );
     axi_c2c_phy_clk : in STD_LOGIC;
-    srd_lnk_hndlr_en : in STD_LOGIC;
     slv_wait_for_rst_r : in STD_LOGIC;
+    srd_lnk_hndlr_en : in STD_LOGIC;
     s_lnk_hndlr_rready : in STD_LOGIC;
     m_axi_rvalid : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -60168,10 +60128,10 @@ m_axi_rready_INST_0: unisim.vcomponents.LUT5
       INIT => X"FFF10001"
     )
         port map (
-      I0 => \^wr_rst_busy\,
-      I1 => \^full\,
-      I2 => srd_lnk_hndlr_en,
-      I3 => slv_wait_for_rst_r,
+      I0 => \^full\,
+      I1 => \^wr_rst_busy\,
+      I2 => slv_wait_for_rst_r,
+      I3 => srd_lnk_hndlr_en,
       I4 => s_lnk_hndlr_rready,
       O => m_axi_rready
     );
@@ -60290,8 +60250,8 @@ xpm_fifo_async_inst_i_1: unisim.vcomponents.LUT3
     )
         port map (
       I0 => m_axi_rvalid,
-      I1 => \^full\,
-      I2 => \^wr_rst_busy\,
+      I1 => \^wr_rst_busy\,
+      I2 => \^full\,
       O => pack_data_we
     );
 \xpm_fifo_async_inst_i_2__1\: unisim.vcomponents.LUT4
@@ -60316,18 +60276,18 @@ entity \apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo__parameterize
     \gen_rst_ic.wr_rst_busy_ic_reg\ : out STD_LOGIC;
     dout : out STD_LOGIC_VECTOR ( 7 downto 0 );
     empty : out STD_LOGIC;
-    m_axi_bready : out STD_LOGIC;
     tx_phy_ready_reg : out STD_LOGIC;
+    \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0\ : out STD_LOGIC;
     \out\ : in STD_LOGIC;
     m_aclk : in STD_LOGIC;
     \gen_rd_b.doutb_reg_reg_pipe_4_reg\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     axi_c2c_phy_clk : in STD_LOGIC;
     rd_en : in STD_LOGIC;
+    tx_phy_ready : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     swr_lnk_hndlr_en : in STD_LOGIC;
     slv_wait_for_rst_r : in STD_LOGIC;
     s_lnk_hndlr_bready : in STD_LOGIC;
-    tx_phy_ready : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_bvalid : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -60418,9 +60378,9 @@ int_ch1_ready_i_3: unisim.vcomponents.LUT3
       I2 => Q(0),
       O => tx_phy_ready_reg
     );
-m_axi_bready_INST_0: unisim.vcomponents.LUT5
+\swr_data_trans_cntr_r[8]_i_12\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFF10001"
+      INIT => X"FFF1000100000000"
     )
         port map (
       I0 => \^gen_rst_ic.wr_rst_busy_ic_reg\,
@@ -60428,7 +60388,8 @@ m_axi_bready_INST_0: unisim.vcomponents.LUT5
       I2 => swr_lnk_hndlr_en,
       I3 => slv_wait_for_rst_r,
       I4 => s_lnk_hndlr_bready,
-      O => m_axi_bready
+      I5 => m_axi_bvalid,
+      O => \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0\
     );
 xpm_fifo_async_inst: entity work.\apex_blk_axi_chip2chip_0_0_xpm_fifo_async__parameterized2\
      port map (
@@ -60464,8 +60425,8 @@ xpm_fifo_async_inst: entity work.\apex_blk_axi_chip2chip_0_0_xpm_fifo_async__par
       INIT => X"10"
     )
         port map (
-      I0 => \^gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg\,
-      I1 => \^gen_rst_ic.wr_rst_busy_ic_reg\,
+      I0 => \^gen_rst_ic.wr_rst_busy_ic_reg\,
+      I1 => \^gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg\,
       I2 => m_axi_bvalid,
       O => \xpm_fifo_async_inst_i_1__3_n_0\
     );
@@ -60512,7 +60473,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async
   signal NLW_xpm_fifo_async_inst_rd_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_xpm_fifo_async_inst_wr_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \mux_by_2.pack_reg0[24]_i_1\ : label is "soft_lutpair148";
+  attribute SOFT_HLUTNM of \mux_by_2.pack_reg0[24]_i_1\ : label is "soft_lutpair147";
   attribute CASCADE_HEIGHT : integer;
   attribute CASCADE_HEIGHT of xpm_fifo_async_inst : label is 0;
   attribute CDC_SYNC_STAGES : integer;
@@ -60565,7 +60526,7 @@ architecture STRUCTURE of \apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async
   attribute WR_DATA_COUNT_WIDTH of xpm_fifo_async_inst : label is 8;
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of xpm_fifo_async_inst : label is "TRUE";
-  attribute SOFT_HLUTNM of \xpm_fifo_async_inst_i_1__0\ : label is "soft_lutpair148";
+  attribute SOFT_HLUTNM of \xpm_fifo_async_inst_i_1__0\ : label is "soft_lutpair147";
 begin
   empty <= \^empty\;
 \mux_by_2.pack_reg0[24]_i_1\: unisim.vcomponents.LUT3
@@ -60645,12 +60606,11 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top is
   port (
     m_aresetn_0 : out STD_LOGIC;
     chnl_up_r : out STD_LOGIC;
-    \gen_fwft.empty_fwft_i_reg\ : out STD_LOGIC;
+    s_lnk_hndlr_wvalid_r_reg : out STD_LOGIC;
     swr_lnk_hndlr_en : out STD_LOGIC;
     s_lnk_hndlr_bready : out STD_LOGIC;
     s_lnk_hndlr_rready : out STD_LOGIC;
     srd_lnk_hndlr_en : out STD_LOGIC;
-    m_axi_awvalid : out STD_LOGIC;
     m_axi_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axi_awlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -60659,7 +60619,8 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top is
     m_axi_awid : out STD_LOGIC_VECTOR ( 5 downto 0 );
     m_axi_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axi_wuser : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_wlast : out STD_LOGIC;
+    m_axi_bready : out STD_LOGIC;
+    m_axi_awvalid : out STD_LOGIC;
     m_axi_arlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axi_arburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -60669,30 +60630,30 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top is
     axi_c2c_link_status_out : out STD_LOGIC;
     axi_c2c_lnk_hndlr_in_progress : out STD_LOGIC;
     rd_en : out STD_LOGIC;
-    \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg\ : out STD_LOGIC;
-    \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_0\ : out STD_LOGIC;
+    srd_lnk_hndlr_in_progress_r_reg : out STD_LOGIC;
+    m_axi_wlast : out STD_LOGIC;
     m_aclk : in STD_LOGIC;
     \out\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_awready : in STD_LOGIC;
-    fifo_wr_en_r_reg : in STD_LOGIC;
+    slv_wait_for_rst_r : in STD_LOGIC;
     empty : in STD_LOGIC;
+    m_axi_awready : in STD_LOGIC;
+    m_axi_bvalid : in STD_LOGIC;
+    full : in STD_LOGIC;
+    wr_rst_busy : in STD_LOGIC;
+    dout : in STD_LOGIC_VECTOR ( 37 downto 0 );
+    \s_lnk_hndlr_awaddr_r_reg[31]\ : in STD_LOGIC_VECTOR ( 49 downto 0 );
+    \s_lnk_hndlr_wuser_r_reg[0]\ : in STD_LOGIC;
+    m_axi_wready : in STD_LOGIC;
     s_lnk_hndlr_awvalid_gen_fsm_r_reg : in STD_LOGIC;
     m_axi_arvalid_0 : in STD_LOGIC;
     m_axi_arready : in STD_LOGIC;
-    m_axi_bvalid : in STD_LOGIC;
-    wr_rst_busy : in STD_LOGIC;
-    full : in STD_LOGIC;
-    dout : in STD_LOGIC_VECTOR ( 37 downto 0 );
-    \s_lnk_hndlr_awaddr_r_reg[31]\ : in STD_LOGIC_VECTOR ( 49 downto 0 );
-    slv_wait_for_rst_r : in STD_LOGIC;
-    \s_lnk_hndlr_wstrb_r_reg[3]\ : in STD_LOGIC;
-    m_axi_wready : in STD_LOGIC;
     \s_lnk_hndlr_araddr_r_reg[31]\ : in STD_LOGIC_VECTOR ( 49 downto 0 );
     \srd_addr_trans_cntr_r_reg[0]\ : in STD_LOGIC;
     \srd_addr_trans_cntr_r_reg[0]_0\ : in STD_LOGIC;
     m_axi_rlast : in STD_LOGIC;
     m_axi_rvalid : in STD_LOGIC;
-    m_aresetn : in STD_LOGIC
+    m_aresetn : in STD_LOGIC;
+    \swr_addr_trans_cntr_r_reg[8]\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top : entity is "axi_chip2chip_v5_0_8_slv_lnk_hndlr_top";
@@ -60701,19 +60662,18 @@ end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top;
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top is
   signal \^chnl_up_r\ : STD_LOGIC;
   signal \^m_aresetn_0\ : STD_LOGIC;
+  signal \^srd_lnk_hndlr_en\ : STD_LOGIC;
   signal \^swr_lnk_hndlr_en\ : STD_LOGIC;
 begin
   chnl_up_r <= \^chnl_up_r\;
   m_aresetn_0 <= \^m_aresetn_0\;
+  srd_lnk_hndlr_en <= \^srd_lnk_hndlr_en\;
   swr_lnk_hndlr_en <= \^swr_lnk_hndlr_en\;
 u_axi_chip2chip_v5_0_8_srd_lnk_hndlr: entity work.apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr
      port map (
-      \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg\ => \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg\,
-      \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_0\ => \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_0\,
-      \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep\ => \^swr_lnk_hndlr_en\,
+      \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg\ => \^swr_lnk_hndlr_en\,
       SR(0) => \^m_aresetn_0\,
       axi_c2c_link_status_out => axi_c2c_link_status_out,
-      axi_c2c_lnk_hndlr_in_progress => axi_c2c_lnk_hndlr_in_progress,
       m_aclk => m_aclk,
       m_axi_araddr(31 downto 0) => m_axi_araddr(31 downto 0),
       m_axi_arburst(1 downto 0) => m_axi_arburst(1 downto 0),
@@ -60732,17 +60692,18 @@ u_axi_chip2chip_v5_0_8_srd_lnk_hndlr: entity work.apex_blk_axi_chip2chip_0_0_axi
       slv_wait_for_rst_r => slv_wait_for_rst_r,
       \srd_addr_trans_cntr_r_reg[0]_0\ => \srd_addr_trans_cntr_r_reg[0]\,
       \srd_addr_trans_cntr_r_reg[0]_1\ => \srd_addr_trans_cntr_r_reg[0]_0\,
-      srd_lnk_hndlr_in_progress_r_reg_0 => srd_lnk_hndlr_en,
-      srd_lnk_hndlr_in_progress_r_reg_1 => s_lnk_hndlr_awvalid_gen_fsm_r_reg
+      srd_lnk_hndlr_in_progress_r_reg_0 => \^srd_lnk_hndlr_en\,
+      srd_lnk_hndlr_in_progress_r_reg_1 => srd_lnk_hndlr_in_progress_r_reg,
+      srd_lnk_hndlr_in_progress_r_reg_2 => s_lnk_hndlr_awvalid_gen_fsm_r_reg
     );
 u_axi_chip2chip_v5_0_8_swr_lnk_hndlr: entity work.apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
      port map (
-      E(0) => \gen_fwft.empty_fwft_i_reg\,
+      E(0) => s_lnk_hndlr_wvalid_r_reg,
       SR(0) => \^m_aresetn_0\,
+      axi_c2c_lnk_hndlr_in_progress => axi_c2c_lnk_hndlr_in_progress,
       chnl_up_r_reg_0 => \^chnl_up_r\,
       dout(37 downto 0) => dout(37 downto 0),
       empty => empty,
-      fifo_wr_en_r_reg_0 => fifo_wr_en_r_reg,
       full => full,
       m_aclk => m_aclk,
       m_aresetn => m_aresetn,
@@ -60753,6 +60714,7 @@ u_axi_chip2chip_v5_0_8_swr_lnk_hndlr: entity work.apex_blk_axi_chip2chip_0_0_axi
       m_axi_awready => m_axi_awready,
       m_axi_awsize(1 downto 0) => m_axi_awsize(1 downto 0),
       m_axi_awvalid => m_axi_awvalid,
+      m_axi_bready => m_axi_bready,
       m_axi_bvalid => m_axi_bvalid,
       m_axi_wdata(31 downto 0) => m_axi_wdata(31 downto 0),
       m_axi_wlast => m_axi_wlast,
@@ -60764,8 +60726,10 @@ u_axi_chip2chip_v5_0_8_swr_lnk_hndlr: entity work.apex_blk_axi_chip2chip_0_0_axi
       \s_lnk_hndlr_awaddr_r_reg[31]_0\(49 downto 0) => \s_lnk_hndlr_awaddr_r_reg[31]\(49 downto 0),
       s_lnk_hndlr_awvalid_gen_fsm_r_reg_0 => s_lnk_hndlr_awvalid_gen_fsm_r_reg,
       s_lnk_hndlr_bready_r_reg_0 => s_lnk_hndlr_bready,
-      \s_lnk_hndlr_wstrb_r_reg[3]_0\ => \s_lnk_hndlr_wstrb_r_reg[3]\,
+      \s_lnk_hndlr_wuser_r_reg[0]_0\ => \s_lnk_hndlr_wuser_r_reg[0]\,
       slv_wait_for_rst_r => slv_wait_for_rst_r,
+      srd_lnk_hndlr_en => \^srd_lnk_hndlr_en\,
+      \swr_addr_trans_cntr_r_reg[8]_0\ => \swr_addr_trans_cntr_r_reg[8]\,
       swr_lnk_hndlr_in_progress_r_reg_0 => \^swr_lnk_hndlr_en\,
       wr_rst_busy => wr_rst_busy
     );
@@ -60894,8 +60858,8 @@ entity \apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_awr_fifo__parameterized1
     m_aclk : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 40 downto 0 );
     axi_c2c_phy_clk : in STD_LOGIC;
-    srd_lnk_hndlr_en : in STD_LOGIC;
     slv_wait_for_rst_r : in STD_LOGIC;
+    srd_lnk_hndlr_en : in STD_LOGIC;
     s_lnk_hndlr_rready : in STD_LOGIC;
     m_axi_rvalid : in STD_LOGIC;
     int_ch1_ready : in STD_LOGIC;
@@ -61032,18 +60996,18 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_b_fifo is
     \gen_rst_ic.wr_rst_busy_ic_reg\ : out STD_LOGIC;
     dout : out STD_LOGIC_VECTOR ( 7 downto 0 );
     empty : out STD_LOGIC;
-    m_axi_bready : out STD_LOGIC;
     tx_phy_ready_reg : out STD_LOGIC;
+    \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0\ : out STD_LOGIC;
     \out\ : in STD_LOGIC;
     m_aclk : in STD_LOGIC;
     \gen_rd_b.doutb_reg_reg_pipe_4_reg\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     axi_c2c_phy_clk : in STD_LOGIC;
     rd_en : in STD_LOGIC;
+    tx_phy_ready : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     swr_lnk_hndlr_en : in STD_LOGIC;
     slv_wait_for_rst_r : in STD_LOGIC;
     s_lnk_hndlr_bready : in STD_LOGIC;
-    tx_phy_ready : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_bvalid : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -61059,10 +61023,10 @@ axi_chip2chip_async_fifo_inst: entity work.\apex_blk_axi_chip2chip_0_0_axi_chip2
       dout(7 downto 0) => dout(7 downto 0),
       empty => empty,
       \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg\ => \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg\,
+      \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0\ => \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0\,
       \gen_rd_b.doutb_reg_reg_pipe_4_reg\(7 downto 0) => \gen_rd_b.doutb_reg_reg_pipe_4_reg\(7 downto 0),
       \gen_rst_ic.wr_rst_busy_ic_reg\ => \gen_rst_ic.wr_rst_busy_ic_reg\,
       m_aclk => m_aclk,
-      m_axi_bready => m_axi_bready,
       m_axi_bvalid => m_axi_bvalid,
       \out\ => \out\,
       rd_en => rd_en,
@@ -61091,11 +61055,11 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave is
     \gen_rst_ic.wr_rst_busy_ic_reg\ : out STD_LOGIC;
     rx_phy_ready_r : out STD_LOGIC;
     link_dwn_indi_r : out STD_LOGIC;
-    m_axi_bready : out STD_LOGIC;
     m_axi_rready : out STD_LOGIC;
     tdm_user_data_ready : out STD_LOGIC;
     \sync_intr_in_d1_reg[3]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     axi_c2c_aurora_tx_tvalid : out STD_LOGIC;
+    \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0\ : out STD_LOGIC;
     axi_c2c_aurora_tx_tdata : out STD_LOGIC_VECTOR ( 27 downto 0 );
     axi_c2c_m2s_intr_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
     axi_c2c_s2m_intr_in : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -61110,10 +61074,8 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave is
     rx_phy_ready : in STD_LOGIC;
     axi_c2c_aurora_rx_tvalid : in STD_LOGIC;
     \rst_cntrl_lnk_hndlr_en.link_dwn_indi_r_reg_0\ : in STD_LOGIC;
-    \intr_out_reg[3]\ : in STD_LOGIC;
-    swr_lnk_hndlr_en : in STD_LOGIC;
+    AR : in STD_LOGIC_VECTOR ( 0 to 0 );
     slv_wait_for_rst_r : in STD_LOGIC;
-    s_lnk_hndlr_bready : in STD_LOGIC;
     srd_lnk_hndlr_en : in STD_LOGIC;
     s_lnk_hndlr_rready : in STD_LOGIC;
     m_axi_awready : in STD_LOGIC;
@@ -61123,6 +61085,8 @@ entity apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     \out\ : in STD_LOGIC;
     \slot_count_reg[3]\ : in STD_LOGIC;
+    swr_lnk_hndlr_en : in STD_LOGIC;
+    s_lnk_hndlr_bready : in STD_LOGIC;
     m_axi_bvalid : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 6 downto 0 );
     axi_c2c_aurora_rx_tdata : in STD_LOGIC_VECTOR ( 30 downto 0 )
@@ -61167,7 +61131,7 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave 
   signal aw_ch_fc : STD_LOGIC;
   signal aw_fifo_reset : STD_LOGIC;
   signal aw_fifo_reset_axi_clk_slv : STD_LOGIC;
-  signal axi_chip2chip_b_fifo_inst_n_12 : STD_LOGIC;
+  signal axi_chip2chip_b_fifo_inst_n_11 : STD_LOGIC;
   signal axi_chip2chip_decoder_inst_n_29 : STD_LOGIC;
   signal axi_chip2chip_r_fifo_inst_n_10 : STD_LOGIC;
   signal axi_chip2chip_r_fifo_inst_n_11 : STD_LOGIC;
@@ -61533,10 +61497,10 @@ axi_chip2chip_b_fifo_inst: entity work.apex_blk_axi_chip2chip_0_0_axi_chip2chip_
       dout(7 downto 0) => br_ch_data(7 downto 0),
       empty => fifo_empty,
       \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg\ => \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg\,
+      \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0\ => \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0\,
       \gen_rd_b.doutb_reg_reg_pipe_4_reg\(7 downto 0) => \gen_rd_b.doutb_reg_reg_pipe_4_reg\(7 downto 0),
       \gen_rst_ic.wr_rst_busy_ic_reg\ => \gen_rst_ic.wr_rst_busy_ic_reg\,
       m_aclk => m_aclk,
-      m_axi_bready => m_axi_bready,
       m_axi_bvalid => m_axi_bvalid,
       \out\ => aw_fifo_reset_axi_clk_slv,
       rd_en => fifo_re,
@@ -61544,10 +61508,11 @@ axi_chip2chip_b_fifo_inst: entity work.apex_blk_axi_chip2chip_0_0_axi_chip2chip_
       slv_wait_for_rst_r => slv_wait_for_rst_r,
       swr_lnk_hndlr_en => swr_lnk_hndlr_en,
       tx_phy_ready => tx_phy_ready,
-      tx_phy_ready_reg => axi_chip2chip_b_fifo_inst_n_12
+      tx_phy_ready_reg => axi_chip2chip_b_fifo_inst_n_11
     );
 axi_chip2chip_ch0_ctrl_inst: entity work.apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl
      port map (
+      AR(0) => AR(0),
       D(6 downto 0) => D(6 downto 0),
       E(0) => \^tdm_user_data_ready\,
       Q(0) => Q(0),
@@ -61563,7 +61528,6 @@ axi_chip2chip_ch0_ctrl_inst: entity work.apex_blk_axi_chip2chip_0_0_axi_chip2chi
       \intr_data_reg[3]_0\(0) => rx_intr_data,
       \intr_data_reg[3]_1\(3 downto 0) => rx_dec_data(3 downto 0),
       intr_flop => intr_flop,
-      \intr_out_reg[3]_0\ => \intr_out_reg[3]\,
       m_aclk => m_aclk,
       rx_user_reset => rx_user_reset,
       send_ch0 => send_ch0,
@@ -61679,7 +61643,7 @@ axi_chip2chip_tdm_inst: entity work.apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_
       empty => fifo_empty,
       int_ch1_ready => int_ch1_ready,
       int_ch2_ready => int_ch2_ready,
-      int_ch2_ready_reg_0 => axi_chip2chip_b_fifo_inst_n_12,
+      int_ch2_ready_reg_0 => axi_chip2chip_b_fifo_inst_n_11,
       p_12_in => p_12_in,
       rx_user_reset => rx_user_reset,
       send_ch0 => send_ch0,
@@ -61750,7 +61714,7 @@ axi_chip2chip_w_fifo_inst: entity work.\apex_blk_axi_chip2chip_0_0_axi_chip2chip
       C => axi_c2c_phy_clk,
       CE => '1',
       D => \rst_cntrl_lnk_hndlr_en.aw_fifo_reset_i_1_n_0\,
-      PRE => \intr_out_reg[3]\,
+      PRE => AR(0),
       Q => aw_fifo_reset
     );
 \rst_cntrl_lnk_hndlr_en.link_dwn_indi_r_reg\: unisim.vcomponents.FDRE
@@ -62093,11 +62057,9 @@ end apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8;
 
 architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8 is
   signal \<const0>\ : STD_LOGIC;
-  signal \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep_n_0\ : STD_LOGIC;
   signal \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_0\ : STD_LOGIC;
   signal \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_149\ : STD_LOGIC;
   signal \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_150\ : STD_LOGIC;
-  signal \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_151\ : STD_LOGIC;
   signal \^axi_c2c_aurora_tx_tdata\ : STD_LOGIC_VECTOR ( 29 downto 0 );
   signal axi_c2c_link_status_out_dut : STD_LOGIC;
   signal \^axi_c2c_lnk_hndlr_in_progress\ : STD_LOGIC;
@@ -62132,6 +62094,7 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8 is
   signal s_lnk_hndlr_rready : STD_LOGIC;
   signal \slave_fpga_gen.axi_chip2chip_slave_inst_n_100\ : STD_LOGIC;
   signal \slave_fpga_gen.axi_chip2chip_slave_inst_n_139\ : STD_LOGIC;
+  signal \slave_fpga_gen.axi_chip2chip_slave_inst_n_154\ : STD_LOGIC;
   signal \slave_fpga_gen.axi_chip2chip_slave_inst_n_44\ : STD_LOGIC;
   signal \slave_fpga_gen.axi_chip2chip_slave_inst_n_45\ : STD_LOGIC;
   signal \slave_fpga_gen.axi_chip2chip_slave_inst_n_46\ : STD_LOGIC;
@@ -62161,9 +62124,6 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8 is
   signal tx_phy_ctrl : STD_LOGIC_VECTOR ( 0 to 0 );
   signal tx_phy_ready : STD_LOGIC;
   signal \u_axi_chip2chip_v5_0_8_srd_lnk_hndlr/chnl_up_r\ : STD_LOGIC;
-  attribute ORIG_CELL_NAME : string;
-  attribute ORIG_CELL_NAME of \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg\ : label is "Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg";
-  attribute ORIG_CELL_NAME of \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep\ : label is "Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg";
 begin
   axi_c2c_aurora_tx_tdata(31) <= \<const0>\;
   axi_c2c_aurora_tx_tdata(30) <= \^axi_c2c_aurora_tx_tdata\(29);
@@ -62439,18 +62399,8 @@ begin
       Q => slv_wait_for_rst_r,
       R => \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_0\
     );
-\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep\: unisim.vcomponents.FDRE
-     port map (
-      C => m_aclk,
-      CE => '1',
-      D => \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_151\,
-      Q => \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep_n_0\,
-      R => \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_0\
-    );
 \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top\: entity work.apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top
      port map (
-      \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg\ => \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_150\,
-      \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_0\ => \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_151\,
       axi_c2c_link_status_out => axi_c2c_link_status_out,
       axi_c2c_lnk_hndlr_in_progress => \^axi_c2c_lnk_hndlr_in_progress\,
       chnl_up_r => \u_axi_chip2chip_v5_0_8_srd_lnk_hndlr/chnl_up_r\,
@@ -62459,9 +62409,7 @@ begin
       dout(1) => m_axi_wlast_dut,
       dout(0) => \slave_fpga_gen.axi_chip2chip_slave_inst_n_139\,
       empty => \axi_chip2chip_aw_fifo_inst/fifo_empty\,
-      fifo_wr_en_r_reg => \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep_n_0\,
       full => \axi_chip2chip_b_fifo_inst/axi_chip2chip_async_fifo_inst/full_int\,
-      \gen_fwft.empty_fwft_i_reg\ => m_axi_wvalid,
       m_aclk => m_aclk,
       m_aresetn => m_aresetn,
       m_aresetn_0 => \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_0\,
@@ -62480,6 +62428,7 @@ begin
       m_axi_awready => m_axi_awready,
       m_axi_awsize(1 downto 0) => \^m_axi_awsize\(1 downto 0),
       m_axi_awvalid => m_axi_awvalid,
+      m_axi_bready => m_axi_bready,
       m_axi_bvalid => m_axi_bvalid,
       m_axi_rlast => m_axi_rlast,
       m_axi_rvalid => m_axi_rvalid,
@@ -62513,11 +62462,14 @@ begin
       s_lnk_hndlr_awvalid_gen_fsm_r_reg => \slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_5\,
       s_lnk_hndlr_bready => s_lnk_hndlr_bready,
       s_lnk_hndlr_rready => s_lnk_hndlr_rready,
-      \s_lnk_hndlr_wstrb_r_reg[3]\ => \axi_chip2chip_w_fifo_inst/fifo_empty\,
+      \s_lnk_hndlr_wuser_r_reg[0]\ => \axi_chip2chip_w_fifo_inst/fifo_empty\,
+      s_lnk_hndlr_wvalid_r_reg => m_axi_wvalid,
       slv_wait_for_rst_r => slv_wait_for_rst_r,
-      \srd_addr_trans_cntr_r_reg[0]\ => \axi_chip2chip_r_fifo_inst/axi_chip2chip_async_fifo_inst/full_int\,
-      \srd_addr_trans_cntr_r_reg[0]_0\ => \axi_chip2chip_r_fifo_inst/axi_chip2chip_async_fifo_inst/wr_rst_busy\,
+      \srd_addr_trans_cntr_r_reg[0]\ => \axi_chip2chip_r_fifo_inst/axi_chip2chip_async_fifo_inst/wr_rst_busy\,
+      \srd_addr_trans_cntr_r_reg[0]_0\ => \axi_chip2chip_r_fifo_inst/axi_chip2chip_async_fifo_inst/full_int\,
       srd_lnk_hndlr_en => srd_lnk_hndlr_en,
+      srd_lnk_hndlr_in_progress_r_reg => \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_150\,
+      \swr_addr_trans_cntr_r_reg[8]\ => \slave_fpga_gen.axi_chip2chip_slave_inst_n_154\,
       swr_lnk_hndlr_en => swr_lnk_hndlr_en,
       wr_rst_busy => \axi_chip2chip_b_fifo_inst/axi_chip2chip_async_fifo_inst/wr_rst_busy\
     );
@@ -62527,6 +62479,7 @@ GND: unisim.vcomponents.GND
     );
 \slave_fpga_gen.axi_chip2chip_slave_inst\: entity work.apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
      port map (
+      AR(0) => \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_0\,
       D(6) => \slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_7\,
       D(5) => \slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_8\,
       D(4) => \slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_9\,
@@ -62563,6 +62516,7 @@ GND: unisim.vcomponents.GND
       \gen_fwft.empty_fwft_i_reg\ => \axi_chip2chip_ar_fifo_inst/fifo_empty\,
       \gen_fwft.empty_fwft_i_reg_0\ => \axi_chip2chip_w_fifo_inst/fifo_empty\,
       \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg\ => \axi_chip2chip_b_fifo_inst/axi_chip2chip_async_fifo_inst/full_int\,
+      \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0\ => \slave_fpga_gen.axi_chip2chip_slave_inst_n_154\,
       \gen_rd_b.doutb_reg_reg_pipe_4_reg\(7 downto 6) => m_axi_bresp(1 downto 0),
       \gen_rd_b.doutb_reg_reg_pipe_4_reg\(5 downto 0) => m_axi_bid(5 downto 0),
       \gen_rst_ic.wr_rst_busy_ic_reg\ => \axi_chip2chip_b_fifo_inst/axi_chip2chip_async_fifo_inst/wr_rst_busy\,
@@ -62581,12 +62535,10 @@ GND: unisim.vcomponents.GND
       \gen_wr_a.gen_word_narrow.mem_reg_0\(1) => m_axi_wlast_dut,
       \gen_wr_a.gen_word_narrow.mem_reg_0\(0) => \slave_fpga_gen.axi_chip2chip_slave_inst_n_139\,
       intr_flop => \axi_chip2chip_ch0_ctrl_inst/intr_flop\,
-      \intr_out_reg[3]\ => \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_0\,
       link_dwn_indi_r => link_dwn_indi_r,
       m_aclk => m_aclk,
       m_axi_arready => m_axi_arready,
       m_axi_awready => m_axi_awready,
-      m_axi_bready => m_axi_bready,
       m_axi_bvalid => m_axi_bvalid,
       m_axi_rready => m_axi_rready,
       m_axi_rvalid => m_axi_rvalid,
@@ -62928,7 +62880,7 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of aurora_init_clk : signal is "xilinx.com:signal:clock:1.0 INIT_CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of aurora_init_clk : signal is "XIL_INTERFACENAME INIT_CLK, ASSOCIATED_RESET aurora_pma_init_out, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of aurora_init_clk : signal is "XIL_INTERFACENAME INIT_CLK, ASSOCIATED_RESET aurora_pma_init_out, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of aurora_mmcm_not_locked : signal is "xilinx.com:signal:reset:1.0 AURORA_MMCM_NOT_LOCKED RST";
   attribute X_INTERFACE_PARAMETER of aurora_mmcm_not_locked : signal is "XIL_INTERFACENAME AURORA_MMCM_NOT_LOCKED, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of aurora_pma_init_in : signal is "xilinx.com:signal:reset:1.0 AURORA_PMA_INIT_IN RST";
@@ -62945,7 +62897,7 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0 is
   attribute X_INTERFACE_INFO of axi_c2c_phy_clk : signal is "xilinx.com:signal:clock:1.0 axi_c2c_phy_clk CLK";
   attribute X_INTERFACE_PARAMETER of axi_c2c_phy_clk : signal is "XIL_INTERFACENAME axi_c2c_phy_clk, ASSOCIATED_BUSIF AXIS_TX:AXIS_RX, ASSOCIATED_RESET aurora_reset_pb, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_aclk : signal is "xilinx.com:signal:clock:1.0 m_aclk CLK";
-  attribute X_INTERFACE_PARAMETER of m_aclk : signal is "XIL_INTERFACENAME m_aclk, ASSOCIATED_BUSIF m_axi, ASSOCIATED_RESET m_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_aclk : signal is "XIL_INTERFACENAME m_aclk, ASSOCIATED_BUSIF m_axi, ASSOCIATED_RESET m_aresetn, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_aresetn : signal is "xilinx.com:signal:reset:1.0 m_aresetn RST";
   attribute X_INTERFACE_PARAMETER of m_aresetn : signal is "XIL_INTERFACENAME m_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axi_arready : signal is "xilinx.com:interface:aximm:1.0 m_axi ARREADY";
@@ -62956,7 +62908,7 @@ architecture STRUCTURE of apex_blk_axi_chip2chip_0_0 is
   attribute X_INTERFACE_INFO of m_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 m_axi BVALID";
   attribute X_INTERFACE_INFO of m_axi_rlast : signal is "xilinx.com:interface:aximm:1.0 m_axi RLAST";
   attribute X_INTERFACE_INFO of m_axi_rready : signal is "xilinx.com:interface:aximm:1.0 m_axi RREADY";
-  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME m_axi, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 6, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME m_axi, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 93750000, ID_WIDTH 6, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 256, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 m_axi RVALID";
   attribute X_INTERFACE_INFO of m_axi_wlast : signal is "xilinx.com:interface:aximm:1.0 m_axi WLAST";
   attribute X_INTERFACE_INFO of m_axi_wready : signal is "xilinx.com:interface:aximm:1.0 m_axi WREADY";

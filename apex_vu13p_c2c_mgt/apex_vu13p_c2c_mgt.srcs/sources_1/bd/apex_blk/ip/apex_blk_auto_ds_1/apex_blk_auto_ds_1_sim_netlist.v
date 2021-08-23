@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Thu Aug 19 14:22:23 2021
+// Date        : Sat Aug 21 19:22:25 2021
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
-// Command     : write_verilog -force -mode funcsim -rename_top apex_blk_auto_ds_1 -prefix
-//               apex_blk_auto_ds_1_ apex_blk_auto_ds_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /home/madorsky/github/vivado/apex_ku15p/apex_vu13p_c2c_mgt/apex_vu13p_c2c_mgt.srcs/sources_1/bd/apex_blk/ip/apex_blk_auto_ds_1/apex_blk_auto_ds_1_sim_netlist.v
 // Design      : apex_blk_auto_ds_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -87,7 +87,7 @@ module apex_blk_auto_ds_1
     m_axi_rlast,
     m_axi_rvalid,
     m_axi_rready);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 SI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SI_CLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET S_AXI_ARESETN, INSERT_VIP 0" *) input s_axi_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 SI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SI_CLK, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET S_AXI_ARESETN, INSERT_VIP 0" *) input s_axi_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 SI_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT" *) input s_axi_aresetn;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) input [15:0]s_axi_awaddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWLEN" *) input [7:0]s_axi_awlen;
@@ -123,7 +123,7 @@ module apex_blk_auto_ds_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RRESP" *) output [1:0]s_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RLAST" *) output s_axi_rlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *) output s_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 16, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 128, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input s_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 93750000, ID_WIDTH 0, ADDR_WIDTH 16, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 128, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input s_axi_rready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWADDR" *) output [15:0]m_axi_awaddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWLEN" *) output [7:0]m_axi_awlen;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWSIZE" *) output [2:0]m_axi_awsize;
@@ -158,7 +158,7 @@ module apex_blk_auto_ds_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RRESP" *) input [1:0]m_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RLAST" *) input m_axi_rlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RVALID" *) input m_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 16, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output m_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 93750000, ID_WIDTH 0, ADDR_WIDTH 16, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 256, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output m_axi_rready;
 
   wire [15:0]m_axi_araddr;
   wire [1:0]m_axi_arburst;
@@ -342,6 +342,7 @@ module apex_blk_auto_ds_1
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
+(* ORIG_REF_NAME = "axi_data_fifo_v2_1_20_axic_fifo" *) 
 module apex_blk_auto_ds_1_axi_data_fifo_v2_1_20_axic_fifo
    (dout,
     full,
@@ -989,6 +990,7 @@ module apex_blk_auto_ds_1_axi_data_fifo_v2_1_20_axic_fifo__parameterized0__xdcDu
         .wrap_need_to_split_q(wrap_need_to_split_q));
 endmodule
 
+(* ORIG_REF_NAME = "axi_data_fifo_v2_1_20_fifo_gen" *) 
 module apex_blk_auto_ds_1_axi_data_fifo_v2_1_20_fifo_gen
    (dout,
     full,
@@ -5730,6 +5732,7 @@ module apex_blk_auto_ds_1_axi_data_fifo_v2_1_20_fifo_gen__parameterized0__xdcDup
         .O(s_axi_wready_INST_0_i_1_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_a_downsizer" *) 
 module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_a_downsizer
    (dout,
     empty,
@@ -10781,6 +10784,7 @@ module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_a_downsizer__parameterize
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_axi_downsizer" *) 
 module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_axi_downsizer
    (s_axi_rvalid,
     E,
@@ -11174,6 +11178,7 @@ module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_axi_downsizer
         .\goreg_dm.dout_i_reg[9] (\goreg_dm.dout_i_reg[9] ));
 endmodule
 
+(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_b_downsizer" *) 
 module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_b_downsizer
    (rd_en,
     s_axi_bvalid,
@@ -11478,6 +11483,7 @@ module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_b_downsizer
         .O(s_axi_bvalid_INST_0_i_2_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_r_downsizer" *) 
 module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_r_downsizer
    (first_mi_word,
     rd_en,
@@ -12191,8 +12197,8 @@ endmodule
 (* C_RATIO = "2" *) (* C_RATIO_LOG = "1" *) (* C_SUPPORTS_ID = "0" *) 
 (* C_SYNCHRONIZER_STAGE = "3" *) (* C_S_AXI_ACLK_RATIO = "1" *) (* C_S_AXI_BYTES_LOG = "3" *) 
 (* C_S_AXI_DATA_WIDTH = "64" *) (* C_S_AXI_ID_WIDTH = "1" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
-(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
-(* P_CONVERSION = "2" *) (* P_MAX_SPLIT_BEATS = "256" *) 
+(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_top" *) (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) 
+(* P_AXILITE = "2" *) (* P_CONVERSION = "2" *) (* P_MAX_SPLIT_BEATS = "256" *) 
 module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_top
    (s_axi_aclk,
     s_axi_aresetn,
@@ -12505,6 +12511,7 @@ module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_top
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
+(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_w_downsizer" *) 
 module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_w_downsizer
    (first_mi_word,
     \goreg_dm.dout_i_reg[9] ,
@@ -12762,8 +12769,9 @@ module apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_w_downsizer
 endmodule
 
 (* DEF_VAL = "1'b0" *) (* DEST_SYNC_FF = "2" *) (* INIT_SYNC_FF = "0" *) 
-(* INV_DEF_VAL = "1'b1" *) (* RST_ACTIVE_HIGH = "1" *) (* VERSION = "0" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "true" *) (* xpm_cdc = "ASYNC_RST" *) 
+(* INV_DEF_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_cdc_async_rst" *) (* RST_ACTIVE_HIGH = "1" *) 
+(* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "true" *) 
+(* xpm_cdc = "ASYNC_RST" *) 
 module apex_blk_auto_ds_1_xpm_cdc_async_rst
    (src_arst,
     dest_clk,
@@ -12883,6 +12891,7 @@ module apex_blk_auto_ds_1_xpm_cdc_async_rst__4
         .Q(arststages_ff[1]));
 endmodule
 
+(* ORIG_REF_NAME = "dmem" *) 
 module apex_blk_auto_ds_1_dmem
    (dout_i,
     clk,
@@ -13607,6 +13616,7 @@ module apex_blk_auto_ds_1_dmem__parameterized0_10
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
 module apex_blk_auto_ds_1_fifo_generator_ramfifo
    (empty,
     full,
@@ -13852,6 +13862,7 @@ module apex_blk_auto_ds_1_fifo_generator_ramfifo__parameterized0__xdcDup__1
         .rst(rst));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_top" *) 
 module apex_blk_auto_ds_1_fifo_generator_top
    (empty,
     full,
@@ -14035,7 +14046,7 @@ endmodule
 (* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "1" *) (* C_WR_PNTR_WIDTH = "5" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "10" *) (* C_WR_PNTR_WIDTH_RACH = "4" *) (* C_WR_PNTR_WIDTH_RDCH = "10" *) 
 (* C_WR_PNTR_WIDTH_WACH = "4" *) (* C_WR_PNTR_WIDTH_WDCH = "10" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) 
+(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_2_5" *) 
 module apex_blk_auto_ds_1_fifo_generator_v13_2_5
    (backup,
     backup_marker,
@@ -17448,6 +17459,7 @@ module apex_blk_auto_ds_1_fifo_generator_v13_2_5__parameterized0__xdcDup__1
         .wr_en(wr_en));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_v13_2_5_synth" *) 
 module apex_blk_auto_ds_1_fifo_generator_v13_2_5_synth
    (empty,
     full,
@@ -17564,6 +17576,7 @@ module apex_blk_auto_ds_1_fifo_generator_v13_2_5_synth__parameterized0__xdcDup__
         .wr_en(wr_en));
 endmodule
 
+(* ORIG_REF_NAME = "memory" *) 
 module apex_blk_auto_ds_1_memory
    (dout,
     E,
@@ -18128,6 +18141,7 @@ module apex_blk_auto_ds_1_memory__parameterized0_9
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "rd_bin_cntr" *) 
 module apex_blk_auto_ds_1_rd_bin_cntr
    (Q,
     \gc0.count_d1_reg[4]_0 ,
@@ -18550,6 +18564,7 @@ module apex_blk_auto_ds_1_rd_bin_cntr_6
         .Q(Q[4]));
 endmodule
 
+(* ORIG_REF_NAME = "rd_fwft" *) 
 module apex_blk_auto_ds_1_rd_fwft
    (out,
     empty,
@@ -19104,6 +19119,7 @@ module apex_blk_auto_ds_1_rd_fwft_4
         .Q(user_valid));
 endmodule
 
+(* ORIG_REF_NAME = "rd_logic" *) 
 module apex_blk_auto_ds_1_rd_logic
    (out,
     \gpregsm1.curr_fwft_state_reg[1] ,
@@ -19280,6 +19296,7 @@ module apex_blk_auto_ds_1_rd_logic_7
         .\gc0.count_d1_reg[4]_0 (\gc0.count_d1_reg[4] ));
 endmodule
 
+(* ORIG_REF_NAME = "rd_status_flags_ss" *) 
 module apex_blk_auto_ds_1_rd_status_flags_ss
    (out,
     ram_empty_i_reg_0,
@@ -19405,6 +19422,7 @@ module apex_blk_auto_ds_1_rd_status_flags_ss_5
         .Q(ram_empty_i));
 endmodule
 
+(* ORIG_REF_NAME = "reset_blk_ramfifo" *) 
 module apex_blk_auto_ds_1_reset_blk_ramfifo
    (E,
     AR,
@@ -19770,6 +19788,7 @@ module apex_blk_auto_ds_1_reset_blk_ramfifo__xdcDup__2
         .src_arst(rst));
 endmodule
 
+(* ORIG_REF_NAME = "wr_bin_cntr" *) 
 module apex_blk_auto_ds_1_wr_bin_cntr
    (ram_full_comb,
     ram_full_fb_i_reg,
@@ -20504,6 +20523,7 @@ module apex_blk_auto_ds_1_wr_bin_cntr_3
         .O(ram_full_fb_i_i_3_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "wr_logic" *) 
 module apex_blk_auto_ds_1_wr_logic
    (full,
     ram_full_fb_i_reg,
@@ -20689,6 +20709,7 @@ module apex_blk_auto_ds_1_wr_logic_8
         .wr_en(wr_en));
 endmodule
 
+(* ORIG_REF_NAME = "wr_status_flags_ss" *) 
 module apex_blk_auto_ds_1_wr_status_flags_ss
    (out,
     full,

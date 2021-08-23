@@ -543,7 +543,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
   // 'S00_AXI' transactor parameters
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
     S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     S00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -570,10 +570,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     S00_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     S00_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     S00_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    S00_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    S00_AXI_transactor_param_props.addFloat("PHASE", "0");
     S00_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     S00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,1,1,1,1,1,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
 
@@ -672,7 +672,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
   // 'M00_AXI' transactor parameters
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     M00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -699,10 +699,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M00_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M00_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     M00_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    M00_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    M00_AXI_transactor_param_props.addFloat("PHASE", "0");
     M00_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     M00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    M00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    M00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_M00_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M00_AXI_transactor", M00_AXI_transactor_param_props);
 
@@ -866,7 +866,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
   // 'M01_AXI' transactor parameters
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
     M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     M01_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -893,10 +893,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M01_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M01_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     M01_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    M01_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    M01_AXI_transactor_param_props.addFloat("PHASE", "0");
     M01_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     M01_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    M01_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    M01_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_M01_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M01_AXI_transactor", M01_AXI_transactor_param_props);
 
@@ -1060,7 +1060,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
   // 'M02_AXI' transactor parameters
     xsc::common_cpp::properties M02_AXI_transactor_param_props;
     M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M02_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M02_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     M02_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M02_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M02_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1087,10 +1087,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M02_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M02_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     M02_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    M02_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    M02_AXI_transactor_param_props.addFloat("PHASE", "0");
     M02_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     M02_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    M02_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    M02_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_M02_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M02_AXI_transactor", M02_AXI_transactor_param_props);
 
@@ -1735,7 +1735,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
   // 'S00_AXI' transactor parameters
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
     S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     S00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1762,10 +1762,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     S00_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     S00_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     S00_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    S00_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    S00_AXI_transactor_param_props.addFloat("PHASE", "0");
     S00_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     S00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,1,1,1,1,1,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
 
@@ -1864,7 +1864,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
   // 'M00_AXI' transactor parameters
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     M00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1891,10 +1891,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M00_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M00_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     M00_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    M00_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    M00_AXI_transactor_param_props.addFloat("PHASE", "0");
     M00_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     M00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    M00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    M00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_M00_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M00_AXI_transactor", M00_AXI_transactor_param_props);
 
@@ -2058,7 +2058,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
   // 'M01_AXI' transactor parameters
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
     M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     M01_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -2085,10 +2085,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M01_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M01_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     M01_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    M01_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    M01_AXI_transactor_param_props.addFloat("PHASE", "0");
     M01_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     M01_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    M01_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    M01_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_M01_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M01_AXI_transactor", M01_AXI_transactor_param_props);
 
@@ -2252,7 +2252,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
   // 'M02_AXI' transactor parameters
     xsc::common_cpp::properties M02_AXI_transactor_param_props;
     M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M02_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M02_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     M02_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M02_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M02_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -2279,10 +2279,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M02_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M02_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     M02_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    M02_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    M02_AXI_transactor_param_props.addFloat("PHASE", "0");
     M02_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     M02_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    M02_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    M02_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_M02_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M02_AXI_transactor", M02_AXI_transactor_param_props);
 
@@ -2927,7 +2927,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
   // 'S00_AXI' transactor parameters
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
     S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     S00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -2954,10 +2954,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     S00_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     S00_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     S00_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    S00_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    S00_AXI_transactor_param_props.addFloat("PHASE", "0");
     S00_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     S00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,1,1,1,1,1,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
 
@@ -3056,7 +3056,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
   // 'M00_AXI' transactor parameters
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     M00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -3083,10 +3083,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M00_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M00_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     M00_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    M00_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    M00_AXI_transactor_param_props.addFloat("PHASE", "0");
     M00_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     M00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    M00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    M00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_M00_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M00_AXI_transactor", M00_AXI_transactor_param_props);
 
@@ -3250,7 +3250,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
   // 'M01_AXI' transactor parameters
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
     M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     M01_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -3277,10 +3277,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M01_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M01_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     M01_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    M01_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    M01_AXI_transactor_param_props.addFloat("PHASE", "0");
     M01_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     M01_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    M01_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    M01_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_M01_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M01_AXI_transactor", M01_AXI_transactor_param_props);
 
@@ -3444,7 +3444,7 @@ void apex_blk_xbar_0::before_end_of_elaboration()
   // 'M02_AXI' transactor parameters
     xsc::common_cpp::properties M02_AXI_transactor_param_props;
     M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M02_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M02_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     M02_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M02_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M02_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -3471,10 +3471,10 @@ void apex_blk_xbar_0::before_end_of_elaboration()
     M02_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M02_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     M02_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    M02_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    M02_AXI_transactor_param_props.addFloat("PHASE", "0");
     M02_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     M02_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    M02_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    M02_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_M02_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M02_AXI_transactor", M02_AXI_transactor_param_props);
 
@@ -3809,7 +3809,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   // configure S00_AXI_transactor
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
     S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     S00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -3836,10 +3836,10 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     S00_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     S00_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     S00_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    S00_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    S00_AXI_transactor_param_props.addFloat("PHASE", "0");
     S00_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     S00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,1,1,1,1,1,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
   mp_S00_AXI_transactor->AWADDR(s_axi_awaddr);
@@ -3923,7 +3923,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   // configure M00_AXI_transactor
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     M00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -3950,10 +3950,10 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M00_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M00_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     M00_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    M00_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    M00_AXI_transactor_param_props.addFloat("PHASE", "0");
     M00_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     M00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    M00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    M00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_M00_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M00_AXI_transactor", M00_AXI_transactor_param_props);
   mp_m_axi_awaddr_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_0");
@@ -4242,7 +4242,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   // configure M01_AXI_transactor
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
     M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     M01_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -4269,10 +4269,10 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M01_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M01_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     M01_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    M01_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    M01_AXI_transactor_param_props.addFloat("PHASE", "0");
     M01_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     M01_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    M01_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    M01_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_M01_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M01_AXI_transactor", M01_AXI_transactor_param_props);
   mp_m_axi_awaddr_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_1");
@@ -4500,7 +4500,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   // configure M02_AXI_transactor
     xsc::common_cpp::properties M02_AXI_transactor_param_props;
     M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M02_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M02_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     M02_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M02_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M02_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -4527,10 +4527,10 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M02_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M02_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     M02_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    M02_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    M02_AXI_transactor_param_props.addFloat("PHASE", "0");
     M02_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     M02_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    M02_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    M02_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_M02_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M02_AXI_transactor", M02_AXI_transactor_param_props);
   mp_m_axi_awaddr_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_2");
@@ -5010,7 +5010,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   // configure S00_AXI_transactor
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
     S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     S00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -5037,10 +5037,10 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     S00_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     S00_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     S00_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    S00_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    S00_AXI_transactor_param_props.addFloat("PHASE", "0");
     S00_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     S00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,32,1,1,1,1,1,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
   mp_S00_AXI_transactor->AWADDR(s_axi_awaddr);
@@ -5124,7 +5124,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   // configure M00_AXI_transactor
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     M00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -5151,10 +5151,10 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M00_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M00_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     M00_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    M00_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    M00_AXI_transactor_param_props.addFloat("PHASE", "0");
     M00_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     M00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    M00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    M00_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_M00_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M00_AXI_transactor", M00_AXI_transactor_param_props);
   mp_m_axi_awaddr_converter_0 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_0");
@@ -5443,7 +5443,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   // configure M01_AXI_transactor
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
     M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     M01_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -5470,10 +5470,10 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M01_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M01_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     M01_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    M01_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    M01_AXI_transactor_param_props.addFloat("PHASE", "0");
     M01_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     M01_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    M01_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    M01_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_M01_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M01_AXI_transactor", M01_AXI_transactor_param_props);
   mp_m_axi_awaddr_converter_1 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_1");
@@ -5701,7 +5701,7 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
   // configure M02_AXI_transactor
     xsc::common_cpp::properties M02_AXI_transactor_param_props;
     M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
-    M02_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M02_AXI_transactor_param_props.addLong("FREQ_HZ", "93750000");
     M02_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M02_AXI_transactor_param_props.addLong("ADDR_WIDTH", "32");
     M02_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -5728,10 +5728,10 @@ apex_blk_xbar_0::apex_blk_xbar_0(const sc_core::sc_module_name& nm) : apex_blk_x
     M02_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M02_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
     M02_AXI_transactor_param_props.addLong("HAS_RESET", "1");
-    M02_AXI_transactor_param_props.addFloat("PHASE", "0.0");
+    M02_AXI_transactor_param_props.addFloat("PHASE", "0");
     M02_AXI_transactor_param_props.addString("PROTOCOL", "AXI4");
     M02_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    M02_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_clk_wiz_0_clk_out1");
+    M02_AXI_transactor_param_props.addString("CLK_DOMAIN", "apex_blk_axi_c2c_phy_clk_0");
 
     mp_M02_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<64,32,1,1,1,1,1,1>("M02_AXI_transactor", M02_AXI_transactor_param_props);
   mp_m_axi_awaddr_converter_2 = new xsc::common::vector2vector_converter<32,96>("m_axi_awaddr_converter_2");

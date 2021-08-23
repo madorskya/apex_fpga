@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Thu Aug 19 14:22:23 2021
+-- Date        : Sat Aug 21 19:22:25 2021
 -- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
--- Command     : write_vhdl -force -mode funcsim -rename_top apex_blk_auto_ds_1 -prefix
---               apex_blk_auto_ds_1_ apex_blk_auto_ds_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/madorsky/github/vivado/apex_ku15p/apex_vu13p_c2c_mgt/apex_vu13p_c2c_mgt.srcs/sources_1/bd/apex_blk/ip/apex_blk_auto_ds_1/apex_blk_auto_ds_1_sim_netlist.vhdl
 -- Design      : apex_blk_auto_ds_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -28,6 +28,8 @@ entity apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_b_downsizer is
     empty : in STD_LOGIC;
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_b_downsizer : entity is "axi_dwidth_converter_v2_1_21_b_downsizer";
 end apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_b_downsizer;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_b_downsizer is
@@ -413,6 +415,8 @@ entity apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_r_downsizer is
     \WORD_LANE[1].S_AXI_RDATA_II_reg[63]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_r_downsizer : entity is "axi_dwidth_converter_v2_1_21_r_downsizer";
 end apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_r_downsizer;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_r_downsizer is
@@ -1287,6 +1291,8 @@ entity apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_w_downsizer is
     first_word_reg_0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     D : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_w_downsizer : entity is "axi_dwidth_converter_v2_1_21_w_downsizer";
 end apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_w_downsizer;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_w_downsizer is
@@ -1611,6 +1617,8 @@ entity apex_blk_auto_ds_1_xpm_cdc_async_rst is
   attribute INIT_SYNC_FF of apex_blk_auto_ds_1_xpm_cdc_async_rst : entity is 0;
   attribute INV_DEF_VAL : string;
   attribute INV_DEF_VAL of apex_blk_auto_ds_1_xpm_cdc_async_rst : entity is "1'b1";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_xpm_cdc_async_rst : entity is "xpm_cdc_async_rst";
   attribute RST_ACTIVE_HIGH : integer;
   attribute RST_ACTIVE_HIGH of apex_blk_auto_ds_1_xpm_cdc_async_rst : entity is 1;
   attribute VERSION : integer;
@@ -1821,6 +1829,8 @@ entity apex_blk_auto_ds_1_dmem is
     I31 : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \gpr1.dout_i_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_dmem : entity is "dmem";
 end apex_blk_auto_ds_1_dmem;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_dmem is
@@ -2732,6 +2742,8 @@ entity apex_blk_auto_ds_1_rd_bin_cntr is
     clk : in STD_LOGIC;
     \gc0.count_d1_reg[0]_0\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_rd_bin_cntr : entity is "rd_bin_cntr";
 end apex_blk_auto_ds_1_rd_bin_cntr;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_rd_bin_cntr is
@@ -3294,6 +3306,8 @@ entity apex_blk_auto_ds_1_rd_fwft is
     rd_en : in STD_LOGIC;
     \gc0.count_reg[4]\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_rd_fwft : entity is "rd_fwft";
 end apex_blk_auto_ds_1_rd_fwft;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_rd_fwft is
@@ -3990,6 +4004,8 @@ entity apex_blk_auto_ds_1_rd_status_flags_ss is
     clk : in STD_LOGIC;
     ram_empty_fb_i_reg_0 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_rd_status_flags_ss : entity is "rd_status_flags_ss";
 end apex_blk_auto_ds_1_rd_status_flags_ss;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_rd_status_flags_ss is
@@ -4158,6 +4174,8 @@ entity apex_blk_auto_ds_1_wr_bin_cntr is
     clk : in STD_LOGIC;
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_wr_bin_cntr : entity is "wr_bin_cntr";
 end apex_blk_auto_ds_1_wr_bin_cntr;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_wr_bin_cntr is
@@ -5054,6 +5072,8 @@ entity apex_blk_auto_ds_1_wr_status_flags_ss is
     AR : in STD_LOGIC_VECTOR ( 0 to 0 );
     wr_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_wr_status_flags_ss : entity is "wr_status_flags_ss";
 end apex_blk_auto_ds_1_wr_status_flags_ss;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_wr_status_flags_ss is
@@ -5314,6 +5334,8 @@ entity apex_blk_auto_ds_1_memory is
     I31 : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \gpr1.dout_i_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_memory : entity is "memory";
 end apex_blk_auto_ds_1_memory;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_memory is
@@ -6032,6 +6054,8 @@ entity apex_blk_auto_ds_1_rd_logic is
     \gc0.count_d1_reg[0]\ : in STD_LOGIC;
     rd_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_rd_logic : entity is "rd_logic";
 end apex_blk_auto_ds_1_rd_logic;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_rd_logic is
@@ -6190,6 +6214,8 @@ entity apex_blk_auto_ds_1_reset_blk_ramfifo is
     rd_en : in STD_LOGIC;
     \goreg_dm.dout_i_reg[25]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_reset_blk_ramfifo : entity is "reset_blk_ramfifo";
 end apex_blk_auto_ds_1_reset_blk_ramfifo;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_reset_blk_ramfifo is
@@ -6736,6 +6762,8 @@ entity apex_blk_auto_ds_1_wr_logic is
     ram_empty_fb_i_i_3 : in STD_LOGIC_VECTOR ( 4 downto 0 );
     ram_empty_fb_i_i_2 : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_wr_logic : entity is "wr_logic";
 end apex_blk_auto_ds_1_wr_logic;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_wr_logic is
@@ -6893,6 +6921,8 @@ entity apex_blk_auto_ds_1_fifo_generator_ramfifo is
     rd_en : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_fifo_generator_ramfifo : entity is "fifo_generator_ramfifo";
 end apex_blk_auto_ds_1_fifo_generator_ramfifo;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_fifo_generator_ramfifo is
@@ -7143,6 +7173,8 @@ entity apex_blk_auto_ds_1_fifo_generator_top is
     rd_en : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_fifo_generator_top : entity is "fifo_generator_top";
 end apex_blk_auto_ds_1_fifo_generator_top;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_fifo_generator_top is
@@ -7240,6 +7272,8 @@ entity apex_blk_auto_ds_1_fifo_generator_v13_2_5_synth is
     rd_en : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_fifo_generator_v13_2_5_synth : entity is "fifo_generator_v13_2_5_synth";
 end apex_blk_auto_ds_1_fifo_generator_v13_2_5_synth;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_fifo_generator_v13_2_5_synth is
@@ -7964,6 +7998,8 @@ entity apex_blk_auto_ds_1_fifo_generator_v13_2_5 is
   attribute C_WR_PNTR_WIDTH_WRCH of apex_blk_auto_ds_1_fifo_generator_v13_2_5 : entity is 4;
   attribute C_WR_RESPONSE_LATENCY : integer;
   attribute C_WR_RESPONSE_LATENCY of apex_blk_auto_ds_1_fifo_generator_v13_2_5 : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_fifo_generator_v13_2_5 : entity is "fifo_generator_v13_2_5";
 end apex_blk_auto_ds_1_fifo_generator_v13_2_5;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_fifo_generator_v13_2_5 is
@@ -11175,6 +11211,8 @@ entity apex_blk_auto_ds_1_axi_data_fifo_v2_1_20_fifo_gen is
     S_AXI_AID_Q : in STD_LOGIC;
     s_axi_bid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_axi_data_fifo_v2_1_20_fifo_gen : entity is "axi_data_fifo_v2_1_20_fifo_gen";
 end apex_blk_auto_ds_1_axi_data_fifo_v2_1_20_fifo_gen;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_axi_data_fifo_v2_1_20_fifo_gen is
@@ -17144,6 +17182,8 @@ entity apex_blk_auto_ds_1_axi_data_fifo_v2_1_20_axic_fifo is
     S_AXI_AID_Q : in STD_LOGIC;
     s_axi_bid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_axi_data_fifo_v2_1_20_axic_fifo : entity is "axi_data_fifo_v2_1_20_axic_fifo";
 end apex_blk_auto_ds_1_axi_data_fifo_v2_1_20_axic_fifo;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_axi_data_fifo_v2_1_20_axic_fifo is
@@ -17522,6 +17562,8 @@ entity apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_a_downsizer is
     s_axi_awregion : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_awqos : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_a_downsizer : entity is "axi_dwidth_converter_v2_1_21_a_downsizer";
 end apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_a_downsizer;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_a_downsizer is
@@ -23963,6 +24005,8 @@ entity apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_axi_downsizer is
     s_axi_wdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_axi_downsizer : entity is "axi_dwidth_converter_v2_1_21_axi_downsizer";
 end apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_axi_downsizer;
 
 architecture STRUCTURE of apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_axi_downsizer is
@@ -24288,6 +24332,8 @@ entity apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_top is
   attribute C_S_AXI_ID_WIDTH of apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_top : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_top : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_top : entity is "axi_dwidth_converter_v2_1_21_top";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of apex_blk_auto_ds_1_axi_dwidth_converter_v2_1_21_top : entity is 1;
   attribute P_AXI4 : integer;
@@ -24539,13 +24585,13 @@ architecture STRUCTURE of apex_blk_auto_ds_1 is
   attribute X_INTERFACE_INFO of m_axi_rlast : signal is "xilinx.com:interface:aximm:1.0 M_AXI RLAST";
   attribute X_INTERFACE_INFO of m_axi_rready : signal is "xilinx.com:interface:aximm:1.0 M_AXI RREADY";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 16, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 93750000, ID_WIDTH 0, ADDR_WIDTH 16, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 256, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI RVALID";
   attribute X_INTERFACE_INFO of m_axi_wlast : signal is "xilinx.com:interface:aximm:1.0 M_AXI WLAST";
   attribute X_INTERFACE_INFO of m_axi_wready : signal is "xilinx.com:interface:aximm:1.0 M_AXI WREADY";
   attribute X_INTERFACE_INFO of m_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI WVALID";
   attribute X_INTERFACE_INFO of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 SI_CLK CLK";
-  attribute X_INTERFACE_PARAMETER of s_axi_aclk : signal is "XIL_INTERFACENAME SI_CLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET S_AXI_ARESETN, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axi_aclk : signal is "XIL_INTERFACENAME SI_CLK, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET S_AXI_ARESETN, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 SI_RST RST";
   attribute X_INTERFACE_PARAMETER of s_axi_aresetn : signal is "XIL_INTERFACENAME SI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT";
   attribute X_INTERFACE_INFO of s_axi_arready : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARREADY";
@@ -24556,7 +24602,7 @@ architecture STRUCTURE of apex_blk_auto_ds_1 is
   attribute X_INTERFACE_INFO of s_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI BVALID";
   attribute X_INTERFACE_INFO of s_axi_rlast : signal is "xilinx.com:interface:aximm:1.0 S_AXI RLAST";
   attribute X_INTERFACE_INFO of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 16, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 128, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 93750000, ID_WIDTH 0, ADDR_WIDTH 16, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 128, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI RVALID";
   attribute X_INTERFACE_INFO of s_axi_wlast : signal is "xilinx.com:interface:aximm:1.0 S_AXI WLAST";
   attribute X_INTERFACE_INFO of s_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S_AXI WREADY";

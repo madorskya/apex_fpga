@@ -521,7 +521,7 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M00_AXI] [get
 connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get_bd_intf_pins axi_interconnect_0/M02_AXI] [get_bd_intf_pins system_ila_0/SLOT_2_AXI]
 
   # Create port connections
-  connect_bd_net -net Net_1 [get_bd_ports drp_clk] [get_bd_pins axi_chip2chip_0/aurora_init_clk] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins clk_wiz/clk_out2] [get_bd_pins drp1/drp_clk] [get_bd_pins rst_clk_wiz_100M/slowest_sync_clk]
+  connect_bd_net -net Net_1 [get_bd_ports drp_clk] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins clk_wiz/clk_out2] [get_bd_pins drp1/drp_clk]
   connect_bd_net -net aurora_mmcm_not_locked_0_1 [get_bd_ports c2c_mmcm_unlocked] [get_bd_pins axi_chip2chip_0/aurora_mmcm_not_locked] [get_bd_pins ila_0/probe4]
   connect_bd_net -net aurora_pma_init [get_bd_pins axi_chip2chip_0/aurora_pma_init_in] [get_bd_pins ila_0/probe3] [get_bd_pins vio_0/probe_out1]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets aurora_pma_init]
@@ -535,7 +535,7 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_c2c_link_status_out]
   connect_bd_net -net axi_c2c_multi_bit_error_out [get_bd_pins axi_chip2chip_0/axi_c2c_multi_bit_error_out] [get_bd_pins ila_0/probe13]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_c2c_multi_bit_error_out]
-  connect_bd_net -net axi_c2c_phy_clk_0_1 [get_bd_ports c2c_phy_clk] [get_bd_pins axi_chip2chip_0/axi_c2c_phy_clk] [get_bd_pins c2c_reset_fsm_0/phy_clk] [get_bd_pins ila_0/clk] [get_bd_pins vio_0/clk]
+  connect_bd_net -net axi_c2c_phy_clk_0_1 [get_bd_ports c2c_phy_clk] [get_bd_pins axi_chip2chip_0/aurora_init_clk] [get_bd_pins axi_chip2chip_0/axi_c2c_phy_clk] [get_bd_pins axi_chip2chip_0/m_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins bram0/s_axi_aclk] [get_bd_pins bram2/s_axi_aclk] [get_bd_pins c2c_reset_fsm_0/phy_clk] [get_bd_pins ila_0/clk] [get_bd_pins rst_clk_wiz_100M/slowest_sync_clk] [get_bd_pins system_ila_0/clk] [get_bd_pins vio_0/clk]
   connect_bd_net -net axi_chip2chip_0_aurora_do_cc [get_bd_ports c2c_do_cc] [get_bd_pins axi_chip2chip_0/aurora_do_cc] [get_bd_pins ila_0/probe8]
   connect_bd_net -net axi_chip2chip_0_aurora_pma_init_out [get_bd_ports c2c_pma_init] [get_bd_pins axi_chip2chip_0/aurora_pma_init_out] [get_bd_pins ila_0/probe9]
   connect_bd_net -net axi_chip2chip_0_aurora_reset_pb [get_bd_pins axi_chip2chip_0/aurora_reset_pb] [get_bd_pins ila_0/probe10]
@@ -552,7 +552,6 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_interconnect_0_M02_AXI] [get
   connect_bd_net -net c2c_rxclkcorcnt [get_bd_ports c2c_rxclkcorcnt] [get_bd_pins ila_0/probe16]
   connect_bd_net -net channel_up [get_bd_pins c2c_reset_fsm_0/manual_reset] [get_bd_pins ila_0/probe14] [get_bd_pins vio_0/probe_out0]
   connect_bd_net -net clk_in1_0_1 [get_bd_ports c2c_init_clk] [get_bd_pins clk_wiz/clk_in1]
-  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_chip2chip_0/m_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins bram0/s_axi_aclk] [get_bd_pins bram2/s_axi_aclk] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins system_ila_0/clk]
   connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz/locked] [get_bd_pins rst_clk_wiz_100M/dcm_locked]
   connect_bd_net -net drp_bridge_0_drp0_addr [get_bd_ports drp_addr] [get_bd_pins drp1/drp_addr] [get_bd_pins system_ila_0/probe6]
   connect_bd_net -net drp_bridge_0_drp0_di [get_bd_ports drp_di] [get_bd_pins drp1/drp_di] [get_bd_pins system_ila_0/probe2]

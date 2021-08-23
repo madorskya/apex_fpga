@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Thu Aug 19 14:07:10 2021
+// Date        : Sat Aug 21 19:21:15 2021
 // Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 // Command     : write_verilog -force -mode funcsim
 //               /home/madorsky/github/vivado/apex_ku15p/apex_vu13p_c2c_mgt/apex_vu13p_c2c_mgt.srcs/sources_1/bd/apex_blk/ip/apex_blk_axi_chip2chip_0_0/apex_blk_axi_chip2chip_0_0_sim_netlist.v
@@ -66,7 +66,7 @@ module apex_blk_axi_chip2chip_0_0
     axi_c2c_link_status_out,
     axi_c2c_multi_bit_error_out);
   output axi_c2c_lnk_hndlr_in_progress;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 m_aclk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_aclk, ASSOCIATED_BUSIF m_axi, ASSOCIATED_RESET m_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, INSERT_VIP 0" *) input m_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 m_aclk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_aclk, ASSOCIATED_BUSIF m_axi, ASSOCIATED_RESET m_aresetn, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, INSERT_VIP 0" *) input m_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 m_aresetn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input m_aresetn;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi AWID" *) output [5:0]m_axi_awid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi AWADDR" *) output [31:0]m_axi_awaddr;
@@ -96,7 +96,7 @@ module apex_blk_axi_chip2chip_0_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi RRESP" *) input [1:0]m_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi RLAST" *) input m_axi_rlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi RVALID" *) input m_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axi, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 6, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output m_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axi, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 93750000, ID_WIDTH 6, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 256, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output m_axi_rready;
   input [3:0]axi_c2c_s2m_intr_in;
   output [3:0]axi_c2c_m2s_intr_out;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 axi_c2c_phy_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_c2c_phy_clk, ASSOCIATED_BUSIF AXIS_TX:AXIS_RX, ASSOCIATED_RESET aurora_reset_pb, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, INSERT_VIP 0" *) input axi_c2c_phy_clk;
@@ -108,7 +108,7 @@ module apex_blk_axi_chip2chip_0_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 AXIS_RX TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AXIS_RX, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 93750000, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, LAYERED_METADATA undef, INSERT_VIP 0" *) input axi_c2c_aurora_rx_tvalid;
   output aurora_do_cc;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 AURORA_PMA_INIT_IN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AURORA_PMA_INIT_IN, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input aurora_pma_init_in;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 INIT_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INIT_CLK, ASSOCIATED_RESET aurora_pma_init_out, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN apex_blk_clk_wiz_0_clk_out1, INSERT_VIP 0" *) input aurora_init_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 INIT_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INIT_CLK, ASSOCIATED_RESET aurora_pma_init_out, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, INSERT_VIP 0" *) input aurora_init_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 AURORA_PMA_INIT_OUT RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AURORA_PMA_INIT_OUT, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) output aurora_pma_init_out;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 AURORA_MMCM_NOT_LOCKED RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AURORA_MMCM_NOT_LOCKED, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input aurora_mmcm_not_locked;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 AURORA_RST_OUT RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AURORA_RST_OUT, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) output aurora_reset_pb;
@@ -731,14 +731,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray
        (.I0(\dest_graysync_ff[2] [6]),
         .I1(\dest_graysync_ff[2] [7]),
         .O(\^dest_out_bin [6]));
-  (* SOFT_HLUTNM = "soft_lutpair155" *) 
+  (* SOFT_HLUTNM = "soft_lutpair154" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair155" *) 
+  (* SOFT_HLUTNM = "soft_lutpair154" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
@@ -751,28 +751,28 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair156" *) 
+  (* SOFT_HLUTNM = "soft_lutpair155" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair156" *) 
+  (* SOFT_HLUTNM = "soft_lutpair155" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair157" *) 
+  (* SOFT_HLUTNM = "soft_lutpair156" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair157" *) 
+  (* SOFT_HLUTNM = "soft_lutpair156" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
@@ -1124,28 +1124,28 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__10
        (.I0(\dest_graysync_ff[2] [6]),
         .I1(\dest_graysync_ff[2] [7]),
         .O(\^dest_out_bin [6]));
-  (* SOFT_HLUTNM = "soft_lutpair150" *) 
+  (* SOFT_HLUTNM = "soft_lutpair149" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair150" *) 
+  (* SOFT_HLUTNM = "soft_lutpair149" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair151" *) 
+  (* SOFT_HLUTNM = "soft_lutpair150" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair151" *) 
+  (* SOFT_HLUTNM = "soft_lutpair150" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
@@ -1158,14 +1158,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__10
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair149" *) 
+  (* SOFT_HLUTNM = "soft_lutpair148" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair149" *) 
+  (* SOFT_HLUTNM = "soft_lutpair148" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
@@ -1517,42 +1517,42 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__6
        (.I0(\dest_graysync_ff[2] [6]),
         .I1(\dest_graysync_ff[2] [7]),
         .O(\^dest_out_bin [6]));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
@@ -1910,14 +1910,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__7
        (.I0(\dest_graysync_ff[2] [6]),
         .I1(\dest_graysync_ff[2] [7]),
         .O(\^dest_out_bin [6]));
-  (* SOFT_HLUTNM = "soft_lutpair123" *) 
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair123" *) 
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
@@ -1930,28 +1930,28 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__7
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair124" *) 
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair124" *) 
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
@@ -2303,42 +2303,42 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__8
        (.I0(\dest_graysync_ff[2] [6]),
         .I1(\dest_graysync_ff[2] [7]),
         .O(\^dest_out_bin [6]));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
@@ -2696,14 +2696,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__9
        (.I0(\dest_graysync_ff[2] [6]),
         .I1(\dest_graysync_ff[2] [7]),
         .O(\^dest_out_bin [6]));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
@@ -2716,28 +2716,28 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__9
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
@@ -3288,28 +3288,28 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterized0
        (.I0(\dest_graysync_ff[4] [7]),
         .I1(\dest_graysync_ff[4] [8]),
         .O(\^dest_out_bin [7]));
-  (* SOFT_HLUTNM = "soft_lutpair153" *) 
+  (* SOFT_HLUTNM = "soft_lutpair152" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair153" *) 
+  (* SOFT_HLUTNM = "soft_lutpair152" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair154" *) 
+  (* SOFT_HLUTNM = "soft_lutpair153" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair154" *) 
+  (* SOFT_HLUTNM = "soft_lutpair153" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
@@ -3322,14 +3322,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterized0
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair152" *) 
+  (* SOFT_HLUTNM = "soft_lutpair151" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair152" *) 
+  (* SOFT_HLUTNM = "soft_lutpair151" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
@@ -3892,56 +3892,56 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterized0__3
        (.I0(\dest_graysync_ff[4] [7]),
         .I1(\dest_graysync_ff[4] [8]),
         .O(\^dest_out_bin [7]));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair120" *) 
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair120" *) 
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair121" *) 
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair121" *) 
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair122" *) 
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
        (.I0(src_in_bin[7]),
         .I1(src_in_bin[6]),
         .O(gray_enc[6]));
-  (* SOFT_HLUTNM = "soft_lutpair122" *) 
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[7]_i_1 
@@ -4498,56 +4498,56 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterized0__4
        (.I0(\dest_graysync_ff[4] [7]),
         .I1(\dest_graysync_ff[4] [8]),
         .O(\^dest_out_bin [7]));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
        (.I0(src_in_bin[7]),
         .I1(src_in_bin[6]),
         .O(gray_enc[6]));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[7]_i_1 
@@ -4940,56 +4940,56 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterized1
        (.I0(\dest_graysync_ff[2] [7]),
         .I1(\dest_graysync_ff[2] [8]),
         .O(\^dest_out_bin [7]));
-  (* SOFT_HLUTNM = "soft_lutpair161" *) 
+  (* SOFT_HLUTNM = "soft_lutpair160" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair161" *) 
+  (* SOFT_HLUTNM = "soft_lutpair160" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair160" *) 
+  (* SOFT_HLUTNM = "soft_lutpair159" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair160" *) 
+  (* SOFT_HLUTNM = "soft_lutpair159" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair159" *) 
+  (* SOFT_HLUTNM = "soft_lutpair158" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair159" *) 
+  (* SOFT_HLUTNM = "soft_lutpair158" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair158" *) 
+  (* SOFT_HLUTNM = "soft_lutpair157" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
        (.I0(src_in_bin[7]),
         .I1(src_in_bin[6]),
         .O(gray_enc[6]));
-  (* SOFT_HLUTNM = "soft_lutpair158" *) 
+  (* SOFT_HLUTNM = "soft_lutpair157" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[7]_i_1 
@@ -5382,56 +5382,56 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterized1__10
        (.I0(\dest_graysync_ff[2] [7]),
         .I1(\dest_graysync_ff[2] [8]),
         .O(\^dest_out_bin [7]));
-  (* SOFT_HLUTNM = "soft_lutpair237" *) 
+  (* SOFT_HLUTNM = "soft_lutpair236" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair237" *) 
+  (* SOFT_HLUTNM = "soft_lutpair236" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair236" *) 
+  (* SOFT_HLUTNM = "soft_lutpair235" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair236" *) 
+  (* SOFT_HLUTNM = "soft_lutpair235" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair238" *) 
+  (* SOFT_HLUTNM = "soft_lutpair237" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair238" *) 
+  (* SOFT_HLUTNM = "soft_lutpair237" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair239" *) 
+  (* SOFT_HLUTNM = "soft_lutpair238" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
        (.I0(src_in_bin[7]),
         .I1(src_in_bin[6]),
         .O(gray_enc[6]));
-  (* SOFT_HLUTNM = "soft_lutpair239" *) 
+  (* SOFT_HLUTNM = "soft_lutpair238" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[7]_i_1 
@@ -5824,56 +5824,56 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterized1__11
        (.I0(\dest_graysync_ff[2] [7]),
         .I1(\dest_graysync_ff[2] [8]),
         .O(\^dest_out_bin [7]));
-  (* SOFT_HLUTNM = "soft_lutpair184" *) 
+  (* SOFT_HLUTNM = "soft_lutpair183" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair184" *) 
+  (* SOFT_HLUTNM = "soft_lutpair183" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair185" *) 
+  (* SOFT_HLUTNM = "soft_lutpair184" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair185" *) 
+  (* SOFT_HLUTNM = "soft_lutpair184" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair186" *) 
+  (* SOFT_HLUTNM = "soft_lutpair185" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair186" *) 
+  (* SOFT_HLUTNM = "soft_lutpair185" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair187" *) 
+  (* SOFT_HLUTNM = "soft_lutpair186" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
        (.I0(src_in_bin[7]),
         .I1(src_in_bin[6]),
         .O(gray_enc[6]));
-  (* SOFT_HLUTNM = "soft_lutpair187" *) 
+  (* SOFT_HLUTNM = "soft_lutpair186" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[7]_i_1 
@@ -6266,56 +6266,56 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterized1__12
        (.I0(\dest_graysync_ff[2] [7]),
         .I1(\dest_graysync_ff[2] [8]),
         .O(\^dest_out_bin [7]));
-  (* SOFT_HLUTNM = "soft_lutpair193" *) 
+  (* SOFT_HLUTNM = "soft_lutpair192" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair193" *) 
+  (* SOFT_HLUTNM = "soft_lutpair192" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair192" *) 
+  (* SOFT_HLUTNM = "soft_lutpair191" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair192" *) 
+  (* SOFT_HLUTNM = "soft_lutpair191" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair194" *) 
+  (* SOFT_HLUTNM = "soft_lutpair193" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair194" *) 
+  (* SOFT_HLUTNM = "soft_lutpair193" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair195" *) 
+  (* SOFT_HLUTNM = "soft_lutpair194" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
        (.I0(src_in_bin[7]),
         .I1(src_in_bin[6]),
         .O(gray_enc[6]));
-  (* SOFT_HLUTNM = "soft_lutpair195" *) 
+  (* SOFT_HLUTNM = "soft_lutpair194" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[7]_i_1 
@@ -6708,56 +6708,56 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterized1__7
        (.I0(\dest_graysync_ff[2] [7]),
         .I1(\dest_graysync_ff[2] [8]),
         .O(\^dest_out_bin [7]));
-  (* SOFT_HLUTNM = "soft_lutpair129" *) 
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair129" *) 
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair128" *) 
+  (* SOFT_HLUTNM = "soft_lutpair127" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair128" *) 
+  (* SOFT_HLUTNM = "soft_lutpair127" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair127" *) 
+  (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair127" *) 
+  (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair126" *) 
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
        (.I0(src_in_bin[7]),
         .I1(src_in_bin[6]),
         .O(gray_enc[6]));
-  (* SOFT_HLUTNM = "soft_lutpair126" *) 
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[7]_i_1 
@@ -7150,56 +7150,56 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterized1__8
        (.I0(\dest_graysync_ff[2] [7]),
         .I1(\dest_graysync_ff[2] [8]),
         .O(\^dest_out_bin [7]));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
        (.I0(src_in_bin[7]),
         .I1(src_in_bin[6]),
         .O(gray_enc[6]));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[7]_i_1 
@@ -7592,56 +7592,56 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterized1__9
        (.I0(\dest_graysync_ff[2] [7]),
         .I1(\dest_graysync_ff[2] [8]),
         .O(\^dest_out_bin [7]));
-  (* SOFT_HLUTNM = "soft_lutpair228" *) 
+  (* SOFT_HLUTNM = "soft_lutpair227" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair228" *) 
+  (* SOFT_HLUTNM = "soft_lutpair227" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair229" *) 
+  (* SOFT_HLUTNM = "soft_lutpair228" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair229" *) 
+  (* SOFT_HLUTNM = "soft_lutpair228" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair230" *) 
+  (* SOFT_HLUTNM = "soft_lutpair229" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair230" *) 
+  (* SOFT_HLUTNM = "soft_lutpair229" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair231" *) 
+  (* SOFT_HLUTNM = "soft_lutpair230" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
        (.I0(src_in_bin[7]),
         .I1(src_in_bin[6]),
         .O(gray_enc[6]));
-  (* SOFT_HLUTNM = "soft_lutpair231" *) 
+  (* SOFT_HLUTNM = "soft_lutpair230" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[7]_i_1 
@@ -8252,56 +8252,56 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterized2
        (.I0(\dest_graysync_ff[4] [8]),
         .I1(\dest_graysync_ff[4] [9]),
         .O(\^dest_out_bin [8]));
-  (* SOFT_HLUTNM = "soft_lutpair188" *) 
+  (* SOFT_HLUTNM = "soft_lutpair187" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair188" *) 
+  (* SOFT_HLUTNM = "soft_lutpair187" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair189" *) 
+  (* SOFT_HLUTNM = "soft_lutpair188" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair189" *) 
+  (* SOFT_HLUTNM = "soft_lutpair188" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair190" *) 
+  (* SOFT_HLUTNM = "soft_lutpair189" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair190" *) 
+  (* SOFT_HLUTNM = "soft_lutpair189" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair191" *) 
+  (* SOFT_HLUTNM = "soft_lutpair190" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
        (.I0(src_in_bin[7]),
         .I1(src_in_bin[6]),
         .O(gray_enc[6]));
-  (* SOFT_HLUTNM = "soft_lutpair191" *) 
+  (* SOFT_HLUTNM = "soft_lutpair190" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[7]_i_1 
@@ -8924,56 +8924,56 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterized2__2
        (.I0(\dest_graysync_ff[4] [8]),
         .I1(\dest_graysync_ff[4] [9]),
         .O(\^dest_out_bin [8]));
-  (* SOFT_HLUTNM = "soft_lutpair232" *) 
+  (* SOFT_HLUTNM = "soft_lutpair231" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair232" *) 
+  (* SOFT_HLUTNM = "soft_lutpair231" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair233" *) 
+  (* SOFT_HLUTNM = "soft_lutpair232" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair233" *) 
+  (* SOFT_HLUTNM = "soft_lutpair232" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair234" *) 
+  (* SOFT_HLUTNM = "soft_lutpair233" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair234" *) 
+  (* SOFT_HLUTNM = "soft_lutpair233" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair235" *) 
+  (* SOFT_HLUTNM = "soft_lutpair234" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
        (.I0(src_in_bin[7]),
         .I1(src_in_bin[6]),
         .O(gray_enc[6]));
-  (* SOFT_HLUTNM = "soft_lutpair235" *) 
+  (* SOFT_HLUTNM = "soft_lutpair234" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[7]_i_1 
@@ -9420,56 +9420,56 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterized3
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair199" *) 
+  (* SOFT_HLUTNM = "soft_lutpair198" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair199" *) 
+  (* SOFT_HLUTNM = "soft_lutpair198" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair198" *) 
+  (* SOFT_HLUTNM = "soft_lutpair197" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair198" *) 
+  (* SOFT_HLUTNM = "soft_lutpair197" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair197" *) 
+  (* SOFT_HLUTNM = "soft_lutpair196" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair197" *) 
+  (* SOFT_HLUTNM = "soft_lutpair196" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
        (.I0(src_in_bin[7]),
         .I1(src_in_bin[6]),
         .O(gray_enc[6]));
-  (* SOFT_HLUTNM = "soft_lutpair196" *) 
+  (* SOFT_HLUTNM = "soft_lutpair195" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[7]_i_1 
        (.I0(src_in_bin[8]),
         .I1(src_in_bin[7]),
         .O(gray_enc[7]));
-  (* SOFT_HLUTNM = "soft_lutpair196" *) 
+  (* SOFT_HLUTNM = "soft_lutpair195" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[8]_i_1 
@@ -9910,56 +9910,56 @@ module apex_blk_axi_chip2chip_0_0_xpm_cdc_gray__parameterized3__2
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair243" *) 
+  (* SOFT_HLUTNM = "soft_lutpair242" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair243" *) 
+  (* SOFT_HLUTNM = "soft_lutpair242" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair242" *) 
+  (* SOFT_HLUTNM = "soft_lutpair241" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
        (.I0(src_in_bin[4]),
         .I1(src_in_bin[3]),
         .O(gray_enc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair242" *) 
+  (* SOFT_HLUTNM = "soft_lutpair241" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[4]_i_1 
        (.I0(src_in_bin[5]),
         .I1(src_in_bin[4]),
         .O(gray_enc[4]));
-  (* SOFT_HLUTNM = "soft_lutpair241" *) 
+  (* SOFT_HLUTNM = "soft_lutpair240" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[5]_i_1 
        (.I0(src_in_bin[6]),
         .I1(src_in_bin[5]),
         .O(gray_enc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair241" *) 
+  (* SOFT_HLUTNM = "soft_lutpair240" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[6]_i_1 
        (.I0(src_in_bin[7]),
         .I1(src_in_bin[6]),
         .O(gray_enc[6]));
-  (* SOFT_HLUTNM = "soft_lutpair240" *) 
+  (* SOFT_HLUTNM = "soft_lutpair239" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[7]_i_1 
        (.I0(src_in_bin[8]),
         .I1(src_in_bin[7]),
         .O(gray_enc[7]));
-  (* SOFT_HLUTNM = "soft_lutpair240" *) 
+  (* SOFT_HLUTNM = "soft_lutpair239" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[8]_i_1 
@@ -10625,14 +10625,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn
         .D(\count_value_i[1]_i_3_n_0 ),
         .Q(Q[1]),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair244" *) 
+  (* SOFT_HLUTNM = "soft_lutpair243" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_10 
        (.I0(Q[0]),
         .I1(\src_gray_ff_reg[1] [0]),
         .O(src_in_bin[0]));
-  (* SOFT_HLUTNM = "soft_lutpair244" *) 
+  (* SOFT_HLUTNM = "soft_lutpair243" *) 
   LUT4 #(
     .INIT(16'h2DD2)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_9 
@@ -11186,14 +11186,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn_9
         .D(\count_value_i[1]_i_3_n_0 ),
         .Q(Q[1]),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair200" *) 
+  (* SOFT_HLUTNM = "soft_lutpair199" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_10 
        (.I0(Q[0]),
         .I1(\src_gray_ff_reg[1] [0]),
         .O(src_in_bin[0]));
-  (* SOFT_HLUTNM = "soft_lutpair200" *) 
+  (* SOFT_HLUTNM = "soft_lutpair199" *) 
   LUT4 #(
     .INIT(16'h2DD2)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_9 
@@ -11305,7 +11305,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0
         .I3(Q[0]),
         .I4(Q[1]),
         .O(\count_value_i[1]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair164" *) 
+  (* SOFT_HLUTNM = "soft_lutpair163" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__3 
@@ -11313,7 +11313,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair165" *) 
+  (* SOFT_HLUTNM = "soft_lutpair164" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__3 
@@ -11322,7 +11322,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair165" *) 
+  (* SOFT_HLUTNM = "soft_lutpair164" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__3 
@@ -11361,7 +11361,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0
         .I4(ram_empty_i),
         .I5(Q[0]),
         .O(\count_value_i[6]_i_2__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair162" *) 
+  (* SOFT_HLUTNM = "soft_lutpair161" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[7]_i_1__2 
@@ -11370,7 +11370,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0
         .I2(Q[6]),
         .I3(Q[7]),
         .O(\count_value_i[7]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair162" *) 
+  (* SOFT_HLUTNM = "soft_lutpair161" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[8]_i_1__0 
@@ -11482,14 +11482,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0
         .I4(Q[0]),
         .I5(Q[3]),
         .O(\gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair166" *) 
+  (* SOFT_HLUTNM = "soft_lutpair165" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11 
        (.I0(Q[0]),
         .I1(\grdc.rd_data_count_i_reg[7] [0]),
         .O(\gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair163" *) 
+  (* SOFT_HLUTNM = "soft_lutpair162" *) 
   LUT5 #(
     .INIT(32'hFFFE0001)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2 
@@ -11499,7 +11499,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0
         .I3(Q[5]),
         .I4(Q[7]),
         .O(src_in_bin[6]));
-  (* SOFT_HLUTNM = "soft_lutpair163" *) 
+  (* SOFT_HLUTNM = "soft_lutpair162" *) 
   LUT4 #(
     .INIT(16'hFE01)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_3 
@@ -11535,7 +11535,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0
         .I4(Q[0]),
         .I5(Q[3]),
         .O(src_in_bin[2]));
-  (* SOFT_HLUTNM = "soft_lutpair164" *) 
+  (* SOFT_HLUTNM = "soft_lutpair163" *) 
   LUT5 #(
     .INIT(32'hB0FB4F04)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_7 
@@ -11545,7 +11545,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0
         .I3(\grdc.rd_data_count_i_reg[7] [1]),
         .I4(Q[2]),
         .O(src_in_bin[1]));
-  (* SOFT_HLUTNM = "soft_lutpair166" *) 
+  (* SOFT_HLUTNM = "soft_lutpair165" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_9 
@@ -11758,14 +11758,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_22
     \count_value_i[0]_i_1__1 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair171" *) 
+  (* SOFT_HLUTNM = "soft_lutpair170" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__1 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair171" *) 
+  (* SOFT_HLUTNM = "soft_lutpair170" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__1 
@@ -11773,7 +11773,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_22
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair170" *) 
+  (* SOFT_HLUTNM = "soft_lutpair169" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__1 
@@ -11782,7 +11782,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_22
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair170" *) 
+  (* SOFT_HLUTNM = "soft_lutpair169" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__1 
@@ -11821,7 +11821,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_22
         .I4(rst_d1),
         .I5(Q[0]),
         .O(\count_value_i[6]_i_2__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair169" *) 
+  (* SOFT_HLUTNM = "soft_lutpair168" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[7]_i_1__1 
@@ -11830,7 +11830,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_22
         .I2(Q[6]),
         .I3(Q[7]),
         .O(\count_value_i[7]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair169" *) 
+  (* SOFT_HLUTNM = "soft_lutpair168" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[8]_i_1 
@@ -12083,7 +12083,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_29
         .I3(Q[0]),
         .I4(Q[1]),
         .O(\count_value_i[1]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair132" *) 
+  (* SOFT_HLUTNM = "soft_lutpair131" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__3 
@@ -12091,7 +12091,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_29
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair133" *) 
+  (* SOFT_HLUTNM = "soft_lutpair132" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__3 
@@ -12100,7 +12100,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_29
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair133" *) 
+  (* SOFT_HLUTNM = "soft_lutpair132" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__3 
@@ -12139,7 +12139,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_29
         .I4(ram_empty_i),
         .I5(Q[0]),
         .O(\count_value_i[6]_i_2__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[7]_i_1__2 
@@ -12148,7 +12148,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_29
         .I2(Q[6]),
         .I3(Q[7]),
         .O(\count_value_i[7]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[8]_i_1__0 
@@ -12260,14 +12260,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_29
         .I4(Q[0]),
         .I5(Q[3]),
         .O(\gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair134" *) 
+  (* SOFT_HLUTNM = "soft_lutpair133" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11 
        (.I0(Q[0]),
         .I1(\grdc.rd_data_count_i_reg[7] [0]),
         .O(\gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT5 #(
     .INIT(32'hFFFE0001)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2 
@@ -12277,7 +12277,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_29
         .I3(Q[5]),
         .I4(Q[7]),
         .O(src_in_bin[6]));
-  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT4 #(
     .INIT(16'hFE01)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_3 
@@ -12313,7 +12313,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_29
         .I4(Q[0]),
         .I5(Q[3]),
         .O(src_in_bin[2]));
-  (* SOFT_HLUTNM = "soft_lutpair132" *) 
+  (* SOFT_HLUTNM = "soft_lutpair131" *) 
   LUT5 #(
     .INIT(32'hB0FB4F04)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_7 
@@ -12323,7 +12323,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_29
         .I3(\grdc.rd_data_count_i_reg[7] [1]),
         .I4(Q[2]),
         .O(src_in_bin[1]));
-  (* SOFT_HLUTNM = "soft_lutpair134" *) 
+  (* SOFT_HLUTNM = "soft_lutpair133" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_9 
@@ -12536,14 +12536,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_32
     \count_value_i[0]_i_1__1 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair139" *) 
+  (* SOFT_HLUTNM = "soft_lutpair138" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__1 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair139" *) 
+  (* SOFT_HLUTNM = "soft_lutpair138" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__1 
@@ -12551,7 +12551,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_32
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair138" *) 
+  (* SOFT_HLUTNM = "soft_lutpair137" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__1 
@@ -12560,7 +12560,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_32
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair138" *) 
+  (* SOFT_HLUTNM = "soft_lutpair137" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__1 
@@ -12599,7 +12599,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_32
         .I4(rst_d1),
         .I5(Q[0]),
         .O(\count_value_i[6]_i_2__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair137" *) 
+  (* SOFT_HLUTNM = "soft_lutpair136" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[7]_i_1__1 
@@ -12608,7 +12608,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_32
         .I2(Q[6]),
         .I3(Q[7]),
         .O(\count_value_i[7]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair137" *) 
+  (* SOFT_HLUTNM = "soft_lutpair136" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[8]_i_1 
@@ -12861,7 +12861,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_41
         .I3(Q[0]),
         .I4(Q[1]),
         .O(\count_value_i[1]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__3 
@@ -12869,7 +12869,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_41
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__3 
@@ -12878,7 +12878,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_41
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__3 
@@ -12917,7 +12917,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_41
         .I4(ram_empty_i),
         .I5(Q[0]),
         .O(\count_value_i[6]_i_2__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[7]_i_1__2 
@@ -12926,7 +12926,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_41
         .I2(Q[6]),
         .I3(Q[7]),
         .O(\count_value_i[7]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[8]_i_1__0 
@@ -13038,14 +13038,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_41
         .I4(Q[0]),
         .I5(Q[3]),
         .O(\gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11 
        (.I0(Q[0]),
         .I1(\grdc.rd_data_count_i_reg[7] [0]),
         .O(\gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT5 #(
     .INIT(32'hFFFE0001)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2 
@@ -13055,7 +13055,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_41
         .I3(Q[5]),
         .I4(Q[7]),
         .O(src_in_bin[6]));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT4 #(
     .INIT(16'hFE01)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_3 
@@ -13091,7 +13091,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_41
         .I4(Q[0]),
         .I5(Q[3]),
         .O(src_in_bin[2]));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT5 #(
     .INIT(32'hB0FB4F04)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_7 
@@ -13101,7 +13101,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_41
         .I3(\grdc.rd_data_count_i_reg[7] [1]),
         .I4(Q[2]),
         .O(src_in_bin[1]));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_9 
@@ -13314,14 +13314,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_44
     \count_value_i[0]_i_1__1 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__1 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__1 
@@ -13329,7 +13329,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_44
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__1 
@@ -13338,7 +13338,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_44
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__1 
@@ -13377,7 +13377,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_44
         .I4(rst_d1),
         .I5(Q[0]),
         .O(\count_value_i[6]_i_2__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[7]_i_1__1 
@@ -13386,7 +13386,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_44
         .I2(Q[6]),
         .I3(Q[7]),
         .O(\count_value_i[7]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[8]_i_1 
@@ -13557,8 +13557,8 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_48
     \FSM_sequential_gen_fwft.curr_fwft_state_reg[1] ,
     ram_full_i0,
     leaving_empty0,
-    S,
     \count_value_i_reg[1]_0 ,
+    S,
     \count_value_i_reg[7]_0 ,
     \count_value_i_reg[6]_0 ,
     \count_value_i_reg[7]_1 ,
@@ -13577,8 +13577,8 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_48
   output \FSM_sequential_gen_fwft.curr_fwft_state_reg[1] ;
   output ram_full_i0;
   output leaving_empty0;
-  output [5:0]S;
   output [0:0]\count_value_i_reg[1]_0 ;
+  output [5:0]S;
   output [0:0]\count_value_i_reg[7]_0 ;
   output [4:0]\count_value_i_reg[6]_0 ;
   output [6:0]\count_value_i_reg[7]_1 ;
@@ -13631,7 +13631,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_48
   wire rd_en;
   wire wr_clk;
 
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
     .INIT(16'h10EF)) 
     \count_value_i[0]_i_1__1 
@@ -13640,7 +13640,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_48
         .I2(\count_value_i_reg[0]_0 [1]),
         .I3(Q[0]),
         .O(\count_value_i[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'h02FFFD00)) 
     \count_value_i[1]_i_1__1 
@@ -13657,7 +13657,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_48
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__1 
@@ -13666,7 +13666,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_48
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__1 
@@ -13705,7 +13705,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_48
         .I4(ram_empty_i),
         .I5(Q[0]),
         .O(\count_value_i[6]_i_2__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[7]_i_1__1 
@@ -13714,7 +13714,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_48
         .I2(Q[6]),
         .I3(Q[7]),
         .O(\count_value_i[7]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[8]_i_1__0 
@@ -14149,14 +14149,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_51
     \count_value_i[0]_i_1 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1 
@@ -14164,7 +14164,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_51
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1 
@@ -14173,7 +14173,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_51
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1 
@@ -14212,7 +14212,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_51
         .I4(rst_d1),
         .I5(Q[0]),
         .O(\count_value_i[6]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[7]_i_1__0 
@@ -14221,7 +14221,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_51
         .I2(Q[6]),
         .I3(Q[7]),
         .O(\count_value_i[7]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[8]_i_1 
@@ -14494,7 +14494,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1
         .I1(\count_value_i_reg_n_0_[1] ),
         .I2(\count_value_i_reg_n_0_[2] ),
         .O(\count_value_i[2]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair167" *) 
+  (* SOFT_HLUTNM = "soft_lutpair166" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__2 
@@ -14503,7 +14503,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1
         .I2(\count_value_i_reg_n_0_[2] ),
         .I3(\count_value_i_reg_n_0_[3] ),
         .O(\count_value_i[3]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair167" *) 
+  (* SOFT_HLUTNM = "soft_lutpair166" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__2 
@@ -14721,14 +14721,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_23
     \count_value_i[0]_i_1__0 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair173" *) 
+  (* SOFT_HLUTNM = "soft_lutpair172" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__0 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair173" *) 
+  (* SOFT_HLUTNM = "soft_lutpair172" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__0 
@@ -14736,7 +14736,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_23
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair172" *) 
+  (* SOFT_HLUTNM = "soft_lutpair171" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__0 
@@ -14745,7 +14745,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_23
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair172" *) 
+  (* SOFT_HLUTNM = "soft_lutpair171" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__0 
@@ -14983,7 +14983,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_30
         .I1(\count_value_i_reg_n_0_[1] ),
         .I2(\count_value_i_reg_n_0_[2] ),
         .O(\count_value_i[2]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair135" *) 
+  (* SOFT_HLUTNM = "soft_lutpair134" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__2 
@@ -14992,7 +14992,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_30
         .I2(\count_value_i_reg_n_0_[2] ),
         .I3(\count_value_i_reg_n_0_[3] ),
         .O(\count_value_i[3]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair135" *) 
+  (* SOFT_HLUTNM = "soft_lutpair134" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__2 
@@ -15210,14 +15210,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_33
     \count_value_i[0]_i_1__0 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair141" *) 
+  (* SOFT_HLUTNM = "soft_lutpair140" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__0 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair141" *) 
+  (* SOFT_HLUTNM = "soft_lutpair140" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__0 
@@ -15225,7 +15225,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_33
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair140" *) 
+  (* SOFT_HLUTNM = "soft_lutpair139" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__0 
@@ -15234,7 +15234,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_33
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair140" *) 
+  (* SOFT_HLUTNM = "soft_lutpair139" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__0 
@@ -15472,7 +15472,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_42
         .I1(\count_value_i_reg_n_0_[1] ),
         .I2(\count_value_i_reg_n_0_[2] ),
         .O(\count_value_i[2]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__2 
@@ -15481,7 +15481,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_42
         .I2(\count_value_i_reg_n_0_[2] ),
         .I3(\count_value_i_reg_n_0_[3] ),
         .O(\count_value_i[3]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__2 
@@ -15699,14 +15699,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_45
     \count_value_i[0]_i_1__0 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__0 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__0 
@@ -15714,7 +15714,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_45
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__0 
@@ -15723,7 +15723,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_45
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__0 
@@ -15944,7 +15944,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_49
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__2 
@@ -15953,7 +15953,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_49
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__2 
@@ -16146,14 +16146,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_52
     \count_value_i[0]_i_1__0 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__0 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__0 
@@ -16161,7 +16161,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_52
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__0 
@@ -16170,7 +16170,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized1_52
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__0 
@@ -16397,7 +16397,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized2
   wire wr_pntr_plus1_pf_carry;
   wire wrst_busy;
 
-  (* SOFT_HLUTNM = "soft_lutpair175" *) 
+  (* SOFT_HLUTNM = "soft_lutpair174" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \count_value_i[0]_i_1 
@@ -16409,7 +16409,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized2
        (.I0(\count_value_i_reg_n_0_[0] ),
         .I1(\count_value_i_reg_n_0_[1] ),
         .O(\count_value_i[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair175" *) 
+  (* SOFT_HLUTNM = "soft_lutpair174" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1 
@@ -16417,7 +16417,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized2
         .I1(\count_value_i_reg_n_0_[1] ),
         .I2(\count_value_i_reg_n_0_[2] ),
         .O(\count_value_i[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair174" *) 
+  (* SOFT_HLUTNM = "soft_lutpair173" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1 
@@ -16426,7 +16426,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized2
         .I2(\count_value_i_reg_n_0_[2] ),
         .I3(\count_value_i_reg_n_0_[3] ),
         .O(\count_value_i[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair174" *) 
+  (* SOFT_HLUTNM = "soft_lutpair173" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1 
@@ -16627,7 +16627,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized2_34
   wire wr_pntr_plus1_pf_carry;
   wire wrst_busy;
 
-  (* SOFT_HLUTNM = "soft_lutpair143" *) 
+  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \count_value_i[0]_i_1 
@@ -16639,7 +16639,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized2_34
        (.I0(\count_value_i_reg_n_0_[0] ),
         .I1(\count_value_i_reg_n_0_[1] ),
         .O(\count_value_i[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair143" *) 
+  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1 
@@ -16647,7 +16647,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized2_34
         .I1(\count_value_i_reg_n_0_[1] ),
         .I2(\count_value_i_reg_n_0_[2] ),
         .O(\count_value_i[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair142" *) 
+  (* SOFT_HLUTNM = "soft_lutpair141" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1 
@@ -16656,7 +16656,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized2_34
         .I2(\count_value_i_reg_n_0_[2] ),
         .I3(\count_value_i_reg_n_0_[3] ),
         .O(\count_value_i[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair142" *) 
+  (* SOFT_HLUTNM = "soft_lutpair141" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1 
@@ -16857,7 +16857,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized2_46
   wire wr_pntr_plus1_pf_carry;
   wire wrst_busy;
 
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \count_value_i[0]_i_1 
@@ -16869,7 +16869,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized2_46
        (.I0(\count_value_i_reg_n_0_[0] ),
         .I1(\count_value_i_reg_n_0_[1] ),
         .O(\count_value_i[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1 
@@ -16877,7 +16877,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized2_46
         .I1(\count_value_i_reg_n_0_[1] ),
         .I2(\count_value_i_reg_n_0_[2] ),
         .O(\count_value_i[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1 
@@ -16886,7 +16886,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized2_46
         .I2(\count_value_i_reg_n_0_[2] ),
         .I3(\count_value_i_reg_n_0_[3] ),
         .O(\count_value_i[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1 
@@ -17159,7 +17159,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair248" *) 
+  (* SOFT_HLUTNM = "soft_lutpair247" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__3 
@@ -17168,7 +17168,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3
         .I2(Q[0]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair248" *) 
+  (* SOFT_HLUTNM = "soft_lutpair247" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__3 
@@ -17207,7 +17207,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3
         .I4(ram_empty_i),
         .I5(Q[0]),
         .O(\count_value_i[6]_i_2__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair245" *) 
+  (* SOFT_HLUTNM = "soft_lutpair244" *) 
   LUT4 #(
     .INIT(16'hF708)) 
     \count_value_i[7]_i_1__3 
@@ -17216,7 +17216,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3
         .I2(\count_value_i[9]_i_2__0_n_0 ),
         .I3(Q[7]),
         .O(\count_value_i[7]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair245" *) 
+  (* SOFT_HLUTNM = "soft_lutpair244" *) 
   LUT5 #(
     .INIT(32'hBFFF4000)) 
     \count_value_i[8]_i_1__3 
@@ -17326,7 +17326,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3
         .D(\count_value_i[9]_i_1__0_n_0 ),
         .Q(Q[9]),
         .R(\count_value_i_reg[9]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair249" *) 
+  (* SOFT_HLUTNM = "soft_lutpair248" *) 
   LUT4 #(
     .INIT(16'hFE01)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_1 
@@ -17335,7 +17335,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3
         .I2(Q[7]),
         .I3(Q[9]),
         .O(src_in_bin[7]));
-  (* SOFT_HLUTNM = "soft_lutpair246" *) 
+  (* SOFT_HLUTNM = "soft_lutpair245" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11 
@@ -17345,7 +17345,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3
         .I3(Q[4]),
         .I4(Q[6]),
         .O(\gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair247" *) 
+  (* SOFT_HLUTNM = "soft_lutpair246" *) 
   LUT5 #(
     .INIT(32'hFFFFDD4D)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_12 
@@ -17355,7 +17355,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3
         .I3(Q[0]),
         .I4(Q[2]),
         .O(\gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair249" *) 
+  (* SOFT_HLUTNM = "soft_lutpair248" *) 
   LUT3 #(
     .INIT(8'hA9)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2 
@@ -17373,7 +17373,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3
         .I4(Q[5]),
         .I5(Q[7]),
         .O(src_in_bin[5]));
-  (* SOFT_HLUTNM = "soft_lutpair246" *) 
+  (* SOFT_HLUTNM = "soft_lutpair245" *) 
   LUT5 #(
     .INIT(32'hAAAAAAA9)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_4 
@@ -17383,7 +17383,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3
         .I3(Q[3]),
         .I4(Q[5]),
         .O(src_in_bin[4]));
-  (* SOFT_HLUTNM = "soft_lutpair250" *) 
+  (* SOFT_HLUTNM = "soft_lutpair249" *) 
   LUT4 #(
     .INIT(16'hFE01)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_5 
@@ -17392,7 +17392,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3
         .I2(Q[3]),
         .I3(Q[5]),
         .O(src_in_bin[3]));
-  (* SOFT_HLUTNM = "soft_lutpair250" *) 
+  (* SOFT_HLUTNM = "soft_lutpair249" *) 
   LUT3 #(
     .INIT(8'hA9)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6 
@@ -17410,7 +17410,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3
         .I4(\grdc.rd_data_count_i_reg[7] [1]),
         .I5(Q[3]),
         .O(src_in_bin[1]));
-  (* SOFT_HLUTNM = "soft_lutpair247" *) 
+  (* SOFT_HLUTNM = "soft_lutpair246" *) 
   LUT5 #(
     .INIT(32'h9A55AA9A)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_8 
@@ -17728,7 +17728,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_10
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair204" *) 
+  (* SOFT_HLUTNM = "soft_lutpair203" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__3 
@@ -17737,7 +17737,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_10
         .I2(Q[0]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair204" *) 
+  (* SOFT_HLUTNM = "soft_lutpair203" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__3 
@@ -17776,7 +17776,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_10
         .I4(ram_empty_i),
         .I5(Q[0]),
         .O(\count_value_i[6]_i_2__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair201" *) 
+  (* SOFT_HLUTNM = "soft_lutpair200" *) 
   LUT4 #(
     .INIT(16'hF708)) 
     \count_value_i[7]_i_1__3 
@@ -17785,7 +17785,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_10
         .I2(\count_value_i[9]_i_2__0_n_0 ),
         .I3(Q[7]),
         .O(\count_value_i[7]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair201" *) 
+  (* SOFT_HLUTNM = "soft_lutpair200" *) 
   LUT5 #(
     .INIT(32'hBFFF4000)) 
     \count_value_i[8]_i_1__3 
@@ -17895,7 +17895,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_10
         .D(\count_value_i[9]_i_1__0_n_0 ),
         .Q(Q[9]),
         .R(\count_value_i_reg[9]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair205" *) 
+  (* SOFT_HLUTNM = "soft_lutpair204" *) 
   LUT4 #(
     .INIT(16'hFE01)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_1 
@@ -17904,7 +17904,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_10
         .I2(Q[7]),
         .I3(Q[9]),
         .O(src_in_bin[7]));
-  (* SOFT_HLUTNM = "soft_lutpair202" *) 
+  (* SOFT_HLUTNM = "soft_lutpair201" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11 
@@ -17914,7 +17914,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_10
         .I3(Q[4]),
         .I4(Q[6]),
         .O(\gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair203" *) 
+  (* SOFT_HLUTNM = "soft_lutpair202" *) 
   LUT5 #(
     .INIT(32'hFFFFDD4D)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_12 
@@ -17924,7 +17924,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_10
         .I3(Q[0]),
         .I4(Q[2]),
         .O(\gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair205" *) 
+  (* SOFT_HLUTNM = "soft_lutpair204" *) 
   LUT3 #(
     .INIT(8'hA9)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2 
@@ -17942,7 +17942,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_10
         .I4(Q[5]),
         .I5(Q[7]),
         .O(src_in_bin[5]));
-  (* SOFT_HLUTNM = "soft_lutpair202" *) 
+  (* SOFT_HLUTNM = "soft_lutpair201" *) 
   LUT5 #(
     .INIT(32'hAAAAAAA9)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_4 
@@ -17952,7 +17952,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_10
         .I3(Q[3]),
         .I4(Q[5]),
         .O(src_in_bin[4]));
-  (* SOFT_HLUTNM = "soft_lutpair206" *) 
+  (* SOFT_HLUTNM = "soft_lutpair205" *) 
   LUT4 #(
     .INIT(16'hFE01)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_5 
@@ -17961,7 +17961,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_10
         .I2(Q[3]),
         .I3(Q[5]),
         .O(src_in_bin[3]));
-  (* SOFT_HLUTNM = "soft_lutpair206" *) 
+  (* SOFT_HLUTNM = "soft_lutpair205" *) 
   LUT3 #(
     .INIT(8'hA9)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6 
@@ -17979,7 +17979,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_10
         .I4(\grdc.rd_data_count_i_reg[7] [1]),
         .I5(Q[3]),
         .O(src_in_bin[1]));
-  (* SOFT_HLUTNM = "soft_lutpair203" *) 
+  (* SOFT_HLUTNM = "soft_lutpair202" *) 
   LUT5 #(
     .INIT(32'h9A55AA9A)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_8 
@@ -18247,14 +18247,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_13
     \count_value_i[0]_i_1__1 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair212" *) 
+  (* SOFT_HLUTNM = "soft_lutpair211" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__1 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair212" *) 
+  (* SOFT_HLUTNM = "soft_lutpair211" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__1 
@@ -18262,7 +18262,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_13
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair211" *) 
+  (* SOFT_HLUTNM = "soft_lutpair210" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__1 
@@ -18271,7 +18271,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_13
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair211" *) 
+  (* SOFT_HLUTNM = "soft_lutpair210" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__1 
@@ -18310,7 +18310,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_13
         .I4(rst_d1),
         .I5(Q[0]),
         .O(\count_value_i[6]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair210" *) 
+  (* SOFT_HLUTNM = "soft_lutpair209" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[7]_i_1 
@@ -18319,7 +18319,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_13
         .I2(Q[6]),
         .I3(Q[7]),
         .O(\count_value_i[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair210" *) 
+  (* SOFT_HLUTNM = "soft_lutpair209" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[8]_i_1 
@@ -18577,14 +18577,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_3
     \count_value_i[0]_i_1__1 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair256" *) 
+  (* SOFT_HLUTNM = "soft_lutpair255" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__1 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair256" *) 
+  (* SOFT_HLUTNM = "soft_lutpair255" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__1 
@@ -18592,7 +18592,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_3
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair255" *) 
+  (* SOFT_HLUTNM = "soft_lutpair254" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__1 
@@ -18601,7 +18601,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_3
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair255" *) 
+  (* SOFT_HLUTNM = "soft_lutpair254" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__1 
@@ -18640,7 +18640,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_3
         .I4(rst_d1),
         .I5(Q[0]),
         .O(\count_value_i[6]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair254" *) 
+  (* SOFT_HLUTNM = "soft_lutpair253" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[7]_i_1 
@@ -18649,7 +18649,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized3_3
         .I2(Q[6]),
         .I3(Q[7]),
         .O(\count_value_i[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair254" *) 
+  (* SOFT_HLUTNM = "soft_lutpair253" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[8]_i_1 
@@ -18918,7 +18918,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4
         .I1(\count_value_i_reg_n_0_[1] ),
         .I2(\count_value_i_reg_n_0_[2] ),
         .O(\count_value_i[2]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair252" *) 
+  (* SOFT_HLUTNM = "soft_lutpair251" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__2 
@@ -18927,7 +18927,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4
         .I2(\count_value_i_reg_n_0_[0] ),
         .I3(\count_value_i_reg_n_0_[3] ),
         .O(\count_value_i[3]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair252" *) 
+  (* SOFT_HLUTNM = "soft_lutpair251" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__2 
@@ -18966,7 +18966,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4
         .I4(ram_empty_i),
         .I5(\count_value_i_reg_n_0_[0] ),
         .O(\count_value_i[6]_i_2__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair251" *) 
+  (* SOFT_HLUTNM = "soft_lutpair250" *) 
   LUT4 #(
     .INIT(16'hF708)) 
     \count_value_i[7]_i_1__2 
@@ -18975,7 +18975,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4
         .I2(\count_value_i[8]_i_2__1_n_0 ),
         .I3(\count_value_i_reg_n_0_[7] ),
         .O(\count_value_i[7]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair251" *) 
+  (* SOFT_HLUTNM = "soft_lutpair250" *) 
   LUT5 #(
     .INIT(32'hDFFF2000)) 
     \count_value_i[8]_i_1__2 
@@ -19190,7 +19190,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4_11
         .I1(\count_value_i_reg_n_0_[1] ),
         .I2(\count_value_i_reg_n_0_[2] ),
         .O(\count_value_i[2]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair208" *) 
+  (* SOFT_HLUTNM = "soft_lutpair207" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__2 
@@ -19199,7 +19199,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4_11
         .I2(\count_value_i_reg_n_0_[0] ),
         .I3(\count_value_i_reg_n_0_[3] ),
         .O(\count_value_i[3]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair208" *) 
+  (* SOFT_HLUTNM = "soft_lutpair207" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__2 
@@ -19238,7 +19238,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4_11
         .I4(ram_empty_i),
         .I5(\count_value_i_reg_n_0_[0] ),
         .O(\count_value_i[6]_i_2__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair207" *) 
+  (* SOFT_HLUTNM = "soft_lutpair206" *) 
   LUT4 #(
     .INIT(16'hF708)) 
     \count_value_i[7]_i_1__2 
@@ -19247,7 +19247,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4_11
         .I2(\count_value_i[8]_i_2__1_n_0 ),
         .I3(\count_value_i_reg_n_0_[7] ),
         .O(\count_value_i[7]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair207" *) 
+  (* SOFT_HLUTNM = "soft_lutpair206" *) 
   LUT5 #(
     .INIT(32'hDFFF2000)) 
     \count_value_i[8]_i_1__2 
@@ -19448,14 +19448,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4_14
     \count_value_i[0]_i_1__0 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair215" *) 
+  (* SOFT_HLUTNM = "soft_lutpair214" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__0 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair215" *) 
+  (* SOFT_HLUTNM = "soft_lutpair214" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__0 
@@ -19463,7 +19463,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4_14
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair214" *) 
+  (* SOFT_HLUTNM = "soft_lutpair213" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__0 
@@ -19472,7 +19472,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4_14
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair214" *) 
+  (* SOFT_HLUTNM = "soft_lutpair213" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__0 
@@ -19511,7 +19511,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4_14
         .I4(rst_d1),
         .I5(Q[0]),
         .O(\count_value_i[6]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair213" *) 
+  (* SOFT_HLUTNM = "soft_lutpair212" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[7]_i_1__0 
@@ -19520,7 +19520,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4_14
         .I2(Q[6]),
         .I3(Q[7]),
         .O(\count_value_i[7]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair213" *) 
+  (* SOFT_HLUTNM = "soft_lutpair212" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[8]_i_1__0 
@@ -19751,14 +19751,14 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4_4
     \count_value_i[0]_i_1__0 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair259" *) 
+  (* SOFT_HLUTNM = "soft_lutpair258" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__0 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair259" *) 
+  (* SOFT_HLUTNM = "soft_lutpair258" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__0 
@@ -19766,7 +19766,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4_4
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair258" *) 
+  (* SOFT_HLUTNM = "soft_lutpair257" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__0 
@@ -19775,7 +19775,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4_4
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair258" *) 
+  (* SOFT_HLUTNM = "soft_lutpair257" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__0 
@@ -19814,7 +19814,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4_4
         .I4(rst_d1),
         .I5(Q[0]),
         .O(\count_value_i[6]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair257" *) 
+  (* SOFT_HLUTNM = "soft_lutpair256" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[7]_i_1__0 
@@ -19823,7 +19823,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized4_4
         .I2(Q[6]),
         .I3(Q[7]),
         .O(\count_value_i[7]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair257" *) 
+  (* SOFT_HLUTNM = "soft_lutpair256" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[8]_i_1__0 
@@ -20023,7 +20023,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized5
   wire wr_pntr_plus1_pf_carry;
   wire wrst_busy;
 
-  (* SOFT_HLUTNM = "soft_lutpair262" *) 
+  (* SOFT_HLUTNM = "soft_lutpair261" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \count_value_i[0]_i_1 
@@ -20035,7 +20035,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized5
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair262" *) 
+  (* SOFT_HLUTNM = "soft_lutpair261" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1 
@@ -20043,7 +20043,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized5
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair261" *) 
+  (* SOFT_HLUTNM = "soft_lutpair260" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1 
@@ -20052,7 +20052,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized5
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair261" *) 
+  (* SOFT_HLUTNM = "soft_lutpair260" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1 
@@ -20091,7 +20091,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized5
         .I4(rst_d1),
         .I5(Q[0]),
         .O(\count_value_i[6]_i_2__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair260" *) 
+  (* SOFT_HLUTNM = "soft_lutpair259" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[7]_i_1__1 
@@ -20100,7 +20100,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized5
         .I2(Q[6]),
         .I3(Q[7]),
         .O(\count_value_i[7]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair260" *) 
+  (* SOFT_HLUTNM = "soft_lutpair259" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[8]_i_1__1 
@@ -20230,7 +20230,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized5_15
   wire wr_pntr_plus1_pf_carry;
   wire wrst_busy;
 
-  (* SOFT_HLUTNM = "soft_lutpair218" *) 
+  (* SOFT_HLUTNM = "soft_lutpair217" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \count_value_i[0]_i_1 
@@ -20242,7 +20242,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized5_15
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair218" *) 
+  (* SOFT_HLUTNM = "soft_lutpair217" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1 
@@ -20250,7 +20250,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized5_15
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair217" *) 
+  (* SOFT_HLUTNM = "soft_lutpair216" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1 
@@ -20259,7 +20259,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized5_15
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair217" *) 
+  (* SOFT_HLUTNM = "soft_lutpair216" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1 
@@ -20298,7 +20298,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized5_15
         .I4(rst_d1),
         .I5(Q[0]),
         .O(\count_value_i[6]_i_2__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair216" *) 
+  (* SOFT_HLUTNM = "soft_lutpair215" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[7]_i_1__1 
@@ -20307,7 +20307,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized5_15
         .I2(Q[6]),
         .I3(Q[7]),
         .O(\count_value_i[7]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair216" *) 
+  (* SOFT_HLUTNM = "soft_lutpair215" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[8]_i_1__1 
@@ -21548,7 +21548,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base
   assign rd_rst_busy = \<const0> ;
   assign sbiterr = \<const0> ;
   assign wr_ack = \<const0> ;
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT4 #(
     .INIT(16'h6A85)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1 
@@ -21557,7 +21557,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base
         .I2(curr_fwft_state[1]),
         .I3(ram_empty_i),
         .O(next_fwft_state__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'h7C)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1 
@@ -21585,7 +21585,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base
         .R(xpm_fifo_rst_inst_n_1));
   GND GND
        (.G(\<const0> ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT4 #(
     .INIT(16'hF380)) 
     \gen_fwft.empty_fwft_i_i_1 
@@ -21933,7 +21933,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base
         .sleep(sleep),
         .wea(ram_wr_en_pf),
         .web(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'h62)) 
     \gen_sdpram.xpm_memory_base_inst_i_3 
@@ -22057,9 +22057,9 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base
        (.DI(rdp_inst_n_0),
         .\FSM_sequential_gen_fwft.curr_fwft_state_reg[1] (rdp_inst_n_9),
         .Q(rd_pntr_ext),
-        .S({rdp_inst_n_12,rdp_inst_n_13,rdp_inst_n_14,rdp_inst_n_15,rdp_inst_n_16,rdp_inst_n_17}),
+        .S({rdp_inst_n_13,rdp_inst_n_14,rdp_inst_n_15,rdp_inst_n_16,rdp_inst_n_17,rdp_inst_n_18}),
         .\count_value_i_reg[0]_0 (curr_fwft_state),
-        .\count_value_i_reg[1]_0 (rdp_inst_n_18),
+        .\count_value_i_reg[1]_0 (rdp_inst_n_12),
         .\count_value_i_reg[6]_0 ({rdp_inst_n_20,rdp_inst_n_21,rdp_inst_n_22,rdp_inst_n_23,rdp_inst_n_24}),
         .\count_value_i_reg[7]_0 (rdp_inst_n_19),
         .\count_value_i_reg[7]_1 ({rdp_inst_n_25,rdp_inst_n_26,rdp_inst_n_27,rdp_inst_n_28,rdp_inst_n_29,rdp_inst_n_30,rdp_inst_n_31}),
@@ -22099,7 +22099,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base
         .write_only(write_only));
   apex_blk_axi_chip2chip_0_0_xpm_counter_updn__parameterized0_51 wrp_inst
        (.D(\grdc.diff_wr_rd_pntr_rdc ),
-        .DI({rdp_inst_n_18,\gen_fwft.rdpp1_inst_n_3 }),
+        .DI({rdp_inst_n_12,\gen_fwft.rdpp1_inst_n_3 }),
         .Q({wrp_inst_n_1,wr_pntr_ext}),
         .S({rdp_inst_n_20,rdp_inst_n_21,rdp_inst_n_22,rdp_inst_n_23,rdp_inst_n_24,\gen_fwft.rdpp1_inst_n_1 ,\gen_fwft.rdpp1_inst_n_2 }),
         .\count_value_i_reg[0]_0 (diff_pntr_pe),
@@ -22123,7 +22123,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base
        (.D(diff_pntr_pf_q0),
         .DI(rdp_inst_n_0),
         .Q({wrpp1_inst_n_0,wrpp1_inst_n_1,wrpp1_inst_n_2,wrpp1_inst_n_3,wrpp1_inst_n_4,wrpp1_inst_n_5,wrpp1_inst_n_6,wrpp1_inst_n_7}),
-        .S({rdp_inst_n_12,rdp_inst_n_13,rdp_inst_n_14,rdp_inst_n_15,rdp_inst_n_16,rdp_inst_n_17}),
+        .S({rdp_inst_n_13,rdp_inst_n_14,rdp_inst_n_15,rdp_inst_n_16,rdp_inst_n_17,rdp_inst_n_18}),
         .\count_value_i_reg[1]_0 (xpm_fifo_rst_inst_n_1),
         .\count_value_i_reg[5]_0 (full),
         .\gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpf_cc_sym.diff_pntr_pf_q_reg[8] (rd_pntr_ext[5:0]),
@@ -22364,7 +22364,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized0
   assign full_n = \<const0> ;
   assign sbiterr = \<const0> ;
   assign wr_ack = \<const0> ;
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT4 #(
     .INIT(16'h6A85)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1 
@@ -22373,7 +22373,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized0
         .I2(curr_fwft_state[1]),
         .I3(ram_empty_i),
         .O(next_fwft_state__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT3 #(
     .INIT(8'h7C)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1 
@@ -22494,7 +22494,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized0
         .dest_out_bin(wr_pntr_rd_cdc),
         .src_clk(wr_clk),
         .src_in_bin(wr_pntr_ext[7:0]));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT4 #(
     .INIT(16'hF380)) 
     \gen_fwft.empty_fwft_i_i_1 
@@ -22810,7 +22810,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized0
         .sleep(sleep),
         .wea(1'b0),
         .web(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT3 #(
     .INIT(8'h62)) 
     \gen_sdpram.xpm_memory_base_inst_i_3 
@@ -23227,7 +23227,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized0__xdcDup__1
   assign full_n = \<const0> ;
   assign sbiterr = \<const0> ;
   assign wr_ack = \<const0> ;
-  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  (* SOFT_HLUTNM = "soft_lutpair146" *) 
   LUT4 #(
     .INIT(16'h6A85)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1 
@@ -23236,7 +23236,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized0__xdcDup__1
         .I2(curr_fwft_state[1]),
         .I3(ram_empty_i),
         .O(next_fwft_state__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  (* SOFT_HLUTNM = "soft_lutpair146" *) 
   LUT3 #(
     .INIT(8'h7C)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1 
@@ -23357,7 +23357,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized0__xdcDup__1
         .dest_out_bin(wr_pntr_rd_cdc),
         .src_clk(wr_clk),
         .src_in_bin(wr_pntr_ext[7:0]));
-  (* SOFT_HLUTNM = "soft_lutpair146" *) 
+  (* SOFT_HLUTNM = "soft_lutpair145" *) 
   LUT4 #(
     .INIT(16'hF380)) 
     \gen_fwft.empty_fwft_i_i_1 
@@ -23673,7 +23673,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized0__xdcDup__1
         .sleep(sleep),
         .wea(1'b0),
         .web(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair146" *) 
+  (* SOFT_HLUTNM = "soft_lutpair145" *) 
   LUT3 #(
     .INIT(8'h62)) 
     \gen_sdpram.xpm_memory_base_inst_i_3 
@@ -24097,7 +24097,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized1
   assign full_n = \<const0> ;
   assign sbiterr = \<const0> ;
   assign wr_ack = \<const0> ;
-  (* SOFT_HLUTNM = "soft_lutpair266" *) 
+  (* SOFT_HLUTNM = "soft_lutpair265" *) 
   LUT4 #(
     .INIT(16'h69A1)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1 
@@ -24106,7 +24106,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized1
         .I2(curr_fwft_state[0]),
         .I3(rd_en),
         .O(next_fwft_state__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair266" *) 
+  (* SOFT_HLUTNM = "soft_lutpair265" *) 
   LUT3 #(
     .INIT(8'h7C)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1 
@@ -24228,7 +24228,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized1
         .dest_out_bin(wr_pntr_rd_cdc),
         .src_clk(wr_clk),
         .src_in_bin(wr_pntr_ext[8:0]));
-  (* SOFT_HLUTNM = "soft_lutpair265" *) 
+  (* SOFT_HLUTNM = "soft_lutpair264" *) 
   LUT4 #(
     .INIT(16'hE0CC)) 
     \gen_fwft.empty_fwft_i_i_1 
@@ -24567,7 +24567,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized1
         .sleep(sleep),
         .wea(wr_pntr_plus1_pf_carry),
         .web(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair265" *) 
+  (* SOFT_HLUTNM = "soft_lutpair264" *) 
   LUT3 #(
     .INIT(8'h2C)) 
     \gen_sdpram.xpm_memory_base_inst_i_3 
@@ -25006,7 +25006,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized2
   assign full_n = \<const0> ;
   assign sbiterr = \<const0> ;
   assign wr_ack = \<const0> ;
-  (* SOFT_HLUTNM = "soft_lutpair222" *) 
+  (* SOFT_HLUTNM = "soft_lutpair221" *) 
   LUT4 #(
     .INIT(16'h69A1)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1 
@@ -25015,7 +25015,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized2
         .I2(curr_fwft_state[0]),
         .I3(rd_en),
         .O(next_fwft_state__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair222" *) 
+  (* SOFT_HLUTNM = "soft_lutpair221" *) 
   LUT3 #(
     .INIT(8'h7C)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1 
@@ -25137,7 +25137,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized2
         .dest_out_bin(wr_pntr_rd_cdc),
         .src_clk(wr_clk),
         .src_in_bin(wr_pntr_ext[8:0]));
-  (* SOFT_HLUTNM = "soft_lutpair221" *) 
+  (* SOFT_HLUTNM = "soft_lutpair220" *) 
   LUT4 #(
     .INIT(16'hE0CC)) 
     \gen_fwft.empty_fwft_i_i_1 
@@ -25476,7 +25476,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized2
         .sleep(sleep),
         .wea(wr_pntr_plus1_pf_carry),
         .web(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair221" *) 
+  (* SOFT_HLUTNM = "soft_lutpair220" *) 
   LUT3 #(
     .INIT(8'h2C)) 
     \gen_sdpram.xpm_memory_base_inst_i_3 
@@ -25905,7 +25905,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized3
   assign full_n = \<const0> ;
   assign sbiterr = \<const0> ;
   assign wr_ack = \<const0> ;
-  (* SOFT_HLUTNM = "soft_lutpair179" *) 
+  (* SOFT_HLUTNM = "soft_lutpair178" *) 
   LUT4 #(
     .INIT(16'h6A85)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1 
@@ -25914,7 +25914,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized3
         .I2(curr_fwft_state[1]),
         .I3(ram_empty_i),
         .O(next_fwft_state__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair179" *) 
+  (* SOFT_HLUTNM = "soft_lutpair178" *) 
   LUT3 #(
     .INIT(8'h7C)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1 
@@ -26035,7 +26035,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized3
         .dest_out_bin(wr_pntr_rd_cdc),
         .src_clk(wr_clk),
         .src_in_bin(wr_pntr_ext[7:0]));
-  (* SOFT_HLUTNM = "soft_lutpair178" *) 
+  (* SOFT_HLUTNM = "soft_lutpair177" *) 
   LUT4 #(
     .INIT(16'hF380)) 
     \gen_fwft.empty_fwft_i_i_1 
@@ -26345,7 +26345,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_base__parameterized3
         .sleep(sleep),
         .wea(1'b0),
         .web(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair178" *) 
+  (* SOFT_HLUTNM = "soft_lutpair177" *) 
   LUT3 #(
     .INIT(8'h62)) 
     \gen_sdpram.xpm_memory_base_inst_i_3 
@@ -26604,7 +26604,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit
         .D(wrst_busy),
         .Q(rst_d1),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair253" *) 
+  (* SOFT_HLUTNM = "soft_lutpair252" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_6 
@@ -26622,7 +26622,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit
         .I4(\gen_pf_ic_rc.gpf_ic.prog_full_i_reg_0 ),
         .I5(prog_full),
         .O(\gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[8] ));
-  (* SOFT_HLUTNM = "soft_lutpair253" *) 
+  (* SOFT_HLUTNM = "soft_lutpair252" *) 
   LUT4 #(
     .INIT(16'hFE00)) 
     \gof.overflow_i_i_1 
@@ -26681,7 +26681,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_12
         .D(wrst_busy),
         .Q(rst_d1),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair209" *) 
+  (* SOFT_HLUTNM = "soft_lutpair208" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_6 
@@ -26699,7 +26699,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_12
         .I4(\gen_pf_ic_rc.gpf_ic.prog_full_i_reg_0 ),
         .I5(prog_full),
         .O(\gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[8] ));
-  (* SOFT_HLUTNM = "soft_lutpair209" *) 
+  (* SOFT_HLUTNM = "soft_lutpair208" *) 
   LUT4 #(
     .INIT(16'hFE00)) 
     \gof.overflow_i_i_1 
@@ -26765,7 +26765,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_21
         .I3(\gen_pf_ic_rc.gpf_ic.prog_full_i_reg_0 ),
         .I4(prog_full),
         .O(\gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[8] ));
-  (* SOFT_HLUTNM = "soft_lutpair168" *) 
+  (* SOFT_HLUTNM = "soft_lutpair167" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \gen_pf_ic_rc.gpf_ic.prog_full_i_i_3 
@@ -26773,7 +26773,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_21
         .I1(rst_d1),
         .I2(wrst_busy),
         .O(clr_full));
-  (* SOFT_HLUTNM = "soft_lutpair168" *) 
+  (* SOFT_HLUTNM = "soft_lutpair167" *) 
   LUT4 #(
     .INIT(16'hFE00)) 
     \gof.overflow_i_i_1 
@@ -26839,7 +26839,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_31
         .I3(\gen_pf_ic_rc.gpf_ic.prog_full_i_reg_0 ),
         .I4(prog_full),
         .O(\gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[8] ));
-  (* SOFT_HLUTNM = "soft_lutpair136" *) 
+  (* SOFT_HLUTNM = "soft_lutpair135" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \gen_pf_ic_rc.gpf_ic.prog_full_i_i_3 
@@ -26847,7 +26847,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_31
         .I1(rst_d1),
         .I2(wrst_busy),
         .O(clr_full));
-  (* SOFT_HLUTNM = "soft_lutpair136" *) 
+  (* SOFT_HLUTNM = "soft_lutpair135" *) 
   LUT4 #(
     .INIT(16'hFE00)) 
     \gof.overflow_i_i_1 
@@ -26913,7 +26913,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_43
         .I3(\gen_pf_ic_rc.gpf_ic.prog_full_i_reg_0 ),
         .I4(prog_full),
         .O(\gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[8] ));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \gen_pf_ic_rc.gpf_ic.prog_full_i_i_3 
@@ -26921,7 +26921,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_43
         .I1(rst_d1),
         .I2(wrst_busy),
         .O(clr_full));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT4 #(
     .INIT(16'hFE00)) 
     \gof.overflow_i_i_1 
@@ -26996,7 +26996,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_50
         .I4(\gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.write_only_q_reg ),
         .I5(\gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.write_only_q_reg_0 ),
         .O(DI));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'h44444044)) 
     \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.read_only_q_i_1 
@@ -27006,7 +27006,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_reg_bit_50
         .I3(wr_en),
         .I4(rst_d1),
         .O(read_only));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'h04000404)) 
     \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.write_only_q_i_1 
@@ -30077,7 +30077,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst
   wire wr_rst_busy;
   wire write_only_q;
 
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
     .INIT(16'hAAAE)) 
     \count_value_i[1]_i_1__3 
@@ -30134,7 +30134,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst
         .D(\gen_rst_cc.fifo_wr_rst_cc [1]),
         .Q(Q),
         .S(rst_i));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
     .INIT(16'h0002)) 
     \gen_sdpram.xpm_memory_base_inst_i_1 
@@ -30143,7 +30143,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst
         .I2(Q),
         .I3(rst_d1),
         .O(ram_wr_en_pf));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'hAB)) 
     \grdc.rd_data_count_i[8]_i_1 
@@ -30174,7 +30174,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst
         .D(\power_on_rst_reg_n_0_[0] ),
         .Q(p_0_in),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'hE)) 
     wr_rst_busy_INST_0
@@ -30419,7 +30419,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0
         .I1(\gen_rst_ic.curr_rrst_state [1]),
         .I2(\gen_rst_ic.curr_rrst_state [0]),
         .O(\__0/i__n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair176" *) 
+  (* SOFT_HLUTNM = "soft_lutpair175" *) 
   LUT4 #(
     .INIT(16'hAAAE)) 
     \count_value_i[1]_i_1__4 
@@ -30453,7 +30453,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0
         .I4(\gen_rst_ic.fifo_wr_rst_ic_i_3_n_0 ),
         .I5(\gen_rst_ic.fifo_wr_rst_ic ),
         .O(\gen_rst_ic.fifo_wr_rst_ic_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair177" *) 
+  (* SOFT_HLUTNM = "soft_lutpair176" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \gen_rst_ic.fifo_wr_rst_ic_i_2 
@@ -30490,7 +30490,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0
        (.dest_clk(wr_clk),
         .dest_rst(\gen_rst_ic.fifo_rd_rst_wr_i ),
         .src_rst(\gen_rst_ic.fifo_rd_rst_ic_reg_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair177" *) 
+  (* SOFT_HLUTNM = "soft_lutpair176" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \gen_rst_ic.rst_seq_reentered_i_1 
@@ -30563,7 +30563,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0
         .I2(wrst_busy),
         .I3(rst_d1),
         .O(wr_pntr_plus1_pf_carry));
-  (* SOFT_HLUTNM = "soft_lutpair176" *) 
+  (* SOFT_HLUTNM = "soft_lutpair175" *) 
   LUT3 #(
     .INIT(8'hAB)) 
     \grdc.rd_data_count_i[8]_i_1 
@@ -30838,7 +30838,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0__xdcDup__1
         .I1(\gen_rst_ic.curr_rrst_state [1]),
         .I2(\gen_rst_ic.curr_rrst_state [0]),
         .O(\__0/i__n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair144" *) 
+  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT4 #(
     .INIT(16'hAAAE)) 
     \count_value_i[1]_i_1__4 
@@ -30872,7 +30872,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0__xdcDup__1
         .I4(\gen_rst_ic.fifo_wr_rst_ic_i_3_n_0 ),
         .I5(\gen_rst_ic.fifo_wr_rst_ic ),
         .O(\gen_rst_ic.fifo_wr_rst_ic_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair145" *) 
+  (* SOFT_HLUTNM = "soft_lutpair144" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \gen_rst_ic.fifo_wr_rst_ic_i_2 
@@ -30909,7 +30909,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0__xdcDup__1
        (.dest_clk(wr_clk),
         .dest_rst(\gen_rst_ic.fifo_rd_rst_wr_i ),
         .src_rst(\gen_rst_ic.fifo_rd_rst_ic_reg_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair145" *) 
+  (* SOFT_HLUTNM = "soft_lutpair144" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \gen_rst_ic.rst_seq_reentered_i_1 
@@ -30982,7 +30982,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0__xdcDup__1
         .I2(wrst_busy),
         .I3(rst_d1),
         .O(wr_pntr_plus1_pf_carry));
-  (* SOFT_HLUTNM = "soft_lutpair144" *) 
+  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT3 #(
     .INIT(8'hAB)) 
     \grdc.rd_data_count_i[8]_i_1 
@@ -31257,7 +31257,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0__xdcDup__2
         .I1(\gen_rst_ic.curr_rrst_state [1]),
         .I2(\gen_rst_ic.curr_rrst_state [0]),
         .O(\__0/i__n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT4 #(
     .INIT(16'hAAAE)) 
     \count_value_i[1]_i_1__4 
@@ -31291,7 +31291,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0__xdcDup__2
         .I4(\gen_rst_ic.fifo_wr_rst_ic_i_3_n_0 ),
         .I5(\gen_rst_ic.fifo_wr_rst_ic ),
         .O(\gen_rst_ic.fifo_wr_rst_ic_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \gen_rst_ic.fifo_wr_rst_ic_i_2 
@@ -31328,7 +31328,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0__xdcDup__2
        (.dest_clk(wr_clk),
         .dest_rst(\gen_rst_ic.fifo_rd_rst_wr_i ),
         .src_rst(\gen_rst_ic.fifo_rd_rst_ic_reg_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \gen_rst_ic.rst_seq_reentered_i_1 
@@ -31401,7 +31401,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0__xdcDup__2
         .I2(wrst_busy),
         .I3(rst_d1),
         .O(wr_pntr_plus1_pf_carry));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT3 #(
     .INIT(8'hAB)) 
     \grdc.rd_data_count_i[8]_i_1 
@@ -31676,7 +31676,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0__xdcDup__3
         .I1(\gen_rst_ic.curr_rrst_state [1]),
         .I2(\gen_rst_ic.curr_rrst_state [0]),
         .O(\__0/i__n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair263" *) 
+  (* SOFT_HLUTNM = "soft_lutpair262" *) 
   LUT4 #(
     .INIT(16'hFF02)) 
     \count_value_i[1]_i_1__4 
@@ -31710,7 +31710,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0__xdcDup__3
         .I4(\gen_rst_ic.fifo_wr_rst_ic_i_3_n_0 ),
         .I5(\gen_rst_ic.fifo_wr_rst_ic ),
         .O(\gen_rst_ic.fifo_wr_rst_ic_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair264" *) 
+  (* SOFT_HLUTNM = "soft_lutpair263" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \gen_rst_ic.fifo_wr_rst_ic_i_2 
@@ -31747,7 +31747,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0__xdcDup__3
        (.dest_clk(wr_clk),
         .dest_rst(\gen_rst_ic.fifo_rd_rst_wr_i ),
         .src_rst(\gen_rst_ic.fifo_rd_rst_ic_reg_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair264" *) 
+  (* SOFT_HLUTNM = "soft_lutpair263" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \gen_rst_ic.rst_seq_reentered_i_1 
@@ -31820,7 +31820,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0__xdcDup__3
         .I2(wrst_busy),
         .I3(rst_d1),
         .O(wr_pntr_plus1_pf_carry));
-  (* SOFT_HLUTNM = "soft_lutpair263" *) 
+  (* SOFT_HLUTNM = "soft_lutpair262" *) 
   LUT3 #(
     .INIT(8'hF1)) 
     \grdc.rd_data_count_i[9]_i_1 
@@ -32095,7 +32095,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0__xdcDup__4
         .I1(\gen_rst_ic.curr_rrst_state [1]),
         .I2(\gen_rst_ic.curr_rrst_state [0]),
         .O(\__0/i__n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair219" *) 
+  (* SOFT_HLUTNM = "soft_lutpair218" *) 
   LUT4 #(
     .INIT(16'hFF02)) 
     \count_value_i[1]_i_1__4 
@@ -32129,7 +32129,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0__xdcDup__4
         .I4(\gen_rst_ic.fifo_wr_rst_ic_i_3_n_0 ),
         .I5(\gen_rst_ic.fifo_wr_rst_ic ),
         .O(\gen_rst_ic.fifo_wr_rst_ic_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair220" *) 
+  (* SOFT_HLUTNM = "soft_lutpair219" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \gen_rst_ic.fifo_wr_rst_ic_i_2 
@@ -32166,7 +32166,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0__xdcDup__4
        (.dest_clk(wr_clk),
         .dest_rst(\gen_rst_ic.fifo_rd_rst_wr_i ),
         .src_rst(\gen_rst_ic.fifo_rd_rst_ic_reg_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair220" *) 
+  (* SOFT_HLUTNM = "soft_lutpair219" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \gen_rst_ic.rst_seq_reentered_i_1 
@@ -32239,7 +32239,7 @@ module apex_blk_axi_chip2chip_0_0_xpm_fifo_rst__parameterized0__xdcDup__4
         .I2(wrst_busy),
         .I3(rst_d1),
         .O(wr_pntr_plus1_pf_carry));
-  (* SOFT_HLUTNM = "soft_lutpair219" *) 
+  (* SOFT_HLUTNM = "soft_lutpair218" *) 
   LUT3 #(
     .INIT(8'hF1)) 
     \grdc.rd_data_count_i[9]_i_1 
@@ -35972,11 +35972,9 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8
   output m_axi_lite_rready;
 
   wire \<const0> ;
-  wire \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep_n_0 ;
   wire \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_0 ;
   wire \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_149 ;
   wire \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_150 ;
-  wire \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_151 ;
   wire aurora_do_cc;
   wire aurora_init_clk;
   wire aurora_mmcm_not_locked;
@@ -36057,6 +36055,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8
   wire s_lnk_hndlr_rready;
   wire \slave_fpga_gen.axi_chip2chip_slave_inst_n_100 ;
   wire \slave_fpga_gen.axi_chip2chip_slave_inst_n_139 ;
+  wire \slave_fpga_gen.axi_chip2chip_slave_inst_n_154 ;
   wire \slave_fpga_gen.axi_chip2chip_slave_inst_n_44 ;
   wire \slave_fpga_gen.axi_chip2chip_slave_inst_n_45 ;
   wire \slave_fpga_gen.axi_chip2chip_slave_inst_n_46 ;
@@ -36348,31 +36347,19 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8
        (.axi_c2c_phy_clk(axi_c2c_phy_clk),
         .in0(axi_c2c_lnk_hndlr_in_progress_r),
         .out(axi_c2c_lnk_hndlr_in_progress_tx_userclk));
-  (* ORIG_CELL_NAME = "Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg" *) 
   FDRE \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg 
        (.C(m_aclk),
         .CE(1'b1),
         .D(\Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_150 ),
         .Q(slv_wait_for_rst_r),
         .R(\Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_0 ));
-  (* ORIG_CELL_NAME = "Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg" *) 
-  FDRE \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep 
-       (.C(m_aclk),
-        .CE(1'b1),
-        .D(\Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_151 ),
-        .Q(\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep_n_0 ),
-        .R(\Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_0 ));
   apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top \Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top 
-       (.\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg (\Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_150 ),
-        .\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_0 (\Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_151 ),
-        .axi_c2c_link_status_out(axi_c2c_link_status_out),
+       (.axi_c2c_link_status_out(axi_c2c_link_status_out),
         .axi_c2c_lnk_hndlr_in_progress(axi_c2c_lnk_hndlr_in_progress),
         .chnl_up_r(\u_axi_chip2chip_v5_0_8_srd_lnk_hndlr/chnl_up_r ),
         .dout({m_axi_wdata_dut,m_axi_wstrb_dut,m_axi_wlast_dut,\slave_fpga_gen.axi_chip2chip_slave_inst_n_139 }),
         .empty(\axi_chip2chip_aw_fifo_inst/fifo_empty ),
-        .fifo_wr_en_r_reg(\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep_n_0 ),
         .full(\axi_chip2chip_b_fifo_inst/axi_chip2chip_async_fifo_inst/full_int ),
-        .\gen_fwft.empty_fwft_i_reg (m_axi_wvalid),
         .m_aclk(m_aclk),
         .m_aresetn(m_aresetn),
         .m_aresetn_0(\Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_0 ),
@@ -36391,6 +36378,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8
         .m_axi_awready(m_axi_awready),
         .m_axi_awsize(\^m_axi_awsize ),
         .m_axi_awvalid(m_axi_awvalid),
+        .m_axi_bready(m_axi_bready),
         .m_axi_bvalid(m_axi_bvalid),
         .m_axi_rlast(m_axi_rlast),
         .m_axi_rvalid(m_axi_rvalid),
@@ -36406,17 +36394,21 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8
         .s_lnk_hndlr_awvalid_gen_fsm_r_reg(\slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_5 ),
         .s_lnk_hndlr_bready(s_lnk_hndlr_bready),
         .s_lnk_hndlr_rready(s_lnk_hndlr_rready),
-        .\s_lnk_hndlr_wstrb_r_reg[3] (\axi_chip2chip_w_fifo_inst/fifo_empty ),
+        .\s_lnk_hndlr_wuser_r_reg[0] (\axi_chip2chip_w_fifo_inst/fifo_empty ),
+        .s_lnk_hndlr_wvalid_r_reg(m_axi_wvalid),
         .slv_wait_for_rst_r(slv_wait_for_rst_r),
-        .\srd_addr_trans_cntr_r_reg[0] (\axi_chip2chip_r_fifo_inst/axi_chip2chip_async_fifo_inst/full_int ),
-        .\srd_addr_trans_cntr_r_reg[0]_0 (\axi_chip2chip_r_fifo_inst/axi_chip2chip_async_fifo_inst/wr_rst_busy ),
+        .\srd_addr_trans_cntr_r_reg[0] (\axi_chip2chip_r_fifo_inst/axi_chip2chip_async_fifo_inst/wr_rst_busy ),
+        .\srd_addr_trans_cntr_r_reg[0]_0 (\axi_chip2chip_r_fifo_inst/axi_chip2chip_async_fifo_inst/full_int ),
         .srd_lnk_hndlr_en(srd_lnk_hndlr_en),
+        .srd_lnk_hndlr_in_progress_r_reg(\Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_150 ),
+        .\swr_addr_trans_cntr_r_reg[8] (\slave_fpga_gen.axi_chip2chip_slave_inst_n_154 ),
         .swr_lnk_hndlr_en(swr_lnk_hndlr_en),
         .wr_rst_busy(\axi_chip2chip_b_fifo_inst/axi_chip2chip_async_fifo_inst/wr_rst_busy ));
   GND GND
        (.G(\<const0> ));
   apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave \slave_fpga_gen.axi_chip2chip_slave_inst 
-       (.D({\slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_7 ,\slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_8 ,\slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_9 ,\slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_10 ,\slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_11 ,\slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_12 ,\slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_13 }),
+       (.AR(\Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_0 ),
+        .D({\slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_7 ,\slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_8 ,\slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_9 ,\slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_10 ,\slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_11 ,\slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_12 ,\slave_fpga_gen.axi_chip2chip_slave_phy_inst_n_13 }),
         .Q(tx_phy_ctrl),
         .axi_c2c_aurora_rx_tdata(axi_c2c_aurora_rx_tdata[30:0]),
         .axi_c2c_aurora_rx_tvalid(axi_c2c_aurora_rx_tvalid),
@@ -36433,17 +36425,16 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8
         .\gen_fwft.empty_fwft_i_reg (\axi_chip2chip_ar_fifo_inst/fifo_empty ),
         .\gen_fwft.empty_fwft_i_reg_0 (\axi_chip2chip_w_fifo_inst/fifo_empty ),
         .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg (\axi_chip2chip_b_fifo_inst/axi_chip2chip_async_fifo_inst/full_int ),
+        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 (\slave_fpga_gen.axi_chip2chip_slave_inst_n_154 ),
         .\gen_rd_b.doutb_reg_reg_pipe_4_reg ({m_axi_bresp,m_axi_bid}),
         .\gen_rst_ic.wr_rst_busy_ic_reg (\axi_chip2chip_b_fifo_inst/axi_chip2chip_async_fifo_inst/wr_rst_busy ),
         .\gen_wr_a.gen_word_narrow.mem_reg ({m_axi_araddr_dut,m_axi_arburst_dut,m_axi_arsize_dut,m_axi_arlen_dut,\slave_fpga_gen.axi_chip2chip_slave_inst_n_95 ,\slave_fpga_gen.axi_chip2chip_slave_inst_n_96 ,\slave_fpga_gen.axi_chip2chip_slave_inst_n_97 ,\slave_fpga_gen.axi_chip2chip_slave_inst_n_98 ,\slave_fpga_gen.axi_chip2chip_slave_inst_n_99 ,\slave_fpga_gen.axi_chip2chip_slave_inst_n_100 }),
         .\gen_wr_a.gen_word_narrow.mem_reg_0 ({m_axi_wdata_dut,m_axi_wstrb_dut,m_axi_wlast_dut,\slave_fpga_gen.axi_chip2chip_slave_inst_n_139 }),
         .intr_flop(\axi_chip2chip_ch0_ctrl_inst/intr_flop ),
-        .\intr_out_reg[3] (\Enable_Slave_lnk_hndlr.u_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top_n_0 ),
         .link_dwn_indi_r(link_dwn_indi_r),
         .m_aclk(m_aclk),
         .m_axi_arready(m_axi_arready),
         .m_axi_awready(m_axi_awready),
-        .m_axi_bready(m_axi_bready),
         .m_axi_bvalid(m_axi_bvalid),
         .m_axi_rready(m_axi_rready),
         .m_axi_rvalid(m_axi_rvalid),
@@ -36594,7 +36585,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
   wire tdm_user_data_valid;
   wire tx_user_data_valid;
 
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \FSM_onehot_state[0]_i_1 
@@ -36602,7 +36593,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(tdm_user_data_valid),
         .I2(axi_c2c_aurora_tx_tready),
         .O(\FSM_onehot_state[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT4 #(
     .INIT(16'hF888)) 
     \FSM_onehot_state[1]_i_1 
@@ -36675,14 +36666,14 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .D(areset_d[0]),
         .Q(areset_d[1]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT2 #(
     .INIT(4'h2)) 
     axi_c2c_aurora_tx_tvalid_INST_0
        (.I0(tx_user_data_valid),
         .I1(out),
         .O(axi_c2c_aurora_tx_tvalid));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \mux_by_2.data_count[1]_i_1 
@@ -36714,7 +36705,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I2(tdm_user_data_valid),
         .I3(axi_c2c_aurora_tx_tready),
         .O(\state[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT4 #(
     .INIT(16'hBCA8)) 
     \state[1]_i_1 
@@ -36735,7 +36726,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .D(\state[1]_i_1_n_0 ),
         .Q(\state_reg_n_0_[1] ),
         .S(\FSM_onehot_state[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[0]_i_1 
@@ -36743,7 +36734,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [0]),
         .O(\storage_data1[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[10]_i_1 
@@ -36751,7 +36742,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [10]),
         .O(\storage_data1[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[11]_i_1 
@@ -36759,7 +36750,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [11]),
         .O(\storage_data1[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[12]_i_1 
@@ -36767,7 +36758,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [12]),
         .O(\storage_data1[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[13]_i_1 
@@ -36775,7 +36766,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [13]),
         .O(\storage_data1[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[14]_i_1 
@@ -36783,7 +36774,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [14]),
         .O(\storage_data1[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[15]_i_1 
@@ -36791,7 +36782,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [15]),
         .O(\storage_data1[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[16]_i_1 
@@ -36799,7 +36790,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [16]),
         .O(\storage_data1[16]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[17]_i_1 
@@ -36807,7 +36798,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [17]),
         .O(\storage_data1[17]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[18]_i_1 
@@ -36815,7 +36806,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [18]),
         .O(\storage_data1[18]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[19]_i_1 
@@ -36823,7 +36814,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [19]),
         .O(\storage_data1[19]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[1]_i_1 
@@ -36831,7 +36822,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [1]),
         .O(\storage_data1[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[20]_i_1 
@@ -36839,7 +36830,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [20]),
         .O(\storage_data1[20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[21]_i_1 
@@ -36847,7 +36838,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [21]),
         .O(\storage_data1[21]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[22]_i_1 
@@ -36855,7 +36846,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [22]),
         .O(\storage_data1[22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[23]_i_1 
@@ -36863,7 +36854,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [23]),
         .O(\storage_data1[23]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[24]_i_1 
@@ -36871,7 +36862,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [24]),
         .O(\storage_data1[24]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[25]_i_1 
@@ -36879,7 +36870,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [25]),
         .O(\storage_data1[25]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[26]_i_1 
@@ -36887,7 +36878,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [26]),
         .O(\storage_data1[26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[2]_i_1 
@@ -36904,7 +36895,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I3(load_s1_from_s2),
         .I4(axi_c2c_aurora_tx_tready),
         .O(storage_data1));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[30]_i_2 
@@ -36912,7 +36903,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [27]),
         .O(\storage_data1[30]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[3]_i_1 
@@ -36920,7 +36911,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [3]),
         .O(\storage_data1[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[4]_i_1 
@@ -36928,7 +36919,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [4]),
         .O(\storage_data1[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[5]_i_1 
@@ -36936,7 +36927,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [5]),
         .O(\storage_data1[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[6]_i_1 
@@ -36944,7 +36935,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [6]),
         .O(\storage_data1[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[7]_i_1 
@@ -36952,7 +36943,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [7]),
         .O(\storage_data1[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[8]_i_1 
@@ -36960,7 +36951,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .I1(load_s1_from_s2),
         .I2(\storage_data2_reg[27]_0 [8]),
         .O(\storage_data1[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \storage_data1[9]_i_1 
@@ -37304,7 +37295,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_asitv10_axisc_register_sl
         .D(\storage_data2_reg[27]_0 [9]),
         .Q(storage_data2[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT3 #(
     .INIT(8'h08)) 
     xpm_fifo_async_inst_i_2__2
@@ -37368,7 +37359,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo
   wire [7:0]NLW_xpm_fifo_async_inst_rd_data_count_UNCONNECTED;
   wire [7:0]NLW_xpm_fifo_async_inst_wr_data_count_UNCONNECTED;
 
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \mux_by_2.pack_reg0[24]_i_1__0 
@@ -37435,7 +37426,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo
         .wr_data_count(NLW_xpm_fifo_async_inst_wr_data_count_UNCONNECTED[7:0]),
         .wr_en(pack_data_we),
         .wr_rst_busy(wr_rst_busy));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT4 #(
     .INIT(16'h1000)) 
     xpm_fifo_async_inst_i_1__1
@@ -37505,7 +37496,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo__parameterized
   wire [8:0]NLW_xpm_fifo_async_inst_rd_data_count_UNCONNECTED;
   wire [8:0]NLW_xpm_fifo_async_inst_wr_data_count_UNCONNECTED;
 
-  (* SOFT_HLUTNM = "soft_lutpair267" *) 
+  (* SOFT_HLUTNM = "soft_lutpair266" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \mux_by_2.pack_reg0[18]_i_1 
@@ -37572,7 +37563,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo__parameterized
         .wr_data_count(NLW_xpm_fifo_async_inst_wr_data_count_UNCONNECTED[8:0]),
         .wr_en(pack_data_we),
         .wr_rst_busy(wr_rst_busy));
-  (* SOFT_HLUTNM = "soft_lutpair267" *) 
+  (* SOFT_HLUTNM = "soft_lutpair266" *) 
   LUT4 #(
     .INIT(16'h1000)) 
     xpm_fifo_async_inst_i_1__2
@@ -37601,8 +37592,8 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo__parameterized
     m_aclk,
     din,
     axi_c2c_phy_clk,
-    srd_lnk_hndlr_en,
     slv_wait_for_rst_r,
+    srd_lnk_hndlr_en,
     s_lnk_hndlr_rready,
     m_axi_rvalid,
     Q,
@@ -37626,8 +37617,8 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo__parameterized
   input m_aclk;
   input [40:0]din;
   input axi_c2c_phy_clk;
-  input srd_lnk_hndlr_en;
   input slv_wait_for_rst_r;
+  input srd_lnk_hndlr_en;
   input s_lnk_hndlr_rready;
   input m_axi_rvalid;
   input [1:0]Q;
@@ -37688,10 +37679,10 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo__parameterized
   LUT5 #(
     .INIT(32'hFFF10001)) 
     m_axi_rready_INST_0
-       (.I0(wr_rst_busy),
-        .I1(full),
-        .I2(srd_lnk_hndlr_en),
-        .I3(slv_wait_for_rst_r),
+       (.I0(full),
+        .I1(wr_rst_busy),
+        .I2(slv_wait_for_rst_r),
+        .I3(srd_lnk_hndlr_en),
         .I4(s_lnk_hndlr_rready),
         .O(m_axi_rready));
   LUT5 #(
@@ -37805,8 +37796,8 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo__parameterized
     .INIT(8'h02)) 
     xpm_fifo_async_inst_i_1
        (.I0(m_axi_rvalid),
-        .I1(full),
-        .I2(wr_rst_busy),
+        .I1(wr_rst_busy),
+        .I2(full),
         .O(pack_data_we));
   LUT4 #(
     .INIT(16'h4000)) 
@@ -37824,35 +37815,35 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo__parameterized
     \gen_rst_ic.wr_rst_busy_ic_reg ,
     dout,
     empty,
-    m_axi_bready,
     tx_phy_ready_reg,
+    \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ,
     out,
     m_aclk,
     \gen_rd_b.doutb_reg_reg_pipe_4_reg ,
     axi_c2c_phy_clk,
     rd_en,
+    tx_phy_ready,
+    Q,
     swr_lnk_hndlr_en,
     slv_wait_for_rst_r,
     s_lnk_hndlr_bready,
-    tx_phy_ready,
-    Q,
     m_axi_bvalid);
   output \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ;
   output \gen_rst_ic.wr_rst_busy_ic_reg ;
   output [7:0]dout;
   output empty;
-  output m_axi_bready;
   output tx_phy_ready_reg;
+  output \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ;
   input out;
   input m_aclk;
   input [7:0]\gen_rd_b.doutb_reg_reg_pipe_4_reg ;
   input axi_c2c_phy_clk;
   input rd_en;
+  input tx_phy_ready;
+  input [0:0]Q;
   input swr_lnk_hndlr_en;
   input slv_wait_for_rst_r;
   input s_lnk_hndlr_bready;
-  input tx_phy_ready;
-  input [0:0]Q;
   input m_axi_bvalid;
 
   wire [0:0]Q;
@@ -37860,10 +37851,10 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo__parameterized
   wire [7:0]dout;
   wire empty;
   wire \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ;
+  wire \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ;
   wire [7:0]\gen_rd_b.doutb_reg_reg_pipe_4_reg ;
   wire \gen_rst_ic.wr_rst_busy_ic_reg ;
   wire m_aclk;
-  wire m_axi_bready;
   wire m_axi_bvalid;
   wire out;
   wire prog_full_int;
@@ -37894,15 +37885,16 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo__parameterized
         .I1(empty),
         .I2(Q),
         .O(tx_phy_ready_reg));
-  LUT5 #(
-    .INIT(32'hFFF10001)) 
-    m_axi_bready_INST_0
+  LUT6 #(
+    .INIT(64'hFFF1000100000000)) 
+    \swr_data_trans_cntr_r[8]_i_12 
        (.I0(\gen_rst_ic.wr_rst_busy_ic_reg ),
         .I1(\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ),
         .I2(swr_lnk_hndlr_en),
         .I3(slv_wait_for_rst_r),
         .I4(s_lnk_hndlr_bready),
-        .O(m_axi_bready));
+        .I5(m_axi_bvalid),
+        .O(\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ));
   (* CASCADE_HEIGHT = "0" *) 
   (* CDC_SYNC_STAGES = "3" *) 
   (* DOUT_RESET_VALUE = "0" *) 
@@ -37959,8 +37951,8 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo__parameterized
   LUT3 #(
     .INIT(8'h10)) 
     xpm_fifo_async_inst_i_1__3
-       (.I0(\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ),
-        .I1(\gen_rst_ic.wr_rst_busy_ic_reg ),
+       (.I0(\gen_rst_ic.wr_rst_busy_ic_reg ),
+        .I1(\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ),
         .I2(m_axi_bvalid),
         .O(xpm_fifo_async_inst_i_1__3_n_0));
 endmodule
@@ -38019,7 +38011,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo__xdcDup__1
   wire [7:0]NLW_xpm_fifo_async_inst_rd_data_count_UNCONNECTED;
   wire [7:0]NLW_xpm_fifo_async_inst_wr_data_count_UNCONNECTED;
 
-  (* SOFT_HLUTNM = "soft_lutpair148" *) 
+  (* SOFT_HLUTNM = "soft_lutpair147" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \mux_by_2.pack_reg0[24]_i_1 
@@ -38086,7 +38078,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_async_fifo__xdcDup__1
         .wr_data_count(NLW_xpm_fifo_async_inst_wr_data_count_UNCONNECTED[7:0]),
         .wr_en(pack_data_we),
         .wr_rst_busy(wr_rst_busy));
-  (* SOFT_HLUTNM = "soft_lutpair148" *) 
+  (* SOFT_HLUTNM = "soft_lutpair147" *) 
   LUT4 #(
     .INIT(16'h1000)) 
     xpm_fifo_async_inst_i_1__0
@@ -39268,7 +39260,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_aurora_standard_cc_module
         .I4(pma_init_assertion_i_2_n_0),
         .I5(gt_reset_i_delayed1_r2),
         .O(reset_count_start_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair269" *) 
+  (* SOFT_HLUTNM = "soft_lutpair268" *) 
   LUT3 #(
     .INIT(8'hF7)) 
     reset_count_start_i_2
@@ -39289,14 +39281,14 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_aurora_standard_cc_module
     \reset_counter[0]_i_1 
        (.I0(reset_counter_reg[0]),
         .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair270" *) 
+  (* SOFT_HLUTNM = "soft_lutpair269" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \reset_counter[1]_i_1 
        (.I0(reset_counter_reg[0]),
         .I1(reset_counter_reg[1]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair270" *) 
+  (* SOFT_HLUTNM = "soft_lutpair269" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \reset_counter[2]_i_1 
@@ -39304,7 +39296,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_aurora_standard_cc_module
         .I1(reset_counter_reg[0]),
         .I2(reset_counter_reg[2]),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair268" *) 
+  (* SOFT_HLUTNM = "soft_lutpair267" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \reset_counter[3]_i_1 
@@ -39313,7 +39305,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_aurora_standard_cc_module
         .I2(reset_counter_reg[1]),
         .I3(reset_counter_reg[3]),
         .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair268" *) 
+  (* SOFT_HLUTNM = "soft_lutpair267" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \reset_counter[4]_i_1 
@@ -39333,7 +39325,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_aurora_standard_cc_module
         .I4(reset_counter_reg[3]),
         .I5(reset_counter_reg[5]),
         .O(p_0_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair269" *) 
+  (* SOFT_HLUTNM = "soft_lutpair268" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \reset_counter[6]_i_1 
@@ -39565,8 +39557,8 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_awr_fifo__parameterized1
     m_aclk,
     din,
     axi_c2c_phy_clk,
-    srd_lnk_hndlr_en,
     slv_wait_for_rst_r,
+    srd_lnk_hndlr_en,
     s_lnk_hndlr_rready,
     m_axi_rvalid,
     int_ch1_ready,
@@ -39596,8 +39588,8 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_awr_fifo__parameterized1
   input m_aclk;
   input [40:0]din;
   input axi_c2c_phy_clk;
-  input srd_lnk_hndlr_en;
   input slv_wait_for_rst_r;
+  input srd_lnk_hndlr_en;
   input s_lnk_hndlr_rready;
   input m_axi_rvalid;
   input int_ch1_ready;
@@ -39752,35 +39744,35 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_b_fifo
     \gen_rst_ic.wr_rst_busy_ic_reg ,
     dout,
     empty,
-    m_axi_bready,
     tx_phy_ready_reg,
+    \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ,
     out,
     m_aclk,
     \gen_rd_b.doutb_reg_reg_pipe_4_reg ,
     axi_c2c_phy_clk,
     rd_en,
+    tx_phy_ready,
+    Q,
     swr_lnk_hndlr_en,
     slv_wait_for_rst_r,
     s_lnk_hndlr_bready,
-    tx_phy_ready,
-    Q,
     m_axi_bvalid);
   output \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ;
   output \gen_rst_ic.wr_rst_busy_ic_reg ;
   output [7:0]dout;
   output empty;
-  output m_axi_bready;
   output tx_phy_ready_reg;
+  output \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ;
   input out;
   input m_aclk;
   input [7:0]\gen_rd_b.doutb_reg_reg_pipe_4_reg ;
   input axi_c2c_phy_clk;
   input rd_en;
+  input tx_phy_ready;
+  input [0:0]Q;
   input swr_lnk_hndlr_en;
   input slv_wait_for_rst_r;
   input s_lnk_hndlr_bready;
-  input tx_phy_ready;
-  input [0:0]Q;
   input m_axi_bvalid;
 
   wire [0:0]Q;
@@ -39788,10 +39780,10 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_b_fifo
   wire [7:0]dout;
   wire empty;
   wire \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ;
+  wire \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ;
   wire [7:0]\gen_rd_b.doutb_reg_reg_pipe_4_reg ;
   wire \gen_rst_ic.wr_rst_busy_ic_reg ;
   wire m_aclk;
-  wire m_axi_bready;
   wire m_axi_bvalid;
   wire out;
   wire rd_en;
@@ -39807,10 +39799,10 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_b_fifo
         .dout(dout),
         .empty(empty),
         .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg (\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ),
+        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 (\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ),
         .\gen_rd_b.doutb_reg_reg_pipe_4_reg (\gen_rd_b.doutb_reg_reg_pipe_4_reg ),
         .\gen_rst_ic.wr_rst_busy_ic_reg (\gen_rst_ic.wr_rst_busy_ic_reg ),
         .m_aclk(m_aclk),
-        .m_axi_bready(m_axi_bready),
         .m_axi_bvalid(m_axi_bvalid),
         .out(out),
         .rd_en(rd_en),
@@ -39835,7 +39827,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl
     Q,
     E,
     m_aclk,
-    \intr_out_reg[3]_0 ,
+    AR,
     \auto_neg_intr_gen.tx_ch0_valid_reg_1 ,
     D,
     \intr_data_reg[3]_0 ,
@@ -39852,12 +39844,13 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl
   input [0:0]Q;
   input [0:0]E;
   input m_aclk;
-  input \intr_out_reg[3]_0 ;
+  input [0:0]AR;
   input \auto_neg_intr_gen.tx_ch0_valid_reg_1 ;
   input [6:0]D;
   input [0:0]\intr_data_reg[3]_0 ;
   input [3:0]\intr_data_reg[3]_1 ;
 
+  wire [0:0]AR;
   wire [6:0]D;
   wire [0:0]E;
   wire [0:0]Q;
@@ -39880,7 +39873,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl
   wire [3:0]\intr_data_reg[3]_1 ;
   wire intr_event;
   wire intr_flop;
-  wire \intr_out_reg[3]_0 ;
   wire m_aclk;
   wire rx_user_reset;
   wire send_ch0;
@@ -39890,7 +39882,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl
   wire [3:0]sync_intr_sent;
   wire sync_intr_sent_0;
 
-  (* SOFT_HLUTNM = "soft_lutpair181" *) 
+  (* SOFT_HLUTNM = "soft_lutpair180" *) 
   LUT3 #(
     .INIT(8'hF2)) 
     \auto_neg_intr_gen.intr_flop_i_1 
@@ -39921,7 +39913,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl
         .D(\auto_neg_intr_gen.intr_flop_i_1_n_0 ),
         .Q(\auto_neg_intr_gen.intr_flop_reg_n_0 ),
         .R(intr_flop));
-  (* SOFT_HLUTNM = "soft_lutpair180" *) 
+  (* SOFT_HLUTNM = "soft_lutpair179" *) 
   LUT4 #(
     .INIT(16'hBEAE)) 
     \auto_neg_intr_gen.send_ch0_i_1 
@@ -39936,7 +39928,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl
         .D(\auto_neg_intr_gen.send_ch0_i_1_n_0 ),
         .Q(send_ch0),
         .R(rx_user_reset));
-  (* SOFT_HLUTNM = "soft_lutpair181" *) 
+  (* SOFT_HLUTNM = "soft_lutpair180" *) 
   LUT4 #(
     .INIT(16'h22C0)) 
     \auto_neg_intr_gen.send_intr_i_2 
@@ -40034,7 +40026,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl
         .D(D[4]),
         .Q(\auto_neg_intr_gen.tx_ch0_data_reg[24]_0 [4]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair180" *) 
+  (* SOFT_HLUTNM = "soft_lutpair179" *) 
   LUT5 #(
     .INIT(32'hDFFCDCFC)) 
     \auto_neg_intr_gen.tx_ch0_valid_i_1 
@@ -40085,25 +40077,25 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl
   FDCE \intr_out_reg[0] 
        (.C(m_aclk),
         .CE(1'b1),
-        .CLR(\intr_out_reg[3]_0 ),
+        .CLR(AR),
         .D(sync_intr_out[0]),
         .Q(axi_c2c_m2s_intr_out[0]));
   FDCE \intr_out_reg[1] 
        (.C(m_aclk),
         .CE(1'b1),
-        .CLR(\intr_out_reg[3]_0 ),
+        .CLR(AR),
         .D(sync_intr_out[1]),
         .Q(axi_c2c_m2s_intr_out[1]));
   FDCE \intr_out_reg[2] 
        (.C(m_aclk),
         .CE(1'b1),
-        .CLR(\intr_out_reg[3]_0 ),
+        .CLR(AR),
         .D(sync_intr_out[2]),
         .Q(axi_c2c_m2s_intr_out[2]));
   FDCE \intr_out_reg[3] 
        (.C(m_aclk),
         .CE(1'b1),
-        .CLR(\intr_out_reg[3]_0 ),
+        .CLR(AR),
         .D(sync_intr_out[3]),
         .Q(axi_c2c_m2s_intr_out[3]));
   (* equivalent_register_removal = "no" *) 
@@ -40182,7 +40174,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_decoder
   wire rx_user_reset;
   wire wd_ch_data_valid;
 
-  (* SOFT_HLUTNM = "soft_lutpair183" *) 
+  (* SOFT_HLUTNM = "soft_lutpair182" *) 
   LUT5 #(
     .INIT(32'h10000000)) 
     ch0_valid_i_1
@@ -40198,7 +40190,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_decoder
         .D(ch0_valid0),
         .Q(rx_ch0_valid),
         .R(rx_user_reset));
-  (* SOFT_HLUTNM = "soft_lutpair183" *) 
+  (* SOFT_HLUTNM = "soft_lutpair182" *) 
   LUT5 #(
     .INIT(32'h40000000)) 
     ch1_valid_i_1
@@ -40214,7 +40206,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_decoder
         .D(ch1_valid0),
         .Q(aw_ch_data_valid),
         .R(rx_user_reset));
-  (* SOFT_HLUTNM = "soft_lutpair182" *) 
+  (* SOFT_HLUTNM = "soft_lutpair181" *) 
   LUT5 #(
     .INIT(32'h40000000)) 
     ch2_valid_i_1
@@ -40230,7 +40222,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_decoder
         .D(ch2_valid0),
         .Q(ar_ch_data_valid),
         .R(rx_user_reset));
-  (* SOFT_HLUTNM = "soft_lutpair182" *) 
+  (* SOFT_HLUTNM = "soft_lutpair181" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
     ch3_valid_i_1
@@ -41240,14 +41232,14 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_init
        (.I0(aurora_rst_out_r2),
         .I1(aurora_rst_out_pma),
         .O(aurora_reset_pb));
-  (* SOFT_HLUTNM = "soft_lutpair277" *) 
+  (* SOFT_HLUTNM = "soft_lutpair276" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \auto_neg_intr_gen.send_intr_i_1 
        (.I0(Q),
         .I1(AS),
         .O(intr_flop));
-  (* SOFT_HLUTNM = "soft_lutpair277" *) 
+  (* SOFT_HLUTNM = "soft_lutpair276" *) 
   LUT4 #(
     .INIT(16'h0B08)) 
     \auto_neg_intr_gen.tx_ch0_data[0]_i_1 
@@ -41284,7 +41276,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_init
         .CLR(AS),
         .D(calib_done_flop_i_1_n_0),
         .Q(calib_done_flop));
-  (* SOFT_HLUTNM = "soft_lutpair278" *) 
+  (* SOFT_HLUTNM = "soft_lutpair277" *) 
   LUT4 #(
     .INIT(16'h0002)) 
     pat0_valid_i_1
@@ -41361,7 +41353,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_init
         .D(pat0_valid0),
         .Q(pat0_valid),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair278" *) 
+  (* SOFT_HLUTNM = "soft_lutpair277" *) 
   LUT4 #(
     .INIT(16'h0020)) 
     pat1_valid_i_1
@@ -41376,7 +41368,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_init
         .D(pat1_valid0),
         .Q(pat1_valid),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair276" *) 
+  (* SOFT_HLUTNM = "soft_lutpair275" *) 
   LUT5 #(
     .INIT(32'h0000B888)) 
     \pat_count[0]_i_1 
@@ -41396,7 +41388,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_init
         .I4(pat_count[0]),
         .I5(pat_count[1]),
         .O(next_pat_count[1]));
-  (* SOFT_HLUTNM = "soft_lutpair274" *) 
+  (* SOFT_HLUTNM = "soft_lutpair273" *) 
   LUT5 #(
     .INIT(32'h20888888)) 
     \pat_count[2]_i_1 
@@ -41414,7 +41406,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_init
         .I2(state[2]),
         .I3(state[3]),
         .O(\pat_count[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair274" *) 
+  (* SOFT_HLUTNM = "soft_lutpair273" *) 
   LUT5 #(
     .INIT(32'h28A0A0A0)) 
     \pat_count[3]_i_2 
@@ -41424,7 +41416,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_init
         .I3(pat_count[0]),
         .I4(pat_count[1]),
         .O(next_pat_count[3]));
-  (* SOFT_HLUTNM = "soft_lutpair276" *) 
+  (* SOFT_HLUTNM = "soft_lutpair275" *) 
   LUT4 #(
     .INIT(16'hF808)) 
     \pat_count[3]_i_3 
@@ -41476,7 +41468,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_init
         .I1(state[0]),
         .I2(axi_c2c_aurora_channel_up),
         .O(next_state__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair275" *) 
+  (* SOFT_HLUTNM = "soft_lutpair274" *) 
   LUT5 #(
     .INIT(32'hFF000202)) 
     \state[2]_i_1 
@@ -41504,7 +41496,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_phy_init
         .I2(next_rx_phy_ready),
         .I3(state[0]),
         .O(next_state));
-  (* SOFT_HLUTNM = "soft_lutpair275" *) 
+  (* SOFT_HLUTNM = "soft_lutpair274" *) 
   LUT4 #(
     .INIT(16'hF444)) 
     \state[4]_i_3 
@@ -41632,7 +41624,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_reset_sync
     \auto_neg_intr_gen.tx_ch0_data[14]_i_1 
        (.I0(AS),
         .O(sync_reset_out_reg_1[3]));
-  (* SOFT_HLUTNM = "soft_lutpair273" *) 
+  (* SOFT_HLUTNM = "soft_lutpair272" *) 
   LUT3 #(
     .INIT(8'h32)) 
     \auto_neg_intr_gen.tx_ch0_data[1]_i_1 
@@ -41640,14 +41632,14 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_reset_sync
         .I1(AS),
         .I2(Q),
         .O(sync_reset_out_reg_1[0]));
-  (* SOFT_HLUTNM = "soft_lutpair273" *) 
+  (* SOFT_HLUTNM = "soft_lutpair272" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \auto_neg_intr_gen.tx_ch0_data[24]_i_2 
        (.I0(AS),
         .I1(Q),
         .O(sync_reset_out_reg_1[4]));
-  (* SOFT_HLUTNM = "soft_lutpair272" *) 
+  (* SOFT_HLUTNM = "soft_lutpair271" *) 
   LUT3 #(
     .INIT(8'h32)) 
     \auto_neg_intr_gen.tx_ch0_data[2]_i_1 
@@ -41655,7 +41647,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_reset_sync
         .I1(AS),
         .I2(Q),
         .O(sync_reset_out_reg_1[1]));
-  (* SOFT_HLUTNM = "soft_lutpair272" *) 
+  (* SOFT_HLUTNM = "soft_lutpair271" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \auto_neg_intr_gen.tx_ch0_data[3]_i_1 
@@ -41663,7 +41655,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_reset_sync
         .I1(AS),
         .I2(Q),
         .O(sync_reset_out_reg_1[2]));
-  (* SOFT_HLUTNM = "soft_lutpair271" *) 
+  (* SOFT_HLUTNM = "soft_lutpair270" *) 
   LUT4 #(
     .INIT(16'hAAFE)) 
     \rst_cntrl_lnk_hndlr_en.link_dwn_indi_r_i_1 
@@ -41672,7 +41664,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_reset_sync
         .I2(rx_phy_ready_r),
         .I3(rx_phy_ready),
         .O(sync_reset_out_reg_0));
-  (* SOFT_HLUTNM = "soft_lutpair271" *) 
+  (* SOFT_HLUTNM = "soft_lutpair270" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \state[4]_i_1 
@@ -41773,11 +41765,11 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
     \gen_rst_ic.wr_rst_busy_ic_reg ,
     rx_phy_ready_r,
     link_dwn_indi_r,
-    m_axi_bready,
     m_axi_rready,
     tdm_user_data_ready,
     \sync_intr_in_d1_reg[3] ,
     axi_c2c_aurora_tx_tvalid,
+    \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ,
     axi_c2c_aurora_tx_tdata,
     axi_c2c_m2s_intr_out,
     axi_c2c_s2m_intr_in,
@@ -41792,10 +41784,8 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
     rx_phy_ready,
     axi_c2c_aurora_rx_tvalid,
     \rst_cntrl_lnk_hndlr_en.link_dwn_indi_r_reg_0 ,
-    \intr_out_reg[3] ,
-    swr_lnk_hndlr_en,
+    AR,
     slv_wait_for_rst_r,
-    s_lnk_hndlr_bready,
     srd_lnk_hndlr_en,
     s_lnk_hndlr_rready,
     m_axi_awready,
@@ -41805,6 +41795,8 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
     Q,
     out,
     \slot_count_reg[3] ,
+    swr_lnk_hndlr_en,
+    s_lnk_hndlr_bready,
     m_axi_bvalid,
     D,
     axi_c2c_aurora_rx_tdata);
@@ -41820,11 +41812,11 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
   output \gen_rst_ic.wr_rst_busy_ic_reg ;
   output rx_phy_ready_r;
   output link_dwn_indi_r;
-  output m_axi_bready;
   output m_axi_rready;
   output tdm_user_data_ready;
   output [3:0]\sync_intr_in_d1_reg[3] ;
   output axi_c2c_aurora_tx_tvalid;
+  output \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ;
   output [27:0]axi_c2c_aurora_tx_tdata;
   output [3:0]axi_c2c_m2s_intr_out;
   input [3:0]axi_c2c_s2m_intr_in;
@@ -41839,10 +41831,8 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
   input rx_phy_ready;
   input axi_c2c_aurora_rx_tvalid;
   input \rst_cntrl_lnk_hndlr_en.link_dwn_indi_r_reg_0 ;
-  input \intr_out_reg[3] ;
-  input swr_lnk_hndlr_en;
+  input [0:0]AR;
   input slv_wait_for_rst_r;
-  input s_lnk_hndlr_bready;
   input srd_lnk_hndlr_en;
   input s_lnk_hndlr_rready;
   input m_axi_awready;
@@ -41852,10 +41842,13 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
   input [0:0]Q;
   input out;
   input \slot_count_reg[3] ;
+  input swr_lnk_hndlr_en;
+  input s_lnk_hndlr_bready;
   input m_axi_bvalid;
   input [6:0]D;
   input [30:0]axi_c2c_aurora_rx_tdata;
 
+  wire [0:0]AR;
   wire [6:0]D;
   wire [0:0]Q;
   wire ar_ch_data_valid;
@@ -41901,7 +41894,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
   wire [3:0]axi_c2c_m2s_intr_out;
   wire axi_c2c_phy_clk;
   wire [3:0]axi_c2c_s2m_intr_in;
-  wire axi_chip2chip_b_fifo_inst_n_12;
+  wire axi_chip2chip_b_fifo_inst_n_11;
   wire axi_chip2chip_decoder_inst_n_29;
   wire axi_chip2chip_r_fifo_inst_n_10;
   wire axi_chip2chip_r_fifo_inst_n_11;
@@ -41940,6 +41933,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
   wire \gen_fwft.empty_fwft_i_reg ;
   wire \gen_fwft.empty_fwft_i_reg_0 ;
   wire \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ;
+  wire \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ;
   wire [7:0]\gen_rd_b.doutb_reg_reg_pipe_4_reg ;
   wire \gen_rst_ic.wr_rst_busy_ic_reg ;
   wire [49:0]\gen_wr_a.gen_word_narrow.mem_reg ;
@@ -41947,12 +41941,10 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
   wire int_ch1_ready;
   wire int_ch2_ready;
   wire intr_flop;
-  wire \intr_out_reg[3] ;
   wire link_dwn_indi_r;
   wire m_aclk;
   wire m_axi_arready;
   wire m_axi_awready;
-  wire m_axi_bready;
   wire m_axi_bvalid;
   wire m_axi_rready;
   wire m_axi_rvalid;
@@ -42226,10 +42218,10 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
         .dout(br_ch_data),
         .empty(fifo_empty),
         .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg (\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ),
+        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 (\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ),
         .\gen_rd_b.doutb_reg_reg_pipe_4_reg (\gen_rd_b.doutb_reg_reg_pipe_4_reg ),
         .\gen_rst_ic.wr_rst_busy_ic_reg (\gen_rst_ic.wr_rst_busy_ic_reg ),
         .m_aclk(m_aclk),
-        .m_axi_bready(m_axi_bready),
         .m_axi_bvalid(m_axi_bvalid),
         .out(aw_fifo_reset_axi_clk_slv),
         .rd_en(fifo_re),
@@ -42237,9 +42229,10 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
         .slv_wait_for_rst_r(slv_wait_for_rst_r),
         .swr_lnk_hndlr_en(swr_lnk_hndlr_en),
         .tx_phy_ready(tx_phy_ready),
-        .tx_phy_ready_reg(axi_chip2chip_b_fifo_inst_n_12));
+        .tx_phy_ready_reg(axi_chip2chip_b_fifo_inst_n_11));
   apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_ch0_ctrl axi_chip2chip_ch0_ctrl_inst
-       (.D(D),
+       (.AR(AR),
+        .D(D),
         .E(tdm_user_data_ready),
         .Q(Q),
         .\auto_neg_intr_gen.tx_ch0_data_reg[24]_0 ({tx_ch0_tdm_data[24],tx_ch0_tdm_data[14],tx_ch0_tdm_data[6],tx_ch0_tdm_data[3:0]}),
@@ -42251,7 +42244,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
         .\intr_data_reg[3]_0 (rx_intr_data),
         .\intr_data_reg[3]_1 (rx_dec_data[3:0]),
         .intr_flop(intr_flop),
-        .\intr_out_reg[3]_0 (\intr_out_reg[3] ),
         .m_aclk(m_aclk),
         .rx_user_reset(rx_user_reset),
         .send_ch0(send_ch0),
@@ -42314,7 +42306,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
         .empty(fifo_empty),
         .int_ch1_ready(int_ch1_ready),
         .int_ch2_ready(int_ch2_ready),
-        .int_ch2_ready_reg_0(axi_chip2chip_b_fifo_inst_n_12),
+        .int_ch2_ready_reg_0(axi_chip2chip_b_fifo_inst_n_11),
         .p_12_in(p_12_in),
         .rx_user_reset(rx_user_reset),
         .send_ch0(send_ch0),
@@ -42358,7 +42350,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slave
        (.C(axi_c2c_phy_clk),
         .CE(1'b1),
         .D(\rst_cntrl_lnk_hndlr_en.aw_fifo_reset_i_1_n_0 ),
-        .PRE(\intr_out_reg[3] ),
+        .PRE(AR),
         .Q(aw_fifo_reset));
   FDRE \rst_cntrl_lnk_hndlr_en.link_dwn_indi_r_reg 
        (.C(axi_c2c_phy_clk),
@@ -42378,12 +42370,11 @@ endmodule
 module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top
    (m_aresetn_0,
     chnl_up_r,
-    \gen_fwft.empty_fwft_i_reg ,
+    s_lnk_hndlr_wvalid_r_reg,
     swr_lnk_hndlr_en,
     s_lnk_hndlr_bready,
     s_lnk_hndlr_rready,
     srd_lnk_hndlr_en,
-    m_axi_awvalid,
     m_axi_wdata,
     m_axi_awlen,
     m_axi_awaddr,
@@ -42392,7 +42383,8 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top
     m_axi_awid,
     m_axi_wstrb,
     m_axi_wuser,
-    m_axi_wlast,
+    m_axi_bready,
+    m_axi_awvalid,
     m_axi_arlen,
     m_axi_araddr,
     m_axi_arburst,
@@ -42402,38 +42394,37 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top
     axi_c2c_link_status_out,
     axi_c2c_lnk_hndlr_in_progress,
     rd_en,
-    \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg ,
-    \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_0 ,
+    srd_lnk_hndlr_in_progress_r_reg,
+    m_axi_wlast,
     m_aclk,
     out,
-    m_axi_awready,
-    fifo_wr_en_r_reg,
+    slv_wait_for_rst_r,
     empty,
+    m_axi_awready,
+    m_axi_bvalid,
+    full,
+    wr_rst_busy,
+    dout,
+    \s_lnk_hndlr_awaddr_r_reg[31] ,
+    \s_lnk_hndlr_wuser_r_reg[0] ,
+    m_axi_wready,
     s_lnk_hndlr_awvalid_gen_fsm_r_reg,
     m_axi_arvalid_0,
     m_axi_arready,
-    m_axi_bvalid,
-    wr_rst_busy,
-    full,
-    dout,
-    \s_lnk_hndlr_awaddr_r_reg[31] ,
-    slv_wait_for_rst_r,
-    \s_lnk_hndlr_wstrb_r_reg[3] ,
-    m_axi_wready,
     \s_lnk_hndlr_araddr_r_reg[31] ,
     \srd_addr_trans_cntr_r_reg[0] ,
     \srd_addr_trans_cntr_r_reg[0]_0 ,
     m_axi_rlast,
     m_axi_rvalid,
-    m_aresetn);
+    m_aresetn,
+    \swr_addr_trans_cntr_r_reg[8] );
   output m_aresetn_0;
   output chnl_up_r;
-  output \gen_fwft.empty_fwft_i_reg ;
+  output s_lnk_hndlr_wvalid_r_reg;
   output swr_lnk_hndlr_en;
   output s_lnk_hndlr_bready;
   output s_lnk_hndlr_rready;
   output srd_lnk_hndlr_en;
-  output m_axi_awvalid;
   output [31:0]m_axi_wdata;
   output [7:0]m_axi_awlen;
   output [31:0]m_axi_awaddr;
@@ -42442,7 +42433,8 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top
   output [5:0]m_axi_awid;
   output [3:0]m_axi_wstrb;
   output [0:0]m_axi_wuser;
-  output m_axi_wlast;
+  output m_axi_bready;
+  output m_axi_awvalid;
   output [7:0]m_axi_arlen;
   output [31:0]m_axi_araddr;
   output [1:0]m_axi_arburst;
@@ -42452,41 +42444,37 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top
   output axi_c2c_link_status_out;
   output axi_c2c_lnk_hndlr_in_progress;
   output rd_en;
-  output \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg ;
-  output \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_0 ;
+  output srd_lnk_hndlr_in_progress_r_reg;
+  output m_axi_wlast;
   input m_aclk;
   input [0:0]out;
-  input m_axi_awready;
-  input fifo_wr_en_r_reg;
+  input slv_wait_for_rst_r;
   input empty;
+  input m_axi_awready;
+  input m_axi_bvalid;
+  input full;
+  input wr_rst_busy;
+  input [37:0]dout;
+  input [49:0]\s_lnk_hndlr_awaddr_r_reg[31] ;
+  input \s_lnk_hndlr_wuser_r_reg[0] ;
+  input m_axi_wready;
   input s_lnk_hndlr_awvalid_gen_fsm_r_reg;
   input m_axi_arvalid_0;
   input m_axi_arready;
-  input m_axi_bvalid;
-  input wr_rst_busy;
-  input full;
-  input [37:0]dout;
-  input [49:0]\s_lnk_hndlr_awaddr_r_reg[31] ;
-  input slv_wait_for_rst_r;
-  input \s_lnk_hndlr_wstrb_r_reg[3] ;
-  input m_axi_wready;
   input [49:0]\s_lnk_hndlr_araddr_r_reg[31] ;
   input \srd_addr_trans_cntr_r_reg[0] ;
   input \srd_addr_trans_cntr_r_reg[0]_0 ;
   input m_axi_rlast;
   input m_axi_rvalid;
   input m_aresetn;
+  input \swr_addr_trans_cntr_r_reg[8] ;
 
-  wire \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg ;
-  wire \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_0 ;
   wire axi_c2c_link_status_out;
   wire axi_c2c_lnk_hndlr_in_progress;
   wire chnl_up_r;
   wire [37:0]dout;
   wire empty;
-  wire fifo_wr_en_r_reg;
   wire full;
-  wire \gen_fwft.empty_fwft_i_reg ;
   wire m_aclk;
   wire m_aresetn;
   wire m_aresetn_0;
@@ -42505,6 +42493,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top
   wire m_axi_awready;
   wire [1:0]m_axi_awsize;
   wire m_axi_awvalid;
+  wire m_axi_bready;
   wire m_axi_bvalid;
   wire m_axi_rlast;
   wire m_axi_rvalid;
@@ -42520,21 +42509,21 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top
   wire s_lnk_hndlr_awvalid_gen_fsm_r_reg;
   wire s_lnk_hndlr_bready;
   wire s_lnk_hndlr_rready;
-  wire \s_lnk_hndlr_wstrb_r_reg[3] ;
+  wire \s_lnk_hndlr_wuser_r_reg[0] ;
+  wire s_lnk_hndlr_wvalid_r_reg;
   wire slv_wait_for_rst_r;
   wire \srd_addr_trans_cntr_r_reg[0] ;
   wire \srd_addr_trans_cntr_r_reg[0]_0 ;
   wire srd_lnk_hndlr_en;
+  wire srd_lnk_hndlr_in_progress_r_reg;
+  wire \swr_addr_trans_cntr_r_reg[8] ;
   wire swr_lnk_hndlr_en;
   wire wr_rst_busy;
 
   apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr u_axi_chip2chip_v5_0_8_srd_lnk_hndlr
-       (.\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg (\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg ),
-        .\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_0 (\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_0 ),
-        .\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep (swr_lnk_hndlr_en),
+       (.\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg (swr_lnk_hndlr_en),
         .SR(m_aresetn_0),
         .axi_c2c_link_status_out(axi_c2c_link_status_out),
-        .axi_c2c_lnk_hndlr_in_progress(axi_c2c_lnk_hndlr_in_progress),
         .m_aclk(m_aclk),
         .m_axi_araddr(m_axi_araddr),
         .m_axi_arburst(m_axi_arburst),
@@ -42554,14 +42543,15 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top
         .\srd_addr_trans_cntr_r_reg[0]_0 (\srd_addr_trans_cntr_r_reg[0] ),
         .\srd_addr_trans_cntr_r_reg[0]_1 (\srd_addr_trans_cntr_r_reg[0]_0 ),
         .srd_lnk_hndlr_in_progress_r_reg_0(srd_lnk_hndlr_en),
-        .srd_lnk_hndlr_in_progress_r_reg_1(s_lnk_hndlr_awvalid_gen_fsm_r_reg));
+        .srd_lnk_hndlr_in_progress_r_reg_1(srd_lnk_hndlr_in_progress_r_reg),
+        .srd_lnk_hndlr_in_progress_r_reg_2(s_lnk_hndlr_awvalid_gen_fsm_r_reg));
   apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr u_axi_chip2chip_v5_0_8_swr_lnk_hndlr
-       (.E(\gen_fwft.empty_fwft_i_reg ),
+       (.E(s_lnk_hndlr_wvalid_r_reg),
         .SR(m_aresetn_0),
+        .axi_c2c_lnk_hndlr_in_progress(axi_c2c_lnk_hndlr_in_progress),
         .chnl_up_r_reg_0(chnl_up_r),
         .dout(dout),
         .empty(empty),
-        .fifo_wr_en_r_reg_0(fifo_wr_en_r_reg),
         .full(full),
         .m_aclk(m_aclk),
         .m_aresetn(m_aresetn),
@@ -42572,6 +42562,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top
         .m_axi_awready(m_axi_awready),
         .m_axi_awsize(m_axi_awsize),
         .m_axi_awvalid(m_axi_awvalid),
+        .m_axi_bready(m_axi_bready),
         .m_axi_bvalid(m_axi_bvalid),
         .m_axi_wdata(m_axi_wdata),
         .m_axi_wlast(m_axi_wlast),
@@ -42583,8 +42574,10 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_slv_lnk_hndlr_top
         .\s_lnk_hndlr_awaddr_r_reg[31]_0 (\s_lnk_hndlr_awaddr_r_reg[31] ),
         .s_lnk_hndlr_awvalid_gen_fsm_r_reg_0(s_lnk_hndlr_awvalid_gen_fsm_r_reg),
         .s_lnk_hndlr_bready_r_reg_0(s_lnk_hndlr_bready),
-        .\s_lnk_hndlr_wstrb_r_reg[3]_0 (\s_lnk_hndlr_wstrb_r_reg[3] ),
+        .\s_lnk_hndlr_wuser_r_reg[0]_0 (\s_lnk_hndlr_wuser_r_reg[0] ),
         .slv_wait_for_rst_r(slv_wait_for_rst_r),
+        .srd_lnk_hndlr_en(srd_lnk_hndlr_en),
+        .\swr_addr_trans_cntr_r_reg[8]_0 (\swr_addr_trans_cntr_r_reg[8] ),
         .swr_lnk_hndlr_in_progress_r_reg_0(swr_lnk_hndlr_en),
         .wr_rst_busy(wr_rst_busy));
 endmodule
@@ -42600,9 +42593,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr
     m_axi_arid,
     m_axi_arvalid,
     axi_c2c_link_status_out,
-    axi_c2c_lnk_hndlr_in_progress,
-    \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg ,
-    \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_0 ,
+    srd_lnk_hndlr_in_progress_r_reg_1,
     SR,
     m_aclk,
     m_axi_arvalid_0,
@@ -42615,8 +42606,8 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr
     \srd_addr_trans_cntr_r_reg[0]_1 ,
     m_axi_rlast,
     m_axi_rvalid,
-    \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep ,
-    srd_lnk_hndlr_in_progress_r_reg_1);
+    \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg ,
+    srd_lnk_hndlr_in_progress_r_reg_2);
   output s_lnk_hndlr_rready;
   output srd_lnk_hndlr_in_progress_r_reg_0;
   output [7:0]m_axi_arlen;
@@ -42626,9 +42617,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr
   output [5:0]m_axi_arid;
   output m_axi_arvalid;
   output axi_c2c_link_status_out;
-  output axi_c2c_lnk_hndlr_in_progress;
-  output \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg ;
-  output \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_0 ;
+  output srd_lnk_hndlr_in_progress_r_reg_1;
   input [0:0]SR;
   input m_aclk;
   input m_axi_arvalid_0;
@@ -42641,15 +42630,12 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr
   input \srd_addr_trans_cntr_r_reg[0]_1 ;
   input m_axi_rlast;
   input m_axi_rvalid;
-  input \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep ;
-  input srd_lnk_hndlr_in_progress_r_reg_1;
+  input \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg ;
+  input srd_lnk_hndlr_in_progress_r_reg_2;
 
   wire \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg ;
-  wire \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_0 ;
-  wire \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep ;
   wire [0:0]SR;
   wire axi_c2c_link_status_out;
-  wire axi_c2c_lnk_hndlr_in_progress;
   wire m_aclk;
   wire [31:0]m_axi_araddr;
   wire [1:0]m_axi_arburst;
@@ -42709,6 +42695,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr
   wire srd_lnk_hndlr_in_progress_r_i_2_n_0;
   wire srd_lnk_hndlr_in_progress_r_reg_0;
   wire srd_lnk_hndlr_in_progress_r_reg_1;
+  wire srd_lnk_hndlr_in_progress_r_reg_2;
   wire store_data_en_c;
   wire [7:7]\NLW_srd_addr_trans_cntr_r_reg[8]_i_2_CO_UNCONNECTED ;
 
@@ -42716,70 +42703,56 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr
   LUT3 #(
     .INIT(8'hFE)) 
     \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_i_1 
-       (.I0(slv_wait_for_rst_r),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep ),
-        .O(\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg ));
-  LUT3 #(
-    .INIT(8'hFE)) 
-    \Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_rep_i_1 
-       (.I0(slv_wait_for_rst_r),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep ),
-        .O(\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_0 ));
+       (.I0(srd_lnk_hndlr_in_progress_r_reg_0),
+        .I1(\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg ),
+        .I2(slv_wait_for_rst_r),
+        .O(srd_lnk_hndlr_in_progress_r_reg_1));
   LUT4 #(
-    .INIT(16'h0010)) 
+    .INIT(16'h0004)) 
     axi_c2c_link_status_out_INST_0
-       (.I0(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I1(\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep ),
-        .I2(out),
-        .I3(slv_wait_for_rst_r),
+       (.I0(slv_wait_for_rst_r),
+        .I1(out),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg ),
         .O(axi_c2c_link_status_out));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    axi_c2c_lnk_hndlr_in_progress_INST_0
-       (.I0(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I1(\Enable_Slave_lnk_hndlr.slv_wait_for_rst_r_reg_rep ),
-        .O(axi_c2c_lnk_hndlr_in_progress));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[0]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [18]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[0]),
         .O(m_axi_araddr[0]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[10]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [28]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[10]),
         .O(m_axi_araddr[10]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[11]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [29]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[11]),
         .O(m_axi_araddr[11]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[12]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [30]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[12]),
         .O(m_axi_araddr[12]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[13]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [31]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[13]),
         .O(m_axi_araddr[13]));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
@@ -42787,129 +42760,128 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr
     .INIT(16'hFE02)) 
     \m_axi_araddr[14]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [32]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[14]),
         .O(m_axi_araddr[14]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[15]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [33]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[15]),
         .O(m_axi_araddr[15]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[16]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [34]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[16]),
         .O(m_axi_araddr[16]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[17]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [35]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[17]),
         .O(m_axi_araddr[17]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[18]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [36]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[18]),
         .O(m_axi_araddr[18]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[19]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [37]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[19]),
         .O(m_axi_araddr[19]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[1]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [19]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[1]),
         .O(m_axi_araddr[1]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[20]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [38]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[20]),
         .O(m_axi_araddr[20]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[21]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [39]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[21]),
         .O(m_axi_araddr[21]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[22]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [40]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[22]),
         .O(m_axi_araddr[22]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[23]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [41]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[23]),
         .O(m_axi_araddr[23]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[24]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [42]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[24]),
         .O(m_axi_araddr[24]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[25]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [43]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[25]),
         .O(m_axi_araddr[25]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[26]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [44]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[26]),
         .O(m_axi_araddr[26]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[27]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [45]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[27]),
         .O(m_axi_araddr[27]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[28]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [46]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[28]),
         .O(m_axi_araddr[28]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
@@ -42917,239 +42889,239 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr
     .INIT(16'hFE02)) 
     \m_axi_araddr[29]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [47]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[29]),
         .O(m_axi_araddr[29]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[2]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [20]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[2]),
         .O(m_axi_araddr[2]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[30]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [48]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[30]),
         .O(m_axi_araddr[30]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[31]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [49]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[31]),
         .O(m_axi_araddr[31]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[3]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [21]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[3]),
         .O(m_axi_araddr[3]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[4]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [22]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[4]),
         .O(m_axi_araddr[4]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[5]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [23]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[5]),
         .O(m_axi_araddr[5]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[6]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [24]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[6]),
         .O(m_axi_araddr[6]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[7]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [25]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[7]),
         .O(m_axi_araddr[7]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[8]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [26]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[8]),
         .O(m_axi_araddr[8]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_araddr[9]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [27]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_araddr[9]),
         .O(m_axi_araddr[9]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arburst[0]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [16]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arburst[0]),
         .O(m_axi_arburst[0]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arburst[1]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [17]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arburst[1]),
         .O(m_axi_arburst[1]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arid[0]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [0]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arid[0]),
         .O(m_axi_arid[0]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arid[1]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [1]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arid[1]),
         .O(m_axi_arid[1]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arid[2]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [2]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arid[2]),
         .O(m_axi_arid[2]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arid[3]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [3]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arid[3]),
         .O(m_axi_arid[3]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arid[4]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [4]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arid[4]),
         .O(m_axi_arid[4]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arid[5]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [5]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arid[5]),
         .O(m_axi_arid[5]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arlen[0]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [6]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arlen[0]),
         .O(m_axi_arlen[0]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arlen[1]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [7]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arlen[1]),
         .O(m_axi_arlen[1]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arlen[2]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [8]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arlen[2]),
         .O(m_axi_arlen[2]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arlen[3]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [9]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arlen[3]),
         .O(m_axi_arlen[3]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arlen[4]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [10]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arlen[4]),
         .O(m_axi_arlen[4]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arlen[5]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [11]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arlen[5]),
         .O(m_axi_arlen[5]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arlen[6]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [12]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arlen[6]),
         .O(m_axi_arlen[6]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arlen[7]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [13]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arlen[7]),
         .O(m_axi_arlen[7]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arsize[0]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [14]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arsize[0]),
         .O(m_axi_arsize[0]));
   LUT4 #(
     .INIT(16'hFE02)) 
     \m_axi_arsize[1]_INST_0 
        (.I0(\s_lnk_hndlr_araddr_r_reg[31]_0 [15]),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I2(slv_wait_for_rst_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
         .I3(s_lnk_hndlr_arsize[1]),
         .O(m_axi_arsize[1]));
   LUT4 #(
     .INIT(16'hEF01)) 
     m_axi_arvalid_INST_0
-       (.I0(slv_wait_for_rst_r),
-        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
+       (.I0(srd_lnk_hndlr_in_progress_r_reg_0),
+        .I1(slv_wait_for_rst_r),
         .I2(m_axi_arvalid_0),
         .I3(s_lnk_hndlr_arvalid),
         .O(m_axi_arvalid));
@@ -43371,8 +43343,8 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr
   LUT2 #(
     .INIT(4'h1)) 
     \s_lnk_hndlr_arid_r[5]_i_2 
-       (.I0(srd_lnk_hndlr_in_progress_r_reg_0),
-        .I1(slv_wait_for_rst_r),
+       (.I0(slv_wait_for_rst_r),
+        .I1(srd_lnk_hndlr_in_progress_r_reg_0),
         .O(\s_lnk_hndlr_arid_r[5]_i_2_n_0 ));
   FDRE \s_lnk_hndlr_arid_r_reg[0] 
        (.C(m_aclk),
@@ -43505,14 +43477,14 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr
        (.I0(srd_addr_trans_cntr_r_reg[0]),
         .O(\srd_addr_trans_cntr_r[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h555CFFFFAAA30000)) 
+    .INIT(64'h666666A5AAAAAAAA)) 
     \srd_addr_trans_cntr_r[8]_i_1 
-       (.I0(s_lnk_hndlr_arvalid),
-        .I1(m_axi_arvalid_0),
-        .I2(srd_lnk_hndlr_in_progress_r_reg_0),
+       (.I0(\srd_addr_trans_cntr_r[8]_i_3_n_0 ),
+        .I1(s_lnk_hndlr_arvalid),
+        .I2(m_axi_arvalid_0),
         .I3(slv_wait_for_rst_r),
-        .I4(m_axi_arready),
-        .I5(\srd_addr_trans_cntr_r[8]_i_3_n_0 ),
+        .I4(srd_lnk_hndlr_in_progress_r_reg_0),
+        .I5(m_axi_arready),
         .O(srd_addr_trans_cntr_r));
   LUT2 #(
     .INIT(4'h9)) 
@@ -43648,21 +43620,21 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_srd_lnk_hndlr
     .INIT(64'hFFFEFFFF0000FFFF)) 
     srd_lnk_hndlr_in_progress_r_i_1
        (.I0(srd_lnk_hndlr_in_progress_r_i_2_n_0),
-        .I1(srd_addr_trans_cntr_r_reg[4]),
-        .I2(srd_addr_trans_cntr_r_reg[6]),
-        .I3(srd_addr_trans_cntr_r_reg[1]),
-        .I4(srd_lnk_hndlr_in_progress_r_reg_1),
+        .I1(srd_addr_trans_cntr_r_reg[0]),
+        .I2(srd_addr_trans_cntr_r_reg[1]),
+        .I3(srd_addr_trans_cntr_r_reg[8]),
+        .I4(srd_lnk_hndlr_in_progress_r_reg_2),
         .I5(srd_lnk_hndlr_in_progress_r_reg_0),
         .O(srd_lnk_hndlr_in_progress_r_i_1_n_0));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     srd_lnk_hndlr_in_progress_r_i_2
-       (.I0(srd_addr_trans_cntr_r_reg[8]),
-        .I1(srd_addr_trans_cntr_r_reg[7]),
-        .I2(srd_addr_trans_cntr_r_reg[3]),
-        .I3(srd_addr_trans_cntr_r_reg[5]),
-        .I4(srd_addr_trans_cntr_r_reg[2]),
-        .I5(srd_addr_trans_cntr_r_reg[0]),
+       (.I0(srd_addr_trans_cntr_r_reg[3]),
+        .I1(srd_addr_trans_cntr_r_reg[2]),
+        .I2(srd_addr_trans_cntr_r_reg[6]),
+        .I3(srd_addr_trans_cntr_r_reg[7]),
+        .I4(srd_addr_trans_cntr_r_reg[4]),
+        .I5(srd_addr_trans_cntr_r_reg[5]),
         .O(srd_lnk_hndlr_in_progress_r_i_2_n_0));
   FDRE srd_lnk_hndlr_in_progress_r_reg
        (.C(m_aclk),
@@ -43679,7 +43651,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
     E,
     swr_lnk_hndlr_in_progress_r_reg_0,
     s_lnk_hndlr_bready_r_reg_0,
-    m_axi_awvalid,
     m_axi_wdata,
     m_axi_awlen,
     m_axi_awaddr,
@@ -43688,29 +43659,32 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
     m_axi_awid,
     m_axi_wstrb,
     m_axi_wuser,
-    m_axi_wlast,
+    m_axi_bready,
+    m_axi_awvalid,
+    axi_c2c_lnk_hndlr_in_progress,
     rd_en,
+    m_axi_wlast,
     m_aclk,
     out,
-    m_axi_awready,
-    fifo_wr_en_r_reg_0,
+    slv_wait_for_rst_r,
     empty,
-    s_lnk_hndlr_awvalid_gen_fsm_r_reg_0,
+    m_axi_awready,
     m_axi_bvalid,
-    wr_rst_busy,
     full,
+    wr_rst_busy,
     dout,
     \s_lnk_hndlr_awaddr_r_reg[31]_0 ,
-    slv_wait_for_rst_r,
-    \s_lnk_hndlr_wstrb_r_reg[3]_0 ,
+    \s_lnk_hndlr_wuser_r_reg[0]_0 ,
     m_axi_wready,
-    m_aresetn);
+    s_lnk_hndlr_awvalid_gen_fsm_r_reg_0,
+    srd_lnk_hndlr_en,
+    m_aresetn,
+    \swr_addr_trans_cntr_r_reg[8]_0 );
   output [0:0]SR;
   output chnl_up_r_reg_0;
   output [0:0]E;
   output swr_lnk_hndlr_in_progress_r_reg_0;
   output s_lnk_hndlr_bready_r_reg_0;
-  output m_axi_awvalid;
   output [31:0]m_axi_wdata;
   output [7:0]m_axi_awlen;
   output [31:0]m_axi_awaddr;
@@ -43719,41 +43693,44 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
   output [5:0]m_axi_awid;
   output [3:0]m_axi_wstrb;
   output [0:0]m_axi_wuser;
-  output m_axi_wlast;
+  output m_axi_bready;
+  output m_axi_awvalid;
+  output axi_c2c_lnk_hndlr_in_progress;
   output rd_en;
+  output m_axi_wlast;
   input m_aclk;
   input [0:0]out;
-  input m_axi_awready;
-  input fifo_wr_en_r_reg_0;
+  input slv_wait_for_rst_r;
   input empty;
-  input s_lnk_hndlr_awvalid_gen_fsm_r_reg_0;
+  input m_axi_awready;
   input m_axi_bvalid;
-  input wr_rst_busy;
   input full;
+  input wr_rst_busy;
   input [37:0]dout;
   input [49:0]\s_lnk_hndlr_awaddr_r_reg[31]_0 ;
-  input slv_wait_for_rst_r;
-  input \s_lnk_hndlr_wstrb_r_reg[3]_0 ;
+  input \s_lnk_hndlr_wuser_r_reg[0]_0 ;
   input m_axi_wready;
+  input s_lnk_hndlr_awvalid_gen_fsm_r_reg_0;
+  input srd_lnk_hndlr_en;
   input m_aresetn;
+  input \swr_addr_trans_cntr_r_reg[8]_0 ;
 
   wire [0:0]E;
   wire \FSM_sequential_cntrl_fsm_r[0]_i_2_n_0 ;
-  wire \FSM_sequential_cntrl_fsm_r[0]_i_3_n_0 ;
   wire \FSM_sequential_cntrl_fsm_r[1]_i_2_n_0 ;
   wire \FSM_sequential_cntrl_fsm_r[1]_i_3_n_0 ;
   wire \FSM_sequential_cntrl_fsm_r[1]_i_4_n_0 ;
-  wire \FSM_sequential_cntrl_fsm_r[1]_i_5_n_0 ;
   wire \FSM_sequential_s_lnk_hndlr_rd_fsm_r[1]_i_2_n_0 ;
   wire \FSM_sequential_s_lnk_hndlr_rd_fsm_r[1]_i_3_n_0 ;
   wire [0:0]SR;
+  wire axi_c2c_lnk_hndlr_in_progress;
   wire chnl_up_r_reg_0;
+  wire cntrl_cntr_r;
   wire cntrl_cntr_r217_out;
   wire cntrl_cntr_r318_out;
   wire \cntrl_cntr_r[0]_i_1_n_0 ;
   wire \cntrl_cntr_r[8]_i_10_n_0 ;
   wire \cntrl_cntr_r[8]_i_11_n_0 ;
-  wire \cntrl_cntr_r[8]_i_1_n_0 ;
   wire \cntrl_cntr_r[8]_i_3_n_0 ;
   wire \cntrl_cntr_r[8]_i_4_n_0 ;
   wire \cntrl_cntr_r[8]_i_5_n_0 ;
@@ -43805,7 +43782,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
   wire fifo_wr_en_r_i_7_n_0;
   wire fifo_wr_en_r_i_8_n_0;
   wire fifo_wr_en_r_i_9_n_0;
-  wire fifo_wr_en_r_reg_0;
   wire fifo_wr_en_r_reg_i_2_n_4;
   wire fifo_wr_en_r_reg_i_2_n_5;
   wire fifo_wr_en_r_reg_i_2_n_6;
@@ -43824,6 +43800,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
   wire m_axi_awready;
   wire [1:0]m_axi_awsize;
   wire m_axi_awvalid;
+  wire m_axi_bready;
   wire m_axi_bvalid;
   wire [31:0]m_axi_wdata;
   wire m_axi_wlast;
@@ -43860,7 +43837,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
   wire s_lnk_hndlr_awvalid_gen_fsm_r2_carry_n_5;
   wire s_lnk_hndlr_awvalid_gen_fsm_r2_carry_n_6;
   wire s_lnk_hndlr_awvalid_gen_fsm_r2_carry_n_7;
-  wire s_lnk_hndlr_awvalid_gen_fsm_r_i_2_n_0;
+  wire s_lnk_hndlr_awvalid_gen_fsm_r_i_3_n_0;
   wire s_lnk_hndlr_awvalid_gen_fsm_r_reg_0;
   wire s_lnk_hndlr_awvalid_r;
   wire s_lnk_hndlr_bready_r_i_1_n_0;
@@ -43906,9 +43883,9 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
   wire \s_lnk_hndlr_wstrb_r[2]_i_1_n_0 ;
   wire \s_lnk_hndlr_wstrb_r[3]_i_1_n_0 ;
   wire \s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ;
-  wire \s_lnk_hndlr_wstrb_r_reg[3]_0 ;
   wire s_lnk_hndlr_wuser;
   wire s_lnk_hndlr_wuser_r;
+  wire \s_lnk_hndlr_wuser_r_reg[0]_0 ;
   wire s_lnk_hndlr_wvalid_r;
   wire s_lnk_hndlr_wvalid_r15_in;
   wire s_lnk_hndlr_wvalid_r_i_10_n_0;
@@ -43930,10 +43907,11 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
   wire s_lnk_hndlr_wvalid_r_reg_i_3_n_6;
   wire s_lnk_hndlr_wvalid_r_reg_i_3_n_7;
   wire slv_wait_for_rst_r;
+  wire srd_lnk_hndlr_en;
+  wire swr_addr_trans_cntr_r;
   wire \swr_addr_trans_cntr_r[0]_i_1_n_0 ;
   wire \swr_addr_trans_cntr_r[8]_i_10_n_0 ;
   wire \swr_addr_trans_cntr_r[8]_i_11_n_0 ;
-  wire \swr_addr_trans_cntr_r[8]_i_1_n_0 ;
   wire \swr_addr_trans_cntr_r[8]_i_3_n_0 ;
   wire \swr_addr_trans_cntr_r[8]_i_4_n_0 ;
   wire \swr_addr_trans_cntr_r[8]_i_5_n_0 ;
@@ -43942,6 +43920,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
   wire \swr_addr_trans_cntr_r[8]_i_8_n_0 ;
   wire \swr_addr_trans_cntr_r[8]_i_9_n_0 ;
   wire [8:0]swr_addr_trans_cntr_r_reg;
+  wire \swr_addr_trans_cntr_r_reg[8]_0 ;
   wire \swr_addr_trans_cntr_r_reg[8]_i_2_n_1 ;
   wire \swr_addr_trans_cntr_r_reg[8]_i_2_n_10 ;
   wire \swr_addr_trans_cntr_r_reg[8]_i_2_n_11 ;
@@ -43966,7 +43945,6 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
   wire \swr_data_trans_cntr_r[0]_i_1_n_0 ;
   wire \swr_data_trans_cntr_r[8]_i_10_n_0 ;
   wire \swr_data_trans_cntr_r[8]_i_11_n_0 ;
-  wire \swr_data_trans_cntr_r[8]_i_12_n_0 ;
   wire \swr_data_trans_cntr_r[8]_i_3_n_0 ;
   wire \swr_data_trans_cntr_r[8]_i_4_n_0 ;
   wire \swr_data_trans_cntr_r[8]_i_5_n_0 ;
@@ -44020,80 +43998,60 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
   wire [7:0]NLW_xpm_fifo_sync_inst_swr_rd_data_count_UNCONNECTED;
   wire [7:0]NLW_xpm_fifo_sync_inst_swr_wr_data_count_UNCONNECTED;
 
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT5 #(
-    .INIT(32'h10101013)) 
+    .INIT(32'h11031100)) 
     \FSM_sequential_cntrl_fsm_r[0]_i_1 
        (.I0(\FSM_sequential_cntrl_fsm_r[0]_i_2_n_0 ),
         .I1(cntrl_fsm_r[1]),
-        .I2(cntrl_fsm_r[0]),
-        .I3(cntrl_data_b4_addr_r),
-        .I4(\FSM_sequential_cntrl_fsm_r[0]_i_3_n_0 ),
+        .I2(cntrl_data_b4_addr_r),
+        .I3(cntrl_fsm_r[0]),
+        .I4(cntrl_data_b4_addr_c),
         .O(cntrl_fsm_r__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \FSM_sequential_cntrl_fsm_r[0]_i_2 
        (.I0(\delay_cntr_r_reg_n_0_[2] ),
-        .I1(\delay_cntr_r_reg_n_0_[1] ),
-        .I2(\delay_cntr_r_reg_n_0_[0] ),
+        .I1(\delay_cntr_r_reg_n_0_[0] ),
+        .I2(\delay_cntr_r_reg_n_0_[1] ),
         .O(\FSM_sequential_cntrl_fsm_r[0]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    \FSM_sequential_cntrl_fsm_r[0]_i_3 
-       (.I0(cntrl_cntr_r_reg[0]),
-        .I1(cntrl_data_b4_addr_r_i_2_n_0),
-        .I2(cntrl_cntr_r_reg[8]),
-        .I3(cntrl_cntr_r_reg[7]),
-        .I4(cntrl_cntr_r_reg[6]),
-        .I5(cntrl_cntr_r_reg[5]),
-        .O(\FSM_sequential_cntrl_fsm_r[0]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF55551555)) 
+    .INIT(64'hAAAAAAAAFFFFEFFF)) 
     \FSM_sequential_cntrl_fsm_r[1]_i_1 
        (.I0(\FSM_sequential_cntrl_fsm_r[1]_i_2_n_0 ),
-        .I1(cntrl_cntr_r217_out),
-        .I2(\FSM_sequential_cntrl_fsm_r[1]_i_3_n_0 ),
-        .I3(cntrl_cntr_r_reg[0]),
-        .I4(\FSM_sequential_cntrl_fsm_r[1]_i_4_n_0 ),
-        .I5(\FSM_sequential_cntrl_fsm_r[1]_i_5_n_0 ),
+        .I1(\FSM_sequential_cntrl_fsm_r[1]_i_3_n_0 ),
+        .I2(cntrl_cntr_r_reg[0]),
+        .I3(cntrl_cntr_r217_out),
+        .I4(cntrl_cntr_r318_out),
+        .I5(\FSM_sequential_cntrl_fsm_r[1]_i_4_n_0 ),
         .O(cntrl_fsm_r__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
-  LUT2 #(
-    .INIT(4'hB)) 
-    \FSM_sequential_cntrl_fsm_r[1]_i_2 
-       (.I0(cntrl_fsm_r[0]),
-        .I1(cntrl_fsm_r[1]),
-        .O(\FSM_sequential_cntrl_fsm_r[1]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT5 #(
-    .INIT(32'h02FEFFFF)) 
-    \FSM_sequential_cntrl_fsm_r[1]_i_3 
-       (.I0(empty),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(s_lnk_hndlr_awvalid),
-        .I4(m_axi_awready),
-        .O(\FSM_sequential_cntrl_fsm_r[1]_i_3_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \FSM_sequential_cntrl_fsm_r[1]_i_4 
-       (.I0(cntrl_cntr_r_reg[5]),
-        .I1(cntrl_cntr_r_reg[6]),
-        .I2(cntrl_cntr_r_reg[7]),
-        .I3(cntrl_cntr_r_reg[8]),
-        .I4(cntrl_data_b4_addr_r_i_2_n_0),
-        .O(\FSM_sequential_cntrl_fsm_r[1]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT5 #(
     .INIT(32'h00040000)) 
-    \FSM_sequential_cntrl_fsm_r[1]_i_5 
+    \FSM_sequential_cntrl_fsm_r[1]_i_2 
        (.I0(cntrl_fsm_r[1]),
         .I1(cntrl_fsm_r[0]),
-        .I2(\delay_cntr_r_reg_n_0_[0] ),
-        .I3(\delay_cntr_r_reg_n_0_[1] ),
+        .I2(\delay_cntr_r_reg_n_0_[1] ),
+        .I3(\delay_cntr_r_reg_n_0_[0] ),
         .I4(\delay_cntr_r_reg_n_0_[2] ),
-        .O(\FSM_sequential_cntrl_fsm_r[1]_i_5_n_0 ));
+        .O(\FSM_sequential_cntrl_fsm_r[1]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \FSM_sequential_cntrl_fsm_r[1]_i_3 
+       (.I0(cntrl_cntr_r_reg[3]),
+        .I1(cntrl_cntr_r_reg[1]),
+        .I2(cntrl_cntr_r_reg[5]),
+        .I3(cntrl_cntr_r_reg[7]),
+        .I4(cntrl_data_b4_addr_r_i_2_n_0),
+        .O(\FSM_sequential_cntrl_fsm_r[1]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  LUT2 #(
+    .INIT(4'hB)) 
+    \FSM_sequential_cntrl_fsm_r[1]_i_4 
+       (.I0(cntrl_fsm_r[0]),
+        .I1(cntrl_fsm_r[1]),
+        .O(\FSM_sequential_cntrl_fsm_r[1]_i_4_n_0 ));
   (* FSM_ENCODED_STATES = "iSTATE:01,iSTATE0:10,iSTATE1:00" *) 
   FDRE \FSM_sequential_cntrl_fsm_r_reg[0] 
        (.C(m_aclk),
@@ -44111,11 +44069,11 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
   LUT3 #(
     .INIT(8'h01)) 
     \FSM_sequential_s_lnk_hndlr_rd_fsm_r[0]_i_1 
-       (.I0(s_lnk_hndlr_rd_fsm_r[1]),
-        .I1(fifo_empty_w),
+       (.I0(fifo_empty_w),
+        .I1(s_lnk_hndlr_rd_fsm_r[1]),
         .I2(s_lnk_hndlr_rd_fsm_r[0]),
         .O(s_lnk_hndlr_rd_fsm_r__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT5 #(
     .INIT(32'h30343434)) 
     \FSM_sequential_s_lnk_hndlr_rd_fsm_r[1]_i_1 
@@ -44125,24 +44083,23 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .I3(fifo_empty_w),
         .I4(cntrl_cntr_r217_out),
         .O(s_lnk_hndlr_rd_fsm_r__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \FSM_sequential_s_lnk_hndlr_rd_fsm_r[1]_i_2 
-       (.I0(swr_addr_trans_cntr_r_reg[0]),
-        .I1(swr_addr_trans_cntr_r_reg[4]),
-        .I2(swr_addr_trans_cntr_r_reg[3]),
+       (.I0(swr_addr_trans_cntr_r_reg[7]),
+        .I1(swr_addr_trans_cntr_r_reg[3]),
+        .I2(swr_addr_trans_cntr_r_reg[1]),
         .I3(\FSM_sequential_s_lnk_hndlr_rd_fsm_r[1]_i_3_n_0 ),
         .O(\FSM_sequential_s_lnk_hndlr_rd_fsm_r[1]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \FSM_sequential_s_lnk_hndlr_rd_fsm_r[1]_i_3 
-       (.I0(swr_addr_trans_cntr_r_reg[8]),
-        .I1(swr_addr_trans_cntr_r_reg[7]),
-        .I2(swr_addr_trans_cntr_r_reg[1]),
-        .I3(swr_addr_trans_cntr_r_reg[2]),
-        .I4(swr_addr_trans_cntr_r_reg[5]),
-        .I5(swr_addr_trans_cntr_r_reg[6]),
+       (.I0(swr_addr_trans_cntr_r_reg[0]),
+        .I1(swr_addr_trans_cntr_r_reg[5]),
+        .I2(swr_addr_trans_cntr_r_reg[2]),
+        .I3(swr_addr_trans_cntr_r_reg[4]),
+        .I4(swr_addr_trans_cntr_r_reg[6]),
+        .I5(swr_addr_trans_cntr_r_reg[8]),
         .O(\FSM_sequential_s_lnk_hndlr_rd_fsm_r[1]_i_3_n_0 ));
   (* FSM_ENCODED_STATES = "iSTATE:01,iSTATE0:10,iSTATE1:00" *) 
   FDRE \FSM_sequential_s_lnk_hndlr_rd_fsm_r_reg[0] 
@@ -44158,6 +44115,13 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .D(s_lnk_hndlr_rd_fsm_r__0[1]),
         .Q(s_lnk_hndlr_rd_fsm_r[1]),
         .R(SR));
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    axi_c2c_lnk_hndlr_in_progress_INST_0
+       (.I0(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I1(srd_lnk_hndlr_en),
+        .O(axi_c2c_lnk_hndlr_in_progress));
   FDRE chnl_up_r_reg
        (.C(m_aclk),
         .CE(1'b1),
@@ -44170,15 +44134,15 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
        (.I0(cntrl_cntr_r_reg[0]),
         .O(\cntrl_cntr_r[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h777F77758880888A)) 
+    .INIT(64'h5754FFFFA8AB0000)) 
     \cntrl_cntr_r[8]_i_1 
-       (.I0(m_axi_awready),
-        .I1(s_lnk_hndlr_awvalid),
+       (.I0(s_lnk_hndlr_awvalid),
+        .I1(slv_wait_for_rst_r),
         .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(fifo_wr_en_r_reg_0),
-        .I4(empty),
+        .I3(empty),
+        .I4(m_axi_awready),
         .I5(cntrl_cntr_r217_out),
-        .O(\cntrl_cntr_r[8]_i_1_n_0 ));
+        .O(cntrl_cntr_r));
   LUT2 #(
     .INIT(4'h9)) 
     \cntrl_cntr_r[8]_i_10 
@@ -44186,23 +44150,23 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .I1(cntrl_cntr_r_reg[2]),
         .O(\cntrl_cntr_r[8]_i_10_n_0 ));
   LUT6 #(
-    .INIT(64'h6AAA6A6666666666)) 
+    .INIT(64'hA6A666A6666666A6)) 
     \cntrl_cntr_r[8]_i_11 
        (.I0(cntrl_cntr_r_reg[1]),
         .I1(cntrl_cntr_r217_out),
-        .I2(empty),
-        .I3(\s_lnk_hndlr_awid_r[5]_i_2_n_0 ),
-        .I4(s_lnk_hndlr_awvalid),
-        .I5(m_axi_awready),
+        .I2(m_axi_awready),
+        .I3(empty),
+        .I4(\s_lnk_hndlr_awid_r[5]_i_2_n_0 ),
+        .I5(s_lnk_hndlr_awvalid),
         .O(\cntrl_cntr_r[8]_i_11_n_0 ));
   LUT6 #(
-    .INIT(64'h8880888AFFFFFFFF)) 
+    .INIT(64'hA8AB0000FFFFFFFF)) 
     \cntrl_cntr_r[8]_i_3 
-       (.I0(m_axi_awready),
-        .I1(s_lnk_hndlr_awvalid),
+       (.I0(s_lnk_hndlr_awvalid),
+        .I1(slv_wait_for_rst_r),
         .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(fifo_wr_en_r_reg_0),
-        .I4(empty),
+        .I3(empty),
+        .I4(m_axi_awready),
         .I5(cntrl_cntr_r217_out),
         .O(\cntrl_cntr_r[8]_i_3_n_0 ));
   LUT2 #(
@@ -44243,55 +44207,55 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .O(\cntrl_cntr_r[8]_i_9_n_0 ));
   FDRE \cntrl_cntr_r_reg[0] 
        (.C(m_aclk),
-        .CE(\cntrl_cntr_r[8]_i_1_n_0 ),
+        .CE(cntrl_cntr_r),
         .D(\cntrl_cntr_r[0]_i_1_n_0 ),
         .Q(cntrl_cntr_r_reg[0]),
         .R(SR));
   FDRE \cntrl_cntr_r_reg[1] 
        (.C(m_aclk),
-        .CE(\cntrl_cntr_r[8]_i_1_n_0 ),
+        .CE(cntrl_cntr_r),
         .D(\cntrl_cntr_r_reg[8]_i_2_n_15 ),
         .Q(cntrl_cntr_r_reg[1]),
         .R(SR));
   FDRE \cntrl_cntr_r_reg[2] 
        (.C(m_aclk),
-        .CE(\cntrl_cntr_r[8]_i_1_n_0 ),
+        .CE(cntrl_cntr_r),
         .D(\cntrl_cntr_r_reg[8]_i_2_n_14 ),
         .Q(cntrl_cntr_r_reg[2]),
         .R(SR));
   FDRE \cntrl_cntr_r_reg[3] 
        (.C(m_aclk),
-        .CE(\cntrl_cntr_r[8]_i_1_n_0 ),
+        .CE(cntrl_cntr_r),
         .D(\cntrl_cntr_r_reg[8]_i_2_n_13 ),
         .Q(cntrl_cntr_r_reg[3]),
         .R(SR));
   FDRE \cntrl_cntr_r_reg[4] 
        (.C(m_aclk),
-        .CE(\cntrl_cntr_r[8]_i_1_n_0 ),
+        .CE(cntrl_cntr_r),
         .D(\cntrl_cntr_r_reg[8]_i_2_n_12 ),
         .Q(cntrl_cntr_r_reg[4]),
         .R(SR));
   FDRE \cntrl_cntr_r_reg[5] 
        (.C(m_aclk),
-        .CE(\cntrl_cntr_r[8]_i_1_n_0 ),
+        .CE(cntrl_cntr_r),
         .D(\cntrl_cntr_r_reg[8]_i_2_n_11 ),
         .Q(cntrl_cntr_r_reg[5]),
         .R(SR));
   FDRE \cntrl_cntr_r_reg[6] 
        (.C(m_aclk),
-        .CE(\cntrl_cntr_r[8]_i_1_n_0 ),
+        .CE(cntrl_cntr_r),
         .D(\cntrl_cntr_r_reg[8]_i_2_n_10 ),
         .Q(cntrl_cntr_r_reg[6]),
         .R(SR));
   FDRE \cntrl_cntr_r_reg[7] 
        (.C(m_aclk),
-        .CE(\cntrl_cntr_r[8]_i_1_n_0 ),
+        .CE(cntrl_cntr_r),
         .D(\cntrl_cntr_r_reg[8]_i_2_n_9 ),
         .Q(cntrl_cntr_r_reg[7]),
         .R(SR));
   FDRE \cntrl_cntr_r_reg[8] 
        (.C(m_aclk),
-        .CE(\cntrl_cntr_r[8]_i_1_n_0 ),
+        .CE(cntrl_cntr_r),
         .D(\cntrl_cntr_r_reg[8]_i_2_n_8 ),
         .Q(cntrl_cntr_r_reg[8]),
         .R(SR));
@@ -44307,20 +44271,20 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     cntrl_data_b4_addr_r_i_1
-       (.I0(cntrl_cntr_r_reg[5]),
-        .I1(cntrl_cntr_r_reg[6]),
+       (.I0(cntrl_cntr_r_reg[0]),
+        .I1(cntrl_data_b4_addr_r_i_2_n_0),
         .I2(cntrl_cntr_r_reg[7]),
-        .I3(cntrl_cntr_r_reg[8]),
-        .I4(cntrl_data_b4_addr_r_i_2_n_0),
-        .I5(cntrl_cntr_r_reg[0]),
+        .I3(cntrl_cntr_r_reg[5]),
+        .I4(cntrl_cntr_r_reg[1]),
+        .I5(cntrl_cntr_r_reg[3]),
         .O(cntrl_data_b4_addr_c));
   LUT4 #(
     .INIT(16'hFFFE)) 
     cntrl_data_b4_addr_r_i_2
-       (.I0(cntrl_cntr_r_reg[2]),
-        .I1(cntrl_cntr_r_reg[1]),
-        .I2(cntrl_cntr_r_reg[4]),
-        .I3(cntrl_cntr_r_reg[3]),
+       (.I0(cntrl_cntr_r_reg[8]),
+        .I1(cntrl_cntr_r_reg[4]),
+        .I2(cntrl_cntr_r_reg[6]),
+        .I3(cntrl_cntr_r_reg[2]),
         .O(cntrl_data_b4_addr_r_i_2_n_0));
   FDRE cntrl_data_b4_addr_r_reg
        (.C(m_aclk),
@@ -44333,12 +44297,12 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
     \delay_cntr_r[0]_i_1 
        (.I0(\delay_cntr_r_reg_n_0_[0] ),
         .O(p_1_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \delay_cntr_r[1]_i_1 
-       (.I0(\delay_cntr_r_reg_n_0_[0] ),
-        .I1(\delay_cntr_r_reg_n_0_[1] ),
+       (.I0(\delay_cntr_r_reg_n_0_[1] ),
+        .I1(\delay_cntr_r_reg_n_0_[0] ),
         .O(p_1_in[1]));
   LUT3 #(
     .INIT(8'hDF)) 
@@ -44347,13 +44311,13 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .I1(cntrl_fsm_r[1]),
         .I2(cntrl_fsm_r[0]),
         .O(\delay_cntr_r[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \delay_cntr_r[2]_i_2 
        (.I0(\delay_cntr_r_reg_n_0_[2] ),
-        .I1(\delay_cntr_r_reg_n_0_[1] ),
-        .I2(\delay_cntr_r_reg_n_0_[0] ),
+        .I1(\delay_cntr_r_reg_n_0_[0] ),
+        .I2(\delay_cntr_r_reg_n_0_[1] ),
         .O(p_1_in[2]));
   FDRE \delay_cntr_r_reg[0] 
        (.C(m_aclk),
@@ -44374,13 +44338,13 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .Q(\delay_cntr_r_reg_n_0_[2] ),
         .R(\delay_cntr_r[2]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h8880888A)) 
+    .INIT(32'hAAA20002)) 
     \fifo_wr_data_r[7]_i_1 
        (.I0(m_axi_awready),
-        .I1(s_lnk_hndlr_awvalid),
+        .I1(empty),
         .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(fifo_wr_en_r_reg_0),
-        .I4(empty),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_awvalid),
         .O(cntrl_cntr_r318_out));
   FDRE \fifo_wr_data_r_reg[0] 
        (.C(m_aclk),
@@ -44431,38 +44395,38 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .Q(fifo_wr_data_r[7]),
         .R(SR));
   LUT6 #(
-    .INIT(64'h8080800080808088)) 
+    .INIT(64'h8880888A00000000)) 
     fifo_wr_en_r_i_1
        (.I0(fifo_wr_en_r1),
-        .I1(m_axi_awready),
-        .I2(s_lnk_hndlr_awvalid),
+        .I1(s_lnk_hndlr_awvalid),
+        .I2(slv_wait_for_rst_r),
         .I3(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I4(fifo_wr_en_r_reg_0),
-        .I5(empty),
+        .I4(empty),
+        .I5(m_axi_awready),
         .O(fifo_wr_en_r0));
   LUT4 #(
     .INIT(16'h9009)) 
     fifo_wr_en_r_i_10
        (.I0(swr_addr_trans_cntr_r_reg[4]),
         .I1(swr_data_trans_cntr_r_reg[4]),
-        .I2(swr_data_trans_cntr_r_reg[5]),
-        .I3(swr_addr_trans_cntr_r_reg[5]),
+        .I2(swr_addr_trans_cntr_r_reg[5]),
+        .I3(swr_data_trans_cntr_r_reg[5]),
         .O(fifo_wr_en_r_i_10_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     fifo_wr_en_r_i_11
        (.I0(swr_addr_trans_cntr_r_reg[2]),
         .I1(swr_data_trans_cntr_r_reg[2]),
-        .I2(swr_data_trans_cntr_r_reg[3]),
-        .I3(swr_addr_trans_cntr_r_reg[3]),
+        .I2(swr_addr_trans_cntr_r_reg[3]),
+        .I3(swr_data_trans_cntr_r_reg[3]),
         .O(fifo_wr_en_r_i_11_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     fifo_wr_en_r_i_12
        (.I0(swr_addr_trans_cntr_r_reg[0]),
         .I1(swr_data_trans_cntr_r_reg[0]),
-        .I2(swr_data_trans_cntr_r_reg[1]),
-        .I3(swr_addr_trans_cntr_r_reg[1]),
+        .I2(swr_addr_trans_cntr_r_reg[1]),
+        .I3(swr_data_trans_cntr_r_reg[1]),
         .O(fifo_wr_en_r_i_12_n_0));
   LUT2 #(
     .INIT(4'h2)) 
@@ -44471,36 +44435,36 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .I1(swr_data_trans_cntr_r_reg[8]),
         .O(fifo_wr_en_r_i_3_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     fifo_wr_en_r_i_4
        (.I0(swr_addr_trans_cntr_r_reg[6]),
         .I1(swr_data_trans_cntr_r_reg[6]),
-        .I2(swr_data_trans_cntr_r_reg[7]),
-        .I3(swr_addr_trans_cntr_r_reg[7]),
+        .I2(swr_addr_trans_cntr_r_reg[7]),
+        .I3(swr_data_trans_cntr_r_reg[7]),
         .O(fifo_wr_en_r_i_4_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     fifo_wr_en_r_i_5
        (.I0(swr_addr_trans_cntr_r_reg[4]),
         .I1(swr_data_trans_cntr_r_reg[4]),
-        .I2(swr_data_trans_cntr_r_reg[5]),
-        .I3(swr_addr_trans_cntr_r_reg[5]),
+        .I2(swr_addr_trans_cntr_r_reg[5]),
+        .I3(swr_data_trans_cntr_r_reg[5]),
         .O(fifo_wr_en_r_i_5_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     fifo_wr_en_r_i_6
        (.I0(swr_addr_trans_cntr_r_reg[2]),
         .I1(swr_data_trans_cntr_r_reg[2]),
-        .I2(swr_data_trans_cntr_r_reg[3]),
-        .I3(swr_addr_trans_cntr_r_reg[3]),
+        .I2(swr_addr_trans_cntr_r_reg[3]),
+        .I3(swr_data_trans_cntr_r_reg[3]),
         .O(fifo_wr_en_r_i_6_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     fifo_wr_en_r_i_7
        (.I0(swr_addr_trans_cntr_r_reg[0]),
         .I1(swr_data_trans_cntr_r_reg[0]),
-        .I2(swr_data_trans_cntr_r_reg[1]),
-        .I3(swr_addr_trans_cntr_r_reg[1]),
+        .I2(swr_addr_trans_cntr_r_reg[1]),
+        .I3(swr_data_trans_cntr_r_reg[1]),
         .O(fifo_wr_en_r_i_7_n_0));
   LUT2 #(
     .INIT(4'h9)) 
@@ -44513,8 +44477,8 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
     fifo_wr_en_r_i_9
        (.I0(swr_addr_trans_cntr_r_reg[6]),
         .I1(swr_data_trans_cntr_r_reg[6]),
-        .I2(swr_data_trans_cntr_r_reg[7]),
-        .I3(swr_addr_trans_cntr_r_reg[7]),
+        .I2(swr_addr_trans_cntr_r_reg[7]),
+        .I3(swr_data_trans_cntr_r_reg[7]),
         .O(fifo_wr_en_r_i_9_n_0));
   FDRE fifo_wr_en_r_reg
        (.C(m_aclk),
@@ -44549,16 +44513,16 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .Q(last_wr_data_r2),
         .R(SR));
   LUT6 #(
-    .INIT(64'h00000000F4040000)) 
+    .INIT(64'h4440004000400040)) 
     last_wr_data_r_i_1
-       (.I0(m_axi_wlast_INST_0_i_2_n_0),
-        .I1(m_axi_wlast_INST_0_i_1_n_0),
-        .I2(\s_lnk_hndlr_awid_r[5]_i_2_n_0 ),
-        .I3(dout[1]),
-        .I4(E),
-        .I5(last_wr_data_r_i_2_n_0),
+       (.I0(last_wr_data_r_i_2_n_0),
+        .I1(E),
+        .I2(dout[1]),
+        .I3(\s_lnk_hndlr_awid_r[5]_i_2_n_0 ),
+        .I4(m_axi_wlast_INST_0_i_2_n_0),
+        .I5(m_axi_wlast_INST_0_i_1_n_0),
         .O(cntrl_cntr_r217_out));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     last_wr_data_r_i_2
@@ -44573,780 +44537,791 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .Q(last_wr_data_r),
         .R(SR));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[0]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [18]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[0]),
+       (.I0(s_lnk_hndlr_awaddr[0]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [18]),
         .O(m_axi_awaddr[0]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[10]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [28]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[10]),
+       (.I0(s_lnk_hndlr_awaddr[10]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [28]),
         .O(m_axi_awaddr[10]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[11]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [29]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[11]),
+       (.I0(s_lnk_hndlr_awaddr[11]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [29]),
         .O(m_axi_awaddr[11]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[12]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [30]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[12]),
+       (.I0(s_lnk_hndlr_awaddr[12]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [30]),
         .O(m_axi_awaddr[12]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[13]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [31]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[13]),
+       (.I0(s_lnk_hndlr_awaddr[13]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [31]),
         .O(m_axi_awaddr[13]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[14]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [32]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[14]),
+       (.I0(s_lnk_hndlr_awaddr[14]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [32]),
         .O(m_axi_awaddr[14]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[15]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [33]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[15]),
+       (.I0(s_lnk_hndlr_awaddr[15]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [33]),
         .O(m_axi_awaddr[15]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[16]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [34]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[16]),
+       (.I0(s_lnk_hndlr_awaddr[16]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [34]),
         .O(m_axi_awaddr[16]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[17]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [35]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[17]),
+       (.I0(s_lnk_hndlr_awaddr[17]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [35]),
         .O(m_axi_awaddr[17]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[18]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [36]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[18]),
+       (.I0(s_lnk_hndlr_awaddr[18]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [36]),
         .O(m_axi_awaddr[18]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[19]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [37]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[19]),
+       (.I0(s_lnk_hndlr_awaddr[19]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [37]),
         .O(m_axi_awaddr[19]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[1]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [19]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[1]),
+       (.I0(s_lnk_hndlr_awaddr[1]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [19]),
         .O(m_axi_awaddr[1]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[20]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [38]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[20]),
+       (.I0(s_lnk_hndlr_awaddr[20]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [38]),
         .O(m_axi_awaddr[20]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[21]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [39]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[21]),
+       (.I0(s_lnk_hndlr_awaddr[21]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [39]),
         .O(m_axi_awaddr[21]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[22]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [40]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[22]),
+       (.I0(s_lnk_hndlr_awaddr[22]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [40]),
         .O(m_axi_awaddr[22]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[23]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [41]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[23]),
+       (.I0(s_lnk_hndlr_awaddr[23]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [41]),
         .O(m_axi_awaddr[23]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[24]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [42]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[24]),
+       (.I0(s_lnk_hndlr_awaddr[24]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [42]),
         .O(m_axi_awaddr[24]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[25]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [43]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[25]),
+       (.I0(s_lnk_hndlr_awaddr[25]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [43]),
         .O(m_axi_awaddr[25]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[26]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [44]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[26]),
+       (.I0(s_lnk_hndlr_awaddr[26]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [44]),
         .O(m_axi_awaddr[26]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[27]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [45]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[27]),
+       (.I0(s_lnk_hndlr_awaddr[27]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [45]),
         .O(m_axi_awaddr[27]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[28]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [46]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[28]),
+       (.I0(s_lnk_hndlr_awaddr[28]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [46]),
         .O(m_axi_awaddr[28]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[29]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [47]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[29]),
+       (.I0(s_lnk_hndlr_awaddr[29]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [47]),
         .O(m_axi_awaddr[29]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[2]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [20]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[2]),
+       (.I0(s_lnk_hndlr_awaddr[2]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [20]),
         .O(m_axi_awaddr[2]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[30]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [48]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[30]),
+       (.I0(s_lnk_hndlr_awaddr[30]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [48]),
         .O(m_axi_awaddr[30]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[31]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [49]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[31]),
+       (.I0(s_lnk_hndlr_awaddr[31]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [49]),
         .O(m_axi_awaddr[31]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[3]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [21]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[3]),
+       (.I0(s_lnk_hndlr_awaddr[3]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [21]),
         .O(m_axi_awaddr[3]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[4]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [22]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[4]),
+       (.I0(s_lnk_hndlr_awaddr[4]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [22]),
         .O(m_axi_awaddr[4]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[5]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [23]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[5]),
+       (.I0(s_lnk_hndlr_awaddr[5]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [23]),
         .O(m_axi_awaddr[5]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[6]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [24]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[6]),
+       (.I0(s_lnk_hndlr_awaddr[6]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [24]),
         .O(m_axi_awaddr[6]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[7]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [25]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[7]),
+       (.I0(s_lnk_hndlr_awaddr[7]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [25]),
         .O(m_axi_awaddr[7]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[8]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [26]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[8]),
+       (.I0(s_lnk_hndlr_awaddr[8]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [26]),
         .O(m_axi_awaddr[8]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awaddr[9]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [27]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awaddr[9]),
+       (.I0(s_lnk_hndlr_awaddr[9]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [27]),
         .O(m_axi_awaddr[9]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awburst[0]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [16]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awburst[0]),
+       (.I0(s_lnk_hndlr_awburst[0]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [16]),
         .O(m_axi_awburst[0]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awburst[1]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [17]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awburst[1]),
+       (.I0(s_lnk_hndlr_awburst[1]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [17]),
         .O(m_axi_awburst[1]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awid[0]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [0]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awid[0]),
+       (.I0(s_lnk_hndlr_awid[0]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [0]),
         .O(m_axi_awid[0]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awid[1]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [1]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awid[1]),
+       (.I0(s_lnk_hndlr_awid[1]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [1]),
         .O(m_axi_awid[1]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awid[2]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [2]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awid[2]),
+       (.I0(s_lnk_hndlr_awid[2]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [2]),
         .O(m_axi_awid[2]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awid[3]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [3]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awid[3]),
+       (.I0(s_lnk_hndlr_awid[3]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [3]),
         .O(m_axi_awid[3]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awid[4]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [4]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awid[4]),
+       (.I0(s_lnk_hndlr_awid[4]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [4]),
         .O(m_axi_awid[4]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awid[5]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [5]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awid[5]),
+       (.I0(s_lnk_hndlr_awid[5]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [5]),
         .O(m_axi_awid[5]));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awlen[0]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [6]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awlen[0]),
+       (.I0(s_lnk_hndlr_awlen[0]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [6]),
         .O(m_axi_awlen[0]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awlen[1]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [7]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awlen[1]),
+       (.I0(s_lnk_hndlr_awlen[1]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [7]),
         .O(m_axi_awlen[1]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awlen[2]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [8]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awlen[2]),
+       (.I0(s_lnk_hndlr_awlen[2]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [8]),
         .O(m_axi_awlen[2]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awlen[3]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [9]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awlen[3]),
+       (.I0(s_lnk_hndlr_awlen[3]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [9]),
         .O(m_axi_awlen[3]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awlen[4]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [10]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awlen[4]),
+       (.I0(s_lnk_hndlr_awlen[4]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [10]),
         .O(m_axi_awlen[4]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awlen[5]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [11]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awlen[5]),
+       (.I0(s_lnk_hndlr_awlen[5]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [11]),
         .O(m_axi_awlen[5]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awlen[6]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [12]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awlen[6]),
+       (.I0(s_lnk_hndlr_awlen[6]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [12]),
         .O(m_axi_awlen[6]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awlen[7]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [13]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awlen[7]),
+       (.I0(s_lnk_hndlr_awlen[7]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [13]),
         .O(m_axi_awlen[7]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awsize[0]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [14]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awsize[0]),
+       (.I0(s_lnk_hndlr_awsize[0]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [14]),
         .O(m_axi_awsize[0]));
   LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_awsize[1]_INST_0 
-       (.I0(\s_lnk_hndlr_awaddr_r_reg[31]_0 [15]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_awsize[1]),
+       (.I0(s_lnk_hndlr_awsize[1]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_awaddr_r_reg[31]_0 [15]),
         .O(m_axi_awsize[1]));
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT4 #(
     .INIT(16'hFD01)) 
     m_axi_awvalid_INST_0
        (.I0(empty),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(s_lnk_hndlr_awvalid),
-        .O(m_axi_awvalid));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[0]_INST_0 
-       (.I0(dout[6]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[0]),
-        .O(m_axi_wdata[0]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[10]_INST_0 
-       (.I0(dout[16]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[10]),
-        .O(m_axi_wdata[10]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[11]_INST_0 
-       (.I0(dout[17]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[11]),
-        .O(m_axi_wdata[11]));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[12]_INST_0 
-       (.I0(dout[18]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[12]),
-        .O(m_axi_wdata[12]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[13]_INST_0 
-       (.I0(dout[19]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[13]),
-        .O(m_axi_wdata[13]));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[14]_INST_0 
-       (.I0(dout[20]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[14]),
-        .O(m_axi_wdata[14]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[15]_INST_0 
-       (.I0(dout[21]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[15]),
-        .O(m_axi_wdata[15]));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[16]_INST_0 
-       (.I0(dout[22]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[16]),
-        .O(m_axi_wdata[16]));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[17]_INST_0 
-       (.I0(dout[23]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[17]),
-        .O(m_axi_wdata[17]));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[18]_INST_0 
-       (.I0(dout[24]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[18]),
-        .O(m_axi_wdata[18]));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[19]_INST_0 
-       (.I0(dout[25]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[19]),
-        .O(m_axi_wdata[19]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[1]_INST_0 
-       (.I0(dout[7]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[1]),
-        .O(m_axi_wdata[1]));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[20]_INST_0 
-       (.I0(dout[26]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[20]),
-        .O(m_axi_wdata[20]));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[21]_INST_0 
-       (.I0(dout[27]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[21]),
-        .O(m_axi_wdata[21]));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[22]_INST_0 
-       (.I0(dout[28]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[22]),
-        .O(m_axi_wdata[22]));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[23]_INST_0 
-       (.I0(dout[29]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[23]),
-        .O(m_axi_wdata[23]));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[24]_INST_0 
-       (.I0(dout[30]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[24]),
-        .O(m_axi_wdata[24]));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[25]_INST_0 
-       (.I0(dout[31]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[25]),
-        .O(m_axi_wdata[25]));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[26]_INST_0 
-       (.I0(dout[32]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[26]),
-        .O(m_axi_wdata[26]));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[27]_INST_0 
-       (.I0(dout[33]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[27]),
-        .O(m_axi_wdata[27]));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[28]_INST_0 
-       (.I0(dout[34]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[28]),
-        .O(m_axi_wdata[28]));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[29]_INST_0 
-       (.I0(dout[35]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[29]),
-        .O(m_axi_wdata[29]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[2]_INST_0 
-       (.I0(dout[8]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[2]),
-        .O(m_axi_wdata[2]));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[30]_INST_0 
-       (.I0(dout[36]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[30]),
-        .O(m_axi_wdata[30]));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[31]_INST_0 
-       (.I0(dout[37]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[31]),
-        .O(m_axi_wdata[31]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[3]_INST_0 
-       (.I0(dout[9]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[3]),
-        .O(m_axi_wdata[3]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[4]_INST_0 
-       (.I0(dout[10]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[4]),
-        .O(m_axi_wdata[4]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[5]_INST_0 
-       (.I0(dout[11]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[5]),
-        .O(m_axi_wdata[5]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[6]_INST_0 
-       (.I0(dout[12]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[6]),
-        .O(m_axi_wdata[6]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[7]_INST_0 
-       (.I0(dout[13]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[7]),
-        .O(m_axi_wdata[7]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[8]_INST_0 
-       (.I0(dout[14]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[8]),
-        .O(m_axi_wdata[8]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wdata[9]_INST_0 
-       (.I0(dout[15]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wdata[9]),
-        .O(m_axi_wdata[9]));
-  LUT5 #(
-    .INIT(32'h0202FE02)) 
-    m_axi_wlast_INST_0
-       (.I0(dout[1]),
         .I1(swr_lnk_hndlr_in_progress_r_reg_0),
         .I2(slv_wait_for_rst_r),
-        .I3(m_axi_wlast_INST_0_i_1_n_0),
-        .I4(m_axi_wlast_INST_0_i_2_n_0),
+        .I3(s_lnk_hndlr_awvalid),
+        .O(m_axi_awvalid));
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  LUT5 #(
+    .INIT(32'hA8A8A8AB)) 
+    m_axi_bready_INST_0
+       (.I0(s_lnk_hndlr_bready_r_reg_0),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(full),
+        .I4(wr_rst_busy),
+        .O(m_axi_bready));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[0]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[0]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[6]),
+        .O(m_axi_wdata[0]));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[10]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[10]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[16]),
+        .O(m_axi_wdata[10]));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[11]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[11]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[17]),
+        .O(m_axi_wdata[11]));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[12]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[12]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[18]),
+        .O(m_axi_wdata[12]));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[13]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[13]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[19]),
+        .O(m_axi_wdata[13]));
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[14]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[14]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[20]),
+        .O(m_axi_wdata[14]));
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[15]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[15]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[21]),
+        .O(m_axi_wdata[15]));
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[16]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[16]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[22]),
+        .O(m_axi_wdata[16]));
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[17]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[17]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[23]),
+        .O(m_axi_wdata[17]));
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[18]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[18]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[24]),
+        .O(m_axi_wdata[18]));
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[19]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[19]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[25]),
+        .O(m_axi_wdata[19]));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[1]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[1]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[7]),
+        .O(m_axi_wdata[1]));
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[20]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[20]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[26]),
+        .O(m_axi_wdata[20]));
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[21]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[21]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[27]),
+        .O(m_axi_wdata[21]));
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[22]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[22]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[28]),
+        .O(m_axi_wdata[22]));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[23]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[23]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[29]),
+        .O(m_axi_wdata[23]));
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[24]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[24]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[30]),
+        .O(m_axi_wdata[24]));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[25]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[25]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[31]),
+        .O(m_axi_wdata[25]));
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[26]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[26]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[32]),
+        .O(m_axi_wdata[26]));
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[27]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[27]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[33]),
+        .O(m_axi_wdata[27]));
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[28]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[28]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[34]),
+        .O(m_axi_wdata[28]));
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[29]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[29]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[35]),
+        .O(m_axi_wdata[29]));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[2]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[2]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[8]),
+        .O(m_axi_wdata[2]));
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[30]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[30]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[36]),
+        .O(m_axi_wdata[30]));
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[31]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[31]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[37]),
+        .O(m_axi_wdata[31]));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[3]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[3]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[9]),
+        .O(m_axi_wdata[3]));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[4]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[4]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[10]),
+        .O(m_axi_wdata[4]));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[5]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[5]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[11]),
+        .O(m_axi_wdata[5]));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[6]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[6]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[12]),
+        .O(m_axi_wdata[6]));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[7]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[7]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[13]),
+        .O(m_axi_wdata[7]));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[8]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[8]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[14]),
+        .O(m_axi_wdata[8]));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wdata[9]_INST_0 
+       (.I0(s_lnk_hndlr_wdata[9]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[15]),
+        .O(m_axi_wdata[9]));
+  LUT5 #(
+    .INIT(32'h888F8880)) 
+    m_axi_wlast_INST_0
+       (.I0(m_axi_wlast_INST_0_i_1_n_0),
+        .I1(m_axi_wlast_INST_0_i_2_n_0),
+        .I2(slv_wait_for_rst_r),
+        .I3(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I4(dout[1]),
         .O(m_axi_wlast));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     m_axi_wlast_INST_0_i_1
-       (.I0(swr_beat_cnt_r[1]),
-        .I1(swr_beat_cnt_r[0]),
-        .I2(swr_beat_cnt_r[3]),
-        .I3(swr_beat_cnt_r[2]),
+       (.I0(swr_beat_cnt_r[0]),
+        .I1(swr_beat_cnt_r[1]),
+        .I2(swr_beat_cnt_r[2]),
+        .I3(swr_beat_cnt_r[3]),
         .O(m_axi_wlast_INST_0_i_1_n_0));
   LUT4 #(
-    .INIT(16'hFFFE)) 
+    .INIT(16'h0001)) 
     m_axi_wlast_INST_0_i_2
-       (.I0(swr_beat_cnt_r[7]),
-        .I1(swr_beat_cnt_r[6]),
-        .I2(swr_beat_cnt_r[5]),
-        .I3(swr_beat_cnt_r[4]),
+       (.I0(swr_beat_cnt_r[6]),
+        .I1(swr_beat_cnt_r[7]),
+        .I2(swr_beat_cnt_r[4]),
+        .I3(swr_beat_cnt_r[5]),
         .O(m_axi_wlast_INST_0_i_2_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wstrb[0]_INST_0 
+       (.I0(s_lnk_hndlr_wstrb[0]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[2]),
+        .O(m_axi_wstrb[0]));
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wstrb[1]_INST_0 
+       (.I0(s_lnk_hndlr_wstrb[1]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[3]),
+        .O(m_axi_wstrb[1]));
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wstrb[2]_INST_0 
+       (.I0(s_lnk_hndlr_wstrb[2]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[4]),
+        .O(m_axi_wstrb[2]));
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  LUT4 #(
+    .INIT(16'hABA8)) 
+    \m_axi_wstrb[3]_INST_0 
+       (.I0(s_lnk_hndlr_wstrb[3]),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[5]),
+        .O(m_axi_wstrb[3]));
   (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wstrb[0]_INST_0 
-       (.I0(dout[2]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wstrb[0]),
-        .O(m_axi_wstrb[0]));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wstrb[1]_INST_0 
-       (.I0(dout[3]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wstrb[1]),
-        .O(m_axi_wstrb[1]));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wstrb[2]_INST_0 
-       (.I0(dout[4]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wstrb[2]),
-        .O(m_axi_wstrb[2]));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
-    \m_axi_wstrb[3]_INST_0 
-       (.I0(dout[5]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wstrb[3]),
-        .O(m_axi_wstrb[3]));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
-  LUT4 #(
-    .INIT(16'hFE02)) 
+    .INIT(16'hABA8)) 
     \m_axi_wuser[0]_INST_0 
-       (.I0(dout[0]),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wuser),
+       (.I0(s_lnk_hndlr_wuser),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(dout[0]),
         .O(m_axi_wuser));
   LUT6 #(
-    .INIT(64'h00000000FD010000)) 
+    .INIT(64'h00000000A8AB0000)) 
     m_axi_wvalid_INST_0
-       (.I0(\s_lnk_hndlr_wstrb_r_reg[3]_0 ),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
-        .I3(s_lnk_hndlr_wvalid_r),
+       (.I0(s_lnk_hndlr_wvalid_r),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(\s_lnk_hndlr_wuser_r_reg[0]_0 ),
         .I4(cntrl_fsm_r[1]),
         .I5(cntrl_fsm_r[0]),
         .O(E));
@@ -45555,21 +45530,21 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .Q(s_lnk_hndlr_awburst[1]),
         .R(SR));
   LUT6 #(
-    .INIT(64'h0000F200F2F2F200)) 
+    .INIT(64'h8B008B008B8B8B00)) 
     \s_lnk_hndlr_awid_r[5]_i_1 
-       (.I0(chnl_up_r_reg_0),
-        .I1(out),
-        .I2(m_axi_awready),
-        .I3(s_lnk_hndlr_awvalid),
-        .I4(\s_lnk_hndlr_awid_r[5]_i_2_n_0 ),
-        .I5(empty),
+       (.I0(s_lnk_hndlr_awvalid),
+        .I1(\s_lnk_hndlr_awid_r[5]_i_2_n_0 ),
+        .I2(empty),
+        .I3(m_axi_awready),
+        .I4(chnl_up_r_reg_0),
+        .I5(out),
         .O(s_lnk_hndlr_awid_r0));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT2 #(
-    .INIT(4'h1)) 
+    .INIT(4'hE)) 
     \s_lnk_hndlr_awid_r[5]_i_2 
-       (.I0(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I1(fifo_wr_en_r_reg_0),
+       (.I0(slv_wait_for_rst_r),
+        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
         .O(\s_lnk_hndlr_awid_r[5]_i_2_n_0 ));
   FDRE \s_lnk_hndlr_awid_r_reg[0] 
        (.C(m_aclk),
@@ -45687,40 +45662,40 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
     s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_10
        (.I0(swr_addr_trans_cntr_r_reg[0]),
         .I1(swr_data_trans_cntr_r_reg[0]),
-        .I2(swr_data_trans_cntr_r_reg[1]),
-        .I3(swr_addr_trans_cntr_r_reg[1]),
+        .I2(swr_addr_trans_cntr_r_reg[1]),
+        .I3(swr_data_trans_cntr_r_reg[1]),
         .O(s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_10_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_2
        (.I0(swr_data_trans_cntr_r_reg[6]),
         .I1(swr_addr_trans_cntr_r_reg[6]),
-        .I2(swr_addr_trans_cntr_r_reg[7]),
-        .I3(swr_data_trans_cntr_r_reg[7]),
+        .I2(swr_data_trans_cntr_r_reg[7]),
+        .I3(swr_addr_trans_cntr_r_reg[7]),
         .O(s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_2_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_3
        (.I0(swr_data_trans_cntr_r_reg[4]),
         .I1(swr_addr_trans_cntr_r_reg[4]),
-        .I2(swr_addr_trans_cntr_r_reg[5]),
-        .I3(swr_data_trans_cntr_r_reg[5]),
+        .I2(swr_data_trans_cntr_r_reg[5]),
+        .I3(swr_addr_trans_cntr_r_reg[5]),
         .O(s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_3_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_4
        (.I0(swr_data_trans_cntr_r_reg[2]),
         .I1(swr_addr_trans_cntr_r_reg[2]),
-        .I2(swr_addr_trans_cntr_r_reg[3]),
-        .I3(swr_data_trans_cntr_r_reg[3]),
+        .I2(swr_data_trans_cntr_r_reg[3]),
+        .I3(swr_addr_trans_cntr_r_reg[3]),
         .O(s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_4_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_5
        (.I0(swr_data_trans_cntr_r_reg[0]),
         .I1(swr_addr_trans_cntr_r_reg[0]),
-        .I2(swr_addr_trans_cntr_r_reg[1]),
-        .I3(swr_data_trans_cntr_r_reg[1]),
+        .I2(swr_data_trans_cntr_r_reg[1]),
+        .I3(swr_addr_trans_cntr_r_reg[1]),
         .O(s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_5_n_0));
   LUT2 #(
     .INIT(4'h9)) 
@@ -45733,44 +45708,44 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
     s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_7
        (.I0(swr_addr_trans_cntr_r_reg[6]),
         .I1(swr_data_trans_cntr_r_reg[6]),
-        .I2(swr_data_trans_cntr_r_reg[7]),
-        .I3(swr_addr_trans_cntr_r_reg[7]),
+        .I2(swr_addr_trans_cntr_r_reg[7]),
+        .I3(swr_data_trans_cntr_r_reg[7]),
         .O(s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_7_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_8
        (.I0(swr_addr_trans_cntr_r_reg[4]),
         .I1(swr_data_trans_cntr_r_reg[4]),
-        .I2(swr_data_trans_cntr_r_reg[5]),
-        .I3(swr_addr_trans_cntr_r_reg[5]),
+        .I2(swr_addr_trans_cntr_r_reg[5]),
+        .I3(swr_data_trans_cntr_r_reg[5]),
         .O(s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_8_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_9
        (.I0(swr_addr_trans_cntr_r_reg[2]),
         .I1(swr_data_trans_cntr_r_reg[2]),
-        .I2(swr_data_trans_cntr_r_reg[3]),
-        .I3(swr_addr_trans_cntr_r_reg[3]),
+        .I2(swr_addr_trans_cntr_r_reg[3]),
+        .I3(swr_data_trans_cntr_r_reg[3]),
         .O(s_lnk_hndlr_awvalid_gen_fsm_r2_carry_i_9_n_0));
   LUT6 #(
-    .INIT(64'h5F5F0A0B0A0B0A0B)) 
+    .INIT(64'h0000FFFF8888888F)) 
     s_lnk_hndlr_awvalid_gen_fsm_r_i_1
-       (.I0(s_lnk_hndlr_awvalid),
-        .I1(s_lnk_hndlr_awvalid_gen_fsm_r_i_2_n_0),
-        .I2(m_axi_awready),
-        .I3(s_lnk_hndlr_awvalid_gen_fsm_r_reg_0),
-        .I4(s_lnk_hndlr_awvalid_gen_fsm_r2),
-        .I5(swr_lnk_hndlr_in_progress_r_reg_0),
+       (.I0(s_lnk_hndlr_awvalid_gen_fsm_r2),
+        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I2(s_lnk_hndlr_awvalid_gen_fsm_r_reg_0),
+        .I3(s_lnk_hndlr_awvalid_gen_fsm_r_i_3_n_0),
+        .I4(m_axi_awready),
+        .I5(s_lnk_hndlr_awvalid),
         .O(s_lnk_hndlr_awvalid_r));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT4 #(
     .INIT(16'h5754)) 
-    s_lnk_hndlr_awvalid_gen_fsm_r_i_2
+    s_lnk_hndlr_awvalid_gen_fsm_r_i_3
        (.I0(s_lnk_hndlr_awvalid),
-        .I1(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I2(fifo_wr_en_r_reg_0),
+        .I1(slv_wait_for_rst_r),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
         .I3(empty),
-        .O(s_lnk_hndlr_awvalid_gen_fsm_r_i_2_n_0));
+        .O(s_lnk_hndlr_awvalid_gen_fsm_r_i_3_n_0));
   FDRE s_lnk_hndlr_awvalid_gen_fsm_r_reg
        (.C(m_aclk),
         .CE(1'b1),
@@ -45790,325 +45765,325 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .D(s_lnk_hndlr_bready_r_i_1_n_0),
         .Q(s_lnk_hndlr_bready_r_reg_0),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT5 #(
-    .INIT(32'h0000ABA8)) 
+    .INIT(32'hAAA80008)) 
     \s_lnk_hndlr_wdata_r[0]_i_1 
-       (.I0(s_lnk_hndlr_wdata[0]),
-        .I1(fifo_wr_en_r_reg_0),
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[6]),
         .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[6]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[0]),
         .O(\s_lnk_hndlr_wdata_r[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[10]_i_1 
-       (.I0(s_lnk_hndlr_wdata[10]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[16]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[11]_i_1 
-       (.I0(s_lnk_hndlr_wdata[11]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[17]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[12]_i_1 
-       (.I0(s_lnk_hndlr_wdata[12]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[18]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[13]_i_1 
-       (.I0(s_lnk_hndlr_wdata[13]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[19]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[14]_i_1 
-       (.I0(s_lnk_hndlr_wdata[14]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[20]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[15]_i_1 
-       (.I0(s_lnk_hndlr_wdata[15]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[21]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[16]_i_1 
-       (.I0(s_lnk_hndlr_wdata[16]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[22]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[16]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[17]_i_1 
-       (.I0(s_lnk_hndlr_wdata[17]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[23]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[17]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[18]_i_1 
-       (.I0(s_lnk_hndlr_wdata[18]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[24]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[18]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[19]_i_1 
-       (.I0(s_lnk_hndlr_wdata[19]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[25]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[19]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[1]_i_1 
-       (.I0(s_lnk_hndlr_wdata[1]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[7]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[20]_i_1 
-       (.I0(s_lnk_hndlr_wdata[20]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[26]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[21]_i_1 
-       (.I0(s_lnk_hndlr_wdata[21]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[27]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[21]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[22]_i_1 
-       (.I0(s_lnk_hndlr_wdata[22]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[28]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[23]_i_1 
-       (.I0(s_lnk_hndlr_wdata[23]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[29]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[23]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[24]_i_1 
-       (.I0(s_lnk_hndlr_wdata[24]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[30]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[24]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[25]_i_1 
-       (.I0(s_lnk_hndlr_wdata[25]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[31]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[25]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[26]_i_1 
-       (.I0(s_lnk_hndlr_wdata[26]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[32]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[27]_i_1 
-       (.I0(s_lnk_hndlr_wdata[27]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[33]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[27]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[28]_i_1 
-       (.I0(s_lnk_hndlr_wdata[28]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[34]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[28]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[29]_i_1 
-       (.I0(s_lnk_hndlr_wdata[29]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[35]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[29]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[2]_i_1 
-       (.I0(s_lnk_hndlr_wdata[2]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[8]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[30]_i_1 
-       (.I0(s_lnk_hndlr_wdata[30]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[36]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[30]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[31]_i_1 
-       (.I0(s_lnk_hndlr_wdata[31]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[37]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[3]_i_1 
-       (.I0(s_lnk_hndlr_wdata[3]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[9]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[4]_i_1 
-       (.I0(s_lnk_hndlr_wdata[4]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[10]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
-  LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[5]_i_1 
-       (.I0(s_lnk_hndlr_wdata[5]),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[11]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[5]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[6]_i_1 
-       (.I0(s_lnk_hndlr_wdata[6]),
-        .I1(fifo_wr_en_r_reg_0),
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[10]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[16]),
         .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[12]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[6]_i_1_n_0 ));
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[10]),
+        .O(\s_lnk_hndlr_wdata_r[10]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[7]_i_1 
-       (.I0(s_lnk_hndlr_wdata[7]),
-        .I1(fifo_wr_en_r_reg_0),
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[11]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[17]),
         .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[13]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[7]_i_1_n_0 ));
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[11]),
+        .O(\s_lnk_hndlr_wdata_r[11]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[8]_i_1 
-       (.I0(s_lnk_hndlr_wdata[8]),
-        .I1(fifo_wr_en_r_reg_0),
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[12]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[18]),
         .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[14]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
-        .O(\s_lnk_hndlr_wdata_r[8]_i_1_n_0 ));
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[12]),
+        .O(\s_lnk_hndlr_wdata_r[12]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT5 #(
-    .INIT(32'h0000ABA8)) 
-    \s_lnk_hndlr_wdata_r[9]_i_1 
-       (.I0(s_lnk_hndlr_wdata[9]),
-        .I1(fifo_wr_en_r_reg_0),
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[13]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[19]),
         .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[15]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[13]),
+        .O(\s_lnk_hndlr_wdata_r[13]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[14]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[20]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[14]),
+        .O(\s_lnk_hndlr_wdata_r[14]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[15]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[21]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[15]),
+        .O(\s_lnk_hndlr_wdata_r[15]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[16]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[22]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[16]),
+        .O(\s_lnk_hndlr_wdata_r[16]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[17]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[23]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[17]),
+        .O(\s_lnk_hndlr_wdata_r[17]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[18]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[24]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[18]),
+        .O(\s_lnk_hndlr_wdata_r[18]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[19]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[25]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[19]),
+        .O(\s_lnk_hndlr_wdata_r[19]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[1]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[7]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[1]),
+        .O(\s_lnk_hndlr_wdata_r[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[20]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[26]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[20]),
+        .O(\s_lnk_hndlr_wdata_r[20]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[21]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[27]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[21]),
+        .O(\s_lnk_hndlr_wdata_r[21]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[22]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[28]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[22]),
+        .O(\s_lnk_hndlr_wdata_r[22]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[23]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[29]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[23]),
+        .O(\s_lnk_hndlr_wdata_r[23]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[24]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[30]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[24]),
+        .O(\s_lnk_hndlr_wdata_r[24]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[25]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[31]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[25]),
+        .O(\s_lnk_hndlr_wdata_r[25]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[26]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[32]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[26]),
+        .O(\s_lnk_hndlr_wdata_r[26]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[27]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[33]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[27]),
+        .O(\s_lnk_hndlr_wdata_r[27]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[28]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[34]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[28]),
+        .O(\s_lnk_hndlr_wdata_r[28]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[29]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[35]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[29]),
+        .O(\s_lnk_hndlr_wdata_r[29]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[2]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[8]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[2]),
+        .O(\s_lnk_hndlr_wdata_r[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[30]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[36]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[30]),
+        .O(\s_lnk_hndlr_wdata_r[30]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[31]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[37]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[31]),
+        .O(\s_lnk_hndlr_wdata_r[31]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[3]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[9]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[3]),
+        .O(\s_lnk_hndlr_wdata_r[3]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[4]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[10]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[4]),
+        .O(\s_lnk_hndlr_wdata_r[4]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[5]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[11]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[5]),
+        .O(\s_lnk_hndlr_wdata_r[5]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[6]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[12]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[6]),
+        .O(\s_lnk_hndlr_wdata_r[6]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[7]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[13]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[7]),
+        .O(\s_lnk_hndlr_wdata_r[7]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[8]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[14]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[8]),
+        .O(\s_lnk_hndlr_wdata_r[8]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  LUT5 #(
+    .INIT(32'hAAA80008)) 
+    \s_lnk_hndlr_wdata_r[9]_i_1 
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[15]),
+        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wdata[9]),
         .O(\s_lnk_hndlr_wdata_r[9]_i_1_n_0 ));
   FDRE \s_lnk_hndlr_wdata_r_reg[0] 
        (.C(m_aclk),
@@ -46302,52 +46277,52 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .D(\s_lnk_hndlr_wdata_r[9]_i_1_n_0 ),
         .Q(s_lnk_hndlr_wdata[9]),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT5 #(
-    .INIT(32'h0000ABA8)) 
+    .INIT(32'hAAA80008)) 
     \s_lnk_hndlr_wstrb_r[0]_i_1 
-       (.I0(s_lnk_hndlr_wstrb[0]),
-        .I1(fifo_wr_en_r_reg_0),
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[2]),
         .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[2]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wstrb[0]),
         .O(\s_lnk_hndlr_wstrb_r[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT5 #(
-    .INIT(32'h0000ABA8)) 
+    .INIT(32'hAAA80008)) 
     \s_lnk_hndlr_wstrb_r[1]_i_1 
-       (.I0(s_lnk_hndlr_wstrb[1]),
-        .I1(fifo_wr_en_r_reg_0),
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[3]),
         .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[3]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wstrb[1]),
         .O(\s_lnk_hndlr_wstrb_r[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT5 #(
-    .INIT(32'h0000ABA8)) 
+    .INIT(32'hAAA80008)) 
     \s_lnk_hndlr_wstrb_r[2]_i_1 
-       (.I0(s_lnk_hndlr_wstrb[2]),
-        .I1(fifo_wr_en_r_reg_0),
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[4]),
         .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[4]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wstrb[2]),
         .O(\s_lnk_hndlr_wstrb_r[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT5 #(
-    .INIT(32'h0000ABA8)) 
+    .INIT(32'hAAA80008)) 
     \s_lnk_hndlr_wstrb_r[3]_i_1 
-       (.I0(s_lnk_hndlr_wstrb[3]),
-        .I1(fifo_wr_en_r_reg_0),
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[5]),
         .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[5]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wstrb[3]),
         .O(\s_lnk_hndlr_wstrb_r[3]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFD1FFFFFFFF)) 
+    .INIT(64'h000000D100000000)) 
     \s_lnk_hndlr_wstrb_r[3]_i_2 
-       (.I0(s_lnk_hndlr_wvalid_r),
+       (.I0(\s_lnk_hndlr_wuser_r_reg[0]_0 ),
         .I1(\s_lnk_hndlr_awid_r[5]_i_2_n_0 ),
-        .I2(\s_lnk_hndlr_wstrb_r_reg[3]_0 ),
+        .I2(s_lnk_hndlr_wvalid_r),
         .I3(m_axi_wready),
         .I4(cntrl_fsm_r[0]),
         .I5(cntrl_fsm_r[1]),
@@ -46376,15 +46351,15 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .D(\s_lnk_hndlr_wstrb_r[3]_i_1_n_0 ),
         .Q(s_lnk_hndlr_wstrb[3]),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT5 #(
-    .INIT(32'h0000ABA8)) 
+    .INIT(32'hAAA80008)) 
     \s_lnk_hndlr_wuser_r[0]_i_1 
-       (.I0(s_lnk_hndlr_wuser),
-        .I1(fifo_wr_en_r_reg_0),
+       (.I0(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I1(dout[0]),
         .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(dout[0]),
-        .I4(\s_lnk_hndlr_wstrb_r[3]_i_2_n_0 ),
+        .I3(slv_wait_for_rst_r),
+        .I4(s_lnk_hndlr_wuser),
         .O(s_lnk_hndlr_wuser_r));
   FDRE \s_lnk_hndlr_wuser_r_reg[0] 
        (.C(m_aclk),
@@ -46403,12 +46378,12 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .I5(s_lnk_hndlr_wvalid_r),
         .O(s_lnk_hndlr_wvalid_r_i_1_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     s_lnk_hndlr_wvalid_r_i_10
        (.I0(swr_addr_trans_cntr_r_reg[0]),
         .I1(swr_data_trans_cntr_r_reg[0]),
-        .I2(swr_data_trans_cntr_r_reg[1]),
-        .I3(swr_addr_trans_cntr_r_reg[1]),
+        .I2(swr_addr_trans_cntr_r_reg[1]),
+        .I3(swr_data_trans_cntr_r_reg[1]),
         .O(s_lnk_hndlr_wvalid_r_i_10_n_0));
   LUT2 #(
     .INIT(4'h9)) 
@@ -46421,32 +46396,32 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
     s_lnk_hndlr_wvalid_r_i_12
        (.I0(swr_addr_trans_cntr_r_reg[6]),
         .I1(swr_data_trans_cntr_r_reg[6]),
-        .I2(swr_data_trans_cntr_r_reg[7]),
-        .I3(swr_addr_trans_cntr_r_reg[7]),
+        .I2(swr_addr_trans_cntr_r_reg[7]),
+        .I3(swr_data_trans_cntr_r_reg[7]),
         .O(s_lnk_hndlr_wvalid_r_i_12_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     s_lnk_hndlr_wvalid_r_i_13
        (.I0(swr_addr_trans_cntr_r_reg[4]),
         .I1(swr_data_trans_cntr_r_reg[4]),
-        .I2(swr_data_trans_cntr_r_reg[5]),
-        .I3(swr_addr_trans_cntr_r_reg[5]),
+        .I2(swr_addr_trans_cntr_r_reg[5]),
+        .I3(swr_data_trans_cntr_r_reg[5]),
         .O(s_lnk_hndlr_wvalid_r_i_13_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     s_lnk_hndlr_wvalid_r_i_14
        (.I0(swr_addr_trans_cntr_r_reg[2]),
         .I1(swr_data_trans_cntr_r_reg[2]),
-        .I2(swr_data_trans_cntr_r_reg[3]),
-        .I3(swr_addr_trans_cntr_r_reg[3]),
+        .I2(swr_addr_trans_cntr_r_reg[3]),
+        .I3(swr_data_trans_cntr_r_reg[3]),
         .O(s_lnk_hndlr_wvalid_r_i_14_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     s_lnk_hndlr_wvalid_r_i_15
        (.I0(swr_addr_trans_cntr_r_reg[0]),
         .I1(swr_data_trans_cntr_r_reg[0]),
-        .I2(swr_data_trans_cntr_r_reg[1]),
-        .I3(swr_addr_trans_cntr_r_reg[1]),
+        .I2(swr_addr_trans_cntr_r_reg[1]),
+        .I3(swr_data_trans_cntr_r_reg[1]),
         .O(s_lnk_hndlr_wvalid_r_i_15_n_0));
   LUT5 #(
     .INIT(32'hFFFFFFFD)) 
@@ -46454,10 +46429,10 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
        (.I0(s_lnk_hndlr_rd_fsm_r[1]),
         .I1(s_lnk_hndlr_rd_fsm_r[0]),
         .I2(last_wr_data_r2),
-        .I3(last_wr_data_r),
-        .I4(last_wr_data_r1),
+        .I3(last_wr_data_r1),
+        .I4(last_wr_data_r),
         .O(s_lnk_hndlr_wvalid_r_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT3 #(
     .INIT(8'h0D)) 
     s_lnk_hndlr_wvalid_r_i_4
@@ -46466,14 +46441,14 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .I2(swr_lnk_hndlr_in_progress_r_reg_0),
         .O(s_lnk_hndlr_wvalid_r_i_4_n_0));
   LUT6 #(
-    .INIT(64'h2202222200000000)) 
+    .INIT(64'h00000000DF000000)) 
     s_lnk_hndlr_wvalid_r_i_5
-       (.I0(chnl_up_r_reg_0),
-        .I1(out),
-        .I2(cntrl_fsm_r[1]),
-        .I3(cntrl_fsm_r[0]),
-        .I4(m_axi_wready),
-        .I5(E),
+       (.I0(cntrl_fsm_r[1]),
+        .I1(cntrl_fsm_r[0]),
+        .I2(m_axi_wready),
+        .I3(E),
+        .I4(chnl_up_r_reg_0),
+        .I5(out),
         .O(s_lnk_hndlr_wvalid_r_i_5_n_0));
   LUT2 #(
     .INIT(4'h2)) 
@@ -46482,28 +46457,28 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .I1(swr_data_trans_cntr_r_reg[8]),
         .O(s_lnk_hndlr_wvalid_r_i_6_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     s_lnk_hndlr_wvalid_r_i_7
        (.I0(swr_addr_trans_cntr_r_reg[6]),
         .I1(swr_data_trans_cntr_r_reg[6]),
-        .I2(swr_data_trans_cntr_r_reg[7]),
-        .I3(swr_addr_trans_cntr_r_reg[7]),
+        .I2(swr_addr_trans_cntr_r_reg[7]),
+        .I3(swr_data_trans_cntr_r_reg[7]),
         .O(s_lnk_hndlr_wvalid_r_i_7_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     s_lnk_hndlr_wvalid_r_i_8
        (.I0(swr_addr_trans_cntr_r_reg[4]),
         .I1(swr_data_trans_cntr_r_reg[4]),
-        .I2(swr_data_trans_cntr_r_reg[5]),
-        .I3(swr_addr_trans_cntr_r_reg[5]),
+        .I2(swr_addr_trans_cntr_r_reg[5]),
+        .I3(swr_data_trans_cntr_r_reg[5]),
         .O(s_lnk_hndlr_wvalid_r_i_8_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     s_lnk_hndlr_wvalid_r_i_9
        (.I0(swr_addr_trans_cntr_r_reg[2]),
         .I1(swr_data_trans_cntr_r_reg[2]),
-        .I2(swr_data_trans_cntr_r_reg[3]),
-        .I3(swr_addr_trans_cntr_r_reg[3]),
+        .I2(swr_addr_trans_cntr_r_reg[3]),
+        .I3(swr_data_trans_cntr_r_reg[3]),
         .O(s_lnk_hndlr_wvalid_r_i_9_n_0));
   FDRE s_lnk_hndlr_wvalid_r_reg
        (.C(m_aclk),
@@ -46520,22 +46495,21 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .DI({1'b0,1'b0,1'b0,s_lnk_hndlr_wvalid_r_i_6_n_0,s_lnk_hndlr_wvalid_r_i_7_n_0,s_lnk_hndlr_wvalid_r_i_8_n_0,s_lnk_hndlr_wvalid_r_i_9_n_0,s_lnk_hndlr_wvalid_r_i_10_n_0}),
         .O(NLW_s_lnk_hndlr_wvalid_r_reg_i_3_O_UNCONNECTED[7:0]),
         .S({1'b0,1'b0,1'b0,s_lnk_hndlr_wvalid_r_i_11_n_0,s_lnk_hndlr_wvalid_r_i_12_n_0,s_lnk_hndlr_wvalid_r_i_13_n_0,s_lnk_hndlr_wvalid_r_i_14_n_0,s_lnk_hndlr_wvalid_r_i_15_n_0}));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \swr_addr_trans_cntr_r[0]_i_1 
        (.I0(swr_addr_trans_cntr_r_reg[0]),
         .O(\swr_addr_trans_cntr_r[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h5559999955595555)) 
+    .INIT(64'h6AAA6AAA6AAA6A66)) 
     \swr_addr_trans_cntr_r[8]_i_1 
-       (.I0(\FSM_sequential_cntrl_fsm_r[1]_i_3_n_0 ),
+       (.I0(cntrl_cntr_r318_out),
         .I1(m_axi_bvalid),
-        .I2(wr_rst_busy),
-        .I3(full),
-        .I4(\s_lnk_hndlr_awid_r[5]_i_2_n_0 ),
-        .I5(s_lnk_hndlr_bready_r_reg_0),
-        .O(\swr_addr_trans_cntr_r[8]_i_1_n_0 ));
+        .I2(s_lnk_hndlr_bready_r_reg_0),
+        .I3(\s_lnk_hndlr_awid_r[5]_i_2_n_0 ),
+        .I4(full),
+        .I5(wr_rst_busy),
+        .O(swr_addr_trans_cntr_r));
   LUT2 #(
     .INIT(4'h9)) 
     \swr_addr_trans_cntr_r[8]_i_10 
@@ -46543,14 +46517,14 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .I1(swr_addr_trans_cntr_r_reg[2]),
         .O(\swr_addr_trans_cntr_r[8]_i_10_n_0 ));
   LUT6 #(
-    .INIT(64'h6AAA6A6666666666)) 
+    .INIT(64'hA6A666A6666666A6)) 
     \swr_addr_trans_cntr_r[8]_i_11 
        (.I0(swr_addr_trans_cntr_r_reg[1]),
-        .I1(\swr_data_trans_cntr_r[8]_i_12_n_0 ),
-        .I2(empty),
-        .I3(\s_lnk_hndlr_awid_r[5]_i_2_n_0 ),
-        .I4(s_lnk_hndlr_awvalid),
-        .I5(m_axi_awready),
+        .I1(\swr_addr_trans_cntr_r_reg[8]_0 ),
+        .I2(m_axi_awready),
+        .I3(empty),
+        .I4(\s_lnk_hndlr_awid_r[5]_i_2_n_0 ),
+        .I5(s_lnk_hndlr_awvalid),
         .O(\swr_addr_trans_cntr_r[8]_i_11_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
@@ -46595,55 +46569,55 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .O(\swr_addr_trans_cntr_r[8]_i_9_n_0 ));
   FDRE \swr_addr_trans_cntr_r_reg[0] 
        (.C(m_aclk),
-        .CE(\swr_addr_trans_cntr_r[8]_i_1_n_0 ),
+        .CE(swr_addr_trans_cntr_r),
         .D(\swr_addr_trans_cntr_r[0]_i_1_n_0 ),
         .Q(swr_addr_trans_cntr_r_reg[0]),
         .R(SR));
   FDRE \swr_addr_trans_cntr_r_reg[1] 
        (.C(m_aclk),
-        .CE(\swr_addr_trans_cntr_r[8]_i_1_n_0 ),
+        .CE(swr_addr_trans_cntr_r),
         .D(\swr_addr_trans_cntr_r_reg[8]_i_2_n_15 ),
         .Q(swr_addr_trans_cntr_r_reg[1]),
         .R(SR));
   FDRE \swr_addr_trans_cntr_r_reg[2] 
        (.C(m_aclk),
-        .CE(\swr_addr_trans_cntr_r[8]_i_1_n_0 ),
+        .CE(swr_addr_trans_cntr_r),
         .D(\swr_addr_trans_cntr_r_reg[8]_i_2_n_14 ),
         .Q(swr_addr_trans_cntr_r_reg[2]),
         .R(SR));
   FDRE \swr_addr_trans_cntr_r_reg[3] 
        (.C(m_aclk),
-        .CE(\swr_addr_trans_cntr_r[8]_i_1_n_0 ),
+        .CE(swr_addr_trans_cntr_r),
         .D(\swr_addr_trans_cntr_r_reg[8]_i_2_n_13 ),
         .Q(swr_addr_trans_cntr_r_reg[3]),
         .R(SR));
   FDRE \swr_addr_trans_cntr_r_reg[4] 
        (.C(m_aclk),
-        .CE(\swr_addr_trans_cntr_r[8]_i_1_n_0 ),
+        .CE(swr_addr_trans_cntr_r),
         .D(\swr_addr_trans_cntr_r_reg[8]_i_2_n_12 ),
         .Q(swr_addr_trans_cntr_r_reg[4]),
         .R(SR));
   FDRE \swr_addr_trans_cntr_r_reg[5] 
        (.C(m_aclk),
-        .CE(\swr_addr_trans_cntr_r[8]_i_1_n_0 ),
+        .CE(swr_addr_trans_cntr_r),
         .D(\swr_addr_trans_cntr_r_reg[8]_i_2_n_11 ),
         .Q(swr_addr_trans_cntr_r_reg[5]),
         .R(SR));
   FDRE \swr_addr_trans_cntr_r_reg[6] 
        (.C(m_aclk),
-        .CE(\swr_addr_trans_cntr_r[8]_i_1_n_0 ),
+        .CE(swr_addr_trans_cntr_r),
         .D(\swr_addr_trans_cntr_r_reg[8]_i_2_n_10 ),
         .Q(swr_addr_trans_cntr_r_reg[6]),
         .R(SR));
   FDRE \swr_addr_trans_cntr_r_reg[7] 
        (.C(m_aclk),
-        .CE(\swr_addr_trans_cntr_r[8]_i_1_n_0 ),
+        .CE(swr_addr_trans_cntr_r),
         .D(\swr_addr_trans_cntr_r_reg[8]_i_2_n_9 ),
         .Q(swr_addr_trans_cntr_r_reg[7]),
         .R(SR));
   FDRE \swr_addr_trans_cntr_r_reg[8] 
        (.C(m_aclk),
-        .CE(\swr_addr_trans_cntr_r[8]_i_1_n_0 ),
+        .CE(swr_addr_trans_cntr_r),
         .D(\swr_addr_trans_cntr_r_reg[8]_i_2_n_8 ),
         .Q(swr_addr_trans_cntr_r_reg[8]),
         .R(SR));
@@ -46656,119 +46630,119 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .DI({1'b0,swr_addr_trans_cntr_r_reg[6:1],\swr_addr_trans_cntr_r[8]_i_3_n_0 }),
         .O({\swr_addr_trans_cntr_r_reg[8]_i_2_n_8 ,\swr_addr_trans_cntr_r_reg[8]_i_2_n_9 ,\swr_addr_trans_cntr_r_reg[8]_i_2_n_10 ,\swr_addr_trans_cntr_r_reg[8]_i_2_n_11 ,\swr_addr_trans_cntr_r_reg[8]_i_2_n_12 ,\swr_addr_trans_cntr_r_reg[8]_i_2_n_13 ,\swr_addr_trans_cntr_r_reg[8]_i_2_n_14 ,\swr_addr_trans_cntr_r_reg[8]_i_2_n_15 }),
         .S({\swr_addr_trans_cntr_r[8]_i_4_n_0 ,\swr_addr_trans_cntr_r[8]_i_5_n_0 ,\swr_addr_trans_cntr_r[8]_i_6_n_0 ,\swr_addr_trans_cntr_r[8]_i_7_n_0 ,\swr_addr_trans_cntr_r[8]_i_8_n_0 ,\swr_addr_trans_cntr_r[8]_i_9_n_0 ,\swr_addr_trans_cntr_r[8]_i_10_n_0 ,\swr_addr_trans_cntr_r[8]_i_11_n_0 }));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT5 #(
-    .INIT(32'h8A88BABB)) 
+    .INIT(32'hDFDD1011)) 
     \swr_beat_cnt_r[0]_i_1 
-       (.I0(fifo_rd_data_w[0]),
+       (.I0(swr_beat_cnt_r[0]),
         .I1(cntrl_cntr_r217_out),
         .I2(s_lnk_hndlr_rd_fsm_r[1]),
         .I3(s_lnk_hndlr_rd_fsm_r[0]),
-        .I4(swr_beat_cnt_r[0]),
+        .I4(fifo_rd_data_w[0]),
         .O(p_2_in[0]));
   LUT6 #(
-    .INIT(64'hBABB8A888A88BABB)) 
+    .INIT(64'hF9FFF9F909000909)) 
     \swr_beat_cnt_r[1]_i_1 
-       (.I0(fifo_rd_data_w[1]),
-        .I1(cntrl_cntr_r217_out),
-        .I2(s_lnk_hndlr_rd_fsm_r[1]),
-        .I3(s_lnk_hndlr_rd_fsm_r[0]),
-        .I4(swr_beat_cnt_r[0]),
-        .I5(swr_beat_cnt_r[1]),
+       (.I0(swr_beat_cnt_r[1]),
+        .I1(swr_beat_cnt_r[0]),
+        .I2(cntrl_cntr_r217_out),
+        .I3(s_lnk_hndlr_rd_fsm_r[1]),
+        .I4(s_lnk_hndlr_rd_fsm_r[0]),
+        .I5(fifo_rd_data_w[1]),
         .O(p_2_in[1]));
   LUT6 #(
-    .INIT(64'hABABABA8A8A8A8AB)) 
+    .INIT(64'hFFFFFFE1000000E1)) 
     \swr_beat_cnt_r[2]_i_1 
-       (.I0(fifo_rd_data_w[2]),
-        .I1(cntrl_cntr_r217_out),
-        .I2(\swr_beat_cnt_r[7]_i_3_n_0 ),
-        .I3(swr_beat_cnt_r[0]),
-        .I4(swr_beat_cnt_r[1]),
-        .I5(swr_beat_cnt_r[2]),
+       (.I0(swr_beat_cnt_r[1]),
+        .I1(swr_beat_cnt_r[0]),
+        .I2(swr_beat_cnt_r[2]),
+        .I3(cntrl_cntr_r217_out),
+        .I4(\swr_beat_cnt_r[7]_i_4_n_0 ),
+        .I5(fifo_rd_data_w[2]),
         .O(p_2_in[2]));
   LUT6 #(
-    .INIT(64'hABABABA8A8A8A8AB)) 
+    .INIT(64'hFFFFFFE1000000E1)) 
     \swr_beat_cnt_r[3]_i_1 
-       (.I0(fifo_rd_data_w[3]),
-        .I1(cntrl_cntr_r217_out),
-        .I2(\swr_beat_cnt_r[7]_i_3_n_0 ),
-        .I3(swr_beat_cnt_r[2]),
-        .I4(\swr_beat_cnt_r[3]_i_2_n_0 ),
-        .I5(swr_beat_cnt_r[3]),
+       (.I0(swr_beat_cnt_r[2]),
+        .I1(\swr_beat_cnt_r[3]_i_2_n_0 ),
+        .I2(swr_beat_cnt_r[3]),
+        .I3(cntrl_cntr_r217_out),
+        .I4(\swr_beat_cnt_r[7]_i_4_n_0 ),
+        .I5(fifo_rd_data_w[3]),
         .O(p_2_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \swr_beat_cnt_r[3]_i_2 
-       (.I0(swr_beat_cnt_r[0]),
-        .I1(swr_beat_cnt_r[1]),
+       (.I0(swr_beat_cnt_r[1]),
+        .I1(swr_beat_cnt_r[0]),
         .O(\swr_beat_cnt_r[3]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h8A88BABBBABB8A88)) 
+    .INIT(64'hF6FFF6F606000606)) 
     \swr_beat_cnt_r[4]_i_1 
-       (.I0(fifo_rd_data_w[4]),
-        .I1(cntrl_cntr_r217_out),
-        .I2(s_lnk_hndlr_rd_fsm_r[1]),
-        .I3(s_lnk_hndlr_rd_fsm_r[0]),
-        .I4(swr_beat_cnt_r[4]),
-        .I5(m_axi_wlast_INST_0_i_1_n_0),
+       (.I0(swr_beat_cnt_r[4]),
+        .I1(m_axi_wlast_INST_0_i_1_n_0),
+        .I2(cntrl_cntr_r217_out),
+        .I3(s_lnk_hndlr_rd_fsm_r[1]),
+        .I4(s_lnk_hndlr_rd_fsm_r[0]),
+        .I5(fifo_rd_data_w[4]),
         .O(p_2_in[4]));
   LUT6 #(
-    .INIT(64'hABA8A8ABABA8ABA8)) 
+    .INIT(64'hFFFFFF9A0000009A)) 
     \swr_beat_cnt_r[5]_i_1 
-       (.I0(fifo_rd_data_w[5]),
-        .I1(cntrl_cntr_r217_out),
-        .I2(\swr_beat_cnt_r[7]_i_3_n_0 ),
-        .I3(swr_beat_cnt_r[5]),
-        .I4(swr_beat_cnt_r[4]),
-        .I5(m_axi_wlast_INST_0_i_1_n_0),
+       (.I0(swr_beat_cnt_r[5]),
+        .I1(swr_beat_cnt_r[4]),
+        .I2(m_axi_wlast_INST_0_i_1_n_0),
+        .I3(cntrl_cntr_r217_out),
+        .I4(\swr_beat_cnt_r[7]_i_4_n_0 ),
+        .I5(fifo_rd_data_w[5]),
         .O(p_2_in[5]));
   LUT6 #(
-    .INIT(64'h8A88BABBBABB8A88)) 
+    .INIT(64'hF6FFF6F606000606)) 
     \swr_beat_cnt_r[6]_i_1 
-       (.I0(fifo_rd_data_w[6]),
-        .I1(cntrl_cntr_r217_out),
-        .I2(s_lnk_hndlr_rd_fsm_r[1]),
-        .I3(s_lnk_hndlr_rd_fsm_r[0]),
-        .I4(swr_beat_cnt_r[6]),
-        .I5(\swr_beat_cnt_r[7]_i_4_n_0 ),
+       (.I0(swr_beat_cnt_r[6]),
+        .I1(\swr_beat_cnt_r[7]_i_3_n_0 ),
+        .I2(cntrl_cntr_r217_out),
+        .I3(s_lnk_hndlr_rd_fsm_r[1]),
+        .I4(s_lnk_hndlr_rd_fsm_r[0]),
+        .I5(fifo_rd_data_w[6]),
         .O(p_2_in[6]));
   LUT6 #(
-    .INIT(64'h4444F44444444444)) 
+    .INIT(64'h2000FFFF20002000)) 
     \swr_beat_cnt_r[7]_i_1 
-       (.I0(s_lnk_hndlr_rd_fsm_r[1]),
-        .I1(s_lnk_hndlr_rd_fsm_r[0]),
-        .I2(E),
-        .I3(cntrl_fsm_r[1]),
-        .I4(cntrl_fsm_r[0]),
-        .I5(m_axi_wready),
+       (.I0(cntrl_fsm_r[1]),
+        .I1(cntrl_fsm_r[0]),
+        .I2(m_axi_wready),
+        .I3(E),
+        .I4(s_lnk_hndlr_rd_fsm_r[1]),
+        .I5(s_lnk_hndlr_rd_fsm_r[0]),
         .O(\swr_beat_cnt_r[7]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hABA8A8ABABA8ABA8)) 
+    .INIT(64'hFFFFFF9A0000009A)) 
     \swr_beat_cnt_r[7]_i_2 
-       (.I0(fifo_rd_data_w[7]),
-        .I1(cntrl_cntr_r217_out),
+       (.I0(swr_beat_cnt_r[7]),
+        .I1(swr_beat_cnt_r[6]),
         .I2(\swr_beat_cnt_r[7]_i_3_n_0 ),
-        .I3(swr_beat_cnt_r[7]),
-        .I4(swr_beat_cnt_r[6]),
-        .I5(\swr_beat_cnt_r[7]_i_4_n_0 ),
+        .I3(cntrl_cntr_r217_out),
+        .I4(\swr_beat_cnt_r[7]_i_4_n_0 ),
+        .I5(fifo_rd_data_w[7]),
         .O(p_2_in[7]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \swr_beat_cnt_r[7]_i_3 
-       (.I0(s_lnk_hndlr_rd_fsm_r[0]),
-        .I1(s_lnk_hndlr_rd_fsm_r[1]),
-        .O(\swr_beat_cnt_r[7]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'h0000000000000001)) 
-    \swr_beat_cnt_r[7]_i_4 
+    \swr_beat_cnt_r[7]_i_3 
        (.I0(swr_beat_cnt_r[4]),
-        .I1(swr_beat_cnt_r[1]),
-        .I2(swr_beat_cnt_r[0]),
-        .I3(swr_beat_cnt_r[3]),
-        .I4(swr_beat_cnt_r[2]),
+        .I1(swr_beat_cnt_r[0]),
+        .I2(swr_beat_cnt_r[1]),
+        .I3(swr_beat_cnt_r[2]),
+        .I4(swr_beat_cnt_r[3]),
         .I5(swr_beat_cnt_r[5]),
+        .O(\swr_beat_cnt_r[7]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \swr_beat_cnt_r[7]_i_4 
+       (.I0(s_lnk_hndlr_rd_fsm_r[0]),
+        .I1(s_lnk_hndlr_rd_fsm_r[1]),
         .O(\swr_beat_cnt_r[7]_i_4_n_0 ));
   FDRE \swr_beat_cnt_r_reg[0] 
        (.C(m_aclk),
@@ -46818,21 +46792,21 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .D(p_2_in[7]),
         .Q(swr_beat_cnt_r[7]),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \swr_data_trans_cntr_r[0]_i_1 
        (.I0(swr_data_trans_cntr_r_reg[0]),
         .O(\swr_data_trans_cntr_r[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAAA66666AAA6AAAA)) 
+    .INIT(64'h6AAA6AAA6AAA6A66)) 
     \swr_data_trans_cntr_r[8]_i_1 
        (.I0(cntrl_cntr_r217_out),
         .I1(m_axi_bvalid),
-        .I2(wr_rst_busy),
-        .I3(full),
-        .I4(\s_lnk_hndlr_awid_r[5]_i_2_n_0 ),
-        .I5(s_lnk_hndlr_bready_r_reg_0),
+        .I2(s_lnk_hndlr_bready_r_reg_0),
+        .I3(\s_lnk_hndlr_awid_r[5]_i_2_n_0 ),
+        .I4(full),
+        .I5(wr_rst_busy),
         .O(swr_data_trans_cntr_r));
   LUT2 #(
     .INIT(4'h9)) 
@@ -46844,19 +46818,9 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
     .INIT(8'hA6)) 
     \swr_data_trans_cntr_r[8]_i_11 
        (.I0(swr_data_trans_cntr_r_reg[1]),
-        .I1(\swr_data_trans_cntr_r[8]_i_12_n_0 ),
+        .I1(\swr_addr_trans_cntr_r_reg[8]_0 ),
         .I2(cntrl_cntr_r217_out),
         .O(\swr_data_trans_cntr_r[8]_i_11_n_0 ));
-  LUT6 #(
-    .INIT(64'hA8A8A8AB00000000)) 
-    \swr_data_trans_cntr_r[8]_i_12 
-       (.I0(s_lnk_hndlr_bready_r_reg_0),
-        .I1(fifo_wr_en_r_reg_0),
-        .I2(swr_lnk_hndlr_in_progress_r_reg_0),
-        .I3(full),
-        .I4(wr_rst_busy),
-        .I5(m_axi_bvalid),
-        .O(\swr_data_trans_cntr_r[8]_i_12_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \swr_data_trans_cntr_r[8]_i_3 
@@ -46961,7 +46925,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .DI({1'b0,swr_data_trans_cntr_r_reg[6:1],\swr_data_trans_cntr_r[8]_i_3_n_0 }),
         .O({\swr_data_trans_cntr_r_reg[8]_i_2_n_8 ,\swr_data_trans_cntr_r_reg[8]_i_2_n_9 ,\swr_data_trans_cntr_r_reg[8]_i_2_n_10 ,\swr_data_trans_cntr_r_reg[8]_i_2_n_11 ,\swr_data_trans_cntr_r_reg[8]_i_2_n_12 ,\swr_data_trans_cntr_r_reg[8]_i_2_n_13 ,\swr_data_trans_cntr_r_reg[8]_i_2_n_14 ,\swr_data_trans_cntr_r_reg[8]_i_2_n_15 }),
         .S({\swr_data_trans_cntr_r[8]_i_4_n_0 ,\swr_data_trans_cntr_r[8]_i_5_n_0 ,\swr_data_trans_cntr_r[8]_i_6_n_0 ,\swr_data_trans_cntr_r[8]_i_7_n_0 ,\swr_data_trans_cntr_r[8]_i_8_n_0 ,\swr_data_trans_cntr_r[8]_i_9_n_0 ,\swr_data_trans_cntr_r[8]_i_10_n_0 ,\swr_data_trans_cntr_r[8]_i_11_n_0 }));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT5 #(
     .INIT(32'hBBFB00F0)) 
     swr_lnk_hndlr_in_progress_r_i_1
@@ -46971,25 +46935,25 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .I3(out),
         .I4(swr_lnk_hndlr_in_progress_r_reg_0),
         .O(swr_lnk_hndlr_in_progress_r_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT5 #(
     .INIT(32'hFFFEFFFF)) 
     swr_lnk_hndlr_in_progress_r_i_2
        (.I0(swr_lnk_hndlr_in_progress_r_i_3_n_0),
-        .I1(swr_data_trans_cntr_r_reg[6]),
-        .I2(swr_data_trans_cntr_r_reg[4]),
-        .I3(swr_data_trans_cntr_r_reg[0]),
-        .I4(s_lnk_hndlr_awvalid_gen_fsm_r_i_2_n_0),
+        .I1(swr_data_trans_cntr_r_reg[0]),
+        .I2(swr_data_trans_cntr_r_reg[2]),
+        .I3(swr_data_trans_cntr_r_reg[3]),
+        .I4(s_lnk_hndlr_awvalid_gen_fsm_r_i_3_n_0),
         .O(swr_lnk_hndlr_in_progress_r_i_2_n_0));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     swr_lnk_hndlr_in_progress_r_i_3
-       (.I0(swr_data_trans_cntr_r_reg[8]),
-        .I1(swr_data_trans_cntr_r_reg[7]),
-        .I2(swr_data_trans_cntr_r_reg[1]),
-        .I3(swr_data_trans_cntr_r_reg[3]),
-        .I4(swr_data_trans_cntr_r_reg[2]),
-        .I5(swr_data_trans_cntr_r_reg[5]),
+       (.I0(swr_data_trans_cntr_r_reg[4]),
+        .I1(swr_data_trans_cntr_r_reg[1]),
+        .I2(swr_data_trans_cntr_r_reg[7]),
+        .I3(swr_data_trans_cntr_r_reg[6]),
+        .I4(swr_data_trans_cntr_r_reg[5]),
+        .I5(swr_data_trans_cntr_r_reg[8]),
         .O(swr_lnk_hndlr_in_progress_r_i_3_n_0));
   FDRE swr_lnk_hndlr_in_progress_r_reg
        (.C(m_aclk),
@@ -46997,11 +46961,11 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .D(swr_lnk_hndlr_in_progress_r_i_1_n_0),
         .Q(swr_lnk_hndlr_in_progress_r_reg_0),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT4 #(
     .INIT(16'h0400)) 
     xpm_fifo_async_inst_i_2__3
-       (.I0(\s_lnk_hndlr_wstrb_r_reg[3]_0 ),
+       (.I0(\s_lnk_hndlr_wuser_r_reg[0]_0 ),
         .I1(m_axi_wready),
         .I2(cntrl_fsm_r[0]),
         .I3(cntrl_fsm_r[1]),
@@ -47057,14 +47021,14 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_swr_lnk_hndlr
         .wr_data_count(NLW_xpm_fifo_sync_inst_swr_wr_data_count_UNCONNECTED[7:0]),
         .wr_en(fifo_wr_en_r),
         .wr_rst_busy(NLW_xpm_fifo_sync_inst_swr_wr_rst_busy_UNCONNECTED));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT4 #(
-    .INIT(16'h0F20)) 
+    .INIT(16'h1C0C)) 
     xpm_fifo_sync_inst_swr_i_1
-       (.I0(cntrl_cntr_r217_out),
-        .I1(fifo_empty_w),
+       (.I0(fifo_empty_w),
+        .I1(s_lnk_hndlr_rd_fsm_r[0]),
         .I2(s_lnk_hndlr_rd_fsm_r[1]),
-        .I3(s_lnk_hndlr_rd_fsm_r[0]),
+        .I3(cntrl_cntr_r217_out),
         .O(fifo_rd_en_s));
 endmodule
 
@@ -47750,7 +47714,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_sync_cell__parameterized1
         .O(n_0_0));
   LUT2 #(
     .INIT(4'hB)) 
-    s_lnk_hndlr_awvalid_gen_fsm_r_i_3
+    s_lnk_hndlr_awvalid_gen_fsm_r_i_2
        (.I0(sync_flop_2[1]),
         .I1(chnl_up_r),
         .O(\sync_flop_2_reg[1]_0 ));
@@ -47979,7 +47943,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_tdm
   wire tdm_user_data_valid;
   wire tx_phy_ready;
 
-  (* SOFT_HLUTNM = "soft_lutpair227" *) 
+  (* SOFT_HLUTNM = "soft_lutpair226" *) 
   LUT3 #(
     .INIT(8'hD0)) 
     \FSM_onehot_state[3]_i_3 
@@ -47987,7 +47951,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_tdm
         .I1(axi_c2c_aurora_tx_tready),
         .I2(Q),
         .O(D));
-  (* SOFT_HLUTNM = "soft_lutpair224" *) 
+  (* SOFT_HLUTNM = "soft_lutpair223" *) 
   LUT5 #(
     .INIT(32'h8800F800)) 
     int_ch1_ready_i_1
@@ -48023,7 +47987,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_tdm
         .D(next_int_ch1_ready),
         .Q(int_ch1_ready),
         .R(rx_user_reset));
-  (* SOFT_HLUTNM = "soft_lutpair224" *) 
+  (* SOFT_HLUTNM = "soft_lutpair223" *) 
   LUT5 #(
     .INIT(32'h00FF0002)) 
     int_ch2_ready_i_1
@@ -48039,7 +48003,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_tdm
         .D(next_int_ch2_ready),
         .Q(int_ch2_ready),
         .R(rx_user_reset));
-  (* SOFT_HLUTNM = "soft_lutpair226" *) 
+  (* SOFT_HLUTNM = "soft_lutpair225" *) 
   LUT4 #(
     .INIT(16'h4AAA)) 
     \slot_count[0]_i_1 
@@ -48048,7 +48012,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_tdm
         .I2(E),
         .I3(tx_phy_ready),
         .O(\slot_count[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair226" *) 
+  (* SOFT_HLUTNM = "soft_lutpair225" *) 
   LUT5 #(
     .INIT(32'h7780F700)) 
     \slot_count[1]_i_1 
@@ -48117,7 +48081,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_tdm
         .D(send_ch0),
         .Q(\slot_select_reg[0]_0 ),
         .R(rx_user_reset));
-  (* SOFT_HLUTNM = "soft_lutpair227" *) 
+  (* SOFT_HLUTNM = "soft_lutpair226" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \storage_data2[27]_i_1 
@@ -48133,7 +48097,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_tdm
         .I3(dout[4]),
         .I4(int_ch2_ready),
         .O(\tdm_data_out[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair225" *) 
+  (* SOFT_HLUTNM = "soft_lutpair224" *) 
   LUT5 #(
     .INIT(32'hFFEAEAEA)) 
     \tdm_data_out[13]_i_1 
@@ -48143,7 +48107,7 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_tdm
         .I3(dout[5]),
         .I4(int_ch2_ready),
         .O(\tdm_data_out[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair225" *) 
+  (* SOFT_HLUTNM = "soft_lutpair224" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \tdm_data_out[30]_i_1 
@@ -48516,14 +48480,14 @@ module apex_blk_axi_chip2chip_0_0_axi_chip2chip_v5_0_8_unpacker__parameterized1
         .I4(\tdm_data_out_reg[26] [23]),
         .I5(\tdm_data_out[20]_i_3_n_0 ),
         .O(D[8]));
-  (* SOFT_HLUTNM = "soft_lutpair223" *) 
+  (* SOFT_HLUTNM = "soft_lutpair222" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \tdm_data_out[20]_i_2 
        (.I0(Q[0]),
         .I1(int_ch1_ready),
         .O(\tdm_data_out[20]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair223" *) 
+  (* SOFT_HLUTNM = "soft_lutpair222" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \tdm_data_out[20]_i_3 

@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Sat Aug 21 15:36:26 2021
+//Date        : Sat Aug 21 19:13:17 2021
 //Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
 //Command     : generate_target apex_blk.bd
 //Design      : apex_blk
@@ -203,7 +203,6 @@ module apex_blk
   wire [1:0]c2c_rxclkcorcnt;
   wire [0:0]channel_up;
   wire clk_in1_0_1;
-  wire clk_wiz_clk_out1;
   wire clk_wiz_locked;
   wire [13:0]drp_bridge_0_drp0_addr;
   wire [63:0]drp_bridge_0_drp0_di;
@@ -235,7 +234,7 @@ module apex_blk
   assign drp_we[7:0] = drp_bridge_0_drp0_we;
   apex_blk_axi_chip2chip_0_0 axi_chip2chip_0
        (.aurora_do_cc(axi_chip2chip_0_aurora_do_cc),
-        .aurora_init_clk(Net_1),
+        .aurora_init_clk(axi_c2c_phy_clk_0_1),
         .aurora_mmcm_not_locked(aurora_mmcm_not_locked_0_1),
         .aurora_pma_init_in(aurora_pma_init),
         .aurora_pma_init_out(axi_chip2chip_0_aurora_pma_init_out),
@@ -252,7 +251,7 @@ module apex_blk
         .axi_c2c_multi_bit_error_out(axi_c2c_multi_bit_error_out),
         .axi_c2c_phy_clk(axi_c2c_phy_clk_0_1),
         .axi_c2c_s2m_intr_in({1'b0,1'b0,1'b0,1'b0}),
-        .m_aclk(clk_wiz_clk_out1),
+        .m_aclk(axi_c2c_phy_clk_0_1),
         .m_aresetn(c2c_reset_fsm_0_m_aresetn),
         .m_axi_araddr(S00_AXI_1_ARADDR),
         .m_axi_arburst(S00_AXI_1_ARBURST),
@@ -284,9 +283,9 @@ module apex_blk
         .m_axi_wstrb(S00_AXI_1_WSTRB),
         .m_axi_wvalid(S00_AXI_1_WVALID));
   apex_blk_axi_interconnect_0_0 axi_interconnect_0
-       (.ACLK(clk_wiz_clk_out1),
+       (.ACLK(axi_c2c_phy_clk_0_1),
         .ARESETN(rst_clk_wiz_100M_peripheral_aresetn),
-        .M00_ACLK(clk_wiz_clk_out1),
+        .M00_ACLK(axi_c2c_phy_clk_0_1),
         .M00_ARESETN(rst_clk_wiz_100M_peripheral_aresetn),
         .M00_AXI_araddr(axi_interconnect_0_M00_AXI_ARADDR),
         .M00_AXI_arburst(axi_interconnect_0_M00_AXI_ARBURST),
@@ -352,7 +351,7 @@ module apex_blk
         .M01_AXI_wready(axi_interconnect_0_M01_AXI_WREADY),
         .M01_AXI_wstrb(axi_interconnect_0_M01_AXI_WSTRB),
         .M01_AXI_wvalid(axi_interconnect_0_M01_AXI_WVALID),
-        .M02_ACLK(clk_wiz_clk_out1),
+        .M02_ACLK(axi_c2c_phy_clk_0_1),
         .M02_ARESETN(rst_clk_wiz_100M_peripheral_aresetn),
         .M02_AXI_araddr(axi_interconnect_0_M02_AXI_ARADDR),
         .M02_AXI_arburst(axi_interconnect_0_M02_AXI_ARBURST),
@@ -385,7 +384,7 @@ module apex_blk
         .M02_AXI_wready(axi_interconnect_0_M02_AXI_WREADY),
         .M02_AXI_wstrb(axi_interconnect_0_M02_AXI_WSTRB),
         .M02_AXI_wvalid(axi_interconnect_0_M02_AXI_WVALID),
-        .S00_ACLK(clk_wiz_clk_out1),
+        .S00_ACLK(axi_c2c_phy_clk_0_1),
         .S00_ARESETN(rst_clk_wiz_100M_peripheral_aresetn),
         .S00_AXI_araddr(S00_AXI_1_ARADDR),
         .S00_AXI_arburst(S00_AXI_1_ARBURST),
@@ -449,7 +448,7 @@ module apex_blk
         .S_AXI_wstrb(axi_interconnect_0_M00_AXI_WSTRB),
         .S_AXI_wvalid(axi_interconnect_0_M00_AXI_WVALID),
         .delay(bram1_delay),
-        .s_axi_aclk(clk_wiz_clk_out1),
+        .s_axi_aclk(axi_c2c_phy_clk_0_1),
         .s_axi_aresetn(rst_clk_wiz_100M_peripheral_aresetn));
   bram2_imp_1VMD9EB bram2
        (.S_AXI_araddr(axi_interconnect_0_M02_AXI_ARADDR),
@@ -484,7 +483,7 @@ module apex_blk
         .S_AXI_wstrb(axi_interconnect_0_M02_AXI_WSTRB),
         .S_AXI_wvalid(axi_interconnect_0_M02_AXI_WVALID),
         .delay(bram2_delay),
-        .s_axi_aclk(clk_wiz_clk_out1),
+        .s_axi_aclk(axi_c2c_phy_clk_0_1),
         .s_axi_aresetn(rst_clk_wiz_100M_peripheral_aresetn));
   apex_blk_c2c_reset_fsm_0_0 c2c_reset_fsm_0
        (.c2c_channel_up(c2c_reset_fsm_0_c2c_channel_up),
@@ -495,7 +494,6 @@ module apex_blk
         .state(c2c_reset_fsm_0_state));
   apex_blk_clk_wiz_0 clk_wiz
        (.clk_in1(clk_in1_0_1),
-        .clk_out1(clk_wiz_clk_out1),
         .clk_out2(Net_1),
         .locked(clk_wiz_locked),
         .reset(xlconstant_0_dout));
@@ -566,7 +564,7 @@ module apex_blk
         .ext_reset_in(axi_c2c_link_status_out),
         .mb_debug_sys_rst(xlconstant_0_dout),
         .peripheral_aresetn(rst_clk_wiz_100M_peripheral_aresetn),
-        .slowest_sync_clk(Net_1));
+        .slowest_sync_clk(axi_c2c_phy_clk_0_1));
   apex_blk_system_ila_0_0 system_ila_0
        (.SLOT_0_AXI_araddr(S00_AXI_1_ARADDR),
         .SLOT_0_AXI_arburst(S00_AXI_1_ARBURST),
@@ -651,7 +649,7 @@ module apex_blk
         .SLOT_2_AXI_wready(axi_interconnect_0_M02_AXI_WREADY),
         .SLOT_2_AXI_wstrb(axi_interconnect_0_M02_AXI_WSTRB),
         .SLOT_2_AXI_wvalid(axi_interconnect_0_M02_AXI_WVALID),
-        .clk(clk_wiz_clk_out1),
+        .clk(axi_c2c_phy_clk_0_1),
         .probe0(rst_clk_wiz_100M_peripheral_aresetn),
         .probe1(drp_do_1),
         .probe2(drp_bridge_0_drp0_di),

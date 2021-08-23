@@ -66,6 +66,7 @@ COMPONENT c2c_gty_3p125g_vio_0
     probe_in8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_in9 : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
     probe_in10 : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    probe_in11 : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     probe_out0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_out1 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_out2 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
@@ -73,7 +74,8 @@ COMPONENT c2c_gty_3p125g_vio_0
     probe_out4 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_out5 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_out6 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    probe_out7 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+    probe_out7 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    probe_out8 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -96,6 +98,7 @@ your_instance_name : c2c_gty_3p125g_vio_0
     probe_in8 => probe_in8,
     probe_in9 => probe_in9,
     probe_in10 => probe_in10,
+    probe_in11 => probe_in11,
     probe_out0 => probe_out0,
     probe_out1 => probe_out1,
     probe_out2 => probe_out2,
@@ -103,7 +106,8 @@ your_instance_name : c2c_gty_3p125g_vio_0
     probe_out4 => probe_out4,
     probe_out5 => probe_out5,
     probe_out6 => probe_out6,
-    probe_out7 => probe_out7
+    probe_out7 => probe_out7,
+    probe_out8 => probe_out8
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x917C82529E03E32B",
+      "boundary_crc": "0x917C82528FE25FB6",
       "design_src": "SBD",
       "device": "xcvu13p-fsga2577-1-e",
       "name": "bd_4ccc",
@@ -44,7 +44,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "93750000",
             "value_src": "default"
           },
           "ID_WIDTH": {
@@ -132,11 +132,11 @@
             "value_src": "default"
           },
           "PHASE": {
-            "value": "0.0",
+            "value": "0",
             "value_src": "default"
           },
           "CLK_DOMAIN": {
-            "value": "apex_blk_clk_wiz_0_clk_out1",
+            "value": "apex_blk_axi_c2c_phy_clk_0",
             "value_src": "default_prop"
           },
           "NUM_READ_THREADS": {
@@ -174,7 +174,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "93750000",
             "value_src": "default"
           },
           "ID_WIDTH": {
@@ -262,11 +262,11 @@
             "value_src": "default"
           },
           "PHASE": {
-            "value": "0.0",
+            "value": "0",
             "value_src": "default"
           },
           "CLK_DOMAIN": {
-            "value": "apex_blk_clk_wiz_0_clk_out1",
+            "value": "apex_blk_axi_c2c_phy_clk_0",
             "value_src": "default_prop"
           },
           "NUM_READ_THREADS": {
@@ -304,7 +304,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "93750000",
             "value_src": "default"
           },
           "ID_WIDTH": {
@@ -392,11 +392,11 @@
             "value_src": "default"
           },
           "PHASE": {
-            "value": "0.0",
+            "value": "0",
             "value_src": "default"
           },
           "CLK_DOMAIN": {
-            "value": "apex_blk_clk_wiz_0_clk_out1",
+            "value": "apex_blk_axi_c2c_phy_clk_0",
             "value_src": "default_prop"
           },
           "NUM_READ_THREADS": {
@@ -434,12 +434,12 @@
             "value": "resetn"
           },
           "CLK_DOMAIN": {
-            "value": "apex_blk_clk_wiz_0_clk_out1",
+            "value": "apex_blk_axi_c2c_phy_clk_0",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
+            "value": "93750000",
+            "value_src": "default_prop"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -450,7 +450,7 @@
             "value_src": "default"
           },
           "PHASE": {
-            "value": "0.0",
+            "value": "0",
             "value_src": "default_prop"
           }
         }
@@ -544,7 +544,7 @@
             "value": "0"
           },
           "C_ILA_CLK_FREQ": {
-            "value": "100000000"
+            "value": "93750000"
           },
           "C_INPUT_PIPE_STAGES": {
             "value": "6"
@@ -1471,16 +1471,16 @@
       }
     },
     "interface_nets": {
-      "Conn1": {
-        "interface_ports": [
-          "SLOT_1_AXI",
-          "g_inst/slot_1_axi"
-        ]
-      },
       "Conn": {
         "interface_ports": [
           "SLOT_0_AXI",
           "g_inst/slot_0_axi"
+        ]
+      },
+      "Conn1": {
+        "interface_ports": [
+          "SLOT_1_AXI",
+          "g_inst/slot_1_axi"
         ]
       },
       "Conn2": {
