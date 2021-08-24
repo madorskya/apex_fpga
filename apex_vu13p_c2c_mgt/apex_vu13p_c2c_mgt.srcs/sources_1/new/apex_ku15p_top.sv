@@ -44,13 +44,13 @@ module apex_ku15p_top
     wire clk40; // from mmcm
     wire clk_tx; // should be 320 M
 
-    vio_0 tcds_vio 
-    (
-        .clk        (clk_tx),                // input wire clk
-        .probe_out0 (logic_reset),  // output wire [0 : 0] probe_out0
-        .probe_out1 (tx_ready),  // output wire [0 : 0] probe_out1
-        .probe_out2 (rx_ready)   // output wire [0 : 0] probe_out2
-    );
+//    vio_0 tcds_vio 
+//    (
+//        .clk        (clk_tx),                // input wire clk
+//        .probe_out0 (logic_reset),  // output wire [0 : 0] probe_out0
+//        .probe_out1 (tx_ready),  // output wire [0 : 0] probe_out1
+//        .probe_out2 (rx_ready)   // output wire [0 : 0] probe_out2
+//    );
 
     tcds_mmcm tcds_mmcm_i
     (
@@ -80,6 +80,12 @@ module apex_ku15p_top
     wire [1:0]  c2c_rxclkcorcnt;
     wire        c2c_link_reset;
 
+    wire [31:0] mgt_rx_data;
+    wire [3:0]  mgt_rx_k   ;
+    wire [31:0] mgt_tx_data;
+    wire [3:0]  mgt_tx_k   ;
+    wire [1:0]  realigned1_aligned0;
+
     apex_blk_wrapper apex_blk_w
     (
         .c2c_channel_up    (c2c_channel_up   ),
@@ -97,6 +103,12 @@ module apex_ku15p_top
         .c2c_rxclkcorcnt   (c2c_rxclkcorcnt  ),
         .c2c_link_reset    (c2c_link_reset   ),
 
+        .mgt_rx_data (mgt_rx_data),
+        .mgt_rx_k    (mgt_rx_k   ),
+        .mgt_tx_data (mgt_tx_data),
+        .mgt_tx_k    (mgt_tx_k   ),
+        .realigned1_aligned0 (realigned1_aligned0),
+
         .drp_clk         (drp_clk),
 //        .drp_addr        (drp_gth_i.drpaddr),
 //        .drp_di          (drp_gth_i.drpdi  ),
@@ -108,7 +120,6 @@ module apex_ku15p_top
         .drp_di          (),
         .drp_do          (),
         .drp_en          (),
-        .drp_rdy         (),
         .drp_we          ()
     );
     
@@ -123,6 +134,11 @@ module apex_ku15p_top
         .gtytxn_int (c2c_txn),
         .gtytxp_int (c2c_txp),
         
+        .mgt_rx_data (mgt_rx_data),
+        .mgt_rx_k    (mgt_rx_k   ),
+        .mgt_tx_data (mgt_tx_data),
+        .mgt_tx_k    (mgt_tx_k   ),
+        .realigned1_aligned0 (realigned1_aligned0),
 //        .drp_clk (drp_clk),
         
         .c2c_channel_up    (c2c_channel_up   ),

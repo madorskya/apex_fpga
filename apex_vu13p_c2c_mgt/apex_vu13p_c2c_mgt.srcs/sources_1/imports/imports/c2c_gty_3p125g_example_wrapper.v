@@ -181,8 +181,11 @@ module c2c_gty_3p125g_example_wrapper (
   );
 
   // Drive RXUSRCLK and RXUSRCLK2 for all channels with the respective helper block outputs
-  assign rxusrclk_int  = {2{gtwiz_userclk_rx_usrclk_out}};
-  assign rxusrclk2_int = {2{gtwiz_userclk_rx_usrclk2_out}};
+//  assign rxusrclk_int  = {2{gtwiz_userclk_rx_usrclk_out}};
+//  assign rxusrclk2_int = {2{gtwiz_userclk_rx_usrclk2_out}};
+// use TX fabric clocks for RX fabric clocks
+  assign rxusrclk_int  = {2{gtwiz_userclk_tx_usrclk_out}};
+  assign rxusrclk2_int = {2{gtwiz_userclk_tx_usrclk2_out}};
 
   // -------------------------------------------------------------------------------------------------------------------
   // Reset controller helper block

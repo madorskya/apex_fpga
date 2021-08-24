@@ -17,6 +17,12 @@ module c2c_gty_tux (
   output wire [1:0] gtytxn_int,
   output wire [1:0] gtytxp_int,
 
+  output [31:0] mgt_rx_data,
+  output [3:0]  mgt_rx_k   ,
+  output [31:0] mgt_tx_data,
+  output [3:0]  mgt_tx_k   ,
+  output [1:0]  realigned1_aligned0,
+
   output c2c_channel_up,
   output c2c_init_clk,
   output c2c_mmcm_unlocked,
@@ -291,6 +297,8 @@ module c2c_gty_tux (
   wire [0:0] ch1_rxbyterealign_int;
   assign ch0_rxbyterealign_int = rxbyterealign_int[0:0];
   assign ch1_rxbyterealign_int = rxbyterealign_int[1:1];
+
+  assign realigned1_aligned0 = {ch0_rxbyterealign_int, ch0_rxbyteisaligned_int};
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [3:0] rxclkcorcnt_int;
@@ -865,12 +873,17 @@ wire local_do_cc = (cc_cnt == 8'h0);
         .mgt_tx_data  (hb1_gtwiz_userdata_tx_int),
         .mgt_tx_k     (ch1_txctrl2_int)
     );
+    
+    assign mgt_rx_data = hb0_gtwiz_userdata_rx_int;
+    assign mgt_rx_k    = ch0_rxctrl0_int[3:0];
+    assign mgt_tx_data = hb1_gtwiz_userdata_tx_int;
+    assign mgt_tx_k    = ch1_txctrl2_int[3:0];
 
-assign c2c_tx_ready      = 1'b1; // always ready
-assign c2c_mmcm_unlocked = 1'b0;
-assign c2c_channel_up    = ch0_rxbyteisaligned_int;
-assign c2c_init_clk      = mgtrefclk_odiv2; // 156.25 clock directly from refclk buffer
-assign c2c_phy_clk       = gtwiz_userclk_tx_usrclk2_int;
+    assign c2c_tx_ready      = 1'b1; // always ready
+    assign c2c_mmcm_unlocked = 1'b0;
+    assign c2c_channel_up    = ch0_rxbyteisaligned_int;
+    assign c2c_init_clk      = mgtrefclk_odiv2; // 156.25 clock directly from refclk buffer
+    assign c2c_phy_clk       = gtwiz_userclk_tx_usrclk2_int;
 
 //assign c2c_rxbufstatus = rxbufstatus_out [5:3];
 //assign c2c_rxclkcorcnt = rxclkcorcnt_out [3:2];
