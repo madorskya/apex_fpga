@@ -925,11 +925,12 @@ wire local_do_cc = (cc_cnt == 8'h0);
         .mgt_tx_data  (hb0_gtwiz_userdata_tx_int),
         .mgt_tx_k     (ch0_txctrl2_int)
 `else
-        .mgt_rx_data  (hb1_gtwiz_userdata_rx_int),
-        .mgt_rx_k     (ch1_rxctrl0_int[3:0]),
-        .rx_aligned   (ch1_rxbyteisaligned_int),
-        .mgt_tx_data  (hb1_gtwiz_userdata_tx_int),
-        .mgt_tx_k     (ch1_txctrl2_int)
+        // 2021-09-23 using AXI channel 0 to match VU13P setup, so the same ZYNQ fw can be used
+        .mgt_rx_data  (hb0_gtwiz_userdata_rx_int),
+        .mgt_rx_k     (ch0_rxctrl0_int[3:0]),
+        .rx_aligned   (ch0_rxbyteisaligned_int),
+        .mgt_tx_data  (hb0_gtwiz_userdata_tx_int),
+        .mgt_tx_k     (ch0_txctrl2_int)
 `endif
     );
 
