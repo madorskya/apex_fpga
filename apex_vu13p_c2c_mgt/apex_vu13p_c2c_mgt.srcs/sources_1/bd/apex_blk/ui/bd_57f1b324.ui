@@ -42,54 +42,46 @@ preplace inst axi_interconnect_0 -pg 1 -lvl 5 -x 2479 -y 1200 -defaultsOSRD
 preplace inst clk_wiz -pg 1 -lvl 1 -x 33 -y 1160 -defaultsOSRD
 preplace inst system_ila_0 -pg 1 -lvl 3 -x 870 -y 1480 -defaultsOSRD
 preplace inst vio_0 -pg 1 -lvl 2 -x 280 -y 1570 -defaultsOSRD
-preplace inst bram0|axi_bram_ctrl_0_bram -pg 1 -lvl 2 -x 3473 -y 652 -defaultsOSRD
-preplace inst bram0|axi_bram_ctrl_0 -pg 1 -lvl 1 -x 3193 -y 652 -defaultsOSRD
-preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 2 4 680 940 1090 1030 1800 1000 2690
-preplace netloc c2c_config_error_out 1 2 3 680 1900 N 1900 1790J
-preplace netloc c2c_link_status_out 1 2 3 690 1850 1170 1620 1780
-preplace netloc axi_c2c_multi_bit_error_out 1 2 3 700 1880 N 1880 1770
+preplace netloc Net_1 1 1 6 140 780 N 780 N 780 N 780 2650 940 3200J
 preplace netloc aurora_pma_init 1 2 2 480 870 1100
-preplace netloc Net_1 1 1 6 140 780 N 780 N 780 N 780 2650 940 3640J
-preplace netloc bram1_delay 1 2 4 460 692 N 692 NJ 692 NJ
-preplace netloc bram2_delay 1 2 4 390J 1890 N 1890 NJ 1890 2630
-preplace netloc clk_wiz_locked 1 1 3 150 840 NJ 840 1120
+preplace netloc aurora_pma_init_out 1 2 5 570 810 N 810 1840J 652 2630 390 NJ
+preplace netloc aurora_reset_pb 1 2 3 580 830 1180 970 1790J
+preplace netloc axi_c2c_multi_bit_error_out 1 2 3 690 1880 N 1880 1770
+preplace netloc axi_c2c_phy_clk_0_1 1 0 6 NJ 950 160J 950 560J 860 1110 1050 1860 1040 2680
 preplace netloc axi_chip2chip_0_axi_c2c_lnk_hndlr_in_progress 1 2 3 620 850 1170 980 1780J
-preplace netloc c2c_rx_valid 1 0 4 NJ 990 NJ 990 560J 920 1080
-preplace netloc c2c_rx_data 1 0 4 NJ 970 NJ 970 540J 970 1060
+preplace netloc bram1_delay 1 2 4 460 662 N 662 NJ 662 NJ
+preplace netloc bram2_delay 1 2 4 390J 1890 N 1890 NJ 1890 2630
+preplace netloc c2c_channel_up 1 0 5 NJ 1070 NJ 1070 540J 890 1150J 1000 1770
+preplace netloc c2c_config_error_out 1 2 3 670 1900 N 1900 1790J
+preplace netloc c2c_link_reset_1 1 0 3 -210J 1060 NJ 1060 500
+preplace netloc c2c_link_status_out 1 2 3 680 1850 1170 1620 1780
+preplace netloc c2c_m_aresetn 1 2 2 590 800 1040
+preplace netloc c2c_mmcm_unlocked 1 0 4 NJ 1240 NJ 1240 450J 1860 1150
+preplace netloc c2c_reset_fsm_state 1 2 2 670 910 1030J
+preplace netloc c2c_rx_data 1 0 4 NJ 970 NJ 970 530J 970 1060
+preplace netloc c2c_rx_valid 1 0 4 NJ 990 NJ 990 550J 920 1080
+preplace netloc c2c_rxbufstatus 1 0 3 NJ 640 NJ 640 520J
+preplace netloc c2c_rxclkcorcnt 1 0 3 NJ 660 NJ 660 420J
+preplace netloc c2c_tx_data 1 2 5 630 900 1140 1010 1810J 1030 2700 990 NJ
 preplace netloc c2c_tx_ready 1 0 3 NJ 620 NJ 620 510J
 preplace netloc c2c_tx_valid 1 2 5 640 930 1130 1020 1830J 1020 2670 970 NJ
-preplace netloc c2c_tx_data 1 2 5 630 900 1140 1010 1810J 1030 2700 990 NJ
-preplace netloc c2c_mmcm_unlocked 1 0 4 NJ 1240 NJ 1240 450J 1860 1150
-preplace netloc c2c_channel_up 1 0 5 NJ 1070 NJ 1070 550J 890 1150J 1000 1770
-preplace netloc axi_c2c_phy_clk_0_1 1 0 6 NJ 950 160J 950 570J 860 1110 1050 1860 1040 2680
 preplace netloc clk_in1_0_1 1 0 1 N 1170
+preplace netloc clk_wiz_locked 1 1 3 150 840 NJ 840 1120
 preplace netloc do_cc 1 2 5 650 950 1070 1040 1850J 1010 2650 950 NJ
-preplace netloc aurora_pma_init_out 1 2 5 580 810 N 810 1840J 682 2630 390 NJ
-preplace netloc aurora_reset_pb 1 2 3 590 830 1180 970 1790J
-preplace netloc xlconstant_0_dout 1 0 4 -190 1370 140 1430 420 1870 1180
-preplace netloc vio_channel_up 1 2 1 490 1030n
-preplace netloc c2c_rxbufstatus 1 0 3 NJ 640 NJ 640 530J
-preplace netloc c2c_rxclkcorcnt 1 0 3 NJ 660 NJ 660 520J
-preplace netloc fsm_c2c_channel_up 1 2 2 700 960 1050
-preplace netloc c2c_m_aresetn 1 2 2 600 800 1040
-preplace netloc c2c_reset_fsm_state 1 2 2 670 910 1030J
-preplace netloc c2c_link_reset_1 1 0 3 -210J 1060 NJ 1060 500
+preplace netloc fsm_c2c_channel_up 1 2 2 690 960 1050
 preplace netloc mgt_rx_data_1 1 0 3 -210J 1440 NJ 1440 470
 preplace netloc mgt_rx_k_1 1 0 3 NJ 1520 170J 1460 430
 preplace netloc mgt_tx_data_1 1 0 3 -200J 1450 NJ 1450 440
 preplace netloc mgt_tx_k_1 1 0 3 -190J 1470 NJ 1470 410
 preplace netloc realigned1_aligned0_1 1 0 3 NJ 1650 150J 1670 400
-preplace netloc axi_interconnect_0_M02_AXI 1 2 4 690 880 1160 990 N 990 2660
+preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 2 4 600 940 1090 1030 1800 1000 2690
+preplace netloc vio_channel_up 1 2 1 490 1030n
+preplace netloc xlconstant_0_dout 1 0 4 -190 1370 140 1430 420 1870 1180
 preplace netloc S00_AXI_1 1 2 3 660 820 N 820 1820
 preplace netloc axi_interconnect_0_M00_AXI 1 2 4 610 790 N 790 N 790 2640
-preplace netloc bram0|s_axi_aclk_1 1 0 1 N 652
-preplace netloc bram0|s_axi_aresetn_1 1 0 1 N 672
-preplace netloc bram0|axi_bram_ctrl_0_BRAM_PORTA 1 1 1 N 652
-preplace netloc bram0|S_AXI_1 1 0 1 N 632
+preplace netloc axi_interconnect_0_M02_AXI 1 2 4 680 880 1160 990 N 990 2660
 levelinfo -pg 1 -230 33 280 870 1513 2479 3093 3820
-levelinfo -hier bram0 * 3193 3473 *
 pagesize -pg 1 -db -bbox -sgen -460 -20 4010 2640
-pagesize -hier bram0 -db -bbox -sgen 3023 572 3613 732
 ",
    "Color Coded_ScaleFactor":"0.830768",
    "Color Coded_TopLeft":"-459,1177",
