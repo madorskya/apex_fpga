@@ -1,7 +1,8 @@
 # Location constraints for differential reference clock buffers
 # Note: the IP core-level XDC constrains the transceiver channel data pin locations
 # ----------------------------------------------------------------------------------------------------------------------
-set_property package_pin AM39 [get_ports mgtrefclk1_x0y5_p]
+#set_property package_pin AM39 [get_ports mgtrefclk1_x0y5_p] - this clock does not work on L1T board in CERN
+set_property package_pin AP39 [get_ports mgtrefclk1_x0y5_p]
 
 # Clock constraints for clocks provided as inputs to the core
 # Note: the IP core-level XDC constrains clocks produced by the core, which drive user clocks via helper blocks

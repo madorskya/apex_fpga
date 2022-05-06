@@ -32,7 +32,11 @@
       },
       "clk_wiz": "",
       "system_ila_0": "",
-      "vio_0": ""
+      "vio_0": "",
+      "bram3": {
+        "axi_bram_ctrl_1": "",
+        "axi_bram_ctrl_0_bram1": ""
+      }
     },
     "ports": {
       "drp_clk": {
@@ -1095,6 +1099,80 @@
             "value": "7"
           }
         }
+      },
+      "bram3": {
+        "interface_ports": {
+          "S_AXI": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          }
+        },
+        "ports": {
+          "s_axi_aclk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "s_axi_aresetn": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "delay": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          }
+        },
+        "components": {
+          "axi_bram_ctrl_1": {
+            "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
+            "xci_name": "apex_blk_axi_bram_ctrl_1_0",
+            "xci_path": "ip/apex_blk_axi_bram_ctrl_1_0/apex_blk_axi_bram_ctrl_1_0.xci",
+            "inst_hier_path": "bram3/axi_bram_ctrl_1",
+            "parameters": {
+              "READ_LATENCY": {
+                "value": "1"
+              },
+              "SINGLE_PORT_BRAM": {
+                "value": "1"
+              }
+            }
+          },
+          "axi_bram_ctrl_0_bram1": {
+            "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+            "xci_name": "apex_blk_axi_bram_ctrl_0_bram1_0",
+            "xci_path": "ip/apex_blk_axi_bram_ctrl_0_bram1_0/apex_blk_axi_bram_ctrl_0_bram1_0.xci",
+            "inst_hier_path": "bram3/axi_bram_ctrl_0_bram1"
+          }
+        },
+        "interface_nets": {
+          "axi_bram_ctrl_1_BRAM_PORTA": {
+            "interface_ports": [
+              "axi_bram_ctrl_0_bram1/BRAM_PORTA",
+              "axi_bram_ctrl_1/BRAM_PORTA"
+            ]
+          },
+          "axi_interconnect_0_M02_AXI": {
+            "interface_ports": [
+              "S_AXI",
+              "axi_bram_ctrl_1/S_AXI"
+            ]
+          }
+        },
+        "nets": {
+          "clk_wiz_clk_out1": {
+            "ports": [
+              "s_axi_aclk",
+              "axi_bram_ctrl_1/s_axi_aclk"
+            ]
+          },
+          "rst_clk_wiz_100M_peripheral_aresetn": {
+            "ports": [
+              "s_axi_aresetn",
+              "axi_bram_ctrl_1/s_axi_aresetn"
+            ]
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1110,6 +1188,12 @@
           "axi_interconnect_0/M00_AXI",
           "bram0/S_AXI",
           "system_ila_0/SLOT_1_AXI"
+        ]
+      },
+      "axi_interconnect_0_M01_AXI": {
+        "interface_ports": [
+          "axi_interconnect_0/M01_AXI",
+          "bram3/S_AXI"
         ]
       },
       "axi_interconnect_0_M02_AXI": {
@@ -1185,7 +1269,8 @@
           "axi_interconnect_0/M01_ACLK",
           "axi_interconnect_0/M02_ACLK",
           "system_ila_0/clk",
-          "vio_0/clk"
+          "vio_0/clk",
+          "bram3/s_axi_aclk"
         ]
       },
       "axi_chip2chip_0_axi_c2c_lnk_hndlr_in_progress": {
@@ -1203,7 +1288,8 @@
       "bram2_delay": {
         "ports": [
           "vio_0/probe_out4",
-          "bram2/delay"
+          "bram2/delay",
+          "bram3/delay"
         ]
       },
       "c2c_channel_up": {
@@ -1382,7 +1468,8 @@
           "axi_interconnect_0/M01_ARESETN",
           "axi_interconnect_0/M02_ARESETN",
           "system_ila_0/probe0",
-          "system_ila_0/resetn"
+          "system_ila_0/resetn",
+          "bram3/s_axi_aresetn"
         ]
       },
       "vio_channel_up": {
@@ -1413,6 +1500,11 @@
               "SEG_axi_bram_ctrl_1_Mem0": {
                 "address_block": "/bram2/axi_bram_ctrl_1/S_AXI/Mem0",
                 "offset": "0x02000000",
+                "range": "64K"
+              },
+              "SEG_axi_bram_ctrl_1_Mem0_1": {
+                "address_block": "/bram3/axi_bram_ctrl_1/S_AXI/Mem0",
+                "offset": "0x0FFF0000",
                 "range": "64K"
               }
             }
