@@ -385,7 +385,7 @@ proc create_root_design { parentCell } {
   # Create ports
   set c2c_channel_up [ create_bd_port -dir I c2c_channel_up ]
   set c2c_do_cc [ create_bd_port -dir O c2c_do_cc ]
-  set c2c_init_clk [ create_bd_port -dir I -type clk -freq_hz 250000000 c2c_init_clk ]
+  set c2c_init_clk [ create_bd_port -dir I -type clk -freq_hz 156250000 c2c_init_clk ]
   set c2c_link_reset [ create_bd_port -dir I c2c_link_reset ]
   set c2c_mmcm_unlocked [ create_bd_port -dir I -type rst c2c_mmcm_unlocked ]
   set_property -dict [ list \
@@ -456,20 +456,20 @@ proc create_root_design { parentCell } {
   # Create instance: clk_wiz, and set properties
   set clk_wiz [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz ]
   set_property -dict [ list \
-   CONFIG.CLKIN1_JITTER_PS {40.0} \
-   CONFIG.CLKOUT1_JITTER {134.506} \
-   CONFIG.CLKOUT1_PHASE_ERROR {154.678} \
-   CONFIG.CLKOUT2_JITTER {153.164} \
-   CONFIG.CLKOUT2_PHASE_ERROR {154.678} \
+   CONFIG.CLKIN1_JITTER_PS {64.0} \
+   CONFIG.CLKOUT1_JITTER {107.681} \
+   CONFIG.CLKOUT1_PHASE_ERROR {83.183} \
+   CONFIG.CLKOUT2_JITTER {123.168} \
+   CONFIG.CLKOUT2_PHASE_ERROR {83.183} \
    CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {50} \
    CONFIG.CLKOUT2_USED {true} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {24.000} \
-   CONFIG.MMCM_CLKIN1_PERIOD {4.000} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {12.000} \
-   CONFIG.MMCM_CLKOUT1_DIVIDE {24} \
-   CONFIG.MMCM_DIVCLK_DIVIDE {5} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {8.000} \
+   CONFIG.MMCM_CLKIN1_PERIOD {6.400} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {12.500} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {25} \
+   CONFIG.MMCM_DIVCLK_DIVIDE {1} \
    CONFIG.NUM_OUT_CLKS {2} \
-   CONFIG.PRIM_IN_FREQ {250} \
+   CONFIG.PRIM_IN_FREQ {156.25} \
  ] $clk_wiz
 
   # Create instance: drp1

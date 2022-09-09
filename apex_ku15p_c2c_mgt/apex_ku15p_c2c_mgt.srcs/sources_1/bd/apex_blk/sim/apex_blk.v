@@ -1,8 +1,8 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Tue Mar  2 18:38:31 2021
-//Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
+//Date        : Sun Aug 14 19:27:10 2022
+//Host        : endcap-tf2 running 64-bit Ubuntu 18.04.6 LTS
 //Command     : generate_target apex_blk.bd
 //Design      : apex_blk
 //Purpose     : IP block netlist
@@ -34,7 +34,7 @@ module apex_blk
     drp_we);
   input c2c_channel_up;
   output c2c_do_cc;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.C2C_INIT_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.C2C_INIT_CLK, CLK_DOMAIN apex_blk_clk_in1_0, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) input c2c_init_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.C2C_INIT_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.C2C_INIT_CLK, CLK_DOMAIN apex_blk_clk_in1_0, FREQ_HZ 156250000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) input c2c_init_clk;
   input c2c_link_reset;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.C2C_MMCM_UNLOCKED RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.C2C_MMCM_UNLOCKED, INSERT_VIP 0, POLARITY ACTIVE_HIGH" *) input c2c_mmcm_unlocked;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.C2C_PHY_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.C2C_PHY_CLK, CLK_DOMAIN apex_blk_axi_c2c_phy_clk_0, FREQ_HZ 93750000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0" *) input c2c_phy_clk;

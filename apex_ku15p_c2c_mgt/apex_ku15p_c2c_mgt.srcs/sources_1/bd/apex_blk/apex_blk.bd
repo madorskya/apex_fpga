@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xBA4CDDB1AF791BDB",
+      "boundary_crc": "0xBA4CDDB19AA65043",
       "device": "xcku15p-ffva1760-2-e",
       "name": "apex_blk",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -167,7 +167,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "250000000"
+            "value": "156250000"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -612,16 +612,16 @@
               }
             },
             "interface_nets": {
-              "auto_cc_to_m01_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_cc/M_AXI"
-                ]
-              },
               "m01_couplers_to_auto_cc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_cc/S_AXI"
+                ]
+              },
+              "auto_cc_to_m01_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_cc/M_AXI"
                 ]
               }
             },
@@ -752,12 +752,6 @@
           }
         },
         "interface_nets": {
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
-            ]
-          },
           "m01_couplers_to_axi_interconnect_0": {
             "interface_ports": [
               "M01_AXI",
@@ -770,6 +764,24 @@
               "m00_couplers/S_AXI"
             ]
           },
+          "axi_interconnect_0_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
+            ]
+          },
+          "xbar_to_m02_couplers": {
+            "interface_ports": [
+              "xbar/M02_AXI",
+              "m02_couplers/S_AXI"
+            ]
+          },
           "m00_couplers_to_axi_interconnect_0": {
             "interface_ports": [
               "M00_AXI",
@@ -780,18 +792,6 @@
             "interface_ports": [
               "xbar/M01_AXI",
               "m01_couplers/S_AXI"
-            ]
-          },
-          "axi_interconnect_0_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
-          "xbar_to_m02_couplers": {
-            "interface_ports": [
-              "xbar/M02_AXI",
-              "m02_couplers/S_AXI"
             ]
           },
           "m02_couplers_to_axi_interconnect_0": {
@@ -1072,16 +1072,16 @@
           }
         },
         "interface_nets": {
-          "axi_bram_ctrl_1_BRAM_PORTA": {
-            "interface_ports": [
-              "axi_bram_ctrl_0_bram1/BRAM_PORTA",
-              "axi_bram_ctrl_1/BRAM_PORTA"
-            ]
-          },
           "axi_interconnect_0_M02_AXI": {
             "interface_ports": [
               "S_AXI",
               "axi_bram_ctrl_1/S_AXI"
+            ]
+          },
+          "axi_bram_ctrl_1_BRAM_PORTA": {
+            "interface_ports": [
+              "axi_bram_ctrl_0_bram1/BRAM_PORTA",
+              "axi_bram_ctrl_1/BRAM_PORTA"
             ]
           }
         },
@@ -1242,19 +1242,19 @@
         "xci_name": "apex_blk_clk_wiz_0",
         "parameters": {
           "CLKIN1_JITTER_PS": {
-            "value": "40.0"
+            "value": "64.0"
           },
           "CLKOUT1_JITTER": {
-            "value": "134.506"
+            "value": "107.681"
           },
           "CLKOUT1_PHASE_ERROR": {
-            "value": "154.678"
+            "value": "83.183"
           },
           "CLKOUT2_JITTER": {
-            "value": "153.164"
+            "value": "123.168"
           },
           "CLKOUT2_PHASE_ERROR": {
-            "value": "154.678"
+            "value": "83.183"
           },
           "CLKOUT2_REQUESTED_OUT_FREQ": {
             "value": "50"
@@ -1263,25 +1263,25 @@
             "value": "true"
           },
           "MMCM_CLKFBOUT_MULT_F": {
-            "value": "24.000"
+            "value": "8.000"
           },
           "MMCM_CLKIN1_PERIOD": {
-            "value": "4.000"
+            "value": "6.400"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "12.000"
+            "value": "12.500"
           },
           "MMCM_CLKOUT1_DIVIDE": {
-            "value": "24"
+            "value": "25"
           },
           "MMCM_DIVCLK_DIVIDE": {
-            "value": "5"
+            "value": "1"
           },
           "NUM_OUT_CLKS": {
             "value": "2"
           },
           "PRIM_IN_FREQ": {
-            "value": "250"
+            "value": "156.25"
           }
         }
       },
@@ -1424,11 +1424,10 @@
           "system_ila_0/SLOT_2_AXI"
         ]
       },
-      "S00_AXI_1": {
+      "axi_interconnect_0_M01_AXI": {
         "interface_ports": [
-          "axi_interconnect_0/S00_AXI",
-          "axi_chip2chip_0/m_axi",
-          "system_ila_0/SLOT_0_AXI"
+          "axi_interconnect_0/M01_AXI",
+          "drp1/S_AXI"
         ]
       },
       "axi_interconnect_0_M00_AXI": {
@@ -1438,10 +1437,11 @@
           "system_ila_0/SLOT_1_AXI"
         ]
       },
-      "axi_interconnect_0_M01_AXI": {
+      "S00_AXI_1": {
         "interface_ports": [
-          "axi_interconnect_0/M01_AXI",
-          "drp1/S_AXI"
+          "axi_interconnect_0/S00_AXI",
+          "axi_chip2chip_0/m_axi",
+          "system_ila_0/SLOT_0_AXI"
         ]
       }
     },

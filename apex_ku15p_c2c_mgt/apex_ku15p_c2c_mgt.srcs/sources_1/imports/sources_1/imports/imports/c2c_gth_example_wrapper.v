@@ -308,107 +308,82 @@ module c2c_gth_example_wrapper (
   // ===================================================================================================================
 
   // Instantiate the core, mapping its enabled ports to example design ports and helper blocks as appropriate
-`ifdef C2C_2P5G
-    c2c_gth        c2c_gth_inst_1 (); // 3.75G
-    c2c_gth_3p125g c2c_gth_inst_2 (); // 3.125G
-    c2c_gty_3p125g c2c_gth_inst_3 (); // VU13P
-    c2c_gth_2p5g   c2c_gth_inst     // 2.5G
-`else
-    `ifdef C2C_3P125G
-        c2c_gth        c2c_gth_inst_1 (); // 3.75G
-        c2c_gth_2p5g   c2c_gth_inst_2 (); // 2.5G
-        c2c_gty_3p125g c2c_gth_inst_3 (); // VU13P
-        c2c_gth_3p125g c2c_gth_inst     // 3.125G
-    `else 
-        `ifdef VU13P
-            c2c_gth_2p5g   c2c_gth_inst_1 (); // 2.5G
-            c2c_gth_3p125g c2c_gth_inst_2 (); // 3.125G
-            c2c_gth        c2c_gth_inst_3 (); // 3.75G
-            c2c_gty_3p125g c2c_gth_inst       // VU13P
-        `else 
-            c2c_gth_2p5g   c2c_gth_inst_1 (); // 2.5G
-            c2c_gth_3p125g c2c_gth_inst_2 (); // 3.125G
-            c2c_gty_3p125g c2c_gth_inst_3 (); // VU13P
-            c2c_gth        c2c_gth_inst     // 3.75G
-        `endif
-    `endif
-`endif 
+`ifdef C2C_3P125G
+    c2c_gth_7p8125g c2c_gth_inst_1 (); // KRIA
+    c2c_gth_3p125g  c2c_gth_inst       // 3.125G
+`else // KRIA
+    c2c_gth_3p125g  c2c_gth_inst_1 (); // 3.125G
+    c2c_gth_7p8125g c2c_gth_inst       // KRIA
+`endif
     (
-    `ifdef VU13P
-        .gtyrxn_in                               (gthrxn_in)
-       ,.gtyrxp_in                               (gthrxp_in)
-       ,.gtytxn_out                              (gthtxn_out)
-       ,.gtytxp_out                              (gthtxp_out)
-    `else
-        .gthrxn_in                               (gthrxn_in)
-       ,.gthrxp_in                               (gthrxp_in)
-       ,.gthtxn_out                              (gthtxn_out)
-       ,.gthtxp_out                              (gthtxp_out)
-   `endif
-   ,.gtwiz_userclk_tx_reset_in               (gtwiz_userclk_tx_reset_in)
-   ,.gtwiz_userclk_tx_active_in              (gtwiz_userclk_tx_active_out)
-   ,.gtwiz_userclk_rx_active_in              (gtwiz_userclk_rx_active_out)
-   ,.gtwiz_reset_tx_done_in                  (gtwiz_reset_tx_done_out)
-   ,.gtwiz_reset_rx_done_in                  (gtwiz_reset_rx_done_out)
-   ,.gtwiz_userdata_tx_in                    (gtwiz_userdata_tx_in)
-   ,.gtwiz_userdata_rx_out                   (gtwiz_userdata_rx_out)
-   ,.cpllpd_in                               (cpllpd_int)
-   ,.drpaddr_in                              (drpaddr_in)
-   ,.drpclk_in                               (drpclk_in)
-   ,.drpdi_in                                (drpdi_in)
-   ,.drpen_in                                (drpen_in)
-   ,.drpwe_in                                (drpwe_in)
-   ,.eyescanreset_in                         (eyescanreset_in)
-   ,.gtrefclk0_in                            (gtrefclk0_in)
-   ,.gtrxreset_in                            (gtrxreset_int)
-   ,.gttxreset_in                            (gttxreset_int)
-   ,.rx8b10ben_in                            (rx8b10ben_in)
-   ,.rxcommadeten_in                         (rxcommadeten_in)
-   ,.rxlpmen_in                              (rxlpmen_in)
-   ,.rxmcommaalignen_in                      (rxmcommaalignen_in)
-   ,.rxpcommaalignen_in                      (rxpcommaalignen_in)
-   ,.rxprbssel_in                            (rxprbssel_in)
-   ,.rxprogdivreset_in                       (rxprogdivreset_int)
-   ,.rxrate_in                               (rxrate_in)
-   ,.rxuserrdy_in                            (rxuserrdy_int)
-   ,.rxusrclk_in                             (rxusrclk_int)
-   ,.rxusrclk2_in                            (rxusrclk2_int)
-   ,.tx8b10ben_in                            (tx8b10ben_in)
-   ,.txctrl0_in                              (txctrl0_int)
-   ,.txctrl1_in                              (txctrl1_int)
-   ,.txctrl2_in                              (txctrl2_in)
-   ,.txdiffctrl_in                           (txdiffctrl_in)
-   ,.txpolarity_in                           (txpolarity_in)
-   ,.txpostcursor_in                         (txpostcursor_in)
-   ,.txprbssel_in                            (txprbssel_in)
-   ,.txprecursor_in                          (txprecursor_in)
-   ,.txprogdivreset_in                       (txprogdivreset_int)
-   ,.txuserrdy_in                            (txuserrdy_int)
-   ,.txusrclk_in                             (txusrclk_int)
-   ,.txusrclk2_in                            (txusrclk2_int)
-   ,.cplllock_out                            (cplllock_int)
-   ,.drpdo_out                               (drpdo_out)
-   ,.drprdy_out                              (drprdy_out)
-   ,.gtpowergood_out                         (gtpowergood_int)
-   ,.rxbyteisaligned_out                     (rxbyteisaligned_out)
-   ,.rxbyterealign_out                       (rxbyterealign_out)
-   ,.rxcdrlock_out                           (rxcdrlock_int)
-   ,.rxcommadet_out                          (rxcommadet_out)
-   ,.rxctrl0_out                             (rxctrl0_int)
-   ,.rxctrl1_out                             (rxctrl1_int)
-   ,.rxctrl2_out                             (rxctrl2_out)
-   ,.rxctrl3_out                             (rxctrl3_out)
-   ,.rxdata_out                              (rxdata_int)
-   ,.rxoutclk_out                            (rxoutclk_int)
-   ,.rxpmaresetdone_out                      (rxpmaresetdone_out)
-   ,.rxprbserr_out                           (rxprbserr_out)
-   ,.rxresetdone_out                         (rxresetdone_int)
-   ,.txoutclk_out                            (txoutclk_int)
-   ,.txpmaresetdone_out                      (txpmaresetdone_out)
-   ,.txresetdone_out                         (txresetdone_int)
-
-   ,.rxbufstatus_out(rxbufstatus_out)                        // output wire [5 : 0] rxbufstatus_out
-   ,.rxclkcorcnt_out(rxclkcorcnt_out)                        // output wire [3 : 0] rxclkcorcnt_out
-);
+         .gthrxn_in                               (gthrxn_in)
+        ,.gthrxp_in                               (gthrxp_in)
+        ,.gthtxn_out                              (gthtxn_out)
+        ,.gthtxp_out                              (gthtxp_out)
+        ,.gtwiz_userclk_tx_reset_in               (gtwiz_userclk_tx_reset_in)
+        ,.gtwiz_userclk_tx_active_in              (gtwiz_userclk_tx_active_out)
+        ,.gtwiz_userclk_rx_active_in              (gtwiz_userclk_rx_active_out)
+        ,.gtwiz_reset_tx_done_in                  (gtwiz_reset_tx_done_out)
+        ,.gtwiz_reset_rx_done_in                  (gtwiz_reset_rx_done_out)
+        ,.gtwiz_userdata_tx_in                    (gtwiz_userdata_tx_in)
+        ,.gtwiz_userdata_rx_out                   (gtwiz_userdata_rx_out)
+        ,.cpllpd_in                               (cpllpd_int)
+        ,.drpaddr_in                              (drpaddr_in)
+        ,.drpclk_in                               (drpclk_in)
+        ,.drpdi_in                                (drpdi_in)
+        ,.drpen_in                                (drpen_in)
+        ,.drpwe_in                                (drpwe_in)
+        ,.eyescanreset_in                         (eyescanreset_in)
+        ,.gtrefclk0_in                            (gtrefclk0_in)
+        ,.gtrxreset_in                            (gtrxreset_int)
+        ,.gttxreset_in                            (gttxreset_int)
+        ,.rx8b10ben_in                            (rx8b10ben_in)
+        ,.rxcommadeten_in                         (rxcommadeten_in)
+        ,.rxlpmen_in                              (rxlpmen_in)
+        ,.rxmcommaalignen_in                      (rxmcommaalignen_in)
+        ,.rxpcommaalignen_in                      (rxpcommaalignen_in)
+        ,.rxprbssel_in                            (rxprbssel_in)
+        ,.rxprogdivreset_in                       (rxprogdivreset_int)
+        ,.rxrate_in                               (rxrate_in)
+        ,.rxuserrdy_in                            (rxuserrdy_int)
+        ,.rxusrclk_in                             (rxusrclk_int)
+        ,.rxusrclk2_in                            (rxusrclk2_int)
+        ,.tx8b10ben_in                            (tx8b10ben_in)
+        ,.txctrl0_in                              (txctrl0_int)
+        ,.txctrl1_in                              (txctrl1_int)
+        ,.txctrl2_in                              (txctrl2_in)
+        ,.txdiffctrl_in                           (txdiffctrl_in)
+        ,.txpolarity_in                           (txpolarity_in)
+        ,.txpostcursor_in                         (txpostcursor_in)
+        ,.txprbssel_in                            (txprbssel_in)
+        ,.txprecursor_in                          (txprecursor_in)
+        ,.txprogdivreset_in                       (txprogdivreset_int)
+        ,.txuserrdy_in                            (txuserrdy_int)
+        ,.txusrclk_in                             (txusrclk_int)
+        ,.txusrclk2_in                            (txusrclk2_int)
+        ,.cplllock_out                            (cplllock_int)
+        ,.drpdo_out                               (drpdo_out)
+        ,.drprdy_out                              (drprdy_out)
+        ,.gtpowergood_out                         (gtpowergood_int)
+        ,.rxbyteisaligned_out                     (rxbyteisaligned_out)
+        ,.rxbyterealign_out                       (rxbyterealign_out)
+        ,.rxcdrlock_out                           (rxcdrlock_int)
+        ,.rxcommadet_out                          (rxcommadet_out)
+        ,.rxctrl0_out                             (rxctrl0_int)
+        ,.rxctrl1_out                             (rxctrl1_int)
+        ,.rxctrl2_out                             (rxctrl2_out)
+        ,.rxctrl3_out                             (rxctrl3_out)
+        ,.rxdata_out                              (rxdata_int)
+        ,.rxoutclk_out                            (rxoutclk_int)
+        ,.rxpmaresetdone_out                      (rxpmaresetdone_out)
+        ,.rxprbserr_out                           (rxprbserr_out)
+        ,.rxresetdone_out                         (rxresetdone_int)
+        ,.txoutclk_out                            (txoutclk_int)
+        ,.txpmaresetdone_out                      (txpmaresetdone_out)
+        ,.txresetdone_out                         (txresetdone_int)
+        
+        ,.rxbufstatus_out(rxbufstatus_out)                        // output wire [5 : 0] rxbufstatus_out
+        ,.rxclkcorcnt_out(rxclkcorcnt_out)                        // output wire [3 : 0] rxclkcorcnt_out
+    );
 
 endmodule

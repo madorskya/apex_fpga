@@ -778,44 +778,44 @@ module c2c_gth_tux
     assign drpclk_int = {2{hb_gtwiz_reset_clk_freerun_buf_int}};
 
   
-`ifdef C2C_R1_UEC3 // for revision 1 KU15P module, using different MGTs
-    c2c_gth_in_system_ibert_0 (); // have to instantiate both IPs due to Vivado way of working with Verilog defines in multiple runs
-    c2c_gth_in_system_ibert_0_R1_UEC3
-`else
-    c2c_gth_in_system_ibert_0_R1_UEC3 ();
-    c2c_gth_in_system_ibert_0
-`endif
+//`ifdef C2C_R1_UEC3 // for revision 1 KU15P module, using different MGTs
+//    c2c_gth_in_system_ibert_0 (); // have to instantiate both IPs due to Vivado way of working with Verilog defines in multiple runs
+//    c2c_gth_in_system_ibert_0_R1_UEC3
+//`else
+//    c2c_gth_in_system_ibert_0_R1_UEC3 ();
+//    c2c_gth_in_system_ibert_0
+//`endif
    
-  c2c_gth_in_system_ibert_0_inst 
-  (
-    .drpclk_o       (drpclk_int),
-    .gt0_drpen_o    (drpen_int[0:0]),
-    .gt0_drpwe_o    (drpwe_int[0:0]),
-    .gt0_drpaddr_o  (drpaddr_int[9:0]),
-    .gt0_drpdi_o    (drpdi_int[15:0]),
-    .gt0_drprdy_i   (drprdy_int[0:0]),
-    .gt0_drpdo_i    (drpdo_int[15:0]),
-    .gt1_drpen_o    (drpen_int[1:1]),
-    .gt1_drpwe_o    (drpwe_int[1:1]),
-    .gt1_drpaddr_o  (drpaddr_int[19:10]),
-    .gt1_drpdi_o    (drpdi_int[31:16]),
-    .gt1_drprdy_i   (drprdy_int[1:1]),
-    .gt1_drpdo_i    (drpdo_int[31:16]),
-    .eyescanreset_o (eyescanreset_int),
-    .rxrate_o       (rxrate_int),
-    .txdiffctrl_o   (txdiffctrl_int),
-    .txprecursor_o  (txprecursor_int),
-    .txpostcursor_o (txpostcursor_int),
-    .rxlpmen_o      (rxlpmen_int),
-    .rxrate_i       ({2{3'b000}}),
-    .txdiffctrl_i   ({2{5'b11000}}),
-    .txprecursor_i  ({2{5'b00000}}),
-    .txpostcursor_i ({2{5'b00000}}),
-    .rxlpmen_i      ({2{1'b1}}),
-    .rxoutclk_i     ({2{hb0_gtwiz_userclk_rx_usrclk2_int}}),
-    .drpclk_i       ({2{hb_gtwiz_reset_clk_freerun_buf_int}}),
-    .clk            (hb_gtwiz_reset_clk_freerun_buf_int)
-  );
+//  c2c_gth_in_system_ibert_0_inst 
+//  (
+//    .drpclk_o       (drpclk_int),
+//    .gt0_drpen_o    (drpen_int[0:0]),
+//    .gt0_drpwe_o    (drpwe_int[0:0]),
+//    .gt0_drpaddr_o  (drpaddr_int[9:0]),
+//    .gt0_drpdi_o    (drpdi_int[15:0]),
+//    .gt0_drprdy_i   (drprdy_int[0:0]),
+//    .gt0_drpdo_i    (drpdo_int[15:0]),
+//    .gt1_drpen_o    (drpen_int[1:1]),
+//    .gt1_drpwe_o    (drpwe_int[1:1]),
+//    .gt1_drpaddr_o  (drpaddr_int[19:10]),
+//    .gt1_drpdi_o    (drpdi_int[31:16]),
+//    .gt1_drprdy_i   (drprdy_int[1:1]),
+//    .gt1_drpdo_i    (drpdo_int[31:16]),
+//    .eyescanreset_o (eyescanreset_int),
+//    .rxrate_o       (rxrate_int),
+//    .txdiffctrl_o   (txdiffctrl_int),
+//    .txprecursor_o  (txprecursor_int),
+//    .txpostcursor_o (txpostcursor_int),
+//    .rxlpmen_o      (rxlpmen_int),
+//    .rxrate_i       ({2{3'b000}}),
+//    .txdiffctrl_i   ({2{5'b11000}}),
+//    .txprecursor_i  ({2{5'b00000}}),
+//    .txpostcursor_i ({2{5'b00000}}),
+//    .rxlpmen_i      ({2{1'b1}}),
+//    .rxoutclk_i     ({2{hb0_gtwiz_userclk_rx_usrclk2_int}}),
+//    .drpclk_i       ({2{hb_gtwiz_reset_clk_freerun_buf_int}}),
+//    .clk            (hb_gtwiz_reset_clk_freerun_buf_int)
+//  );
 
 
    (* mark_debug *) wire [5 : 0] rxbufstatus_out;

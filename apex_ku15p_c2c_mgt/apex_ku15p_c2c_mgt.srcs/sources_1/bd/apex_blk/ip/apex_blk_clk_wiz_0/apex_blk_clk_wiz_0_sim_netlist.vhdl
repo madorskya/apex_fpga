@@ -1,8 +1,8 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
--- Date        : Tue Mar  2 18:44:22 2021
--- Host        : endcap-tf1.phys.ufl.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
+-- Date        : Sun Aug 14 19:29:09 2022
+-- Host        : endcap-tf2 running 64-bit Ubuntu 18.04.6 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/madorsky/github/apex_ku15p/apex_ku15p_c2c_mgt/apex_ku15p_c2c_mgt.srcs/sources_1/bd/apex_blk/ip/apex_blk_clk_wiz_0/apex_blk_clk_wiz_0_sim_netlist.vhdl
 -- Design      : apex_blk_clk_wiz_0
@@ -96,16 +96,16 @@ clkout2_buf: unisim.vcomponents.BUFGCE
 mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
-      CLKFBOUT_MULT_F => 24.000000,
+      CLKFBOUT_MULT_F => 8.000000,
       CLKFBOUT_PHASE => 0.000000,
       CLKFBOUT_USE_FINE_PS => "FALSE",
-      CLKIN1_PERIOD => 4.000000,
+      CLKIN1_PERIOD => 6.400000,
       CLKIN2_PERIOD => 0.000000,
-      CLKOUT0_DIVIDE_F => 12.000000,
+      CLKOUT0_DIVIDE_F => 12.500000,
       CLKOUT0_DUTY_CYCLE => 0.500000,
       CLKOUT0_PHASE => 0.000000,
       CLKOUT0_USE_FINE_PS => "FALSE",
-      CLKOUT1_DIVIDE => 24,
+      CLKOUT1_DIVIDE => 25,
       CLKOUT1_DUTY_CYCLE => 0.500000,
       CLKOUT1_PHASE => 0.000000,
       CLKOUT1_USE_FINE_PS => "FALSE",
@@ -131,7 +131,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       CLKOUT6_PHASE => 0.000000,
       CLKOUT6_USE_FINE_PS => "FALSE",
       COMPENSATION => "INTERNAL",
-      DIVCLK_DIVIDE => 5,
+      DIVCLK_DIVIDE => 1,
       IS_CLKFBIN_INVERTED => '0',
       IS_CLKIN1_INVERTED => '0',
       IS_CLKIN2_INVERTED => '0',

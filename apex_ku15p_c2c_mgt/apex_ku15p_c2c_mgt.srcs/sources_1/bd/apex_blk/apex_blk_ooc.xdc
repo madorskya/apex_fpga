@@ -7,6 +7,6 @@
 # of Vivado)
 ################################################################################
 create_clock -name c2c_phy_clk -period 10.667 [get_ports c2c_phy_clk]
-create_clock -name c2c_init_clk -period 4 [get_ports c2c_init_clk]
+create_clock -name c2c_init_clk -period 6.400 [get_ports c2c_init_clk]
 
 ################################################################################

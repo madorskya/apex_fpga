@@ -56,13 +56,13 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out1__100.00000______0.000______50.0______134.506____154.678
-// clk_out2__50.00000______0.000______50.0______153.164____154.678
+// clk_out1__100.00000______0.000______50.0______107.681_____83.183
+// clk_out2__50.00000______0.000______50.0______123.168_____83.183
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
 //----------------------------------------------------------------------------
-// __primary_____________250____________0.010
+// __primary__________156.25____________0.010
 
 `timescale 1ps/1ps
 
@@ -130,19 +130,19 @@ wire clk_in2_apex_blk_clk_wiz_0;
     .CLKOUT4_CASCADE      ("FALSE"),
     .COMPENSATION         ("AUTO"),
     .STARTUP_WAIT         ("FALSE"),
-    .DIVCLK_DIVIDE        (5),
-    .CLKFBOUT_MULT_F      (24.000),
+    .DIVCLK_DIVIDE        (1),
+    .CLKFBOUT_MULT_F      (8.000),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
-    .CLKOUT0_DIVIDE_F     (12.000),
+    .CLKOUT0_DIVIDE_F     (12.500),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (24),
+    .CLKOUT1_DIVIDE       (25),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
-    .CLKIN1_PERIOD        (4.000))
+    .CLKIN1_PERIOD        (6.400))
   
   mmcme4_adv_inst
     // Output clocks

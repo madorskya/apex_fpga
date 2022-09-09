@@ -77,15 +77,15 @@ preplace netloc c2c_reset_fsm_0_c2c_channel_up 1 3 1 1150 650n
 preplace netloc c2c_reset_fsm_0_m_aresetn 1 3 1 1190 670n
 preplace netloc c2c_reset_fsm_0_state 1 3 1 1200 690n
 preplace netloc c2c_link_reset_1 1 0 3 -190J 1400 NJ 1400 670
-preplace netloc axi_interconnect_0_M01_AXI 1 5 1 2210 1180n
 preplace netloc axi_interconnect_0_M02_AXI 1 5 1 2220 1200n
 preplace netloc S00_AXI_1 1 4 2 1840 1020 2270
 preplace netloc axi_interconnect_0_M00_AXI 1 5 1 2320 598n
+preplace netloc axi_interconnect_0_M01_AXI 1 5 1 2210 1180n
 levelinfo -pg 1 -230 250 520 905 1510 2050 2472 2670
 pagesize -pg 1 -db -bbox -sgen -440 -20 2860 2500
 ",
    "Color Coded_ScaleFactor":"0.830768",
-   "Color Coded_TopLeft":"644,628",
+   "Color Coded_TopLeft":"-398,628",
    "Default View_ScaleFactor":"0.877395",
    "Default View_TopLeft":"-103,-213",
    "Display-PortTypeClock":"true",

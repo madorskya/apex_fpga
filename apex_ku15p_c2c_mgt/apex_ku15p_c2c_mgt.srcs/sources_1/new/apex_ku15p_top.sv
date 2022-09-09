@@ -6,10 +6,17 @@ module apex_ku15p_top
     input  wire mgtrefclk1_x0y5_p,
     input  wire mgtrefclk1_x0y5_n,
     
+`ifdef C2C_7P8125G
+    input  c2c_rxn,
+    input  c2c_rxp,
+    output c2c_txn,
+    output c2c_txp
+`else
     input  wire [1:0] c2c_rxn,
     input  wire [1:0] c2c_rxp,
     output wire [1:0] c2c_txn,
     output wire [1:0] c2c_txp
+`endif
 );
 
     wire        drp_clk;
@@ -44,24 +51,24 @@ module apex_ku15p_top
     wire clk40; // from mmcm
     wire clk_tx; // should be 320 M
 
-    vio_0 tcds_vio 
-    (
-        .clk        (clk_tx),                // input wire clk
-        .probe_out0 (logic_reset),  // output wire [0 : 0] probe_out0
-        .probe_out1 (tx_ready),  // output wire [0 : 0] probe_out1
-        .probe_out2 (rx_ready)   // output wire [0 : 0] probe_out2
-    );
+//    vio_0 tcds_vio 
+//    (
+//        .clk        (clk_tx),                // input wire clk
+//        .probe_out0 (logic_reset),  // output wire [0 : 0] probe_out0
+//        .probe_out1 (tx_ready),  // output wire [0 : 0] probe_out1
+//        .probe_out2 (rx_ready)   // output wire [0 : 0] probe_out2
+//    );
 
-    tcds_mmcm tcds_mmcm_i
-    (
-        .clk_out1 (clk40),
-        .reset    (1'b0),
-        .locked   (),
-        .clk_in1  (clk_tx)
-    );     
+//    tcds_mmcm tcds_mmcm_i
+//    (
+//        .clk_out1 (clk40),
+//        .reset    (1'b0),
+//        .locked   (),
+//        .clk_in1  (clk_tx)
+//    );     
     
-    reg [8:0] cnt;
-    always @(posedge clk40) cnt++;
+//    reg [8:0] cnt;
+//    always @(posedge clk40) cnt++;
 
     wire c2c_channel_up;
     wire c2c_init_clk;
@@ -113,8 +120,12 @@ module apex_ku15p_top
     );
     
 	
-    
-    c2c_gth_tux c2c_gth_i
+`ifdef C2C_7P8125G
+    c2c_gth_tux_simple
+`else    
+    c2c_gth_tux 
+`endif    
+    c2c_gth_i
     (
         .mgtrefclk1_x0y5_p (mgtrefclk1_x0y5_p),
         .mgtrefclk1_x0y5_n (mgtrefclk1_x0y5_n),
