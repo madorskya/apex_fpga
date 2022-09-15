@@ -119,7 +119,6 @@ module apex_ku15p_top
         .drp_we          ()
     );
     
-	
 `ifdef C2C_7P8125G
     c2c_gth_tux_simple
 `else    
