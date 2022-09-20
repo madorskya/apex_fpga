@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module apex_ku15p_top
+module apex_vu13p_link_test_top
 (
     
     input  wire [1:0] c2c_rxn,
