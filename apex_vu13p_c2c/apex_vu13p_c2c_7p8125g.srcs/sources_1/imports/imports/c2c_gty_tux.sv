@@ -869,11 +869,17 @@ wire local_do_cc = (cc_cnt == 8'h0);
 
         // connector J19 on VU13P module is uniquely routed so TX5=Q120_0, RX5=Q121_0
         // so using different MGTs here for TX and RX
-        .mgt_rx_data  (hb0_gtwiz_userdata_rx_int),
-        .mgt_rx_k     (ch0_rxctrl0_int[3:0]),
-        .rx_aligned   (ch0_rxbyteisaligned_int),
+        .mgt_rx_data  (hb1_gtwiz_userdata_rx_int),
+        .mgt_rx_k     (ch1_rxctrl0_int[3:0]),
+        .rx_aligned   (ch1_rxbyteisaligned_int),
+        
+        // for J12-J11
         .mgt_tx_data  (hb1_gtwiz_userdata_tx_int),
         .mgt_tx_k     (ch1_txctrl2_int)
+        
+        // for J19-J20
+//        .mgt_tx_data  (hb0_gtwiz_userdata_tx_int),
+//        .mgt_tx_k     (ch0_txctrl2_int)
     );
     
     assign mgt_rx_data = hb0_gtwiz_userdata_rx_int;
