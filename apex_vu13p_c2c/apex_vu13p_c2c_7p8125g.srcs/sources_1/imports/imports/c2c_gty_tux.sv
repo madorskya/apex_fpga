@@ -874,22 +874,22 @@ wire local_do_cc = (cc_cnt == 8'h0);
         .rx_aligned   (ch1_rxbyteisaligned_int),
         
         // for J12-J11
-        .mgt_tx_data  (hb1_gtwiz_userdata_tx_int),
-        .mgt_tx_k     (ch1_txctrl2_int)
+//        .mgt_tx_data  (hb1_gtwiz_userdata_tx_int),
+//        .mgt_tx_k     (ch1_txctrl2_int)
         
         // for J19-J20
-//        .mgt_tx_data  (hb0_gtwiz_userdata_tx_int),
-//        .mgt_tx_k     (ch0_txctrl2_int)
+        .mgt_tx_data  (hb0_gtwiz_userdata_tx_int),
+        .mgt_tx_k     (ch0_txctrl2_int)
     );
     
-    assign mgt_rx_data = hb0_gtwiz_userdata_rx_int;
-    assign mgt_rx_k    = ch0_rxctrl0_int[3:0];
+    assign mgt_rx_data = hb1_gtwiz_userdata_rx_int;
+    assign mgt_rx_k    = ch1_rxctrl0_int[3:0];
     assign mgt_tx_data = hb0_gtwiz_userdata_tx_int;
     assign mgt_tx_k    = ch0_txctrl2_int[3:0];
 
     assign c2c_tx_ready      = 1'b1; // always ready
     assign c2c_mmcm_unlocked = 1'b0;
-    assign c2c_channel_up    = ch0_rxbyteisaligned_int;
+    assign c2c_channel_up    = ch1_rxbyteisaligned_int;
     assign c2c_init_clk      = mgtrefclk_odiv2; // 156.25 clock directly from refclk buffer
     assign c2c_phy_clk       = gtwiz_userclk_tx_usrclk2_int;
 

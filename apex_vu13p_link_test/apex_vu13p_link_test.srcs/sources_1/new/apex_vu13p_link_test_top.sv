@@ -114,8 +114,8 @@ module apex_vu13p_link_test_top
     
     c2c_gty_tux c2c_gty_i
     (
-        .mgtrefclk0_x0y6_int (refclk[0]),
-        .mgtrefclk_odiv2_b   (refclk_odiv[0]),
+        .mgtrefclk0_x0y6_int (refclk[4]),
+        .mgtrefclk_odiv2_b   (refclk_odiv[4]),
         .gtyrxn_int (c2c_rxn),
         .gtyrxp_int (c2c_rxp),
         .gtytxn_int (c2c_txn),
@@ -144,8 +144,8 @@ module apex_vu13p_link_test_top
         .c2c_link_reset    (c2c_link_reset   )
     );
     
-	mgt_gty_rx p25g_rx [125:0]();
-	mgt_gty_tx p25g_tx [125:0]();
+	mgt_gty_rx p25g_rx [119:0]();
+	mgt_gty_tx p25g_tx [119:0]();
 
     vu13p_gty_serial_io serial_io
     (

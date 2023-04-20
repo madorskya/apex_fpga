@@ -16,6 +16,17 @@
 #set_property LOC AG50 [get_ports c2c_rxp[0]]
 #set_property LOC AG45 [get_ports c2c_txp[0]]
 
+# ref clk on Q124 for J12-J11 connection
+set_property package_pin AT39 [get_ports mgtrefclk1_x0y5_p];
+
+# enable these constraints for J12-J11 connection
+# comment out for J19-J20 connection
+set_property LOC AW50 [get_ports c2c_rxp[0]]; # top link
+set_property LOC AW45 [get_ports c2c_txp[0]];
+set_property LOC AU50 [get_ports c2c_rxp[1]]; # bottom link
+set_property LOC AU45 [get_ports c2c_txp[1]];
+
+
 # False path constraints
 # ----------------------------------------------------------------------------------------------------------------------
 set_false_path -to [get_cells -hierarchical -filter {NAME =~ *bit_synchronizer*inst/i_in_meta_reg}] -quiet

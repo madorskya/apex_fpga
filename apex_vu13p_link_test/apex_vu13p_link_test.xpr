@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="60" Path="/home/madorsky/github/vivado/apex_ku15p/apex_vu13p_link_test/apex_vu13p_link_test.xpr">
+<Project Version="7" Minor="60" Path="/home/madorsky/github/vivado/apex_fpga/apex_vu13p_link_test/apex_vu13p_link_test.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="712d0204fda9404181f3ba483ba8bed4"/>
@@ -103,20 +103,23 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_rst_clk_wiz_100M_0/apex_blk_rst_clk_wiz_100M_0.xci">
-          <Proxy FileSetName="apex_blk_rst_clk_wiz_100M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_system_ila_0_0/apex_blk_system_ila_0_0.xci">
-          <Proxy FileSetName="apex_blk_system_ila_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_vio_0_0/apex_blk_vio_0_0.xci">
-          <Proxy FileSetName="apex_blk_vio_0_0"/>
+        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_xbar_0/apex_blk_xbar_0.xci">
+          <Proxy FileSetName="apex_blk_xbar_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_axi_chip2chip_0_0/apex_blk_axi_chip2chip_0_0.xci">
           <Proxy FileSetName="apex_blk_axi_chip2chip_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_xbar_0/apex_blk_xbar_0.xci">
-          <Proxy FileSetName="apex_blk_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_vio_0_0/apex_blk_vio_0_0.xci">
+          <Proxy FileSetName="apex_blk_vio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_system_ila_0_0/apex_blk_system_ila_0_0.xci">
+          <Proxy FileSetName="apex_blk_system_ila_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_rst_clk_wiz_100M_0/apex_blk_rst_clk_wiz_100M_0.xci">
+          <Proxy FileSetName="apex_blk_rst_clk_wiz_100M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_axi_bram_ctrl_0_1/apex_blk_axi_bram_ctrl_0_1.xci">
+          <Proxy FileSetName="apex_blk_axi_bram_ctrl_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_auto_us_0/apex_blk_auto_us_0.xci">
           <Proxy FileSetName="apex_blk_auto_us_0"/>
@@ -147,9 +150,6 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_clk_wiz_0/apex_blk_clk_wiz_0.xci">
           <Proxy FileSetName="apex_blk_clk_wiz_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="apex_blk.bd" FileRelPathName="ip/apex_blk_axi_bram_ctrl_0_1/apex_blk_axi_bram_ctrl_0_1.xci">
-          <Proxy FileSetName="apex_blk_axi_bram_ctrl_0_1"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/apex_blk_wrapper.v">
@@ -748,7 +748,7 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="19">
-    <Run Id="synth_vu13p" Type="Ft3:Synth" SrcSet="sources_1" Part="xcvu13p-fsga2577-1-e" ConstrsSet="constr_vu13p" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_vu13p" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../apex_vu13p_c2c_mgt/apex_vu13p_c2c_mgt.srcs/utils_1/imports/synth_vu13p" AutoRQSDir="$PPRDIR/../../../../projects/vivado/apex/vu13p/apex_vu13p_25g_link_test/apex_vu13p_25g_link_test.srcs/utils_1/imports/synth_vu13p">
+    <Run Id="synth_vu13p" Type="Ft3:Synth" SrcSet="sources_1" Part="xcvu13p-fsga2577-1-e" ConstrsSet="constr_vu13p" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_vu13p" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../apex_ku15p/apex_vu13p_c2c_mgt/apex_vu13p_c2c_mgt.srcs/utils_1/imports/synth_vu13p" AutoRQSDir="$PPRDIR/../../../../projects/vivado/apex/vu13p/apex_vu13p_25g_link_test/apex_vu13p_25g_link_test.srcs/utils_1/imports/synth_vu13p">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design">
@@ -970,7 +970,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_vu13p" Type="Ft2:EntireDesign" Part="xcvu13p-fsga2577-1-e" ConstrsSet="constr_vu13p" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_vu13p" SynthRun="synth_vu13p" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../apex_vu13p_c2c_mgt/apex_vu13p_c2c_mgt.srcs/utils_1/imports/impl_vu13p" AutoRQSDir="$PPRDIR/../../../../projects/vivado/apex/vu13p/apex_vu13p_25g_link_test/apex_vu13p_25g_link_test.srcs/utils_1/imports/impl_vu13p">
+    <Run Id="impl_vu13p" Type="Ft2:EntireDesign" Part="xcvu13p-fsga2577-1-e" ConstrsSet="constr_vu13p" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_vu13p" SynthRun="synth_vu13p" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../apex_ku15p/apex_vu13p_c2c_mgt/apex_vu13p_c2c_mgt.srcs/utils_1/imports/impl_vu13p" AutoRQSDir="$PPRDIR/../../../../projects/vivado/apex/vu13p/apex_vu13p_25g_link_test/apex_vu13p_25g_link_test.srcs/utils_1/imports/impl_vu13p">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
