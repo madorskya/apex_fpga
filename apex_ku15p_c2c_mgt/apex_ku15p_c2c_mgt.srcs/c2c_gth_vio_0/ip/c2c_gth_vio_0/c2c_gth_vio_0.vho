@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2023 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -58,12 +58,22 @@ COMPONENT c2c_gth_vio_0
     probe_in0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_in1 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_in2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    probe_in3 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    probe_in4 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe_in3 : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    probe_in4 : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    probe_in5 : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    probe_in6 : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    probe_in7 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe_in8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe_in9 : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    probe_in10 : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     probe_out0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_out1 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    probe_out2 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    probe_out3 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+    probe_out2 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe_out3 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe_out4 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe_out5 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe_out6 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    probe_out7 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -80,10 +90,20 @@ your_instance_name : c2c_gth_vio_0
     probe_in2 => probe_in2,
     probe_in3 => probe_in3,
     probe_in4 => probe_in4,
+    probe_in5 => probe_in5,
+    probe_in6 => probe_in6,
+    probe_in7 => probe_in7,
+    probe_in8 => probe_in8,
+    probe_in9 => probe_in9,
+    probe_in10 => probe_in10,
     probe_out0 => probe_out0,
     probe_out1 => probe_out1,
     probe_out2 => probe_out2,
-    probe_out3 => probe_out3
+    probe_out3 => probe_out3,
+    probe_out4 => probe_out4,
+    probe_out5 => probe_out5,
+    probe_out6 => probe_out6,
+    probe_out7 => probe_out7
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 

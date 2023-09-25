@@ -494,7 +494,7 @@ module c2c_gth_tux
   end
 
   // Assign the link status indicator to the top-level two-state output for user reference
-  assign link_status_out = sm_link;
+  wire link_status_out = sm_link;
 
 
   // ===================================================================================================================

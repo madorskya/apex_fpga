@@ -1,7 +1,7 @@
 # Location constraints for differential reference clock buffers
 # Note: the IP core-level XDC constrains the transceiver channel data pin locations
 # ----------------------------------------------------------------------------------------------------------------------
-set_property package_pin AF10 [get_ports mgtrefclk1_x0y5_p]
+set_property package_pin AF10 [get_ports mgtrefclk1_x0y5_p]; # Q226 clk1
 
 # Clock constraints for clocks provided as inputs to the core
 # Note: the IP core-level XDC constrains clocks produced by the core, which drive user clocks via helper blocks
@@ -32,9 +32,10 @@ set_false_path -to [get_cells -hierarchical -filter {NAME =~ *gtwiz_userclk_rx_i
 #set_property LOC GTHE4_CHANNEL_X0Y29 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[6].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]
 #set_property LOC GTHE4_CHANNEL_X0Y28 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[6].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]
 
-set_property LOC AN4  [get_ports c2c_rxp[0]]
+# UEC3
+set_property LOC AN4  [get_ports c2c_rxp[0]]; # Q226 ch2
 set_property LOC AM10 [get_ports c2c_txp[0]]
 
-set_property LOC AM2  [get_ports c2c_rxp[1]]
+set_property LOC AM2  [get_ports c2c_rxp[1]]; # Q226 ch3
 set_property LOC AM6  [get_ports c2c_txp[1]]
 
