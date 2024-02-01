@@ -7,14 +7,22 @@
 #set_property package_pin BD39 [get_ports mgtrefclk1_x0y5_p];
 
 # ref clk on Q124 for J12-J11 connection
-set_property package_pin AT39 [get_ports mgtrefclk1_x0y5_p];
+#set_property package_pin AT39 [get_ports mgtrefclk1_x0y5_p];
 
 # enable these constraints for J12-J11 connection
 # comment out for J19-J20 connection
-set_property LOC AW50 [get_ports c2c_rxp[0]]; # top link
-set_property LOC AW45 [get_ports c2c_txp[0]];
-set_property LOC AU50 [get_ports c2c_rxp[1]]; # bottom link
-set_property LOC AU45 [get_ports c2c_txp[1]];
+#set_property LOC AW50 [get_ports c2c_rxp[0]]; # top link
+#set_property LOC AW45 [get_ports c2c_txp[0]];
+#set_property LOC AU50 [get_ports c2c_rxp[1]]; # bottom link
+#set_property LOC AU45 [get_ports c2c_txp[1]];
+
+# proper connection for TCDS to 126 ch 0
+# C2C top to 127_1, bot to 126_3
+set_property package_pin AM39 [get_ports mgtrefclk1_x0y5_p];
+set_property LOC AH48 [get_ports c2c_rxp[0]]; # top link
+set_property LOC AH43 [get_ports c2c_txp[0]];
+set_property LOC AK48 [get_ports c2c_rxp[1]]; # bottom link
+set_property LOC AK43 [get_ports c2c_txp[1]];
 
 # Clock constraints for clocks provided as inputs to the core
 # Note: the IP core-level XDC constrains clocks produced by the core, which drive user clocks via helper blocks
