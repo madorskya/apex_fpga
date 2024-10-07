@@ -20,10 +20,10 @@
 # proper connection for TCDS to 126 ch 0
 # C2C top to 127_1, bot to 126_3
 set_property package_pin AM39 [get_ports mgtrefclk1_x0y5_p];
-set_property LOC AH48 [get_ports c2c_rxp[0]]; # top link
-set_property LOC AH43 [get_ports c2c_txp[0]];
-set_property LOC AK48 [get_ports c2c_rxp[1]]; # bottom link
-set_property LOC AK43 [get_ports c2c_txp[1]];
+set_property LOC AH48 [get_ports c2c_rxp[1]]; # 0 = top link 1 = bottom link
+set_property LOC AH43 [get_ports c2c_txp[1]];
+set_property LOC AK48 [get_ports c2c_rxp[0]]; # 0 = bottom link 1 = top link
+set_property LOC AK43 [get_ports c2c_txp[0]];
 
 # Clock constraints for clocks provided as inputs to the core
 # Note: the IP core-level XDC constrains clocks produced by the core, which drive user clocks via helper blocks
