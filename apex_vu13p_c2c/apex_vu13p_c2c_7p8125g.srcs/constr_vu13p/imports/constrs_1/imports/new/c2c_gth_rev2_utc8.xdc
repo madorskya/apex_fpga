@@ -16,6 +16,7 @@
 #set_property LOC AU50 [get_ports c2c_rxp[1]]; # bottom link
 #set_property LOC AU45 [get_ports c2c_txp[1]];
 
+# cable to J11 on Octopus, testing top link
 # proper connection for TCDS to 126 ch 0
 # C2C top to 127_1, bot to 126_3
 set_property package_pin AM39 [get_ports mgtrefclk1_x0y5_p];
